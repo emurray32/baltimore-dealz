@@ -1,0 +1,37 @@
+:root { color-scheme: light dark; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 34rem;
+  font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
+h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; margin: 1.5rem 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
+
+.card {
+  border: 1px solid rgba(128, 128, 128, .35);
+  border-radius: .5rem;
+  padding: .75rem;
+  margin-bottom: .6rem;
+}
+
+.card ul { margin: 0; padding-left: 1.1rem; }
+
+.window {
+  font-size: .8rem;
+  font-weight: 400;
+  padding: .1rem .4rem;
+  border-radius: .25rem;
+  background: rgba(128, 128, 128, .2);
+  white-space: nowrap;
+}
+
+.meta { font-size: .8rem; opacity: .7; margin: .4rem 0 0; }
+
+details { margin-bottom: .5rem; }
+summary { cursor: pointer; padding: .4rem 0; font-weight: 600; }

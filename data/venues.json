@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "venues": [
+    {
+      "id": "hucks-american-craft",
+      "name": "Huck's American Craft",
+      "neighborhood": "Canton",
+      "address": "3728 Hudson St, Baltimore, MD 21224",
+      "phone": "(443) 438-3380",
+      "source_url": "https://hucksamericancraft.com",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "notes": "UGA game days: $5 Terrapins, $6 Georgia Mules, $7 Bulldog Bombs, $10 wings.",
+      "deals": [
+        { "days": ["mon"], "items": ["$10 pretzel pies", "$5 wine glasses"] },
+        { "days": ["mon"], "items": ["Industry Night"], "time_window": "7pm-close" },
+        { "days": ["tue"], "items": ["$10 burger + fries", "$5 draft beers"] },
+        { "days": ["wed"], "items": ["Trivia"], "time_window": "7pm" },
+        { "days": ["wed"], "items": ["$10 wings", "$5 whiskey (bartender's choice)"] },
+        { "days": ["thu"], "items": ["$8 build-your-own mac n cheese", "$7 craft cocktails", "$3 seltzers/domestics"] },
+        { "days": ["fri"], "items": ["Free beer with lunch"], "time_window": "11am-3pm" },
+        { "days": ["fri"], "items": ["$7 nightcaps"], "time_window": "11pm-close" },
+        { "days": ["sat", "sun"], "items": ["Brunch", "$6 brunch drinks"], "time_window": "10am-2pm" },
+        { "days": ["sat"], "items": ["Spin the Wheel"], "time_window": "10pm-close" },
+        { "days": ["sat"], "items": ["$7 nightcaps"] },
+        { "days": ["sun"], "items": ["$10 cheesesteaks"], "time_window": "2pm-10pm" },
+        { "days": ["sun"], "items": ["$5 Deep Eddy's"], "time_window": "2pm-close" }
+      ]
+    }
+  ]
+}

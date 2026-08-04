@@ -285,7 +285,8 @@
         },
         {
           "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "items": ["$5 Burger of the Day"]
+          "items": ["$5 Burger of the Day"],
+          "status": "held"
         }
       ]
     },

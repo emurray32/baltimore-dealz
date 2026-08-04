@@ -155,7 +155,12 @@ test("the seed data really does contain held deal rows", async () => {
     v.deals.filter((d) => !isDealRenderable(d)).map((d) => `${v.id}:${d.items[0]}`),
   );
   assert.ok(held.length > 0, "no held row in the data — the hold tests prove nothing");
-  assert.equal(held.length, 3, held.join(", ")); // El Bufalo HH, Mama's Monday, Good Vibes HH
+  assert.deepEqual(held.sort(), [
+    "el-bufalo:$3 Modelo / Natty Boh / Tecate / Coronita", // days never published
+    "good-vibes-cantina:$7 margaritas / sangria / orange crush", // 3-7 vs 4-8 conflict
+    "mamas-on-the-half-shell:Happy hour all day — prices not published", // site vs Instagram
+    "pig-and-rooster-smokehouse:$5 Burger of the Day", // source line carries $5 AND $7
+  ]);
 });
 
 test("a held deal row never appears in the rendered board, any day", async () => {

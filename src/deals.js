@@ -82,7 +82,21 @@ export const STATUSES = [VERIFIED, "open_unverifiable"];
 // The only status a deal row may carry. Anything else is a typo or a hand-rolled
 // hold field, and both must fail the suite rather than quietly render the deal.
 export const DEAL_STATUSES = [HELD];
-const DEAL_KEYS = new Set(["days", "items", "time_window", "status"]);
+const DEAL_KEYS = new Set([
+  "days", "items", "time_window", "start", "end", "prices_published", "status",
+]);
+const ITEM_KEYS = new Set(["text", "price"]);
+
+// A venue that publishes its deals in a form we cannot machine-read.
+export const DEAL_FORMATS = ["image"];
+
+// Minutes past midnight, or null. `end: null` MEANS the venue published no end
+// time — so hasEnded can never be true for it. That is the whole point of the
+// split: the canon stops being a rule someone remembers and becomes a shape.
+export function hasEnded(deal, minutesNow) {
+  if (deal.end === null || deal.end === undefined) return false;
+  return minutesNow >= deal.end;
+}
 
 const DAY_KEYS = new Set(WEEK.map((day) => day.key));
 
@@ -104,10 +118,13 @@ export function venueShapeErrors(venue) {
   if (!STATUSES.includes(venue.status)) {
     errors.push(`${label}: status must be one of ${STATUSES.join(", ")}`);
   }
-  for (const field of ["address", "phone", "source_url", "source_type", "notes", "neighborhood_source"]) {
+  for (const field of ["address", "phone", "source_url", "source_type", "notes_public", "ops_notes", "bar_hours", "neighborhood_source"]) {
     if (venue[field] !== undefined && typeof venue[field] !== "string") {
       errors.push(`${label}: ${field} must be a string when present`);
     }
+  }
+  if (venue.deal_format !== undefined && !DEAL_FORMATS.includes(venue.deal_format)) {
+    errors.push(`${label}: deal_format must be omitted or one of ${DEAL_FORMATS.join(", ")}`);
   }
   if (!Array.isArray(venue.deals)) {
     errors.push(`${label}: deals must be an array`);
@@ -134,6 +151,29 @@ export function venueShapeErrors(venue) {
     }
     if (!Array.isArray(deal.items) || deal.items.length === 0) {
       errors.push(`${label}: deal needs items`);
+    } else {
+      for (const item of deal.items) {
+        if (typeof item?.text !== "string" || item.text === "") {
+          errors.push(`${label}: every item needs non-empty text`);
+        }
+        // A price is free text: "BOGO", "1/2 off" and "Free" are real prices
+        // that a number cannot hold. Absent means the item has no price.
+        if (item?.price !== undefined && (typeof item.price !== "string" || item.price === "")) {
+          errors.push(`${label}: item price must be a non-empty string when present`);
+        }
+        for (const key of Object.keys(item ?? {})) {
+          if (!ITEM_KEYS.has(key)) errors.push(`${label}: unknown field "${key}" on an item`);
+        }
+      }
+    }
+    for (const field of ["start", "end"]) {
+      const v = deal[field];
+      if (v !== null && !(Number.isInteger(v) && v >= 0 && v < 1440)) {
+        errors.push(`${label}: ${field} must be null or minutes past midnight`);
+      }
+    }
+    if (deal.prices_published !== undefined && deal.prices_published !== false) {
+      errors.push(`${label}: prices_published may only be present as false`);
     }
     if (deal.time_window !== undefined && typeof deal.time_window !== "string") {
       errors.push(`${label}: time_window must be a string when present`);

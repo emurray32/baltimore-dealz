@@ -36,21 +36,28 @@ function dealCard({ venue, deal }) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
-  const items = deal.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  const items = deal.items.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("");
+  // A venue that published times but no prices says so, rather than looking
+  // like a deal we forgot to fill in.
+  const noPrices =
+    deal.prices_published === false
+      ? '<p class="meta">Prices not published by the venue.</p>'
+      : "";
   return `
       <article class="card">
         <h3>${escapeHtml(venue.name)} ${window}</h3>
         <ul>${items}</ul>
+        ${noPrices}
         <p class="meta">${metaLines(venue)}</p>
       </article>`;
 }
 
 function notesSection(venues) {
   const notes = venues
-    .filter((venue) => isRenderable(venue) && venue.notes)
+    .filter((venue) => isRenderable(venue) && venue.notes_public)
     .map(
       (venue) =>
-        `<p class="meta"><strong>${escapeHtml(venue.name)}</strong> — ${escapeHtml(venue.notes)}</p>`,
+        `<p class="meta"><strong>${escapeHtml(venue.name)}</strong> — ${escapeHtml(venue.notes_public)}</p>`,
     )
     .join("");
   return notes ? `<section><h2>Good to know</h2>${notes}</section>` : "";

@@ -8,6 +8,7 @@ import {
   WEEK,
   dayKeyInZone,
   dealsForDay,
+  hasEnded,
   isDealRenderable,
   isRenderable,
   venueShapeErrors,
@@ -40,7 +41,7 @@ function venue(overrides = {}) {
     source_url: "https://example.com",
     source_type: "venue_website",
     last_verified: "2026-08-03",
-    deals: [{ days: WEEK.map((day) => day.key), items: ["$1 beer"] }],
+    deals: [{ days: WEEK.map((day) => day.key), items: [{ text: "$1 beer" }], start: null, end: null }],
     ...overrides,
   };
 }
@@ -76,24 +77,24 @@ test("the board at Friday 11pm and Saturday 1am is not the same board", async ()
   assert.match(saturday, /Saturday · Baltimore time/);
 
   const onTonight = (html) => html.split("<h2>Good to know</h2>")[0];
-  assert.match(onTonight(friday), /Free beer with lunch/);
+  assert.match(onTonight(friday), /Free Beer When You Buy Lunch/);
   assert.doesNotMatch(onTonight(friday), /Spin the Wheel/);
   assert.match(onTonight(saturday), /Spin the Wheel/);
-  assert.doesNotMatch(onTonight(saturday), /Free beer with lunch/);
+  assert.doesNotMatch(onTonight(saturday), /Free Beer When You Buy Lunch/);
 });
 
 test("dealsForDay returns only that day's deals", async () => {
   const venues = await loadVenues();
-  const sunday = dealsForDay(venues, "sun").flatMap((row) => row.deal.items);
+  const sunday = dealsForDay(venues, "sun").flatMap((row) => row.deal.items.map((i) => i.text));
 
-  assert.ok(sunday.includes("$10 cheesesteaks"));
-  assert.ok(!sunday.includes("$10 pretzel pies")); // Monday
+  assert.ok(sunday.includes("$10 Cheesesteaks"));
+  assert.ok(!sunday.includes("$10 Pretzel Pies")); // Monday
 });
 
 test("a deal listed on two days shows up on both", async () => {
   const venues = await loadVenues();
   const brunchDays = weekByDay(venues)
-    .filter((day) => day.rows.some((row) => row.deal.items.includes("Brunch")))
+    .filter((day) => day.rows.some((row) => row.deal.items.some((i) => i.text === "Brunch")))
     .map((day) => day.key);
 
   assert.deepEqual(brunchDays, ["sat", "sun"]);
@@ -152,27 +153,43 @@ test("venuesForView drops venues outside the view's neighborhoods", () => {
 
 test("the seed data really does contain held deal rows", async () => {
   const held = (await loadVenues()).flatMap((v) =>
-    v.deals.filter((d) => !isDealRenderable(d)).map((d) => `${v.id}:${d.items[0]}`),
+    v.deals.filter((d) => !isDealRenderable(d)).map((d) => `${v.id}:${d.items[0].text}`),
   );
   assert.ok(held.length > 0, "no held row in the data — the hold tests prove nothing");
   assert.deepEqual(held.sort(), [
-    "el-bufalo:$3 Modelo / Natty Boh / Tecate / Coronita", // days never published
-    "good-vibes-cantina:$7 margaritas / sangria / orange crush", // 3-7 vs 4-8 conflict
-    "mamas-on-the-half-shell:Happy hour all day — prices not published", // site vs Instagram
-    "pig-and-rooster-smokehouse:$5 Burger of the Day", // source line carries $5 AND $7
+    "el-bufalo:16oz Modelo Especial $3", // days never published on site or Instagram
+    "good-vibes-cantina:$7 Margaritas", // bio 3-7pm vs posts 4-8pm
+    "mamas-on-the-half-shell:Happy Hour ALL DAY", // website vs Instagram Monday
+    "pig-and-rooster-smokehouse:$5 Burger of the Day (rotating)", // source line has $5 AND $7
   ]);
 });
 
+// Scoped per venue on purpose: the same item text can be held for one venue and
+// legitimately rendered for another ("$7 Margaritas" is held at Good Vibes and
+// a real Tuesday deal at Smaltimore), so a global substring check false-fails.
+function cardsFor(html, venueName) {
+  return html
+    .split("<article")
+    .filter((block) => block.includes(`<h3>${escapeHtml(venueName)}`));
+}
+
 test("a held deal row never appears in the rendered board, any day", async () => {
-  const heldItems = (await loadVenues()).flatMap((v) =>
-    v.deals.filter((d) => !isDealRenderable(d)).flatMap((d) => d.items),
-  );
+  const venues = await loadVenues();
 
   for (const day of WEEK) {
     const instant = new Date(`2026-08-0${3 + WEEK.indexOf(day)}T16:00:00Z`);
     const html = await boardFor(instant);
-    for (const item of heldItems) {
-      assert.ok(!html.includes(escapeHtml(item)), `held "${item}" rendered on ${day.key}`);
+
+    for (const venue of venues) {
+      const blocks = cardsFor(html, venue.name).join("");
+      for (const deal of venue.deals.filter((d) => !isDealRenderable(d))) {
+        for (const item of deal.items) {
+          assert.ok(
+            !blocks.includes(escapeHtml(item.text)),
+            `held "${item.text}" rendered for ${venue.name} on ${day.key}`,
+          );
+        }
+      }
     }
   }
 });
@@ -189,7 +206,7 @@ test("a venue whose only deal is held drops off the board but keeps its data", a
   // the ticket's "days question in notes", not a leak.
   const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
   assert.ok(!html.includes(`<h3>${escapeHtml(elBufalo.name)}`), "El Bufalo has a deal card");
-  for (const item of elBufalo.deals.flatMap((d) => d.items)) {
+  for (const item of elBufalo.deals.flatMap((d) => d.items.map((i) => i.text))) {
     assert.ok(!html.includes(escapeHtml(item)), `held item "${item}" rendered`);
   }
 });
@@ -197,11 +214,11 @@ test("a venue whose only deal is held drops off the board but keeps its data", a
 test("dealsForDay drops held rows but keeps the venue's other rows", () => {
   const v = venue({
     deals: [
-      { days: ["mon"], items: ["Shows up"] },
-      { days: ["mon"], items: ["Held back"], status: "held" },
+      { days: ["mon"], items: [{ text: "Shows up" }], start: null, end: null },
+      { days: ["mon"], items: [{ text: "Held back" }], start: null, end: null, status: "held" },
     ],
   });
-  const items = dealsForDay([v], "mon").flatMap((row) => row.deal.items);
+  const items = dealsForDay([v], "mon").flatMap((row) => row.deal.items.map((i) => i.text));
 
   assert.deepEqual(items, ["Shows up"]);
 });
@@ -209,7 +226,7 @@ test("dealsForDay drops held rows but keeps the venue's other rows", () => {
 test("an unknown deal status fails validation", () => {
   for (const status of ["open_unverifiable", "verified", "hold", "HELD", "", null, false]) {
     const errors = venueShapeErrors(
-      venue({ deals: [{ days: ["mon"], items: ["$1 beer"], status }] }),
+      venue({ deals: [{ days: ["mon"], items: [{ text: "$1 beer" }], start: null, end: null, status }] }),
     );
     assert.ok(
       errors.some((e) => e.includes("deal status")),
@@ -223,7 +240,7 @@ test("a hand-rolled hold field on a deal fails validation instead of rendering",
   // deal ships anyway. These must all be hard errors now.
   for (const field of ["verified", "hold", "held", "unverified", "render", "notes"]) {
     const errors = venueShapeErrors(
-      venue({ deals: [{ days: ["mon"], items: ["$1 beer"], [field]: false }] }),
+      venue({ deals: [{ days: ["mon"], items: [{ text: "$1 beer" }], start: null, end: null, [field]: false }] }),
     );
     assert.ok(
       errors.some((e) => e.includes(`unknown field "${field}"`)),
@@ -256,11 +273,11 @@ test("an unverified venue with no deals is legal", () => {
 
 test("a verified venue with malformed deals still fails validation", () => {
   const cases = [
-    { deals: [{ days: ["monday"], items: ["$1 beer"] }] }, // not a day key
-    { deals: [{ days: [], items: ["$1 beer"] }] },
-    { deals: [{ days: ["mon"], items: [] }] },
-    { deals: [{ days: ["mon"] }] },
-    { deals: [{ days: ["mon"], items: ["$1 beer"], time_window: 7 }] },
+    { deals: [{ days: ["monday"], items: [{ text: "$1 beer" }], start: null, end: null }] }, // not a day key
+    { deals: [{ days: [], items: [{ text: "$1 beer" }], start: null, end: null }] },
+    { deals: [{ days: ["mon"], items: [], start: null, end: null }] },
+    { deals: [{ days: ["mon"], start: null, end: null }] },
+    { deals: [{ days: ["mon"], items: [{ text: "$1 beer" }], time_window: 7, start: null, end: null }] },
     { last_verified: "8/3/2026" },
     { last_verified: undefined },
     { source_type: undefined },
@@ -373,8 +390,8 @@ test("every venue's neighborhood belongs to some view", async () => {
 test("venue text is escaped, not injected raw", () => {
   const nasty = venue({
     name: "Bar <script>alert(1)</script>",
-    notes: '<img src=x onerror="alert(2)">',
-    deals: [{ days: WEEK.map((d) => d.key), items: ["<b>$1 beer</b>"], time_window: '"><i>' }],
+    notes_public: '<img src=x onerror="alert(2)">',
+    deals: [{ days: WEEK.map((d) => d.key), items: [{ text: "<b>$1 beer</b>" }], time_window: '"><i>' }],
   });
 
   const html = renderBoard([nasty], CANTON, [CANTON], FRI_11PM_EDT);
@@ -390,7 +407,7 @@ test("notes from a non-rendering venue never reach the page", () => {
     name: "Hidden Bar",
     status: "open_unverifiable",
     deals: [],
-    notes: "SECRET-RESEARCH-NOTE",
+    ops_notes: "SECRET-RESEARCH-NOTE",
   });
 
   const html = renderBoard([hidden, venue()], CANTON, [CANTON], FRI_11PM_EDT);
@@ -418,4 +435,159 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
       `${v.id} has no neighborhood provenance`,
     );
   }
+});
+
+// --- BD-2c: structured times, prices, notes split -------------------------
+
+test("end:null cannot render as ended, at any minute of the day", async () => {
+  const venues = await loadVenues();
+  const openEnded = venues.flatMap((v) => v.deals.filter((d) => d.end === null));
+
+  assert.ok(openEnded.length > 0, "no open-ended deal in the data — this proves nothing");
+  for (const deal of openEnded) {
+    for (let minute = 0; minute < 1440; minute += 7) {
+      assert.equal(hasEnded(deal, minute), false);
+    }
+  }
+});
+
+test("a deal with a published end time does end", () => {
+  const deal = { start: 15 * 60, end: 18 * 60 };
+  assert.equal(hasEnded(deal, 17 * 60), false);
+  assert.equal(hasEnded(deal, 18 * 60), true);
+  assert.equal(hasEnded(deal, 23 * 60), true);
+});
+
+test("Huck's nightcaps start at 11pm and never read as ended", async () => {
+  // Deal Scout's proof case: their kitchen closes 10pm, the deal starts 11pm.
+  const hucks = (await loadVenues()).find((v) => v.id === "hucks-american-craft");
+  const nightcaps = hucks.deals.find((d) => d.items.some((i) => i.text === "$7 Nightcaps"));
+
+  assert.equal(nightcaps.start, 23 * 60);
+  assert.equal(nightcaps.end, null);
+  assert.equal(hasEnded(nightcaps, 23 * 60 + 1), false);
+});
+
+test("start and end are minutes past midnight or null, never a string", async () => {
+  for (const v of await loadVenues()) {
+    for (const deal of v.deals) {
+      for (const field of ["start", "end"]) {
+        const value = deal[field];
+        assert.ok(
+          value === null || (Number.isInteger(value) && value >= 0 && value < 1440),
+          `${v.id}: ${field} = ${JSON.stringify(value)}`,
+        );
+      }
+      if (deal.start !== null && deal.end !== null) {
+        assert.ok(deal.end > deal.start, `${v.id}: end is not after start`);
+      }
+    }
+  }
+});
+
+test("prices are strings, because BOGO and 1/2 off are real prices", async () => {
+  const prices = (await loadVenues())
+    .flatMap((v) => v.deals.flatMap((d) => d.items))
+    .filter((i) => i.price !== undefined)
+    .map((i) => i.price);
+
+  for (const p of prices) assert.equal(typeof p, "string");
+  for (const nonNumeric of ["BOGO", "1/2 off", "Free", "1/2 price"]) {
+    assert.ok(prices.includes(nonNumeric), `no ${nonNumeric} price survived the migration`);
+  }
+});
+
+test("the $50 gift card is not a price", async () => {
+  // The trap: any grab-the-dollar-amount pass puts a $50 chip on a free trivia night.
+  const dive = (await loadVenues()).find((v) => v.id === "the-dive");
+  const trivia = dive.deals.flatMap((d) => d.items).find((i) => i.text.includes("Bmore Trivia"));
+
+  assert.match(trivia.text, /\$50 gift card/);
+  assert.equal(trivia.price, undefined);
+});
+
+test("no-price states stay distinct", async () => {
+  const venues = await loadVenues();
+
+  // (1) priceless item: an event, no price field, prices_published not set
+  const trivia = venues
+    .find((v) => v.id === "ellies-tavern")
+    .deals.flatMap((d) => d.items)
+    .find((i) => i.text === "Trivia Night");
+  assert.equal(trivia.price, undefined);
+
+  // (2) venue published times but no prices
+  const stackhouse = venues.find((v) => v.id === "hudson-street-stackhouse");
+  assert.ok(stackhouse.deals.every((d) => d.prices_published === false));
+
+  // (3) held — a different fact again, and it never renders
+  const held = venues.flatMap((v) => v.deals).filter((d) => !isDealRenderable(d));
+  assert.ok(held.length > 0);
+});
+
+test("prices_published:false renders an honest flag, not a blank", async () => {
+  const html = await boardFor(new Date("2026-08-03T20:00:00Z")); // a Monday
+  assert.match(html, /Prices not published by the venue\./);
+});
+
+test("ops_notes never reach the page; notes_public do", async () => {
+  const venues = await loadVenues();
+  const withOps = venues.filter((v) => v.ops_notes);
+  const withPublic = venues.filter((v) => v.notes_public && isRenderable(v));
+
+  assert.ok(withOps.length > 0 && withPublic.length > 0);
+
+  for (const day of WEEK) {
+    const html = await boardFor(new Date(`2026-08-0${3 + WEEK.indexOf(day)}T16:00:00Z`));
+    for (const v of withOps) {
+      assert.ok(!html.includes(escapeHtml(v.ops_notes)), `${v.id} ops_notes leaked on ${day.key}`);
+    }
+  }
+
+  const monday = await boardFor(new Date("2026-08-03T20:00:00Z"));
+  for (const v of withPublic) {
+    assert.ok(monday.includes(escapeHtml(v.notes_public)), `${v.id} notes_public missing`);
+  }
+});
+
+test("no venue carries the retired single notes field", async () => {
+  for (const v of await loadVenues()) {
+    assert.equal(v.notes, undefined, `${v.id} still has a bare notes field`);
+  }
+});
+
+test("Lee's carries the image-only deal format", async () => {
+  const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
+  assert.equal(lees.deal_format, "image");
+  assert.deepEqual(lees.deals, []);
+
+  assert.ok(venueShapeErrors(venue({ deal_format: "image" })).length === 0);
+  assert.ok(venueShapeErrors(venue({ deal_format: "pdf" })).some((e) => e.includes("deal_format")));
+});
+
+test("bar_hours is set only where the venue actually labelled it", async () => {
+  const withBar = (await loadVenues()).filter((v) => v.bar_hours).map((v) => v.id).sort();
+  assert.deepEqual(withBar, ["hudson-street-stackhouse", "the-dive"]);
+});
+
+test("an unknown key on an item fails validation", () => {
+  for (const field of ["prices_published", "value", "cost", "price_numeric"]) {
+    const errors = venueShapeErrors(
+      venue({ deals: [{ days: ["mon"], items: [{ text: "x", [field]: 1 }], start: null, end: null }] }),
+    );
+    assert.ok(
+      errors.some((e) => e.includes(`unknown field "${field}" on an item`)),
+      `item field "${field}" was silently ignored`,
+    );
+  }
+});
+
+test("the data records which state of the master file it came from", async () => {
+  const raw = JSON.parse(
+    await (await import("node:fs/promises")).readFile(
+      new URL("../data/venues.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-03 21:07:21, sha256 a12b1172/);
 });

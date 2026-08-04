@@ -391,3 +391,26 @@ test("notes from a non-rendering venue never reach the page", () => {
   const html = renderBoard([hidden, venue()], CANTON, [CANTON], FRI_11PM_EDT);
   assert.ok(!html.includes("SECRET-RESEARCH-NOTE"));
 });
+
+test("neighborhood labels come from the city boundary layer, with provenance", async () => {
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+
+  // Both of these read the other way round before the city's point-in-polygon
+  // check; the seed venue was the Brewers Hill one all along.
+  assert.equal(byId["hucks-american-craft"].neighborhood, "Brewers Hill");
+  assert.equal(byId["union-hill-kitchen"].neighborhood, "Canton");
+
+  assert.deepEqual(
+    venues.filter((v) => v.neighborhood === "Brewers Hill").map((v) => v.id),
+    ["hucks-american-craft"],
+  );
+
+  for (const v of venues) {
+    assert.match(
+      v.neighborhood_source ?? "",
+      /^Baltimore City Neighborhood Statistical Areas/,
+      `${v.id} has no neighborhood provenance`,
+    );
+  }
+});

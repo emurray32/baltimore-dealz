@@ -104,7 +104,7 @@ export function venueShapeErrors(venue) {
   if (!STATUSES.includes(venue.status)) {
     errors.push(`${label}: status must be one of ${STATUSES.join(", ")}`);
   }
-  for (const field of ["address", "phone", "source_url", "source_type", "notes"]) {
+  for (const field of ["address", "phone", "source_url", "source_type", "notes", "neighborhood_source"]) {
     if (venue[field] !== undefined && typeof venue[field] !== "string") {
       errors.push(`${label}: ${field} must be a string when present`);
     }

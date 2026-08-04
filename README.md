@@ -1,6 +1,6 @@
 # Baltimore Dealz
 
-Tonight in Canton — a board of Baltimore bar and restaurant specials.
+A board of Baltimore bar and restaurant specials — what's on tonight, by neighborhood.
 
 ## Run it
 
@@ -8,8 +8,8 @@ Tonight in Canton — a board of Baltimore bar and restaurant specials.
 npm start
 ```
 
-Then open http://localhost:3000. No install step, no database, no accounts —
-plain Node (v20+), zero dependencies.
+Then open http://localhost:3000. It redirects to the default board (`/canton`).
+No install step, no database, no accounts — plain Node (v20+), zero dependencies.
 
 ## Test it
 
@@ -26,6 +26,7 @@ All of it is in [`data/venues.json`](data/venues.json). One entry per venue:
   "id": "hucks-american-craft",
   "name": "Huck's American Craft",
   "neighborhood": "Canton",
+  "status": "verified",
   "address": "3728 Hudson St, Baltimore, MD 21224",
   "phone": "(443) 438-3380",
   "source_url": "https://hucksamericancraft.com",
@@ -38,13 +39,51 @@ All of it is in [`data/venues.json`](data/venues.json). One entry per venue:
 }
 ```
 
-`days` uses `mon tue wed thu fri sat sun`. `time_window` is optional and is
-free text as the venue words it. Adding a venue means adding one object to
-that array — nothing else changes. The file is re-read on every request, so a
-crawler can rewrite it in place without a restart.
+`days` uses `mon tue wed thu fri sat sun`. `time_window` is optional and is free
+text as the venue words it. Adding a venue means adding one object to that
+array — nothing else changes. The file is re-read on every request, so a crawler
+can rewrite it in place without a restart.
 
-`npm test` validates the shape of every entry, so a malformed venue fails the
-suite instead of silently vanishing from the board.
+### status — what shows up and what doesn't
+
+| status | Renders? | Use it for |
+|---|---|---|
+| `verified` | yes | We have a deal from an official source |
+| `open_unverifiable` | **never** | The place is open, but no deal we can honestly publish |
+
+Unverified venues stay in the file so the research isn't lost, but the board
+filters them out in code — not by leaving rows out of the file. Claddagh Pub
+(domain repurposed, no published deals) and Lee's Pint & Shell (its promo is
+monthly, and this model is weekly-only) both sit here.
+
+### Required vs optional fields
+
+Always required: `id`, `name`, `neighborhood`, `status`, `deals` (an array).
+
+Required only when `status` is `verified`: `source_type`, `last_verified`
+(`YYYY-MM-DD`), and at least one deal. A venue that renders with no deals fails
+the suite.
+
+Optional everywhere: `address`, `phone`, `source_url`, `notes`. Several real
+venues have no phone or source URL published anywhere we're allowed to read, so
+the renderer drops whichever line is missing rather than failing.
+
+`npm test` validates every entry, so a malformed venue fails the suite instead
+of silently vanishing from the board.
+
+## Neighborhood views
+
+[`data/views.json`](data/views.json) defines the boards. A view is a slug, a
+label, and the neighborhoods it covers — one view can span several:
+
+```json
+{ "slug": "canton", "label": "Canton", "neighborhoods": ["Canton", "Brewers Hill"] }
+```
+
+`/canton` renders that board and the title reads "Tonight in Canton". `/`
+redirects to the first view. Add a second view and a switcher appears in the
+header automatically. Venues keep their own true `neighborhood` either way, and
+no neighborhood name is hard-coded in the source — a test enforces that.
 
 ## What "today" means
 

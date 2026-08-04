@@ -1,10 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "venues": [
     {
       "id": "hucks-american-craft",
       "name": "Huck's American Craft",
       "neighborhood": "Canton",
+      "status": "verified",
       "address": "3728 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 438-3380",
       "source_url": "https://hucksamericancraft.com",
@@ -26,6 +27,119 @@
         { "days": ["sun"], "items": ["$10 cheesesteaks"], "time_window": "2pm-10pm" },
         { "days": ["sun"], "items": ["$5 Deep Eddy's"], "time_window": "2pm-close" }
       ]
+    },
+    {
+      "id": "smaltimore",
+      "name": "Smaltimore",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2522 Fait Ave, Baltimore, MD 21224",
+      "source_url": "https://smaltimoremd.com",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "notes": "Their site's security certificate is invalid — known, and a crawler will need to be told to skip the check for this domain.",
+      "deals": [
+        { "days": ["mon"], "items": ["All-night happy hour"] },
+        { "days": ["mon", "tue", "wed", "thu", "fri"], "items": ["$6 happy hour"], "time_window": "til 7pm" },
+        { "days": ["tue"], "items": ["Tacos $11/$13", "$7 margaritas"] },
+        { "days": ["wed"], "items": ["BOGO sushi rolls"] },
+        { "days": ["thu"], "items": ["$2 off burgers", "Half-price wine bottles"] }
+      ]
+    },
+    {
+      "id": "el-bufalo",
+      "name": "El Bufalo Tequila Bar + Kitchen",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2921 O'Donnell St, Baltimore, MD 21224",
+      "source_url": "https://elbufalobaltimore.net",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "deals": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+          "items": ["$3 Modelo / Natty Boh / Tecate / Coronita", "$7 Altos", "$9 beer-and-a-shot"],
+          "time_window": "all day"
+        }
+      ]
+    },
+    {
+      "id": "mamas-on-the-half-shell",
+      "name": "Mama's on the Half Shell",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2901 O'Donnell St, Baltimore, MD 21224",
+      "source_url": "https://mamasonthehalfshell.com",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "deals": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "items": ["Happy hour — prices not published"],
+          "time_window": "3pm-6pm"
+        }
+      ]
+    },
+    {
+      "id": "hudson-street-stackhouse",
+      "name": "Hudson Street Stackhouse",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2626 Hudson St, Baltimore, MD 21224",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "notes": "Their weekly-food-specials page is currently empty — worth a re-check each week.",
+      "deals": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "items": ["Happy hour — prices not published"],
+          "time_window": "3pm-7pm"
+        },
+        {
+          "days": ["fri"],
+          "items": ["Happy hour — prices not published"],
+          "time_window": "2pm-7pm"
+        },
+        {
+          "days": ["sat", "sun"],
+          "items": ["Happy hour — prices not published"],
+          "time_window": "11am-5pm"
+        }
+      ]
+    },
+    {
+      "id": "ellies-tavern",
+      "name": "Ellie's Tavern",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "901 S Clinton St, Baltimore, MD 21224",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-08-03",
+      "deals": [
+        { "days": ["wed"], "items": ["Trivia"], "time_window": "8pm" }
+      ]
+    },
+    {
+      "id": "lees-pint-and-shell",
+      "name": "Lee's Pint & Shell",
+      "neighborhood": "Canton",
+      "status": "open_unverifiable",
+      "address": "2844 Hudson St, Baltimore, MD 21224",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-03",
+      "notes": "Build-your-own-burger promo on the FIRST Wednesday of each month. Verified, but the deals model is weekly-only, so it cannot be listed without implying it runs every Wednesday. Known model gap — carry it into the calendar ticket.",
+      "deals": []
+    },
+    {
+      "id": "claddagh-pub",
+      "name": "Claddagh Pub",
+      "neighborhood": "Canton",
+      "status": "open_unverifiable",
+      "address": "O'Donnell Square, Baltimore, MD 21224",
+      "source_type": "none",
+      "last_verified": "2026-08-03",
+      "notes": "Open — listed in a 2026 Canton St. Patrick's crawl — but its domain was repurposed and no deals are published anywhere official.",
+      "deals": []
     }
   ]
 }

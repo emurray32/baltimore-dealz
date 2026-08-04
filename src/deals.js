@@ -33,10 +33,27 @@ export function dayLabel(dayKey) {
   return WEEK.find((day) => day.key === dayKey)?.label ?? dayKey;
 }
 
-// Flattens venues into one row per deal running on dayKey.
+// Only "verified" venues reach the board. Everything else — a venue we know is
+// open but can't source a deal for — stays in the data file and never renders.
+export const VERIFIED = "verified";
+
+export function isRenderable(venue) {
+  return venue.status === VERIFIED;
+}
+
+// A view is a named board that can span more than one neighborhood.
+export function venuesForView(venues, view) {
+  return venues.filter(
+    (venue) => isRenderable(venue) && view.neighborhoods.includes(venue.neighborhood),
+  );
+}
+
+// Flattens venues into one row per deal running on dayKey. The status check is
+// repeated here on purpose: no caller can put an unverified venue on the board.
 export function dealsForDay(venues, dayKey) {
   const rows = [];
   for (const venue of venues) {
+    if (!isRenderable(venue)) continue;
     for (const deal of venue.deals) {
       if (deal.days.includes(dayKey)) {
         rows.push({ venue, deal });
@@ -48,4 +65,65 @@ export function dealsForDay(venues, dayKey) {
 
 export function weekByDay(venues) {
   return WEEK.map((day) => ({ ...day, rows: dealsForDay(venues, day.key) }));
+}
+
+export const STATUSES = [VERIFIED, "open_unverifiable"];
+
+const DAY_KEYS = new Set(WEEK.map((day) => day.key));
+
+// Returns a list of problems, empty when the venue is well formed. The rules are
+// stricter for venues that render: a venue nobody will see may be missing the
+// details we simply could not source (Claddagh has no working site at all).
+export function venueShapeErrors(venue) {
+  const errors = [];
+  const label = venue?.id ?? "(no id)";
+  const requireString = (field) => {
+    if (typeof venue[field] !== "string" || venue[field] === "") {
+      errors.push(`${label}: ${field} must be a non-empty string`);
+    }
+  };
+
+  if (!venue || typeof venue !== "object") return ["venue must be an object"];
+
+  for (const field of ["id", "name", "neighborhood"]) requireString(field);
+  if (!STATUSES.includes(venue.status)) {
+    errors.push(`${label}: status must be one of ${STATUSES.join(", ")}`);
+  }
+  for (const field of ["address", "phone", "source_url", "source_type", "notes"]) {
+    if (venue[field] !== undefined && typeof venue[field] !== "string") {
+      errors.push(`${label}: ${field} must be a string when present`);
+    }
+  }
+  if (!Array.isArray(venue.deals)) {
+    errors.push(`${label}: deals must be an array`);
+    return errors;
+  }
+
+  if (isRenderable(venue)) {
+    requireString("source_type");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(venue.last_verified ?? "")) {
+      errors.push(`${label}: last_verified must be YYYY-MM-DD`);
+    }
+    if (venue.deals.length === 0) {
+      errors.push(`${label}: a venue that renders needs at least one deal`);
+    }
+  }
+
+  for (const deal of venue.deals) {
+    if (!Array.isArray(deal.days) || deal.days.length === 0) {
+      errors.push(`${label}: deal needs days`);
+    } else {
+      for (const day of deal.days) {
+        if (!DAY_KEYS.has(day)) errors.push(`${label}: unknown day "${day}"`);
+      }
+    }
+    if (!Array.isArray(deal.items) || deal.items.length === 0) {
+      errors.push(`${label}: deal needs items`);
+    }
+    if (deal.time_window !== undefined && typeof deal.time_window !== "string") {
+      errors.push(`${label}: time_window must be a string when present`);
+    }
+  }
+
+  return errors;
 }

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "views": [
+    {
+      "slug": "canton",
+      "label": "Canton",
+      "neighborhoods": ["Canton", "Brewers Hill"]
+    }
+  ]
+}

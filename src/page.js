@@ -1,9 +1,9 @@
-// Renders the "Tonight in Canton" board. Minimal styling on purpose —
+// Renders the "Tonight in <view>" board. Minimal styling on purpose —
 // Designer owns the visual pass in a later ticket.
 
 import { dayKeyInZone, dayLabel, dealsForDay, weekByDay } from "./deals.js";
 
-function escapeHtml(value) {
+export function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -12,21 +12,36 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+// Every meta line is built from the fields a venue actually has. A venue with
+// no phone loses the phone link; it does not take the board down with it.
+function metaLines(venue) {
+  const place = [venue.neighborhood, venue.address].filter(Boolean).map(escapeHtml);
+
+  const provenance = [];
+  if (venue.phone) {
+    const dialable = venue.phone.replace(/[^0-9+]/g, "");
+    provenance.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(venue.phone)}</a>`);
+  }
+  if (venue.source_url) {
+    provenance.push(`<a href="${escapeHtml(venue.source_url)}">source</a>`);
+  }
+  if (venue.last_verified) {
+    provenance.push(`last verified ${escapeHtml(venue.last_verified)}`);
+  }
+
+  return [place.join(" · "), provenance.join(" · ")].filter(Boolean).join("<br>");
+}
+
 function dealCard({ venue, deal }) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
-  const items = deal.items
-    .map((item) => `<li>${escapeHtml(item)}</li>`)
-    .join("");
+  const items = deal.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
   return `
       <article class="card">
         <h3>${escapeHtml(venue.name)} ${window}</h3>
         <ul>${items}</ul>
-        <p class="meta">${escapeHtml(venue.neighborhood)} · ${escapeHtml(venue.address)}<br>
-          <a href="tel:${escapeHtml(venue.phone.replace(/[^0-9+]/g, ""))}">${escapeHtml(venue.phone)}</a>
-          · <a href="${escapeHtml(venue.source_url)}">source</a>
-          · last verified ${escapeHtml(venue.last_verified)}</p>
+        <p class="meta">${metaLines(venue)}</p>
       </article>`;
 }
 
@@ -41,7 +56,21 @@ function notesSection(venues) {
   return notes ? `<section><h2>Good to know</h2>${notes}</section>` : "";
 }
 
-export function renderBoard(venues, now = new Date()) {
+// Only worth showing once there is somewhere else to go.
+function viewSwitcher(views, currentView) {
+  if (views.length < 2) return "";
+  const links = views
+    .map((view) =>
+      view.slug === currentView.slug
+        ? `<strong>${escapeHtml(view.label)}</strong>`
+        : `<a href="/${escapeHtml(view.slug)}">${escapeHtml(view.label)}</a>`,
+    )
+    .join(" · ");
+  return `<nav class="meta">${links}</nav>`;
+}
+
+// `venues` is already filtered to this view — see venuesForView in deals.js.
+export function renderBoard(venues, view, views = [view], now = new Date()) {
   const todayKey = dayKeyInZone(now);
   const todayRows = dealsForDay(venues, todayKey);
 
@@ -60,18 +89,21 @@ export function renderBoard(venues, now = new Date()) {
     )
     .join("");
 
+  const title = `Tonight in ${view.label}`;
+
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tonight in Canton — Baltimore Dealz</title>
+  <title>${escapeHtml(title)} — Baltimore Dealz</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header>
-    <h1>Tonight in Canton</h1>
+    <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))} · Baltimore time</p>
+    ${viewSwitcher(views, view)}
   </header>
   <main>
     <section>

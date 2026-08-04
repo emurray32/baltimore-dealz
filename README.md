@@ -56,6 +56,28 @@ filters them out in code — not by leaving rows out of the file. Claddagh Pub
 (domain repurposed, no published deals) and Lee's Pint & Shell (its promo is
 monthly, and this model is weekly-only) both sit here.
 
+### Holding back a single deal row
+
+A venue can be fine while one of its deals isn't — a happy hour whose days the
+venue never actually published, or an offer whose hours two official sources
+disagree about. Put `"status": "held"` on that deal row:
+
+```json
+{ "days": ["mon"], "items": ["Happy hour all day"], "status": "held" }
+```
+
+Held rows never render, on any day or any path. The row stays in the file so the
+research isn't lost, and it starts rendering the moment you delete the status.
+Omitting `status` means the deal renders — that is the normal case.
+
+Deal rows are validated strictly: `days`, `items`, `time_window`, `status` and
+nothing else, and `status` may only be `"held"`. Inventing your own hold field
+(`"verified": false`, `"hold": true`) fails the suite rather than being ignored
+and rendering the deal anyway.
+
+A venue whose deals are *all* held simply shows no deals. It keeps its entry and
+its notes.
+
 ### Required vs optional fields
 
 Always required: `id`, `name`, `neighborhood`, `status`, `deals` (an array).

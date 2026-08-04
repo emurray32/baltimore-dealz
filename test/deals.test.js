@@ -8,6 +8,7 @@ import {
   WEEK,
   dayKeyInZone,
   dealsForDay,
+  isDealRenderable,
   isRenderable,
   venueShapeErrors,
   venuesForView,
@@ -145,6 +146,85 @@ test("venuesForView drops venues outside the view's neighborhoods", () => {
     venuesForView([inView, outOfView], CANTON).map((v) => v.id),
     ["in"],
   );
+});
+
+// --- held deal rows ------------------------------------------------------
+
+test("the seed data really does contain held deal rows", async () => {
+  const held = (await loadVenues()).flatMap((v) =>
+    v.deals.filter((d) => !isDealRenderable(d)).map((d) => `${v.id}:${d.items[0]}`),
+  );
+  assert.ok(held.length > 0, "no held row in the data — the hold tests prove nothing");
+  assert.equal(held.length, 3, held.join(", ")); // El Bufalo HH, Mama's Monday, Good Vibes HH
+});
+
+test("a held deal row never appears in the rendered board, any day", async () => {
+  const heldItems = (await loadVenues()).flatMap((v) =>
+    v.deals.filter((d) => !isDealRenderable(d)).flatMap((d) => d.items),
+  );
+
+  for (const day of WEEK) {
+    const instant = new Date(`2026-08-0${3 + WEEK.indexOf(day)}T16:00:00Z`);
+    const html = await boardFor(instant);
+    for (const item of heldItems) {
+      assert.ok(!html.includes(escapeHtml(item)), `held "${item}" rendered on ${day.key}`);
+    }
+  }
+});
+
+test("a venue whose only deal is held drops off the board but keeps its data", async () => {
+  const all = await loadVenues();
+  const elBufalo = all.find((v) => v.id === "el-bufalo");
+
+  assert.equal(elBufalo.status, "verified");
+  assert.ok(elBufalo.deals.every((d) => !isDealRenderable(d)));
+  assert.deepEqual(venueShapeErrors(elBufalo), []); // still valid data
+
+  // No deal card anywhere. Its note still shows under "Good to know" — that is
+  // the ticket's "days question in notes", not a leak.
+  const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
+  assert.ok(!html.includes(`<h3>${escapeHtml(elBufalo.name)}`), "El Bufalo has a deal card");
+  for (const item of elBufalo.deals.flatMap((d) => d.items)) {
+    assert.ok(!html.includes(escapeHtml(item)), `held item "${item}" rendered`);
+  }
+});
+
+test("dealsForDay drops held rows but keeps the venue's other rows", () => {
+  const v = venue({
+    deals: [
+      { days: ["mon"], items: ["Shows up"] },
+      { days: ["mon"], items: ["Held back"], status: "held" },
+    ],
+  });
+  const items = dealsForDay([v], "mon").flatMap((row) => row.deal.items);
+
+  assert.deepEqual(items, ["Shows up"]);
+});
+
+test("an unknown deal status fails validation", () => {
+  for (const status of ["open_unverifiable", "verified", "hold", "HELD", "", null, false]) {
+    const errors = venueShapeErrors(
+      venue({ deals: [{ days: ["mon"], items: ["$1 beer"], status }] }),
+    );
+    assert.ok(
+      errors.some((e) => e.includes("deal status")),
+      `status ${JSON.stringify(status)} was accepted`,
+    );
+  }
+});
+
+test("a hand-rolled hold field on a deal fails validation instead of rendering", () => {
+  // The exact silent-failure shape: mark a row your own way, suite stays green,
+  // deal ships anyway. These must all be hard errors now.
+  for (const field of ["verified", "hold", "held", "unverified", "render", "notes"]) {
+    const errors = venueShapeErrors(
+      venue({ deals: [{ days: ["mon"], items: ["$1 beer"], [field]: false }] }),
+    );
+    assert.ok(
+      errors.some((e) => e.includes(`unknown field "${field}"`)),
+      `deal field "${field}" was silently ignored`,
+    );
+  }
 });
 
 // --- shape validation ----------------------------------------------------
@@ -297,4 +377,17 @@ test("venue text is escaped, not injected raw", () => {
   assert.ok(!html.includes("<img src=x"));
   assert.ok(!html.includes("<b>$1 beer</b>"));
   assert.match(html, /&lt;script&gt;/);
+});
+
+test("notes from a non-rendering venue never reach the page", () => {
+  const hidden = venue({
+    id: "hidden",
+    name: "Hidden Bar",
+    status: "open_unverifiable",
+    deals: [],
+    notes: "SECRET-RESEARCH-NOTE",
+  });
+
+  const html = renderBoard([hidden, venue()], CANTON, [CANTON], FRI_11PM_EDT);
+  assert.ok(!html.includes("SECRET-RESEARCH-NOTE"));
 });

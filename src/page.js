@@ -1,7 +1,7 @@
 // Renders the "Tonight in <view>" board. Minimal styling on purpose —
 // Designer owns the visual pass in a later ticket.
 
-import { dayKeyInZone, dayLabel, dealsForDay, weekByDay } from "./deals.js";
+import { dayKeyInZone, dayLabel, dealsForDay, isRenderable, weekByDay } from "./deals.js";
 
 export function escapeHtml(value) {
   return String(value)
@@ -47,7 +47,7 @@ function dealCard({ venue, deal }) {
 
 function notesSection(venues) {
   const notes = venues
-    .filter((venue) => venue.notes)
+    .filter((venue) => isRenderable(venue) && venue.notes)
     .map(
       (venue) =>
         `<p class="meta"><strong>${escapeHtml(venue.name)}</strong> — ${escapeHtml(venue.notes)}</p>`,

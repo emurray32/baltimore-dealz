@@ -48,13 +48,23 @@ export function venuesForView(venues, view) {
   );
 }
 
-// Flattens venues into one row per deal running on dayKey. The status check is
-// repeated here on purpose: no caller can put an unverified venue on the board.
+// A single deal row can be held back while the rest of the venue still shows —
+// a deal whose days or hours we can't yet state honestly. Absent status renders.
+export const HELD = "held";
+
+export function isDealRenderable(deal) {
+  return deal.status === undefined;
+}
+
+// Flattens venues into one row per deal running on dayKey. The status checks are
+// repeated here on purpose: no caller can put an unverified venue, or a held
+// deal row, on the board.
 export function dealsForDay(venues, dayKey) {
   const rows = [];
   for (const venue of venues) {
     if (!isRenderable(venue)) continue;
     for (const deal of venue.deals) {
+      if (!isDealRenderable(deal)) continue;
       if (deal.days.includes(dayKey)) {
         rows.push({ venue, deal });
       }
@@ -68,6 +78,11 @@ export function weekByDay(venues) {
 }
 
 export const STATUSES = [VERIFIED, "open_unverifiable"];
+
+// The only status a deal row may carry. Anything else is a typo or a hand-rolled
+// hold field, and both must fail the suite rather than quietly render the deal.
+export const DEAL_STATUSES = [HELD];
+const DEAL_KEYS = new Set(["days", "items", "time_window", "status"]);
 
 const DAY_KEYS = new Set(WEEK.map((day) => day.key));
 
@@ -122,6 +137,16 @@ export function venueShapeErrors(venue) {
     }
     if (deal.time_window !== undefined && typeof deal.time_window !== "string") {
       errors.push(`${label}: time_window must be a string when present`);
+    }
+    if (deal.status !== undefined && !DEAL_STATUSES.includes(deal.status)) {
+      errors.push(
+        `${label}: deal status must be omitted or one of ${DEAL_STATUSES.join(", ")}`,
+      );
+    }
+    // An unknown key here is almost always someone inventing their own way to
+    // hold a row back. Silently ignoring it would render the deal anyway.
+    for (const key of Object.keys(deal)) {
+      if (!DEAL_KEYS.has(key)) errors.push(`${label}: unknown field "${key}" on a deal`);
     }
   }
 

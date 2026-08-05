@@ -170,6 +170,17 @@ redirects to the first view. Add a second view and a switcher appears in the
 header automatically. Venues keep their own true `neighborhood` either way, and
 no neighborhood name is hard-coded in the source — a test enforces that.
 
+## The map
+
+`/<view>/map` renders every tracked venue with coordinates as a pin on an
+interactive map — [Leaflet](https://leafletjs.com) (vendored in
+`public/vendor/`, so no CDN) over free OpenStreetMap tiles. No API key, no
+account, nothing billed. Tap a pin for the venue's card: name, address, the
+deals with their prices, and "last verified `<date>`" where the data has one.
+A venue with nothing we can show says why, in the same words as the board. The
+map re-reads `data/venues.json` on every load, same as the board. Venues
+without coordinates are named under the map rather than silently dropped.
+
 ## What "today" means
 
 The board shows the current day in **America/New_York**, not the server's

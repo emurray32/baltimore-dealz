@@ -239,6 +239,135 @@ summary:hover { color: var(--muted); }
   transform: translateY(-1px);
 }
 
+/* ---- map page ----
+   The map is full-bleed against the paper; the header keeps the board's
+   measure so the two pages read as one site. */
+body.map-page {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.map-page header,
+.map-page main { max-width: 56rem; margin: 0 auto; padding: 0 1.25rem; }
+.map-page header { padding-top: .5rem; }
+
+#map {
+  height: min(70vh, 34rem);
+  margin: 1rem 0 .5rem;
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  z-index: 0; /* keep tiles under the focus ring */
+}
+
+.map-credit { margin-bottom: 2rem; }
+
+/* Custom pin — a dot with a ring, not the stock teardrop. Filled = has a
+   showable deal; hollow ring = tracked but nothing we can show. Shape, not
+   color alone, carries the difference. */
+.bd-pin {
+  background: none;
+  border: none;
+}
+.bd-pin-dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 4px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+.bd-pin-quiet .bd-pin-dot {
+  background: var(--surface);
+  border: 3px solid var(--muted);
+  box-shadow: none;
+}
+
+/* Popup — the mockup card: name, address, the deal with prices, then
+   phone · source · last verified. Leaflet supplies the bubble chrome; we own
+   what is inside it. */
+.leaflet-popup-content-wrapper {
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: var(--radius);
+  border: 1px solid var(--hair);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+}
+.leaflet-popup-tip {
+  background: var(--surface);
+  border: 1px solid var(--hair);
+}
+.leaflet-popup-content {
+  font: inherit;
+  font-size: .95rem;
+  line-height: 1.4;
+  margin: .9rem 1rem;
+}
+/* Header and footer stay put; the deal list scrolls between them, so the
+   verified date can never be pushed out of view by a deep list. */
+.pop { display: flex; flex-direction: column; max-height: 20rem; }
+.pop-scroll {
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+.pop-scroll::-webkit-scrollbar { width: 6px; }
+.pop-scroll::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+.pop-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  margin: 0 0 .15rem;
+}
+.pop-addr {
+  margin: 0 0 .55rem;
+  font-size: .82rem;
+  color: var(--muted);
+}
+.pop-deal { margin: .5rem 0; }
+.pop-deal .window { margin-left: 0; }
+.pop-deal ul {
+  list-style: none;
+  margin: .4rem 0 0;
+  padding: 0;
+}
+.pop-deal ul li {
+  padding: .35rem 0;
+  border-top: 1px solid var(--hair);
+  font-weight: 550;
+}
+.pop-deal ul li:first-child { border-top: 0; padding-top: 0; }
+.pop-noprice {
+  margin: .4rem 0 0;
+  font-size: .82rem;
+  color: var(--note-ink);
+  font-style: italic;
+}
+.pop-meta {
+  margin: 0;
+  padding-top: .5rem;
+  border-top: 1px solid var(--hair);
+  font-size: .8rem;
+  color: var(--muted);
+  flex: none; /* never flex away — this line is the whole point of the footer */
+}
+.pop-meta a { text-decoration: underline; text-underline-offset: 2px; }
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--muted);
+  font-size: 1.2rem;
+  padding: 6px 8px 0 0;
+}
+
+/* On a phone the map takes nearly the whole screen between header and credit. */
+@media (max-width: 40rem) {
+  #map { height: 62vh; border-radius: 10px; }
+  .map-page header, .map-page main { padding: 0 .9rem; }
+}
+
 /* ---- focus ---- */
 :focus-visible {
   outline: 3px solid var(--focus);
@@ -261,6 +390,10 @@ summary:hover { color: var(--muted); }
     --focus: #8AB4FF;
   }
   .distance { background: #F2F4F6; color: #14181B; }
+  /* Map tiles are drawn for light mode; dim + cool them so the dark page
+     does not blast a white rectangle, and invert the popup chrome to match. */
+  #map .leaflet-tile-pane { filter: brightness(.82) saturate(.75) contrast(.95); }
+  .leaflet-popup-content-wrapper { box-shadow: 0 6px 24px rgba(0, 0, 0, .5); }
 }
 
 /* ---- print ---- */

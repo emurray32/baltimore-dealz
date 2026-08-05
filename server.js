@@ -2,11 +2,20 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { venuesInView } from "./src/deals.js";
+import { renderMap } from "./src/map.js";
 import { renderBoard } from "./src/page.js";
 import { loadVenues } from "./src/venues.js";
 import { defaultView, findView, loadViews } from "./src/views.js";
 
 const STYLE_FILE = fileURLToPath(new URL("./public/style.css", import.meta.url));
+const VENDOR_DIR = fileURLToPath(new URL("./public/vendor/", import.meta.url));
+
+// Vendored static assets (Leaflet). Allow-listed filenames only — never serve
+// an arbitrary path out of the directory.
+const VENDOR_FILES = new Map([
+  ["leaflet.css", "text/css; charset=utf-8"],
+  ["leaflet.js", "text/javascript; charset=utf-8"],
+]);
 
 const server = createServer(async (req, res) => {
   try {
@@ -18,6 +27,16 @@ const server = createServer(async (req, res) => {
       return;
     }
 
+    if (path.startsWith("/vendor/")) {
+      const name = path.slice("/vendor/".length);
+      const type = VENDOR_FILES.get(name);
+      if (type) {
+        res.writeHead(200, { "content-type": type });
+        res.end(await readFile(VENDOR_DIR + name));
+        return;
+      }
+    }
+
     const views = await loadViews();
 
     // No view named? Send them to the default one rather than inventing a
@@ -26,6 +45,25 @@ const server = createServer(async (req, res) => {
       res.writeHead(302, { location: `/${defaultView(views).slug}` });
       res.end();
       return;
+    }
+
+    // /map on the default view — same redirect rule as the board.
+    if (path === "/map" || path === "/map.html") {
+      res.writeHead(302, { location: `/${defaultView(views).slug}/map` });
+      res.end();
+      return;
+    }
+
+    // /<view>/map — the interactive map for a named board.
+    const mapMatch = path.match(/^\/([a-z0-9-]+)\/map$/);
+    if (mapMatch) {
+      const mapView = findView(views, mapMatch[1]);
+      if (mapView) {
+        const venues = venuesInView(await loadVenues(), mapView);
+        res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
+        res.end(renderMap(venues, mapView, views));
+        return;
+      }
     }
 
     const view = findView(views, path.slice(1));

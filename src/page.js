@@ -254,6 +254,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))} · Baltimore time</p>
     ${viewSwitcher(views, view)}
+    <p class="meta map-link"><a href="/${escapeHtml(view.slug)}/map">Map view</a></p>
   </header>
   <main>
     <section id="tonight-board">

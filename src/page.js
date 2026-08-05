@@ -152,8 +152,9 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     ${viewSwitcher(views, view)}
   </header>
   <main>
-    <section>
+    <section id="tonight-board">
       <h2>On tonight</h2>
+      <p class="nearest-row"><button type="button" id="nearest-btn" hidden>Closest to me</button></p>
       ${today}
     </section>
     ${notesSection(venues)}

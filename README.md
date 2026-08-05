@@ -84,9 +84,10 @@ exceptions and conflict logs. A test fails if an `ops_note` reaches the page.
 | `open_unverifiable` | **never** | The place is open, but no deal we can honestly publish |
 
 Unverified venues stay in the file so the research isn't lost, but the board
-filters them out in code — not by leaving rows out of the file. Claddagh Pub
-(domain repurposed, no published deals) and Lee's Pint & Shell (its promo is
-monthly, and this model is weekly-only) both sit here.
+filters them out in code — not by leaving rows out of the file. That group is
+the "no deals we can show" list (name + reason, never an offer): Lee's Pint &
+Shell (monthly image-only promo), Walt's Inn, Bo Brooks, Sports Balls, Baltimore
+Tap House, The Worthington, SoPro, and Honeypot.
 
 ### Holding back a single deal row
 
@@ -102,10 +103,15 @@ Held rows never render, on any day or any path. The row stays in the file so the
 research isn't lost, and it starts rendering the moment you delete the status.
 Omitting `status` means the deal renders — that is the normal case.
 
-Deal rows are validated strictly: `days`, `items`, `time_window`, `status` and
-nothing else, and `status` may only be `"held"`. Inventing your own hold field
-(`"verified": false`, `"hold": true`) fails the suite rather than being ignored
-and rendering the deal anyway.
+Deal rows are validated strictly: `days`, `items`, `time_window`, `start`,
+`end`, `prices_published`, `status`, optional `source_url`, and nothing else.
+`status` may only be `"held"`. Inventing your own hold field (`"verified": false`,
+`"hold": true`) fails the suite rather than being ignored and rendering the deal
+anyway.
+
+Optional deal `source_url` is the URL that **verified that row**. When present,
+the card's "source" link uses it instead of the venue homepage — so Mama's brunch
+links to Instagram, not the website that never mentions the deal.
 
 A venue whose deals are *all* held simply shows no deals. It keeps its entry and
 its notes.
@@ -118,9 +124,13 @@ Required only when `status` is `verified`: `source_type`, `last_verified`
 (`YYYY-MM-DD`), and at least one deal. A venue that renders with no deals fails
 the suite.
 
-Optional everywhere: `address`, `phone`, `source_url`, `notes`. Several real
-venues have no phone or source URL published anywhere we're allowed to read, so
-the renderer drops whichever line is missing rather than failing.
+Optional everywhere: `address`, `phone`, `source_url`, `notes_public`,
+`ops_notes`, `bar_hours`, `lat`/`lon` + `coords_source`. Coordinates are
+geocoded from verified street addresses via OpenStreetMap Nominatim — **not**
+venue-published — and the provenance string is required whenever lat/lon are set.
+Sports Balls has no coordinates in the research table, so it omits them. Several
+real venues have no phone or source URL published anywhere we're allowed to
+read, so the renderer drops whichever line is missing rather than failing.
 
 `npm test` validates every entry, so a malformed venue fails the suite instead
 of silently vanishing from the board.

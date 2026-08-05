@@ -84,6 +84,8 @@ export const STATUSES = [VERIFIED, "open_unverifiable"];
 export const DEAL_STATUSES = [HELD];
 const DEAL_KEYS = new Set([
   "days", "items", "time_window", "start", "end", "prices_published", "status",
+  // The URL that actually verified this row — may differ from the venue homepage.
+  "source_url",
 ]);
 const ITEM_KEYS = new Set(["text", "price"]);
 
@@ -118,10 +120,24 @@ export function venueShapeErrors(venue) {
   if (!STATUSES.includes(venue.status)) {
     errors.push(`${label}: status must be one of ${STATUSES.join(", ")}`);
   }
-  for (const field of ["address", "phone", "source_url", "source_type", "notes_public", "ops_notes", "bar_hours", "neighborhood_source"]) {
+  for (const field of ["address", "phone", "source_url", "source_type", "notes_public", "ops_notes", "bar_hours", "neighborhood_source", "coords_source"]) {
     if (venue[field] !== undefined && typeof venue[field] !== "string") {
       errors.push(`${label}: ${field} must be a string when present`);
     }
+  }
+  for (const field of ["lat", "lon"]) {
+    if (venue[field] !== undefined && typeof venue[field] !== "number") {
+      errors.push(`${label}: ${field} must be a number when present`);
+    }
+  }
+  // Coordinates travel as a pair with provenance. One without the other is a typo.
+  const hasLat = venue.lat !== undefined;
+  const hasLon = venue.lon !== undefined;
+  if (hasLat !== hasLon) {
+    errors.push(`${label}: lat and lon must both be set or both omitted`);
+  }
+  if ((hasLat || hasLon) && !venue.coords_source) {
+    errors.push(`${label}: coords_source is required when lat/lon are set`);
   }
   if (venue.deal_format !== undefined && !DEAL_FORMATS.includes(venue.deal_format)) {
     errors.push(`${label}: deal_format must be omitted or one of ${DEAL_FORMATS.join(", ")}`);
@@ -177,6 +193,9 @@ export function venueShapeErrors(venue) {
     }
     if (deal.time_window !== undefined && typeof deal.time_window !== "string") {
       errors.push(`${label}: time_window must be a string when present`);
+    }
+    if (deal.source_url !== undefined && (typeof deal.source_url !== "string" || deal.source_url === "")) {
+      errors.push(`${label}: deal source_url must be a non-empty string when present`);
     }
     if (deal.status !== undefined && !DEAL_STATUSES.includes(deal.status)) {
       errors.push(

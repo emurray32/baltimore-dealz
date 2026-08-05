@@ -14,7 +14,9 @@ export function escapeHtml(value) {
 
 // Every meta line is built from the fields a venue actually has. A venue with
 // no phone loses the phone link; it does not take the board down with it.
-function metaLines(venue) {
+// Prefer the deal's own verification URL over the venue homepage — Mama's brunch
+// was verified on Instagram, not the website the card used to link to.
+function metaLines(venue, deal = null) {
   const place = [venue.neighborhood, venue.address].filter(Boolean).map(escapeHtml);
 
   const provenance = [];
@@ -22,8 +24,9 @@ function metaLines(venue) {
     const dialable = venue.phone.replace(/[^0-9+]/g, "");
     provenance.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(venue.phone)}</a>`);
   }
-  if (venue.source_url) {
-    provenance.push(`<a href="${escapeHtml(venue.source_url)}">source</a>`);
+  const sourceUrl = deal?.source_url || venue.source_url;
+  if (sourceUrl) {
+    provenance.push(`<a href="${escapeHtml(sourceUrl)}">source</a>`);
   }
   if (venue.last_verified) {
     provenance.push(`last verified ${escapeHtml(venue.last_verified)}`);
@@ -48,7 +51,7 @@ function dealCard({ venue, deal }) {
         <h3>${escapeHtml(venue.name)} ${window}</h3>
         <ul>${items}</ul>
         ${noPrices}
-        <p class="meta">${metaLines(venue)}</p>
+        <p class="meta">${metaLines(venue, deal)}</p>
       </article>`;
 }
 

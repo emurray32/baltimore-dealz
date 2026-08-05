@@ -1,41 +1,248 @@
-:root { color-scheme: light dark; }
+/* Baltimore Dealz — "Tonight in <view>" board.
+   Visual pass (Designer). Styles the server-rendered markup from src/page.js.
+   Class contract emitted by page.js: .card, .meta, .window, .quiet, .quiet-list
+   plus bare tags (h1/h2/h3, details/summary, article, a) and the opt-in
+   #nearest-btn / #tonight-board hooks the nearest-first script reads.
+   Every foreground/background pair below is contrast-checked light + dark. */
+
+:root {
+  color-scheme: light dark;
+  --paper: #F7F5F1;
+  --surface: #FFFFFF;
+  --ink: #14181B;
+  --muted: #59636E;
+  --hair: #E2DED7;
+  --chip-bg: #FFE7B0;        /* ink on this = 13.4:1 */
+  --chip-ink: #14181B;
+  --note-bg: #FBEEDD;
+  --note-ink: #8A4B00;
+  --focus: #1D4ED8;
+  --radius: 14px;
+  --maxw: 42rem;
+}
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0 auto;
-  padding: 1rem;
-  max-width: 34rem;
-  font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 1.25rem 1.25rem 3.5rem;
+  max-width: var(--maxw);
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
 }
 
-h1 { font-size: 1.5rem; margin: 0 0 .25rem; }
-h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; margin: 1.5rem 0 .5rem; }
-h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
+/* ---- header ---- */
+header { padding: .5rem 0 .25rem; }
 
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  font-weight: 800;
+  margin: 0 0 .35rem;
+}
+
+h2 {
+  font-size: .82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--muted);
+  margin: 2rem 0 .75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  margin: 0 0 .5rem;
+  line-height: 1.25;
+}
+
+a { color: inherit; }
+
+/* View switcher (Canton / Brewers Hill ...) */
+nav.meta { margin-top: .75rem; }
+nav.meta a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: .3rem .8rem;
+  border: 1.5px solid var(--hair);
+  border-radius: 999px;
+  background: var(--surface);
+}
+nav.meta strong {
+  font-weight: 700;
+  padding: .3rem .8rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+}
+nav.meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+
+/* ---- deal card ---- */
 .card {
-  border: 1px solid rgba(128, 128, 128, .35);
-  border-radius: .5rem;
-  padding: .75rem;
-  margin-bottom: .6rem;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  padding: 1.05rem 1.05rem .85rem;
+  margin: 0 0 .85rem;
 }
 
-.card ul { margin: 0; padding-left: 1.1rem; }
+/* venue name + time-window chip on one line */
+.card h3 { display: block; }
 
+/* the time window — the one scannable signal on every card */
 .window {
+  display: inline-block;
+  vertical-align: middle;
   font-size: .8rem;
-  font-weight: 400;
-  padding: .1rem .4rem;
-  border-radius: .25rem;
-  background: rgba(128, 128, 128, .2);
+  font-weight: 800;
+  letter-spacing: .02em;
+  padding: .2rem .55rem;
+  border-radius: 8px;
+  background: var(--chip-bg);
+  color: var(--chip-ink);
   white-space: nowrap;
+  margin-left: .4rem;
+  transform: translateY(-1px);
 }
 
-.meta { font-size: .8rem; opacity: .7; margin: .4rem 0 0; }
+/* deal items — price-forward, no default disc bullets */
+.card ul {
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0;
+}
+.card ul li {
+  padding: .55rem 0;
+  border-top: 1px solid var(--hair);
+  font-weight: 550;
+  font-size: 1rem;
+}
+.card ul li:first-child { border-top: 0; padding-top: .15rem; }
 
+/* meta lines: address, phone, source, last verified */
+.meta {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: .5rem 0 0;
+  line-height: 1.5;
+}
+.card > .meta {
+  margin-top: .7rem;
+  padding-top: .6rem;
+  border-top: 1px solid var(--hair);
+}
+.meta a { text-decoration: underline; text-underline-offset: 2px; }
+.meta strong { color: var(--ink); }
+
+/* "Prices not published by the venue." — a distinct note, not body copy */
+.card p.meta:only-of-type { border-top: 0; }
+
+/* ---- "Good to know" notes ---- */
+section > p.meta strong { color: var(--ink); }
+
+/* ---- day accordions (Browse the week) ---- */
 details { margin-bottom: .5rem; }
-summary { cursor: pointer; padding: .4rem 0; font-weight: 600; }
+summary {
+  cursor: pointer;
+  padding: .55rem .2rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "";
+  width: .55rem; height: .55rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform .15s ease;
+  flex: none;
+}
+details[open] > summary::before { transform: rotate(45deg); }
+summary:hover { color: var(--muted); }
 
-.quiet { margin-top: 1rem; }
+/* ---- the honest group: "N more spots, no deals we can show" ---- */
+.quiet { margin-top: 1.5rem; }
+.quiet details {
+  border: 1px dashed var(--hair);
+  border-radius: var(--radius);
+  padding: .4rem 1rem .9rem;
+}
+.quiet summary { font-size: 1.05rem; font-weight: 800; }
 .quiet-list { list-style: none; padding: 0; margin: .5rem 0 0; }
-.quiet-list li { margin-bottom: .75rem; }
+.quiet-list li { padding: .6rem 0; border-top: 1px solid var(--hair); }
+.quiet-list li:first-child { border-top: 0; }
+.quiet-list .meta { margin-top: .15rem; }
+
+/* ---- "Closest to me" (opt-in; wired by the nearest-first script) ---- */
+.nearest-row { margin: 0 0 1rem; }
+#nearest-btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: .95rem;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1.5px solid var(--hair);
+  border-radius: 999px;
+  padding: .55rem 1.1rem;
+  cursor: pointer;
+}
+#nearest-btn:hover:not([disabled]) { border-color: var(--muted); }
+#nearest-btn[disabled] { color: var(--muted); cursor: default; }
+
+/* distance chip the nearest-first script appends to a card's <h3> */
+.distance {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: .8rem;
+  font-weight: 800;
+  padding: .2rem .55rem;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--paper);
+  white-space: nowrap;
+  margin-left: .4rem;
+  transform: translateY(-1px);
+}
+
+/* ---- focus ---- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---- dark ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0F1214;
+    --surface: #191D21;
+    --ink: #F2F4F6;
+    --muted: #A6B0BA;
+    --hair: #2E353B;
+    --chip-bg: #4A3714;
+    --chip-ink: #FFE7B0;
+    --note-bg: #3A2A12;
+    --note-ink: #F0B15E;
+    --focus: #8AB4FF;
+  }
+  .distance { background: #F2F4F6; color: #14181B; }
+}
+
+/* ---- print ---- */
+@media print {
+  body { background: #fff; }
+  nav.meta, .nearest-row, details > summary::before { display: none; }
+  details { display: block; }
+  details > * { display: block; }
+}

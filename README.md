@@ -118,14 +118,21 @@ research isn't lost, and it starts rendering the moment you delete the status.
 Omitting `status` means the deal renders — that is the normal case.
 
 Deal rows are validated strictly: `days`, `items`, `time_window`, `start`,
-`end`, `prices_published`, `status`, optional `source_url`, and nothing else.
-`status` may only be `"held"`. Inventing your own hold field (`"verified": false`,
-`"hold": true`) fails the suite rather than being ignored and rendering the deal
-anyway.
+`end`, `prices_published`, `status`, optional `source_url`, optional
+`happy_hour` (boolean), optional `verified_date` (`YYYY-MM-DD`), and nothing
+else. `status` may only be `"held"`. Inventing your own hold field
+(`"verified": false`, `"hold": true`) fails the suite rather than being ignored
+and rendering the deal anyway.
 
 Optional deal `source_url` is the URL that **verified that row**. When present,
 the card's "source" link uses it instead of the venue homepage — so Mama's brunch
 links to Instagram, not the website that never mentions the deal.
+
+Optional `happy_hour: true` plus `verified_date` render a **Happy Hour** chip
+and a per-deal "verified \<date\>" chip on the card. Dates older than 30 days
+are flagged stale. Venue-level `last_verified` stays as the fallback provenance
+line. Venue `status` may be `verified`, `open_unverifiable`, or `unconfirmed`
+(neither open nor closed is supportable — no deal cards either way).
 
 A venue whose deals are *all* held simply shows no deals. It keeps its entry and
 its notes.

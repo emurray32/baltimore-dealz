@@ -110,7 +110,10 @@ export function distanceMeters(aLat, aLon, bLat, bLon) {
   return 2 * EARTH_RADIUS_M * Math.asin(Math.min(1, Math.sqrt(h)));
 }
 
-export const STATUSES = [VERIFIED, "open_unverifiable"];
+// open_unverifiable = open, no deal we can publish.
+// unconfirmed = neither open nor closed is supportable (e.g. Tap House: dead
+// site/IG, but lead-level listings still look live). Still no deal cards.
+export const STATUSES = [VERIFIED, "open_unverifiable", "unconfirmed"];
 
 // Legend for venue.source_type. Free strings (e.g. "website_text") used to pass;
 // unknown values now fail the suite so the data cannot drift off the legend.
@@ -123,8 +126,30 @@ const DEAL_KEYS = new Set([
   "days", "items", "time_window", "start", "end", "prices_published", "status",
   // The URL that actually verified this row — may differ from the venue homepage.
   "source_url",
+  // Optional: true when Deal Scout confirmed this row is a happy hour (not every
+  // day special). verified_date is per-deal freshness, separate from venue
+  // last_verified.
+  "happy_hour",
+  "verified_date",
 ]);
 const ITEM_KEYS = new Set(["text", "price"]);
+
+// A deal's verified_date older than this many whole days is stale on the board.
+export const STALE_AFTER_DAYS = 30;
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+// True when verifiedDate (YYYY-MM-DD) is more than STALE_AFTER_DAYS before `now`.
+// Calendar-day math in UTC so a machine clock in any zone agrees with the suite.
+// Missing or malformed dates are not "stale" — validation rejects those separately.
+export function isVerifiedDateStale(verifiedDate, now = new Date(), maxAgeDays = STALE_AFTER_DAYS) {
+  if (typeof verifiedDate !== "string" || !DATE_RE.test(verifiedDate)) return false;
+  const [y, m, d] = verifiedDate.split("-").map(Number);
+  const verifiedUtc = Date.UTC(y, m - 1, d);
+  const nowUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const ageDays = (nowUtc - verifiedUtc) / (24 * 60 * 60 * 1000);
+  return ageDays > maxAgeDays;
+}
 
 // A venue that publishes its deals in a form we cannot machine-read.
 export const DEAL_FORMATS = ["image"];
@@ -243,6 +268,14 @@ export function venueShapeErrors(venue) {
       errors.push(
         `${label}: deal status must be omitted or one of ${DEAL_STATUSES.join(", ")}`,
       );
+    }
+    if (deal.happy_hour !== undefined && typeof deal.happy_hour !== "boolean") {
+      errors.push(`${label}: happy_hour must be a boolean when present`);
+    }
+    if (deal.verified_date !== undefined) {
+      if (typeof deal.verified_date !== "string" || !DATE_RE.test(deal.verified_date)) {
+        errors.push(`${label}: verified_date must be YYYY-MM-DD when present`);
+      }
     }
     // An unknown key here is almost always someone inventing their own way to
     // hold a row back. Silently ignoring it would render the deal anyway.

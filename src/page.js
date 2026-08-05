@@ -7,6 +7,7 @@ import {
   dealsForDay,
   EARTH_RADIUS_M,
   hasShowableDeal,
+  isVerifiedDateStale,
   METERS_PER_MILE,
   noDealVenues,
   weekByDay,
@@ -44,7 +45,26 @@ function metaLines(venue, deal = null) {
   return [place.join(" · "), provenance.join(" · ")].filter(Boolean).join("<br>");
 }
 
-function dealCard({ venue, deal }) {
+// Happy Hour chip + per-deal verified date. Venue last_verified stays in meta
+// as the fallback provenance line — this is the deal-level label only.
+function dealChips(deal, now) {
+  const chips = [];
+  if (deal.happy_hour === true) {
+    chips.push('<span class="chip">Happy Hour</span>');
+  }
+  if (deal.verified_date) {
+    const stale = isVerifiedDateStale(deal.verified_date, now);
+    const label = stale
+      ? `verified ${escapeHtml(deal.verified_date)} · stale`
+      : `verified ${escapeHtml(deal.verified_date)}`;
+    chips.push(
+      `<span class="chip${stale ? " chip-stale" : ""}">${label}</span>`,
+    );
+  }
+  return chips.length ? `<p class="chips">${chips.join(" ")}</p>` : "";
+}
+
+function dealCard({ venue, deal }, now = new Date()) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
@@ -66,6 +86,7 @@ function dealCard({ venue, deal }) {
   return `
       <article class="card"${coords}>
         <h3>${escapeHtml(venue.name)} ${window}</h3>
+        ${dealChips(deal, now)}
         <ul>${items}</ul>
         ${noPrices}
         <p class="meta">${metaLines(venue, deal)}</p>
@@ -193,8 +214,10 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
   const todayKey = dayKeyInZone(now);
   const todayRows = dealsForDay(venues, todayKey);
 
+  const card = (row) => dealCard(row, now);
+
   const today = todayRows.length
-    ? todayRows.map(dealCard).join("")
+    ? todayRows.map(card).join("")
     : `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(todayKey))} yet.</p>`;
 
   // Today stays collapsed here — it is already spelled out above.
@@ -203,7 +226,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
       (day) => `
       <details>
         <summary>${escapeHtml(day.label)}${day.key === todayKey ? " (tonight)" : ""}</summary>
-        ${day.rows.length ? day.rows.map(dealCard).join("") : '<p class="meta">Nothing listed.</p>'}
+        ${day.rows.length ? day.rows.map(card).join("") : '<p class="meta">Nothing listed.</p>'}
       </details>`,
     )
     .join("");

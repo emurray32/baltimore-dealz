@@ -14,7 +14,9 @@ import {
   hasShowableDeal,
   isDealRenderable,
   isRenderable,
+  isVerifiedDateStale,
   noDealVenues,
+  STALE_AFTER_DAYS,
   venueShapeErrors,
   venuesForView,
   venuesInView,
@@ -622,8 +624,8 @@ test("the data records which state of the master file it came from", async () =>
       "utf8",
     ),
   );
-  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-05.*sha256 24cef257/);
-  assert.equal(raw.schema_version, 5);
+  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-05.*sha256 d2bede07/);
+  assert.equal(raw.schema_version, 6);
 });
 
 // --- coordinates + per-deal source URL ------------------------------------
@@ -759,17 +761,16 @@ test("Claddagh is verified with a full weekly board and dine-in-only on the thre
 });
 
 test("no-deal venues carry a reason and never an offer", async () => {
-  const ids = [
+  const openUnverifiable = [
     "walts-inn",
     "bo-brooks",
     "sports-balls",
-    "baltimore-tap-house",
     "the-worthington",
     "sopro",
     "honeypot",
   ];
   const venues = await loadVenues();
-  for (const id of ids) {
+  for (const id of openUnverifiable) {
     const v = venues.find((row) => row.id === id);
     assert.ok(v, `${id} missing`);
     assert.equal(v.status, "open_unverifiable");
@@ -777,6 +778,14 @@ test("no-deal venues carry a reason and never an offer", async () => {
     assert.ok(v.notes_public, `${id} needs a public reason`);
     assert.deepEqual(venueShapeErrors(v), []);
   }
+  // Tap House is neither open nor closed supportably — unconfirmed, not open_unverifiable.
+  const tap = venues.find((row) => row.id === "baltimore-tap-house");
+  assert.ok(tap);
+  assert.equal(tap.status, "unconfirmed");
+  assert.deepEqual(tap.deals, []);
+  assert.match(tap.notes_public, /unconfirmed/i);
+  assert.deepEqual(venueShapeErrors(tap), []);
+  assert.equal(isRenderable(tap), false);
 });
 
 test("Stackhouse still has times-only happy hour — no 2019 food prices", async () => {
@@ -831,6 +840,204 @@ test("Lee's notes_public is a reason, not an offer", async () => {
   const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
   assert.match(lees.notes_public, /image we cannot read/i);
   assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday/i);
+});
+
+// --- happy_hour + verified_date (optional deal fields) --------------------
+
+test("optional happy_hour and verified_date are valid; bad shapes fail", () => {
+  assert.deepEqual(
+    venueShapeErrors(
+      venue({
+        deals: [
+          {
+            days: ["mon"],
+            items: [{ text: "$3 beer" }],
+            start: null,
+            end: null,
+            happy_hour: true,
+            verified_date: "2026-08-03",
+          },
+        ],
+      }),
+    ),
+    [],
+  );
+  // Untagged deal stays valid (fields are optional).
+  assert.deepEqual(
+    venueShapeErrors(
+      venue({
+        deals: [{ days: ["mon"], items: [{ text: "$1 beer" }], start: null, end: null }],
+      }),
+    ),
+    [],
+  );
+  // happy_hour must be a boolean when present.
+  const badBool = venueShapeErrors(
+    venue({
+      deals: [
+        {
+          days: ["mon"],
+          items: [{ text: "x" }],
+          start: null,
+          end: null,
+          happy_hour: "yes",
+        },
+      ],
+    }),
+  );
+  assert.ok(badBool.some((e) => e.includes("happy_hour must be a boolean")), badBool.join("; "));
+  // verified_date must be YYYY-MM-DD.
+  for (const bad of ["8/3/2026", "2026-8-03", "", "yesterday", 20260803]) {
+    const errors = venueShapeErrors(
+      venue({
+        deals: [
+          {
+            days: ["mon"],
+            items: [{ text: "x" }],
+            start: null,
+            end: null,
+            verified_date: bad,
+          },
+        ],
+      }),
+    );
+    assert.ok(
+      errors.some((e) => e.includes("verified_date must be YYYY-MM-DD")),
+      `verified_date ${JSON.stringify(bad)} was accepted`,
+    );
+  }
+});
+
+test("unknown deal keys still fail validation after happy_hour landed", () => {
+  const errors = venueShapeErrors(
+    venue({
+      deals: [
+        {
+          days: ["mon"],
+          items: [{ text: "x" }],
+          start: null,
+          end: null,
+          happy_hour: true,
+          stale: true,
+        },
+      ],
+    }),
+  );
+  assert.ok(errors.some((e) => e.includes('unknown field "stale"')), errors.join("; "));
+});
+
+test("isVerifiedDateStale flags dates older than 30 whole days", () => {
+  assert.equal(STALE_AFTER_DAYS, 30);
+  // Fixed "now" so the suite does not depend on the machine clock.
+  const now = new Date("2026-09-03T16:00:00Z"); // UTC 2026-09-03
+  // Exactly 30 days earlier is still fresh; 31 is stale.
+  assert.equal(isVerifiedDateStale("2026-08-04", now), false); // 30 days
+  assert.equal(isVerifiedDateStale("2026-08-03", now), true); // 31 days
+  assert.equal(isVerifiedDateStale("2026-09-03", now), false); // today
+  assert.equal(isVerifiedDateStale("2026-09-04", now), false); // future
+  // Malformed / missing are not "stale" — validation owns those.
+  assert.equal(isVerifiedDateStale(undefined, now), false);
+  assert.equal(isVerifiedDateStale("not-a-date", now), false);
+});
+
+test("a Happy Hour deal renders the chip and verified date on the board", () => {
+  const v = venue({
+    name: "HH Bar",
+    deals: [
+      {
+        days: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        items: [{ text: "$3 rail" }],
+        start: 960,
+        end: 1140,
+        time_window: "4pm-7pm",
+        happy_hour: true,
+        verified_date: "2026-08-03",
+      },
+    ],
+  });
+  const html = renderBoard([v], CANTON, [CANTON], FRI_11PM_EDT);
+  assert.match(html, /class="chip">Happy Hour<\/span>/);
+  assert.match(html, /class="chip">verified 2026-08-03<\/span>/);
+  assert.doesNotMatch(html, /stale/);
+});
+
+test("a deal older than 30 days is flagged stale on the board", () => {
+  const v = venue({
+    name: "Stale Bar",
+    deals: [
+      {
+        days: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        items: [{ text: "$2 domestic" }],
+        start: null,
+        end: null,
+        happy_hour: true,
+        verified_date: "2026-01-01",
+      },
+    ],
+  });
+  // Board "now" is Fri 11pm EDT Aug 7 2026 — Jan 1 is far past 30 days.
+  const html = renderBoard([v], CANTON, [CANTON], FRI_11PM_EDT);
+  assert.match(html, /chip-stale/);
+  assert.match(html, /verified 2026-01-01 · stale/);
+});
+
+test("seed happy-hour tags match Deal Scout: confirmed get dates; disputed omit them", async () => {
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+
+  // Confirmed with a date (Deal Scout §8).
+  const silksHh = byId.silks.deals.find((d) => d.happy_hour);
+  assert.equal(silksHh.happy_hour, true);
+  assert.equal(silksHh.verified_date, "2026-08-03");
+
+  const claddaghHh = byId["claddagh-pub"].deals.filter((d) => d.happy_hour);
+  assert.ok(claddaghHh.length >= 5);
+  for (const d of claddaghHh) {
+    assert.equal(d.verified_date, "2026-08-05");
+  }
+
+  // Happy hour is real but time/days disputed — label only, no verified_date.
+  const goodVibesHeld = byId["good-vibes-cantina"].deals.find((d) => d.status === "held");
+  assert.equal(goodVibesHeld.happy_hour, true);
+  assert.equal(goodVibesHeld.verified_date, undefined);
+
+  const elBufaloHeld = byId["el-bufalo"].deals.find((d) => d.status === "held");
+  assert.equal(elBufaloHeld.happy_hour, true);
+  assert.equal(elBufaloHeld.verified_date, undefined);
+
+  // Cowboy Row is NOT VERIFIED as a happy hour — never tag it.
+  assert.ok(byId["cowboy-row"].deals.every((d) => d.happy_hour !== true));
+
+  // A real seed board shows the chip on Silks.
+  const html = await boardFor(new Date("2026-08-03T20:00:00Z")); // Monday
+  const silksCards = cardsFor(html, "Silks");
+  assert.ok(silksCards.length > 0, "expected Silks card on Monday");
+  assert.match(silksCards.join(""), /class="chip">Happy Hour<\/span>/);
+  assert.match(silksCards.join(""), /verified 2026-08-03/);
+});
+
+test("unconfirmed is a legal venue status and never renders deal cards", () => {
+  const v = venue({
+    id: "maybe-open",
+    name: "Maybe Open Pub",
+    status: "unconfirmed",
+    deals: [],
+    source_type: undefined,
+    last_verified: undefined,
+  });
+  assert.deepEqual(venueShapeErrors(v), []);
+  assert.equal(isRenderable(v), false);
+  assert.deepEqual(dealsForDay([v], "mon"), []);
+});
+
+test("deep source URLs land on Huck's, Stackhouse, and Mahaffey's", async () => {
+  const venues = await loadVenues();
+  const hucks = venues.find((v) => v.id === "hucks-american-craft");
+  const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
+  const maha = venues.find((v) => v.id === "mahaffeys-pub");
+  assert.equal(hucks.source_url, "https://www.hucksamericancraft.com/#dailyspecials-section");
+  assert.equal(stack.source_url, "https://hudsonstreetstackhouse.com/weekly-food-specials/");
+  assert.match(maha.source_url, /getbento\.com.*Weekly%20Specials\.pdf/);
 });
 
 // --- nearest-first: the served page must actually carry the feature ---------

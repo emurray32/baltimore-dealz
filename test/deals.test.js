@@ -9,10 +9,13 @@ import {
   dayKeyInZone,
   dealsForDay,
   hasEnded,
+  hasShowableDeal,
   isDealRenderable,
   isRenderable,
+  noDealVenues,
   venueShapeErrors,
   venuesForView,
+  venuesInView,
   weekByDay,
 } from "../src/deals.js";
 import { escapeHtml, renderBoard } from "../src/page.js";
@@ -47,7 +50,8 @@ function venue(overrides = {}) {
 }
 
 async function boardFor(date, view = CANTON) {
-  const venues = venuesForView(await loadVenues(), view);
+  // Full neighborhood list — deal cards + the collapsed no-deal group.
+  const venues = venuesInView(await loadVenues(), view);
   return renderBoard(venues, view, [view], date);
 }
 
@@ -101,7 +105,7 @@ test("a deal listed on two days shows up on both", async () => {
 });
 
 test("every day of the week has at least one seeded deal", async () => {
-  const venues = venuesForView(await loadVenues(), CANTON);
+  const venues = venuesInView(await loadVenues(), CANTON);
   for (const day of weekByDay(venues)) {
     assert.ok(day.rows.length > 0, `no deals seeded for ${day.key}`);
   }
@@ -127,7 +131,7 @@ test("the seed data really does contain unverified venues", async () => {
   );
 });
 
-test("an unverified venue never appears in the rendered board, any day", async () => {
+test("an unverified venue never appears as a deal card, any day", async () => {
   const all = await loadVenues();
   const unverified = all.filter((v) => !isRenderable(v));
 
@@ -136,7 +140,10 @@ test("an unverified venue never appears in the rendered board, any day", async (
     const instant = new Date(`2026-08-0${3 + WEEK.indexOf(day)}T16:00:00Z`);
     const html = await boardFor(instant);
     for (const hidden of unverified) {
-      assert.ok(!html.includes(escapeHtml(hidden.name)), `${hidden.name} rendered on ${day.key}`);
+      assert.ok(
+        !html.includes(`<h3>${escapeHtml(hidden.name)}`),
+        `${hidden.name} has a deal card on ${day.key}`,
+      );
     }
   }
 });
@@ -203,21 +210,24 @@ test("a held deal row never appears in the rendered board, any day", async () =>
   }
 });
 
-test("a venue whose only deal is held drops off the board but keeps its data", async () => {
+test("a venue whose only deal is held drops off deal cards but keeps its data", async () => {
   const all = await loadVenues();
   const elBufalo = all.find((v) => v.id === "el-bufalo");
 
   assert.equal(elBufalo.status, "verified");
   assert.ok(elBufalo.deals.every((d) => !isDealRenderable(d)));
   assert.deepEqual(venueShapeErrors(elBufalo), []); // still valid data
+  assert.equal(hasShowableDeal(elBufalo), false);
 
-  // No deal card anywhere. Its note still shows under "Good to know" — that is
-  // the ticket's "days question in notes", not a leak.
+  // No deal card anywhere. Held offer text never renders. Name + reason land
+  // in the collapsed no-deal group instead.
   const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
   assert.ok(!html.includes(`<h3>${escapeHtml(elBufalo.name)}`), "El Bufalo has a deal card");
   for (const item of elBufalo.deals.flatMap((d) => d.items.map((i) => i.text))) {
     assert.ok(!html.includes(escapeHtml(item)), `held item "${item}" rendered`);
   }
+  assert.match(html, /El Bufalo Tequila Bar \+ Kitchen/);
+  assert.match(html, /name no days on their site or Instagram/);
 });
 
 test("dealsForDay drops held rows but keeps the venue's other rows", () => {
@@ -325,8 +335,8 @@ test("a venue missing every optional field still renders", () => {
 });
 
 test("the real seed data has venues that would have 500'd the old render", async () => {
-  const venues = venuesForView(await loadVenues(), CANTON);
-  const phoneless = venues.filter((v) => !v.phone);
+  const venues = venuesInView(await loadVenues(), CANTON);
+  const phoneless = venues.filter((v) => hasShowableDeal(v) && !v.phone);
 
   assert.ok(phoneless.length > 0, "no phoneless venue — the guard test proves nothing");
   const html = renderBoard(venues, CANTON, [CANTON], FRI_11PM_EDT);
@@ -410,17 +420,21 @@ test("venue text is escaped, not injected raw", () => {
   assert.match(html, /&lt;script&gt;/);
 });
 
-test("notes from a non-rendering venue never reach the page", () => {
+test("ops_notes from a no-deal venue never reach the page", () => {
   const hidden = venue({
     id: "hidden",
     name: "Hidden Bar",
     status: "open_unverifiable",
     deals: [],
+    notes_public: "No specials we can verify.",
     ops_notes: "SECRET-RESEARCH-NOTE",
   });
 
   const html = renderBoard([hidden, venue()], CANTON, [CANTON], FRI_11PM_EDT);
   assert.ok(!html.includes("SECRET-RESEARCH-NOTE"));
+  // Public reason is what the collapsed group is for.
+  assert.match(html, /Hidden Bar/);
+  assert.match(html, /No specials we can verify/);
 });
 
 test("neighborhood labels come from the city boundary layer, with provenance", async () => {
@@ -724,4 +738,50 @@ test("Stackhouse still has times-only happy hour — no 2019 food prices", async
   const texts = stack.deals.flatMap((d) => d.items.map((i) => i.text)).join(" ");
   assert.doesNotMatch(texts, /Wing Night|Burger Night|Seafood Night|\$10|\$8|\$15\.99/);
   assert.match(stack.ops_notes ?? "", /2019/);
+});
+
+// --- no-deal collapsed group ----------------------------------------------
+
+test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + reason only", async () => {
+  const venues = venuesInView(await loadVenues(), CANTON);
+  const quiet = noDealVenues(venues);
+  const ids = quiet.map((v) => v.id).sort();
+
+  assert.deepEqual(ids, [
+    "baltimore-tap-house",
+    "bo-brooks",
+    "el-bufalo",
+    "honeypot",
+    "lees-pint-and-shell",
+    "sopro",
+    "sports-balls",
+    "the-worthington",
+    "walts-inn",
+  ]);
+
+  const html = await boardFor(FRI_11PM_EDT);
+  assert.match(html, /9 more spots, no deals we can show/);
+  assert.match(html, /<details>/);
+  assert.match(html, /class="quiet"/);
+
+  for (const v of quiet) {
+    assert.ok(html.includes(escapeHtml(v.name)), `${v.id} missing from quiet group`);
+    assert.ok(v.notes_public, `${v.id} needs a public reason`);
+    assert.ok(html.includes(escapeHtml(v.notes_public)), `${v.id} reason missing`);
+    // Never a deal card for these.
+    assert.ok(!html.includes(`<h3>${escapeHtml(v.name)}`), `${v.id} leaked a deal card`);
+  }
+
+  // Held offer text must never appear for El Bufalo.
+  assert.doesNotMatch(html, /16oz Modelo Especial/);
+  // Lee's reason names the blocker, not the promo.
+  assert.match(html, /monthly promo as an image we cannot read/i);
+  assert.doesNotMatch(html, /Build-your-own-burger/i);
+  assert.doesNotMatch(html, /first Wednesday/i);
+});
+
+test("Lee's notes_public is a reason, not an offer", async () => {
+  const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
+  assert.match(lees.notes_public, /image we cannot read/i);
+  assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday/i);
 });

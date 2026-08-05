@@ -35,3 +35,7 @@ h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
 
 details { margin-bottom: .5rem; }
 summary { cursor: pointer; padding: .4rem 0; font-weight: 600; }
+
+.quiet { margin-top: 1rem; }
+.quiet-list { list-style: none; padding: 0; margin: .5rem 0 0; }
+.quiet-list li { margin-bottom: .75rem; }

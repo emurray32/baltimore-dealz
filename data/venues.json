@@ -1,6 +1,6 @@
 {
-  "schema_version": 6,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8 happy-hour + §8d source URLs + Tap House unconfirmed (Deal Scout), sha256 d2bede07f60370d4f6f2b5327daaf4d2f48d492b8abc09202d231ef61979adbd",
+  "schema_version": 7,
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -13,8 +13,8 @@
       "source_url": "https://www.hucksamericancraft.com/#dailyspecials-section",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes_public": "UGA game-day specials — ask at the bar.",
-      "ops_notes": "UGA game-day specials confirmed on site at /#ugagameday-section (Deal Scout 2026-08-05) — prices not yet on the board. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours. Deep-link source is #dailyspecials-section, not the homepage.",
+      "notes_public": "UGA game-day specials \u2014 ask at the bar.",
+      "ops_notes": "UGA game-day specials confirmed on site at /#ugagameday-section (Deal Scout 2026-08-05) \u2014 prices not yet on the board. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours. Deep-link source is #dailyspecials-section, not the homepage.",
       "deals": [
         {
           "days": [
@@ -32,7 +32,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "pretzel"
+          ]
         },
         {
           "days": [
@@ -45,7 +48,10 @@
           ],
           "start": 1140,
           "end": null,
-          "time_window": "7pm-close"
+          "time_window": "7pm-close",
+          "food_categories": [
+            "event"
+          ]
         },
         {
           "days": [
@@ -63,7 +69,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "burger"
+          ]
         },
         {
           "days": [
@@ -76,7 +85,10 @@
           ],
           "start": 1140,
           "end": null,
-          "time_window": "7pm"
+          "time_window": "7pm",
+          "food_categories": [
+            "event"
+          ]
         },
         {
           "days": [
@@ -94,7 +106,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -116,7 +131,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "pasta/comfort"
+          ]
         },
         {
           "days": [
@@ -130,7 +148,10 @@
           ],
           "start": 660,
           "end": 900,
-          "time_window": "11am-3pm"
+          "time_window": "11am-3pm",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -145,7 +166,10 @@
           ],
           "start": 1380,
           "end": null,
-          "time_window": "11pm-close"
+          "time_window": "11pm-close",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -163,7 +187,10 @@
           ],
           "start": 600,
           "end": 840,
-          "time_window": "10am-2pm"
+          "time_window": "10am-2pm",
+          "food_categories": [
+            "brunch"
+          ]
         },
         {
           "days": [
@@ -176,7 +203,10 @@
           ],
           "start": 1320,
           "end": null,
-          "time_window": "10pm-close"
+          "time_window": "10pm-close",
+          "food_categories": [
+            "event"
+          ]
         },
         {
           "days": [
@@ -190,7 +220,10 @@
           ],
           "start": 840,
           "end": 1320,
-          "time_window": "2pm-10pm"
+          "time_window": "2pm-10pm",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
         },
         {
           "days": [
@@ -204,7 +237,10 @@
           ],
           "start": 840,
           "end": null,
-          "time_window": "2pm-close"
+          "time_window": "2pm-close",
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.282825,
@@ -222,7 +258,7 @@
       "source_url": "https://www.smaltimoremd.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "Invalid TLS cert — a crawler must skip the cert check for this domain.",
+      "ops_notes": "Invalid TLS cert \u2014 a crawler must skip the cert check for this domain.",
       "deals": [
         {
           "days": [
@@ -254,7 +290,10 @@
           "end": 1140,
           "time_window": "until 7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-08-03",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -269,7 +308,10 @@
           "end": null,
           "time_window": "all night",
           "happy_hour": true,
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-08-03",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -295,7 +337,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "tacos"
+          ]
         },
         {
           "days": [
@@ -317,7 +362,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "sushi"
+          ]
         },
         {
           "days": [
@@ -339,7 +387,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "burger"
+          ]
         },
         {
           "days": [
@@ -353,7 +404,10 @@
           ],
           "start": 600,
           "end": 780,
-          "time_window": "10am-1pm"
+          "time_window": "10am-1pm",
+          "food_categories": [
+            "brunch"
+          ]
         }
       ],
       "lat": 39.283232,
@@ -421,7 +475,10 @@
           "end": null,
           "time_window": "all day",
           "happy_hour": true,
-          "status": "held"
+          "status": "held",
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.27989,
@@ -462,7 +519,10 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
-          "source_url": "https://www.mamasonthehalfshell.com/"
+          "source_url": "https://www.mamasonthehalfshell.com/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -479,7 +539,10 @@
           "happy_hour": true,
           "prices_published": false,
           "status": "held",
-          "source_url": "https://www.instagram.com/mamasonthehalfshell/"
+          "source_url": "https://www.instagram.com/mamasonthehalfshell/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -498,7 +561,10 @@
           "start": 540,
           "end": 900,
           "time_window": "9am-3pm",
-          "source_url": "https://www.instagram.com/mamasonthehalfshell/"
+          "source_url": "https://www.instagram.com/mamasonthehalfshell/",
+          "food_categories": [
+            "brunch"
+          ]
         }
       ],
       "lat": 39.279868,
@@ -516,7 +582,7 @@
       "source_url": "https://hudsonstreetstackhouse.com/weekly-food-specials/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "/weekly-food-specials/ is live but dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Re-verify before any prices ship (Deal Scout 2026-08-05).",
+      "ops_notes": "/weekly-food-specials/ is live but dated April 21, 2019 \u2014 seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Re-verify before any prices ship (Deal Scout 2026-08-05).",
       "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {
@@ -536,7 +602,10 @@
           "time_window": "3pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false
+          "prices_published": false,
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -552,7 +621,10 @@
           "time_window": "2pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false
+          "prices_published": false,
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -569,7 +641,10 @@
           "time_window": "11am-5pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false
+          "prices_published": false,
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.282206,
@@ -601,7 +676,10 @@
           "start": 1200,
           "end": null,
           "time_window": "8pm",
-          "source_url": "https://www.instagram.com/elliestaverncanton/"
+          "source_url": "https://www.instagram.com/elliestaverncanton/",
+          "food_categories": [
+            "event"
+          ]
         }
       ],
       "lat": 39.282334,
@@ -619,7 +697,7 @@
       "source_url": "https://media-cdn.getbento.com/accounts/bdbbb522f0c1eb593db882304d803882/media/CmU9z2mjTBi0Eht6gKaY_Weekly%20Specials.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "Manual entry only, permanently — the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Deep-link source is the GetBento flyer PDF (Deal Scout 2026-08-05). Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
+      "ops_notes": "Manual entry only, permanently \u2014 the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Deep-link source is the GetBento flyer PDF (Deal Scout 2026-08-05). Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
       "deals": [
         {
           "days": [
@@ -640,7 +718,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "small-plate/apps"
+          ]
         },
         {
           "days": [
@@ -660,7 +741,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "tacos"
+          ]
         },
         {
           "days": [
@@ -677,7 +761,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -693,7 +780,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
         },
         {
           "days": [
@@ -707,7 +797,10 @@
           ],
           "start": null,
           "end": 1020,
-          "time_window": "until 5pm"
+          "time_window": "until 5pm",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
         },
         {
           "days": [
@@ -722,7 +815,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "sliders"
+          ]
         }
       ],
       "lat": 39.281303,
@@ -740,7 +836,7 @@
       "source_url": "https://www.cowboyrowbaltimore.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "Happy hour NOT VERIFIED from official source — aggregators claim one, their own site does not publish it.",
+      "ops_notes": "Happy hour NOT VERIFIED from official source \u2014 aggregators claim one, their own site does not publish it.",
       "deals": [
         {
           "days": [
@@ -757,7 +853,10 @@
           "start": 1260,
           "end": null,
           "time_window": "9pm-close",
-          "source_url": "https://www.cowboyrowbaltimore.com/"
+          "source_url": "https://www.cowboyrowbaltimore.com/",
+          "food_categories": [
+            "event"
+          ]
         },
         {
           "days": [
@@ -771,7 +870,10 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://www.instagram.com/cowboyrow/"
+          "source_url": "https://www.instagram.com/cowboyrow/",
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -790,7 +892,10 @@
           "start": 660,
           "end": 900,
           "time_window": "11am-3pm",
-          "source_url": "https://www.cowboyrowbaltimore.com/"
+          "source_url": "https://www.cowboyrowbaltimore.com/",
+          "food_categories": [
+            "brunch"
+          ]
         }
       ],
       "lat": 39.28055,
@@ -841,7 +946,10 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "status": "held"
+          "status": "held",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -849,7 +957,7 @@
           ],
           "items": [
             {
-              "text": "Fajitas Crazy Hour — $16 chicken or steak",
+              "text": "Fajitas Crazy Hour \u2014 $16 chicken or steak",
               "price": "$16"
             },
             {
@@ -859,7 +967,10 @@
           ],
           "start": 1260,
           "end": 1320,
-          "time_window": "9pm-10pm"
+          "time_window": "9pm-10pm",
+          "food_categories": [
+            "fajitas"
+          ]
         },
         {
           "days": [
@@ -867,12 +978,15 @@
           ],
           "items": [
             {
-              "text": "Cantina Pizza Birria with 8oz consomé — $15",
+              "text": "Cantina Pizza Birria with 8oz consom\u00e9 \u2014 $15",
               "price": "$15"
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "pizza"
+          ]
         }
       ],
       "lat": 39.279871,
@@ -902,7 +1016,7 @@
           ],
           "items": [
             {
-              "text": "Happy Hour — craft cocktails and small plates"
+              "text": "Happy Hour \u2014 craft cocktails and small plates"
             }
           ],
           "start": 900,
@@ -910,7 +1024,10 @@
           "time_window": "3pm-6pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false
+          "prices_published": false,
+          "food_categories": [
+            "small-plate/apps"
+          ]
         }
       ],
       "lat": 39.281708,
@@ -957,7 +1074,10 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-08-03",
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.281928,
@@ -975,7 +1095,7 @@
       "source_url": "https://thedivebaltimore.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes_public": "Kitchen open until midnight every night. Closed Sundays — their site says Sunday hours may begin September 13.",
+      "notes_public": "Kitchen open until midnight every night. Closed Sundays \u2014 their site says Sunday hours may begin September 13.",
       "ops_notes": "Flyer content dated Oct 2024; early re-check flag. The Monday burger is in their newer site text but not on the flyer.",
       "bar_hours": "Mon-Sat 4pm-1am (kitchen until 12am)",
       "deals": [
@@ -996,7 +1116,10 @@
           "time_window": "4pm-6pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false
+          "prices_published": false,
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1013,7 +1136,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -1026,7 +1152,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "burger"
+          ]
         },
         {
           "days": [
@@ -1034,12 +1163,15 @@
           ],
           "items": [
             {
-              "text": "Bmore Trivia — win a $50 gift card"
+              "text": "Bmore Trivia \u2014 win a $50 gift card"
             }
           ],
           "start": 1170,
           "end": 1290,
-          "time_window": "7:30pm-9:30pm"
+          "time_window": "7:30pm-9:30pm",
+          "food_categories": [
+            "event"
+          ]
         },
         {
           "days": [
@@ -1052,7 +1184,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -1065,7 +1200,10 @@
             }
           ],
           "start": null,
-          "end": null
+          "end": null,
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.27912,
@@ -1082,7 +1220,7 @@
       "source_url": "https://www.instagram.com/pigandroosterbaltimore/",
       "source_type": "instagram_profile",
       "last_verified": "2026-08-03",
-      "ops_notes": "No phone published anywhere official — a real, verified absence. The burger row is held: its source line reads \"$5 BURGER OF THE DAY! $7! ...\", carrying two prices with no way to tell which a customer pays, and stating no days. One-off dated events and a Wednesday chair-massage offer are not recorded.",
+      "ops_notes": "No phone published anywhere official \u2014 a real, verified absence. The burger row is held: its source line reads \"$5 BURGER OF THE DAY! $7! ...\", carrying two prices with no way to tell which a customer pays, and stating no days. One-off dated events and a Wednesday chair-massage offer are not recorded.",
       "deals": [
         {
           "days": [
@@ -1102,7 +1240,10 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day"
+          "time_window": "all day",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1121,7 +1262,10 @@
           ],
           "start": null,
           "end": null,
-          "status": "held"
+          "status": "held",
+          "food_categories": [
+            "burger"
+          ]
         }
       ],
       "lat": 39.284657,
@@ -1156,7 +1300,7 @@
       "address": "2918 O'Donnell St, Baltimore, MD 21224",
       "source_type": "venue_website",
       "last_verified": "2026-08-05",
-      "ops_notes": "Weekly specials page is /weekly-specials/ (not /menus/weekly-specials/). Happy hour also on /menus/happy-hour/ (bar only). Domain previously served an unrelated portfolio; real pub site verified 2026-08-05. Brunch menu is a menu, not a deal. Do not ship Stackhouse 2019 prices — unrelated.",
+      "ops_notes": "Weekly specials page is /weekly-specials/ (not /menus/weekly-specials/). Happy hour also on /menus/happy-hour/ (bar only). Domain previously served an unrelated portfolio; real pub site verified 2026-08-05. Brunch menu is a menu, not a deal. Do not ship Stackhouse 2019 prices \u2014 unrelated.",
       "deals": [
         {
           "days": [
@@ -1170,7 +1314,10 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "steak"
+          ]
         },
         {
           "days": [
@@ -1210,7 +1357,10 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
+          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -1224,7 +1374,10 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "steak"
+          ]
         },
         {
           "days": [
@@ -1256,7 +1409,10 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
+          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1274,7 +1430,11 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "burger",
+            "sandwich/cheesesteak"
+          ]
         },
         {
           "days": [
@@ -1306,7 +1466,10 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
+          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1320,7 +1483,10 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "seafood/crab"
+          ]
         },
         {
           "days": [
@@ -1352,7 +1518,10 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
+          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1371,7 +1540,10 @@
           "start": 1140,
           "end": null,
           "time_window": "7pm-close",
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1386,7 +1558,10 @@
           "start": 660,
           "end": 1020,
           "time_window": "11am-5pm",
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "seafood/crab"
+          ]
         },
         {
           "days": [
@@ -1418,7 +1593,10 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
+          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1430,14 +1608,17 @@
               "price": "$7"
             },
             {
-              "text": "NÜTRL's $5",
+              "text": "N\u00dcTRL's $5",
               "price": "$5"
             }
           ],
           "start": 1290,
           "end": null,
           "time_window": "9:30pm-close",
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "drink"
+          ]
         },
         {
           "days": [
@@ -1472,7 +1653,11 @@
           "start": null,
           "end": 1020,
           "time_window": "open-5pm",
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "wings",
+            "sandwich/cheesesteak"
+          ]
         },
         {
           "days": [
@@ -1513,7 +1698,10 @@
           ],
           "start": null,
           "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "wings"
+          ]
         },
         {
           "days": [
@@ -1540,7 +1728,7 @@
               "price": "$3"
             },
             {
-              "text": "NÜTRL's $5",
+              "text": "N\u00dcTRL's $5",
               "price": "$5"
             },
             {
@@ -1563,7 +1751,10 @@
           "start": null,
           "end": null,
           "time_window": "open-close",
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/"
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
+          "food_categories": [
+            "wings"
+          ]
         }
       ],
       "lat": 39.280555,
@@ -1571,7 +1762,7 @@
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
       "phone": "(410) 522-4220",
       "source_url": "https://claddaghbaltimore.com/",
-      "bar_hours": "Mon–Fri 10:45am–2am · Sat & Sun 9am–2am",
+      "bar_hours": "Mon\u2013Fri 10:45am\u20132am \u00b7 Sat & Sun 9am\u20132am",
       "notes_public": "All prices are subject to change without notice."
     },
     {
@@ -1619,7 +1810,7 @@
       "source_type": "none",
       "last_verified": "2026-08-05",
       "notes_public": "No specials or happy hour published on their site.",
-      "ops_notes": "Site live with full menu as plain text; no specials page. No coordinates in research §(b).",
+      "ops_notes": "Site live with full menu as plain text; no specials page. No coordinates in research \u00a7(b).",
       "deals": [],
       "phone": "667-212-5888",
       "source_url": "http://www.sbcanton.com/"
@@ -1633,8 +1824,8 @@
       "address": "600 S Potomac St, Baltimore, MD 21224",
       "source_type": "none",
       "last_verified": "2026-08-05",
-      "notes_public": "Status unconfirmed — no venue-official source that it is open or closed; no deals we can show.",
-      "ops_notes": "Deal Scout 2026-08-05: site has no DNS (A/NS). Instagram profile removed. Yelp updated July 2026 with 28 reviews + hours; OSM still tags 600 S Potomac as a pub. Neither open nor closed is supportable — unconfirmed, not removed. Aggregator prices are leads only — do not publish.",
+      "notes_public": "Status unconfirmed \u2014 no venue-official source that it is open or closed; no deals we can show.",
+      "ops_notes": "Deal Scout 2026-08-05: site has no DNS (A/NS). Instagram profile removed. Yelp updated July 2026 with 28 reviews + hours; OSM still tags 600 S Potomac as a pub. Neither open nor closed is supportable \u2014 unconfirmed, not removed. Aggregator prices are leads only \u2014 do not publish.",
       "deals": [],
       "source_url": "https://www.instagram.com/baltimoretaphouse/",
       "lat": 39.2852,

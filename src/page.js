@@ -6,6 +6,7 @@ import {
   dayLabel,
   dealsForDay,
   EARTH_RADIUS_M,
+  FOOD_CATEGORY_LABELS,
   hasShowableDeal,
   isVerifiedDateStale,
   METERS_PER_MILE,
@@ -45,12 +46,19 @@ function metaLines(venue, deal = null) {
   return [place.join(" · "), provenance.join(" · ")].filter(Boolean).join("<br>");
 }
 
-// Happy Hour chip + per-deal verified date. Venue last_verified stays in meta
-// as the fallback provenance line — this is the deal-level label only.
+// Happy Hour + food-category + per-deal verified date chips. Venue last_verified
+// stays in meta as the fallback provenance line — these are deal-level only.
+// Multi-category rows render one chip per category (Claddagh Sat/Wed).
 function dealChips(deal, now) {
   const chips = [];
   if (deal.happy_hour === true) {
     chips.push('<span class="chip">Happy Hour</span>');
+  }
+  if (Array.isArray(deal.food_categories)) {
+    for (const cat of deal.food_categories) {
+      const label = FOOD_CATEGORY_LABELS[cat] ?? cat;
+      chips.push(`<span class="chip">${escapeHtml(label)}</span>`);
+    }
   }
   if (deal.verified_date) {
     const stale = isVerifiedDateStale(deal.verified_date, now);

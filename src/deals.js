@@ -131,8 +131,53 @@ const DEAL_KEYS = new Set([
   // last_verified.
   "happy_hour",
   "verified_date",
+  // Optional array of controlled food labels (Deal Scout §8f/§8g). Never
+  // keyword-guessed — human-tagged. Multi-food rows carry multiple values.
+  "food_categories",
 ]);
 const ITEM_KEYS = new Set(["text", "price"]);
+
+// Controlled vocabulary for deal.food_categories. Order is display order.
+// Source of truth: Deal Scout master research file §8e vocab + §8f array form.
+export const FOOD_CATEGORIES = [
+  "wings",
+  "burger",
+  "brunch",
+  "sandwich/cheesesteak",
+  "tacos",
+  "sushi",
+  "steak",
+  "seafood/crab",
+  "pizza",
+  "fajitas",
+  "pasta/comfort",
+  "pretzel",
+  "small-plate/apps",
+  "sliders",
+  "drink",
+  "event",
+];
+const FOOD_CATEGORY_SET = new Set(FOOD_CATEGORIES);
+
+// Short chip labels — same scannable style as the Happy Hour chip.
+export const FOOD_CATEGORY_LABELS = {
+  wings: "Wings",
+  burger: "Burger",
+  brunch: "Brunch",
+  "sandwich/cheesesteak": "Sandwich",
+  tacos: "Tacos",
+  sushi: "Sushi",
+  steak: "Steak",
+  "seafood/crab": "Seafood",
+  pizza: "Pizza",
+  fajitas: "Fajitas",
+  "pasta/comfort": "Pasta",
+  pretzel: "Pretzel",
+  "small-plate/apps": "Apps",
+  sliders: "Sliders",
+  drink: "Drink",
+  event: "Event",
+};
 
 // A deal's verified_date older than this many whole days is stale on the board.
 export const STALE_AFTER_DAYS = 30;
@@ -275,6 +320,24 @@ export function venueShapeErrors(venue) {
     if (deal.verified_date !== undefined) {
       if (typeof deal.verified_date !== "string" || !DATE_RE.test(deal.verified_date)) {
         errors.push(`${label}: verified_date must be YYYY-MM-DD when present`);
+      }
+    }
+    if (deal.food_categories !== undefined) {
+      if (!Array.isArray(deal.food_categories) || deal.food_categories.length === 0) {
+        errors.push(`${label}: food_categories must be a non-empty array when present`);
+      } else {
+        const seen = new Set();
+        for (const cat of deal.food_categories) {
+          if (typeof cat !== "string" || !FOOD_CATEGORY_SET.has(cat)) {
+            errors.push(
+              `${label}: food_categories value "${cat}" must be one of ${FOOD_CATEGORIES.join(", ")}`,
+            );
+          } else if (seen.has(cat)) {
+            errors.push(`${label}: food_categories has duplicate "${cat}"`);
+          } else {
+            seen.add(cat);
+          }
+        }
       }
     }
     // An unknown key here is almost always someone inventing their own way to

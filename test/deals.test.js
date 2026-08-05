@@ -10,6 +10,7 @@ import {
   dealsForDay,
   distanceMeters,
   EARTH_RADIUS_M,
+  FOOD_CATEGORIES,
   hasEnded,
   hasShowableDeal,
   isDealRenderable,
@@ -624,8 +625,9 @@ test("the data records which state of the master file it came from", async () =>
       "utf8",
     ),
   );
-  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-05.*sha256 d2bede07/);
-  assert.equal(raw.schema_version, 6);
+  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-05.*sha256 [a-f0-9]{64}/);
+  assert.match(raw.derived_from, /§8f food_categories/);
+  assert.equal(raw.schema_version, 7);
 });
 
 // --- coordinates + per-deal source URL ------------------------------------
@@ -1076,4 +1078,202 @@ test("the nearest button is present, default-hidden, and revealed only where geo
   assert.match(html, /btn\.hidden = true/);
   // And the reveal is gated on the capability check, not unconditional.
   assert.match(html, /"geolocation" in navigator/);
+});
+
+// --- food_categories (optional deal-level array, Deal Scout §8f/§8g) --------
+
+test("optional food_categories is valid; unknown values and bad shapes fail", () => {
+  // Valid single-element array.
+  assert.deepEqual(
+    venueShapeErrors(
+      venue({
+        deals: [
+          {
+            days: ["mon"],
+            items: [{ text: "$10 wings" }],
+            start: null,
+            end: null,
+            food_categories: ["wings"],
+          },
+        ],
+      }),
+    ),
+    [],
+  );
+  // Valid multi-category array (the Claddagh Sat shape).
+  assert.deepEqual(
+    venueShapeErrors(
+      venue({
+        deals: [
+          {
+            days: ["sat"],
+            items: [{ text: "30 Wings $28" }, { text: "Cheesesteaks $8" }],
+            start: null,
+            end: null,
+            food_categories: ["wings", "sandwich/cheesesteak"],
+          },
+        ],
+      }),
+    ),
+    [],
+  );
+  // Untagged row stays valid (field is optional).
+  assert.deepEqual(
+    venueShapeErrors(
+      venue({
+        deals: [{ days: ["mon"], items: [{ text: "$1 beer" }], start: null, end: null }],
+      }),
+    ),
+    [],
+  );
+  // Unknown category rejected.
+  const unknown = venueShapeErrors(
+    venue({
+      deals: [
+        {
+          days: ["mon"],
+          items: [{ text: "x" }],
+          start: null,
+          end: null,
+          food_categories: ["wings", "ramen"],
+        },
+      ],
+    }),
+  );
+  assert.ok(
+    unknown.some((e) => e.includes('food_categories value "ramen"')),
+    unknown.join("; "),
+  );
+  // String (the retired single-value shape) rejected — must be an array.
+  const asString = venueShapeErrors(
+    venue({
+      deals: [
+        {
+          days: ["mon"],
+          items: [{ text: "x" }],
+          start: null,
+          end: null,
+          food_categories: "wings",
+        },
+      ],
+    }),
+  );
+  assert.ok(
+    asString.some((e) => e.includes("food_categories must be a non-empty array")),
+    asString.join("; "),
+  );
+  // Empty array rejected.
+  const empty = venueShapeErrors(
+    venue({
+      deals: [
+        {
+          days: ["mon"],
+          items: [{ text: "x" }],
+          start: null,
+          end: null,
+          food_categories: [],
+        },
+      ],
+    }),
+  );
+  assert.ok(
+    empty.some((e) => e.includes("food_categories must be a non-empty array")),
+    empty.join("; "),
+  );
+  // Every controlled-vocab value is accepted alone.
+  for (const cat of FOOD_CATEGORIES) {
+    const errors = venueShapeErrors(
+      venue({
+        deals: [
+          {
+            days: ["mon"],
+            items: [{ text: "x" }],
+            start: null,
+            end: null,
+            food_categories: [cat],
+          },
+        ],
+      }),
+    );
+    assert.deepEqual(errors, [], `category ${cat} was rejected`);
+  }
+});
+
+test("a multi-category deal renders one chip per category", () => {
+  const v = venue({
+    name: "Claddagh Pub",
+    deals: [
+      {
+        days: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        items: [{ text: "30 Wings $28" }, { text: "Cheesesteaks $8" }],
+        start: null,
+        end: null,
+        food_categories: ["wings", "sandwich/cheesesteak"],
+      },
+    ],
+  });
+  const html = renderBoard([v], CANTON, [CANTON], FRI_11PM_EDT);
+  assert.match(html, /class="chip">Wings<\/span>/);
+  assert.match(html, /class="chip">Sandwich<\/span>/);
+});
+
+test("an untagged deal renders no food-category chip", () => {
+  const v = venue({
+    name: "Plain Bar",
+    deals: [
+      {
+        days: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+        items: [{ text: "$1 beer" }],
+        start: null,
+        end: null,
+      },
+    ],
+  });
+  const html = renderBoard([v], CANTON, [CANTON], FRI_11PM_EDT);
+  assert.doesNotMatch(html, /class="chip">Wings<\/span>/);
+  assert.doesNotMatch(html, /class="chip">Drink<\/span>/);
+  assert.doesNotMatch(html, /class="chip">Burger<\/span>/);
+});
+
+test("seed food_categories match Deal Scout §8f/§8g: 63 tagged, two multi-rows only", async () => {
+  const venues = await loadVenues();
+  const deals = venues.flatMap((v) => v.deals.map((d) => ({ venue: v, deal: d })));
+  assert.equal(deals.length, 63, "expected 63 deal rows on the board");
+
+  // Every seed row carries the field (optional in schema; filled in seed).
+  for (const { venue, deal } of deals) {
+    assert.ok(
+      Array.isArray(deal.food_categories) && deal.food_categories.length > 0,
+      `${venue.id}: missing food_categories on ${deal.items[0].text}`,
+    );
+  }
+
+  // Exactly two multi-category rows — Claddagh Sat and Claddagh Wed burger/sandwich.
+  const multi = deals.filter(({ deal }) => deal.food_categories.length > 1);
+  assert.equal(multi.length, 2, multi.map((m) => `${m.venue.id}:${m.deal.items[0].text}`).join("; "));
+
+  const claddagh = venues.find((v) => v.id === "claddagh-pub");
+  const sat = claddagh.deals.find((d) => d.days.length === 1 && d.days[0] === "sat");
+  assert.deepEqual(sat.food_categories, ["wings", "sandwich/cheesesteak"]);
+
+  const wedFood = claddagh.deals.find(
+    (d) => d.days[0] === "wed" && d.items.some((i) => /Burger/i.test(i.text)),
+  );
+  assert.deepEqual(wedFood.food_categories, ["burger", "sandwich/cheesesteak"]);
+
+  // Trap rows that must stay single-element (steak-inside-cheesesteak / filling).
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  assert.deepEqual(byId["hucks-american-craft"].deals.find((d) => d.days[0] === "sun" && d.items[0].text.includes("Cheesesteak")).food_categories, ["sandwich/cheesesteak"]);
+  assert.deepEqual(byId.smaltimore.deals.find((d) => d.days.includes("tue") && d.items.some((i) => /Taco/i.test(i.text))).food_categories, ["tacos"]);
+  assert.deepEqual(byId["mahaffeys-pub"].deals.find((d) => d.days[0] === "fri").food_categories, ["sandwich/cheesesteak"]);
+  assert.deepEqual(byId["good-vibes-cantina"].deals.find((d) => d.days[0] === "thu" && d.status !== "held").food_categories, ["fajitas"]);
+  assert.deepEqual(byId.smaltimore.deals.find((d) => d.days[0] === "wed").food_categories, ["sushi"]);
+
+  // Real board shows both Claddagh Sat chips.
+  const satHtml = await boardFor(new Date("2026-08-08T16:00:00Z")); // Sat Aug 8 2026 EDT noon-ish
+  const claddaghCards = cardsFor(satHtml, "Claddagh Pub");
+  const satCard = claddaghCards.find((c) => c.includes("30 Wings") && c.includes("Cheesesteaks"));
+  assert.ok(satCard, "expected Claddagh Saturday card with wings + cheesesteaks");
+  assert.match(satCard, /class="chip">Wings<\/span>/);
+  assert.match(satCard, /class="chip">Sandwich<\/span>/);
 });

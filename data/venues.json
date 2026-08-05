@@ -1,6 +1,6 @@
 {
-  "schema_version": 5,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 (Deal Scout Claddagh weekly + coords §(b)), sha256 24cef257ae838014d12a2ac14d3722c16e9bea157e5e32d89541e98296791c24",
+  "schema_version": 6,
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8 happy-hour + §8d source URLs + Tap House unconfirmed (Deal Scout), sha256 d2bede07f60370d4f6f2b5327daaf4d2f48d492b8abc09202d231ef61979adbd",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -10,11 +10,11 @@
       "status": "verified",
       "address": "3728 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 438-3380",
-      "source_url": "https://www.hucksamericancraft.com/",
+      "source_url": "https://www.hucksamericancraft.com/#dailyspecials-section",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
       "notes_public": "UGA game-day specials — ask at the bar.",
-      "ops_notes": "UGA block unconfirmed in Deal Scout's own fetch. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours.",
+      "ops_notes": "UGA game-day specials confirmed on site at /#ugagameday-section (Deal Scout 2026-08-05) — prices not yet on the board. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours. Deep-link source is #dailyspecials-section, not the homepage.",
       "deals": [
         {
           "days": [
@@ -252,7 +252,9 @@
           ],
           "start": null,
           "end": 1140,
-          "time_window": "until 7pm"
+          "time_window": "until 7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03"
         },
         {
           "days": [
@@ -265,7 +267,9 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all night"
+          "time_window": "all night",
+          "happy_hour": true,
+          "verified_date": "2026-08-03"
         },
         {
           "days": [
@@ -416,6 +420,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
+          "happy_hour": true,
           "status": "held"
         }
       ],
@@ -454,6 +459,8 @@
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false,
           "source_url": "https://www.mamasonthehalfshell.com/"
         },
@@ -469,6 +476,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
+          "happy_hour": true,
           "prices_published": false,
           "status": "held",
           "source_url": "https://www.instagram.com/mamasonthehalfshell/"
@@ -505,10 +513,10 @@
       "status": "verified",
       "address": "2626 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 342-0592",
-      "source_url": "https://hudsonstreetstackhouse.com/",
+      "source_url": "https://hudsonstreetstackhouse.com/weekly-food-specials/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "Their weekly-food-specials page is referenced but publishes no content — worth a weekly re-check. /weekly-food-specials/ is live but dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99).",
+      "ops_notes": "/weekly-food-specials/ is live but dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Re-verify before any prices ship (Deal Scout 2026-08-05).",
       "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {
@@ -526,6 +534,8 @@
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false
         },
         {
@@ -540,6 +550,8 @@
           "start": 840,
           "end": 1140,
           "time_window": "2pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false
         },
         {
@@ -555,6 +567,8 @@
           "start": 660,
           "end": 1020,
           "time_window": "11am-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false
         }
       ],
@@ -602,10 +616,10 @@
       "status": "verified",
       "address": "2706 Dillon St, Baltimore, MD 21224",
       "phone": "410-276-9899",
-      "source_url": "https://www.mahaffeyspubbaltimore.com/",
+      "source_url": "https://media-cdn.getbento.com/accounts/bdbbb522f0c1eb593db882304d803882/media/CmU9z2mjTBi0Eht6gKaY_Weekly%20Specials.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "Manual entry only, permanently — the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
+      "ops_notes": "Manual entry only, permanently — the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Deep-link source is the GetBento flyer PDF (Deal Scout 2026-08-05). Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
       "deals": [
         {
           "days": [
@@ -826,6 +840,7 @@
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
+          "happy_hour": true,
           "status": "held"
         },
         {
@@ -893,6 +908,8 @@
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false
         }
       ],
@@ -938,7 +955,9 @@
           ],
           "start": 960,
           "end": 1140,
-          "time_window": "4pm-7pm"
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03"
         }
       ],
       "lat": 39.281928,
@@ -975,6 +994,8 @@
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
           "prices_published": false
         },
         {
@@ -1187,6 +1208,8 @@
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-05",
           "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
         },
         {
@@ -1231,6 +1254,8 @@
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-05",
           "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
         },
         {
@@ -1279,6 +1304,8 @@
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-05",
           "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
         },
         {
@@ -1323,6 +1350,8 @@
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-05",
           "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
         },
         {
@@ -1387,6 +1416,8 @@
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-05",
           "source_url": "https://claddaghbaltimore.com/menus/happy-hour/"
         },
         {
@@ -1598,12 +1629,12 @@
       "name": "Baltimore Tap House",
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
-      "status": "open_unverifiable",
+      "status": "unconfirmed",
       "address": "600 S Potomac St, Baltimore, MD 21224",
       "source_type": "none",
       "last_verified": "2026-08-05",
-      "notes_public": "No specials we can verify from an official source.",
-      "ops_notes": "baltimoretaphouse.com has no DNS record. IG live but posts not readable without a JS browser. Aggregator prices are leads only — do not publish.",
+      "notes_public": "Status unconfirmed — no venue-official source that it is open or closed; no deals we can show.",
+      "ops_notes": "Deal Scout 2026-08-05: site has no DNS (A/NS). Instagram profile removed. Yelp updated July 2026 with 28 reviews + hours; OSM still tags 600 S Potomac as a pub. Neither open nor closed is supportable — unconfirmed, not removed. Aggregator prices are leads only — do not publish.",
       "deals": [],
       "source_url": "https://www.instagram.com/baltimoretaphouse/",
       "lat": 39.2852,

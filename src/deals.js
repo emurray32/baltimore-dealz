@@ -112,6 +112,10 @@ export function distanceMeters(aLat, aLon, bLat, bLon) {
 
 export const STATUSES = [VERIFIED, "open_unverifiable"];
 
+// Legend for venue.source_type. Free strings (e.g. "website_text") used to pass;
+// unknown values now fail the suite so the data cannot drift off the legend.
+export const SOURCE_TYPES = ["venue_website", "instagram_profile", "none"];
+
 // The only status a deal row may carry. Anything else is a typo or a hand-rolled
 // hold field, and both must fail the suite rather than quietly render the deal.
 export const DEAL_STATUSES = [HELD];
@@ -157,6 +161,11 @@ export function venueShapeErrors(venue) {
     if (venue[field] !== undefined && typeof venue[field] !== "string") {
       errors.push(`${label}: ${field} must be a string when present`);
     }
+  }
+  if (venue.source_type !== undefined && !SOURCE_TYPES.includes(venue.source_type)) {
+    errors.push(
+      `${label}: source_type must be one of ${SOURCE_TYPES.join(", ")}`,
+    );
   }
   for (const field of ["lat", "lon"]) {
     if (venue[field] !== undefined && typeof venue[field] !== "number") {

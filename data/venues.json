@@ -455,7 +455,7 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "prices_published": false,
-          "source_url": "https://www.instagram.com/mamasonthehalfshell/"
+          "source_url": "https://www.mamasonthehalfshell.com/"
         },
         {
           "days": [
@@ -1133,7 +1133,7 @@
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2918 O'Donnell St, Baltimore, MD 21224",
-      "source_type": "website_text",
+      "source_type": "venue_website",
       "last_verified": "2026-08-05",
       "ops_notes": "Weekly specials page is /weekly-specials/ (not /menus/weekly-specials/). Happy hour also on /menus/happy-hour/ (bar only). Domain previously served an unrelated portfolio; real pub site verified 2026-08-05. Brunch menu is a menu, not a deal. Do not ship Stackhouse 2019 prices — unrelated.",
       "deals": [

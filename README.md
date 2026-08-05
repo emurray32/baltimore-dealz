@@ -25,24 +25,37 @@ All of it is in [`data/venues.json`](data/venues.json). One entry per venue:
 {
   "id": "hucks-american-craft",
   "name": "Huck's American Craft",
-  "neighborhood": "Canton",
+  "neighborhood": "Brewers Hill",
   "status": "verified",
   "address": "3728 Hudson St, Baltimore, MD 21224",
   "phone": "(443) 438-3380",
-  "source_url": "https://hucksamericancraft.com",
+  "source_url": "https://www.hucksamericancraft.com/",
   "source_type": "venue_website",
   "last_verified": "2026-08-03",
-  "notes": "UGA game days: ...",
+  "notes_public": "UGA game-day specials — ask at the bar.",
   "deals": [
-    { "days": ["sat", "sun"], "items": ["Brunch", "$6 brunch drinks"], "time_window": "10am-2pm" }
+    {
+      "days": ["sat", "sun"],
+      "items": [
+        { "text": "Brunch" },
+        { "text": "$6 brunch drinks", "price": "$6" }
+      ],
+      "start": 600,
+      "end": 840,
+      "time_window": "10am-2pm"
+    }
   ]
 }
 ```
 
-`days` uses `mon tue wed thu fri sat sun`. `time_window` is optional and is free
-text as the venue words it. Adding a venue means adding one object to that
-array — nothing else changes. The file is re-read on every request, so a crawler
-can rewrite it in place without a restart.
+`days` uses `mon tue wed thu fri sat sun`. `items` are objects with required
+`text` and optional string `price` (`"BOGO"`, `"1/2 off"`, `"Free"` are real
+prices). Every deal carries `start`/`end` as minutes past midnight or `null`.
+`time_window` is optional free text as the venue words it. `source_type` is one
+of `venue_website`, `instagram_profile`, or `none` — anything else fails the
+suite. Adding a venue means adding one object to that array — nothing else
+changes. The file is re-read on every request, so a crawler can rewrite it in
+place without a restart.
 
 ### Where the deal data comes from
 

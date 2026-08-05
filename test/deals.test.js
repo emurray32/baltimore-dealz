@@ -675,9 +675,25 @@ test("Claddagh is verified with a full weekly board and dine-in-only on the thre
   assert.ok(sun.some((d) => d.items.some((i) => i.text === "Sunday Specials")));
   assert.ok(sun.some((d) => d.items.some((i) => i.text === "Sunday Sports Specials")));
 
+  // BAR ONLY is published on the happy-hour page, not weekly-specials.
+  const hh = claddagh.deals.filter((d) =>
+    d.items.some((i) => i.text === "Happy Hour (bar only)"),
+  );
+  assert.equal(hh.length, 5);
+  for (const deal of hh) {
+    assert.equal(deal.source_url, "https://claddaghbaltimore.com/menus/happy-hour/");
+  }
+  const nonHh = claddagh.deals.filter(
+    (d) => !d.items.some((i) => i.text === "Happy Hour (bar only)"),
+  );
+  for (const deal of nonHh) {
+    assert.equal(deal.source_url, "https://claddaghbaltimore.com/weekly-specials/");
+  }
+
   const html = await boardFor(new Date("2026-08-03T20:00:00Z")); // Monday
   assert.match(html, /Claddagh Pub/);
   assert.match(html, /dine-in only/);
+  assert.match(html, /claddaghbaltimore\.com\/menus\/happy-hour\//);
   assert.match(html, /claddaghbaltimore\.com\/weekly-specials\//);
 });
 

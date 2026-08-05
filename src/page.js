@@ -124,21 +124,25 @@ function viewSwitcher(views, currentView) {
   return `<nav class="meta">${links}</nav>`;
 }
 
-// The browser-side half of nearest-first, exported so the test suite pins the
-// exact string the page serves. Everything the script needs is interpolated
-// server-side; nothing user-controlled reaches it, and the client mirrors the
-// server's distanceMeters rather than importing it (the page serves no modules).
+// The browser-side half of nearest-first, served inline at the end of
+// renderBoard's output (the page ships no modules, so it is interpolated as a
+// string). Everything the script needs is baked in server-side; nothing
+// user-controlled reaches it, and the client mirrors the server's
+// distanceMeters rather than importing it.
 export const NEAREST_FIRST_SCRIPT = `<script>
 (function () {
   var btn = document.getElementById("nearest-btn");
   var board = document.getElementById("tonight-board");
   if (!btn || !board) return;
   // Geolocation is opt-in and not universal. Where it is missing entirely the
-  // button is dead weight, so it never appears.
+  // button is dead weight, so it stays hidden (its default) and we stop there.
   if (!("geolocation" in navigator)) {
     btn.hidden = true;
     return;
   }
+  // Geolocation exists, so the button can work — reveal it. It stays opt-in:
+  // no location is requested until the customer taps.
+  btn.hidden = false;
   var R = ${EARTH_RADIUS_M};
   function meters(aLat, aLon, bLat, bLon) {
     var rad = Math.PI / 180;
@@ -233,6 +237,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     </section>
     ${noDealSection(venues)}
   </main>
+  ${NEAREST_FIRST_SCRIPT}
 </body>
 </html>
 `;

@@ -8,6 +8,8 @@ import {
   WEEK,
   dayKeyInZone,
   dealsForDay,
+  distanceMeters,
+  EARTH_RADIUS_M,
   hasEnded,
   hasShowableDeal,
   isDealRenderable,
@@ -784,4 +786,42 @@ test("Lee's notes_public is a reason, not an offer", async () => {
   const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
   assert.match(lees.notes_public, /image we cannot read/i);
   assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday/i);
+});
+
+// --- nearest-first: the served page must actually carry the feature ---------
+//
+// These exist because of a real miss: the script was defined but never
+// interpolated into renderBoard, and the button was hidden with nothing to
+// reveal it — while the suite sat green at 54/54 because nothing looked. A
+// passing count that never grows is not evidence; these pin the artifact.
+
+test("distanceMeters matches a known great-circle answer", () => {
+  // One degree of longitude at the equator is a quarter meridian / 90.
+  const oneDegree = distanceMeters(0, 0, 0, 1);
+  assert.ok(Math.abs(oneDegree - (EARTH_RADIUS_M * Math.PI) / 180) < 0.5, `got ${oneDegree}`);
+  // Same point is zero, and antipodal points are half the circumference.
+  assert.equal(distanceMeters(39.28, -76.57, 39.28, -76.57), 0);
+  const antipodal = distanceMeters(0, 0, 0, 180);
+  assert.ok(Math.abs(antipodal - Math.PI * EARTH_RADIUS_M) < 1, `got ${antipodal}`);
+});
+
+test("the served page actually ships the nearest-first script", async () => {
+  const html = await boardFor(FRI_11PM_EDT);
+  // The script reaches the browser, before </body>, exactly once.
+  assert.equal((html.match(/<script>/g) || []).length, 1, "expected one inline script");
+  assert.match(html, /getCurrentPosition/);
+  assert.ok(html.indexOf("getCurrentPosition") < html.indexOf("</body>"), "script is after </body>");
+});
+
+test("the nearest button is present, default-hidden, and revealed only where geolocation exists", async () => {
+  const html = await boardFor(FRI_11PM_EDT);
+  // Default-hidden markup: no location is requested, and nothing shows, until
+  // the script confirms geolocation exists and the customer taps.
+  assert.match(html, /<button[^>]*id="nearest-btn"[^>]*hidden/);
+  // The script holds both branches: reveal where geolocation exists, keep
+  // hidden where it does not. Both lines must ship.
+  assert.match(html, /btn\.hidden = false/);
+  assert.match(html, /btn\.hidden = true/);
+  // And the reveal is gated on the capability check, not unconditional.
+  assert.match(html, /"geolocation" in navigator/);
 });

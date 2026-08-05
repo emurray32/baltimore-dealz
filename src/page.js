@@ -5,7 +5,9 @@ import {
   dayKeyInZone,
   dayLabel,
   dealsForDay,
+  EARTH_RADIUS_M,
   hasShowableDeal,
+  METERS_PER_MILE,
   noDealVenues,
   weekByDay,
 } from "./deals.js";
@@ -53,8 +55,16 @@ function dealCard({ venue, deal }) {
     deal.prices_published === false
       ? '<p class="meta">Prices not published by the venue.</p>'
       : "";
+  // Coordinates ride the card as data attributes. The nearest-first script reads
+  // them only after the customer shares a location; until then they are inert
+  // markup and the board keeps its published order. A venue with no coordinates
+  // (Sports Balls) simply carries no attributes and stays in that order.
+  const coords =
+    typeof venue.lat === "number" && typeof venue.lon === "number"
+      ? ` data-lat="${venue.lat}" data-lon="${venue.lon}"`
+      : "";
   return `
-      <article class="card">
+      <article class="card"${coords}>
         <h3>${escapeHtml(venue.name)} ${window}</h3>
         <ul>${items}</ul>
         ${noPrices}
@@ -114,6 +124,69 @@ function viewSwitcher(views, currentView) {
   return `<nav class="meta">${links}</nav>`;
 }
 
+// The browser-side half of nearest-first, served inline at the end of
+// renderBoard's output (the page ships no modules, so it is interpolated as a
+// string). Everything the script needs is baked in server-side; nothing
+// user-controlled reaches it, and the client mirrors the server's
+// distanceMeters rather than importing it.
+export const NEAREST_FIRST_SCRIPT = `<script>
+(function () {
+  var btn = document.getElementById("nearest-btn");
+  var board = document.getElementById("tonight-board");
+  if (!btn || !board) return;
+  // Geolocation is opt-in and not universal. Where it is missing entirely the
+  // button is dead weight, so it stays hidden (its default) and we stop there.
+  if (!("geolocation" in navigator)) {
+    btn.hidden = true;
+    return;
+  }
+  // Geolocation exists, so the button can work — reveal it. It stays opt-in:
+  // no location is requested until the customer taps.
+  btn.hidden = false;
+  var R = ${EARTH_RADIUS_M};
+  function meters(aLat, aLon, bLat, bLon) {
+    var rad = Math.PI / 180;
+    var dLat = (bLat - aLat) * rad;
+    var dLon = (bLon - aLon) * rad;
+    var h =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(aLat * rad) * Math.cos(bLat * rad) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return 2 * R * Math.asin(Math.min(1, Math.sqrt(h)));
+  }
+  var MI = ${METERS_PER_MILE};
+  btn.addEventListener("click", function () {
+    btn.disabled = true;
+    btn.textContent = "Finding you…";
+    navigator.geolocation.getCurrentPosition(
+      function (pos) {
+        var lat = pos.coords.latitude;
+        var lon = pos.coords.longitude;
+        var cards = Array.prototype.slice.call(board.querySelectorAll("[data-lat]"));
+        cards.forEach(function (card) {
+          var m = meters(lat, lon, parseFloat(card.dataset.lat), parseFloat(card.dataset.lon));
+          var span = document.createElement("span");
+          span.className = "distance";
+          span.textContent = (m / MI).toFixed(1) + " mi";
+          card.querySelector("h3").appendChild(span);
+          card._d = m;
+        });
+        cards.sort(function (a, b) { return a._d - b._d; });
+        cards.forEach(function (card) { board.appendChild(card); });
+        btn.textContent = "Sorted nearest first";
+      },
+      function () {
+        // Denied or unavailable — the published order stays, and the button
+        // says so rather than silently doing nothing.
+        btn.disabled = false;
+        btn.textContent = "Location unavailable";
+      },
+      { timeout: 10000, maximumAge: 300000 }
+    );
+  });
+})();
+</` + `script>`;
+
 // `venues` is every venue in this view's neighborhoods (see venuesInView).
 // Deal cards still only come from verified rows with showable deals.
 export function renderBoard(venues, view, views = [view], now = new Date()) {
@@ -164,6 +237,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     </section>
     ${noDealSection(venues)}
   </main>
+  ${NEAREST_FIRST_SCRIPT}
 </body>
 </html>
 `;

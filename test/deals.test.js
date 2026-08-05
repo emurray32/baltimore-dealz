@@ -300,6 +300,7 @@ test("a verified venue with malformed deals still fails validation", () => {
     { last_verified: "8/3/2026" },
     { last_verified: undefined },
     { source_type: undefined },
+    { source_type: "website_text" }, // stray free-string; legend is venue_website | instagram_profile | none
     { status: "probably-fine" },
     { name: "" },
   ];
@@ -308,6 +309,13 @@ test("a verified venue with malformed deals still fails validation", () => {
     const errors = venueShapeErrors(venue(overrides));
     assert.ok(errors.length > 0, `expected errors for ${JSON.stringify(overrides)}`);
   }
+});
+
+test("source_type must be one of the legend values", () => {
+  assert.deepEqual(venueShapeErrors(venue({ source_type: "venue_website" })), []);
+  assert.deepEqual(venueShapeErrors(venue({ source_type: "instagram_profile" })), []);
+  const bad = venueShapeErrors(venue({ source_type: "website_text" }));
+  assert.ok(bad.some((e) => e.includes("source_type must be one of")), bad.join("; "));
 });
 
 // --- render guard: a missing optional field drops a line, not the board ---
@@ -659,18 +667,55 @@ test("a deal source_url wins over the venue homepage on the card", () => {
 
 test("Mama's brunch card links to Instagram, not the venue website", async () => {
   const venues = venuesForView(await loadVenues(), CANTON);
-  // A Saturday board carries Mama's brunch.
+  // A Saturday board carries Mama's brunch. Scope to brunch cards — the week
+  // accordion also carries the Mon–Fri HH row, which attributes to the website.
   const html = renderBoard(venues, CANTON, [CANTON], new Date("2026-08-08T16:00:00Z"));
-  const blocks = cardsFor(html, "Mama's on the Half Shell").join("");
+  const brunchCards = cardsFor(html, "Mama's on the Half Shell").filter((b) =>
+    b.includes("Bottomless Brunch"),
+  );
+  assert.ok(brunchCards.length > 0, "expected brunch card");
+  const brunchHtml = brunchCards.join("");
 
-  assert.match(blocks, /Bottomless Brunch/);
-  assert.match(blocks, /href="https:\/\/www\.instagram\.com\/mamasonthehalfshell\/"/);
-  assert.doesNotMatch(blocks, /href="https:\/\/www\.mamasonthehalfshell\.com\/"/);
+  assert.match(brunchHtml, /href="https:\/\/www\.instagram\.com\/mamasonthehalfshell\/"/);
+  assert.doesNotMatch(brunchHtml, /href="https:\/\/www\.mamasonthehalfshell\.com\/"/);
+});
+
+test("Mama's Mon–Fri happy hour attributes to the website, not Instagram", async () => {
+  const mama = (await loadVenues()).find((v) => v.id === "mamas-on-the-half-shell");
+  const weekdayHh = mama.deals.find(
+    (d) =>
+      d.days.length === 5 &&
+      d.days.includes("mon") &&
+      d.items.some((i) => i.text === "Happy Hour") &&
+      d.status !== "held",
+  );
+  assert.ok(weekdayHh, "expected rendered Mon–Fri Happy Hour row");
+  assert.equal(weekdayHh.source_url, "https://www.mamasonthehalfshell.com/");
+
+  // The Instagram "ALL DAY Mondays" copy stays held and still cites Instagram.
+  const monAllDay = mama.deals.find((d) =>
+    d.items.some((i) => i.text === "Happy Hour ALL DAY"),
+  );
+  assert.equal(monAllDay?.status, "held");
+  assert.equal(monAllDay?.source_url, "https://www.instagram.com/mamasonthehalfshell/");
+
+  const venues = venuesForView(await loadVenues(), CANTON);
+  // Wednesday: HH is on tonight; brunch lives only in the week accordion.
+  // Scope assertions to the HH card so brunch Instagram does not false-fail.
+  const html = renderBoard(venues, CANTON, [CANTON], new Date("2026-08-05T20:00:00Z"));
+  const hhCards = cardsFor(html, "Mama's on the Half Shell").filter(
+    (b) => b.includes("Happy Hour") && !b.includes("Bottomless Brunch"),
+  );
+  assert.ok(hhCards.length > 0, "expected Happy Hour card");
+  const hhHtml = hhCards.join("");
+  assert.match(hhHtml, /href="https:\/\/www\.mamasonthehalfshell\.com\/"/);
+  assert.doesNotMatch(hhHtml, /href="https:\/\/www\.instagram\.com\/mamasonthehalfshell\/"/);
 });
 
 test("Claddagh is verified with a full weekly board and dine-in-only on the three steaks", async () => {
   const claddagh = (await loadVenues()).find((v) => v.id === "claddagh-pub");
   assert.equal(claddagh.status, "verified");
+  assert.equal(claddagh.source_type, "venue_website");
   assert.equal(claddagh.address, "2918 O'Donnell St, Baltimore, MD 21224");
   assert.ok(claddagh.deals.length >= 14, `expected full week, got ${claddagh.deals.length}`);
   assert.deepEqual(venueShapeErrors(claddagh), []);

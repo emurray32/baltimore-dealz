@@ -810,7 +810,7 @@ test("the served page actually ships the nearest-first script", async () => {
   // The script reaches the browser, before </body>, exactly once.
   assert.equal((html.match(/<script>/g) || []).length, 1, "expected one inline script");
   assert.match(html, /getCurrentPosition/);
-  assert.ok(html.indexOf("getCurrentPosition") < html.indexOf("</body>"), "script is after </body>");
+  assert.ok(html.indexOf("getCurrentPosition") < html.indexOf("</body>"), "script is not before </body>");
 });
 
 test("the nearest button is present, default-hidden, and revealed only where geolocation exists", async () => {

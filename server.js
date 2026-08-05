@@ -1,7 +1,7 @@
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { venuesForView } from "./src/deals.js";
+import { venuesInView } from "./src/deals.js";
 import { renderBoard } from "./src/page.js";
 import { loadVenues } from "./src/venues.js";
 import { defaultView, findView, loadViews } from "./src/views.js";
@@ -30,7 +30,9 @@ const server = createServer(async (req, res) => {
 
     const view = findView(views, path.slice(1));
     if (view) {
-      const venues = venuesForView(await loadVenues(), view);
+      // Every venue in the view's neighborhoods — deal cards and the collapsed
+      // "no deals we can show" group both come from this list.
+      const venues = venuesInView(await loadVenues(), view);
       res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
       res.end(renderBoard(venues, view, views));
       return;

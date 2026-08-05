@@ -1,7 +1,14 @@
 // Renders the "Tonight in <view>" board. Minimal styling on purpose —
 // Designer owns the visual pass in a later ticket.
 
-import { dayKeyInZone, dayLabel, dealsForDay, isRenderable, weekByDay } from "./deals.js";
+import {
+  dayKeyInZone,
+  dayLabel,
+  dealsForDay,
+  hasShowableDeal,
+  noDealVenues,
+  weekByDay,
+} from "./deals.js";
 
 export function escapeHtml(value) {
   return String(value)
@@ -55,15 +62,43 @@ function dealCard({ venue, deal }) {
       </article>`;
 }
 
+// Notes on venues that still have deals on the board — not the no-deal group.
 function notesSection(venues) {
   const notes = venues
-    .filter((venue) => isRenderable(venue) && venue.notes_public)
+    .filter((venue) => hasShowableDeal(venue) && venue.notes_public)
     .map(
       (venue) =>
         `<p class="meta"><strong>${escapeHtml(venue.name)}</strong> — ${escapeHtml(venue.notes_public)}</p>`,
     )
     .join("");
   return notes ? `<section><h2>Good to know</h2>${notes}</section>` : "";
+}
+
+// Designer's collapsed group: name + address + reason, never a deal/hour/price.
+// open_unverifiable rows and fully-held venues (El Bufalo) both land here.
+function noDealSection(venues) {
+  const quiet = noDealVenues(venues);
+  if (quiet.length === 0) return "";
+
+  const n = quiet.length;
+  const label = n === 1 ? "1 more spot, no deals we can show" : `${n} more spots, no deals we can show`;
+  const rows = quiet
+    .map((venue) => {
+      const reason = venue.notes_public || "No specials we can verify from an official source.";
+      const where = venue.address
+        ? `${escapeHtml(venue.address)} — ${escapeHtml(reason)}`
+        : escapeHtml(reason);
+      return `<li><strong>${escapeHtml(venue.name)}</strong><br><span class="meta">${where}</span></li>`;
+    })
+    .join("");
+
+  return `
+    <section class="quiet">
+      <details>
+        <summary>${escapeHtml(label)}</summary>
+        <ul class="quiet-list">${rows}</ul>
+      </details>
+    </section>`;
 }
 
 // Only worth showing once there is somewhere else to go.
@@ -79,7 +114,8 @@ function viewSwitcher(views, currentView) {
   return `<nav class="meta">${links}</nav>`;
 }
 
-// `venues` is already filtered to this view — see venuesForView in deals.js.
+// `venues` is every venue in this view's neighborhoods (see venuesInView).
+// Deal cards still only come from verified rows with showable deals.
 export function renderBoard(venues, view, views = [view], now = new Date()) {
   const todayKey = dayKeyInZone(now);
   const todayRows = dealsForDay(venues, todayKey);
@@ -125,6 +161,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
       <h2>Browse the week</h2>
       ${week}
     </section>
+    ${noDealSection(venues)}
   </main>
 </body>
 </html>

@@ -78,16 +78,17 @@ exceptions and conflict logs. A test fails if an `ops_note` reaches the page.
 
 ### status — what shows up and what doesn't
 
-| status | Renders? | Use it for |
+| status | Deal cards? | Use it for |
 |---|---|---|
-| `verified` | yes | We have a deal from an official source |
+| `verified` | yes (unless every deal is held) | We have a deal from an official source |
 | `open_unverifiable` | **never** | The place is open, but no deal we can honestly publish |
 
-Unverified venues stay in the file so the research isn't lost, but the board
-filters them out in code — not by leaving rows out of the file. That group is
-the "no deals we can show" list (name + reason, never an offer): Lee's Pint &
-Shell (monthly image-only promo), Walt's Inn, Bo Brooks, Sports Balls, Baltimore
-Tap House, The Worthington, SoPro, and Honeypot.
+Unverified venues — and verified venues whose only deals are held (El Bufalo) —
+appear in a collapsed **"no deals we can show"** group: name, address, and a
+public reason, never an offer, hour, or price. That group is Lee's Pint & Shell,
+Walt's Inn, Bo Brooks, Sports Balls, Baltimore Tap House, The Worthington, SoPro,
+Honeypot, and El Bufalo. `notes_public` is the reason text; `ops_notes` never
+renders.
 
 ### Holding back a single deal row
 

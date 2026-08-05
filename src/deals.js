@@ -33,19 +33,23 @@ export function dayLabel(dayKey) {
   return WEEK.find((day) => day.key === dayKey)?.label ?? dayKey;
 }
 
-// Only "verified" venues reach the board. Everything else — a venue we know is
-// open but can't source a deal for — stays in the data file and never renders.
+// Only "verified" venues can contribute deal cards. Everything else — a venue we
+// know is open but can't source a deal for — still appears in the collapsed
+// "no deals we can show" group (name + reason), never as a deal card.
 export const VERIFIED = "verified";
 
 export function isRenderable(venue) {
   return venue.status === VERIFIED;
 }
 
-// A view is a named board that can span more than one neighborhood.
+// Every venue in the view's neighborhoods, including those with nothing to show.
+export function venuesInView(venues, view) {
+  return venues.filter((venue) => view.neighborhoods.includes(venue.neighborhood));
+}
+
+// Verified venues only — used by deal selection and older callers.
 export function venuesForView(venues, view) {
-  return venues.filter(
-    (venue) => isRenderable(venue) && view.neighborhoods.includes(venue.neighborhood),
-  );
+  return venuesInView(venues, view).filter(isRenderable);
 }
 
 // A single deal row can be held back while the rest of the venue still shows —
@@ -54,6 +58,18 @@ export const HELD = "held";
 
 export function isDealRenderable(deal) {
   return deal.status === undefined;
+}
+
+// At least one deal row that would actually reach a card. A verified venue whose
+// only deals are held (El Bufalo) has nothing showable — same honest treatment
+// as open_unverifiable.
+export function hasShowableDeal(venue) {
+  return isRenderable(venue) && venue.deals.some(isDealRenderable);
+}
+
+// Name + reason group: open but no published deal we can state, OR every deal held.
+export function noDealVenues(venues) {
+  return venues.filter((venue) => !hasShowableDeal(venue));
 }
 
 // Flattens venues into one row per deal running on dayKey. The status checks are

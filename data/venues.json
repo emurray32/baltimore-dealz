@@ -421,7 +421,8 @@
       ],
       "lat": 39.27989,
       "lon": -76.574579,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
+      "notes_public": "They publish a happy hour but name no days on their site or Instagram."
     },
     {
       "id": "mamas-on-the-half-shell",
@@ -1117,7 +1118,7 @@
       "source_url": "https://www.leespintandshell.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes_public": "Build-your-own-burger promo, first Wednesday of the month.",
+      "notes_public": "Publishes a monthly promo as an image we cannot read.",
       "ops_notes": "The weekly model cannot express monthly recurrence; the promo is image-only. /specials and /special-event both 404.",
       "deal_format": "image",
       "deals": [],

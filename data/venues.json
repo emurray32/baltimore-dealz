@@ -1,5 +1,6 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-03 21:07:21, sha256 a12b11727a2d78b3fb5f9093552564a9aeb3e50b413607d9e27e935e2a43a91e",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -9,23 +10,109 @@
       "status": "verified",
       "address": "3728 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 438-3380",
-      "source_url": "https://hucksamericancraft.com",
+      "source_url": "https://www.hucksamericancraft.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "UGA game days: $5 Terrapins, $6 Georgia Mules, $7 Bulldog Bombs, $10 wings. Their site has a literal typo — Spin the Wheel reads \"1opm-Close\" with a letter o.",
+      "notes_public": "UGA game-day specials — ask at the bar.",
+      "ops_notes": "UGA block unconfirmed in Deal Scout's own fetch. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours.",
       "deals": [
-        { "days": ["mon"], "items": ["$10 pretzel pies", "$5 wine glasses"] },
-        { "days": ["mon"], "items": ["Industry Night"], "time_window": "7pm-close" },
-        { "days": ["tue"], "items": ["$10 burger + fries", "$5 draft beers"] },
-        { "days": ["wed"], "items": ["Trivia"], "time_window": "7pm" },
-        { "days": ["wed"], "items": ["$10 wings", "$5 whiskey (bartender's choice)"] },
-        { "days": ["thu"], "items": ["$8 build-your-own mac n cheese", "$7 craft cocktails", "$3 seltzers/domestics"] },
-        { "days": ["fri"], "items": ["Free beer with lunch"], "time_window": "11am-3pm" },
-        { "days": ["fri", "sat"], "items": ["$7 nightcaps"], "time_window": "11pm-close" },
-        { "days": ["sat", "sun"], "items": ["Brunch", "$6 brunch drinks"], "time_window": "10am-2pm" },
-        { "days": ["sat"], "items": ["Spin the Wheel"], "time_window": "10pm-close" },
-        { "days": ["sun"], "items": ["$10 cheesesteaks"], "time_window": "2pm-10pm" },
-        { "days": ["sun"], "items": ["$5 Deep Eddy's"], "time_window": "2pm-close" }
+        {
+          "days": ["mon"],
+          "items": [
+            {"text": "$10 Pretzel Pies", "price": "$10"},
+            {"text": "$5 Glasses of Wine", "price": "$5"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["mon"],
+          "items": [{"text": "Industry Night"}],
+          "start": 1140,
+          "end": null,
+          "time_window": "7pm-close"
+        },
+        {
+          "days": ["tue"],
+          "items": [
+            {"text": "$10 Burger and Fries", "price": "$10"},
+            {"text": "$5 Draft Beers", "price": "$5"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["wed"],
+          "items": [{"text": "Quizamajig Trivia"}],
+          "start": 1140,
+          "end": null,
+          "time_window": "7pm"
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            {"text": "$10 Wings", "price": "$10"},
+            {"text": "$5 Whiskey (Bartender's Choice)", "price": "$5"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            {"text": "$8 Build-Your-Own Mac n' Cheese", "price": "$8"},
+            {"text": "$7 Craft Cocktails", "price": "$7"},
+            {"text": "$3 Seltzers & Domestics", "price": "$3"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["fri"],
+          "items": [{"text": "Free Beer When You Buy Lunch", "price": "Free"}],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm"
+        },
+        {
+          "days": ["fri", "sat"],
+          "items": [{"text": "$7 Nightcaps", "price": "$7"}],
+          "start": 1380,
+          "end": null,
+          "time_window": "11pm-close"
+        },
+        {
+          "days": ["sat", "sun"],
+          "items": [{"text": "Brunch"}, {"text": "$6 Brunch Drinks", "price": "$6"}],
+          "start": 600,
+          "end": 840,
+          "time_window": "10am-2pm"
+        },
+        {
+          "days": ["sat"],
+          "items": [{"text": "Spin the Wheel"}],
+          "start": 1320,
+          "end": null,
+          "time_window": "10pm-close"
+        },
+        {
+          "days": ["sun"],
+          "items": [{"text": "$10 Cheesesteaks", "price": "$10"}],
+          "start": 840,
+          "end": 1320,
+          "time_window": "2pm-10pm"
+        },
+        {
+          "days": ["sun"],
+          "items": [{"text": "$5 Deep Eddys", "price": "$5"}],
+          "start": 840,
+          "end": null,
+          "time_window": "2pm-close"
+        }
       ]
     },
     {
@@ -36,16 +123,71 @@
       "status": "verified",
       "address": "2522 Fait Ave, Baltimore, MD 21224",
       "phone": "(410) 522-1421",
-      "source_url": "https://smaltimoremd.com",
+      "source_url": "https://www.smaltimoremd.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Their site's security certificate is invalid — known, and a crawler will need to be told to skip the check for this domain.",
+      "ops_notes": "Invalid TLS cert — a crawler must skip the cert check for this domain.",
       "deals": [
-        { "days": ["mon"], "items": ["All-night happy hour"] },
-        { "days": ["mon", "tue", "wed", "thu", "fri"], "items": ["$6 happy hour"], "time_window": "til 7pm" },
-        { "days": ["tue"], "items": ["Tacos $11/$13", "$7 margaritas"] },
-        { "days": ["wed"], "items": ["BOGO sushi rolls"] },
-        { "days": ["thu"], "items": ["$2 off burgers", "Half-price wine bottles"] }
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "items": [
+            {"text": "$6 House Wine", "price": "$6"},
+            {"text": "$6 Select Drafts", "price": "$6"},
+            {"text": "$6 Four Walls", "price": "$6"},
+            {"text": "$6 Jameson", "price": "$6"}
+          ],
+          "start": null,
+          "end": 1140,
+          "time_window": "until 7pm"
+        },
+        {
+          "days": ["mon"],
+          "items": [{"text": "All Night Happy Hour"}],
+          "start": null,
+          "end": null,
+          "time_window": "all night"
+        },
+        {
+          "days": ["tue"],
+          "items": [
+            {"text": "$11 Chicken & Beef Tacos", "price": "$11"},
+            {"text": "$13 Steak Tacos", "price": "$13"},
+            {"text": "$6 Modelo", "price": "$6"},
+            {"text": "$7 Margaritas", "price": "$7"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            {"text": "BOGO Sushi Rolls (equal or lesser value)", "price": "BOGO"},
+            {"text": "$10 Sushi Bowls and Sushi Burritos", "price": "$10"},
+            {"text": "$6 Sapporo Drafts", "price": "$6"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            {"text": "$2 Off Signature Burgers", "price": "$2 off"},
+            {"text": "1/2 Off Bottles of Wine", "price": "1/2 off"},
+            {"text": "$7 Mules", "price": "$7"}
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day"
+        },
+        {
+          "days": ["sat", "sun"],
+          "items": [{"text": "Bottomless Brunch"}],
+          "start": 600,
+          "end": 780,
+          "time_window": "10am-1pm"
+        }
       ]
     },
     {
@@ -56,14 +198,25 @@
       "status": "verified",
       "address": "2921 O'Donnell St, Baltimore, MD 21224",
       "phone": "410-814-0594",
-      "source_url": "https://elbufalobaltimore.net",
+      "source_url": "https://www.elbufalobaltimore.net/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Happy hour is HELD. Their site says \"Happy Hour ALL Day!!\" and names no days anywhere near it — \"all day\" describes the window, not which days. The window is verified; the days are not. Awaiting an official source.",
+      "ops_notes": "Days absent from the site AND Instagram; the hold is effectively permanent without a door photo.",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "items": ["$3 Modelo / Natty Boh / Tecate / Coronita", "$7 Altos", "$9 beer-and-a-shot"],
+          "items": [
+            {"text": "16oz Modelo Especial $3", "price": "$3"},
+            {"text": "16oz Natty Boh $3", "price": "$3"},
+            {"text": "Natural Light $3", "price": "$3"},
+            {"text": "Tecate $3", "price": "$3"},
+            {"text": "Tecate Light $3", "price": "$3"},
+            {"text": "7oz Coronita $3", "price": "$3"},
+            {"text": "Olmeca Altos Blanco $7", "price": "$7"},
+            {"text": "\"Beer & A Shot\" (Modelo Especial + Olmeca Altos Blanco) $9", "price": "$9"}
+          ],
+          "start": null,
+          "end": null,
           "time_window": "all day",
           "status": "held"
         }
@@ -77,24 +230,38 @@
       "status": "verified",
       "address": "2901 O'Donnell St, Baltimore, MD 21224",
       "phone": "410.276.3160",
-      "source_url": "https://mamasonthehalfshell.com",
+      "source_url": "https://www.mamasonthehalfshell.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Monday is HELD: their website says happy hour runs Mon-Fri 3-6pm, their Instagram says all day Monday. Both sources agree the 3-6pm window happens, so that row renders; the all-day upgrade waits for the conflict to resolve.",
+      "notes_public": "Happy hour is 1st floor, indoors only.",
+      "ops_notes": "Website/Instagram Monday conflict. mamasmd.com is the wrong domain; the official site is mamasonthehalfshell.com.",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu", "fri"],
-          "items": ["Happy hour — prices not published"],
-          "time_window": "3pm-6pm"
+          "items": [{"text": "Happy Hour"}],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "prices_published": false
         },
         {
           "days": ["mon"],
-          "items": ["Happy hour all day — prices not published"],
+          "items": [{"text": "Happy Hour ALL DAY"}],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "prices_published": false,
           "status": "held"
         },
         {
           "days": ["sat", "sun"],
-          "items": ["$18 bottomless mimosas and Bloody Marys"]
+          "items": [
+            {"text": "Bottomless Brunch"},
+            {"text": "$18 Bottomless Mimosas & Bloodys", "price": "$18"}
+          ],
+          "start": 540,
+          "end": 900,
+          "time_window": "9am-3pm"
         }
       ]
     },
@@ -104,27 +271,37 @@
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
-      "address": "2626 Hudson St, Baltimore, MD 21224",
+      "address": "2626 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 342-0592",
-      "source_url": "https://hudsonstreetstackhouse.com",
+      "source_url": "https://hudsonstreetstackhouse.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Their weekly-food-specials page is currently empty — worth a re-check each week.",
+      "ops_notes": "Their weekly-food-specials page is referenced but publishes no content — worth a weekly re-check.",
+      "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu"],
-          "items": ["Happy hour — prices not published"],
-          "time_window": "3pm-7pm"
+          "items": [{"text": "Happy Hour"}],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "prices_published": false
         },
         {
           "days": ["fri"],
-          "items": ["Happy hour — prices not published"],
-          "time_window": "2pm-7pm"
+          "items": [{"text": "Happy Hour"}],
+          "start": 840,
+          "end": 1140,
+          "time_window": "2pm-7pm",
+          "prices_published": false
         },
         {
           "days": ["sat", "sun"],
-          "items": ["Happy hour — prices not published"],
-          "time_window": "11am-5pm"
+          "items": [{"text": "Happy Hour"}],
+          "start": 660,
+          "end": 1020,
+          "time_window": "11am-5pm",
+          "prices_published": false
         }
       ]
     },
@@ -136,12 +313,18 @@
       "status": "verified",
       "address": "901 S Clinton St, Baltimore, MD 21224",
       "phone": "(443) 708-3774",
-      "source_url": "https://instagram.com/elliestaverncanton",
+      "source_url": "https://www.instagram.com/elliestaverncanton/",
       "source_type": "instagram_profile",
       "last_verified": "2026-08-03",
-      "notes": "Their website is elliestavernbmore.com; the trivia deal itself comes from the Instagram profile, which is why that is the source URL.",
+      "ops_notes": "Website is elliestavernbmore.com and publishes no specials; the trivia deal comes from the Instagram profile, which is why that is the source URL.",
       "deals": [
-        { "days": ["wed"], "items": ["Trivia"], "time_window": "8pm" }
+        {
+          "days": ["wed"],
+          "items": [{"text": "Trivia Night"}],
+          "start": 1200,
+          "end": null,
+          "time_window": "8pm"
+        }
       ]
     },
     {
@@ -152,34 +335,98 @@
       "status": "verified",
       "address": "2706 Dillon St, Baltimore, MD 21224",
       "phone": "410-276-9899",
+      "source_url": "https://www.mahaffeyspubbaltimore.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Manual entry only, permanently: their specials are a two-column PDF flyer that text-extracts with the days and the offers misaligned, so an automated parse would publish wrong deals. Their old domain is a placeholder that redirects through a 2020 archive to the real site — stopping at the first hop makes them look closed.",
+      "ops_notes": "Manual entry only, permanently — the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
       "deals": [
-        { "days": ["mon"], "items": ["Half-off wine bottles", "$5 mules", "Half-off apps"] },
-        { "days": ["tue"], "items": ["$8 tacos", "$5 tequila"] },
-        { "days": ["wed"], "items": ["$12 wings", "$5 whiskey"] },
-        { "days": ["thu"], "items": ["$2 off sandwiches", "Trivia"] },
-        { "days": ["fri"], "items": ["$2 off cheesesteaks"], "time_window": "until 5pm" },
-        { "days": ["sun"], "items": ["Sliders", "Industry night"] }
+        {
+          "days": ["mon"],
+          "items": [
+            {"text": "1/2 off Bottles of Wine", "price": "1/2 off"},
+            {"text": "$5 Mules", "price": "$5"},
+            {"text": "1/2 off Apps", "price": "1/2 off"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["tue"],
+          "items": [
+            {"text": "$8 Tacos", "price": "$8"},
+            {"text": "$5 Tequila", "price": "$5"},
+            {"text": "Tap Takeovers"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            {"text": "$12 Wings", "price": "$12"},
+            {"text": "$5 Whiskey", "price": "$5"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            {"text": "$2 Off Sandwiches", "price": "$2 off"},
+            {"text": "Trivia"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["fri"],
+          "items": [{"text": "$2 Off Cheesesteaks", "price": "$2 off"}],
+          "start": null,
+          "end": 1020,
+          "time_window": "until 5pm"
+        },
+        {
+          "days": ["sun"],
+          "items": [{"text": "Sliders"}, {"text": "Industry Night"}],
+          "start": null,
+          "end": null
+        }
       ]
     },
     {
       "id": "cowboy-row",
-      "name": "Cowboy Row",
+      "name": "Cowboy Row Saloon & Chophouse",
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2908 O'Donnell St, Baltimore, MD 21224",
       "phone": "443-602-7450",
-      "source_type": "instagram_profile",
+      "source_url": "https://www.cowboyrowbaltimore.com/",
+      "source_type": "venue_website",
       "last_verified": "2026-08-03",
+      "ops_notes": "Happy hour NOT VERIFIED from official source — aggregators claim one, their own site does not publish it.",
       "deals": [
-        { "days": ["wed", "thu", "fri", "sat"], "items": ["Karaoke"], "time_window": "9pm-close" },
-        { "days": ["wed"], "items": ["Half-price smoked wings"] },
+        {
+          "days": ["wed", "thu", "fri", "sat"],
+          "items": [{"text": "Karaoke"}],
+          "start": 1260,
+          "end": null,
+          "time_window": "9pm-close"
+        },
+        {
+          "days": ["wed"],
+          "items": [{"text": "1/2 price smoked wings", "price": "1/2 price"}],
+          "start": null,
+          "end": null
+        },
         {
           "days": ["sat", "sun"],
-          "items": ["Brunch", "$20 bottomless mimosas, Bloody Marys and Cowboy Juice"],
+          "items": [
+            {"text": "Brunch"},
+            {"text": "$20 Bottomless Mimosas, Bloody Mary's and Cowboy Juice", "price": "$20"}
+          ],
+          "start": 660,
+          "end": 900,
           "time_window": "11am-3pm"
         }
       ]
@@ -192,36 +439,64 @@
       "status": "verified",
       "address": "2903 O'Donnell St, Baltimore, MD 21224",
       "phone": "(443) 449-5410",
+      "source_url": "https://www.instagram.com/goodvibescantina/",
       "source_type": "instagram_profile",
       "last_verified": "2026-08-03",
-      "notes": "Happy hour is HELD: their Instagram bio says Sun-Fri 3-7pm and their posts say 4-8pm. The food specials are unambiguous and render. Now operating at the old Tavern on the Square address.",
+      "ops_notes": "Happy hour held: bio says 3-7pm, posts say 4-8pm; days agree Sun-Fri. Occupies the former Tavern on the Square address.",
       "deals": [
-        { "days": ["thu"], "items": ["Fajitas Crazy Hour $16"], "time_window": "9pm-10pm" },
-        { "days": ["fri"], "items": ["Pizza birria with consomé $15"] },
         {
           "days": ["sun", "mon", "tue", "wed", "thu", "fri"],
-          "items": ["$7 margaritas / sangria / orange crush", "$5 sour bombs"],
+          "items": [
+            {"text": "$7 Margaritas", "price": "$7"},
+            {"text": "$7 Sangria", "price": "$7"},
+            {"text": "$7 Orange Crush", "price": "$7"},
+            {"text": "$5 Sour Bombs", "price": "$5"}
+          ],
+          "start": 900,
+          "end": 1140,
           "time_window": "3pm-7pm",
           "status": "held"
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            {"text": "Fajitas Crazy Hour — $16 chicken or steak", "price": "$16"},
+            {"text": "$5 Espolon/Milagro shots", "price": "$5"}
+          ],
+          "start": 1260,
+          "end": 1320,
+          "time_window": "9pm-10pm"
+        },
+        {
+          "days": ["fri"],
+          "items": [
+            {"text": "Cantina Pizza Birria with 8oz consomé — $15", "price": "$15"}
+          ],
+          "start": null,
+          "end": null
         }
       ]
     },
     {
       "id": "union-hill-kitchen",
-      "name": "Union Hill Kitchen",
+      "name": "Union Hill Kitchen & Craft Bar",
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "938 S Conkling St, Baltimore, MD 21224",
       "phone": "(667) 260-2151",
+      "source_url": "https://www.unionhillbal.com/page/happy-hour",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Their site returns HTTP 403 to some requests and serves others fine — the blocking is rate- or fingerprint-based, not a property of the site.",
+      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Their page says \"Weekdays 3-6 p.m.\" without naming days; Mon-Fri is the ordinary reading, not their wording.",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu", "fri"],
-          "items": ["Happy hour — prices not published", "Craft cocktails and small plates"],
-          "time_window": "3pm-6pm"
+          "items": [{"text": "Happy Hour — craft cocktails and small plates"}],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "prices_published": false
         }
       ]
     },
@@ -233,13 +508,21 @@
       "status": "verified",
       "address": "2641 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 708-0317",
+      "source_url": "https://www.instagram.com/silkscanton/",
       "source_type": "instagram_profile",
       "last_verified": "2026-08-03",
-      "notes": "They also post soccer-matchday pricing ($15 buckets, $3 Ultra drafts, $4 Stella, $5 NÜTRLs). Matchdays are not a fixed weekday, so that is not a weekly deal and is recorded here rather than as a row.",
+      "notes_public": "Soccer matchday pricing: $15 buckets, $3 Ultra drafts, $4 Stella, $5 NUTRLs.",
+      "ops_notes": "Matchday pricing is tied to match days, not a fixed weekday, so it is never a deal row. The second published hours set is carryout/delivery, not bar hours.",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu", "fri"],
-          "items": ["$2 domestics", "$3 house wines", "$3 rail"],
+          "items": [
+            {"text": "$2 domestics", "price": "$2"},
+            {"text": "$3 House Wines", "price": "$3"},
+            {"text": "$3 Rail", "price": "$3"}
+          ],
+          "start": 960,
+          "end": 1140,
           "time_window": "4pm-7pm"
         }
       ]
@@ -250,21 +533,59 @@
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
-      "address": "3123 Elliott St, Baltimore, MD 21224",
+      "address": "3123 Elliott Street, Baltimore, MD 21224",
       "phone": "(667) 309-7499",
+      "source_url": "https://thedivebaltimore.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Flagged for an early re-check: the flyer these came from is dated October 2024, and the Monday burger appears in their newer site text but not on the flyer. They also note Sunday hours may begin September 13.",
+      "notes_public": "Kitchen open until midnight every night. Closed Sundays — their site says Sunday hours may begin September 13.",
+      "ops_notes": "Flyer content dated Oct 2024; early re-check flag. The Monday burger is in their newer site text but not on the flyer.",
+      "bar_hours": "Mon-Sat 4pm-1am (kitchen until 12am)",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu"],
-          "items": ["Happy hour — prices not published"],
-          "time_window": "4pm-6pm"
+          "items": [{"text": "Happy Hour"}],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "prices_published": false
         },
-        { "days": ["mon"], "items": ["$5.25 drafts", "$10.50 wings", "$11.99 single-patty burger with fries"] },
-        { "days": ["tue"], "items": ["Bmore Trivia — win a $50 gift card"], "time_window": "7:30pm-9:30pm" },
-        { "days": ["wed"], "items": ["$10.50 wings with extra flavors"] },
-        { "days": ["thu"], "items": ["$8.40 espresso martinis"] }
+        {
+          "days": ["mon"],
+          "items": [
+            {"text": "$5.25 Drafts", "price": "$5.25"},
+            {"text": "$10.50 Wings", "price": "$10.50"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["mon"],
+          "items": [
+            {"text": "Single patty burger w/ fries $11.99 (toppings change weekly, Monday only)", "price": "$11.99"}
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["tue"],
+          "items": [{"text": "Bmore Trivia — win a $50 gift card"}],
+          "start": 1170,
+          "end": 1290,
+          "time_window": "7:30pm-9:30pm"
+        },
+        {
+          "days": ["wed"],
+          "items": [{"text": "$10.50 Wings & extra flavors", "price": "$10.50"}],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": ["thu"],
+          "items": [{"text": "$8.40 Espresso Martinis", "price": "$8.40"}],
+          "start": null,
+          "end": null
+        }
       ]
     },
     {
@@ -274,18 +595,23 @@
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "3242 Foster Ave, Baltimore, MD 21224",
+      "source_url": "https://www.instagram.com/pigandroosterbaltimore/",
       "source_type": "instagram_profile",
       "last_verified": "2026-08-03",
-      "notes": "No phone is published on any official source — a verified absence, not a gap. Their Instagram also carries one-off dated events and a Wednesday chair-massage offer, neither of which belongs on a weekly food-and-drink board.",
+      "ops_notes": "No phone published anywhere official — a real, verified absence. The burger row is held: its source line reads \"$5 BURGER OF THE DAY! $7! ...\", carrying two prices with no way to tell which a customer pays, and stating no days. One-off dated events and a Wednesday chair-massage offer are not recorded.",
       "deals": [
         {
           "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "items": ["$3 Dos Equis drafts"],
+          "items": [{"text": "$3 Dos Equis Drafts", "price": "$3"}],
+          "start": null,
+          "end": null,
           "time_window": "all day"
         },
         {
           "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-          "items": ["$5 Burger of the Day"],
+          "items": [{"text": "$5 Burger of the Day (rotating)"}],
+          "start": null,
+          "end": null,
           "status": "held"
         }
       ]
@@ -296,11 +622,14 @@
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "open_unverifiable",
-      "address": "2844 Hudson St, Baltimore, MD 21224",
+      "address": "2844 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 327-2883",
+      "source_url": "https://www.leespintandshell.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "notes": "Build-your-own-burger promo on the FIRST Wednesday of each month. Verified, but the deals model is weekly-only, so it cannot be listed without implying it runs every Wednesday. Known model gap — carry it into the calendar ticket.",
+      "notes_public": "Build-your-own-burger promo, first Wednesday of the month.",
+      "ops_notes": "The weekly model cannot express monthly recurrence; the promo is image-only. /specials and /special-event both 404.",
+      "deal_format": "image",
       "deals": []
     },
     {
@@ -312,7 +641,7 @@
       "address": "O'Donnell Square, Baltimore, MD 21224",
       "source_type": "none",
       "last_verified": "2026-08-03",
-      "notes": "Open — listed in a 2026 Canton St. Patrick's crawl — but its domain was repurposed and no deals are published anywhere official. No phone published either.",
+      "ops_notes": "Open but unverifiable; domain repurposed to an unrelated portfolio. No phone published either.",
       "deals": []
     }
   ]

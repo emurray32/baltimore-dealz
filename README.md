@@ -44,6 +44,38 @@ text as the venue words it. Adding a venue means adding one object to that
 array — nothing else changes. The file is re-read on every request, so a crawler
 can rewrite it in place without a restart.
 
+### Where the deal data comes from
+
+`data/venues.json` is derived by hand from `RESEARCH/CANTON_DEALS.md`, the
+research master file. The exact state it was derived from is recorded in the
+file's own `derived_from` field, and a test pins it. Never regex a migration
+over this data: `Bmore Trivia — win a $50 gift card` has no price, and any
+grab-the-dollar-amount pass puts a $50 chip on a free trivia night.
+
+### Times
+
+Every deal carries `start` and `end` as minutes past midnight, or `null`, plus a
+source-faithful `time_window` string for display. **`end: null` means the venue
+published no end time** — `hasEnded()` can never return true for it, so a
+late-night deal cannot read "done for today". Huck's is the proof case: their
+kitchen closes at 10pm and their nightcaps start at 11pm.
+
+### Prices
+
+`price` is an optional **string** on each item, because `BOGO`, `1/2 off` and
+`Free` are real prices a number cannot hold. Three no-price states stay distinct:
+
+| State | Means |
+|---|---|
+| item has no `price` | the item has no price (trivia, brunch) |
+| deal has `prices_published: false` | the venue published times but no prices |
+| deal has `status: "held"` | we can't state it honestly; never renders |
+
+### Notes
+
+`notes_public` renders. `ops_notes` never does — it holds crawler warnings, cert
+exceptions and conflict logs. A test fails if an `ops_note` reaches the page.
+
 ### status — what shows up and what doesn't
 
 | status | Renders? | Use it for |

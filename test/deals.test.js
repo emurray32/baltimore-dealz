@@ -114,7 +114,16 @@ test("the seed data really does contain unverified venues", async () => {
   assert.ok(unverified.length > 0, "no unverified venue in the data — this test proves nothing");
   assert.deepEqual(
     unverified.map((v) => v.id).sort(),
-    ["claddagh-pub", "lees-pint-and-shell"],
+    [
+      "baltimore-tap-house",
+      "bo-brooks",
+      "honeypot",
+      "lees-pint-and-shell",
+      "sopro",
+      "sports-balls",
+      "the-worthington",
+      "walts-inn",
+    ],
   );
 });
 
@@ -567,7 +576,7 @@ test("Lee's carries the image-only deal format", async () => {
 
 test("bar_hours is set only where the venue actually labelled it", async () => {
   const withBar = (await loadVenues()).filter((v) => v.bar_hours).map((v) => v.id).sort();
-  assert.deepEqual(withBar, ["hudson-street-stackhouse", "the-dive"]);
+  assert.deepEqual(withBar, ["claddagh-pub", "hudson-street-stackhouse", "the-dive"]);
 });
 
 test("an unknown key on an item fails validation", () => {
@@ -589,5 +598,130 @@ test("the data records which state of the master file it came from", async () =>
       "utf8",
     ),
   );
-  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-03 21:07:21, sha256 a12b1172/);
+  assert.match(raw.derived_from, /CANTON_DEALS\.md as of 2026-08-05.*sha256 24cef257/);
+  assert.equal(raw.schema_version, 5);
+});
+
+// --- coordinates + per-deal source URL ------------------------------------
+
+test("coordinates carry OSM provenance and cover every researched row except Sports Balls", async () => {
+  const venues = await loadVenues();
+  const withCoords = venues.filter((v) => v.lat !== undefined);
+  const without = venues.filter((v) => v.lat === undefined).map((v) => v.id);
+
+  assert.equal(withCoords.length, 21);
+  assert.deepEqual(without, ["sports-balls"]);
+
+  for (const v of withCoords) {
+    assert.equal(typeof v.lat, "number");
+    assert.equal(typeof v.lon, "number");
+    assert.match(
+      v.coords_source ?? "",
+      /OpenStreetMap Nominatim.*not venue-published/,
+      `${v.id} missing coords provenance`,
+    );
+    assert.deepEqual(venueShapeErrors(v), [], `${v.id} shape with coords`);
+  }
+});
+
+test("a deal source_url wins over the venue homepage on the card", () => {
+  const v = venue({
+    source_url: "https://example.com/homepage",
+    deals: [
+      {
+        days: ["mon"],
+        items: [{ text: "Brunch" }],
+        start: null,
+        end: null,
+        source_url: "https://instagram.com/example",
+      },
+    ],
+  });
+  const html = renderBoard([v], CANTON, [CANTON], FRI_11PM_EDT);
+
+  assert.match(html, /href="https:\/\/instagram\.com\/example"/);
+  assert.doesNotMatch(html, /href="https:\/\/example\.com\/homepage"/);
+});
+
+test("Mama's brunch card links to Instagram, not the venue website", async () => {
+  const venues = venuesForView(await loadVenues(), CANTON);
+  // A Saturday board carries Mama's brunch.
+  const html = renderBoard(venues, CANTON, [CANTON], new Date("2026-08-08T16:00:00Z"));
+  const blocks = cardsFor(html, "Mama's on the Half Shell").join("");
+
+  assert.match(blocks, /Bottomless Brunch/);
+  assert.match(blocks, /href="https:\/\/www\.instagram\.com\/mamasonthehalfshell\/"/);
+  assert.doesNotMatch(blocks, /href="https:\/\/www\.mamasonthehalfshell\.com\/"/);
+});
+
+test("Claddagh is verified with a full weekly board and dine-in-only on the three steaks", async () => {
+  const claddagh = (await loadVenues()).find((v) => v.id === "claddagh-pub");
+  assert.equal(claddagh.status, "verified");
+  assert.equal(claddagh.address, "2918 O'Donnell St, Baltimore, MD 21224");
+  assert.ok(claddagh.deals.length >= 14, `expected full week, got ${claddagh.deals.length}`);
+  assert.deepEqual(venueShapeErrors(claddagh), []);
+
+  const dineIn = claddagh.deals
+    .flatMap((d) => d.items)
+    .filter((i) => /dine-in only/i.test(i.text))
+    .map((i) => i.text);
+  assert.equal(dineIn.length, 3);
+  assert.ok(dineIn.some((t) => /New York Strip/i.test(t)));
+  assert.ok(dineIn.some((t) => /Filet/i.test(t)));
+  assert.ok(dineIn.some((t) => /Crab Cakes/i.test(t)));
+
+  // Two Sunday blocks, kept separate.
+  const sun = claddagh.deals.filter((d) => d.days.includes("sun"));
+  assert.ok(sun.some((d) => d.items.some((i) => i.text === "Sunday Specials")));
+  assert.ok(sun.some((d) => d.items.some((i) => i.text === "Sunday Sports Specials")));
+
+  // BAR ONLY is published on the happy-hour page, not weekly-specials.
+  const hh = claddagh.deals.filter((d) =>
+    d.items.some((i) => i.text === "Happy Hour (bar only)"),
+  );
+  assert.equal(hh.length, 5);
+  for (const deal of hh) {
+    assert.equal(deal.source_url, "https://claddaghbaltimore.com/menus/happy-hour/");
+  }
+  const nonHh = claddagh.deals.filter(
+    (d) => !d.items.some((i) => i.text === "Happy Hour (bar only)"),
+  );
+  for (const deal of nonHh) {
+    assert.equal(deal.source_url, "https://claddaghbaltimore.com/weekly-specials/");
+  }
+
+  const html = await boardFor(new Date("2026-08-03T20:00:00Z")); // Monday
+  assert.match(html, /Claddagh Pub/);
+  assert.match(html, /dine-in only/);
+  assert.match(html, /claddaghbaltimore\.com\/menus\/happy-hour\//);
+  assert.match(html, /claddaghbaltimore\.com\/weekly-specials\//);
+});
+
+test("no-deal venues carry a reason and never an offer", async () => {
+  const ids = [
+    "walts-inn",
+    "bo-brooks",
+    "sports-balls",
+    "baltimore-tap-house",
+    "the-worthington",
+    "sopro",
+    "honeypot",
+  ];
+  const venues = await loadVenues();
+  for (const id of ids) {
+    const v = venues.find((row) => row.id === id);
+    assert.ok(v, `${id} missing`);
+    assert.equal(v.status, "open_unverifiable");
+    assert.deepEqual(v.deals, []);
+    assert.ok(v.notes_public, `${id} needs a public reason`);
+    assert.deepEqual(venueShapeErrors(v), []);
+  }
+});
+
+test("Stackhouse still has times-only happy hour — no 2019 food prices", async () => {
+  const stack = (await loadVenues()).find((v) => v.id === "hudson-street-stackhouse");
+  assert.ok(stack.deals.every((d) => d.prices_published === false));
+  const texts = stack.deals.flatMap((d) => d.items.map((i) => i.text)).join(" ");
+  assert.doesNotMatch(texts, /Wing Night|Burger Night|Seafood Night|\$10|\$8|\$15\.99/);
+  assert.match(stack.ops_notes ?? "", /2019/);
 });

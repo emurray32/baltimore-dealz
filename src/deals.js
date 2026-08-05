@@ -93,6 +93,23 @@ export function weekByDay(venues) {
   return WEEK.map((day) => ({ ...day, rows: dealsForDay(venues, day.key) }));
 }
 
+// Great-circle distance in meters between two lat/lon points (haversine,
+// spherical Earth). Pure arithmetic so the test suite can pin it without a
+// browser. The board's nearest-first sort and any server-side "how far is this
+// spot" both read from this one function.
+export const EARTH_RADIUS_M = 6371000;
+export const METERS_PER_MILE = 1609.344;
+
+export function distanceMeters(aLat, aLon, bLat, bLon) {
+  const toRad = (deg) => (deg * Math.PI) / 180;
+  const dLat = toRad(bLat - aLat);
+  const dLon = toRad(bLon - aLon);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLon / 2) ** 2;
+  return 2 * EARTH_RADIUS_M * Math.asin(Math.min(1, Math.sqrt(h)));
+}
+
 export const STATUSES = [VERIFIED, "open_unverifiable"];
 
 // The only status a deal row may carry. Anything else is a typo or a hand-rolled

@@ -2889,7 +2889,7 @@
       "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
-      "ops_notes": "HH from venue PDF LochBar_HH_8.30.25.pdf (filename 2025-08-30 revision). Available at main bar and indoor high tops only. Neighborhood Harbor East; appears on Inner Harbor view. Deal Scout INNER_HARBOR_DEALS 2026-08-06.",
+      "ops_notes": "HH re-keyed from pdftotext of live PDF LochBar_HH_8.30.25.pdf (2026-08-06 Reviewer). Available at main bar and indoor high tops only. Mon-Fri 3-6. Neighborhood Harbor East; appears on Inner Harbor view. Prior research sample had wrong prices — do not re-copy INNER_HARBOR_DEALS bullets without the PDF.",
       "deals": [
         {
           "days": [
@@ -2901,7 +2901,7 @@
           ],
           "items": [
             {
-              "text": "Local Oysters (Loch Bar Salts) $2.50 each",
+              "text": "Local Oysters - Loch Bar Salts $2.50 each",
               "price": "$2.50"
             },
             {
@@ -2909,48 +2909,68 @@
               "price": "$5"
             },
             {
-              "text": "Fried Oysters $9",
-              "price": "$9"
-            },
-            {
-              "text": "Clams Casino $10",
-              "price": "$10"
-            },
-            {
-              "text": "Fries $5",
+              "text": "Old Bay French Fries $5",
               "price": "$5"
             },
             {
-              "text": "Truffle Parmesan Fries $6",
+              "text": "Maryland Crab Soup $6",
               "price": "$6"
             },
             {
-              "text": "Crab Soup or Seafood Chili $6",
+              "text": "Cream of Crab Soup $6",
               "price": "$6"
             },
             {
-              "text": "Charcuterie Board $14",
-              "price": "$14"
+              "text": "Fried Oysters (2) $6",
+              "price": "$6"
             },
             {
-              "text": "Wine $7 (House Red/White, Prosecco, Rosé)",
+              "text": "Caesar Salad $7",
               "price": "$7"
             },
             {
-              "text": "Local Draft Beer $6",
-              "price": "$6"
+              "text": "Shells N' Cheese $8",
+              "price": "$8"
             },
             {
-              "text": "Cocktails/Crushes $9",
-              "price": "$9"
+              "text": "Maitre'd Mussels $11",
+              "price": "$11"
             },
             {
-              "text": "Red Wine Slushies $10",
+              "text": "Roasted Chicken Club $12",
+              "price": "$12"
+            },
+            {
+              "text": "Petit Charcuterie Board $12",
+              "price": "$12"
+            },
+            {
+              "text": "U-12 Shrimp Cocktail (3) $14",
+              "price": "$14"
+            },
+            {
+              "text": "1/2 Lb. Peel & Eat Shrimp $16",
+              "price": "$16"
+            },
+            {
+              "text": "Wine $7 (House Sparkling, White, Red)",
+              "price": "$7"
+            },
+            {
+              "text": "Cocktails $8 (House Old Fashioned, House Margarita, house spirits + one mixer)",
+              "price": "$8"
+            },
+            {
+              "text": "Crushes $8 (Orange Crush, Grapefruit Crush)",
+              "price": "$8"
+            },
+            {
+              "text": "Slushies $10 (Frosé, I Knew You Were Trouble)",
               "price": "$10"
             },
             {
-              "text": "Frosé $12",
-              "price": "$12"
+              "text": "Draft Beer $6",
+              "price": "$6"
             }
           ],
           "start": 900,
@@ -3236,8 +3256,7 @@
           "source_url": "https://homeslyce.com/specials/",
           "food_categories": [
             "drink",
-            "wings",
-            "pizza"
+            "wings"
           ]
         },
         {

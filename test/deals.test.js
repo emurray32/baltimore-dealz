@@ -1160,7 +1160,7 @@ test("expansion load: four priced venues and two new views", async () => {
   const venues = await loadVenues();
   const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
 
-  // Loch Bar — Harbor East, Mon–Fri HH from PDF.
+  // Loch Bar — Harbor East, Mon–Fri HH from PDF (pdftotext of live source_url).
   const loch = byId["loch-bar"];
   assert.equal(loch.status, "verified");
   assert.equal(loch.neighborhood, "Harbor East");
@@ -1168,7 +1168,18 @@ test("expansion load: four priced venues and two new views", async () => {
   assert.equal(loch.deals.length, 1);
   assert.equal(loch.deals[0].start, 900);
   assert.equal(loch.deals[0].end, 1080);
-  assert.ok(loch.deals[0].items.some((i) => /\$2\.50/.test(i.text)));
+  const lochText = loch.deals[0].items.map((i) => i.text).join(" | ");
+  assert.match(lochText, /\$2\.50/);
+  assert.match(lochText, /Hushpuppies \$5/);
+  assert.match(lochText, /Fried Oysters \(2\) \$6/);
+  assert.match(lochText, /Petit Charcuterie Board \$12/);
+  assert.match(lochText, /Wine \$7/);
+  assert.match(lochText, /Draft Beer \$6/);
+  assert.match(lochText, /Cocktails \$8/);
+  assert.match(lochText, /Crushes \$8/);
+  assert.match(lochText, /Slushies \$10/);
+  // Research-sample phantoms / wrong $ must not reappear.
+  assert.doesNotMatch(lochText, /Clams Casino|Seafood Chili|Truffle Parmesan|Cocktails\/Crushes \$9|Frosé \$12|Fried Oysters \$9[^.]/);
 
   // Copper Shark — Riverside honesty, two HH windows.
   const cs = byId["copper-shark"];
@@ -1193,6 +1204,8 @@ test("expansion load: four priced venues and two new views", async () => {
   assert.equal(hh.start, 900);
   assert.equal(hh.end, 1080);
   assert.ok(hh.items.some((i) => /\$3 OFF/.test(i.text)));
+  assert.deepEqual(hh.food_categories, ["drink", "wings"]);
+  assert.ok(!hh.food_categories.includes("pizza"), "pizza is weekly specials, not HH");
   assert.ok(hs.deals.some((d) => d.days.includes("mon") && !d.happy_hour));
 
   // Wayward / Azumi / M8 never invented onto the board.
@@ -1224,6 +1237,41 @@ test("expansion quiet stubs never invent happy-hour prices", async () => {
     assert.equal(v.deals.length, 0, id);
     assert.ok((v.notes_public || "").length > 0, id);
   }
+});
+
+test("Loch Bar HH items match the live PDF at source_url (pdftotext pins)", async () => {
+  // Reviewer 2026-08-06: research sample had wrong $ and phantom dishes.
+  // Pin against the PDF text extracted from the exact source_url.
+  const loch = (await loadVenues()).find((v) => v.id === "loch-bar");
+  assert.equal(
+    loch.source_url,
+    "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
+  );
+  const texts = loch.deals[0].items.map((i) => i.text);
+  const joined = texts.join("\n");
+
+  // Correct prices from PDF.
+  assert.ok(texts.some((t) => /Local Oysters.*\$2\.50/.test(t)));
+  assert.ok(texts.some((t) => /Buttermilk Hushpuppies \$5/.test(t)));
+  assert.ok(texts.some((t) => /Old Bay French Fries \$5/.test(t)));
+  assert.ok(texts.some((t) => /Fried Oysters \(2\) \$6/.test(t)));
+  assert.ok(texts.some((t) => /Maryland Crab Soup \$6/.test(t)));
+  assert.ok(texts.some((t) => /Cream of Crab Soup \$6/.test(t)));
+  assert.ok(texts.some((t) => /Petit Charcuterie Board \$12/.test(t)));
+  assert.ok(texts.some((t) => /Wine \$7/.test(t)));
+  assert.ok(texts.some((t) => /Draft Beer \$6/.test(t)));
+  assert.ok(texts.some((t) => /Cocktails \$8/.test(t)));
+  assert.ok(texts.some((t) => /Crushes \$8/.test(t)));
+  assert.ok(texts.some((t) => /Slushies \$10/.test(t)));
+
+  // Wrong research sample — must not ship.
+  assert.doesNotMatch(joined, /Clams Casino/);
+  assert.doesNotMatch(joined, /Seafood Chili/);
+  assert.doesNotMatch(joined, /Truffle Parmesan/);
+  assert.doesNotMatch(joined, /Cocktails\/Crushes \$9/);
+  assert.doesNotMatch(joined, /Fried Oysters \$9/);
+  assert.doesNotMatch(joined, /Charcuterie Board \$14/);
+  assert.doesNotMatch(joined, /Frosé \$12/);
 });
 
 // --- nearest-first: the served page must actually carry the feature ---------

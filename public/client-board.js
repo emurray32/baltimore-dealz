@@ -1,21 +1,14 @@
 // Hydrates a pre-rendered board so "tonight" follows America/New_York in the
 // browser. Build-time HTML is a skeleton (plus one template per weekday); this
 // script picks today's template, updates the day label, and marks the week
-// accordion. Requires client-day.js (window.BD) and #bd-venues JSON.
+// accordion. Requires client-day.js (window.BD). Does NOT read venue JSON —
+// templates already carry only public card markup (no ops_notes, no held rows).
 
 (function () {
   if (typeof BD === "undefined") return;
 
-  var venuesEl = document.getElementById("bd-venues");
   var board = document.getElementById("tonight-board");
-  if (!venuesEl || !board) return;
-
-  var venues;
-  try {
-    venues = JSON.parse(venuesEl.textContent);
-  } catch (err) {
-    return;
-  }
+  if (!board) return;
 
   var now = new Date();
   var todayKey = BD.dayKeyInZone(now);
@@ -55,11 +48,7 @@
     summary.textContent = key === todayKey ? base + " (tonight)" : base;
   }
 
-  // Exposed for the static suite (and nothing else). Lets a test drive the same
-  // selection the page just made without re-deriving day semantics.
+  // Lets a static check (or a human inspecting the DOM) see which day the
+  // client selected without re-deriving day semantics.
   board.setAttribute("data-tonight-key", todayKey);
-  // Also stash the row count the client logic believes is on tonight — the
-  // suite compares this to server dealsForDay for the same instant.
-  var rows = BD.dealsForDay(venues, todayKey);
-  board.setAttribute("data-tonight-count", String(rows.length));
 })();

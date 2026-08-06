@@ -166,12 +166,6 @@ export function cardsHtmlForDay(venues, dayKey, now = new Date()) {
   return rows.map((row) => dealCard(row, now)).join("");
 }
 
-// JSON for <script type="application/json"> — escape </ so a hostile name
-// cannot break out of the script block.
-export function safeJsonForScript(value) {
-  return JSON.stringify(value).replaceAll("</", "<\\/");
-}
-
 // The browser-side half of nearest-first, served inline at the end of
 // renderBoard's output (the page ships no modules, so it is interpolated as a
 // string). Everything the script needs is baked in server-side; nothing
@@ -242,26 +236,28 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 //   styleHref      — stylesheet href (default "/style.css")
 //   mapHref        — "Map view" link (default "/<slug>/map")
 //   viewHref(slug) — switcher link builder (default "/<slug>")
-//   staticClient   — embed venues JSON + per-day templates + client scripts
+//   staticClient   — per-day templates + client scripts (no raw venues JSON)
 //   clientDaySrc   — script src for client-day.js
 //   clientBoardSrc — script src for client-board.js
 export function renderBoard(venues, view, views = [view], now = new Date(), options = {}) {
   const todayKey = dayKeyInZone(now);
   const today = cardsHtmlForDay(venues, todayKey, now);
+  const staticClient = options.staticClient === true;
 
   const card = (row) => dealCard(row, now);
 
   // Today stays collapsed here — it is already spelled out above.
-  // data-day lets the static client retarget the "(tonight)" marker without
-  // re-parsing English day names.
+  // data-day is static-only: the client retargets "(tonight)" without parsing
+  // English day names. Live server HTML stays free of the attribute.
   const week = weekByDay(venues)
-    .map(
-      (day) => `
-      <details data-day="${escapeHtml(day.key)}">
+    .map((day) => {
+      const dayAttr = staticClient ? ` data-day="${escapeHtml(day.key)}"` : "";
+      return `
+      <details${dayAttr}>
         <summary>${escapeHtml(day.label)}${day.key === todayKey ? " (tonight)" : ""}</summary>
         ${day.rows.length ? day.rows.map(card).join("") : '<p class="meta">Nothing listed.</p>'}
-      </details>`,
-    )
+      </details>`;
+    })
     .join("");
 
   const title = `Tonight in ${view.label}`;
@@ -270,18 +266,18 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
   // Static Pages build: one <template> per weekday so the browser can swap
-  // "On tonight" to the right day without re-implementing card markup.
-  let dayTemplates = "";
+  // "On tonight" without re-implementing card markup and without embedding the
+  // raw venues file (ops_notes / held rows must never ship in the public HTML).
   let clientBits = "";
-  if (options.staticClient) {
-    dayTemplates = WEEK.map(
+  if (staticClient) {
+    const dayTemplates = WEEK.map(
       (day) =>
         `<template id="bd-day-${day.key}">${cardsHtmlForDay(venues, day.key, now)}</template>`,
     ).join("\n");
     const daySrc = options.clientDaySrc ?? "/client-day.js";
     const boardSrc = options.clientBoardSrc ?? "/client-board.js";
     clientBits = `
-  <script type="application/json" id="bd-venues">${safeJsonForScript(venues)}</script>
+  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day. Turn JS on for Baltimore-time accuracy, or browse the week below.</p></noscript>
   ${dayTemplates}
   <script src="${escapeHtml(daySrc)}"></script>
   <script src="${escapeHtml(boardSrc)}"></script>`;

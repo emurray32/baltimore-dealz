@@ -25,7 +25,8 @@ hosts plain files (no Node server), so:
 
 1. `npm run build` (or `node scripts/build-static.mjs`) writes `dist/` — every
    view's board + map, root redirects, CSS, vendored Leaflet, and a tiny client
-   script that picks "today" in **America/New_York** in the browser.
+   script that picks "today" in **America/New_York** in the browser from
+   pre-rendered day templates (no raw `venues.json` in the page).
 2. Push to `main` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
    which builds `dist/` and deploys it with the official Pages actions.
 
@@ -38,8 +39,10 @@ account/org plan. After the first green workflow run, the site URL is on the
 deployment.
 
 **What static cannot do:** live re-read of `venues.json` without a rebuild, or
-real HTTP 302s (root and `/map` use meta/JS redirects instead). Day-of-week and
-"tonight" stay accurate in the browser without a redeploy.
+real HTTP 302s (root and `/map` use meta/JS redirects instead). **With
+JavaScript on**, day-of-week and "tonight" stay accurate in the browser without
+a redeploy. **Without JS**, the page shows the day the site was last built
+(there is a `<noscript>` note); use "Browse the week" for the full list.
 
 ## Where the deals live
 

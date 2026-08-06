@@ -125,12 +125,16 @@ test("build-static produces every view board + map + root redirects with deal ca
 
     assert.match(board, /On tonight/);
     assert.match(board, /class="card"/, `${view.slug} board has no deal cards`);
-    assert.match(board, /id="bd-venues"/, `${view.slug} missing embedded venues`);
+    // No raw venues embed — that leaked ops_notes + held deal prices (blocker).
+    assert.doesNotMatch(board, /id="bd-venues"/);
+    assert.doesNotMatch(board, /ops_notes/);
     assert.match(board, /client-day\.js/);
     assert.match(board, /client-board\.js/);
-    // One template per weekday
+    assert.match(board, /<noscript>/);
+    // One template per weekday + data-day only on static boards
     for (const day of WEEK) {
       assert.match(board, new RegExp(`id="bd-day-${day.key}"`));
+      assert.match(board, new RegExp(`data-day="${day.key}"`));
     }
     // Friday skeleton (build now) names Friday
     assert.match(board, /Friday · Baltimore time/);
@@ -140,12 +144,14 @@ test("build-static produces every view board + map + root redirects with deal ca
     assert.ok(friRows.length > 0, "seed has no Friday deals — test proves nothing");
     for (const row of friRows.slice(0, 3)) {
       const sample = row.deal.items[0]?.text;
-      if (sample) assert.match(board, new RegExp(escapeRegExp(sample)));
+      if (sample) assert.match(board, new RegExp(escapeRegExp(escapeHtml(sample))));
     }
 
     assert.match(map, /BD_MAP_POINTS/);
     assert.match(map, /leaflet/);
     assert.match(map, new RegExp(escapeRegExp(view.label)));
+    // Map path must not leak ops_notes either
+    assert.doesNotMatch(map, /ops_notes/);
   }
 
   // Assets landed
@@ -201,6 +207,64 @@ test("static board tonight templates match server cardsHtmlForDay at Fri 11pm an
   await rm(outDir, { recursive: true, force: true });
 });
 
+test("static board HTML never embeds ops_notes or held-only deal item text", async () => {
+  // Reviewer blocker: full venues JSON in the page put internal notes and
+  // held prices (e.g. El Bufalo Modelo) in View Source even though cards omit them.
+  // Scope held text to strings that do NOT also appear on a showable deal —
+  // "$7 Margaritas" is held at Good Vibes and real at Smaltimore (global
+  // substring would false-fail).
+  const outDir = join(ROOT, ".scratch", "static-leak-dist");
+  await rm(outDir, { recursive: true, force: true });
+  await buildStatic({ outDir, now: FRI_11PM_EDT });
+
+  const views = await loadViews();
+  const venues = await loadVenues();
+  const showableTexts = new Set();
+  for (const v of venues) {
+    for (const d of v.deals) {
+      if (d.status === undefined) {
+        for (const item of d.items) showableTexts.add(item.text);
+      }
+    }
+  }
+  const heldOnlyTexts = [];
+  for (const v of venues) {
+    for (const d of v.deals) {
+      if (d.status === "held") {
+        for (const item of d.items) {
+          if (!showableTexts.has(item.text)) heldOnlyTexts.push(item.text);
+        }
+      }
+    }
+  }
+  assert.ok(heldOnlyTexts.length > 0, "seed has no held-only items — test proves nothing");
+  assert.ok(
+    heldOnlyTexts.some((t) => /Modelo/i.test(t)),
+    "expected a known held Modelo line in seed (Reviewer's example)",
+  );
+
+  for (const view of views) {
+    const board = await readFile(join(outDir, view.slug, "index.html"), "utf8");
+    assert.doesNotMatch(board, /ops_notes/);
+    assert.doesNotMatch(board, /id="bd-venues"/);
+    for (const text of heldOnlyTexts) {
+      assert.ok(!board.includes(text), `held-only text leaked raw: ${text}`);
+      assert.ok(
+        !board.includes(escapeHtml(text)),
+        `held-only text leaked escaped: ${text}`,
+      );
+    }
+    // Live server path without staticClient still has no data-day (additive
+    // hook is gated).
+    const live = renderBoard(venuesInView(venues, view), view, views, FRI_11PM_EDT);
+    assert.doesNotMatch(live, /data-day=/);
+    assert.doesNotMatch(live, /bd-day-/);
+    assert.doesNotMatch(live, /client-board\.js/);
+  }
+
+  await rm(outDir, { recursive: true, force: true });
+});
+
 test("paths that cannot be expressed statically are documented by the build", async () => {
   // The live server re-reads venues.json on every request and serves arbitrary
   // unknown paths as 404. Static Pages only has the files we wrote — no live
@@ -212,8 +276,9 @@ test("paths that cannot be expressed statically are documented by the build", as
     "live re-read of data/venues.json without a rebuild",
     "server 404 plain-text body for unknown paths",
     "HTTP 302 redirects (Pages uses meta/JS redirects at / and /map)",
+    "correct 'tonight' without JavaScript (skeleton is build-day; noscript warns)",
   ];
-  assert.equal(staticGaps.length, 3);
+  assert.equal(staticGaps.length, 4);
   assert.ok(staticGaps.every((s) => s.length > 0));
 });
 

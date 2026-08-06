@@ -156,15 +156,37 @@ export function happyHourRows(venues) {
 }
 
 /**
- * Identity-only UID: venue + day set. Times live in DTSTART/DTEND so a
- * correction (e.g. Union Hill 1080→1110) updates the same event for
- * subscribers instead of orphaning the old UID and minting a new one.
- * Days are sorted alphabetically so source-array reorder is a no-op.
+ * Slot key for a deal within a venue+day-set.
+ *
+ * Start minutes identify the window when present so two happy hours on the
+ * same days (Claddagh Thu 4–7 vs 7–close) get different UIDs. End is NOT part
+ * of the slot — correcting an end time (Union Hill 1080→1110) must keep the
+ * same UID so subscriber calendars update in place instead of orphaning.
+ *
+ * Untimed / all-day rows fall back to a normalized time_window string.
+ */
+export function dealSlot(deal) {
+  if (Number.isInteger(deal.start) && deal.start >= 0) {
+    return `s${deal.start}`;
+  }
+  if (typeof deal.time_window === "string" && deal.time_window.trim()) {
+    const slug = deal.time_window
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "");
+    if (slug) return `w${slug}`;
+  }
+  return "x";
+}
+
+/**
+ * Identity UID: venue + sorted day set + window slot.
+ * Days sorted alphabetically so source-array reorder is a no-op.
+ * Domain-ish suffix keeps UIDs unique without claiming a real host.
  */
 export function stableUid(venue, deal) {
   const days = [...deal.days].sort().join("");
-  // Domain-ish suffix keeps UIDs unique without claiming a real host.
-  return `bd-hh-${venue.id}-${days}@baltimore-dealz`;
+  return `bd-hh-${venue.id}-${days}-${dealSlot(deal)}@baltimore-dealz`;
 }
 
 function itemLines(deal) {

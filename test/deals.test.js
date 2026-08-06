@@ -637,7 +637,7 @@ test("coordinates carry OSM provenance and cover every researched row except Spo
   const withCoords = venues.filter((v) => v.lat !== undefined);
   const without = venues.filter((v) => v.lat === undefined).map((v) => v.id);
 
-  assert.equal(withCoords.length, 21);
+  assert.equal(withCoords.length, 26);
   assert.deepEqual(without, ["sports-balls"]);
 
   for (const v of withCoords) {
@@ -1283,10 +1283,10 @@ test("an untagged deal renders no food-category chip", () => {
   assert.doesNotMatch(html, /class="chip">Burger<\/span>/);
 });
 
-test("seed food_categories match Deal Scout §8f/§8g: 63 tagged, two multi-rows only", async () => {
+test("seed food_categories match Deal Scout §8f/§8g: 77 tagged, two multi-rows only", async () => {
   const venues = await loadVenues();
   const deals = venues.flatMap((v) => v.deals.map((d) => ({ venue: v, deal: d })));
-  assert.equal(deals.length, 63, "expected 63 deal rows on the board");
+  assert.equal(deals.length, 77, "expected 77 deal rows on the board");
 
   // Every seed row carries the field (optional in schema; filled in seed).
   for (const { venue, deal } of deals) {
@@ -1324,4 +1324,67 @@ test("seed food_categories match Deal Scout §8f/§8g: 63 tagged, two multi-rows
   assert.ok(satCard, "expected Claddagh Saturday card with wings + cheesesteaks");
   assert.match(satCard, /class="chip">Wings<\/span>/);
   assert.match(satCard, /class="chip">Sandwich<\/span>/);
+});
+
+// --- Federal Hill pass 1 (item 10) ----------------------------------------
+
+test("Federal Hill view includes South Baltimore for Delia Foley's", async () => {
+  const views = await loadViews();
+  const fed = views.find((v) => v.slug === "federal-hill");
+  assert.ok(fed, "federal-hill view missing");
+  assert.deepEqual(fed.neighborhoods, ["Federal Hill", "South Baltimore"]);
+  assert.equal(fed.label, "Federal Hill");
+
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  for (const id of [
+    "nobles-bar-and-grill",
+    "livs-tavern",
+    "magerks-federal-hill",
+    "cross-street-public-house",
+  ]) {
+    assert.equal(byId[id].neighborhood, "Federal Hill", id);
+    assert.equal(byId[id].status, "verified", id);
+  }
+  // Honest NSA label — marketing says Federal Hill; polygon says South Baltimore.
+  assert.equal(byId["delia-foleys"].neighborhood, "South Baltimore");
+  assert.equal(byId["delia-foleys"].status, "verified");
+  assert.match(byId["delia-foleys"].source_url, /deliafoleysmd\.com/);
+  assert.doesNotMatch(byId["delia-foleys"].source_url, /deliafoleys\.pub/);
+
+  const inView = venuesInView(venues, fed);
+  assert.ok(inView.some((v) => v.id === "delia-foleys"));
+  assert.ok(inView.some((v) => v.id === "nobles-bar-and-grill"));
+  assert.equal(inView.length, 5);
+});
+
+test("Union Hill ops_notes record that Mon–Fri is our reading of Weekdays", async () => {
+  const uh = (await loadVenues()).find((v) => v.id === "union-hill-kitchen");
+  assert.match(uh.ops_notes ?? "", /ordinary reading/i);
+  assert.match(uh.ops_notes ?? "", /Weekdays/);
+  assert.match(uh.ops_notes ?? "", /does not name specific days/i);
+});
+
+test("Fed Hill happy hours ship priced rows without inventing start times where unknown", async () => {
+  const venues = await loadVenues();
+  const nobles = venues.find((v) => v.id === "nobles-bar-and-grill");
+  const hh = nobles.deals.find((d) => d.happy_hour === true);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1140);
+  assert.ok(hh.items.some((i) => /Domestics/i.test(i.text)));
+  // All-day Boh/cans are not happy_hour (UID collision guard with Tue–Fri HH).
+  const allday = nobles.deals.find((d) => d.time_window === "all day");
+  assert.notEqual(allday.happy_hour, true);
+
+  const livs = venues.find((v) => v.id === "livs-tavern");
+  const livsHh = livs.deals.find((d) => d.happy_hour === true);
+  assert.equal(livsHh.start, 900);
+  assert.equal(livsHh.end, 1080);
+  assert.match(livsHh.time_window, /game days/i);
+
+  const delia = venues.find((v) => v.id === "delia-foleys");
+  const monThu = delia.deals.find((d) => d.days.includes("mon") && d.happy_hour);
+  const fri = delia.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  assert.equal(monThu.end, 1140);
+  assert.equal(fri.end, 1080);
 });

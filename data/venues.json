@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871",
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -1007,7 +1007,7 @@
       "source_url": "https://www.unionhillbal.com/page/happy-hour",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
-      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Happy hour ships Block A from /page/happy-hour (under HAPPY HOUR heading): wines by the glass, includes seltzers, 1/2 OFF oysters. Block B condensed wording on the same page is secondary only.",
+      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Happy hour ships Block A from /page/happy-hour (under HAPPY HOUR heading): wines by the glass, includes seltzers, 1/2 OFF oysters. Block B condensed wording on the same page is secondary only. Mon\u2013Fri on the board is our ordinary reading of the venue's published \"Weekdays\" \u2014 the happy-hour page does not name specific days.",
       "deals": [
         {
           "days": [
@@ -1903,6 +1903,543 @@
       "lat": 39.283052,
       "lon": -76.577261,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+    },
+    {
+      "id": "nobles-bar-and-grill",
+      "name": "Nobles Bar and Grill",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "1024 South Charles Street, Baltimore, MD 21230",
+      "phone": "(410) 727-1355",
+      "source_url": "https://noblesbarandgrill.com/specials/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Home page hours: Mon closed; Tue\u2013Fri 4pm\u20132am; Sat 11am\u20132am; Sun 12pm\u20132am. Do not invent Mon specials. Industry Night (worker eligibility) and Ravens/PSU game-day menus left off \u2014 not fixed weekly public specials. All-day Boh/craft cans are not tagged happy_hour so they do not collide with the Tue\u2013Fri 4\u20137pm HH UID. notes_public (board): Dine-in only for daily specials. Closed Mondays.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 Domestics",
+              "price": "$3"
+            },
+            {
+              "text": "$4 Seltzers",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Green Tea Shots",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Rail Drinks & Craft Cans",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Crushes & 32oz Domestic Drafts",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://noblesbarandgrill.com/specials/",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$3 Natty Boh 16oz Cans",
+              "price": "$3"
+            },
+            {
+              "text": "$5 Craft Beer Cans",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "2 for 1 Green Tea Shots",
+              "price": "2 for 1"
+            },
+            {
+              "text": "$10 VOLO Pitchers",
+              "price": "$10"
+            }
+          ],
+          "start": 1140,
+          "end": null,
+          "time_window": "7pm-close",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "2 for 1 Crushes",
+              "price": "2 for 1"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.277278,
+      "lon": -76.614681,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "livs-tavern",
+      "name": "Liv's Tavern",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "1113 S Charles St, Baltimore, MD 21230",
+      "phone": "(443) 869-2418",
+      "source_url": "https://www.livstavern.com/specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Specials page is preferred over home page for HH scope (Mon\u2013Sun* with game-day and Sat\u2013Sun drink-only rules). Home page also states Mon\u2013Fri 3\u20136 \u2014 narrower. Do not drop the game-day / Sat\u2013Sun drink-only constraints from time_window. Public card note held in ops until multi-view notes_public pin: Purple patio / dog-friendly. Former Mother's Federal Hill Grille space (Mother's closed Jan 2025).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "All HH Food $7: Boneless Wings (10), Arancini, Bruschetta, Deviled Eggs, Chicken Parm Bao Buns",
+              "price": "$7"
+            },
+            {
+              "text": "$4 Drafts",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Rumple/Chambongs",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Crushes",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Bubbles",
+              "price": "$8"
+            },
+            {
+              "text": "$10 Cocktails (Weekdays Only)",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm (excludes game days; drinks HH only Sat\u2013Sun)",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.livstavern.com/specials",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$10 Beer and a Shot",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$6 Crushes & Surfsides",
+              "price": "$6"
+            },
+            {
+              "text": "$4 Pacificos",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Coronas",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$10 Featured Cocktail",
+              "price": "$10"
+            },
+            {
+              "text": "$15 Select Wine Bottles",
+              "price": "$15"
+            },
+            {
+              "text": "$4 Modelos",
+              "price": "$4"
+            },
+            {
+              "text": "$10 Liv's Burgers",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8 Boneless Wings",
+              "price": "$8"
+            },
+            {
+              "text": "$4 High Life Drafts",
+              "price": "$4"
+            },
+            {
+              "text": "$4 Chambongs",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Bubbles",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "food_categories": [
+            "wings"
+          ]
+        }
+      ],
+      "lat": 39.27634,
+      "lon": -76.614194,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "magerks-federal-hill",
+      "name": "MaGerk's Pub & Grill (Federal Hill)",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "1061 S. Charles Street, Baltimore, MD 21230",
+      "phone": "(410) 576-9230",
+      "source_url": "https://www.magerks.com/federal-hill",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Prices from on-page HH image + 2026 Federal Hill Weekly Specials PDF (website-image). Candidate list had 20 E Cross \u2014 wrong; official is 1061 S Charles (20 E Cross is Pub Dog). Industry Night half-off is worker-eligibility \u2014 not on board. Beat the Clock (Fri 10pm) left off \u2014 sliding price is hard to state honestly as a single row. Trivia/Karaoke nights not priced specials. Public card note held in ops until multi-view notes_public pin: Kitchen hours published separately on the venue site (bar until 2am).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$7 32 OZ Drafts",
+              "price": "$7"
+            },
+            {
+              "text": "$3 Claws",
+              "price": "$3"
+            },
+            {
+              "text": "$5 White Tea Shots",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.magerks.com/federal-hill",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Cheesesteaks half off (dine-in only)",
+              "price": "1/2 off"
+            }
+          ],
+          "start": 1140,
+          "end": 1320,
+          "time_window": "7pm-10pm",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
+        }
+      ],
+      "lat": 39.276919,
+      "lon": -76.614237,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "cross-street-public-house",
+      "name": "Cross Street Public House",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "26 E Cross Street, Baltimore, MD 21230",
+      "phone": "(410) 244-6722",
+      "source_url": "https://www.crossstreetpublichouse.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Prices from happy-hour flyer PNG on venue site (website-image). Candidate list address 1209 S Charles was wrong \u2014 official is 26 E Cross. Site hours: Tue\u2013Fri 5pm\u20132am; Sat\u2013Sun 11am\u20132am. notes_public (board): Happy hour subject to change during festivals, events, and at management discretion.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 Off All Glizzys",
+              "price": "$2 off"
+            },
+            {
+              "text": "$3 Bud Lights",
+              "price": "$3"
+            },
+            {
+              "text": "$4 White Claws",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Surfsides",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Drafts",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Crushes",
+              "price": "$7"
+            },
+            {
+              "text": "$12 Pizzas",
+              "price": "$12"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.crossstreetpublichouse.com/happy-hour",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.277096,
+      "lon": -76.613387,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "delia-foleys",
+      "name": "Delia Foley's Pub",
+      "neighborhood": "South Baltimore",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "1439 S Charles Street, Baltimore, MD 21230",
+      "phone": "(443) 682-9141",
+      "source_url": "https://www.deliafoleysmd.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "NSA polygon = South Baltimore (not Federal Hill). Shipped on federal-hill view via views.json neighborhoods [Federal Hill, South Baltimore] \u2014 same pattern as Huck's/Brewers Hill. Do not relabel neighborhood to Federal Hill. Source must be deliafoleysmd.com only (deliafoleys.pub expired). Prices from flyer image (website-image risk). Candidate list address 1117 was wrong \u2014 official 1439. Public card note held in ops until multi-view notes_public pin: Markets itself as Federal Hill; city map says South Baltimore. Flyer specials subject to change during festivals/events.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$3 Miller Lites",
+              "price": "$3"
+            },
+            {
+              "text": "$3 Mystery Bottles",
+              "price": "$3"
+            },
+            {
+              "text": "$4 Guinness Blonde Draft",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Jameson",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Guinness Drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$7 Pretzel Nuggets",
+              "price": "$7"
+            },
+            {
+              "text": "$8 Fried Pickles",
+              "price": "$8"
+            },
+            {
+              "text": "$10 Boneless Wings",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.deliafoleysmd.com/happy-hour",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 Miller Lites",
+              "price": "$3"
+            },
+            {
+              "text": "$3 Mystery Bottles",
+              "price": "$3"
+            },
+            {
+              "text": "$4 Guinness Blonde Draft",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Jameson",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Guinness Drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$7 Pretzel Nuggets",
+              "price": "$7"
+            },
+            {
+              "text": "$8 Fried Pickles",
+              "price": "$8"
+            },
+            {
+              "text": "$10 Boneless Wings",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.deliafoleysmd.com/happy-hour",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.272757,
+      "lon": -76.613817,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
     }
   ]
 }

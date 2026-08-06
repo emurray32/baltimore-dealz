@@ -4,7 +4,18 @@
     {
       "slug": "canton",
       "label": "Canton",
-      "neighborhoods": ["Canton", "Brewers Hill"]
+      "neighborhoods": [
+        "Canton",
+        "Brewers Hill"
+      ]
+    },
+    {
+      "slug": "federal-hill",
+      "label": "Federal Hill",
+      "neighborhoods": [
+        "Federal Hill",
+        "South Baltimore"
+      ]
     }
   ]
 }

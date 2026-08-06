@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/FELLS_POINT_DEALS.md as of 2026-08-06 pass 1 (Deal Scout)",
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/FELLS_POINT_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + INNER_HARBOR_DEALS.md + LOCUST_POINT_DEALS.md as of 2026-08-06 (Deal Scout pass for Eric)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -2876,6 +2876,773 @@
       ],
       "lat": 39.282161,
       "lon": -76.59161,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "loch-bar",
+      "name": "Loch Bar",
+      "neighborhood": "Harbor East",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "verified",
+      "address": "240 International Drive, Baltimore, MD 21202",
+      "phone": "(443) 961-8949",
+      "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "HH from venue PDF LochBar_HH_8.30.25.pdf (filename 2025-08-30 revision). Available at main bar and indoor high tops only. Neighborhood Harbor East; appears on Inner Harbor view. Deal Scout INNER_HARBOR_DEALS 2026-08-06.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Local Oysters (Loch Bar Salts) $2.50 each",
+              "price": "$2.50"
+            },
+            {
+              "text": "Buttermilk Hushpuppies $5",
+              "price": "$5"
+            },
+            {
+              "text": "Fried Oysters $9",
+              "price": "$9"
+            },
+            {
+              "text": "Clams Casino $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fries $5",
+              "price": "$5"
+            },
+            {
+              "text": "Truffle Parmesan Fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crab Soup or Seafood Chili $6",
+              "price": "$6"
+            },
+            {
+              "text": "Charcuterie Board $14",
+              "price": "$14"
+            },
+            {
+              "text": "Wine $7 (House Red/White, Prosecco, Rosé)",
+              "price": "$7"
+            },
+            {
+              "text": "Local Draft Beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "Cocktails/Crushes $9",
+              "price": "$9"
+            },
+            {
+              "text": "Red Wine Slushies $10",
+              "price": "$10"
+            },
+            {
+              "text": "Frosé $12",
+              "price": "$12"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm (main bar + indoor high tops only)",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.282325,
+      "lon": -76.602299,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "copper-shark",
+      "name": "Copper Shark",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "verified",
+      "address": "921 E Fort Ave, Baltimore, MD 21230",
+      "phone": "(410) 202-2268",
+      "source_url": "https://www.thecoppershark.com/happy-hour-1",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "NSA Riverside; markets Locust Point. Locust Point view includes Riverside (Delia pattern). Food two-tier prices on page — board stores lower HH tier where listed. Menu notes prices subject to change. Deal Scout LOCUST_POINT_DEALS 2026-08-06.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Cocktails $8 (Gold Rush, Rum Punch, G&T, Paloma, Spiced Pear Mule)",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $7 (Red/White/Rosé)",
+              "price": "$7"
+            },
+            {
+              "text": "Draft Beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "White Bean Hummus $10",
+              "price": "$10"
+            },
+            {
+              "text": "Truffled Parmesan Fries $8",
+              "price": "$8"
+            },
+            {
+              "text": "Buffalo Mac n' Cheese Bites $10",
+              "price": "$10"
+            },
+            {
+              "text": "Whipped House-made Ricotta $12",
+              "price": "$12"
+            },
+            {
+              "text": "Crab Rangoon Croquettes $12",
+              "price": "$12"
+            },
+            {
+              "text": "Jerk Shrimp Quesadilla $19",
+              "price": "$19"
+            },
+            {
+              "text": "The CS Burger $20",
+              "price": "$20"
+            }
+          ],
+          "start": 900,
+          "end": 1320,
+          "time_window": "3pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.thecoppershark.com/happy-hour-1",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Cocktails $8 (Gold Rush, Rum Punch, G&T, Paloma, Spiced Pear Mule)",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $7 (Red/White/Rosé)",
+              "price": "$7"
+            },
+            {
+              "text": "Draft Beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "White Bean Hummus $10",
+              "price": "$10"
+            },
+            {
+              "text": "Truffled Parmesan Fries $8",
+              "price": "$8"
+            },
+            {
+              "text": "Buffalo Mac n' Cheese Bites $10",
+              "price": "$10"
+            },
+            {
+              "text": "Whipped House-made Ricotta $12",
+              "price": "$12"
+            },
+            {
+              "text": "Crab Rangoon Croquettes $12",
+              "price": "$12"
+            },
+            {
+              "text": "Jerk Shrimp Quesadilla $19",
+              "price": "$19"
+            },
+            {
+              "text": "The CS Burger $20",
+              "price": "$20"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.thecoppershark.com/happy-hour-1",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "burger"
+          ]
+        }
+      ],
+      "lat": 39.271207,
+      "lon": -76.600684,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "tagliata",
+      "name": "Tagliata",
+      "neighborhood": "Inner Harbor",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "verified",
+      "address": "1012 Fleet Street, Baltimore, MD 21202",
+      "phone": "(410) 244-5830",
+      "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "HH from venue PDF Tagliata_HappyHour_2.19.26-WEB.pdf (Deal Scout visual read 2026-08-06). Bar only. Nominatim places address Inner Harbor; appears on Inner Harbor view with Harbor East. Little Italy edge — polygon honesty over marketing.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Wine $6",
+              "price": "$6"
+            },
+            {
+              "text": "Beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Spirits $8 (+$3 mixer upcharge in cocktails)",
+              "price": "$8"
+            },
+            {
+              "text": "Oysters (3/order) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tuscan Fried Chicken $8",
+              "price": "$8"
+            },
+            {
+              "text": "Caesar $8",
+              "price": "$8"
+            },
+            {
+              "text": "Spaghetti $8",
+              "price": "$8"
+            },
+            {
+              "text": "Polpette $10",
+              "price": "$10"
+            },
+            {
+              "text": "Veal Bolognese $10",
+              "price": "$10"
+            },
+            {
+              "text": "Rigatoni Vodka $10",
+              "price": "$10"
+            },
+            {
+              "text": "Smoked Salmon Bruschetta $10",
+              "price": "$10"
+            },
+            {
+              "text": "Charcuterie $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm (bar only)",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "pasta/comfort",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.284349,
+      "lon": -76.600124,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "homeslyce-canton",
+      "name": "HomeSlyce Canton",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "verified",
+      "address": "900 S Kenwood Ave, Baltimore, MD 21224",
+      "phone": "(443) 501-4000",
+      "source_url": "https://homeslyce.com/specials/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Specials page is chain-wide; Canton listed open on locations page. HH Mon-Fri 3-6 from homeslyce.com/specials. Weekly pizza specials also on specials page. CCE trivia Thu 7:30 not in this load (trivia package separate). Deal Scout TWENTY_FIVE 2026-08-06.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 OFF wings, tenders, and quesadillas",
+              "price": "$3 off"
+            },
+            {
+              "text": "$5 wines and craft beers",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://homeslyce.com/specials/",
+          "food_categories": [
+            "drink",
+            "wings",
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "16\" 2-topping pizza $19",
+              "price": "$19"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/specials/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$1 toppings",
+              "price": "$1"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/specials/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "12\" premium pizza $16",
+              "price": "$16"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/specials/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Pizza + wings $25/$35",
+              "price": "$25"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/specials/",
+          "food_categories": [
+            "pizza",
+            "wings"
+          ],
+          "start": null,
+          "end": null
+        }
+      ],
+      "lat": 39.282029,
+      "lon": -76.577198,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "maxs-taphouse",
+      "name": "Max's Taphouse",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "737 S Broadway, Baltimore, MD 21231",
+      "source_url": "https://maxs.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open; events/trivia; no standing HH $ on site. Deal Scout 2026-08-06. Phone not in this pass.",
+      "deals": [],
+      "lat": 39.282658,
+      "lon": -76.592963,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "admirals-cup",
+      "name": "Admiral's Cup",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1647 Thames St, Baltimore, MD 21231",
+      "source_url": "https://theadmiralscup.com/baltimore/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open; hours only; HH $ not on site. Coords approximate from prior Fells research — re-geocode if pin drifts. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.281644,
+      "lon": -76.593322,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "stuggys",
+      "name": "Stuggy's",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1928 Fleet St, Baltimore, MD 21231",
+      "source_url": "https://www.stuggys.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open; menu + game-day packages; no weekly HH. Coords approximate pending Nominatim. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.284928,
+      "lon": -76.588895,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "rye-of-baltimore",
+      "name": "Rye of Baltimore",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1639 Thames St, Baltimore, MD 21231",
+      "source_url": "https://www.ryebaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open cocktail bar; no specials page. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.28127,
+      "lon": -76.593393,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "crossbar",
+      "name": "Crossbar",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "18 E Cross St, Baltimore, MD 21230",
+      "source_url": "https://www.crossbarbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open biergarten; no specials $. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.277032,
+      "lon": -76.613586,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "locals-only",
+      "name": "Locals Only",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "25 E Cross St, Baltimore, MD 21230",
+      "source_url": "https://www.localsonlybaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour menu lists items without dollar prices.",
+      "ops_notes": "HH page items without $. Quiet until priced. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.27705,
+      "lon": -76.6132,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "gameon-bar-arcade",
+      "name": "GameOn Bar+Arcade",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1118 S Charles St, Baltimore, MD 21230",
+      "source_url": "http://www.gameonbararcade.com/fed-hill",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open; hours; no HH $. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.276353,
+      "lon": -76.614449,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "cross-street-market",
+      "name": "Cross Street Market",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1065 S Charles St, Baltimore, MD 21230",
+      "source_url": "https://crossstmarket.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Food hall — per-vendor specials only; no market-wide happy hour price list we can show.",
+      "ops_notes": "Multi-vendor model parked for stall-level deals. Market stub for map/trivia later. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.2769,
+      "lon": -76.6138,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "blackwall-hitch",
+      "name": "Blackwall Hitch",
+      "neighborhood": "Inner Harbor",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "700 E Pratt St, Baltimore, MD 21202",
+      "phone": "(443) 759-7176",
+      "source_url": "https://www.blackwallhitchbaltimoremd.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Advertises happy hour Mon–Fri 3–6; prices not published on the menus page.",
+      "ops_notes": "Times only on site; menus page has regular prices not HH $. Deal Scout INNER_HARBOR 2026-08-06.",
+      "deals": [],
+      "lat": 39.287043,
+      "lon": -76.606434,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "barracudas-locust-point",
+      "name": "Barracudas Locust Point",
+      "neighborhood": "Locust Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1230 E Fort Ave, Baltimore, MD 21230",
+      "phone": "(443) 873-8559",
+      "source_url": "https://www.barracudaslocustpoint.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Weekly specials marketed as board specials that sell out — no prices or days on the website.",
+      "ops_notes": "True Locust Point NSA. Deal Scout LOCUST_POINT 2026-08-06.",
+      "deals": [],
+      "lat": 39.27025,
+      "lon": -76.596735,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "pub-dog-fed-hill",
+      "name": "Pub Dog",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "20 E Cross St, Baltimore, MD 21230",
+      "source_url": "https://pubdog.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; published happy hour prices are for the Columbia location only.",
+      "ops_notes": "Do not ship Columbia HH as Fed Hill. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.277,
+      "lon": -76.6134,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "limoncello",
+      "name": "Limoncello",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "900 E Fort Ave, Baltimore, MD 21230",
+      "phone": "(443) 708-1540",
+      "source_url": "https://www.limoncellobaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "NSA Riverside; markets Locust Point/Anthem House. No HH $ list. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.271781,
+      "lon": -76.600846,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "the-outpost",
+      "name": "The Outpost",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1032 Riverside Ave, Baltimore, MD 21230",
+      "phone": "(443) 388-9113",
+      "source_url": "https://www.theoutpostbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Happy hour Mon–Fri 4–6; prices not published by the venue.",
+      "ops_notes": "NSA Federal Hill (not Locust Point). Times only. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.277439,
+      "lon": -76.609268,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "kislings-tavern",
+      "name": "Kisling's Tavern",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "2100 Fleet St, Baltimore, MD 21231",
+      "source_url": "https://www.kislingstavern.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Nominatim labels Canton. CCE trivia Mon 7:30 not in this load. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.28503,
+      "lon": -76.58684,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "mobtown-brewing",
+      "name": "Mobtown Brewing",
+      "neighborhood": "Brewers Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "4015 Foster Ave #400, Baltimore, MD 21224",
+      "source_url": "https://mobtownbrewing.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Open; happy hour prices not published on the official site we can re-read. Quiet group until a priced list appears on their site.",
+      "ops_notes": "Open taproom; no HH $. CCE trivia Thu 7 not in this load. Coords approximate. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.28437,
+      "lon": -76.562512,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "watershed",
+      "name": "Watershed",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1065 S Charles St, Baltimore, MD 21230",
+      "source_url": "https://watershedbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Inside Cross Street Market; happy hour deep link was 404 on last check — prices not verified.",
+      "ops_notes": "HH page 404 on Deal Scout pass 2026-08-06. Quiet until re-verified.",
+      "deals": [],
+      "lat": 39.2769,
+      "lon": -76.6138,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "peters-pour-house",
+      "name": "Peter's Pour House",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "111 Mercer St, Baltimore, MD 21202",
+      "source_url": "https://www.peterspourhouse.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Daily specials pointed to Facebook only — not on the website.",
+      "ops_notes": "No website-verified specials. Downtown neighborhood for view coverage. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.288412,
+      "lon": -76.613007,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "bark-social-canton",
+      "name": "Bark Social Canton",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "3822 Boston St, Baltimore, MD 21224",
+      "source_url": "https://barksocial.com/pages/locations",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Reopened after a 2024 closure; happy hour prices live only on Instagram — not shipped from a third-party feed.",
+      "ops_notes": "Reopen ~Aug 2025 per press (closure history only). HH $ on IG → lead only. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.278045,
+      "lon": -76.562874,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "market-ale-house",
+      "name": "Market Ale House",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "status": "open_unverifiable",
+      "address": "1065 S Charles St, Baltimore, MD 21230",
+      "source_url": "https://marketalehouse.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Inside Cross Street Market; hours published, no specials dollar list on site.",
+      "ops_notes": "Hours Wed-Fri 4-8 etc. No specials $. Deal Scout 2026-08-06.",
+      "deals": [],
+      "lat": 39.2769,
+      "lon": -76.6138,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
     }
   ]

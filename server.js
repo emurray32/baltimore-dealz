@@ -1,6 +1,7 @@
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { buildHappyHourIcs } from "./src/calendar.js";
 import { venuesInView } from "./src/deals.js";
 import { renderMap } from "./src/map.js";
 import { renderBoard } from "./src/page.js";
@@ -54,6 +55,13 @@ const server = createServer(async (req, res) => {
       return;
     }
 
+    // /calendar.ics — happy-hour feed for the default view (subscribe once).
+    if (path === "/calendar.ics") {
+      res.writeHead(302, { location: `/${defaultView(views).slug}/calendar.ics` });
+      res.end();
+      return;
+    }
+
     // /<view>/map — the interactive map for a named board.
     const mapMatch = path.match(/^\/([a-z0-9-]+)\/map$/);
     if (mapMatch) {
@@ -62,6 +70,26 @@ const server = createServer(async (req, res) => {
         const venues = venuesInView(await loadVenues(), mapView);
         res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
         res.end(renderMap(venues, mapView, views));
+        return;
+      }
+    }
+
+    // /<view>/calendar.ics — weekly happy hours only (not the full 63-deal wall).
+    const calMatch = path.match(/^\/([a-z0-9-]+)\/calendar\.ics$/);
+    if (calMatch) {
+      const calView = findView(views, calMatch[1]);
+      if (calView) {
+        const venues = venuesInView(await loadVenues(), calView);
+        const ics = buildHappyHourIcs(venues, {
+          calendarName: `${calView.label} Happy Hours — Baltimore Dealz`,
+        });
+        res.writeHead(200, {
+          "content-type": "text/calendar; charset=utf-8",
+          "content-disposition": `inline; filename="${calView.slug}-happy-hours.ics"`,
+          // Clients re-fetch subscribed calendars; allow short cache only.
+          "cache-control": "public, max-age=300",
+        });
+        res.end(ics);
         return;
       }
     }

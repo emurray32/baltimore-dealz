@@ -12,6 +12,12 @@ Then open http://localhost:3000. It redirects to the default board (`/canton`).
 No install step, no database, no accounts — plain Node (v20+), zero dependencies.
 `server.js` is the dev path — it re-reads `data/venues.json` on every request.
 
+**Happy-hour calendar:** `/calendar.ics` (or `/canton/calendar.ics`) is a
+plain iCal feed of deals tagged `happy_hour` only — not the full deal board.
+Subscribe once in Apple Calendar (File → New Calendar Subscription) or Google
+Calendar (Settings → Add calendar → From URL). On a static deploy the same path
+is a built file under `dist/`.
+
 ## Test it
 
 ```bash
@@ -24,9 +30,10 @@ The public site is a **static** build of the same boards and maps (plain files,
 no Node server):
 
 1. `npm run build` (or `node scripts/build-static.mjs`) writes `dist/` — every
-   view's board + map, root redirects, CSS, vendored Leaflet, and a tiny client
-   script that picks "today" in **America/New_York** in the browser from
-   pre-rendered day templates (no raw `venues.json` in the page).
+   view's board + map, happy-hour `calendar.ics`, root redirects, CSS, vendored
+   Leaflet, and a tiny client script that picks "today" in **America/New_York**
+   in the browser from pre-rendered day templates (no raw `venues.json` in the
+   page).
 2. Someone with publish access copies that `dist/` to the **separate public
    host repo** (hand step). That is what makes the live site update.
 

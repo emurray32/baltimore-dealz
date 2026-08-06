@@ -5,14 +5,16 @@
 // Output layout (relative asset paths so project Pages + custom domains both work):
 //   dist/index.html              → client redirect to default view
 //   dist/map/index.html          → client redirect to default view's map
+//   dist/calendar.ics            → happy-hour feed (default view body)
 //   dist/<view>/index.html       → board
 //   dist/<view>/map/index.html   → map
+//   dist/<view>/calendar.ics     → happy-hour feed for that view
 //   dist/style.css, vendor/*, client-*.js
 
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { buildHappyHourIcs } from "../src/calendar.js";
 import { venuesInView } from "../src/deals.js";
 import { renderMap } from "../src/map.js";
 import { renderBoard } from "../src/page.js";
@@ -80,6 +82,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     const boardHtml = renderBoard(venues, view, views, now, {
       styleHref: "../style.css",
       mapHref: "map/",
+      calendarHref: "calendar.ics",
       viewHref: (slug) => `../${slug}/`,
       staticClient: true,
       clientDaySrc: "../client-day.js",
@@ -100,7 +103,22 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     const mapPath = join(view.slug, "map", "index.html");
     await write(join(outDir, mapPath), mapHtml);
     written.push(mapPath);
+
+    // Happy-hour subscribe feed (same body the live server serves).
+    const ics = buildHappyHourIcs(venues, {
+      calendarName: `${view.label} Happy Hours — Baltimore Dealz`,
+      now,
+    });
+    const icsPath = join(view.slug, "calendar.ics");
+    await write(join(outDir, icsPath), ics);
+    written.push(icsPath);
   }
+
+  // Root calendar.ics copies the default view so a single stable URL works on
+  // static hosts (no 302). Live server still 302s /calendar.ics → /<slug>/…
+  const defaultIcs = await readFile(join(outDir, fallback.slug, "calendar.ics"), "utf8");
+  await write(join(outDir, "calendar.ics"), defaultIcs);
+  written.push("calendar.ics");
 
   return { outDir, views, written, defaultSlug: fallback.slug };
 }

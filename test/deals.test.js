@@ -1087,8 +1087,34 @@ test("deep source URLs land on Huck's, Stackhouse, and Mahaffey's", async () => 
   const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
   const maha = venues.find((v) => v.id === "mahaffeys-pub");
   assert.equal(hucks.source_url, "https://www.hucksamericancraft.com/#dailyspecials-section");
-  assert.equal(stack.source_url, "https://hudsonstreetstackhouse.com/weekly-food-specials/");
+  // Stackhouse homepage carries the HH windows; /weekly-food-specials/ is 2019 dinner
+  // specials and does not publish those times (Lead 2026-08-06).
+  assert.equal(stack.source_url, "https://hudsonstreetstackhouse.com/");
   assert.match(maha.source_url, /getbento\.com.*Weekly%20Specials\.pdf/);
+});
+
+test("no venue source_url points at Stackhouse /weekly-food-specials/", async () => {
+  // Eric found the board saying "prices not published" while linking a page of
+  // 2019 dinner prices that also lacks the happy-hour times we quote.
+  const venues = await loadVenues();
+  for (const v of venues) {
+    assert.doesNotMatch(
+      v.source_url ?? "",
+      /weekly-food-specials/i,
+      `${v.id} venue source_url`,
+    );
+    for (const d of v.deals ?? []) {
+      assert.doesNotMatch(
+        d.source_url ?? "",
+        /weekly-food-specials/i,
+        `${v.id} deal source_url`,
+      );
+    }
+  }
+  const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
+  assert.equal(stack.source_url, "https://hudsonstreetstackhouse.com/");
+  assert.ok(stack.deals.every((d) => d.prices_published === false));
+  assert.match(stack.ops_notes ?? "", /wrong source for happy hour|homepage/i);
 });
 
 // --- nearest-first: the served page must actually carry the feature ---------

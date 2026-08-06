@@ -207,6 +207,33 @@ export function hasEnded(deal, minutesNow) {
   return minutesNow >= deal.end;
 }
 
+// Minutes past midnight *in Baltimore* (or another zone), not the machine clock.
+// hourCycle h23 keeps midnight as 0 rather than 24.
+export function minutesNowInZone(date = new Date(), timeZone = BALTIMORE_TZ) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    hour: "numeric",
+    minute: "numeric",
+    hourCycle: "h23",
+  }).formatToParts(date);
+  const hour = Number(parts.find((p) => p.type === "hour")?.value ?? 0);
+  const minute = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
+  return hour * 60 + minute;
+}
+
+// Board timing bucket for a deal on its listed day. Used by the client to
+// group tonight's cards; pure so tests can pin it without the DOM.
+//
+// - finished: published end is at or before now (end:null is NEVER finished)
+// - starts_later: published start is still in the future
+// - on_now: already started, or untimed / all-day (no start) — never invent a window
+export function dealTiming(deal, minutesNow) {
+  if (hasEnded(deal, minutesNow)) return "finished";
+  if (deal.start === null || deal.start === undefined) return "on_now";
+  if (minutesNow < deal.start) return "starts_later";
+  return "on_now";
+}
+
 const DAY_KEYS = new Set(WEEK.map((day) => day.key));
 
 // Returns a list of problems, empty when the venue is well formed. The rules are

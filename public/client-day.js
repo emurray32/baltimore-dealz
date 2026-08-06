@@ -1,8 +1,8 @@
 // Browser-side copy of the day/deal selection logic from src/deals.js.
 // Kept as a plain script (no imports) so the static Pages build needs zero
 // tooling. Equivalence with the server module is pinned by test/static.test.js
-// — if you change hasEnded / dayKeyInZone / dealsForDay in deals.js, change
-// the matching functions here the same way.
+// — if you change hasEnded / dayKeyInZone / dealsForDay / dealTiming /
+// minutesNowInZone in deals.js, change the matching functions here the same way.
 
 (function (global) {
   var BD = global.BD || {};
@@ -76,6 +76,33 @@
   BD.hasEnded = function hasEnded(deal, minutesNow) {
     if (deal.end === null || deal.end === undefined) return false;
     return minutesNow >= deal.end;
+  };
+
+  // Minutes past midnight in Baltimore (or another zone).
+  BD.minutesNowInZone = function minutesNowInZone(date, timeZone) {
+    if (timeZone === undefined) timeZone = BD.BALTIMORE_TZ;
+    if (date === undefined) date = new Date();
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: timeZone,
+      hour: "numeric",
+      minute: "numeric",
+      hourCycle: "h23",
+    }).formatToParts(date);
+    var hour = 0;
+    var minute = 0;
+    for (var i = 0; i < parts.length; i++) {
+      if (parts[i].type === "hour") hour = Number(parts[i].value);
+      if (parts[i].type === "minute") minute = Number(parts[i].value);
+    }
+    return hour * 60 + minute;
+  };
+
+  // on_now | starts_later | finished — same rules as src/deals.js dealTiming.
+  BD.dealTiming = function dealTiming(deal, minutesNow) {
+    if (BD.hasEnded(deal, minutesNow)) return "finished";
+    if (deal.start === null || deal.start === undefined) return "on_now";
+    if (minutesNow < deal.start) return "starts_later";
+    return "on_now";
   };
 
   global.BD = BD;

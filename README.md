@@ -18,25 +18,29 @@ No install step, no database, no accounts — plain Node (v20+), zero dependenci
 npm test
 ```
 
-## Deploy (GitHub Pages)
+## Deploy (public static host)
 
-The public site is a **static** build of the same boards and maps. GitHub Pages
-hosts plain files (no Node server), so:
+The public site is a **static** build of the same boards and maps (plain files,
+no Node server):
 
 1. `npm run build` (or `node scripts/build-static.mjs`) writes `dist/` — every
    view's board + map, root redirects, CSS, vendored Leaflet, and a tiny client
    script that picks "today" in **America/New_York** in the browser from
    pre-rendered day templates (no raw `venues.json` in the page).
-2. Push to `main` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
-   which builds `dist/` and deploys it with the official Pages actions.
+2. Someone with publish access copies that `dist/` to the **separate public
+   host repo** (hand step). That is what makes the live site update.
 
-`dist/` is gitignored — the workflow always builds from source. Local
-`npm start` is unchanged.
+**Merging to `main` does not update the live site.** A push or merge here only
+changes the private source. The site changes when `dist/` is rebuilt and
+published by hand.
 
-**One-time setup** (repo owner): enable GitHub Pages for this repo with source
-**GitHub Actions** (Settings → Pages). Private repos need Pages available on the
-account/org plan. After the first green workflow run, the site URL is on the
-deployment.
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) is **manual-only**
+(`workflow_dispatch`). It is not triggered on push to `main`. GitHub Pages is
+unavailable on this private repo under the free plan (HTTP 422 if you try to
+enable it); the workflow stays in the tree for the day that changes, but must
+not auto-run and fail red on every merge.
+
+`dist/` is gitignored — always build from source. Local `npm start` is unchanged.
 
 **What static cannot do:** live re-read of `venues.json` without a rebuild, or
 real HTTP 302s (root and `/map` use meta/JS redirects instead). **With

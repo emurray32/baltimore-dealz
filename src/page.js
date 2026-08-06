@@ -277,7 +277,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     const daySrc = options.clientDaySrc ?? "/client-day.js";
     const boardSrc = options.clientBoardSrc ?? "/client-board.js";
     clientBits = `
-  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day. Turn JS on for Baltimore-time accuracy, or browse the week below.</p></noscript>
+  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day. Turn JS on for Baltimore-time accuracy, or use Browse the week.</p></noscript>
   ${dayTemplates}
   <script src="${escapeHtml(daySrc)}"></script>
   <script src="${escapeHtml(boardSrc)}"></script>`;

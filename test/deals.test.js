@@ -798,6 +798,54 @@ test("Stackhouse still has times-only happy hour — no 2019 food prices", async
   assert.match(stack.ops_notes ?? "", /2019/);
 });
 
+// Vague happy-hour audit (CoS item 4, 2026-08-06): Union Hill was the only
+// lag — real $2-off / half-off list to 6:30pm. Block A under HAPPY HOUR only;
+// do not ship Block B's broader "WINE" / missing seltzers wording.
+test("Union Hill happy hour ships Block A through 6:30pm", async () => {
+  const uh = (await loadVenues()).find((v) => v.id === "union-hill-kitchen");
+  assert.ok(uh);
+  assert.equal(uh.deals.length, 1);
+  const d = uh.deals[0];
+  assert.equal(d.start, 900);
+  assert.equal(d.end, 1110);
+  assert.equal(d.time_window, "3pm-6:30pm");
+  assert.equal(d.prices_published, undefined);
+  assert.deepEqual(
+    d.items.map((i) => i.text),
+    [
+      "$2 OFF small plates and flatbreads",
+      "$2 OFF all cocktails",
+      "$2 OFF all wines by the glass",
+      "$2 OFF draft and bottled beers, seltzers and ciders",
+      "1/2 OFF raw oysters",
+    ],
+  );
+  const joined = d.items.map((i) => i.text).join(" ");
+  assert.doesNotMatch(joined, /craft cocktails|ALL COCKTAILS, WINE|1\/2 PRICED/i);
+});
+
+// The other nine vague rows (or already-held ones) must say so on the card —
+// not look like we forgot the prices.
+test("vague happy-hour rows without prices carry prices_published:false", async () => {
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+
+  const mustFlag = [
+    byId["mamas-on-the-half-shell"].deals.find((d) => d.time_window === "3pm-6pm"),
+    byId["mamas-on-the-half-shell"].deals.find((d) => d.status === "held"),
+    ...byId["hudson-street-stackhouse"].deals,
+    byId["the-dive"].deals.find((d) => d.time_window === "4pm-6pm"),
+    byId.smaltimore.deals.find((d) => d.time_window === "all night"),
+    byId.smaltimore.deals.find((d) => d.time_window === "10am-1pm"),
+    byId["mahaffeys-pub"].deals.find((d) => d.items.some((i) => i.text === "Sliders")),
+  ];
+  assert.equal(mustFlag.length, 9);
+  for (const deal of mustFlag) {
+    assert.ok(deal, "expected a vague happy-hour row");
+    assert.equal(deal.prices_published, false);
+  }
+});
+
 // --- no-deal collapsed group ----------------------------------------------
 
 test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + reason only", async () => {

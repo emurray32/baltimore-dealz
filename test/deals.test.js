@@ -1283,10 +1283,10 @@ test("an untagged deal renders no food-category chip", () => {
   assert.doesNotMatch(html, /class="chip">Burger<\/span>/);
 });
 
-test("seed food_categories match Deal Scout §8f/§8g: 77 tagged, two multi-rows only", async () => {
+test("seed food_categories match Deal Scout §8f/§8g: 78 tagged, two multi-rows only", async () => {
   const venues = await loadVenues();
   const deals = venues.flatMap((v) => v.deals.map((d) => ({ venue: v, deal: d })));
-  assert.equal(deals.length, 77, "expected 77 deal rows on the board");
+  assert.equal(deals.length, 78, "expected 78 deal rows on the board");
 
   // Every seed row carries the field (optional in schema; filled in seed).
   for (const { venue, deal } of deals) {
@@ -1376,15 +1376,39 @@ test("Fed Hill happy hours ship priced rows without inventing start times where 
   const allday = nobles.deals.find((d) => d.time_window === "all day");
   assert.notEqual(allday.happy_hour, true);
 
+  // Liv's: split Mon–Fri (food+drinks) vs Sat–Sun (drinks only) — venue asterisk.
   const livs = venues.find((v) => v.id === "livs-tavern");
-  const livsHh = livs.deals.find((d) => d.happy_hour === true);
-  assert.equal(livsHh.start, 900);
-  assert.equal(livsHh.end, 1080);
-  assert.match(livsHh.time_window, /game days/i);
+  const livsWeekday = livs.deals.find(
+    (d) => d.happy_hour === true && d.days.includes("mon") && !d.days.includes("sat"),
+  );
+  const livsWeekend = livs.deals.find(
+    (d) => d.happy_hour === true && d.days.includes("sat") && d.days.includes("sun"),
+  );
+  assert.equal(livsWeekday.start, 900);
+  assert.equal(livsWeekday.end, 1080);
+  assert.match(livsWeekday.time_window, /game days/i);
+  assert.ok(livsWeekday.items.some((i) => /HH Food/i.test(i.text)));
+  assert.ok(livsWeekday.items.some((i) => /Cocktails/i.test(i.text)));
+  assert.equal(livsWeekend.start, 900);
+  assert.equal(livsWeekend.end, 1080);
+  assert.match(livsWeekend.time_window, /drinks only/i);
+  assert.ok(!livsWeekend.items.some((i) => /Food|Cocktails/i.test(i.text)));
+  assert.ok(livsWeekend.items.every((i) => /^\$\d/.test(i.text)));
 
   const delia = venues.find((v) => v.id === "delia-foleys");
   const monThu = delia.deals.find((d) => d.days.includes("mon") && d.happy_hour);
   const fri = delia.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
   assert.equal(monThu.end, 1140);
   assert.equal(fri.end, 1080);
+});
+
+test("MaGerk's records Weekdays→Mon–Fri inference and cites 32 OZ on image+PDF", async () => {
+  const m = (await loadVenues()).find((v) => v.id === "magerks-federal-hill");
+  assert.match(m.ops_notes ?? "", /ordinary reading/i);
+  assert.match(m.ops_notes ?? "", /Weekdays/);
+  assert.match(m.ops_notes ?? "", /32 OZ/i);
+  assert.match(m.ops_notes ?? "", /Weekly Specials PDF/i);
+  const hh = m.deals.find((d) => d.happy_hour === true);
+  assert.equal(hh.items[0].text, "$7 32 OZ Drafts");
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
 });

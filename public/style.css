@@ -1,117 +1,181 @@
-/* Baltimore Dealz — "Tonight in <view>" board.
-   Visual pass (Designer). Styles the server-rendered markup from src/page.js.
+/* Baltimore Dealz — 80s/disco theme.
    Class contract emitted by page.js: .card, .meta, .window, .quiet, .quiet-list
-   plus bare tags (h1/h2/h3, details/summary, article, a) and the opt-in
-   #nearest-btn / #tonight-board hooks the nearest-first script reads.
-   Every foreground/background pair below is contrast-checked light + dark. */
+   plus bare tags and the #nearest-btn / #tonight-board hooks. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Caveat:wght@700&display=swap');
 
 :root {
   color-scheme: light dark;
-  --paper: #F7F5F1;
-  --surface: #FFFFFF;
-  --ink: #14181B;
-  --muted: #59636E;
-  --hair: #E2DED7;
-  --chip-bg: #FFE7B0;        /* ink on this = 13.4:1 */
-  --chip-ink: #14181B;
-  --note-bg: #FBEEDD;
-  --note-ink: #8A4B00;
-  --focus: #1D4ED8;
-  --radius: 14px;
-  --maxw: 42rem;
+
+  /* palette — warm cream paper, poster-faithful accent + highlight */
+  --paper:     #e8e4db;
+  --surface:   #fffdf5;
+  --ink:       #0a0a0a;
+  --muted:     #666;
+  --hair:      #bab6ae;
+  --accent:    #ff4a4a;
+  --highlight: #ffff00;
+
+  /* chips */
+  --chip-bg:   #ffff00;
+  --chip-ink:  #0a0a0a;
+
+  /* notes */
+  --note-bg:   #fff0a0;
+  --note-ink:  #7a4400;
+
+  --focus:  #ff4a4a;
+  --radius: 2px;
+  --maxw:   42rem;
+
+  /* offset shadow — uses ink so it flips automatically in dark mode */
+  --shadow: 4px 4px 0 var(--ink);
 }
 
 * { box-sizing: border-box; }
 
+/* ---- body — warm cream paper with subtle grid ---- */
 body {
   margin: 0 auto;
-  padding: 1.25rem 1.25rem 3.5rem;
+  padding: 1.5rem 1.25rem 3.5rem;
   max-width: var(--maxw);
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(0,0,0,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.055) 1px, transparent 1px);
+  background-size: 32px 32px;
   color: var(--ink);
-  font: 400 17px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font: 400 14px/1.6 'Space Mono', 'Courier New', monospace;
   -webkit-text-size-adjust: 100%;
 }
 
 /* ---- header ---- */
-header { padding: .5rem 0 .25rem; }
+header { padding: .5rem 0 1rem; }
 
+/* "Tonight in Canton" — black strip with accent border, Bebas Neue */
 h1 {
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  font-weight: 800;
-  margin: 0 0 .35rem;
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .04em;
+  margin: 0 0 .15rem;
+  display: inline-block;
+  background: var(--ink);
+  color: var(--surface);
+  padding: .08em .35em .08em .2em;
+  border-left: 6px solid var(--accent);
 }
 
-h2 {
-  font-size: .82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+/* "Wednesday · Baltimore time" — handwritten feel */
+header > p.meta {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--muted);
+  margin: .5rem 0 .6rem;
+  border: none;
+  padding: 0;
+}
+
+/* section labels — "ON TONIGHT", "BROWSE THE WEEK" */
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--accent);
   margin: 2rem 0 .75rem;
 }
 
+/* venue name */
 h3 {
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  margin: 0 0 .5rem;
-  line-height: 1.25;
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin: 0 0 .3rem;
+  line-height: 1.1;
 }
 
 a { color: inherit; }
 
-/* View switcher (Canton / Brewers Hill ...) */
-nav.meta { margin-top: .75rem; }
+/* ---- view switcher ---- */
+nav.meta {
+  margin-top: .75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+}
 nav.meta a {
   text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
   font-weight: 700;
-  padding: .3rem .8rem;
-  border: 1.5px solid var(--hair);
-  border-radius: 999px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
+}
+nav.meta a:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
 }
 nav.meta strong {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
   font-weight: 700;
-  padding: .3rem .8rem;
-  border-radius: 999px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
   background: var(--ink);
-  color: var(--paper);
+  color: var(--surface);
 }
-nav.meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 
 /* ---- deal card ---- */
 .card {
   background: var(--surface);
-  border: 1px solid var(--hair);
+  border: 2px solid var(--ink);
   border-radius: var(--radius);
-  padding: 1.05rem 1.05rem .85rem;
-  margin: 0 0 .85rem;
+  box-shadow: var(--shadow);
+  padding: 1rem 1rem .85rem;
+  margin: 0 0 1.25rem;
+  transition: box-shadow .08s, transform .08s;
 }
-
-/* venue name + time-window chip on one line */
+.card:hover {
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: translate(2px, 2px);
+}
 .card h3 { display: block; }
 
-/* the time window — the one scannable signal on every card */
+/* time-window chip — yellow, bordered, mono */
 .window {
   display: inline-block;
   vertical-align: middle;
-  font-size: .8rem;
-  font-weight: 800;
-  letter-spacing: .02em;
-  padding: .2rem .55rem;
-  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: .12rem .45rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
   background: var(--chip-bg);
   color: var(--chip-ink);
   white-space: nowrap;
-  margin-left: .4rem;
-  transform: translateY(-1px);
+  margin-left: .5rem;
+  transform: translateY(-2px);
 }
 
-/* Happy Hour + per-deal verified date chips (optional deal fields) */
+/* deal-level chips (Happy Hour, food category, verified date) */
 .chips {
   margin: 0 0 .45rem;
   display: flex;
@@ -120,12 +184,14 @@ nav.meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 }
 .chip {
   display: inline-block;
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .04em;
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  padding: .15rem .5rem;
-  border-radius: 999px;
+  padding: .1rem .42rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
   background: var(--chip-bg);
   color: var(--chip-ink);
   white-space: nowrap;
@@ -135,57 +201,64 @@ nav.meta { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
   color: var(--note-ink);
 }
 
-/* deal items — price-forward, no default disc bullets */
+/* deal items */
 .card ul {
   list-style: none;
-  margin: .25rem 0 0;
+  margin: .3rem 0 0;
   padding: 0;
 }
 .card ul li {
-  padding: .55rem 0;
-  border-top: 1px solid var(--hair);
-  font-weight: 550;
-  font-size: 1rem;
+  padding: .5rem 0;
+  border-top: 1px dashed var(--hair);
+  font-size: .88rem;
+  font-weight: 400;
 }
-.card ul li:first-child { border-top: 0; padding-top: .15rem; }
+.card ul li:first-child { border-top: 0; padding-top: .1rem; }
 
-/* meta lines: address, phone, source, last verified */
+/* meta lines: neighborhood, address, phone, source, last verified */
 .meta {
-  font-size: .82rem;
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
   color: var(--muted);
   margin: .5rem 0 0;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 .card > .meta {
-  margin-top: .7rem;
-  padding-top: .6rem;
-  border-top: 1px solid var(--hair);
+  margin-top: .65rem;
+  padding-top: .55rem;
+  border-top: 1px dashed var(--hair);
 }
 .meta a { text-decoration: underline; text-underline-offset: 2px; }
 .meta strong { color: var(--ink); }
 
-/* "Prices not published by the venue." — a distinct note, not body copy */
 .card p.meta:only-of-type { border-top: 0; }
 
-/* ---- "Good to know" notes ---- */
+/* "Good to know" notes */
 section > p.meta strong { color: var(--ink); }
 
 /* ---- day accordions (Browse the week) ---- */
 details { margin-bottom: .5rem; }
 summary {
   cursor: pointer;
-  padding: .55rem .2rem;
+  padding: .6rem .4rem;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
   list-style: none;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: .6rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  transition: border-color .1s;
 }
 summary::-webkit-details-marker { display: none; }
 summary::before {
   content: "";
-  width: .55rem; height: .55rem;
+  width: .48rem;
+  height: .48rem;
   border-right: 2px solid var(--muted);
   border-bottom: 2px solid var(--muted);
   transform: rotate(-45deg);
@@ -193,55 +266,63 @@ summary::before {
   flex: none;
 }
 details[open] > summary::before { transform: rotate(45deg); }
-summary:hover { color: var(--muted); }
+summary:hover { border-color: var(--hair); }
 
-/* ---- the honest group: "N more spots, no deals we can show" ---- */
+/* ---- "no deals we can show" group ---- */
 .quiet { margin-top: 1.5rem; }
 .quiet details {
-  border: 1px dashed var(--hair);
+  border: 2px dashed var(--hair);
   border-radius: var(--radius);
   padding: .4rem 1rem .9rem;
 }
-.quiet summary { font-size: 1.05rem; font-weight: 800; }
+.quiet summary { font-size: .78rem; font-weight: 700; }
 .quiet-list { list-style: none; padding: 0; margin: .5rem 0 0; }
-.quiet-list li { padding: .6rem 0; border-top: 1px solid var(--hair); }
+.quiet-list li { padding: .6rem 0; border-top: 1px dashed var(--hair); }
 .quiet-list li:first-child { border-top: 0; }
 .quiet-list .meta { margin-top: .15rem; }
 
-/* ---- "Closest to me" (opt-in; wired by the nearest-first script) ---- */
+/* ---- "Closest to me" button ---- */
 .nearest-row { margin: 0 0 1rem; }
 #nearest-btn {
-  font: inherit;
+  font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: .95rem;
+  font-size: .7rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
   background: var(--surface);
   color: var(--ink);
-  border: 1.5px solid var(--hair);
-  border-radius: 999px;
-  padding: .55rem 1.1rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: .5rem 1.1rem;
   cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
 }
-#nearest-btn:hover:not([disabled]) { border-color: var(--muted); }
-#nearest-btn[disabled] { color: var(--muted); cursor: default; }
+#nearest-btn:hover:not([disabled]) {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+#nearest-btn[disabled] { color: var(--muted); cursor: default; box-shadow: none; transform: none; }
 
-/* distance chip the nearest-first script appends to a card's <h3> */
+/* distance chip appended by nearest-first script */
 .distance {
   display: inline-block;
   vertical-align: middle;
-  font-size: .8rem;
-  font-weight: 800;
-  padding: .2rem .55rem;
-  border-radius: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .12rem .45rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
   background: var(--ink);
-  color: var(--paper);
+  color: var(--surface);
   white-space: nowrap;
   margin-left: .4rem;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* ---- map page ----
-   The map is full-bleed against the paper; the header keeps the board's
-   measure so the two pages read as one site. */
+/* ---- map page ---- */
 body.map-page {
   max-width: none;
   padding-left: 0;
@@ -254,45 +335,37 @@ body.map-page {
 #map {
   height: min(70vh, 34rem);
   margin: 1rem 0 .5rem;
-  border: 1px solid var(--hair);
+  border: 2px solid var(--ink);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   overflow: hidden;
   background: var(--surface);
-  z-index: 0; /* keep tiles under the focus ring */
+  z-index: 0;
 }
-
 .map-credit { margin-bottom: 2rem; }
 
-/* Legend — the pin shapes mean something, so say it once under the map. The
-   swatches echo .bd-pin-dot exactly: filled = showable, hollow ring = quiet. */
+/* map legend */
 .map-legend { margin: .35rem 0 0; }
 .lg {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 10px; height: 10px;
   border-radius: 50%;
   vertical-align: -1px;
   margin-right: .3rem;
 }
-.lg-deal { background: var(--ink); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--hair); }
+.lg-deal  { background: var(--ink); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--hair); }
 .lg-quiet { background: var(--surface); border: 2px solid var(--muted); }
 
-/* Custom pin — a dot with a ring, not the stock teardrop. Filled = has a
-   showable deal; hollow ring = tracked but nothing we can show. Shape, not
-   color alone, carries the difference. */
-.bd-pin {
-  background: none;
-  border: none;
-}
+/* map pins */
+.bd-pin { background: none; border: none; }
 .bd-pin-dot {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 18px; height: 18px;
   margin: 4px;
   border-radius: 50%;
   background: var(--ink);
   border: 3px solid var(--surface);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+  box-shadow: 0 1px 4px rgba(0,0,0,.35);
 }
 .bd-pin-quiet .bd-pin-dot {
   background: var(--surface);
@@ -300,28 +373,24 @@ body.map-page {
   box-shadow: none;
 }
 
-/* Popup — the mockup card: name, address, the deal with prices, then
-   phone · source · last verified. Leaflet supplies the bubble chrome; we own
-   what is inside it. */
+/* map popup */
 .leaflet-popup-content-wrapper {
   background: var(--surface);
   color: var(--ink);
   border-radius: var(--radius);
-  border: 1px solid var(--hair);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
 }
 .leaflet-popup-tip {
   background: var(--surface);
-  border: 1px solid var(--hair);
+  border: 2px solid var(--ink);
 }
 .leaflet-popup-content {
   font: inherit;
-  font-size: .95rem;
-  line-height: 1.4;
+  font-size: .88rem;
+  line-height: 1.45;
   margin: .9rem 1rem;
 }
-/* Header and footer stay put; the deal list scrolls between them, so the
-   verified date can never be pushed out of view by a deep list. */
 .pop { display: flex; flex-direction: column; max-height: 20rem; }
 .pop-scroll {
   overflow-y: auto;
@@ -332,42 +401,39 @@ body.map-page {
 .pop-scroll::-webkit-scrollbar { width: 6px; }
 .pop-scroll::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
 .pop-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: -.01em;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: .04em;
   margin: 0 0 .15rem;
 }
 .pop-addr {
   margin: 0 0 .55rem;
-  font-size: .82rem;
+  font-size: .68rem;
   color: var(--muted);
 }
 .pop-deal { margin: .5rem 0; }
 .pop-deal .window { margin-left: 0; }
-.pop-deal ul {
-  list-style: none;
-  margin: .4rem 0 0;
-  padding: 0;
-}
+.pop-deal ul { list-style: none; margin: .4rem 0 0; padding: 0; }
 .pop-deal ul li {
   padding: .35rem 0;
-  border-top: 1px solid var(--hair);
-  font-weight: 550;
+  border-top: 1px dashed var(--hair);
+  font-size: .85rem;
 }
 .pop-deal ul li:first-child { border-top: 0; padding-top: 0; }
 .pop-noprice {
   margin: .4rem 0 0;
-  font-size: .82rem;
+  font-size: .68rem;
   color: var(--note-ink);
   font-style: italic;
 }
 .pop-meta {
   margin: 0;
   padding-top: .5rem;
-  border-top: 1px solid var(--hair);
-  font-size: .8rem;
+  border-top: 1px dashed var(--hair);
+  font-size: .66rem;
   color: var(--muted);
-  flex: none; /* never flex away — this line is the whole point of the footer */
+  flex: none;
 }
 .pop-meta a { text-decoration: underline; text-underline-offset: 2px; }
 .leaflet-container a.leaflet-popup-close-button {
@@ -376,9 +442,10 @@ body.map-page {
   padding: 6px 8px 0 0;
 }
 
-/* On a phone the map takes nearly the whole screen between header and credit. */
+/* ---- responsive ---- */
 @media (max-width: 40rem) {
-  #map { height: 62vh; border-radius: 10px; }
+  h1 { font-size: 2.8rem; }
+  #map { height: 62vh; }
   .map-page header, .map-page main { padding: 0 .9rem; }
 }
 
@@ -389,30 +456,37 @@ body.map-page {
   border-radius: 6px;
 }
 
-/* ---- dark ---- */
+/* ---- dark — deep black with the same 80s accents ---- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #0F1214;
-    --surface: #191D21;
-    --ink: #F2F4F6;
-    --muted: #A6B0BA;
-    --hair: #2E353B;
-    --chip-bg: #4A3714;
-    --chip-ink: #FFE7B0;
-    --note-bg: #3A2A12;
-    --note-ink: #F0B15E;
-    --focus: #8AB4FF;
+    --paper:   #0e0c0a;
+    --surface: #1a1714;
+    --ink:     #f0ebe2;
+    --muted:   #948c82;
+    --hair:    #38332e;
+    --accent:  #ff4a4a;
+    --highlight: #ffff00;
+    --chip-bg:  #ffff00;
+    --chip-ink: #0a0a0a;
+    --note-bg:  #3a2e00;
+    --note-ink: #f0c040;
+    --focus:    #ff4a4a;
   }
-  .distance { background: #F2F4F6; color: #14181B; }
-  /* Map tiles are drawn for light mode; dim + cool them so the dark page
-     does not blast a white rectangle, and invert the popup chrome to match. */
+
+  /* grid lines barely visible on black */
+  body {
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  }
+
+  /* dim the map tiles so they don't blast a white rectangle */
   #map .leaflet-tile-pane { filter: brightness(.82) saturate(.75) contrast(.95); }
-  .leaflet-popup-content-wrapper { box-shadow: 0 6px 24px rgba(0, 0, 0, .5); }
 }
 
 /* ---- print ---- */
 @media print {
-  body { background: #fff; }
+  body { background: #fff; background-image: none; }
   nav.meta, .nearest-row, details > summary::before { display: none; }
   details { display: block; }
   details > * { display: block; }

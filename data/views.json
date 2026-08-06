@@ -23,6 +23,23 @@
       "neighborhoods": [
         "Fells Point"
       ]
+    },
+    {
+      "slug": "inner-harbor",
+      "label": "Inner Harbor",
+      "neighborhoods": [
+        "Inner Harbor",
+        "Harbor East",
+        "Downtown"
+      ]
+    },
+    {
+      "slug": "locust-point",
+      "label": "Locust Point",
+      "neighborhoods": [
+        "Locust Point",
+        "Riverside"
+      ]
     }
   ]
 }

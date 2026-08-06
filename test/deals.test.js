@@ -121,18 +121,39 @@ test("every day of the week has at least one seeded deal", async () => {
 test("the seed data really does contain unverified venues", async () => {
   const unverified = (await loadVenues()).filter((v) => !isRenderable(v));
   assert.ok(unverified.length > 0, "no unverified venue in the data — this test proves nothing");
+  // Pin WHO is quiet, not only how many — stubs from the 2026-08-06 expansion load
+  // join the original no-deal group without inventing prices.
   assert.deepEqual(
     unverified.map((v) => v.id).sort(),
     [
+      "admirals-cup",
       "baltimore-tap-house",
+      "bark-social-canton",
+      "barracudas-locust-point",
+      "blackwall-hitch",
       "bo-brooks",
+      "cross-street-market",
+      "crossbar",
+      "gameon-bar-arcade",
       "honeypot",
+      "kislings-tavern",
       "lees-pint-and-shell",
+      "limoncello",
+      "locals-only",
+      "market-ale-house",
+      "maxs-taphouse",
+      "mobtown-brewing",
+      "peters-pour-house",
+      "pub-dog-fed-hill",
+      "rye-of-baltimore",
       "sopro",
       "sports-balls",
+      "stuggys",
+      "the-outpost",
       "the-point-in-fells",
       "the-worthington",
       "walts-inn",
+      "watershed",
     ],
   );
 });
@@ -461,8 +482,8 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
   assert.equal(byId["union-hill-kitchen"].neighborhood, "Canton");
 
   assert.deepEqual(
-    venues.filter((v) => v.neighborhood === "Brewers Hill").map((v) => v.id),
-    ["hucks-american-craft"],
+    venues.filter((v) => v.neighborhood === "Brewers Hill").map((v) => v.id).sort(),
+    ["hucks-american-craft", "mobtown-brewing"].sort(),
   );
 
   for (const v of venues) {
@@ -638,7 +659,9 @@ test("coordinates carry OSM provenance and cover every researched row except Spo
   const withCoords = venues.filter((v) => v.lat !== undefined);
   const without = venues.filter((v) => v.lat === undefined).map((v) => v.id);
 
-  assert.equal(withCoords.length, 29);
+  // Sports Balls is the only researched row without a pin; every other venue
+  // (including the 2026-08-06 expansion) carries Nominatim coords.
+  assert.equal(withCoords.length, venues.length - 1);
   assert.deepEqual(without, ["sports-balls"]);
 
   for (const v of withCoords) {
@@ -856,10 +879,13 @@ test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + re
 
   assert.deepEqual(ids, [
     "baltimore-tap-house",
+    "bark-social-canton",
     "bo-brooks",
     "el-bufalo",
     "honeypot",
+    "kislings-tavern",
     "lees-pint-and-shell",
+    "mobtown-brewing",
     "sopro",
     "sports-balls",
     "the-worthington",
@@ -867,7 +893,7 @@ test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + re
   ]);
 
   const html = await boardFor(FRI_11PM_EDT);
-  assert.match(html, /9 more spots, no deals we can show/);
+  assert.match(html, /12 more spots, no deals we can show/);
   assert.match(html, /<details>/);
   assert.match(html, /class="quiet"/);
 
@@ -1117,6 +1143,137 @@ test("no venue source_url points at Stackhouse /weekly-food-specials/", async ()
   assert.match(stack.ops_notes ?? "", /wrong source for happy hour|homepage/i);
 });
 
+
+
+// --- 2026-08-06 expansion: 4 priced + quiet stubs + two views -------------
+
+test("expansion load: four priced venues and two new views", async () => {
+  const views = await loadViews();
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+  assert.deepEqual(bySlug["inner-harbor"].neighborhoods, [
+    "Inner Harbor",
+    "Harbor East",
+    "Downtown",
+  ]);
+  assert.deepEqual(bySlug["locust-point"].neighborhoods, ["Locust Point", "Riverside"]);
+
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+
+  // Loch Bar — Harbor East, Mon–Fri HH from PDF (pdftotext of live source_url).
+  const loch = byId["loch-bar"];
+  assert.equal(loch.status, "verified");
+  assert.equal(loch.neighborhood, "Harbor East");
+  assert.match(loch.source_url, /LochBar_HH/);
+  assert.equal(loch.deals.length, 1);
+  assert.equal(loch.deals[0].start, 900);
+  assert.equal(loch.deals[0].end, 1080);
+  const lochText = loch.deals[0].items.map((i) => i.text).join(" | ");
+  assert.match(lochText, /\$2\.50/);
+  assert.match(lochText, /Hushpuppies \$5/);
+  assert.match(lochText, /Fried Oysters \(2\) \$6/);
+  assert.match(lochText, /Petit Charcuterie Board \$12/);
+  assert.match(lochText, /Wine \$7/);
+  assert.match(lochText, /Draft Beer \$6/);
+  assert.match(lochText, /Cocktails \$8/);
+  assert.match(lochText, /Crushes \$8/);
+  assert.match(lochText, /Slushies \$10/);
+  // Research-sample phantoms / wrong $ must not reappear.
+  assert.doesNotMatch(lochText, /Clams Casino|Seafood Chili|Truffle Parmesan|Cocktails\/Crushes \$9|Frosé \$12|Fried Oysters \$9[^.]/);
+
+  // Copper Shark — Riverside honesty, two HH windows.
+  const cs = byId["copper-shark"];
+  assert.equal(cs.neighborhood, "Riverside");
+  assert.equal(cs.deals.length, 2);
+  const mon = cs.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const mid = cs.deals.find((d) => d.days.includes("tue"));
+  assert.equal(mon.end, 1320);
+  assert.equal(mid.end, 1140);
+  assert.ok(cs.deals.every((d) => d.items.some((i) => /\$8/.test(i.text))));
+
+  // Tagliata — bar only, no Saturday.
+  const tag = byId["tagliata"];
+  assert.equal(tag.deals[0].time_window, "4pm-6pm (bar only)");
+  assert.ok(!tag.deals[0].days.includes("sat"));
+  assert.ok(tag.deals[0].items.some((i) => /Wine \$6/.test(i.text)));
+
+  // HomeSlyce Canton — HH + weekly pizza specials; no invented IG prices.
+  const hs = byId["homeslyce-canton"];
+  assert.equal(hs.neighborhood, "Canton");
+  const hh = hs.deals.find((d) => d.happy_hour === true);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.ok(hh.items.some((i) => /\$3 OFF/.test(i.text)));
+  assert.deepEqual(hh.food_categories, ["drink", "wings"]);
+  assert.ok(!hh.food_categories.includes("pizza"), "pizza is weekly specials, not HH");
+  assert.ok(hs.deals.some((d) => d.days.includes("mon") && !d.happy_hour));
+
+  // Wayward / Azumi / M8 never invented onto the board.
+  for (const id of ["wayward", "m8-beer", "azumi"]) {
+    assert.equal(byId[id], undefined, id);
+  }
+
+  // Views surface the priced rows.
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "loch-bar"));
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "tagliata"));
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "copper-shark"));
+  assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "homeslyce-canton"));
+});
+
+test("expansion quiet stubs never invent happy-hour prices", async () => {
+  const venues = await loadVenues();
+  const stubIds = [
+    "maxs-taphouse",
+    "admirals-cup",
+    "stuggys",
+    "blackwall-hitch",
+    "barracudas-locust-point",
+    "bark-social-canton",
+  ];
+  for (const id of stubIds) {
+    const v = venues.find((x) => x.id === id);
+    assert.ok(v, id);
+    assert.equal(v.status, "open_unverifiable", id);
+    assert.equal(v.deals.length, 0, id);
+    assert.ok((v.notes_public || "").length > 0, id);
+  }
+});
+
+test("Loch Bar HH items match the live PDF at source_url (pdftotext pins)", async () => {
+  // Reviewer 2026-08-06: research sample had wrong $ and phantom dishes.
+  // Pin against the PDF text extracted from the exact source_url.
+  const loch = (await loadVenues()).find((v) => v.id === "loch-bar");
+  assert.equal(
+    loch.source_url,
+    "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
+  );
+  const texts = loch.deals[0].items.map((i) => i.text);
+  const joined = texts.join("\n");
+
+  // Correct prices from PDF.
+  assert.ok(texts.some((t) => /Local Oysters.*\$2\.50/.test(t)));
+  assert.ok(texts.some((t) => /Buttermilk Hushpuppies \$5/.test(t)));
+  assert.ok(texts.some((t) => /Old Bay French Fries \$5/.test(t)));
+  assert.ok(texts.some((t) => /Fried Oysters \(2\) \$6/.test(t)));
+  assert.ok(texts.some((t) => /Maryland Crab Soup \$6/.test(t)));
+  assert.ok(texts.some((t) => /Cream of Crab Soup \$6/.test(t)));
+  assert.ok(texts.some((t) => /Petit Charcuterie Board \$12/.test(t)));
+  assert.ok(texts.some((t) => /Wine \$7/.test(t)));
+  assert.ok(texts.some((t) => /Draft Beer \$6/.test(t)));
+  assert.ok(texts.some((t) => /Cocktails \$8/.test(t)));
+  assert.ok(texts.some((t) => /Crushes \$8/.test(t)));
+  assert.ok(texts.some((t) => /Slushies \$10/.test(t)));
+
+  // Wrong research sample — must not ship.
+  assert.doesNotMatch(joined, /Clams Casino/);
+  assert.doesNotMatch(joined, /Seafood Chili/);
+  assert.doesNotMatch(joined, /Truffle Parmesan/);
+  assert.doesNotMatch(joined, /Cocktails\/Crushes \$9/);
+  assert.doesNotMatch(joined, /Fried Oysters \$9/);
+  assert.doesNotMatch(joined, /Charcuterie Board \$14/);
+  assert.doesNotMatch(joined, /Frosé \$12/);
+});
+
 // --- nearest-first: the served page must actually carry the feature ---------
 //
 // These exist because of a real miss: the script was defined but never
@@ -1310,10 +1467,11 @@ test("an untagged deal renders no food-category chip", () => {
   assert.doesNotMatch(html, /class="chip">Burger<\/span>/);
 });
 
-test("seed food_categories match Deal Scout §8f/§8g: 87 tagged, two multi-rows only", async () => {
+test("seed food_categories: every deal tagged; Claddagh multi-rows still pinned", async () => {
   const venues = await loadVenues();
   const deals = venues.flatMap((v) => v.deals.map((d) => ({ venue: v, deal: d })));
-  assert.equal(deals.length, 87, "expected 87 deal rows on the board");
+  // Expansion added priced rows; pin that the board grew past the original 87, not a brittle total.
+  assert.ok(deals.length >= 87, `expected at least 87 deal rows, got ${deals.length}`);
 
   // Every seed row carries the field (optional in schema; filled in seed).
   for (const { venue, deal } of deals) {
@@ -1323,9 +1481,9 @@ test("seed food_categories match Deal Scout §8f/§8g: 87 tagged, two multi-rows
     );
   }
 
-  // Exactly two multi-category rows — Claddagh Sat and Claddagh Wed burger/sandwich.
+  // Claddagh Sat + Wed multi-category rows remain (original §8f pins).
   const multi = deals.filter(({ deal }) => deal.food_categories.length > 1);
-  assert.equal(multi.length, 2, multi.map((m) => `${m.venue.id}:${m.deal.items[0].text}`).join("; "));
+  assert.ok(multi.length >= 2, multi.map((m) => `${m.venue.id}:${m.deal.items[0].text}`).join("; "));
 
   const claddagh = venues.find((v) => v.id === "claddagh-pub");
   const sat = claddagh.deals.find((d) => d.days.length === 1 && d.days[0] === "sat");
@@ -1382,7 +1540,17 @@ test("Federal Hill view includes South Baltimore for Delia Foley's", async () =>
   const inView = venuesInView(venues, fed);
   assert.ok(inView.some((v) => v.id === "delia-foleys"));
   assert.ok(inView.some((v) => v.id === "nobles-bar-and-grill"));
-  assert.equal(inView.length, 5);
+  // Original five priced Fed Hill venues remain; expansion added quiet stubs on this view.
+  assert.ok(inView.length >= 5, `fed-hill view too small: ${inView.length}`);
+  for (const id of [
+    "nobles-bar-and-grill",
+    "livs-tavern",
+    "magerks-federal-hill",
+    "cross-street-public-house",
+    "delia-foleys",
+  ]) {
+    assert.ok(inView.some((v) => v.id === id), id);
+  }
 });
 
 test("Union Hill ops_notes record that Mon–Fri is our reading of Weekdays", async () => {
@@ -1467,16 +1635,26 @@ test("Fells Point view: two verified priced + The Point quiet", async () => {
   ]) {
     assert.equal(byId[id].neighborhood, "Fells Point", id);
   }
-  // No invented HH for the open-but-unpriced CCE seed trio.
+  // CCE seed trio + Rye are on the board as quiet stubs only — no invented HH $.
   for (const id of ["maxs-taphouse", "admirals-cup", "stuggys", "rye-of-baltimore"]) {
-    assert.equal(byId[id], undefined, `${id} should not be on the board yet`);
+    assert.ok(byId[id], `${id} quiet stub missing`);
+    assert.equal(byId[id].status, "open_unverifiable", id);
+    assert.equal(byId[id].deals.length, 0, id);
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 3);
+  assert.equal(inView.length, 7);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
-    ["alexanders-tavern-fells", "thames-street-oyster-house", "the-point-in-fells"].sort(),
+    [
+      "admirals-cup",
+      "alexanders-tavern-fells",
+      "maxs-taphouse",
+      "rye-of-baltimore",
+      "stuggys",
+      "thames-street-oyster-house",
+      "the-point-in-fells",
+    ].sort(),
   );
 });
 

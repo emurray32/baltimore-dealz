@@ -263,6 +263,20 @@ body.map-page {
 
 .map-credit { margin-bottom: 2rem; }
 
+/* Legend — the pin shapes mean something, so say it once under the map. The
+   swatches echo .bd-pin-dot exactly: filled = showable, hollow ring = quiet. */
+.map-legend { margin: .35rem 0 0; }
+.lg {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  vertical-align: -1px;
+  margin-right: .3rem;
+}
+.lg-deal { background: var(--ink); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--hair); }
+.lg-quiet { background: var(--surface); border: 2px solid var(--muted); }
+
 /* Custom pin — a dot with a ring, not the stock teardrop. Filled = has a
    showable deal; hollow ring = tracked but nothing we can show. Shape, not
    color alone, carries the difference. */

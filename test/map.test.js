@@ -146,3 +146,38 @@ test("venue names with HTML in them are escaped in the popup", () => {
   assert.match(html, /&lt;img/);
   assert.doesNotMatch(html, /<img src=x/);
 });
+
+const hhVenue = {
+  ...baseVenue,
+  deals: [
+    {
+      ...baseVenue.deals[0],
+      happy_hour: true,
+      food_categories: ["wings", "sandwich/cheesesteak"],
+      verified_date: "2026-08-05",
+    },
+  ],
+};
+
+test("happy-hour + food-category + verified-date chips render on the popup", () => {
+  const [entry] = mapPayload([hhVenue]);
+  const html = popupHtml(entry, new Date("2026-08-05T12:00:00Z"));
+  assert.match(html, /<span class="chip">Happy Hour<\/span>/);
+  assert.match(html, /<span class="chip">Wings<\/span>/);
+  assert.match(html, /<span class="chip">Sandwich<\/span>/);
+  assert.match(html, /verified 2026-08-05/);
+  assert.doesNotMatch(html, /stale/);
+});
+
+test("a verified date older than 30 days flags stale on the popup", () => {
+  const [entry] = mapPayload([hhVenue]);
+  const html = popupHtml(entry, new Date("2026-10-01T12:00:00Z"));
+  assert.match(html, /verified 2026-08-05 · stale/);
+  assert.match(html, /chip-stale/);
+});
+
+test("deals without the optional fields render no chips and no gap", () => {
+  const [entry] = mapPayload([baseVenue]);
+  const html = popupHtml(entry);
+  assert.doesNotMatch(html, /class="chips"/);
+});

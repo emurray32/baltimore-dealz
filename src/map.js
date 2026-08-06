@@ -4,7 +4,13 @@
 // Pure string rendering like page.js so the suite can pin it without a browser.
 
 import { escapeHtml } from "./page.js";
-import { hasShowableDeal, isDealRenderable, isRenderable } from "./deals.js";
+import {
+  FOOD_CATEGORY_LABELS,
+  hasShowableDeal,
+  isDealRenderable,
+  isRenderable,
+  isVerifiedDateStale,
+} from "./deals.js";
 
 // The payload the browser script reads. Built server-side from the same
 // loadVenues() read the board uses, so the map re-reads the data fresh on
@@ -20,6 +26,9 @@ export function mapPayload(venues) {
             days: deal.days,
             items: deal.items.map((item) => ({ text: item.text, price: item.price ?? null })),
             source_url: deal.source_url ?? null,
+            happy_hour: deal.happy_hour === true,
+            food_categories: Array.isArray(deal.food_categories) ? deal.food_categories : [],
+            verified_date: deal.verified_date ?? null,
           }))
         : [];
       return {
@@ -53,7 +62,29 @@ export function unmappableNames(venues) {
 // sidewalk, not studied. Structure: header (name + address), a scrollable
 // deals region, and a footer that NEVER scrolls — the verified date and
 // source link stay visible even on the deepest deal list.
-export function popupHtml(entry) {
+// Chips above a deal block — same markup and styles as the board's dealChips:
+// Happy Hour, one per food category, then the per-deal verified date (with the
+// 30-day stale flag). Optional fields; absent means no chip, never a gap.
+function popupChips(deal, now) {
+  const chips = [];
+  if (deal.happy_hour === true) {
+    chips.push('<span class="chip">Happy Hour</span>');
+  }
+  for (const cat of deal.food_categories) {
+    const label = FOOD_CATEGORY_LABELS[cat] ?? cat;
+    chips.push(`<span class="chip">${escapeHtml(label)}</span>`);
+  }
+  if (deal.verified_date) {
+    const stale = isVerifiedDateStale(deal.verified_date, now);
+    const label = stale
+      ? `verified ${escapeHtml(deal.verified_date)} · stale`
+      : `verified ${escapeHtml(deal.verified_date)}`;
+    chips.push(`<span class="chip${stale ? " chip-stale" : ""}">${label}</span>`);
+  }
+  return chips.length ? `<p class="chips">${chips.join(" ")}</p>` : "";
+}
+
+export function popupHtml(entry, now = new Date()) {
   const head = [`<h3 class="pop-name">${escapeHtml(entry.name)}</h3>`];
   if (entry.address) {
     head.push(`<p class="pop-addr">${escapeHtml(entry.address)}</p>`);
@@ -61,7 +92,12 @@ export function popupHtml(entry) {
 
   let body = "";
   if (entry.deals.length > 0) {
-    const dealBlocks = entry.deals
+    // Happy hour leads — that is the question the map exists to answer. Board
+    // order is preserved within each group (stable sort).
+    const ordered = [...entry.deals].sort(
+      (a, b) => Number(b.happy_hour === true) - Number(a.happy_hour === true),
+    );
+    const dealBlocks = ordered
       .map((deal) => {
         const window = deal.time_window
           ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
@@ -73,7 +109,7 @@ export function popupHtml(entry) {
           deal.prices_published === false
             ? '<p class="pop-noprice">Prices not published by the venue.</p>'
             : "";
-        return `<div class="pop-deal">${window}<ul>${items}</ul>${noPrices}</div>`;
+        return `<div class="pop-deal">${popupChips(deal, now)}${window}<ul>${items}</ul>${noPrices}</div>`;
       })
       .join("");
     body = `<div class="pop-scroll">${dealBlocks}</div>`;
@@ -142,10 +178,10 @@ const MAP_SCRIPT = `<script src="/vendor/leaflet.js"></` + `script>
 })();
 </` + `script>`;
 
-export function renderMap(venues, view, views = [view]) {
+export function renderMap(venues, view, views = [view], now = new Date()) {
   const payload = mapPayload(venues);
   const center = mapCenter(payload);
-  const popups = Object.fromEntries(payload.map((entry) => [entry.id, popupHtml(entry)]));
+  const popups = Object.fromEntries(payload.map((entry) => [entry.id, popupHtml(entry, now)]));
   const missing = unmappableNames(venues);
 
   // JSON baked into the page. "</" is escaped so a name like "</script>"
@@ -188,6 +224,7 @@ export function renderMap(venues, view, views = [view]) {
   </header>
   <main>
     <div id="map" role="region" aria-label="Map of tracked venues in ${escapeHtml(view.label)}"></div>
+    <p class="meta map-legend"><span class="lg lg-deal"></span> has deals we can show &nbsp;·&nbsp; <span class="lg lg-quiet"></span> tracked, nothing showable yet</p>
     ${missingNote}
     <p class="meta map-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Free tiles, no account, no key.</p>
   </main>

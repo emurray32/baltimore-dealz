@@ -309,6 +309,8 @@
           "time_window": "all night",
           "happy_hour": true,
           "verified_date": "2026-08-03",
+          "prices_published": false,
+          "proof_quote": "MONDAY — ALL NIGHT HAPPY HOUR",
           "food_categories": [
             "drink"
           ]
@@ -405,6 +407,8 @@
           "start": 600,
           "end": 780,
           "time_window": "10am-1pm",
+          "prices_published": false,
+          "proof_quote": "Bottomless Brunch 10am-1pm",
           "food_categories": [
             "brunch"
           ]
@@ -519,6 +523,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "Happy Hour: 3pm – 6pm / Mon-Fri, 1st floor indoors only",
           "source_url": "https://www.mamasonthehalfshell.com/",
           "food_categories": [
             "drink"
@@ -603,6 +608,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "Monday - Thursday → 3pm - 7pm",
           "food_categories": [
             "drink"
           ]
@@ -622,6 +628,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "Friday → 2pm - 7pm",
           "food_categories": [
             "drink"
           ]
@@ -642,6 +649,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "Saturday / Sunday → 11am - 5pm",
           "food_categories": [
             "drink"
           ]
@@ -816,6 +824,8 @@
           ],
           "start": null,
           "end": null,
+          "prices_published": false,
+          "proof_quote": "Sliders — Industry Night",
           "food_categories": [
             "sliders"
           ]
@@ -1025,6 +1035,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "Weekdays from 3:00pm - 6:30pm. $2 OFF small plates and flatbreads. $2 OFF all cocktails. $2 OFF all wines by the glass. $2 OFF draft and bottled beers, seltzers and ciders. 1/2 OFF raw oysters",
           "food_categories": [
             "small-plate/apps"
           ]
@@ -1117,6 +1128,7 @@
           "happy_hour": true,
           "verified_date": "2026-08-03",
           "prices_published": false,
+          "proof_quote": "HH mon-thurs 4-6pm",
           "food_categories": [
             "drink"
           ]

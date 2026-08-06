@@ -134,6 +134,10 @@ const DEAL_KEYS = new Set([
   // Optional array of controlled food labels (Deal Scout §8f/§8g). Never
   // keyword-guessed — human-tagged. Multi-food rows carry multiple values.
   "food_categories",
+  // Optional verbatim quote from the venue's own page (proof next to the
+  // claim). Rendered as a blockquote on the card so the source link is a
+  // backup, not the whole argument. Exact words only — never paraphrased.
+  "proof_quote",
 ]);
 const ITEM_KEYS = new Set(["text", "price"]);
 
@@ -308,6 +312,9 @@ export function venueShapeErrors(venue) {
     }
     if (deal.source_url !== undefined && (typeof deal.source_url !== "string" || deal.source_url === "")) {
       errors.push(`${label}: deal source_url must be a non-empty string when present`);
+    }
+    if (deal.proof_quote !== undefined && (typeof deal.proof_quote !== "string" || deal.proof_quote === "")) {
+      errors.push(`${label}: proof_quote must be a non-empty string when present`);
     }
     if (deal.status !== undefined && !DEAL_STATUSES.includes(deal.status)) {
       errors.push(

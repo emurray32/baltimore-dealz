@@ -60,6 +60,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
   await cp(join(PUBLIC, "vendor"), join(outDir, "vendor"), { recursive: true });
   await cp(join(PUBLIC, "client-day.js"), join(outDir, "client-day.js"));
   await cp(join(PUBLIC, "client-board.js"), join(outDir, "client-board.js"));
+  await cp(join(PUBLIC, "client-filter.js"), join(outDir, "client-filter.js"));
 
   // / and /map — same redirect targets the live server uses.
   await write(
@@ -84,6 +85,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
       staticClient: true,
       clientDaySrc: "../client-day.js",
       clientBoardSrc: "../client-board.js",
+      clientFilterSrc: "../client-filter.js",
     });
     const boardPath = join(view.slug, "index.html");
     await write(join(outDir, boardPath), boardHtml);

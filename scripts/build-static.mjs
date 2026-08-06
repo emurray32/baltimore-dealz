@@ -18,6 +18,7 @@ import { buildHappyHourIcs } from "../src/calendar.js";
 import { venuesInView } from "../src/deals.js";
 import { renderMap } from "../src/map.js";
 import { renderBoard } from "../src/page.js";
+import { boardViewForVenue, renderVenuePage } from "../src/venue.js";
 import { loadVenues } from "../src/venues.js";
 import { defaultView, loadViews } from "../src/views.js";
 
@@ -92,6 +93,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
       mapHref: "map/",
       calendarHref: "calendar.ics",
       viewHref: (slug) => `../${slug}/`,
+      venueHref: (id) => `../venue/${id}/`,
       staticClient: true,
       clientDaySrc: "../client-day.js",
       clientBoardSrc: "../client-board.js",
@@ -121,6 +123,20 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     const icsPath = join(view.slug, "calendar.ics");
     await write(join(outDir, icsPath), ics);
     written.push(icsPath);
+  }
+
+  // One page per venue at dist/venue/<id>/index.html — neighbourhood-independent.
+  for (const venue of allVenues) {
+    const board = boardViewForVenue(venue, views, fallback);
+    const html = renderVenuePage(venue, views, now, {
+      styleHref: "../../style.css",
+      boardHref: `../../${board.slug}/`,
+      listLabel: `Back to ${board.label}`,
+      mapHref: `../../${board.slug}/map/`,
+    });
+    const venuePath = join("venue", venue.id, "index.html");
+    await write(join(outDir, venuePath), html);
+    written.push(venuePath);
   }
 
   // Root calendar.ics copies the default view so a single stable URL works on

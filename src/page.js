@@ -28,8 +28,10 @@ export function escapeHtml(value) {
 // no phone loses the phone link; it does not take the board down with it.
 // Prefer the deal's own verification URL over the venue homepage — Mama's brunch
 // was verified on Instagram, not the website the card used to link to.
+// Card meta only — neighbourhood + phone/source/verified. Street address lives
+// on the venue page (and still on the quiet group, where it is load-bearing).
 function metaLines(venue, deal = null) {
-  const place = [venue.neighborhood, venue.address].filter(Boolean).map(escapeHtml);
+  const place = venue.neighborhood ? escapeHtml(venue.neighborhood) : "";
 
   const provenance = [];
   if (venue.phone) {
@@ -44,7 +46,7 @@ function metaLines(venue, deal = null) {
     provenance.push(`last verified ${escapeHtml(venue.last_verified)}`);
   }
 
-  return [place.join(" · "), provenance.join(" · ")].filter(Boolean).join("<br>");
+  return [place, provenance.join(" · ")].filter(Boolean).join("<br>");
 }
 
 // Happy Hour + food-category + per-deal verified date chips. Venue last_verified
@@ -73,7 +75,7 @@ function dealChips(deal, now) {
   return chips.length ? `<p class="chips">${chips.join(" ")}</p>` : "";
 }
 
-function dealCard({ venue, deal }, now = new Date()) {
+function dealCard({ venue, deal }, now = new Date(), options = {}) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
@@ -98,9 +100,14 @@ function dealCard({ venue, deal }, now = new Date()) {
     deal.start === null || deal.start === undefined ? "" : String(deal.start);
   const endAttr =
     deal.end === null || deal.end === undefined ? "" : String(deal.end);
+  const venueHref =
+    typeof options.venueHref === "function"
+      ? options.venueHref(venue.id)
+      : `/venue/${venue.id}`;
+  const nameHtml = `<a class="venue-link" href="${escapeHtml(venueHref)}">${escapeHtml(venue.name)}</a>`;
   return `
       <article class="card"${coords} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
-        <h3>${escapeHtml(venue.name)} ${window}</h3>
+        <h3>${nameHtml} ${window}</h3>
         ${dealChips(deal, now)}
         <ul>${items}</ul>
         ${noPrices}
@@ -122,19 +129,25 @@ function notesSection(venues) {
 
 // Designer's collapsed group: name + address + reason, never a deal/hour/price.
 // open_unverifiable rows and fully-held venues (El Bufalo) both land here.
-function noDealSection(venues) {
+// Address stays here — these rows have no deal body; the street is the content.
+function noDealSection(venues, options = {}) {
   const quiet = noDealVenues(venues);
   if (quiet.length === 0) return "";
 
   const n = quiet.length;
   const label = n === 1 ? "1 more spot, no deals we can show" : `${n} more spots, no deals we can show`;
+  const venueHref =
+    typeof options.venueHref === "function"
+      ? options.venueHref
+      : (id) => `/venue/${id}`;
   const rows = quiet
     .map((venue) => {
       const reason = venue.notes_public || "No specials we can verify from an official source.";
       const where = venue.address
         ? `${escapeHtml(venue.address)} — ${escapeHtml(reason)}`
         : escapeHtml(reason);
-      return `<li><strong>${escapeHtml(venue.name)}</strong><br><span class="meta">${where}</span></li>`;
+      const name = `<a class="venue-link" href="${escapeHtml(venueHref(venue.id))}">${escapeHtml(venue.name)}</a>`;
+      return `<li><strong>${name}</strong><br><span class="meta">${where}</span></li>`;
     })
     .join("");
 
@@ -164,12 +177,12 @@ function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
 
 // Cards (or the empty-state line) for one day — same markup renderBoard uses.
 // Exported so the static build can embed one <template> per weekday.
-export function cardsHtmlForDay(venues, dayKey, now = new Date()) {
+export function cardsHtmlForDay(venues, dayKey, now = new Date(), options = {}) {
   const rows = dealsForDay(venues, dayKey);
   if (!rows.length) {
     return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
   }
-  return rows.map((row) => dealCard(row, now)).join("");
+  return rows.map((row) => dealCard(row, now, options)).join("");
 }
 
 // The browser-side half of nearest-first, served inline at the end of
@@ -255,12 +268,18 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 //   clientDaySrc    — script src for client-day.js
 //   clientBoardSrc  — script src for client-board.js
 //   clientSearchSrc — script src for client-search.js
+//   venueHref(id)   — per-venue page link (default "/venue/<id>")
 export function renderBoard(venues, view, views = [view], now = new Date(), options = {}) {
   const todayKey = dayKeyInZone(now);
-  const today = cardsHtmlForDay(venues, todayKey, now);
+  const venueHref =
+    typeof options.venueHref === "function"
+      ? options.venueHref
+      : (id) => `/venue/${id}`;
+  const cardOpts = { venueHref };
+  const today = cardsHtmlForDay(venues, todayKey, now, cardOpts);
   const staticClient = options.staticClient === true;
 
-  const card = (row) => dealCard(row, now);
+  const card = (row) => dealCard(row, now, cardOpts);
 
   // Today stays collapsed here — it is already spelled out above.
   // data-day is static-only: the client retargets "(tonight)" without parsing
@@ -293,7 +312,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   if (staticClient) {
     dayTemplates = WEEK.map(
       (day) =>
-        `<template id="bd-day-${day.key}">${cardsHtmlForDay(venues, day.key, now)}</template>`,
+        `<template id="bd-day-${day.key}">${cardsHtmlForDay(venues, day.key, now, cardOpts)}</template>`,
     ).join("\n");
   }
   const clientBits = `
@@ -329,7 +348,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
       <h2>Browse the week</h2>
       ${week}
     </section>
-    ${noDealSection(venues)}
+    ${noDealSection(venues, cardOpts)}
   </main>
   ${NEAREST_FIRST_SCRIPT}
   ${clientBits}

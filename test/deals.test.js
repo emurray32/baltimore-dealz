@@ -213,9 +213,15 @@ test("the seed data really does contain held deal rows", async () => {
 // legitimately rendered for another ("$7 Margaritas" is held at Good Vibes and
 // a real Tuesday deal at Smaltimore), so a global substring check false-fails.
 function cardsFor(html, venueName) {
+  // Name may be plain in <h3> or wrapped in <a class="venue-link">…</a>.
+  const escaped = escapeHtml(venueName);
   return html
     .split("<article")
-    .filter((block) => block.includes(`<h3>${escapeHtml(venueName)}`));
+    .filter(
+      (block) =>
+        block.includes(`<h3>${escaped}`) ||
+        block.includes(`>${escaped}</a>`),
+    );
 }
 
 test("a held deal row never appears in the rendered board, any day", async () => {

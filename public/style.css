@@ -303,6 +303,36 @@ summary:hover { border-color: var(--hair); }
 /* ---- "Closest to me" button ---- */
 .nearest-row { margin: 0 0 1rem; }
 
+/* venue name links on cards / quiet group */
+a.venue-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+a.venue-link:hover {
+  color: var(--chip-ink);
+}
+
+/* venue detail page */
+.venue-day { margin: 0 0 1.5rem; }
+.venue-day h2 {
+  font-size: 1rem;
+  margin: 0 0 .65rem;
+}
+.venue-empty { margin: 1rem 0; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* board search — injected by client-search.js only when JS runs */
 .search-row {
   margin: 0 0 1.1rem;

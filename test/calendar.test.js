@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 
 import {
   buildHappyHourIcs,
+  dealSlot,
   happyHourRows,
   icsEscape,
   icsFold,
@@ -71,7 +72,7 @@ test("icsFold measures octets — em dash must not produce a 77-octet line", () 
   }
 });
 
-test("stableUid is identity-only — time corrections keep the same UID", () => {
+test("stableUid keeps end-time corrections on the same UID (slot is start)", () => {
   const venue = { id: "union-hill-kitchen", name: "Union Hill Kitchen" };
   const base = {
     days: ["fri", "mon", "thu", "tue", "wed"],
@@ -83,9 +84,12 @@ test("stableUid is identity-only — time corrections keep the same UID", () => 
   const uidA = stableUid(venue, base);
   const uidB = stableUid(venue, corrected);
   assert.equal(uidA, uidB);
-  assert.equal(uidA, "bd-hh-union-hill-kitchen-frimonthutuewed@baltimore-dealz");
-  // No start/end minutes in the UID string.
-  assert.doesNotMatch(uidA, /1080|1110|900/);
+  // Start slot is in the UID; end minutes are not (so 6→6:30 does not orphan).
+  assert.equal(uidA, "bd-hh-union-hill-kitchen-frimonthutuewed-s900@baltimore-dealz");
+  assert.match(uidA, /s900/);
+  assert.doesNotMatch(uidA, /1080|1110/);
+  assert.equal(dealSlot(base), "s900");
+  assert.equal(dealSlot(corrected), "s900");
 
   // DTEND still reflects the corrected time.
   const linesOld = veventLines(venue, base, { now: NOW });
@@ -94,6 +98,70 @@ test("stableUid is identity-only — time corrections keep the same UID", () => 
   assert.ok(linesNew.some((l) => l === `UID:${uidB}`));
   assert.ok(linesOld.some((l) => /DTEND;TZID=America\/New_York:20260803T180000/.test(l)));
   assert.ok(linesNew.some((l) => /DTEND;TZID=America\/New_York:20260803T183000/.test(l)));
+});
+
+test("two happy hours same venue+days get different UIDs (Claddagh-shaped)", () => {
+  // Pre-fix UID was venue+days only — these two collided and one event was
+  // silently dropped from every subscriber calendar. Slot (start) separates them.
+  const venue = { id: "claddagh-pub", name: "Claddagh Pub" };
+  const early = {
+    days: ["thu"],
+    start: 960,
+    end: 1140,
+    time_window: "4pm-7pm",
+    happy_hour: true,
+    items: [{ text: "Happy Hour (bar only)" }, { text: "Bud Light Bottles $3" }],
+  };
+  const late = {
+    days: ["thu"],
+    start: 1140,
+    end: null,
+    time_window: "7pm-close",
+    happy_hour: true,
+    items: [{ text: "Bud Light Bottles $1" }, { text: "Sour Bombs $6" }],
+  };
+  const uidEarly = stableUid(venue, early);
+  const uidLate = stableUid(venue, late);
+  assert.equal(uidEarly, "bd-hh-claddagh-pub-thu-s960@baltimore-dealz");
+  assert.equal(uidLate, "bd-hh-claddagh-pub-thu-s1140@baltimore-dealz");
+  assert.notEqual(uidEarly, uidLate);
+
+  // Both events appear in the feed — not one overwrite.
+  const ics = buildHappyHourIcs(
+    [{ ...venue, status: "verified", deals: [early, late] }],
+    { now: NOW },
+  );
+  assert.match(ics, /UID:bd-hh-claddagh-pub-thu-s960@baltimore-dealz/);
+  assert.match(ics, /UID:bd-hh-claddagh-pub-thu-s1140@baltimore-dealz/);
+  assert.match(ics, /Bud Light Bottles \$3/);
+  assert.match(ics, /Bud Light Bottles \$1/);
+  assert.match(ics, /Sour Bombs \$6/);
+});
+
+test("Claddagh Fri late slot would not collide if tagged happy_hour", async () => {
+  // Real seed: Fri HH 4–7 (happy_hour) + Fri 9:30pm-close drinks (not HH yet).
+  // One edit (happy_hour:true on the late row) used to mint a colliding UID.
+  const venues = await loadVenues();
+  const claddagh = venues.find((v) => v.id === "claddagh-pub");
+  assert.ok(claddagh);
+  const friHh = claddagh.deals.find(
+    (d) => d.happy_hour === true && d.days.length === 1 && d.days[0] === "fri",
+  );
+  const friLate = claddagh.deals.find(
+    (d) =>
+      d.days.length === 1 &&
+      d.days[0] === "fri" &&
+      d.time_window === "9:30pm-close",
+  );
+  assert.ok(friHh, "expected Fri 4–7 happy hour");
+  assert.ok(friLate, "expected Fri 9:30pm-close drink row");
+  assert.equal(friHh.start, 960);
+  assert.equal(friLate.start, 1290);
+
+  const tagged = { ...friLate, happy_hour: true };
+  assert.notEqual(stableUid(claddagh, friHh), stableUid(claddagh, tagged));
+  assert.equal(dealSlot(friHh), "s960");
+  assert.equal(dealSlot(tagged), "s1290");
 });
 
 test("happyHourRows is happy_hour only — no trivia, no held, no unpriced non-HH", async () => {
@@ -117,9 +185,10 @@ test("happyHourRows is happy_hour only — no trivia, no held, no unpriced non-H
   );
 });
 
-test("happy-hour UID identity keys are unique (venue + day-set)", async () => {
-  // Lead: silent collision if two happy_hour rows share venue + sorted days.
-  // Converts overwrite into a failing suite before any subscriber loses an event.
+test("happy-hour UID identity keys are unique (venue + day-set + slot)", async () => {
+  // Lead: silent collision if two happy_hour rows share venue + sorted days +
+  // slot. Converts overwrite into a failing suite before any subscriber loses
+  // an event. Slot is start minute (or time_window when untimed).
   const venues = await loadVenues();
   const rows = happyHourRows(venues);
   const keys = rows.map(({ venue, deal }) => stableUid(venue, deal));

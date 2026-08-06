@@ -637,7 +637,7 @@ test("coordinates carry OSM provenance and cover every researched row except Spo
   const withCoords = venues.filter((v) => v.lat !== undefined);
   const without = venues.filter((v) => v.lat === undefined).map((v) => v.id);
 
-  assert.equal(withCoords.length, 26);
+  assert.equal(withCoords.length, 29);
   assert.deepEqual(without, ["sports-balls"]);
 
   for (const v of withCoords) {
@@ -1283,10 +1283,10 @@ test("an untagged deal renders no food-category chip", () => {
   assert.doesNotMatch(html, /class="chip">Burger<\/span>/);
 });
 
-test("seed food_categories match Deal Scout §8f/§8g: 78 tagged, two multi-rows only", async () => {
+test("seed food_categories match Deal Scout §8f/§8g: 88 tagged, two multi-rows only", async () => {
   const venues = await loadVenues();
   const deals = venues.flatMap((v) => v.deals.map((d) => ({ venue: v, deal: d })));
-  assert.equal(deals.length, 78, "expected 78 deal rows on the board");
+  assert.equal(deals.length, 88, "expected 88 deal rows on the board");
 
   // Every seed row carries the field (optional in schema; filled in seed).
   for (const { venue, deal } of deals) {
@@ -1411,4 +1411,63 @@ test("MaGerk's records Weekdays→Mon–Fri inference and cites 32 OZ on image+P
   const hh = m.deals.find((d) => d.happy_hour === true);
   assert.equal(hh.items[0].text, "$7 32 OZ Drafts");
   assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+});
+
+// --- Fells Point pass 1 ---------------------------------------------------
+
+test("Fells Point view ships three verified venues only", async () => {
+  const views = await loadViews();
+  const fells = views.find((v) => v.slug === "fells-point");
+  assert.ok(fells, "fells-point view missing");
+  assert.deepEqual(fells.neighborhoods, ["Fells Point"]);
+
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  for (const id of [
+    "alexanders-tavern-fells",
+    "the-point-in-fells",
+    "thames-street-oyster-house",
+  ]) {
+    assert.equal(byId[id].neighborhood, "Fells Point", id);
+    assert.equal(byId[id].status, "verified", id);
+  }
+  // No invented HH for the open-but-unpriced CCE seed trio.
+  for (const id of ["maxs-taphouse", "admirals-cup", "stuggys", "rye-of-baltimore"]) {
+    assert.equal(byId[id], undefined, `${id} should not be on the board yet`);
+  }
+
+  const inView = venuesInView(venues, fells);
+  assert.equal(inView.length, 3);
+  assert.deepEqual(
+    inView.map((v) => v.id).sort(),
+    ["alexanders-tavern-fells", "thames-street-oyster-house", "the-point-in-fells"].sort(),
+  );
+});
+
+test("Fells Point honesty pins: Fri all-day split, flyer window, oysters only priced", async () => {
+  const venues = await loadVenues();
+  const alex = venues.find((v) => v.id === "alexanders-tavern-fells");
+  const weekdayHh = alex.deals.find(
+    (d) => d.happy_hour && d.days.includes("tue") && !d.days.includes("fri"),
+  );
+  const friHh = alex.deals.find((d) => d.happy_hour && d.days.length === 1 && d.days[0] === "fri");
+  assert.equal(weekdayHh.start, 900);
+  assert.equal(weekdayHh.end, 1080);
+  assert.equal(friHh.start, null);
+  assert.equal(friHh.end, 1080);
+  assert.match(friHh.time_window, /all day until 6pm/i);
+
+  const point = venues.find((v) => v.id === "the-point-in-fells");
+  const phh = point.deals.find((d) => d.happy_hour);
+  assert.deepEqual(phh.days, ["mon", "wed", "thu", "fri"]);
+  assert.equal(phh.start, 960);
+  assert.equal(phh.end, 1140);
+  assert.match(point.ops_notes ?? "", /Friday|all day/i);
+
+  const thames = venues.find((v) => v.id === "thames-street-oyster-house");
+  for (const d of thames.deals.filter((x) => x.happy_hour)) {
+    assert.ok(d.items.some((i) => /\$2/.test(i.text) && /oyster/i.test(i.text)));
+    assert.ok(d.items.some((i) => /prices not published/i.test(i.text)));
+    assert.ok(!d.items.some((i) => /\$\d/.test(i.text) && /cocktail|beer|wine/i.test(i.text)));
+  }
 });

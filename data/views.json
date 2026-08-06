@@ -16,6 +16,13 @@
         "Federal Hill",
         "South Baltimore"
       ]
+    },
+    {
+      "slug": "fells-point",
+      "label": "Fells Point",
+      "neighborhoods": [
+        "Fells Point"
+      ]
     }
   ]
 }

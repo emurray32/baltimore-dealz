@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout)",
+  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/FELLS_POINT_DEALS.md as of 2026-08-06 pass 1 (Deal Scout)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -2470,6 +2470,412 @@
       ],
       "lat": 39.272757,
       "lon": -76.613817,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "alexanders-tavern-fells",
+      "name": "Alexander's Tavern (Fells Point)",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "710 S. Broadway, Baltimore, MD 21231",
+      "phone": "(410) 522-0000",
+      "source_url": "https://www.alexanderstavern.com/fellspoint",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Website-text specials page. Happy hour Tue\u2013Thu 3\u20136; Friday is published as all-day HH until 6pm \u2014 shipped as a separate Fri row so we do not invent a 3pm Friday start. Brunch drinks are weekends until 3pm. Hours: Sun\u2013Thu 11\u201310, Fri\u2013Sat 11\u201312.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$1 Off All Bottles and Cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$3 Off Glasses of Wine",
+              "price": "$3 off"
+            },
+            {
+              "text": "$3 Bud Light Drafts ($5 22oz)",
+              "price": "$3"
+            },
+            {
+              "text": "$5 All Other Drafts ($8 22oz)",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Mixed House Drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Deep Eddy Vodka Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Select Flavored Bombs",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Texas Mules",
+              "price": "$7"
+            },
+            {
+              "text": "$9 Prosecco",
+              "price": "$9"
+            },
+            {
+              "text": "$4 Chips with Salsa or Queso",
+              "price": "$4"
+            },
+            {
+              "text": "$4 Boardwalk Fries or Tater Tots",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Cheesy Tots with Ranch",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Brussels Sprouts",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Alexander's Mac n' Cheese",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Soft Pretzels & Queso",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Quesadilla",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Curds with Ranch",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Chicken Tenders and Fries",
+              "price": "$8"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.alexanderstavern.com/fellspoint",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 Off All Bottles and Cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$3 Off Glasses of Wine",
+              "price": "$3 off"
+            },
+            {
+              "text": "$3 Bud Light Drafts ($5 22oz)",
+              "price": "$3"
+            },
+            {
+              "text": "$5 All Other Drafts ($8 22oz)",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Mixed House Drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Deep Eddy Vodka Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Select Flavored Bombs",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Texas Mules",
+              "price": "$7"
+            },
+            {
+              "text": "$9 Prosecco",
+              "price": "$9"
+            },
+            {
+              "text": "$4 Chips with Salsa or Queso",
+              "price": "$4"
+            },
+            {
+              "text": "$4 Boardwalk Fries or Tater Tots",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Cheesy Tots with Ranch",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Brussels Sprouts",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Alexander's Mac n' Cheese",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Soft Pretzels & Queso",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Quesadilla",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Curds with Ranch",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Chicken Tenders and Fries",
+              "price": "$8"
+            }
+          ],
+          "start": null,
+          "end": 1080,
+          "time_window": "all day until 6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.alexanderstavern.com/fellspoint",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$11 Alexander's Cheeseburgers",
+              "price": "$11"
+            },
+            {
+              "text": "$13 Specialty Burgers",
+              "price": "$13"
+            },
+            {
+              "text": "$8 22oz Draft Beers",
+              "price": "$8"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$11 Tater Tot Bowls",
+              "price": "$11"
+            },
+            {
+              "text": "$13 Maryland & Steakhouse Tots",
+              "price": "$13"
+            },
+            {
+              "text": "$7 Crushes All Day",
+              "price": "$7"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$11 Panini",
+              "price": "$11"
+            },
+            {
+              "text": "$13 Chimichurri Paninis",
+              "price": "$13"
+            },
+            {
+              "text": "$5 All Microbrew Cans",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$11 Pizzas",
+              "price": "$11"
+            },
+            {
+              "text": "$13 Prosciutto & Arugula Pizzas",
+              "price": "$13"
+            },
+            {
+              "text": "B.O.G.O. All Wine Glasses",
+              "price": "BOGO"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "food_categories": [
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$6 Brunch Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Big Brunch Drinks",
+              "price": "$8"
+            }
+          ],
+          "start": null,
+          "end": 900,
+          "time_window": "brunch until 3pm",
+          "food_categories": [
+            "brunch"
+          ]
+        }
+      ],
+      "lat": 39.283163,
+      "lon": -76.593746,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "the-point-in-fells",
+      "name": "The Point in Fells",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "open_unverifiable",
+      "address": "1738 Thames St, Baltimore, MD 21231",
+      "phone": "(410) 327-7264",
+      "source_url": "https://www.thepointfells.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "notes_public": "Happy hour prices live only in flyer images we cannot show; page text has no dollar amounts.",
+      "ops_notes": "CoS 2026-08-06 hold: official HH page text has zero $ amounts (hours only). Flyer PNG prices not shipable as readable text. 'Friday all-day happy hour' is Instagram caption alt text for a one-off DJ promo (TGIFF), not a standing weekly schedule. Real domain is thepointfells.com (no 'in') \u2014 thepointinfells.com is cert-invalid. Quiet group until prices appear in page text. Closed Tue per bar hours.",
+      "deal_format": "image",
+      "deals": [],
+      "lat": 39.2821,
+      "lon": -76.591346,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "thames-street-oyster-house",
+      "name": "Thames Street Oyster House",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "status": "verified",
+      "address": "1728 Thames Street, Baltimore, MD 21231",
+      "phone": "(443) 449-7726",
+      "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Website-text HH page. $2 oysters are the only priced claim; bar side is only 'seasonal bar offerings' with no dollars \u2014 do not invent cocktail prices. Page title is bare 'Untitled Document' but venue-hosted.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$2 local, mid-Atlantic, and northeastern oysters",
+              "price": "$2"
+            },
+            {
+              "text": "Seasonal bar offerings (prices not published by the venue)"
+            }
+          ],
+          "start": 990,
+          "end": 1080,
+          "time_window": "4:30pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$2 local, mid-Atlantic, and northeastern oysters",
+              "price": "$2"
+            },
+            {
+              "text": "Seasonal bar offerings (prices not published by the venue)"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.282161,
+      "lon": -76.59161,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
     }
   ]

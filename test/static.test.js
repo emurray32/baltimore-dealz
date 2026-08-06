@@ -10,7 +10,9 @@ import {
   dayKeyInZone,
   dayLabel,
   dealsForDay,
+  dealTiming,
   hasEnded,
+  minutesNowInZone,
   isDealRenderable,
   isRenderable,
   venuesInView,
@@ -72,6 +74,31 @@ test("client hasEnded matches server (null end never ends; published end does)",
   assert.equal(BD.hasEnded(closed, 18 * 60), hasEnded(closed, 18 * 60));
   assert.equal(BD.hasEnded(closed, 17 * 60), false);
   assert.equal(BD.hasEnded(closed, 18 * 60), true);
+});
+
+test("client dealTiming matches server (end:null never finished)", async () => {
+  const BD = await loadClientDay();
+  const timed = { start: 15 * 60, end: 18 * 60 };
+  for (const minute of [14 * 60, 17 * 60 + 30, 18 * 60, 18 * 60 + 30]) {
+    assert.equal(BD.dealTiming(timed, minute), dealTiming(timed, minute));
+  }
+  const open = { start: 900, end: null };
+  for (let m = 0; m < 1440; m += 60) {
+    assert.equal(BD.dealTiming(open, m), dealTiming(open, m));
+    assert.notEqual(BD.dealTiming(open, m), "finished");
+  }
+  const fri11 = new Date("2026-08-08T03:00:00Z");
+  assert.equal(BD.minutesNowInZone(fri11), minutesNowInZone(fri11));
+});
+
+test("deal cards carry data-start and data-end for client grouping", async () => {
+  const venues = await loadVenues();
+  const html = cardsHtmlForDay(venues, "fri", FRI_11PM_EDT);
+  assert.match(html, /data-start="/);
+  assert.match(html, /data-end="/);
+  // A published end appears as minutes; null ends are empty attributes.
+  assert.match(html, /data-end="\d+"/);
+  assert.match(html, /data-end=""/);
 });
 
 test("client dealsForDay matches server for every weekday on real seed data", async () => {
@@ -254,12 +281,14 @@ test("static board HTML never embeds ops_notes or held-only deal item text", asy
         `held-only text leaked escaped: ${text}`,
       );
     }
-    // Live server path without staticClient still has no data-day (additive
-    // hook is gated).
+    // Live server path without staticClient still has no per-day templates
+    // (those are static-only). Client scripts always load so the browser can
+    // group tonight by on-now / starts-later / finished from the real clock.
     const live = renderBoard(venuesInView(venues, view), view, views, FRI_11PM_EDT);
     assert.doesNotMatch(live, /data-day=/);
     assert.doesNotMatch(live, /bd-day-/);
-    assert.doesNotMatch(live, /client-board\.js/);
+    assert.match(live, /client-board\.js/);
+    assert.match(live, /client-day\.js/);
   }
 
   await rm(outDir, { recursive: true, force: true });

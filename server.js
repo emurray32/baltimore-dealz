@@ -8,6 +8,7 @@ import { renderBoard } from "./src/page.js";
 import { loadVenues } from "./src/venues.js";
 import { defaultView, findView, loadViews } from "./src/views.js";
 
+const PUBLIC_DIR = fileURLToPath(new URL("./public/", import.meta.url));
 const STYLE_FILE = fileURLToPath(new URL("./public/style.css", import.meta.url));
 const VENDOR_DIR = fileURLToPath(new URL("./public/vendor/", import.meta.url));
 
@@ -18,6 +19,12 @@ const VENDOR_FILES = new Map([
   ["leaflet.js", "text/javascript; charset=utf-8"],
 ]);
 
+// Browser board scripts (day accuracy + on-now / starts-later / finished).
+const PUBLIC_SCRIPTS = new Map([
+  ["client-day.js", "text/javascript; charset=utf-8"],
+  ["client-board.js", "text/javascript; charset=utf-8"],
+]);
+
 const server = createServer(async (req, res) => {
   try {
     const path = new URL(req.url, "http://localhost").pathname;
@@ -26,6 +33,16 @@ const server = createServer(async (req, res) => {
       res.writeHead(200, { "content-type": "text/css; charset=utf-8" });
       res.end(await readFile(STYLE_FILE, "utf8"));
       return;
+    }
+
+    if (path.startsWith("/client-") && path.endsWith(".js")) {
+      const name = path.slice(1);
+      const type = PUBLIC_SCRIPTS.get(name);
+      if (type) {
+        res.writeHead(200, { "content-type": type });
+        res.end(await readFile(PUBLIC_DIR + name, "utf8"));
+        return;
+      }
     }
 
     if (path.startsWith("/vendor/")) {

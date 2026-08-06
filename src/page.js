@@ -92,8 +92,14 @@ function dealCard({ venue, deal }, now = new Date()) {
     typeof venue.lat === "number" && typeof venue.lon === "number"
       ? ` data-lat="${venue.lat}" data-lon="${venue.lon}"`
       : "";
+  // Start/end minutes for client-side on-now / starts-later / finished grouping.
+  // Empty string means null/untimed — never invent a window on the client.
+  const startAttr =
+    deal.start === null || deal.start === undefined ? "" : String(deal.start);
+  const endAttr =
+    deal.end === null || deal.end === undefined ? "" : String(deal.end);
   return `
-      <article class="card"${coords}>
+      <article class="card"${coords} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
         <h3>${escapeHtml(venue.name)} ${window}</h3>
         ${dealChips(deal, now)}
         <ul>${items}</ul>
@@ -204,17 +210,25 @@ export const NEAREST_FIRST_SCRIPT = `<script>
       function (pos) {
         var lat = pos.coords.latitude;
         var lon = pos.coords.longitude;
-        var cards = Array.prototype.slice.call(board.querySelectorAll("[data-lat]"));
-        cards.forEach(function (card) {
-          var m = meters(lat, lon, parseFloat(card.dataset.lat), parseFloat(card.dataset.lon));
-          var span = document.createElement("span");
-          span.className = "distance";
-          span.textContent = (m / MI).toFixed(1) + " mi";
-          card.querySelector("h3").appendChild(span);
-          card._d = m;
-        });
-        cards.sort(function (a, b) { return a._d - b._d; });
-        cards.forEach(function (card) { board.appendChild(card); });
+        // Sort within each timing group (or the board itself if ungrouped).
+        var hosts = board.querySelectorAll(".timing-cards");
+        if (hosts.length === 0) hosts = [board];
+        for (var h = 0; h < hosts.length; h++) {
+          var host = hosts[h];
+          var cards = Array.prototype.slice.call(host.querySelectorAll(":scope > [data-lat]"));
+          cards.forEach(function (card) {
+            var m = meters(lat, lon, parseFloat(card.dataset.lat), parseFloat(card.dataset.lon));
+            if (!card.querySelector("h3 .distance")) {
+              var span = document.createElement("span");
+              span.className = "distance";
+              span.textContent = (m / MI).toFixed(1) + " mi";
+              card.querySelector("h3").appendChild(span);
+            }
+            card._d = m;
+          });
+          cards.sort(function (a, b) { return a._d - b._d; });
+          cards.forEach(function (card) { host.appendChild(card); });
+        }
         btn.textContent = "Sorted nearest first";
       },
       function () {
@@ -267,23 +281,24 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const calendarHref = options.calendarHref ?? `/${view.slug}/calendar.ics`;
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
-  // Static Pages build: one <template> per weekday so the browser can swap
-  // "On tonight" without re-implementing card markup and without embedding the
+  // Client scripts always load: day accuracy + on-now / starts-later / finished
+  // grouping from the browser clock. Static Pages build also embeds one
+  // <template> per weekday so the browser can swap "On tonight" without the
   // raw venues file (ops_notes / held rows must never ship in the public HTML).
-  let clientBits = "";
+  const daySrc = options.clientDaySrc ?? "/client-day.js";
+  const boardSrc = options.clientBoardSrc ?? "/client-board.js";
+  let dayTemplates = "";
   if (staticClient) {
-    const dayTemplates = WEEK.map(
+    dayTemplates = WEEK.map(
       (day) =>
         `<template id="bd-day-${day.key}">${cardsHtmlForDay(venues, day.key, now)}</template>`,
     ).join("\n");
-    const daySrc = options.clientDaySrc ?? "/client-day.js";
-    const boardSrc = options.clientBoardSrc ?? "/client-board.js";
-    clientBits = `
-  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day. Turn JS on for Baltimore-time accuracy, or use Browse the week.</p></noscript>
+  }
+  const clientBits = `
+  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day (and is not split by time of day). Turn JS on for Baltimore-time accuracy, or use Browse the week.</p></noscript>
   ${dayTemplates}
   <script src="${escapeHtml(daySrc)}"></script>
   <script src="${escapeHtml(boardSrc)}"></script>`;
-  }
 
   return `<!doctype html>
 <html lang="en">

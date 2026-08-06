@@ -140,6 +140,25 @@ nav.meta strong {
   color: var(--surface);
 }
 
+/* ---- tonight timing groups (on now / starts later / finished) ---- */
+.timing-group {
+  margin: 0 0 1.5rem;
+}
+.timing-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 .75rem;
+  padding: 0;
+  color: var(--ink);
+}
+.timing-cards {
+  margin: 0;
+  padding: 0;
+}
+
 /* ---- deal card ---- */
 .card {
   background: var(--surface);

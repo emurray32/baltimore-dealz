@@ -11,7 +11,9 @@ import {
   distanceMeters,
   EARTH_RADIUS_M,
   FOOD_CATEGORIES,
+  dealTiming,
   hasEnded,
+  minutesNowInZone,
   hasShowableDeal,
   isDealRenderable,
   isRenderable,
@@ -496,6 +498,36 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
 });
 
 // --- BD-2c: structured times, prices, notes split -------------------------
+
+
+test("dealTiming: finished vs on now vs starts later; end:null never finished", () => {
+  // Lead pin: deal ending at 18:00 is finished at 18:30 and on now at 17:30.
+  const timed = { start: 15 * 60, end: 18 * 60 }; // 3pm–6pm
+  assert.equal(dealTiming(timed, 17 * 60 + 30), "on_now");
+  assert.equal(dealTiming(timed, 18 * 60), "finished");
+  assert.equal(dealTiming(timed, 18 * 60 + 30), "finished");
+  assert.equal(dealTiming(timed, 14 * 60), "starts_later");
+
+  // end:null can never be finished at any minute of the day.
+  const openEnded = { start: 23 * 60, end: null };
+  for (let m = 0; m < 1440; m += 37) {
+    assert.notEqual(dealTiming(openEnded, m), "finished");
+  }
+  assert.equal(dealTiming(openEnded, 22 * 60), "starts_later");
+  assert.equal(dealTiming(openEnded, 23 * 60 + 1), "on_now");
+
+  // Untimed / all-day — no meaningful window → on now, never invent start.
+  assert.equal(dealTiming({ start: null, end: null }, 12 * 60), "on_now");
+  assert.equal(dealTiming({ start: undefined, end: undefined }, 3 * 60), "on_now");
+});
+
+test("minutesNowInZone reads Baltimore, not a hard-coded offset", () => {
+  // Fri Aug 7 2026 11pm EDT = 23:00 in Baltimore → 1380 minutes.
+  const fri11 = new Date("2026-08-08T03:00:00Z");
+  assert.equal(minutesNowInZone(fri11), 23 * 60);
+  // Same UTC instant is not 23:00 in UTC itself.
+  assert.notEqual(fri11.getUTCHours() * 60 + fri11.getUTCMinutes(), 23 * 60);
+});
 
 test("end:null cannot render as ended, at any minute of the day", async () => {
   const venues = await loadVenues();

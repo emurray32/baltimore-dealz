@@ -581,10 +581,10 @@
       "status": "verified",
       "address": "2626 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 342-0592",
-      "source_url": "https://hudsonstreetstackhouse.com/weekly-food-specials/",
+      "source_url": "https://hudsonstreetstackhouse.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
-      "ops_notes": "/weekly-food-specials/ is live but dated April 21, 2019 \u2014 seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Re-verify before any prices ship (Deal Scout 2026-08-05).",
+      "ops_notes": "Happy hour times come from the homepage (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5) \u2014 not /weekly-food-specials/. That specials page is the wrong source for happy hour (it does not publish the HH windows) and is dated April 21, 2019 \u2014 seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Do not re-point source_url at /weekly-food-specials/. Re-verify before any prices ship (Deal Scout 2026-08-05; Lead 2026-08-06).",
       "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {

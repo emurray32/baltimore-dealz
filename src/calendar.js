@@ -53,17 +53,51 @@ export function icsEscape(value) {
     .replaceAll("\r", "\\n");
 }
 
-/** RFC 5545 line folding: content lines ≤ 75 octets; cont. lines start with space. */
+/**
+ * RFC 5545 §3.1 line folding: content lines ≤ 75 *octets* (not characters).
+ * Continuation lines start with a single space (counts toward the 75).
+ * Walks by UTF-16 code units that form a complete character so multi-byte
+ * UTF-8 sequences (em dash, emoji) are never split across fold boundaries.
+ */
 export function icsFold(line) {
-  // ASCII-only content in this feed, so octet length ≈ string length.
-  if (line.length <= 75) return line;
+  const MAX = 75;
+  if (Buffer.byteLength(line, "utf8") <= MAX) return line;
+
   const parts = [];
-  let rest = line;
-  parts.push(rest.slice(0, 75));
-  rest = rest.slice(75);
-  while (rest.length > 0) {
-    parts.push(" " + rest.slice(0, 74));
-    rest = rest.slice(74);
+  let i = 0;
+  let first = true;
+  while (i < line.length) {
+    const budget = first ? MAX : MAX - 1; // leading space on continuations
+    let take = 0;
+    let bytes = 0;
+    while (i + take < line.length) {
+      const code = line.charCodeAt(i + take);
+      // Keep surrogate pairs together (one Unicode scalar / one UTF-8 char).
+      let charLen = 1;
+      if (
+        code >= 0xd800 &&
+        code <= 0xdbff &&
+        i + take + 1 < line.length
+      ) {
+        const lo = line.charCodeAt(i + take + 1);
+        if (lo >= 0xdc00 && lo <= 0xdfff) charLen = 2;
+      }
+      const chunk = line.slice(i + take, i + take + charLen);
+      const chunkBytes = Buffer.byteLength(chunk, "utf8");
+      if (bytes + chunkBytes > budget) break;
+      bytes += chunkBytes;
+      take += charLen;
+    }
+    if (take === 0) {
+      // Single character wider than budget (should not happen at 74+); force it.
+      const code = line.charCodeAt(i);
+      take =
+        code >= 0xd800 && code <= 0xdbff && i + 1 < line.length ? 2 : 1;
+    }
+    const piece = line.slice(i, i + take);
+    parts.push(first ? piece : ` ${piece}`);
+    i += take;
+    first = false;
   }
   return parts.join("\r\n");
 }
@@ -121,12 +155,16 @@ export function happyHourRows(venues) {
   return rows;
 }
 
-function stableUid(venue, deal) {
+/**
+ * Identity-only UID: venue + day set. Times live in DTSTART/DTEND so a
+ * correction (e.g. Union Hill 1080→1110) updates the same event for
+ * subscribers instead of orphaning the old UID and minting a new one.
+ * Days are sorted alphabetically so source-array reorder is a no-op.
+ */
+export function stableUid(venue, deal) {
   const days = [...deal.days].sort().join("");
-  const start = deal.start == null ? "x" : String(deal.start);
-  const end = deal.end == null ? "x" : String(deal.end);
   // Domain-ish suffix keeps UIDs unique without claiming a real host.
-  return `bd-hh-${venue.id}-${days}-${start}-${end}@baltimore-dealz`;
+  return `bd-hh-${venue.id}-${days}@baltimore-dealz`;
 }
 
 function itemLines(deal) {

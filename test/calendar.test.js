@@ -12,6 +12,8 @@ import {
   icsEscape,
   icsFold,
   minutesToIcsTime,
+  stableUid,
+  veventLines,
 } from "../src/calendar.js";
 import { venuesInView } from "../src/deals.js";
 import { renderBoard } from "../src/page.js";
@@ -33,7 +35,65 @@ test("icsEscape and icsFold keep TEXT and line length honest", () => {
   const long = "X".repeat(80);
   const folded = icsFold(long);
   assert.ok(folded.includes("\r\n "));
-  assert.ok(folded.split("\r\n").every((line) => line.length <= 75));
+  assert.ok(
+    folded.split("\r\n").every((line) => Buffer.byteLength(line, "utf8") <= 75),
+  );
+});
+
+test("icsFold measures octets — em dash must not produce a 77-octet line", () => {
+  // Em dash is one character, three UTF-8 bytes. A 75-character line that
+  // contains one is 77 octets — character-count folding would ship it unsplit.
+  const line = `${"A".repeat(74)}—`;
+  assert.equal(line.length, 75);
+  assert.equal(Buffer.byteLength(line, "utf8"), 77);
+  const folded = icsFold(line);
+  assert.ok(folded.includes("\r\n "), "must fold when octets exceed 75");
+  for (const part of folded.split("\r\n")) {
+    assert.ok(
+      Buffer.byteLength(part, "utf8") <= 75,
+      `line exceeds 75 octets (${Buffer.byteLength(part, "utf8")}): ${JSON.stringify(part)}`,
+    );
+  }
+  // Unfolded text is preserved (fold inserts CRLF + space only).
+  assert.equal(folded.replaceAll("\r\n ", ""), line);
+
+  // Same shape as production DESCRIPTION footnotes that triggered the finding.
+  const real =
+    "DESCRIPTION:Source: Baltimore Dealz — verify at the bar; deals change.";
+  // Pad so the whole property exceeds 75 octets the way multi-line DESCRIPTIONs do.
+  const longReal = real + "\\n" + "x".repeat(40);
+  const foldedReal = icsFold(longReal);
+  for (const part of foldedReal.split("\r\n")) {
+    assert.ok(
+      Buffer.byteLength(part, "utf8") <= 75,
+      `production-shaped line exceeds 75 octets (${Buffer.byteLength(part, "utf8")})`,
+    );
+  }
+});
+
+test("stableUid is identity-only — time corrections keep the same UID", () => {
+  const venue = { id: "union-hill-kitchen", name: "Union Hill Kitchen" };
+  const base = {
+    days: ["fri", "mon", "thu", "tue", "wed"],
+    start: 900,
+    end: 1080,
+    items: [{ text: "Happy Hour" }],
+  };
+  const corrected = { ...base, end: 1110 };
+  const uidA = stableUid(venue, base);
+  const uidB = stableUid(venue, corrected);
+  assert.equal(uidA, uidB);
+  assert.equal(uidA, "bd-hh-union-hill-kitchen-frimonthutuewed@baltimore-dealz");
+  // No start/end minutes in the UID string.
+  assert.doesNotMatch(uidA, /1080|1110|900/);
+
+  // DTEND still reflects the corrected time.
+  const linesOld = veventLines(venue, base, { now: NOW });
+  const linesNew = veventLines(venue, corrected, { now: NOW });
+  assert.ok(linesOld.some((l) => l === `UID:${uidA}`));
+  assert.ok(linesNew.some((l) => l === `UID:${uidB}`));
+  assert.ok(linesOld.some((l) => /DTEND;TZID=America\/New_York:20260803T180000/.test(l)));
+  assert.ok(linesNew.some((l) => /DTEND;TZID=America\/New_York:20260803T183000/.test(l)));
 });
 
 test("happyHourRows is happy_hour only — no trivia, no held, no unpriced non-HH", async () => {

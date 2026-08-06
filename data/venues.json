@@ -2795,90 +2795,16 @@
       "name": "The Point in Fells",
       "neighborhood": "Fells Point",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "1738 Thames St, Baltimore, MD 21231",
       "phone": "(410) 327-7264",
       "source_url": "https://www.thepointfells.com/happy-hour",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
-      "ops_notes": "Prices from HH flyer PNGs on thepointfells.com/happy-hour (website-image). Page text also claims Friday ALL DAY happy hour; flyer lists Mon/Wed/Thu/Fri 4\u20137pm. Both official \u2014 board ships the flyer window (4\u20137) as the safer customer claim; Friday all-day is the broader alternate, not silently chosen. Closed Tue per bar hours. Flyer: table & bar only; not valid on to-go; no discounts on HH items.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Crushes $8 (Orange, Grapefruit, Lime)",
-              "price": "$8"
-            },
-            {
-              "text": "Draft Cocktails $6 (Rum Punch, Sangria, Margarita, Green Tea, White Tea)",
-              "price": "$6"
-            },
-            {
-              "text": "Select Drafts & Cans $4 (Bud Light, Miller High Life, Modelo, Blue Moon, Sam Seasonal, Twisted Tea, Beer of the Week)",
-              "price": "$4"
-            },
-            {
-              "text": "Select Wines $5 (Ros\u00e9, Chardonnay, Champagne, Red Blend, Pinot Noir)",
-              "price": "$5"
-            },
-            {
-              "text": "Jameson $5 (Original, Triple Triple, Orange / Green Tea Shooter)",
-              "price": "$5"
-            },
-            {
-              "text": "Boozy Slushie $8 (Froze, Slushie of the Moment)",
-              "price": "$8"
-            },
-            {
-              "text": "Street Tacos $3 each (min 2)",
-              "price": "$3"
-            },
-            {
-              "text": "Point Nachos $7",
-              "price": "$7"
-            },
-            {
-              "text": "Crabby Pretzels (2) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Fried Pickles $7",
-              "price": "$7"
-            },
-            {
-              "text": "Fried Deviled Eggs $7",
-              "price": "$7"
-            },
-            {
-              "text": "1/2 lb Wings $8",
-              "price": "$8"
-            },
-            {
-              "text": "Jr Smashburger $8",
-              "price": "$8"
-            },
-            {
-              "text": "Sides $4 each (fries, tots, chips)",
-              "price": "$4"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-06",
-          "source_url": "https://www.thepointfells.com/happy-hour",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "notes_public": "Happy hour prices live only in flyer images we cannot show; page text has no dollar amounts.",
+      "ops_notes": "CoS 2026-08-06 hold: official HH page text has zero $ amounts (hours only). Flyer PNG prices not shipable as readable text. 'Friday all-day happy hour' is Instagram caption alt text for a one-off DJ promo (TGIFF), not a standing weekly schedule. Real domain is thepointfells.com (no 'in') \u2014 thepointinfells.com is cert-invalid. Quiet group until prices appear in page text. Closed Tue per bar hours.",
+      "deal_format": "image",
+      "deals": [],
       "lat": 39.2821,
       "lon": -76.591346,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
@@ -2891,7 +2817,7 @@
       "status": "verified",
       "address": "1728 Thames Street, Baltimore, MD 21231",
       "phone": "(443) 449-7726",
-      "source_url": "http://www.thamesstreetoysterhouse.com/happy-hour.htm",
+      "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
       "ops_notes": "Website-text HH page. $2 oysters are the only priced claim; bar side is only 'seasonal bar offerings' with no dollars \u2014 do not invent cocktail prices. Page title is bare 'Untitled Document' but venue-hosted.",
@@ -2917,7 +2843,7 @@
           "time_window": "4:30pm-6pm",
           "happy_hour": true,
           "verified_date": "2026-08-06",
-          "source_url": "http://www.thamesstreetoysterhouse.com/happy-hour.htm",
+          "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
           "food_categories": [
             "seafood/crab"
           ]
@@ -2942,7 +2868,7 @@
           "time_window": "3pm-5pm",
           "happy_hour": true,
           "verified_date": "2026-08-06",
-          "source_url": "http://www.thamesstreetoysterhouse.com/happy-hour.htm",
+          "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
           "food_categories": [
             "seafood/crab"
           ]

@@ -209,7 +209,10 @@ test("static board tonight templates match server cardsHtmlForDay at Fri 11pm an
     );
     const match = board.match(re);
     assert.ok(match, `missing template for ${key}`);
-    const expected = cardsHtmlForDay(venues, key, when);
+    // Static boards use relative venue hrefs; match that when comparing.
+    const expected = cardsHtmlForDay(venues, key, when, {
+      venueHref: (id) => `../venue/${id}/`,
+    });
     assert.equal(match[1], expected, `template for ${key} drifted from server render`);
 
     // Live "On tonight" section (pre-hydrate skeleton) also matches that day,

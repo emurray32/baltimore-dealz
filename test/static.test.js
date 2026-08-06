@@ -289,6 +289,7 @@ test("static board HTML never embeds ops_notes or held-only deal item text", asy
     assert.doesNotMatch(live, /bd-day-/);
     assert.match(live, /client-board\.js/);
     assert.match(live, /client-day\.js/);
+    assert.match(live, /client-search\.js/);
   }
 
   await rm(outDir, { recursive: true, force: true });

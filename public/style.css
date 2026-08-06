@@ -302,6 +302,42 @@ summary:hover { border-color: var(--hair); }
 
 /* ---- "Closest to me" button ---- */
 .nearest-row { margin: 0 0 1rem; }
+
+/* board search — injected by client-search.js only when JS runs */
+.search-row {
+  margin: 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.search-label {
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.board-search {
+  font-family: inherit;
+  font-size: .95rem;
+  padding: .55rem .75rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  width: 100%;
+  max-width: 22rem;
+  box-sizing: border-box;
+}
+.board-search:focus {
+  outline: 2px solid var(--chip-bg);
+  outline-offset: 2px;
+}
+.search-empty {
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
 #nearest-btn {
   font-family: 'Space Mono', monospace;
   font-weight: 700;

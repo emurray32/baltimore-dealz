@@ -252,8 +252,9 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 //   calendarHref   — happy-hour .ics subscribe link (default "/<slug>/calendar.ics")
 //   viewHref(slug) — switcher link builder (default "/<slug>")
 //   staticClient   — per-day templates + client scripts (no raw venues JSON)
-//   clientDaySrc   — script src for client-day.js
-//   clientBoardSrc — script src for client-board.js
+//   clientDaySrc    — script src for client-day.js
+//   clientBoardSrc  — script src for client-board.js
+//   clientSearchSrc — script src for client-search.js
 export function renderBoard(venues, view, views = [view], now = new Date(), options = {}) {
   const todayKey = dayKeyInZone(now);
   const today = cardsHtmlForDay(venues, todayKey, now);
@@ -287,6 +288,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   // raw venues file (ops_notes / held rows must never ship in the public HTML).
   const daySrc = options.clientDaySrc ?? "/client-day.js";
   const boardSrc = options.clientBoardSrc ?? "/client-board.js";
+  const searchSrc = options.clientSearchSrc ?? "/client-search.js";
   let dayTemplates = "";
   if (staticClient) {
     dayTemplates = WEEK.map(
@@ -295,10 +297,11 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     ).join("\n");
   }
   const clientBits = `
-  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day (and is not split by time of day). Turn JS on for Baltimore-time accuracy, or use Browse the week.</p></noscript>
+  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day (and is not split by time of day). Turn JS on for Baltimore-time accuracy, search, or use Browse the week.</p></noscript>
   ${dayTemplates}
   <script src="${escapeHtml(daySrc)}"></script>
-  <script src="${escapeHtml(boardSrc)}"></script>`;
+  <script src="${escapeHtml(boardSrc)}"></script>
+  <script src="${escapeHtml(searchSrc)}"></script>`;
 
   return `<!doctype html>
 <html lang="en">

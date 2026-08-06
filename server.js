@@ -19,10 +19,11 @@ const VENDOR_FILES = new Map([
   ["leaflet.js", "text/javascript; charset=utf-8"],
 ]);
 
-// Browser board scripts (day accuracy + on-now / starts-later / finished).
+// Browser board scripts (day accuracy, timing groups, search).
 const PUBLIC_SCRIPTS = new Map([
   ["client-day.js", "text/javascript; charset=utf-8"],
   ["client-board.js", "text/javascript; charset=utf-8"],
+  ["client-search.js", "text/javascript; charset=utf-8"],
 ]);
 
 const server = createServer(async (req, res) => {

@@ -309,6 +309,7 @@
           "time_window": "all night",
           "happy_hour": true,
           "verified_date": "2026-08-03",
+          "prices_published": false,
           "food_categories": [
             "drink"
           ]
@@ -405,6 +406,7 @@
           "start": 600,
           "end": 780,
           "time_window": "10am-1pm",
+          "prices_published": false,
           "food_categories": [
             "brunch"
           ]
@@ -816,6 +818,7 @@
           ],
           "start": null,
           "end": null,
+          "prices_published": false,
           "food_categories": [
             "sliders"
           ]
@@ -1003,8 +1006,8 @@
       "phone": "(667) 260-2151",
       "source_url": "https://www.unionhillbal.com/page/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Their page says \"Weekdays 3-6 p.m.\" without naming days; Mon-Fri is the ordinary reading, not their wording.",
+      "last_verified": "2026-08-06",
+      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Happy hour ships Block A from /page/happy-hour (under HAPPY HOUR heading): wines by the glass, includes seltzers, 1/2 OFF oysters. Block B condensed wording on the same page is secondary only.",
       "deals": [
         {
           "days": [
@@ -1016,15 +1019,32 @@
           ],
           "items": [
             {
-              "text": "Happy Hour \u2014 craft cocktails and small plates"
+              "text": "$2 OFF small plates and flatbreads",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 OFF all cocktails",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 OFF all wines by the glass",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 OFF draft and bottled beers, seltzers and ciders",
+              "price": "$2 off"
+            },
+            {
+              "text": "1/2 OFF raw oysters",
+              "price": "1/2 off"
             }
           ],
           "start": 900,
-          "end": 1080,
-          "time_window": "3pm-6pm",
+          "end": 1110,
+          "time_window": "3pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "prices_published": false,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.unionhillbal.com/page/happy-hour",
           "food_categories": [
             "small-plate/apps"
           ]

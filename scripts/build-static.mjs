@@ -62,6 +62,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
   await cp(join(PUBLIC, "vendor"), join(outDir, "vendor"), { recursive: true });
   await cp(join(PUBLIC, "client-day.js"), join(outDir, "client-day.js"));
   await cp(join(PUBLIC, "client-board.js"), join(outDir, "client-board.js"));
+  await cp(join(PUBLIC, "client-search.js"), join(outDir, "client-search.js"));
 
   // / and /map — same redirect targets the live server uses.
   await write(
@@ -73,7 +74,14 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     redirectHtml(`../${fallback.slug}/map/`, `${fallback.label} map`),
   );
 
-  const written = ["index.html", "map/index.html", "style.css", "client-day.js", "client-board.js"];
+  const written = [
+    "index.html",
+    "map/index.html",
+    "style.css",
+    "client-day.js",
+    "client-board.js",
+    "client-search.js",
+  ];
 
   for (const view of views) {
     const venues = venuesInView(allVenues, view);
@@ -87,6 +95,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
       staticClient: true,
       clientDaySrc: "../client-day.js",
       clientBoardSrc: "../client-board.js",
+      clientSearchSrc: "../client-search.js",
     });
     const boardPath = join(view.slug, "index.html");
     await write(join(outDir, boardPath), boardHtml);

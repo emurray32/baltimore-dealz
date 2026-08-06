@@ -2037,7 +2037,7 @@
       "source_url": "https://www.livstavern.com/specials",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
-      "ops_notes": "Specials page is preferred over home page for HH scope (Mon\u2013Sun* with game-day and Sat\u2013Sun drink-only rules). Home page also states Mon\u2013Fri 3\u20136 \u2014 narrower. Do not drop the game-day / Sat\u2013Sun drink-only constraints from time_window. Public card note held in ops until multi-view notes_public pin: Purple patio / dog-friendly. Former Mother's Federal Hill Grille space (Mother's closed Jan 2025).",
+      "ops_notes": "Specials page is preferred over home page for HH scope (Mon\u2013Sun* with game-day and Sat\u2013Sun drink-only rules). Home page also states Mon\u2013Fri 3\u20136 \u2014 narrower. Do not drop the game-day / Sat\u2013Sun drink-only constraints from time_window. Public card note held in ops until multi-view notes_public pin: Purple patio / dog-friendly. Former Mother's Federal Hill Grille space (Mother's closed Jan 2025). BD-HONESTY 2026-08-06: split HH into Mon\u2013Fri (food+drinks+cocktails) and Sat\u2013Sun (drinks only) per venue asterisk \"*Drinks HH Only Sat-Sun\" \u2014 single Mon\u2013Sun row overstated food on weekends.",
       "deals": [
         {
           "days": [
@@ -2045,9 +2045,7 @@
             "tue",
             "wed",
             "thu",
-            "fri",
-            "sat",
-            "sun"
+            "fri"
           ],
           "items": [
             {
@@ -2071,13 +2069,46 @@
               "price": "$8"
             },
             {
-              "text": "$10 Cocktails (Weekdays Only)",
+              "text": "$10 Cocktails",
               "price": "$10"
             }
           ],
           "start": 900,
           "end": 1080,
-          "time_window": "3pm-6pm (excludes game days; drinks HH only Sat\u2013Sun)",
+          "time_window": "3pm-6pm (excludes game days)",
+          "happy_hour": true,
+          "verified_date": "2026-08-06",
+          "source_url": "https://www.livstavern.com/specials",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$4 Drafts",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Rumple/Chambongs",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Crushes",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Bubbles",
+              "price": "$8"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm (excludes game days; drinks only)",
           "happy_hour": true,
           "verified_date": "2026-08-06",
           "source_url": "https://www.livstavern.com/specials",
@@ -2204,7 +2235,7 @@
       "source_url": "https://www.magerks.com/federal-hill",
       "source_type": "venue_website",
       "last_verified": "2026-08-06",
-      "ops_notes": "Prices from on-page HH image + 2026 Federal Hill Weekly Specials PDF (website-image). Candidate list had 20 E Cross \u2014 wrong; official is 1061 S Charles (20 E Cross is Pub Dog). Industry Night half-off is worker-eligibility \u2014 not on board. Beat the Clock (Fri 10pm) left off \u2014 sliding price is hard to state honestly as a single row. Trivia/Karaoke nights not priced specials. Public card note held in ops until multi-view notes_public pin: Kitchen hours published separately on the venue site (bar until 2am).",
+      "ops_notes": "Prices from on-page HH image + 2026 Federal Hill Weekly Specials PDF (website-image). Candidate list had 20 E Cross \u2014 wrong; official is 1061 S Charles (20 E Cross is Pub Dog). Industry Night half-off is worker-eligibility \u2014 not on board. Beat the Clock (Fri 10pm) left off \u2014 sliding price is hard to state honestly as a single row. Trivia/Karaoke nights not priced specials. Public card note held in ops until multi-view notes_public pin: Kitchen hours published separately on the venue site (bar until 2am). Mon\u2013Fri on the board is our ordinary reading of the venue's published \"Weekdays\" \u2014 the happy-hour image names no specific days. \"32 OZ\" on $7 drafts is on both the on-page HH image and the 2026 Federal Hill Weekly Specials PDF (OCR 2026-08-06), not an inference from the PDF alone.",
       "deals": [
         {
           "days": [

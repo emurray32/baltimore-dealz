@@ -255,7 +255,7 @@
       "status": "verified",
       "address": "2522 Fait Ave, Baltimore, MD 21224",
       "phone": "(410) 522-1421",
-      "source_url": "https://www.smaltimoremd.com/",
+      "source_url": "http://www.smaltimoremd.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-03",
       "ops_notes": "Invalid TLS cert \u2014 a crawler must skip the cert check for this domain.",
@@ -1827,7 +1827,6 @@
       "notes_public": "Status unconfirmed \u2014 no venue-official source that it is open or closed; no deals we can show.",
       "ops_notes": "Deal Scout 2026-08-05: site has no DNS (A/NS). Instagram profile removed. Yelp updated July 2026 with 28 reviews + hours; OSM still tags 600 S Potomac as a pub. Neither open nor closed is supportable \u2014 unconfirmed, not removed. Aggregator prices are leads only \u2014 do not publish.",
       "deals": [],
-      "source_url": "https://www.instagram.com/baltimoretaphouse/",
       "lat": 39.2852,
       "lon": -76.57452,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"

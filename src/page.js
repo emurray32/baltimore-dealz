@@ -11,6 +11,7 @@ import {
   isVerifiedDateStale,
   METERS_PER_MILE,
   noDealVenues,
+  WEEK,
   weekByDay,
 } from "./deals.js";
 
@@ -141,16 +142,34 @@ function noDealSection(venues) {
 }
 
 // Only worth showing once there is somewhere else to go.
-function viewSwitcher(views, currentView) {
+// linkFor(slug) builds the href so the static build can emit relative paths
+// without forking the switcher markup.
+function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
   if (views.length < 2) return "";
   const links = views
     .map((view) =>
       view.slug === currentView.slug
         ? `<strong>${escapeHtml(view.label)}</strong>`
-        : `<a href="/${escapeHtml(view.slug)}">${escapeHtml(view.label)}</a>`,
+        : `<a href="${escapeHtml(linkFor(view.slug))}">${escapeHtml(view.label)}</a>`,
     )
     .join(" · ");
   return `<nav class="meta">${links}</nav>`;
+}
+
+// Cards (or the empty-state line) for one day — same markup renderBoard uses.
+// Exported so the static build can embed one <template> per weekday.
+export function cardsHtmlForDay(venues, dayKey, now = new Date()) {
+  const rows = dealsForDay(venues, dayKey);
+  if (!rows.length) {
+    return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
+  }
+  return rows.map((row) => dealCard(row, now)).join("");
+}
+
+// JSON for <script type="application/json"> — escape </ so a hostile name
+// cannot break out of the script block.
+export function safeJsonForScript(value) {
+  return JSON.stringify(value).replaceAll("</", "<\\/");
 }
 
 // The browser-side half of nearest-first, served inline at the end of
@@ -218,21 +237,27 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 
 // `venues` is every venue in this view's neighborhoods (see venuesInView).
 // Deal cards still only come from verified rows with showable deals.
-export function renderBoard(venues, view, views = [view], now = new Date()) {
+//
+// options (all optional, server leaves them off):
+//   styleHref      — stylesheet href (default "/style.css")
+//   mapHref        — "Map view" link (default "/<slug>/map")
+//   viewHref(slug) — switcher link builder (default "/<slug>")
+//   staticClient   — embed venues JSON + per-day templates + client scripts
+//   clientDaySrc   — script src for client-day.js
+//   clientBoardSrc — script src for client-board.js
+export function renderBoard(venues, view, views = [view], now = new Date(), options = {}) {
   const todayKey = dayKeyInZone(now);
-  const todayRows = dealsForDay(venues, todayKey);
+  const today = cardsHtmlForDay(venues, todayKey, now);
 
   const card = (row) => dealCard(row, now);
 
-  const today = todayRows.length
-    ? todayRows.map(card).join("")
-    : `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(todayKey))} yet.</p>`;
-
   // Today stays collapsed here — it is already spelled out above.
+  // data-day lets the static client retarget the "(tonight)" marker without
+  // re-parsing English day names.
   const week = weekByDay(venues)
     .map(
       (day) => `
-      <details>
+      <details data-day="${escapeHtml(day.key)}">
         <summary>${escapeHtml(day.label)}${day.key === todayKey ? " (tonight)" : ""}</summary>
         ${day.rows.length ? day.rows.map(card).join("") : '<p class="meta">Nothing listed.</p>'}
       </details>`,
@@ -240,6 +265,27 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     .join("");
 
   const title = `Tonight in ${view.label}`;
+  const styleHref = options.styleHref ?? "/style.css";
+  const mapHref = options.mapHref ?? `/${view.slug}/map`;
+  const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
+
+  // Static Pages build: one <template> per weekday so the browser can swap
+  // "On tonight" to the right day without re-implementing card markup.
+  let dayTemplates = "";
+  let clientBits = "";
+  if (options.staticClient) {
+    dayTemplates = WEEK.map(
+      (day) =>
+        `<template id="bd-day-${day.key}">${cardsHtmlForDay(venues, day.key, now)}</template>`,
+    ).join("\n");
+    const daySrc = options.clientDaySrc ?? "/client-day.js";
+    const boardSrc = options.clientBoardSrc ?? "/client-board.js";
+    clientBits = `
+  <script type="application/json" id="bd-venues">${safeJsonForScript(venues)}</script>
+  ${dayTemplates}
+  <script src="${escapeHtml(daySrc)}"></script>
+  <script src="${escapeHtml(boardSrc)}"></script>`;
+  }
 
   return `<!doctype html>
 <html lang="en">
@@ -247,14 +293,14 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} — Baltimore Dealz</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="${escapeHtml(styleHref)}">
 </head>
 <body>
   <header>
     <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))} · Baltimore time</p>
-    ${viewSwitcher(views, view)}
-    <p class="meta map-link"><a href="/${escapeHtml(view.slug)}/map">Map view</a></p>
+    ${viewSwitcher(views, view, viewHref)}
+    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a></p>
   </header>
   <main>
     <section id="tonight-board">
@@ -270,6 +316,7 @@ export function renderBoard(venues, view, views = [view], now = new Date()) {
     ${noDealSection(venues)}
   </main>
   ${NEAREST_FIRST_SCRIPT}
+  ${clientBits}
 </body>
 </html>
 `;

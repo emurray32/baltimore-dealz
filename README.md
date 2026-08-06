@@ -2,7 +2,7 @@
 
 A board of Baltimore bar and restaurant specials — what's on tonight, by neighborhood.
 
-## Run it
+## Run it (local)
 
 ```bash
 npm start
@@ -10,12 +10,36 @@ npm start
 
 Then open http://localhost:3000. It redirects to the default board (`/canton`).
 No install step, no database, no accounts — plain Node (v20+), zero dependencies.
+`server.js` is the dev path — it re-reads `data/venues.json` on every request.
 
 ## Test it
 
 ```bash
 npm test
 ```
+
+## Deploy (GitHub Pages)
+
+The public site is a **static** build of the same boards and maps. GitHub Pages
+hosts plain files (no Node server), so:
+
+1. `npm run build` (or `node scripts/build-static.mjs`) writes `dist/` — every
+   view's board + map, root redirects, CSS, vendored Leaflet, and a tiny client
+   script that picks "today" in **America/New_York** in the browser.
+2. Push to `main` runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml),
+   which builds `dist/` and deploys it with the official Pages actions.
+
+`dist/` is gitignored — the workflow always builds from source. Local
+`npm start` is unchanged.
+
+**One-time setup** (repo owner): enable GitHub Pages for this repo with source
+**GitHub Actions** (Settings → Pages). Private repos need Pages available on the
+account/org plan. After the first green workflow run, the site URL is on the
+deployment.
+
+**What static cannot do:** live re-read of `venues.json` without a rebuild, or
+real HTTP 302s (root and `/map` use meta/JS redirects instead). Day-of-week and
+"tonight" stay accurate in the browser without a redeploy.
 
 ## Where the deals live
 

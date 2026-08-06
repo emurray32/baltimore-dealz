@@ -235,6 +235,7 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 // options (all optional, server leaves them off):
 //   styleHref      — stylesheet href (default "/style.css")
 //   mapHref        — "Map view" link (default "/<slug>/map")
+//   calendarHref   — happy-hour .ics subscribe link (default "/<slug>/calendar.ics")
 //   viewHref(slug) — switcher link builder (default "/<slug>")
 //   staticClient   — per-day templates + client scripts (no raw venues JSON)
 //   clientDaySrc   — script src for client-day.js
@@ -263,6 +264,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const title = `Tonight in ${view.label}`;
   const styleHref = options.styleHref ?? "/style.css";
   const mapHref = options.mapHref ?? `/${view.slug}/map`;
+  const calendarHref = options.calendarHref ?? `/${view.slug}/calendar.ics`;
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
   // Static Pages build: one <template> per weekday so the browser can swap
@@ -296,7 +298,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))} · Baltimore time</p>
     ${viewSwitcher(views, view, viewHref)}
-    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a></p>
+    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>
   <main>
     <section id="tonight-board">

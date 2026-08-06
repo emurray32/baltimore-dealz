@@ -2,7 +2,7 @@
 
 A board of Baltimore bar and restaurant specials — what's on tonight, by neighborhood.
 
-## Run it
+## Run it (local)
 
 ```bash
 npm start
@@ -10,12 +10,43 @@ npm start
 
 Then open http://localhost:3000. It redirects to the default board (`/canton`).
 No install step, no database, no accounts — plain Node (v20+), zero dependencies.
+`server.js` is the dev path — it re-reads `data/venues.json` on every request.
 
 ## Test it
 
 ```bash
 npm test
 ```
+
+## Deploy (public static host)
+
+The public site is a **static** build of the same boards and maps (plain files,
+no Node server):
+
+1. `npm run build` (or `node scripts/build-static.mjs`) writes `dist/` — every
+   view's board + map, root redirects, CSS, vendored Leaflet, and a tiny client
+   script that picks "today" in **America/New_York** in the browser from
+   pre-rendered day templates (no raw `venues.json` in the page).
+2. Someone with publish access copies that `dist/` to the **separate public
+   host repo** (hand step). That is what makes the live site update.
+
+**Merging to `main` does not update the live site.** A push or merge here only
+changes the private source. The site changes when `dist/` is rebuilt and
+published by hand.
+
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) is **manual-only**
+(`workflow_dispatch`). It is not triggered on push to `main`. GitHub Pages is
+unavailable on this private repo under the free plan (HTTP 422 if you try to
+enable it); the workflow stays in the tree for the day that changes, but must
+not auto-run and fail red on every merge.
+
+`dist/` is gitignored — always build from source. Local `npm start` is unchanged.
+
+**What static cannot do:** live re-read of `venues.json` without a rebuild, or
+real HTTP 302s (root and `/map` use meta/JS redirects instead). **With
+JavaScript on**, day-of-week and "tonight" stay accurate in the browser without
+a redeploy. **Without JS**, the page shows the day the site was last built
+(there is a `<noscript>` note); use "Browse the week" for the full list.
 
 ## Where the deals live
 

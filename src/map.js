@@ -178,7 +178,10 @@ const MAP_SCRIPT = `<script src="/vendor/leaflet.js"></` + `script>
 })();
 </` + `script>`;
 
-export function renderMap(venues, view, views = [view], now = new Date()) {
+// options (all optional, server leaves them off):
+//   styleHref, leafletCssHref, leafletJsHref, listHref
+//   mapHref(slug) — switcher link builder for other maps
+export function renderMap(venues, view, views = [view], now = new Date(), options = {}) {
   const payload = mapPayload(venues);
   const center = mapCenter(payload);
   const popups = Object.fromEntries(payload.map((entry) => [entry.id, popupHtml(entry, now)]));
@@ -194,18 +197,28 @@ export function renderMap(venues, view, views = [view], now = new Date()) {
       ? `<p class="meta">Not on the map — no verified location: ${missing.map(escapeHtml).join(", ")}.</p>`
       : "";
 
+  const mapHref = options.mapHref ?? ((slug) => `/${slug}/map`);
   const switcher =
     views.length > 1
       ? `<nav class="meta">${views
           .map((v) =>
             v.slug === view.slug
               ? `<strong>${escapeHtml(v.label)}</strong>`
-              : `<a href="/${escapeHtml(v.slug)}/map">${escapeHtml(v.label)}</a>`,
+              : `<a href="${escapeHtml(mapHref(v.slug))}">${escapeHtml(v.label)}</a>`,
           )
           .join(" · ")}</nav>`
       : "";
 
   const title = `${view.label} map`;
+  const styleHref = options.styleHref ?? "/style.css";
+  const leafletCssHref = options.leafletCssHref ?? "/vendor/leaflet.css";
+  const listHref = options.listHref ?? `/${view.slug}`;
+
+  // MAP_SCRIPT hard-codes /vendor/leaflet.js — swap when the static build
+  // needs a relative path two levels up from /<view>/map/.
+  const mapScript = options.leafletJsHref
+    ? MAP_SCRIPT.replace('src="/vendor/leaflet.js"', `src="${options.leafletJsHref}"`)
+    : MAP_SCRIPT;
 
   return `<!doctype html>
 <html lang="en">
@@ -213,13 +226,13 @@ export function renderMap(venues, view, views = [view], now = new Date()) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} — Baltimore Dealz</title>
-  <link rel="stylesheet" href="/vendor/leaflet.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="${escapeHtml(leafletCssHref)}">
+  <link rel="stylesheet" href="${escapeHtml(styleHref)}">
 </head>
 <body class="map-page">
   <header>
     <h1>${escapeHtml(title)}</h1>
-    <p class="meta">Tap a pin for the deal, hours, and when we last checked. <a href="/${escapeHtml(view.slug)}">List view</a></p>
+    <p class="meta">Tap a pin for the deal, hours, and when we last checked. <a href="${escapeHtml(listHref)}">List view</a></p>
     ${switcher}
   </header>
   <main>
@@ -231,7 +244,7 @@ export function renderMap(venues, view, views = [view], now = new Date()) {
   <script>window.BD_MAP_POINTS = ${safeJson(payload)};</script>
   <script>window.BD_MAP_POPUPS = ${safeJson(popups)};</script>
   <script>window.BD_MAP_CENTER = ${safeJson(center)};</script>
-  ${MAP_SCRIPT}
+  ${mapScript}
 </body>
 </html>
 `;

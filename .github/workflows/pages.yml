@@ -1,0 +1,55 @@
+# Build the static board into dist/ and publish to GitHub Pages.
+#
+# Manual only (workflow_dispatch). Do NOT re-enable push-to-main until this
+# private repo's plan supports GitHub Pages — auto-run currently fails at
+# configure-pages with HTTP 422 and would paint main red forever. Lead
+# publishes dist/ to a separate public host by hand in the meantime.
+# No secrets needed for public Pages when it is available.
+
+name: Deploy to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build static site
+        run: node scripts/build-static.mjs
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -117,6 +117,27 @@ test("happyHourRows is happy_hour only — no trivia, no held, no unpriced non-H
   );
 });
 
+test("happy-hour UID identity keys are unique (venue + day-set)", async () => {
+  // Lead: silent collision if two happy_hour rows share venue + sorted days.
+  // Converts overwrite into a failing suite before any subscriber loses an event.
+  const venues = await loadVenues();
+  const rows = happyHourRows(venues);
+  const keys = rows.map(({ venue, deal }) => stableUid(venue, deal));
+  const seen = new Map();
+  const collisions = [];
+  for (let i = 0; i < keys.length; i++) {
+    if (seen.has(keys[i])) {
+      collisions.push(
+        `${keys[i]} ← ${rows[seen.get(keys[i])].venue.id} and ${rows[i].venue.id}`,
+      );
+    } else {
+      seen.set(keys[i], i);
+    }
+  }
+  assert.deepEqual(collisions, [], collisions.join("; "));
+  assert.equal(keys.length, new Set(keys).size);
+});
+
 test("buildHappyHourIcs ships Union Hill Block A as a timed weekly event", async () => {
   const views = await loadViews();
   const view = defaultView(views);

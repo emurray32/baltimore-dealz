@@ -177,13 +177,15 @@ function noDealSection(venues, options = {}) {
 // without forking the switcher markup.
 function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
   if (views.length < 2) return "";
+  // No middle-dot separators — at phone width they orphan onto their own line.
+  // Spacing is CSS gap on nav.meta.
   const links = views
     .map((view) =>
       view.slug === currentView.slug
         ? `<strong>${escapeHtml(view.label)}</strong>`
         : `<a href="${escapeHtml(linkFor(view.slug))}">${escapeHtml(view.label)}</a>`,
     )
-    .join(" · ");
+    .join("");
   return `<nav class="meta">${links}</nav>`;
 }
 

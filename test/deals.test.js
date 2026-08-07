@@ -425,6 +425,10 @@ test("the switcher is hidden with one view and shown with two", () => {
   const paired = renderBoard([venue()], CANTON, [CANTON, other], FRI_11PM_EDT);
   assert.match(paired, /<nav/);
   assert.match(paired, /href="\/fed-hill"/);
+  // No middle-dot separators between chips — they orphan onto their own line
+  // when the switcher wraps at phone width. Spacing is CSS gap.
+  const nav = paired.match(/<nav class="meta">([\s\S]*?)<\/nav>/)?.[1] ?? "";
+  assert.doesNotMatch(nav, / · /);
 });
 
 test("views.json has a usable default view", async () => {

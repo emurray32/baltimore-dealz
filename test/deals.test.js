@@ -1241,7 +1241,11 @@ test("expansion load: four priced venues and two new views", async () => {
     "Harbor East",
     "Downtown",
   ]);
-  assert.deepEqual(bySlug["locust-point"].neighborhoods, ["Locust Point", "Riverside"]);
+  assert.deepEqual(bySlug["locust-point"].neighborhoods, [
+    "Locust Point",
+    "Riverside",
+    "Port Covington",
+  ]);
 
   const venues = await loadVenues();
   const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
@@ -1930,9 +1934,77 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   assert.ok(venuesInView(venues, city).some((v) => v.id === "order-of-the-ace"));
 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
+  // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 35);
-  assert.equal(venues.length, 63);
+  assert.equal(showable, 38);
+  assert.equal(venues.length, 66);
+});
+
+test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+  const fed = bySlug["federal-hill"];
+  const locust = bySlug["locust-point"];
+
+  // AJ's — Mon–Fri 5–7 + Sat 2–5; Monday ships (CoS reopened); festival caveat.
+  const ajs = byId["ajs-on-hanover"];
+  assert.equal(ajs.status, "verified");
+  assert.equal(ajs.neighborhood, "South Baltimore");
+  assert.equal(ajs.phone, "(410) 800-2657");
+  assert.match(ajs.notes_public ?? "", /festival|stadium/i);
+  assert.doesNotMatch(ajs.notes_public ?? "", /closed monday/i);
+  assert.match(ajs.ops_notes ?? "", /ajsonhanover\.com\/drinks/);
+  assert.equal(ajs.deals.length, 2);
+  const ajsWeek = ajs.deals.find((d) => d.days.includes("mon"));
+  const ajsSat = ajs.deals.find((d) => d.days.length === 1 && d.days[0] === "sat");
+  assert.deepEqual(ajsWeek.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(ajsWeek.start, 1020);
+  assert.equal(ajsWeek.end, 1140);
+  assert.equal(ajsSat.start, 840);
+  assert.equal(ajsSat.end, 1020);
+  for (const d of ajs.deals) {
+    assert.equal(d.items.length, 7);
+    assert.ok(d.items.some((i) => i.text === "$5 House Wines"));
+    assert.ok(d.items.some((i) => i.text === "$9 Brussels"));
+  }
+  assert.ok(venuesInView(venues, fed).some((v) => v.id === "ajs-on-hanover"));
+
+  // Nick's — Mon–Thu 3–6 bar only; Port Covington; locust-point view.
+  const nicks = byId["nicks-fish-house"];
+  assert.equal(nicks.status, "verified");
+  assert.equal(nicks.neighborhood, "Port Covington");
+  assert.equal(nicks.phone, "(410) 347-4123");
+  assert.match(nicks.notes_public ?? "", /bar area only/i);
+  assert.match(nicks.ops_notes ?? "", /source_document_date=2026-04-02/);
+  assert.equal(nicks.deals.length, 1);
+  assert.deepEqual(nicks.deals[0].days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(nicks.deals[0].start, 900);
+  assert.equal(nicks.deals[0].end, 1080);
+  assert.ok(nicks.deals[0].items.some((i) => /Raw Oysters \$1\.50/.test(i.text)));
+  assert.ok(nicks.deals[0].items.some((i) => /Draft Beer \$5/.test(i.text)));
+  assert.deepEqual(locust.neighborhoods, ["Locust Point", "Riverside", "Port Covington"]);
+  assert.ok(venuesInView(venues, locust).some((v) => v.id === "nicks-fish-house"));
+  assert.ok(venuesInView(venues, locust).some((v) => v.id === "copper-shark"));
+
+  // Rusty Scupper — Mon–Fri 4–6; $ prices; holidays/special-events on card.
+  const rusty = byId["rusty-scupper"];
+  assert.equal(rusty.status, "verified");
+  assert.equal(rusty.neighborhood, "Federal Hill");
+  assert.equal(rusty.phone, "(410) 727-3678");
+  assert.match(rusty.notes_public ?? "", /dine-in only/i);
+  assert.match(rusty.notes_public ?? "", /holiday|special event/i);
+  assert.match(rusty.ops_notes ?? "", /source_document_date=2026-06-05/);
+  assert.equal(rusty.deals.length, 1);
+  assert.deepEqual(rusty.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(rusty.deals[0].start, 960);
+  assert.equal(rusty.deals[0].end, 1080);
+  // PDF had bare numbers — board stores $ form, not hyphens.
+  assert.ok(rusty.deals[0].items.some((i) => i.price === "$8" && /Martinis/.test(i.text)));
+  assert.ok(rusty.deals[0].items.some((i) => i.price === "$4.50"));
+  assert.ok(rusty.deals[0].items.every((i) => !/- \d/.test(i.text)));
+  assert.ok(venuesInView(venues, fed).some((v) => v.id === "rusty-scupper"));
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

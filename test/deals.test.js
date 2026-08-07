@@ -1936,9 +1936,10 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
   // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
   // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
+  // Minato + Brass Tap → showable 43, total 71.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 41);
-  assert.equal(venues.length, 69);
+  assert.equal(showable, 43);
+  assert.equal(venues.length, 71);
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
@@ -2067,6 +2068,58 @@ test("Mount Vernon batch 1: Owl Bar, Sugarvale, Unity CoS ship 2026-08-07", asyn
   const unityText = unity.deals.flatMap((d) => d.items).map((i) => i.text).join(" | ");
   assert.doesNotMatch(unityText, /Steak|Catfish|Burger and fries|prosecco|bottle of wine/i);
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "unity-bar-restaurant"));
+});
+
+test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const mv = Object.fromEntries(views.map((v) => [v.slug, v]))["mount-vernon"];
+
+  // Minato — HTML source_url (not PDF); Mon–Sat 4–7; dine-in + gratuity note.
+  const minato = byId["minato-sushi-bar"];
+  assert.equal(minato.status, "verified");
+  assert.equal(minato.neighborhood, "Mid-Town Belvedere");
+  assert.equal(minato.phone, "(410) 332-0332");
+  assert.equal(minato.source_url, "https://www.minatosushibar.com/happy-hour/");
+  assert.match(minato.notes_public ?? "", /Dine-in only/i);
+  assert.match(minato.notes_public ?? "", /20% gratuity/i);
+  assert.match(minato.ops_notes ?? "", /403|plain fetch/i);
+  assert.equal(minato.deals.length, 1);
+  assert.deepEqual(minato.deals[0].days, ["mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.ok(!minato.deals[0].days.includes("sun"));
+  assert.equal(minato.deals[0].start, 960);
+  assert.equal(minato.deals[0].end, 1140);
+  assert.ok(minato.deals[0].items.some((i) => /Special Maki.*\$12\.50/.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /\$8\.95/.test(i.text) && /Cocktail/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => i.price === "$3.95" && /Small Beers/i.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "minato-sushi-bar"));
+
+  // Brass Tap — PDF prices; window Mon–Sat 2–7 from /baltimore in ops_notes; no late night; no drink name.
+  const brass = byId["brass-tap-baltimore"];
+  assert.equal(brass.status, "verified");
+  assert.equal(brass.neighborhood, "Mid-Town Belvedere");
+  assert.equal(brass.phone, "(888) 901-2337");
+  assert.match(brass.source_url, /happyhour\/71\.pdf/);
+  assert.match(brass.ops_notes ?? "", /brasstapbeerbar\.com\/baltimore/);
+  assert.match(brass.ops_notes ?? "", /source_document_date=2026-05-30/);
+  assert.match(brass.ops_notes ?? "", /Late Night|latehappyhour/i);
+  assert.equal(brass.deals.length, 1);
+  assert.deepEqual(brass.deals[0].days, ["mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(brass.deals[0].start, 840);
+  assert.equal(brass.deals[0].end, 1140);
+  // $5 tier has four items including Coconut Key Lime Pie.
+  assert.ok(brass.deals[0].items.some((i) => /Coconut Key Lime Pie \$5/.test(i.text)));
+  assert.ok(brass.deals[0].items.some((i) => /Golden Truth \$5/.test(i.text)));
+  assert.ok(brass.deals[0].items.some((i) => /Select Pints \$5/.test(i.text)));
+  assert.ok(brass.deals[0].items.some((i) => /House Wine \$5/.test(i.text)));
+  // Drink of the Week tier only — not this week's cocktail name.
+  assert.ok(brass.deals[0].items.some((i) => i.text === "Drink of the Week $7"));
+  const brassText = brass.deals[0].items.map((i) => i.text).join(" | ");
+  assert.doesNotMatch(brassText, /Blue Mermaid/i);
+  assert.doesNotMatch(brassText, /Late Night|9pm|10pm/i);
+  assert.ok(brass.deals[0].items.some((i) => /Cheeseburger & Fries \$9/.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "brass-tap-baltimore"));
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

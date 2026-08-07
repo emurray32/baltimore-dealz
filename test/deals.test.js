@@ -2095,9 +2095,13 @@ test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
   assert.ok(!minato.deals[0].days.includes("sun"));
   assert.equal(minato.deals[0].start, 960);
   assert.equal(minato.deals[0].end, 1140);
-  assert.ok(minato.deals[0].items.some((i) => /Special Maki.*\$12\.50/.test(i.text)));
+  // Eight price tiers — not the full menu (CoS after Eric card-length feedback).
+  assert.equal(minato.deals[0].items.length, 8);
+  assert.ok(minato.deals[0].items.some((i) => /special maki.*\$12\.50/i.test(i.text)));
   assert.ok(minato.deals[0].items.some((i) => /\$8\.95/.test(i.text) && /Cocktail/i.test(i.text)));
-  assert.ok(minato.deals[0].items.some((i) => i.price === "$3.95" && /Small Beers/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Small beers \$3\.95/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Apps.*\$5\.50/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Wine \$6\.75/i.test(i.text)));
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "minato-sushi-bar"));
 
   // Brass Tap — PDF prices; window Mon–Sat 2–7 from /baltimore in ops_notes; no late night; no drink name.
@@ -2123,6 +2127,8 @@ test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
   const brassText = brass.deals[0].items.map((i) => i.text).join(" | ");
   assert.doesNotMatch(brassText, /Blue Mermaid/i);
   assert.doesNotMatch(brassText, /Late Night|9pm|10pm/i);
+  // $6 Shots is regular menu price, not HH — Coconut Key Lime Pie lives on $5 tier only.
+  assert.doesNotMatch(brassText, /\$6 Shots/i);
   assert.ok(brass.deals[0].items.some((i) => /Cheeseburger & Fries \$9/.test(i.text)));
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "brass-tap-baltimore"));
 });

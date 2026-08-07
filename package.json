@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "node scripts/build-static.mjs",
-    "test": "node --test \"test/*.test.js\""
+    "test": "node --test \"test/*.test.js\"",
+    "check-sources": "node scripts/check-sources.mjs"
   }
 }

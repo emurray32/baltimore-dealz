@@ -53,6 +53,14 @@
         "Riverside",
         "Port Covington"
       ]
+    },
+    {
+      "slug": "mount-vernon",
+      "label": "Mount Vernon",
+      "neighborhoods": [
+        "Mount Vernon",
+        "Mid-Town Belvedere"
+      ]
     }
   ]
 }

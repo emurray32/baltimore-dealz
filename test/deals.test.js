@@ -1935,9 +1935,10 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
   // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
+  // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 38);
-  assert.equal(venues.length, 66);
+  assert.equal(showable, 41);
+  assert.equal(venues.length, 69);
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
@@ -2005,6 +2006,67 @@ test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
   assert.ok(rusty.deals[0].items.some((i) => i.price === "$4.50"));
   assert.ok(rusty.deals[0].items.every((i) => !/- \d/.test(i.text)));
   assert.ok(venuesInView(venues, fed).some((v) => v.id === "rusty-scupper"));
+});
+
+test("Mount Vernon batch 1: Owl Bar, Sugarvale, Unity CoS ship 2026-08-07", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+  const mv = bySlug["mount-vernon"];
+  assert.deepEqual(mv.neighborhoods, ["Mount Vernon", "Mid-Town Belvedere"]);
+
+  // Owl Bar — Mid-Town Belvedere; Tue–Fri 4–7 + Sat 2–6; nine items.
+  const owl = byId["owl-bar"];
+  assert.equal(owl.status, "verified");
+  assert.equal(owl.neighborhood, "Mid-Town Belvedere");
+  assert.equal(owl.phone, "(410) 347-0888");
+  assert.equal(owl.deals.length, 2);
+  const owlWeek = owl.deals.find((d) => d.days.includes("tue") && d.days.length === 4);
+  const owlSat = owl.deals.find((d) => d.days.length === 1 && d.days[0] === "sat");
+  assert.equal(owlWeek.start, 960);
+  assert.equal(owlWeek.end, 1140);
+  assert.equal(owlSat.start, 840);
+  assert.equal(owlSat.end, 1080);
+  assert.equal(owlWeek.items.length, 9);
+  assert.ok(owlWeek.items.some((i) => i.price === "$6.50" && /Sangria/i.test(i.text)));
+  assert.ok(!owl.deals.some((d) => d.days.includes("mon") || d.days.includes("sun")));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "owl-bar"));
+
+  // Sugarvale — Tue–Sun 5–7; no Monday; no phone; Sunday all-night is note only.
+  const sugar = byId.sugarvale;
+  assert.equal(sugar.status, "verified");
+  assert.equal(sugar.neighborhood, "Mount Vernon");
+  assert.equal(sugar.phone, undefined);
+  assert.match(sugar.notes_public ?? "", /Sunday.*all night/i);
+  const sugarHh = sugar.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(sugarHh.days, ["tue", "wed", "thu", "fri", "sat", "sun"]);
+  assert.equal(sugarHh.start, 1020);
+  assert.equal(sugarHh.end, 1140);
+  assert.ok(!sugarHh.days.includes("mon"));
+  assert.ok(sugarHh.items.some((i) => /\$10/.test(i.text) && /cocktail/i.test(i.text)));
+  assert.ok(sugar.deals.some((d) => d.days[0] === "tue" && d.items.some((i) => /SV Burger/i.test(i.text))));
+  assert.ok(sugar.deals.some((d) => d.days[0] === "wed" && d.items.some((i) => /wine glasses/i.test(i.text))));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "sugarvale"));
+
+  // Unity — Mon–Fri 4–7 HH only; no daily-special deal rows; gratuity note.
+  const unity = byId["unity-bar-restaurant"];
+  assert.equal(unity.status, "verified");
+  assert.equal(unity.neighborhood, "Mount Vernon");
+  assert.equal(unity.phone, "(443) 759-4082");
+  assert.match(unity.notes_public ?? "", /18% gratuity/i);
+  assert.match(unity.notes_public ?? "", /Daily specials/i);
+  assert.match(unity.ops_notes ?? "", /source_document_date=2025-12-17/);
+  assert.equal(unity.deals.length, 1);
+  assert.deepEqual(unity.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(unity.deals[0].start, 960);
+  assert.equal(unity.deals[0].end, 1140);
+  assert.ok(unity.deals[0].items.some((i) => i.price === "$3.50"));
+  assert.ok(unity.deals[0].items.some((i) => /Wings \(6\) \$10/.test(i.text)));
+  // Daily specials must not appear as deal items.
+  const unityText = unity.deals.flatMap((d) => d.items).map((i) => i.text).join(" | ");
+  assert.doesNotMatch(unityText, /Steak|Catfish|Burger and fries|prosecco|bottle of wine/i);
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "unity-bar-restaurant"));
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
+  "derived_from": "RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -5301,6 +5301,322 @@
       ],
       "lat": 39.2807081,
       "lon": -76.6081434,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "owl-bar",
+      "name": "The Owl Bar",
+      "neighborhood": "Mid-Town Belvedere",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1017 N. Charles Street, Baltimore, MD 21201",
+      "phone": "(410) 347-0888",
+      "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. NSA Mid-Town Belvedere (Hotel Belvedere / 1017 N Charles); mount-vernon view includes Mid-Town Belvedere — do not create a one-venue page. Sun–Mon closed (site). Sat HH 2–6 is after brunch ends 2pm; dinner service starts 4pm is not door time. Nine items match menu JSON Happy Hour object. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Well Spirits $7",
+              "price": "$7"
+            },
+            {
+              "text": "Margaritas $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sangria $6.50",
+              "price": "$6.50"
+            },
+            {
+              "text": "Stella $6",
+              "price": "$6"
+            },
+            {
+              "text": "Bud Light $5",
+              "price": "$5"
+            },
+            {
+              "text": "Owl Lager $5",
+              "price": "$5"
+            },
+            {
+              "text": "Sliders $9",
+              "price": "$9"
+            },
+            {
+              "text": "Wings $9",
+              "price": "$9"
+            },
+            {
+              "text": "Vegan Potstickers $9",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "wings",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Well Spirits $7",
+              "price": "$7"
+            },
+            {
+              "text": "Margaritas $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sangria $6.50",
+              "price": "$6.50"
+            },
+            {
+              "text": "Stella $6",
+              "price": "$6"
+            },
+            {
+              "text": "Bud Light $5",
+              "price": "$5"
+            },
+            {
+              "text": "Owl Lager $5",
+              "price": "$5"
+            },
+            {
+              "text": "Sliders $9",
+              "price": "$9"
+            },
+            {
+              "text": "Wings $9",
+              "price": "$9"
+            },
+            {
+              "text": "Vegan Potstickers $9",
+              "price": "$9"
+            }
+          ],
+          "start": 840,
+          "end": 1080,
+          "time_window": "2pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "wings",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3018443,
+      "lon": -76.615499,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "sugarvale",
+      "name": "Sugarvale",
+      "neighborhood": "Mount Vernon",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "4 W. Madison St., Baltimore, MD 21201",
+      "source_url": "http://sugarvalebmore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "notes_public": "Sunday: happy hour prices all night.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. HH 5–7pm every open day: Tue–Sun (Mon closed). Sunday all-night claim is notes only — card window stays 5–7pm (site close times print as 11am on Sun/Tue, typo; do not invent end times). Phone not on official site — omit. Tue burger / Wed wine weekly specials as separate day rows. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Select classic cocktails $10",
+              "price": "$10"
+            },
+            {
+              "text": "Select beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Select wine $8",
+              "price": "$8"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "http://sugarvalebmore.com/",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$3 off SV Burger",
+              "price": "$3 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-08-07",
+          "source_url": "http://sugarvalebmore.com/",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$3 off wine glasses (happy-hour wine excluded)",
+              "price": "$3 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-08-07",
+          "source_url": "http://sugarvalebmore.com/",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2986734,
+      "lon": -76.6160416,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "unity-bar-restaurant",
+      "name": "Unity Bar & Restaurant",
+      "neighborhood": "Mount Vernon",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "111 W. Centre St, Baltimore, MD 21201",
+      "phone": "(443) 759-4082",
+      "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "notes_public": "18% gratuity added to checks. Daily specials Mon–Thu 4–7pm — see menu.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. Ship HH drinks+food Mon–Fri 4–7 only. Daily specials (steak $22, catfish $19, burger $19, taco ladder) and half-price wine/prosecco do NOT ship as deal rows — menu prices under specials with no discount stated (same class as Rusty Surf & Turf upcharge); note only. source_document_date=2025-12-17 (HTTP Last-Modified). Host unitybarrestaurant.com has injected SEO spam — treat as unstable for monitor. Archive RESEARCH/ig-evidence-2026-08-05/Unity_HH_12_5.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Domestic Beer $3.50",
+              "price": "$3.50"
+            },
+            {
+              "text": "Import Beer $4.50",
+              "price": "$4.50"
+            },
+            {
+              "text": "Red Sangria $5",
+              "price": "$5"
+            },
+            {
+              "text": "Wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Rail $6",
+              "price": "$6"
+            },
+            {
+              "text": "Lemon Drop $7",
+              "price": "$7"
+            },
+            {
+              "text": "Margarita $7",
+              "price": "$7"
+            },
+            {
+              "text": "Luna Azul $8",
+              "price": "$8"
+            },
+            {
+              "text": "Hennessy $8",
+              "price": "$8"
+            },
+            {
+              "text": "Casamigos Blanco $9",
+              "price": "$9"
+            },
+            {
+              "text": "Wings (6) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Sweet & Spicy Shrimp (4) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Cheeseburger Sliders (2) $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "drink",
+            "wings",
+            "seafood/crab",
+            "sliders"
+          ]
+        }
+      ],
+      "lat": 39.296086,
+      "lon": -76.6179506,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
     }
   ]

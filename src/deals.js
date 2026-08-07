@@ -42,8 +42,16 @@ export function isRenderable(venue) {
   return venue.status === VERIFIED;
 }
 
+// City-wide marker: every venue, not a hand-written neighbourhood list.
+// New neighbourhoods appear on the front page without updating this view.
+export function isCityWideView(view) {
+  return view?.neighborhoods === "*";
+}
+
 // Every venue in the view's neighborhoods, including those with nothing to show.
+// City-wide ("*") returns the full list once (no per-neighbourhood duplication).
 export function venuesInView(venues, view) {
+  if (isCityWideView(view)) return venues;
   return venues.filter((venue) => view.neighborhoods.includes(venue.neighborhood));
 }
 

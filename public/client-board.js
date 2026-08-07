@@ -17,10 +17,10 @@
   var todayLabel = BD.dayLabel(todayKey);
   var minutesNow = BD.minutesNowInZone(now);
 
-  // Header line under the title: "Friday · Baltimore time"
+  // Header line under the title: day name only (city is in the page title).
   var headerMetas = document.querySelectorAll("header > p.meta");
   if (headerMetas.length > 0) {
-    headerMetas[0].textContent = todayLabel + " · Baltimore time";
+    headerMetas[0].textContent = todayLabel;
   }
 
   // Swap the "On tonight" cards for today's pre-rendered template (static build).

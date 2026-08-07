@@ -11,10 +11,15 @@ import {
 } from "./deals.js";
 import { escapeHtml } from "./page.js";
 
-// Which board "owns" this venue for the back-link — first view whose
-// neighbourhoods list includes it, else the default view.
+// Which board "owns" this venue for the back-link — first *neighbourhood*
+// view whose list includes it, else the default view. City-wide ("*") is
+// skipped so the back link stays neighbourhood-local, not the city front page.
 export function boardViewForVenue(venue, views, fallback) {
-  const hit = views.find((v) => v.neighborhoods.includes(venue.neighborhood));
+  const hit = views.find(
+    (v) =>
+      Array.isArray(v.neighborhoods) &&
+      v.neighborhoods.includes(venue.neighborhood),
+  );
   return hit ?? fallback ?? views[0];
 }
 

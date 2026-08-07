@@ -379,7 +379,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
 <body>
   <header>
     <h1>${escapeHtml(title)}</h1>
-    <p class="meta">${escapeHtml(dayLabel(todayKey))} · Baltimore time</p>
+    <p class="meta">${escapeHtml(dayLabel(todayKey))}</p>
     ${viewSwitcher(views, view, viewHref)}
     <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>

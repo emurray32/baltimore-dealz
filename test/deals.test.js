@@ -84,8 +84,10 @@ test("the board at Friday 11pm and Saturday 1am is not the same board", async ()
   const saturday = await boardFor(SAT_1AM_EDT);
 
   assert.notEqual(friday, saturday);
-  assert.match(friday, /Friday · Baltimore time/);
-  assert.match(saturday, /Saturday · Baltimore time/);
+  assert.match(friday, /<p class="meta">Friday<\/p>/);
+  assert.match(saturday, /<p class="meta">Saturday<\/p>/);
+  assert.doesNotMatch(friday, /Baltimore time/);
+  assert.doesNotMatch(saturday, /Baltimore time/);
 
   const onTonight = (html) => html.split("<h2>Good to know</h2>")[0];
   assert.match(onTonight(friday), /Free Beer When You Buy Lunch/);
@@ -433,15 +435,49 @@ test("views.json has a usable default view", async () => {
   assert.equal(typeof fallback.slug, "string");
   assert.equal(findView(views, fallback.slug), fallback);
   assert.equal(findView(views, "no-such-view"), undefined);
+  // City-wide is first so / lands on Tonight in Baltimore without hardcoding
+  // the slug in server.js / static build.
+  assert.equal(fallback.slug, "baltimore");
+  assert.equal(fallback.neighborhoods, "*");
 
   for (const view of views) {
+    if (view.neighborhoods === "*") {
+      assert.equal(typeof view.label, "string");
+      continue;
+    }
     assert.ok(Array.isArray(view.neighborhoods) && view.neighborhoods.length > 0);
     assert.equal(typeof view.label, "string");
   }
 });
 
+test("city-wide view includes every venue once (not a neighbourhood list)", async () => {
+  const views = await loadViews();
+  const city = findView(views, "baltimore");
+  assert.ok(city);
+  assert.equal(city.neighborhoods, "*");
+  assert.equal(city.label, "Baltimore");
+
+  const venues = await loadVenues();
+  const inCity = venuesInView(venues, city);
+  assert.equal(inCity.length, venues.length);
+  // Same objects, same order — no duplication when a venue could match many boards.
+  assert.deepEqual(
+    inCity.map((v) => v.id),
+    venues.map((v) => v.id),
+  );
+
+  // Switcher lists Baltimore first, then the neighbourhood boards.
+  assert.equal(views[0].slug, "baltimore");
+  assert.ok(views.some((v) => v.slug === "canton"));
+});
+
 test("every venue's neighborhood belongs to some view", async () => {
-  const covered = new Set((await loadViews()).flatMap((view) => view.neighborhoods));
+  // Only neighbourhood lists count — "*" is not a neighbourhood name.
+  const covered = new Set(
+    (await loadViews())
+      .filter((view) => Array.isArray(view.neighborhoods))
+      .flatMap((view) => view.neighborhoods),
+  );
   for (const v of await loadVenues()) {
     assert.ok(covered.has(v.neighborhood), `${v.id}: "${v.neighborhood}" is in no view`);
   }

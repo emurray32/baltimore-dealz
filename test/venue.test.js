@@ -113,6 +113,8 @@ test("boardViewForVenue picks a view that includes the neighbourhood", async () 
   const board = boardViewForVenue(delia, views, defaultView(views));
   assert.ok(board.neighborhoods.includes("South Baltimore"));
   assert.equal(board.slug, "federal-hill");
+  // City-wide is default / first, but back-link must stay neighbourhood-local.
+  assert.notEqual(board.slug, "baltimore");
 });
 
 test("static build writes a venue page for every venue without ops_notes leaks", async () => {

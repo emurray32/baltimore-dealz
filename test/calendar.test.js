@@ -251,7 +251,7 @@ test("board links the calendar feed next to Map view", async () => {
   const view = defaultView(views);
   const venues = venuesInView(await loadVenues(), view);
   const html = renderBoard(venues, view, views, NOW);
-  assert.match(html, /href="\/canton\/calendar\.ics"/);
+  assert.match(html, new RegExp(`href="/${view.slug}/calendar\\.ics"`));
   assert.match(html, /Add happy hours to calendar/);
 });
 
@@ -259,16 +259,19 @@ test("static build writes per-view and root calendar.ics", async () => {
   const outDir = join(ROOT, ".scratch", "cal-static-test");
   await rm(outDir, { recursive: true, force: true });
   const result = await buildStatic({ outDir, now: NOW });
+  const fallback = defaultView(await loadViews());
   assert.ok(result.written.includes("canton/calendar.ics"));
+  assert.ok(result.written.includes(`${fallback.slug}/calendar.ics`));
   assert.ok(result.written.includes("calendar.ics"));
 
-  const viewIcs = await readFile(join(outDir, "canton", "calendar.ics"), "utf8");
+  // Root feed mirrors the default (city-wide) view, not a hardcoded neighbourhood.
+  const viewIcs = await readFile(join(outDir, fallback.slug, "calendar.ics"), "utf8");
   const rootIcs = await readFile(join(outDir, "calendar.ics"), "utf8");
   assert.equal(rootIcs, viewIcs);
   assert.match(viewIcs, /BEGIN:VCALENDAR/);
   assert.match(viewIcs, /union-hill-kitchen/);
 
-  const board = await readFile(join(outDir, "canton", "index.html"), "utf8");
+  const board = await readFile(join(outDir, fallback.slug, "index.html"), "utf8");
   assert.match(board, /href="calendar\.ics"/);
 
   await rm(outDir, { recursive: true, force: true });

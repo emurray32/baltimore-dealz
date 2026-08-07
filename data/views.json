@@ -2,6 +2,11 @@
   "schema_version": 1,
   "views": [
     {
+      "slug": "baltimore",
+      "label": "Baltimore",
+      "neighborhoods": "*"
+    },
+    {
       "slug": "canton",
       "label": "Canton",
       "neighborhoods": [

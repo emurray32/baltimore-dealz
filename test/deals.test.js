@@ -157,7 +157,6 @@ test("the seed data really does contain unverified venues", async () => {
       "the-point-in-fells",
       "the-worthington",
       "walts-inn",
-      "watershed",
     ],
   );
 });
@@ -683,7 +682,10 @@ test("ops_notes never reach the page; notes_public do", async () => {
     }
   }
 
-  const monday = await boardFor(new Date("2026-08-03T20:00:00Z"));
+  // City-wide board — notes_public venues live outside Canton (Fells, Harbor East, Fed Hill).
+  const views = await loadViews();
+  const city = views.find((v) => v.slug === "baltimore") ?? defaultView(views);
+  const monday = await boardFor(new Date("2026-08-03T20:00:00Z"), city);
   for (const v of withPublic) {
     assert.ok(monday.includes(escapeHtml(v.notes_public)), `${v.id} notes_public missing`);
   }
@@ -1292,10 +1294,11 @@ test("expansion load: four priced venues and two new views", async () => {
   assert.ok(!hh.food_categories.includes("pizza"), "pizza is weekly specials, not HH");
   assert.ok(hs.deals.some((d) => d.days.includes("mon") && !d.happy_hour));
 
-  // Wayward / Azumi / M8 never invented onto the board.
-  for (const id of ["wayward", "m8-beer", "azumi"]) {
+  // Wayward / M8 never invented onto the board. Azumi ships 2026-08-07 from venue PDF.
+  for (const id of ["wayward", "m8-beer"]) {
     assert.equal(byId[id], undefined, id);
   }
+  assert.equal(byId.azumi?.status, "verified");
 
   // Views surface the priced rows.
   assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "loch-bar"));
@@ -1694,7 +1697,7 @@ test("MaGerk's records Weekdays→Mon–Fri inference and cites 32 OZ on image+P
 
 // --- Fells Point pass 1 ---------------------------------------------------
 
-test("Fells Point view: five verified priced + quiet stubs", async () => {
+test("Fells Point view: eight verified priced + quiet stubs", async () => {
   const views = await loadViews();
   const fells = views.find((v) => v.slug === "fells-point");
   assert.ok(fells, "fells-point view missing");
@@ -1712,10 +1715,13 @@ test("Fells Point view: five verified priced + quiet stubs", async () => {
   assert.match(byId["the-point-in-fells"].source_url, /thepointfells\.com/);
   assert.doesNotMatch(byId["the-point-in-fells"].source_url, /thepointinfells/);
 
-  // 2026-08-07 deal-first ship: Horse + Rockwell (Tue only) + Papi's Fells.
+  // 2026-08-07 deal-first ship: Horse + Rockwell (Tue only) + Papi's Fells + Tandoor + Todd + Choptank.
   assert.equal(byId["the-horse-you-came-in-on"].status, "verified");
   assert.equal(byId["the-rockwell-fells"].status, "verified");
   assert.equal(byId["papis-taco-joint-fells"].status, "verified");
+  assert.equal(byId["harbor-tandoor"].status, "verified");
+  assert.equal(byId["todd-conners"].status, "verified");
+  assert.equal(byId["the-choptank"].status, "verified");
   assert.equal(byId["the-rockwell-fells"].deals.length, 1);
   assert.deepEqual(byId["the-rockwell-fells"].deals[0].days, ["tue"]);
   assert.match(byId["papis-taco-joint-fells"].source_url, /fellspoint/);
@@ -1728,6 +1734,9 @@ test("Fells Point view: five verified priced + quiet stubs", async () => {
     "the-horse-you-came-in-on",
     "the-rockwell-fells",
     "papis-taco-joint-fells",
+    "harbor-tandoor",
+    "todd-conners",
+    "the-choptank",
   ]) {
     assert.equal(byId[id].neighborhood, "Fells Point", id);
   }
@@ -1739,20 +1748,23 @@ test("Fells Point view: five verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 10);
+  assert.equal(inView.length, 13);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
       "admirals-cup",
       "alexanders-tavern-fells",
+      "harbor-tandoor",
       "maxs-taphouse",
       "papis-taco-joint-fells",
       "rye-of-baltimore",
       "stuggys",
       "thames-street-oyster-house",
+      "the-choptank",
       "the-horse-you-came-in-on",
       "the-point-in-fells",
       "the-rockwell-fells",
+      "todd-conners",
     ].sort(),
   );
 });
@@ -1812,6 +1824,115 @@ test("2026-08-07 deal-first load: Horse, Rockwell, Papi's Fells + Hampden", asyn
 
   assert.ok(venuesInView(venues, hampden).some((v) => v.id === "papis-taco-joint-hampden"));
   assert.ok(venuesInView(venues, city).some((v) => v.id === "papis-taco-joint-hampden"));
+});
+
+test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed Ace", async () => {
+  const venues = await loadVenues();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const views = await loadViews();
+  const city = views.find((v) => v.slug === "baltimore");
+  const fells = views.find((v) => v.slug === "fells-point");
+  const harbor = views.find((v) => v.slug === "inner-harbor");
+  const fed = views.find((v) => v.slug === "federal-hill");
+
+  // Fells HTML + PDF
+  const tandoor = byId["harbor-tandoor"];
+  assert.equal(tandoor.status, "verified");
+  assert.match(tandoor.source_url, /harbortandoor\.com\/lunch-happy-hour/);
+  const tHH = tandoor.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(tHH.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(tHH.start, 900);
+  assert.equal(tHH.end, 1080);
+  assert.ok(tHH.items.some((i) => /\$8 Papadum/.test(i.text)));
+  assert.ok(tHH.items.some((i) => /\$4 Local Draft/.test(i.text)));
+
+  const todd = byId["todd-conners"];
+  assert.equal(todd.status, "verified");
+  assert.equal(todd.deals.length, 5);
+  assert.ok(todd.deals.some((d) => d.days[0] === "mon" && /\$7 Build Your Own Burger/.test(d.items[0].text)));
+  assert.ok(todd.deals.some((d) => d.days.includes("sat") && d.items.some((i) => /\$4 Mimosas/.test(i.text))));
+  // Game-day contingent specials must not ship.
+  for (const d of todd.deals) {
+    assert.doesNotMatch(d.items.map((i) => i.text).join(" "), /Oriole|Natty Boh|Devil.?s Backbone|game.?day/i);
+  }
+
+  const chop = byId["the-choptank"];
+  assert.equal(chop.status, "verified");
+  assert.match(chop.notes_public ?? "", /bar only/i);
+  assert.match(chop.ops_notes ?? "", /source_document_date=2025-06-09/);
+  assert.doesNotMatch(chop.source_url, /thechoptank\.com(?!restaurant)/);
+  const cHH = chop.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(cHH.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(cHH.start, 960);
+  assert.equal(cHH.end, 1140);
+  assert.ok(cHH.items.some((i) => /\$8 Crushes/.test(i.text)));
+  assert.ok(cHH.items.some((i) => /\$1\.50/.test(i.text) && /Oyster/i.test(i.text)));
+
+  // Harbor East PDFs
+  const joyce = byId["james-joyce-irish-pub"];
+  assert.equal(joyce.neighborhood, "Harbor East");
+  assert.match(joyce.notes_public ?? "", /bar only/i);
+  assert.match(joyce.ops_notes ?? "", /source_document_date=2026-04-27/);
+  const jHH = joyce.deals.find((d) => d.happy_hour === true);
+  assert.equal(jHH.start, 960);
+  assert.equal(jHH.end, 1140);
+  assert.ok(jHH.items.some((i) => /\$8 Irish Orange Crush/.test(i.text)));
+
+  const azumi = byId["azumi"];
+  assert.equal(azumi.neighborhood, "Harbor East");
+  assert.match(azumi.notes_public ?? "", /inside bar/i);
+  assert.match(azumi.ops_notes ?? "", /source_document_date=2026-05-05/);
+  const aHH = azumi.deals.find((d) => d.happy_hour === true);
+  assert.equal(aHH.start, 900);
+  assert.equal(aHH.end, 1080);
+  assert.ok(aHH.items.some((i) => /\$10 Cocktails/.test(i.text)));
+  assert.ok(aHH.items.some((i) => /\$7 Handrolls/.test(i.text)));
+
+  const ace = byId["order-of-the-ace"];
+  assert.equal(ace.neighborhood, "Harbor East");
+  assert.equal(ace.phone, undefined);
+  assert.match(ace.ops_notes ?? "", /source_document_date=2025-09-12/);
+  assert.match(ace.ops_notes ?? "", /filename/i);
+  const oHH = ace.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(oHH.days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(oHH.start, 1020);
+  assert.equal(oHH.end, 1140);
+  // Both salads ship at $7 — do not drop one.
+  assert.ok(oHH.items.some((i) => /Chopped Salad \$7/.test(i.text)));
+  assert.ok(oHH.items.some((i) => /Caesar Salad \$7/.test(i.text)));
+  // No Monday invented from PDF "weekdays".
+  assert.ok(!oHH.days.includes("mon"));
+
+  // Watershed: upgrade from quiet stub + dual window
+  const shed = byId["watershed"];
+  assert.equal(shed.status, "verified");
+  assert.equal(shed.neighborhood, "Federal Hill");
+  assert.equal(shed.phone, "(410) 888-3878");
+  assert.match(shed.notes_public ?? "", /March 2025|Cross Street/i);
+  assert.match(shed.ops_notes ?? "", /source_document_date=2025-03-20/);
+  assert.match(shed.ops_notes ?? "", /early re-check/i);
+  assert.equal(shed.deals.length, 2);
+  const dayHH = shed.deals.find((d) => d.start === 900);
+  const late = shed.deals.find((d) => d.start === 1320);
+  assert.deepEqual(dayHH.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(dayHH.end, 1080);
+  assert.deepEqual(late.days, ["fri", "sat"]);
+  assert.equal(late.end, null);
+  assert.match(late.time_window, /10pm-1am/i);
+  assert.ok(dayHH.items.some((i) => /\$3 \/ 16oz Beer/.test(i.text)));
+  assert.ok(dayHH.items.some((i) => /Buck-a-Shuck|\$1 each/.test(i.text)));
+
+  // Views pick them up
+  assert.ok(venuesInView(venues, fells).some((v) => v.id === "the-choptank"));
+  assert.ok(venuesInView(venues, harbor).some((v) => v.id === "azumi"));
+  assert.ok(venuesInView(venues, harbor).some((v) => v.id === "order-of-the-ace"));
+  assert.ok(venuesInView(venues, fed).some((v) => v.id === "watershed"));
+  assert.ok(venuesInView(venues, city).some((v) => v.id === "order-of-the-ace"));
+
+  // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
+  const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
+  assert.equal(showable, 35);
+  assert.equal(venues.length, 63);
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

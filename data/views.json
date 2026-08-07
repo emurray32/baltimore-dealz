@@ -30,6 +30,13 @@
       ]
     },
     {
+      "slug": "hampden",
+      "label": "Hampden",
+      "neighborhoods": [
+        "Hampden"
+      ]
+    },
+    {
       "slug": "inner-harbor",
       "label": "Inner Harbor",
       "neighborhoods": [

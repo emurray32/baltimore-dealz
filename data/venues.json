@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
+  "derived_from": "RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -4984,6 +4984,323 @@
       ],
       "lat": 39.283446,
       "lon": -76.602183,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "ajs-on-hanover",
+      "name": "AJ's on Hanover",
+      "neighborhood": "South Baltimore",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1500 South Hanover Street, Baltimore, MD 21230",
+      "phone": "(410) 800-2657",
+      "source_url": "https://www.ajsonhanover.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "notes_public": "Happy Hour is subject to change during festivals, stadium events and at management's discretion.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. Ship Mon–Fri 5–7pm + Sat 2–5pm (CoS reopened Monday after kitchen hours + /drinks HTML + flyer all affirm Mon; footer omits Mon and is the stale block). Secondary price/window source (readable HTML, no OCR): https://www.ajsonhanover.com/drinks — HAPPY HOUR COCKTAILS $8 during happy hour (Monday-Friday 5-7pm & Saturday 2-5pm). Flyer seven offers verify exactly. NSA = South Baltimore; federal-hill view already includes South Baltimore. Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/AJs_HH_Happy_Hour_5x7.png (machine-local). Source: RESEARCH/FED_HILL_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 House Wines",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Drafts",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Select Cocktails",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Select Crushes",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Snack Wraps (2)",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Sliders (2)",
+              "price": "$8"
+            },
+            {
+              "text": "$9 Brussels",
+              "price": "$9"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.ajsonhanover.com/happy-hour",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$5 House Wines",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Drafts",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Select Cocktails",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Select Crushes",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Snack Wraps (2)",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Sliders (2)",
+              "price": "$8"
+            },
+            {
+              "text": "$9 Brussels",
+              "price": "$9"
+            }
+          ],
+          "start": 840,
+          "end": 1020,
+          "time_window": "2pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.ajsonhanover.com/happy-hour",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2724567,
+      "lon": -76.6154704,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "nicks-fish-house",
+      "name": "Nick's Fish House",
+      "neighborhood": "Port Covington",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "2600 Insulator Drive, Baltimore, MD 21230",
+      "phone": "(410) 347-4123",
+      "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "notes_public": "Happy hour is bar area only.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. PDF Mon–Thu 3–6 bar area only; every line matches CoS pdftotext. source_document_date=2026-04-02 (HTTP Last-Modified). Menus landing https://nicksfishhouse.com/baltimore-seafood-menus/. Honest Port Covington label — not Locust Point; locust-point view extended with Port Covington. Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/Nicks-Happy-Hour-8.pdf. Source: RESEARCH/LOCUST_POINT_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Crushes $9 (Orange, Grapefruit, Lemon)",
+              "price": "$9"
+            },
+            {
+              "text": "Wine $7",
+              "price": "$7"
+            },
+            {
+              "text": "Draft Beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Bottles and Cans $1 Off",
+              "price": "$1 Off"
+            },
+            {
+              "text": "Wings $10 (Buffalo, Old Bay, BBQ)",
+              "price": "$10"
+            },
+            {
+              "text": "Chili Lime Mussels $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fire Cracker Shrimp $10",
+              "price": "$10"
+            },
+            {
+              "text": "Sliders $10",
+              "price": "$10"
+            },
+            {
+              "text": "Deck Fries Basket $5",
+              "price": "$5"
+            },
+            {
+              "text": "1/2lb Steamed Shrimp $13",
+              "price": "$13"
+            },
+            {
+              "text": "Raw Oysters $1.50",
+              "price": "$1.50"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
+          "food_categories": [
+            "drink",
+            "wings",
+            "seafood/crab",
+            "sliders",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2606119,
+      "lon": -76.6135738,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "rusty-scupper",
+      "name": "Rusty Scupper",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "402 Key Highway, Inner Harbor Marina, Baltimore, MD 21230",
+      "phone": "(410) 727-3678",
+      "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "notes_public": "Happy hour is bar & lounge only, dine-in only. Not available on holidays or for special events; cannot be combined with other offers.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. PDF prices have no $ sign (MARTINIS - 8) — stored as $8 / $4.50. source_document_date=2026-06-05 (HTTP Last-Modified). Second source: menus page HTML states HAPPY HOUR Monday—Friday 4:00PM—6:00PM. Landing https://www.rusty-scupper.com/menu/. OSM = Federal Hill (ignore Inner Harbor Marina self-description). Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/RSC-Happy-Hour.pdf. Source: RESEARCH/FED_HILL_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Martinis $8 (Bombay Sapphire or Absolut — Apple, Lemon Drop, or Regular)",
+              "price": "$8"
+            },
+            {
+              "text": "1783 Old Fashioned $9",
+              "price": "$9"
+            },
+            {
+              "text": "Scupper Sunset $8",
+              "price": "$8"
+            },
+            {
+              "text": "Homemade Red Sangria $9",
+              "price": "$9"
+            },
+            {
+              "text": "Passion Breeze $8",
+              "price": "$8"
+            },
+            {
+              "text": "Draft $5 (Yuengling, Rusty Scupper Pale Ale)",
+              "price": "$5"
+            },
+            {
+              "text": "Domestic $4.50 (Budweiser, Bud Light, Coors Light, Miller Lite, Natty Boh 22 oz, Michelob Ultra)",
+              "price": "$4.50"
+            },
+            {
+              "text": "Red Wine $8 (Merlot, Cabernet Sauvignon, Pinot Noir — Jacob's Creek house)",
+              "price": "$8"
+            },
+            {
+              "text": "White Wine $8 (Pinot Grigio, Chardonnay, Moscato — Jacob's Creek house)",
+              "price": "$8"
+            },
+            {
+              "text": "Crab Fried Brussels Sprouts $18",
+              "price": "$18"
+            },
+            {
+              "text": "6 oz. Lobster Tempura $29",
+              "price": "$29"
+            },
+            {
+              "text": "Shrimp Basket $15",
+              "price": "$15"
+            },
+            {
+              "text": "P.E.I. Mussels $13",
+              "price": "$13"
+            },
+            {
+              "text": "Local Oysters $2.50",
+              "price": "$2.50"
+            },
+            {
+              "text": "Crab Cake Sandwich $20",
+              "price": "$20"
+            },
+            {
+              "text": "All American Burger $16",
+              "price": "$16"
+            },
+            {
+              "text": "Crab Hush Puppies (5) $12",
+              "price": "$12"
+            },
+            {
+              "text": "Nashville Hot Wings $13",
+              "price": "$13"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps",
+            "burger",
+            "wings",
+            "sandwich/cheesesteak"
+          ]
+        }
+      ],
+      "lat": 39.2807081,
+      "lon": -76.6081434,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
     }
   ]

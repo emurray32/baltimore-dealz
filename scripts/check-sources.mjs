@@ -37,6 +37,18 @@ const PEER_STALE_DAYS = 180;
  */
 const NEAR_WINDOW = 250;
 
+/**
+ * Last hand-calibration of this instrument (Lead, 2026-08-07 run 2).
+ * Update these numbers when you re-calibrate against hand-verified-good venues.
+ * The tool still over-flags — a MISMATCH is a prompt to look, not proof the board is wrong.
+ */
+const CALIBRATION = {
+  date: "2026-08-07",
+  handVerifiedGood: 11,
+  pass: 6,
+  mismatch: 5,
+};
+
 const STOP = new Set(
   `a an the of and or for with on at to from by in is are was were be been being
    all day night only bar happy hour special specials house select local draft
@@ -846,6 +858,17 @@ async function main() {
   console.log(
     `checked end-to-end          : ${pass + mismatch} of ${results.length}`,
   );
+  console.log("");
+  console.log("--- trust / how to read this ---");
+  console.log(
+    `Last hand-calibration (${CALIBRATION.date}): ${CALIBRATION.pass} PASS / ${CALIBRATION.mismatch} MISMATCH of ${CALIBRATION.handVerifiedGood} hand-verified-good venues.`,
+  );
+  console.log(
+    "A MISMATCH is a prompt to look, not a finding that the board is wrong.",
+  );
+  console.log(
+    "This instrument still over-flags (matching gaps, our shorthand vs source wording).",
+  );
 
   // Second signal: static PDF Last-Modified peer gaps (header only, never filename).
   const flags = peerStaleFlags(allPdfMeta);
@@ -870,7 +893,7 @@ async function main() {
     );
   }
 
-  // Exit 0 always for a report tool — mismatches are findings, not CI red.
+  // Exit 0 always for a report tool — mismatches are prompts to look, not CI red.
   // (Ticket: post the true state; do not join npm test.)
 }
 

@@ -19,7 +19,7 @@ import { buildStatic } from "../scripts/build-static.mjs";
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const FRI_11PM_EDT = new Date("2026-08-08T03:00:00Z");
 
-test("deal cards omit street address; quiet group keeps it", async () => {
+test("deal cards omit street address; quiet venues keep it on their venue page", async () => {
   const venues = await loadVenues();
   const views = await loadViews();
   const canton = views.find((v) => v.slug === "canton");
@@ -29,7 +29,6 @@ test("deal cards omit street address; quiet group keeps it", async () => {
   // A known Canton address must not appear on deal cards.
   const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
   assert.ok(stack.address);
-  // Card section: address gone. Quiet list may still contain other addresses.
   const cards = cardsHtmlForDay(boardVenues, "fri", FRI_11PM_EDT);
   assert.doesNotMatch(cards, new RegExp(stack.address.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 
@@ -38,12 +37,16 @@ test("deal cards omit street address; quiet group keeps it", async () => {
   assert.match(cards, /venue-link/);
   assert.match(cards, /\/venue\//);
 
-  // Quiet group still carries an address for a no-deal venue (HTML-escaped).
+  // Quiet group is gone from the board (Eric rule). Street address still lives
+  // on the venue page for a zero-deal venue — page kept, not deleted.
+  assert.doesNotMatch(html, /class="quiet"/);
   const walt = venues.find((v) => v.id === "walts-inn");
   assert.ok(walt?.address);
+  assert.ok(!html.includes(escapeHtml(walt.address)), "quiet street must not be on board");
+  const waltPage = renderVenuePage(walt, views, FRI_11PM_EDT);
   assert.ok(
-    html.includes(escapeHtml(walt.address)),
-    "quiet group must keep street address",
+    waltPage.includes(escapeHtml(walt.address)),
+    "quiet venue page must keep street address",
   );
 });
 

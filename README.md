@@ -135,11 +135,9 @@ exceptions and conflict logs. A test fails if an `ops_note` reaches the page.
 | `open_unverifiable` | **never** | The place is open, but no deal we can honestly publish |
 
 Unverified venues — and verified venues whose only deals are held (El Bufalo) —
-appear in a collapsed **"no deals we can show"** group: name, address, and a
-public reason, never an offer, hour, or price. That group is Lee's Pint & Shell,
-Walt's Inn, Bo Brooks, Sports Balls, Baltimore Tap House, The Worthington, SoPro,
-Honeypot, and El Bufalo. `notes_public` is the reason text; `ops_notes` never
-renders.
+stay in `venues.json` and keep their `/venue/<id>` pages, but are **not listed
+on the board or the map** (Eric rule 2026-08-07: no blanks on the board).
+`notes_public` is the reason text on the venue page; `ops_notes` never renders.
 
 ### Holding back a single deal row
 
@@ -172,8 +170,8 @@ are flagged stale. Venue-level `last_verified` stays as the fallback provenance
 line. Venue `status` may be `verified`, `open_unverifiable`, or `unconfirmed`
 (neither open nor closed is supportable — no deal cards either way).
 
-A venue whose deals are *all* held simply shows no deals. It keeps its entry and
-its notes.
+A venue whose deals are *all* held simply shows no deals. It keeps its entry in
+`venues.json` and its venue page, but is not listed on the board or map.
 
 ### Required vs optional fields
 

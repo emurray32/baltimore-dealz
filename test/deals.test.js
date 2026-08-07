@@ -256,15 +256,14 @@ test("a venue whose only deal is held drops off deal cards but keeps its data", 
   assert.deepEqual(venueShapeErrors(elBufalo), []); // still valid data
   assert.equal(hasShowableDeal(elBufalo), false);
 
-  // No deal card anywhere. Held offer text never renders. Name + reason land
-  // in the collapsed no-deal group instead.
+  // Held-only = zero showable: still in venues.json, off the board (Eric rule).
   const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
   assert.ok(!html.includes(`<h3>${escapeHtml(elBufalo.name)}`), "El Bufalo has a deal card");
+  assert.ok(!html.includes(escapeHtml(elBufalo.name)), "held-only name must not list on board");
   for (const item of elBufalo.deals.flatMap((d) => d.items.map((i) => i.text))) {
     assert.ok(!html.includes(escapeHtml(item)), `held item "${item}" rendered`);
   }
-  assert.match(html, /El Bufalo Tequila Bar \+ Kitchen/);
-  assert.match(html, /name no days on their site or Instagram/);
+  assert.doesNotMatch(html, /class="quiet"/);
 });
 
 test("dealsForDay drops held rows but keeps the venue's other rows", () => {
@@ -511,9 +510,12 @@ test("ops_notes from a no-deal venue never reach the page", () => {
 
   const html = renderBoard([hidden, venue()], CANTON, [CANTON], FRI_11PM_EDT);
   assert.ok(!html.includes("SECRET-RESEARCH-NOTE"));
-  // Public reason is what the collapsed group is for.
-  assert.match(html, /Hidden Bar/);
-  assert.match(html, /No specials we can verify/);
+  // Zero-deal venues stay off the board entirely (Eric rule 2026-08-07).
+  assert.doesNotMatch(html, /Hidden Bar/);
+  assert.doesNotMatch(html, /No specials we can verify/);
+  assert.doesNotMatch(html, /class="quiet"/);
+  // Control: the showable seed venue still renders.
+  assert.match(html, /Test Venue|Huck|article class="card"/);
 });
 
 test("neighborhood labels come from the city boundary layer, with provenance", async () => {
@@ -665,7 +667,8 @@ test("prices_published:false renders an honest flag, not a blank", async () => {
 test("ops_notes never reach the page; notes_public do", async () => {
   const venues = await loadVenues();
   const withOps = venues.filter((v) => v.ops_notes);
-  const withPublic = venues.filter((v) => v.notes_public && isRenderable(v));
+  // Good-to-know only lists notes for venues that still have a showable deal.
+  const withPublic = venues.filter((v) => v.notes_public && hasShowableDeal(v));
 
   assert.ok(withOps.length > 0 && withPublic.length > 0);
 
@@ -944,13 +947,14 @@ test("vague happy-hour rows without prices carry prices_published:false", async 
   }
 });
 
-// --- no-deal collapsed group ----------------------------------------------
+// --- zero-deal venues off the board (Eric rule 2026-08-07) ----------------
 
-test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + reason only", async () => {
+test("zero-deal and held-only venues stay in data but off the board and map section", async () => {
   const venues = venuesInView(await loadVenues(), CANTON);
   const quiet = noDealVenues(venues);
   const ids = quiet.map((v) => v.id).sort();
 
+  // Still in venues.json (helper still finds them) — render change, not delete.
   assert.deepEqual(ids, [
     "baltimore-tap-house",
     "bark-social-canton",
@@ -967,24 +971,26 @@ test("the no-deal group lists the seven bars, Lee's, and El Bufalo — name + re
   ]);
 
   const html = await boardFor(FRI_11PM_EDT);
-  assert.match(html, /12 more spots, no deals we can show/);
-  assert.match(html, /<details>/);
-  assert.match(html, /class="quiet"/);
+  assert.doesNotMatch(html, /more spots, no deals we can show/);
+  assert.doesNotMatch(html, /class="quiet"/);
+  assert.doesNotMatch(html, /quiet-list/);
 
   for (const v of quiet) {
-    assert.ok(html.includes(escapeHtml(v.name)), `${v.id} missing from quiet group`);
-    assert.ok(v.notes_public, `${v.id} needs a public reason`);
-    assert.ok(html.includes(escapeHtml(v.notes_public)), `${v.id} reason missing`);
-    // Never a deal card for these.
+    assert.ok(v.notes_public, `${v.id} needs a public reason (venue page / research)`);
+    // Not listed on the board at all — name, reason, or deal card.
+    assert.ok(!html.includes(escapeHtml(v.name)), `${v.id} still listed on board`);
     assert.ok(!html.includes(`<h3>${escapeHtml(v.name)}`), `${v.id} leaked a deal card`);
   }
 
   // Held offer text must never appear for El Bufalo.
   assert.doesNotMatch(html, /16oz Modelo Especial/);
-  // Lee's reason names the blocker, not the promo.
-  assert.match(html, /monthly promo as an image we cannot read/i);
+  // Lee's reason (and inventable promo text) must not appear on the board.
+  assert.doesNotMatch(html, /monthly promo as an image we cannot read/i);
   assert.doesNotMatch(html, /Build-your-own-burger/i);
   assert.doesNotMatch(html, /first Wednesday/i);
+
+  // Board still has showable Canton/Brewers Hill deal venues.
+  assert.match(html, /Huck|Claddagh|Mama|Mahaffey|article class="card"/);
 });
 
 test("Lee's notes_public is a reason, not an offer", async () => {

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mapCenter, mapPayload, popupHtml, renderMap, unmappableNames } from "../src/map.js";
 import { loadVenues } from "../src/venues.js";
 import { loadViews, findView } from "../src/views.js";
-import { venuesInView } from "../src/deals.js";
+import { hasShowableDeal, venuesInView } from "../src/deals.js";
 
 const baseVenue = {
   id: "test-venue",
@@ -34,15 +34,25 @@ const baseVenue = {
 
 const view = { slug: "canton", label: "Canton", neighborhoods: ["Canton", "Brewers Hill"] };
 
-test("payload carries one entry per venue with coordinates", async () => {
+test("payload carries one entry per showable venue with coordinates", async () => {
   const venues = await loadVenues();
   const views = await loadViews();
   const canton = findView(views, "canton");
   const inView = venuesInView(venues, canton);
   const payload = mapPayload(inView);
-  const withCoords = inView.filter((v) => typeof v.lat === "number" && typeof v.lon === "number");
-  assert.equal(payload.length, withCoords.length);
+  const showableWithCoords = inView.filter(
+    (v) => hasShowableDeal(v) && typeof v.lat === "number" && typeof v.lon === "number",
+  );
+  assert.equal(payload.length, showableWithCoords.length);
   assert.ok(payload.length > 0);
+  // Quiet venues with coords must not get pins.
+  assert.ok(
+    payload.length < inView.filter((v) => typeof v.lat === "number").length,
+    "map payload should be smaller than all-coords set",
+  );
+  for (const p of payload) {
+    assert.equal(p.showable, true);
+  }
 });
 
 test("a venue with no coordinates is unmappable, not silently dropped", () => {
@@ -83,29 +93,23 @@ test("no last_verified — the popup simply omits the date line", () => {
   assert.match(html, /source/); // the rest of the meta line survives
 });
 
-test("a venue with nothing showable gets the reason, not an empty deal list", () => {
+test("a venue with nothing showable is omitted from the map payload", () => {
   const venue = {
     ...baseVenue,
     status: "open_unverifiable",
     deals: [],
     notes_public: "Publishes a monthly promo as an image we cannot read.",
   };
-  const [entry] = mapPayload([venue]);
-  assert.equal(entry.showable, false);
-  assert.equal(entry.deals.length, 0);
-  const html = popupHtml(entry);
-  assert.match(html, /image we cannot read/);
-  assert.doesNotMatch(html, /<ul><\/ul>/);
+  assert.deepEqual(mapPayload([venue]), []);
+  assert.deepEqual(unmappableNames([venue]), []);
 });
 
-test("held deals do not reach the popup", () => {
+test("held-only venues do not reach the map payload", () => {
   const venue = {
     ...baseVenue,
     deals: [{ ...baseVenue.deals[0], status: "held" }],
   };
-  const [entry] = mapPayload([venue]);
-  assert.equal(entry.deals.length, 0);
-  assert.equal(entry.showable, false);
+  assert.deepEqual(mapPayload([venue]), []);
 });
 
 test("map center is the mean of the venues shown, not a hard-coded point", () => {

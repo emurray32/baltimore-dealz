@@ -8,30 +8,30 @@ import {
   FOOD_CATEGORY_LABELS,
   hasShowableDeal,
   isDealRenderable,
-  isRenderable,
   isVerifiedDateStale,
 } from "./deals.js";
 
 // The payload the browser script reads. Built server-side from the same
 // loadVenues() read the board uses, so the map re-reads the data fresh on
 // every load — no caching layer of our own.
+// Only venues with a showable deal get pins — same Eric rule as the board
+// (2026-08-07): zero-deal / held-only stay in venues.json, not on the map.
 export function mapPayload(venues) {
   return venues
+    .filter((venue) => hasShowableDeal(venue))
     .filter((venue) => typeof venue.lat === "number" && typeof venue.lon === "number")
     .map((venue) => {
-      const deals = isRenderable(venue)
-        ? venue.deals.filter(isDealRenderable).map((deal) => ({
-            time_window: deal.time_window ?? null,
-            prices_published: deal.prices_published !== false,
-            days: deal.days,
-            items: deal.items.map((item) => ({ text: item.text, price: item.price ?? null })),
-            source_url: deal.source_url ?? null,
-            happy_hour: deal.happy_hour === true,
-            food_categories: Array.isArray(deal.food_categories) ? deal.food_categories : [],
-            verified_date: deal.verified_date ?? null,
-            proof_quote: deal.proof_quote ?? null,
-          }))
-        : [];
+      const deals = venue.deals.filter(isDealRenderable).map((deal) => ({
+        time_window: deal.time_window ?? null,
+        prices_published: deal.prices_published !== false,
+        days: deal.days,
+        items: deal.items.map((item) => ({ text: item.text, price: item.price ?? null })),
+        source_url: deal.source_url ?? null,
+        happy_hour: deal.happy_hour === true,
+        food_categories: Array.isArray(deal.food_categories) ? deal.food_categories : [],
+        verified_date: deal.verified_date ?? null,
+        proof_quote: deal.proof_quote ?? null,
+      }));
       return {
         id: venue.id,
         name: venue.name,
@@ -40,7 +40,7 @@ export function mapPayload(venues) {
         phone: venue.phone ?? null,
         lat: venue.lat,
         lon: venue.lon,
-        showable: hasShowableDeal(venue),
+        showable: true,
         reason: venue.notes_public ?? null,
         last_verified: venue.last_verified ?? null,
         source_url: venue.source_url ?? null,
@@ -49,10 +49,12 @@ export function mapPayload(venues) {
     });
 }
 
-// A venue with no coordinates (Sports Balls today) is tracked but unmappable.
+// A showable venue with no coordinates is tracked but unmappable.
 // The page says so in plain words rather than silently dropping it.
+// Zero-deal venues are off the map entirely, so they do not land here.
 export function unmappableNames(venues) {
   return venues
+    .filter((venue) => hasShowableDeal(venue))
     .filter((venue) => typeof venue.lat !== "number" || typeof venue.lon !== "number")
     .map((venue) => venue.name);
 }
@@ -165,12 +167,10 @@ const MAP_SCRIPT = `<script src="/vendor/leaflet.js"></` + `script>
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-  // One marker per venue. Showable deals get the filled pin; venues with
-  // nothing we can show get the hollow one — never color alone, the hollow
-  // ring reads as its own shape.
+  // One marker per showable venue (quiet venues are filtered out of the payload).
   points.forEach(function (p) {
     var icon = L.divIcon({
-      className: "bd-pin" + (p.showable ? "" : " bd-pin-quiet"),
+      className: "bd-pin",
       html: '<span class="bd-pin-dot"></span>',
       iconSize: [26, 26],
       iconAnchor: [13, 13]
@@ -241,7 +241,7 @@ export function renderMap(venues, view, views = [view], now = new Date(), option
   </header>
   <main>
     <div id="map" role="region" aria-label="Map of tracked venues in ${escapeHtml(view.label)}"></div>
-    <p class="meta map-legend"><span class="lg lg-deal"></span> has deals we can show &nbsp;·&nbsp; <span class="lg lg-quiet"></span> tracked, nothing showable yet</p>
+    <p class="meta map-legend"><span class="lg lg-deal"></span> places with a deal we can show</p>
     ${missingNote}
     <p class="meta map-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Free tiles, no account, no key.</p>
   </main>

@@ -10,7 +10,6 @@ import {
   hasShowableDeal,
   isVerifiedDateStale,
   METERS_PER_MILE,
-  noDealVenues,
   WEEK,
   weekByDay,
 } from "./deals.js";
@@ -29,7 +28,7 @@ export function escapeHtml(value) {
 // Prefer the deal's own verification URL over the venue homepage — Mama's brunch
 // was verified on Instagram, not the website the card used to link to.
 // Card meta only — neighbourhood + phone/source/verified. Street address lives
-// on the venue page (and still on the quiet group, where it is load-bearing).
+// on the venue page (load-bearing there; deal cards omit the street).
 function metaLines(venue, deal = null) {
   const place = venue.neighborhood ? escapeHtml(venue.neighborhood) : "";
 
@@ -137,39 +136,6 @@ function notesSection(venues) {
     )
     .join("");
   return notes ? `<section><h2>Good to know</h2>${notes}</section>` : "";
-}
-
-// Designer's collapsed group: name + address + reason, never a deal/hour/price.
-// open_unverifiable rows and fully-held venues (El Bufalo) both land here.
-// Address stays here — these rows have no deal body; the street is the content.
-function noDealSection(venues, options = {}) {
-  const quiet = noDealVenues(venues);
-  if (quiet.length === 0) return "";
-
-  const n = quiet.length;
-  const label = n === 1 ? "1 more spot, no deals we can show" : `${n} more spots, no deals we can show`;
-  const venueHref =
-    typeof options.venueHref === "function"
-      ? options.venueHref
-      : (id) => `/venue/${id}`;
-  const rows = quiet
-    .map((venue) => {
-      const reason = venue.notes_public || "No specials we can verify from an official source.";
-      const where = venue.address
-        ? `${escapeHtml(venue.address)} — ${escapeHtml(reason)}`
-        : escapeHtml(reason);
-      const name = `<a class="venue-link" href="${escapeHtml(venueHref(venue.id))}">${escapeHtml(venue.name)}</a>`;
-      return `<li><strong>${name}</strong><br><span class="meta">${where}</span></li>`;
-    })
-    .join("");
-
-  return `
-    <section class="quiet">
-      <details>
-        <summary>${escapeHtml(label)}</summary>
-        <ul class="quiet-list">${rows}</ul>
-      </details>
-    </section>`;
 }
 
 // Only worth showing once there is somewhere else to go.
@@ -301,7 +267,9 @@ export const NEAREST_FIRST_SCRIPT = `<script>
 </` + `script>`;
 
 // `venues` is every venue in this view's neighborhoods (see venuesInView).
-// Deal cards still only come from verified rows with showable deals.
+// Deal cards only come from verified rows with showable deals. Zero-deal and
+// held-only venues stay in venues.json (and on /venue pages) but are not listed
+// on the board — Eric rule 2026-08-07: no blanks on the board.
 //
 // options (all optional, server leaves them off):
 //   styleHref      — stylesheet href (default "/style.css")
@@ -395,7 +363,6 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
       <h2>Browse the week</h2>
       ${week}
     </section>
-    ${noDealSection(venues, cardOpts)}
   </main>
   ${NEAREST_FIRST_SCRIPT}
   ${clientBits}

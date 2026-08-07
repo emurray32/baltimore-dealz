@@ -3757,7 +3757,7 @@
       "source_url": "http://www.therockwellbaltimore.com/",
       "source_type": "venue_website",
       "last_verified": "2026-08-07",
-      "ops_notes": "CoS 2026-08-07: ship Tuesday only ($4 beer & claws, $6 bombs & tequila). Do NOT ship 'every night until 10' or Sun all-night HH — no $ on site; same page says Mon CLOSED. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "ops_notes": "CoS 2026-08-07: ship Tuesday only ($4 beer & claws, $6 bombs & tequila). Do NOT ship 'every night until 10' or Sun all-night HH — no $ on site; same page says Mon CLOSED. No clock window published for Tuesday — that is ops-only, not customer time_window copy. Source: RESEARCH/FELLS_POINT_DEALS.md.",
       "deals": [
         {
           "days": ["tue"],
@@ -3767,7 +3767,7 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "Tuesday (karaoke night; no clock window published)",
+          "time_window": "karaoke night",
           "happy_hour": true,
           "verified_date": "2026-08-07",
           "source_url": "http://www.therockwellbaltimore.com/",

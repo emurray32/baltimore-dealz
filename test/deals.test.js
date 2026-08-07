@@ -1783,6 +1783,10 @@ test("2026-08-07 deal-first load: Horse, Rockwell, Papi's Fells + Hampden", asyn
   assert.equal(rock.deals.length, 1);
   assert.deepEqual(rock.deals[0].days, ["tue"]);
   assert.ok(rock.deals[0].items.some((i) => /\$4 Beer/.test(i.text)));
+  // Public copy only — no-clock evidence lives in ops_notes, not time_window.
+  assert.equal(rock.deals[0].time_window, "karaoke night");
+  assert.doesNotMatch(rock.deals[0].time_window ?? "", /no clock/i);
+  assert.match(rock.ops_notes ?? "", /no clock/i);
   // No priceless every-night / Sunday all-night rows.
   assert.ok(!rock.deals.some((d) => /every night|all night/i.test(d.time_window ?? "")));
 

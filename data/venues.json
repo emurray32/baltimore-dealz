@@ -5705,7 +5705,7 @@
       "source_url": "https://www.brasstapbeerbar.com/menus/happyhour/71.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. HH prices from PDF; window NOT on PDF (says ASK SERVER FOR TIMES) — window from location page https://www.brasstapbeerbar.com/baltimore text: Happy Hour 2pm-7pm Monday-Saturday. source_document_date=2026-05-30 (HTTP Last-Modified); footer 5/26-B. $5 tier has four items including Coconut Key Lime Pie (not three). Drink of the Week $7 — do not pin rotating cocktail name. Late Night HH is a separate unread menu (menus/latehappyhour/71.pdf) — not loaded. Deleted $6 Shots row 2026-08-07 (CoS): that is regular shot price; Coconut Key Lime Pie is already on the $5 HH tier. Phone is national toll-free as published. Archive RESEARCH/ig-evidence-2026-08-05/BrassTap_HH.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. HH prices from PDF; window NOT on PDF (says ASK SERVER FOR TIMES) — window from location page https://www.brasstapbeerbar.com/baltimore text: Happy Hour 2pm-7pm Monday-Saturday. source_document_date=2026-05-30 (HTTP Last-Modified); footer 5/26-B. PDF layout re-check CoS 2026-08-07: Coconut Key Lime Pie is in the $4.50 SHOTS group (y above $5 label), not $5 with Golden Truth/Select Pints/House Wine. Regular $6 → HH $4.50. Drink of the Week $7 — do not pin rotating cocktail name. Late Night HH is a separate unread menu (menus/latehappyhour/71.pdf) — not loaded. Deleted $6 Shots row 2026-08-07 (CoS): that is regular shot price. Phone is national toll-free as published. Archive RESEARCH/ig-evidence-2026-08-05/BrassTap_HH.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
       "deals": [
         {
           "days": [
@@ -5734,8 +5734,8 @@
               "price": "$5"
             },
             {
-              "text": "Coconut Key Lime Pie $5",
-              "price": "$5"
+              "text": "Coconut Key Lime Pie $4.50",
+              "price": "$4.50"
             },
             {
               "text": "Premium Wells $6",

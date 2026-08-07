@@ -2117,17 +2117,19 @@ test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
   assert.deepEqual(brass.deals[0].days, ["mon", "tue", "wed", "thu", "fri", "sat"]);
   assert.equal(brass.deals[0].start, 840);
   assert.equal(brass.deals[0].end, 1140);
-  // $5 tier has four items including Coconut Key Lime Pie.
-  assert.ok(brass.deals[0].items.some((i) => /Coconut Key Lime Pie \$5/.test(i.text)));
+  // $5 tier: Golden Truth, Select Pints, House Wine (not Coconut — that is $4.50 shots).
   assert.ok(brass.deals[0].items.some((i) => /Golden Truth \$5/.test(i.text)));
   assert.ok(brass.deals[0].items.some((i) => /Select Pints \$5/.test(i.text)));
   assert.ok(brass.deals[0].items.some((i) => /House Wine \$5/.test(i.text)));
+  // CoS PDF layout: Coconut Key Lime Pie is $4.50 SHOTS group (regular $6), not $5.
+  assert.ok(brass.deals[0].items.some((i) => i.text === "Coconut Key Lime Pie $4.50" && i.price === "$4.50"));
+  assert.ok(!brass.deals[0].items.some((i) => /Coconut Key Lime Pie \$5/.test(i.text)));
   // Drink of the Week tier only — not this week's cocktail name.
   assert.ok(brass.deals[0].items.some((i) => i.text === "Drink of the Week $7"));
   const brassText = brass.deals[0].items.map((i) => i.text).join(" | ");
   assert.doesNotMatch(brassText, /Blue Mermaid/i);
   assert.doesNotMatch(brassText, /Late Night|9pm|10pm/i);
-  // $6 Shots is regular menu price, not HH — Coconut Key Lime Pie lives on $5 tier only.
+  // $6 Shots is regular menu price, not HH.
   assert.doesNotMatch(brassText, /\$6 Shots/i);
   assert.ok(brass.deals[0].items.some((i) => /Cheeseburger & Fries \$9/.test(i.text)));
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "brass-tap-baltimore"));

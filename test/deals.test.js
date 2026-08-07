@@ -2046,8 +2046,13 @@ test("Mount Vernon batch 1: Owl Bar, Sugarvale, Unity CoS ship 2026-08-07", asyn
   assert.equal(sugarHh.end, 1140);
   assert.ok(!sugarHh.days.includes("mon"));
   assert.ok(sugarHh.items.some((i) => /\$10/.test(i.text) && /cocktail/i.test(i.text)));
-  assert.ok(sugar.deals.some((d) => d.days[0] === "tue" && d.items.some((i) => /SV Burger/i.test(i.text))));
-  assert.ok(sugar.deals.some((d) => d.days[0] === "wed" && d.items.some((i) => /wine glasses/i.test(i.text))));
+  const sugarTue = sugar.deals.find((d) => d.days[0] === "tue" && d.items.some((i) => /SV Burger/i.test(i.text)));
+  const sugarWed = sugar.deals.find((d) => d.days[0] === "wed" && d.items.some((i) => /wine glasses/i.test(i.text)));
+  assert.ok(sugarTue);
+  assert.ok(sugarWed);
+  // Opens 5pm and calls these NIGHT — "all day" would imply noon walk-in (CoS 2026-08-07).
+  assert.equal(sugarTue.time_window, "all night");
+  assert.equal(sugarWed.time_window, "all night");
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "sugarvale"));
 
   // Unity — Mon–Fri 4–7 HH only; no daily-special deal rows; gratuity note.

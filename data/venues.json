@@ -5445,7 +5445,7 @@
       "source_type": "venue_website",
       "last_verified": "2026-08-07",
       "notes_public": "Sunday: happy hour prices all night.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. HH 5–7pm every open day: Tue–Sun (Mon closed). Sunday all-night claim is notes only — card window stays 5–7pm (site close times print as 11am on Sun/Tue, typo; do not invent end times). Phone not on official site — omit. Tue burger / Wed wine weekly specials as separate day rows. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. HH 5–7pm every open day: Tue–Sun (Mon closed). Sunday all-night claim is notes only — card window stays 5–7pm (site close times print as 11am on Sun/Tue, typo; do not invent end times). Phone not on official site — omit. Tue burger / Wed wine weekly specials as separate day rows with time_window 'all night' (venue opens 5pm and labels them NIGHT — not all day). Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
       "deals": [
         {
           "days": [
@@ -5492,7 +5492,7 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day",
+          "time_window": "all night",
           "happy_hour": false,
           "verified_date": "2026-08-07",
           "source_url": "http://sugarvalebmore.com/",
@@ -5512,7 +5512,7 @@
           ],
           "start": null,
           "end": null,
-          "time_window": "all day",
+          "time_window": "all night",
           "happy_hour": false,
           "verified_date": "2026-08-07",
           "source_url": "http://sugarvalebmore.com/",

@@ -80,6 +80,11 @@ function dealCard({ venue, deal }, now = new Date(), options = {}) {
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
   const items = deal.items.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("");
+  // Proof next to the claim: the venue's own words, verbatim, so the source
+  // link is a backup rather than the whole argument.
+  const proof = deal.proof_quote
+    ? `<blockquote class="proof">${escapeHtml(deal.proof_quote)}</blockquote>`
+    : "";
   // A venue that published times but no prices says so, rather than looking
   // like a deal we forgot to fill in.
   const noPrices =
@@ -100,16 +105,23 @@ function dealCard({ venue, deal }, now = new Date(), options = {}) {
     deal.start === null || deal.start === undefined ? "" : String(deal.start);
   const endAttr =
     deal.end === null || deal.end === undefined ? "" : String(deal.end);
+  // Food-filter hook: multi-category rows appear under every one of theirs
+  // (Claddagh Sat → Wings AND Sandwiches).
+  const food =
+    Array.isArray(deal.food_categories) && deal.food_categories.length
+      ? ` data-food="${escapeHtml(deal.food_categories.join(" "))}"`
+      : "";
   const venueHref =
     typeof options.venueHref === "function"
       ? options.venueHref(venue.id)
       : `/venue/${venue.id}`;
   const nameHtml = `<a class="venue-link" href="${escapeHtml(venueHref)}">${escapeHtml(venue.name)}</a>`;
   return `
-      <article class="card"${coords} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
+      <article class="card"${coords}${food} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
         <h3>${nameHtml} ${window}</h3>
         ${dealChips(deal, now)}
         <ul>${items}</ul>
+        ${proof}
         ${noPrices}
         <p class="meta">${metaLines(venue, deal)}</p>
       </article>`;
@@ -183,6 +195,38 @@ export function cardsHtmlForDay(venues, dayKey, now = new Date(), options = {}) 
     return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
   }
   return rows.map((row) => dealCard(row, now, options)).join("");
+}
+
+// One button per food category that appears on the board this week, with the
+// real count of matching deal rows. Categories with zero rows get no button.
+// Multi-category rows count under every category they carry.
+export function foodFilterBar(venues) {
+  const counts = new Map();
+  for (const day of WEEK) {
+    for (const { deal } of dealsForDay(venues, day.key)) {
+      if (!Array.isArray(deal.food_categories)) continue;
+      for (const cat of deal.food_categories) {
+        counts.set(cat, (counts.get(cat) ?? 0) + 1);
+      }
+    }
+  }
+  if (counts.size === 0) return "";
+  const buttons = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([cat, n]) => {
+      const label = FOOD_CATEGORY_LABELS[cat] ?? cat;
+      return `<button type="button" class="filter-btn" data-filter="${escapeHtml(cat)}" aria-pressed="false">${escapeHtml(label)} <span class="filter-count">${n}</span></button>`;
+    })
+    .join("");
+  return `
+    <section class="food-filter" id="food-filter" aria-label="Filter deals by food">
+      <h2>Filter by food</h2>
+      <p class="filter-row" role="group">
+        <button type="button" class="filter-btn is-on" data-filter="" aria-pressed="true">All</button>
+        ${buttons}
+      </p>
+      <p class="filter-status meta" id="filter-status" role="status" aria-live="polite"></p>
+    </section>`;
 }
 
 // The browser-side half of nearest-first, served inline at the end of
@@ -308,6 +352,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const daySrc = options.clientDaySrc ?? "/client-day.js";
   const boardSrc = options.clientBoardSrc ?? "/client-board.js";
   const searchSrc = options.clientSearchSrc ?? "/client-search.js";
+  const filterSrc = options.clientFilterSrc ?? "/client-filter.js";
   let dayTemplates = "";
   if (staticClient) {
     dayTemplates = WEEK.map(
@@ -316,11 +361,12 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     ).join("\n");
   }
   const clientBits = `
-  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day (and is not split by time of day). Turn JS on for Baltimore-time accuracy, search, or use Browse the week.</p></noscript>
+  <noscript><p class="meta">JavaScript is off — "tonight" is frozen at the last build's day (and is not split by time of day). Turn JS on for Baltimore-time accuracy, search, filters, or use Browse the week.</p></noscript>
   ${dayTemplates}
   <script src="${escapeHtml(daySrc)}"></script>
   <script src="${escapeHtml(boardSrc)}"></script>
-  <script src="${escapeHtml(searchSrc)}"></script>`;
+  <script src="${escapeHtml(searchSrc)}"></script>
+  <script src="${escapeHtml(filterSrc)}"></script>`;
 
   return `<!doctype html>
 <html lang="en">
@@ -344,6 +390,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
       ${today}
     </section>
     ${notesSection(venues)}
+    ${foodFilterBar(venues)}
     <section>
       <h2>Browse the week</h2>
       ${week}

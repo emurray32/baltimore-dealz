@@ -234,6 +234,31 @@ nav.meta strong {
 }
 .card ul li:first-child { border-top: 0; padding-top: .1rem; }
 
+/* proof next to the claim — venue's own words, verbatim */
+.proof {
+  margin: .6rem 0 0;
+  padding: .5rem .7rem .5rem .6rem;
+  border: 1.5px solid var(--ink);
+  border-left: 5px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  font-family: 'Space Mono', monospace;
+  font-size: .74rem;
+  line-height: 1.55;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.proof::before {
+  content: "Their words —";
+  display: block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+  opacity: .72;
+}
+
 /* meta lines: neighborhood, address, phone, source, last verified */
 .meta {
   font-family: 'Space Mono', monospace;
@@ -389,6 +414,49 @@ a.venue-link:hover {
 }
 #nearest-btn[disabled] { color: var(--muted); cursor: default; box-shadow: none; transform: none; }
 
+/* ---- food filter ---- */
+.food-filter h2 { margin-top: 2rem; }
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin: 0 0 .4rem;
+}
+.filter-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .34rem .8rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
+}
+.filter-btn:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.filter-btn.is-on,
+.filter-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--surface);
+}
+.filter-count {
+  font-weight: 400;
+  font-size: .6rem;
+  opacity: .75;
+}
+.filter-status { min-height: 1.1em; }
+.card.filter-hide,
+.timing-group.filter-hide {
+  display: none !important;
+}
+
 /* distance chip appended by nearest-first script */
 .distance {
   display: inline-block;
@@ -506,6 +574,17 @@ body.map-page {
   font-size: .85rem;
 }
 .pop-deal ul li:first-child { border-top: 0; padding-top: 0; }
+.pop-proof {
+  margin: .45rem 0 0;
+  padding: .4rem .55rem;
+  border: 1.5px solid var(--ink);
+  border-left: 4px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  font-size: .7rem;
+  line-height: 1.5;
+}
 .pop-noprice {
   margin: .4rem 0 0;
   font-size: .68rem;

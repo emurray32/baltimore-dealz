@@ -33,9 +33,8 @@ export function dayLabel(dayKey) {
   return WEEK.find((day) => day.key === dayKey)?.label ?? dayKey;
 }
 
-// Only "verified" venues can contribute deal cards. Everything else — a venue we
-// know is open but can't source a deal for — still appears in the collapsed
-// "no deals we can show" group (name + reason), never as a deal card.
+// Only "verified" venues can contribute deal cards. Everything else stays in
+// venues.json (and on /venue pages) but is not listed on the board or map.
 export const VERIFIED = "verified";
 
 export function isRenderable(venue) {
@@ -75,7 +74,9 @@ export function hasShowableDeal(venue) {
   return isRenderable(venue) && venue.deals.some(isDealRenderable);
 }
 
-// Name + reason group: open but no published deal we can state, OR every deal held.
+// Zero-deal / held-only venues — kept in data and on /venue pages, omitted from
+// the board and map (Eric rule 2026-08-07). Helper is for tests and callers that
+// need the set; the board no longer renders a quiet-group section.
 export function noDealVenues(venues) {
   return venues.filter((venue) => !hasShowableDeal(venue));
 }

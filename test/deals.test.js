@@ -1684,7 +1684,7 @@ test("MaGerk's records Weekdays→Mon–Fri inference and cites 32 OZ on image+P
 
 // --- Fells Point pass 1 ---------------------------------------------------
 
-test("Fells Point view: two verified priced + The Point quiet", async () => {
+test("Fells Point view: five verified priced + The Point quiet + stubs", async () => {
   const views = await loadViews();
   const fells = views.find((v) => v.slug === "fells-point");
   assert.ok(fells, "fells-point view missing");
@@ -1695,7 +1695,11 @@ test("Fells Point view: two verified priced + The Point quiet", async () => {
 
   assert.equal(byId["alexanders-tavern-fells"].status, "verified");
   assert.equal(byId["thames-street-oyster-house"].status, "verified");
-  // CoS hold: flyer-only prices / no $ in page text → quiet group, not priced cards.
+  // 2026-08-07 CoS-verified ship: Horse full, Rockwell Tue only, Papi's full.
+  assert.equal(byId["the-horse-you-came-in-on"].status, "verified");
+  assert.equal(byId["the-rockwell"].status, "verified");
+  assert.equal(byId["papis-taco-joint-fells"].status, "verified");
+  // CoS hold: flyer-only prices / no $ in page text → quiet stub, not priced cards.
   assert.equal(byId["the-point-in-fells"].status, "open_unverifiable");
   assert.equal(byId["the-point-in-fells"].deals.length, 0);
   assert.match(byId["the-point-in-fells"].notes_public ?? "", /flyer|image/i);
@@ -1706,10 +1710,13 @@ test("Fells Point view: two verified priced + The Point quiet", async () => {
     "alexanders-tavern-fells",
     "the-point-in-fells",
     "thames-street-oyster-house",
+    "the-horse-you-came-in-on",
+    "the-rockwell",
+    "papis-taco-joint-fells",
   ]) {
     assert.equal(byId[id].neighborhood, "Fells Point", id);
   }
-  // CCE seed trio + Rye are on the board as quiet stubs only — no invented HH $.
+  // CCE seed trio + Rye are quiet stubs only — no invented HH $.
   for (const id of ["maxs-taphouse", "admirals-cup", "stuggys", "rye-of-baltimore"]) {
     assert.ok(byId[id], `${id} quiet stub missing`);
     assert.equal(byId[id].status, "open_unverifiable", id);
@@ -1717,19 +1724,40 @@ test("Fells Point view: two verified priced + The Point quiet", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 7);
+  assert.equal(inView.length, 10);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
       "admirals-cup",
       "alexanders-tavern-fells",
       "maxs-taphouse",
+      "papis-taco-joint-fells",
       "rye-of-baltimore",
       "stuggys",
       "thames-street-oyster-house",
+      "the-horse-you-came-in-on",
       "the-point-in-fells",
+      "the-rockwell",
     ].sort(),
   );
+
+  // Rockwell: one Tuesday row only — no every-night / Sun priceless HH.
+  const rock = byId["the-rockwell"];
+  assert.equal(rock.deals.length, 1);
+  assert.deepEqual(rock.deals[0].days, ["tue"]);
+  assert.match(rock.deals[0].items[0].text, /\$4 Beer/i);
+  assert.doesNotMatch(JSON.stringify(rock.deals), /every night|all night/i);
+
+  // Papi's source must be /fellspoint (root is brand shell).
+  assert.match(byId["papis-taco-joint-fells"].source_url, /papistacojoint\.com\/fellspoint/);
+
+  // Horse: Mon–Thu HH + nights; no Industry Night row.
+  const horse = byId["the-horse-you-came-in-on"];
+  const hh = horse.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1200);
+  assert.ok(!JSON.stringify(horse.deals).includes("Industry"));
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

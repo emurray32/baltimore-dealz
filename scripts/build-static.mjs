@@ -64,6 +64,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
   await cp(join(PUBLIC, "client-day.js"), join(outDir, "client-day.js"));
   await cp(join(PUBLIC, "client-board.js"), join(outDir, "client-board.js"));
   await cp(join(PUBLIC, "client-search.js"), join(outDir, "client-search.js"));
+  await cp(join(PUBLIC, "client-filter.js"), join(outDir, "client-filter.js"));
 
   // / and /map — same redirect targets the live server uses.
   await write(
@@ -82,6 +83,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     "client-day.js",
     "client-board.js",
     "client-search.js",
+    "client-filter.js",
   ];
 
   for (const view of views) {
@@ -98,6 +100,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
       clientDaySrc: "../client-day.js",
       clientBoardSrc: "../client-board.js",
       clientSearchSrc: "../client-search.js",
+      clientFilterSrc: "../client-filter.js",
     });
     const boardPath = join(view.slug, "index.html");
     await write(join(outDir, boardPath), boardHtml);

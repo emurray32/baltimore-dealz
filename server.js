@@ -25,6 +25,7 @@ const PUBLIC_SCRIPTS = new Map([
   ["client-day.js", "text/javascript; charset=utf-8"],
   ["client-board.js", "text/javascript; charset=utf-8"],
   ["client-search.js", "text/javascript; charset=utf-8"],
+  ["client-filter.js", "text/javascript; charset=utf-8"],
 ]);
 
 const server = createServer(async (req, res) => {

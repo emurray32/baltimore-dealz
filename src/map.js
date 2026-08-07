@@ -29,6 +29,7 @@ export function mapPayload(venues) {
             happy_hour: deal.happy_hour === true,
             food_categories: Array.isArray(deal.food_categories) ? deal.food_categories : [],
             verified_date: deal.verified_date ?? null,
+            proof_quote: deal.proof_quote ?? null,
           }))
         : [];
       return {
@@ -109,7 +110,10 @@ export function popupHtml(entry, now = new Date()) {
           deal.prices_published === false
             ? '<p class="pop-noprice">Prices not published by the venue.</p>'
             : "";
-        return `<div class="pop-deal">${popupChips(deal, now)}${window}<ul>${items}</ul>${noPrices}</div>`;
+        const proof = deal.proof_quote
+          ? `<blockquote class="pop-proof">${escapeHtml(deal.proof_quote)}</blockquote>`
+          : "";
+        return `<div class="pop-deal">${popupChips(deal, now)}${window}<ul>${items}</ul>${proof}${noPrices}</div>`;
       })
       .join("");
     body = `<div class="pop-scroll">${dealBlocks}</div>`;

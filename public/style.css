@@ -67,7 +67,7 @@ h1 {
   border-left: 6px solid var(--accent);
 }
 
-/* "Wednesday · Baltimore time" — handwritten feel */
+/* Day label under the title — handwritten feel */
 header > p.meta {
   font-family: 'Caveat', cursive;
   font-size: 1.25rem;
@@ -99,7 +99,13 @@ h3 {
   line-height: 1.1;
 }
 
-a { color: inherit; }
+/* Real link colour — inherit + :hover alone never fires on a phone. */
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--chip-ink);
+}
 
 /* ---- view switcher ---- */
 nav.meta {
@@ -110,6 +116,7 @@ nav.meta {
   align-items: center;
 }
 nav.meta a {
+  color: var(--ink);
   text-decoration: none;
   font-family: 'Space Mono', monospace;
   font-size: .68rem;
@@ -124,6 +131,7 @@ nav.meta a {
   transition: box-shadow .08s, transform .08s;
 }
 nav.meta a:hover {
+  color: var(--ink);
   box-shadow: none;
   transform: translate(4px, 4px);
 }
@@ -161,6 +169,7 @@ nav.meta strong {
 
 /* ---- deal card ---- */
 .card {
+  position: relative;
   background: var(--surface);
   border: 2px solid var(--ink);
   border-radius: var(--radius);
@@ -174,6 +183,21 @@ nav.meta strong {
   transform: translate(2px, 2px);
 }
 .card h3 { display: block; }
+
+/* Stretched link: whole card opens the venue page. Keep a.venue-link as the
+   single real href — never wrap the card in <a> (cards already contain tel/
+   source anchors). Scoped to .card so the quiet-list name link is unchanged. */
+.card a.venue-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Phone + source sit above the stretch so they still dial / open the source. */
+.card > .meta a {
+  position: relative;
+  z-index: 1;
+}
 
 /* time-window chip — yellow, bordered, mono */
 .window {
@@ -330,7 +354,7 @@ summary:hover { border-color: var(--hair); }
 
 /* venue name links on cards / quiet group */
 a.venue-link {
-  color: inherit;
+  color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;

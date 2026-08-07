@@ -134,3 +134,51 @@ test("static build writes a venue page for every venue without ops_notes leaks",
   assert.doesNotMatch(bufalo, /16oz Modelo Especial/);
   await rm(outDir, { recursive: true, force: true });
 });
+
+// Ticket: whole deal tile navigates to the venue page (stretched link, no JS,
+// no wrapping <a>). Phone + source stay above the stretch. Real link colour.
+test("deal cards keep a single venue-link; phone and source stay real anchors", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const canton = views.find((v) => v.slug === "canton");
+  const boardVenues = venuesInView(venues, canton);
+  const cards = cardsHtmlForDay(boardVenues, "fri", FRI_11PM_EDT);
+
+  // At least one card with phone + source (Claddagh is verified Canton).
+  assert.match(cards, /class="card"/);
+  assert.match(cards, /class="venue-link"/);
+  assert.match(cards, /href="tel:/);
+  assert.match(cards, />source<\/a>/);
+
+  // Never wrap the whole card in an anchor (invalid nesting with tel/source).
+  assert.doesNotMatch(cards, /<a[^>]*>\s*<article/);
+  assert.doesNotMatch(cards, /<article[^>]*>\s*<a[^>]*class="card"/);
+
+  // Venue name is the one venue-link inside the card, pointing at /venue/.
+  const claddagh = venues.find((v) => v.id === "claddagh-pub");
+  assert.ok(claddagh);
+  const escaped = escapeHtml(claddagh.name);
+  assert.match(
+    cards,
+    new RegExp(
+      `<a class="venue-link" href="/venue/${claddagh.id}">${escaped}</a>`,
+    ),
+  );
+});
+
+test("style.css ships the stretched-link pattern and real link colour", async () => {
+  const css = await readFile(join(ROOT, "public", "style.css"), "utf8");
+
+  // Card is the positioning context; venue-link stretch covers the tile.
+  assert.match(css, /\.card\s*\{[^}]*position:\s*relative/s);
+  assert.match(css, /\.card\s+a\.venue-link::after\s*\{[^}]*position:\s*absolute/s);
+  assert.match(css, /\.card\s+a\.venue-link::after\s*\{[^}]*inset:\s*0/s);
+
+  // Phone + source (meta anchors) sit above the stretch.
+  assert.match(css, /\.card\s*>\s*\.meta\s+a\s*\{[^}]*position:\s*relative/s);
+  assert.match(css, /\.card\s*>\s*\.meta\s+a\s*\{[^}]*z-index:\s*1/s);
+
+  // Global links have a real colour, not only inherit.
+  assert.match(css, /^a\s*\{[^}]*color:\s*var\(--accent\)/m);
+  assert.doesNotMatch(css, /^a\s*\{\s*color:\s*inherit/m);
+});

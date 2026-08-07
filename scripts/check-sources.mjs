@@ -30,8 +30,12 @@ const USER_AGENT =
   "BaltimoreDealzSourceCheck/1.0 (+https://github.com/emurray32/baltimore-dealz; check-sources)";
 /** Peer-PDF age gap (days) that flags a static file as stale vs siblings on the same host. */
 const PEER_STALE_DAYS = 180;
-/** Window (chars) in which price + distinctive word must co-occur. */
-const NEAR_WINDOW = 100;
+/**
+ * Window (chars, on whitespace-stripped text) in which price + distinctive word
+ * must co-occur. PDF menu layouts often put the dish name left and the price
+ * ~200 chars later on the same block (measured on Order of the Ace).
+ */
+const NEAR_WINDOW = 250;
 
 const STOP = new Set(
   `a an the of and or for with on at to from by in is are was were be been being
@@ -49,6 +53,18 @@ export function normalizeText(s) {
     .replace(/\u00a0/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+/** Remove every whitespace char — letter-spaced PDF text becomes matchable. */
+export function stripAllWhitespace(s) {
+  let out = "";
+  for (const ch of String(s ?? "")) {
+    if (ch === " " || ch === "\t" || ch === "\n" || ch === "\r" || ch === "\f" || ch === "\v") {
+      continue;
+    }
+    out += ch;
+  }
+  return out;
 }
 
 /** Pull a price token like `$10`, `$1.50`, `1/2 off` from item.price or text. */
@@ -70,11 +86,20 @@ export function priceToken(item) {
   return normalizeText(text.slice(idx, end));
 }
 
-/** Longest non-stop word in the item text that is not the price token. */
-export function distinctiveWord(itemText, price) {
+/** Bare numeric part of a $ price ("$9" → "9", "$1.50" → "1.50"). Non-$ prices → null. */
+export function barePriceNumber(price) {
+  const p = stripAllWhitespace(normalizeText(price));
+  if (!p.startsWith("$") || p.length < 2) return null;
+  const bare = p.slice(1);
+  // Must start with a digit.
+  if (!(bare[0] >= "0" && bare[0] <= "9")) return null;
+  return bare;
+}
+
+/** Candidate non-stop words from item text (longest first). */
+export function distinctiveWords(itemText, price) {
   const norm = normalizeText(itemText);
   const priceN = price ? normalizeText(price) : "";
-  // Split on non-letters (character walk, not regex).
   const words = [];
   let buf = "";
   for (const ch of norm) {
@@ -89,47 +114,127 @@ export function distinctiveWord(itemText, price) {
   }
   if (buf) words.push(buf);
 
-  let best = "";
+  const seen = new Set();
+  const out = [];
   for (const w of words) {
     if (w.length < 3) continue;
     if (STOP.has(w)) continue;
-    // Skip pure numeric fragments and the price digits.
     if (priceN && priceN.includes(w)) continue;
-    if (w.length > best.length) best = w;
+    if (seen.has(w)) continue;
+    seen.add(w);
+    out.push(w);
   }
-  return best || null;
+  out.sort((a, b) => b.length - a.length);
+  return out;
+}
+
+/** Longest distinctive word (back-compat helper). */
+export function distinctiveWord(itemText, price) {
+  return distinctiveWords(itemText, price)[0] || null;
 }
 
 /**
- * Fixed-string: price and word both present within NEAR_WINDOW of each other.
- * If no distinctive word, require the price token alone (weak but honest).
+ * Fixed-string match on whitespace-stripped text.
+ *
+ * Cause 1: letter-spaced PDFs (`$ 1 0`) — strip ALL whitespace before compare.
+ * Cause 2: menus print `oysters 9` while we store `$9` — accept bare number only
+ *          when the item's distinctive word is nearby (bare `9` alone is meaningless).
  */
-export function itemFoundInSource(normSource, item) {
+export function itemFoundInSource(sourceText, item) {
   const price = priceToken(item);
   if (!price) return null; // unpriced — not counted
-  const word = distinctiveWord(item.text, price);
+  const words = distinctiveWords(item.text, price).map((w) => stripAllWhitespace(w));
 
-  if (!includesFixed(normSource, price)) return false;
-  if (!word) return true;
+  const compact = stripAllWhitespace(normalizeText(sourceText));
+  const priceC = stripAllWhitespace(price);
 
-  // Co-occurrence within a window: slide over price hits.
-  let from = 0;
-  while (from <= normSource.length) {
-    const at = normSource.indexOf(price, from);
-    if (at === -1) break;
-    const start = Math.max(0, at - NEAR_WINDOW);
-    const end = Math.min(normSource.length, at + price.length + NEAR_WINDOW);
-    const window = normSource.slice(start, end);
-    if (includesFixed(window, word)) return true;
-    from = at + 1;
+  const anyWordNear = (anchor) => {
+    if (words.length === 0) return true;
+    for (const w of words) {
+      if (nearInCompact(compact, anchor, w)) return true;
+    }
+    return false;
+  };
+  const anyWordPresent = () => {
+    if (words.length === 0) return true;
+    for (const w of words) {
+      if (includesFixed(compact, w)) return true;
+    }
+    return false;
+  };
+
+  // Path A: full price token (usually includes `$`) present after whitespace strip.
+  if (includesFixed(compact, priceC)) {
+    if (words.length === 0) return true;
+    if (anyWordNear(priceC)) return true;
+    // Layered PDFs can put the dish name far from the price glyph.
+    if (anyWordPresent()) return true;
   }
-  // Fallback: both present in the document (layered PDFs can separate them).
-  return includesFixed(normSource, word);
+
+  // Path B: bare number + a distinctive word nearby (menus that omit `$` on food).
+  const bare = barePriceNumber(price);
+  if (bare && words.length > 0 && includesBareNumber(compact, bare)) {
+    for (const w of words) {
+      if (nearBareWithWord(compact, bare, w)) return true;
+    }
+  }
+
+  return false;
 }
 
 function includesFixed(haystack, needle) {
   if (!needle) return false;
   return haystack.indexOf(needle) !== -1;
+}
+
+/** True when needle appears with non-digit (and non-dot) neighbors — avoids `9` in `19`. */
+function includesBareNumber(compact, bare) {
+  let from = 0;
+  while (from <= compact.length) {
+    const at = compact.indexOf(bare, from);
+    if (at === -1) return false;
+    if (isBareNumberBoundary(compact, at, bare.length)) return true;
+    from = at + 1;
+  }
+  return false;
+}
+
+function isBareNumberBoundary(compact, at, len) {
+  const before = at > 0 ? compact[at - 1] : "";
+  const after = at + len < compact.length ? compact[at + len] : "";
+  const digitOrDot = (ch) => (ch >= "0" && ch <= "9") || ch === ".";
+  // Reject if glued to another digit/dot. `$` before is fine (already handled by path A).
+  if (digitOrDot(before)) return false;
+  if (digitOrDot(after)) return false;
+  return true;
+}
+
+function nearInCompact(compact, a, b) {
+  let from = 0;
+  while (from <= compact.length) {
+    const at = compact.indexOf(a, from);
+    if (at === -1) break;
+    const start = Math.max(0, at - NEAR_WINDOW);
+    const end = Math.min(compact.length, at + a.length + NEAR_WINDOW);
+    if (includesFixed(compact.slice(start, end), b)) return true;
+    from = at + 1;
+  }
+  return false;
+}
+
+function nearBareWithWord(compact, bare, wordC) {
+  let from = 0;
+  while (from <= compact.length) {
+    const at = compact.indexOf(bare, from);
+    if (at === -1) break;
+    if (isBareNumberBoundary(compact, at, bare.length)) {
+      const start = Math.max(0, at - NEAR_WINDOW);
+      const end = Math.min(compact.length, at + bare.length + NEAR_WINDOW);
+      if (includesFixed(compact.slice(start, end), wordC)) return true;
+    }
+    from = at + 1;
+  }
+  return false;
 }
 
 // --- fetch + extract -------------------------------------------------------
@@ -211,7 +316,8 @@ function stripTagBlock(html, tag) {
 async function extractText(buf, url, contentType) {
   const kind = classifyUrl(url, contentType);
   if (kind === "html") {
-    return { kind, text: htmlToText(Buffer.from(buf).toString("utf8")) };
+    const html = Buffer.from(buf).toString("utf8");
+    return { kind, text: htmlToText(html), html };
   }
 
   const dir = await mkdtemp(join(tmpdir(), "bd-check-"));
@@ -243,6 +349,113 @@ async function extractText(buf, url, contentType) {
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
+}
+
+/**
+ * Pull candidate image URLs from HTML for flyer OCR (cause 3).
+ * Prefer happy-hour / specials / flyer / menu filenames; skip icons and trackers.
+ */
+export function candidateImageUrls(html, pageUrl) {
+  const raw = String(html ?? "");
+  const found = [];
+  const seen = new Set();
+
+  const push = (u) => {
+    if (!u || seen.has(u)) return;
+    const lower = u.toLowerCase();
+    if (lower.startsWith("data:")) return;
+    if (lower.includes("favicon") || lower.includes("logo") || lower.includes("icon")) return;
+    if (lower.includes("sprite") || lower.includes("pixel") || lower.includes("tracking")) return;
+    if (lower.includes("avatar") || lower.includes("gravatar")) return;
+    // Prefer real image extensions or CDN image paths.
+    const looksImage =
+      lower.includes(".png") ||
+      lower.includes(".jpg") ||
+      lower.includes(".jpeg") ||
+      lower.includes(".webp") ||
+      lower.includes(".gif") ||
+      lower.includes("/image") ||
+      lower.includes("wp-content/uploads");
+    if (!looksImage) return;
+    seen.add(u);
+    found.push(u);
+  };
+
+  // src="..." / src='...'
+  let i = 0;
+  const lower = raw.toLowerCase();
+  while (i < lower.length) {
+    const at = lower.indexOf("src=", i);
+    if (at === -1) break;
+    const q = raw[at + 4];
+    if (q !== '"' && q !== "'") {
+      i = at + 4;
+      continue;
+    }
+    const end = raw.indexOf(q, at + 5);
+    if (end === -1) break;
+    push(resolveUrl(raw.slice(at + 5, end).trim(), pageUrl));
+    i = end + 1;
+  }
+
+  // srcset="url size, url size"
+  i = 0;
+  while (i < lower.length) {
+    const at = lower.indexOf("srcset=", i);
+    if (at === -1) break;
+    const q = raw[at + 7];
+    if (q !== '"' && q !== "'") {
+      i = at + 7;
+      continue;
+    }
+    const end = raw.indexOf(q, at + 8);
+    if (end === -1) break;
+    const srcset = raw.slice(at + 8, end);
+    for (const part of srcset.split(",")) {
+      const urlPart = part.trim().split(/\s+/)[0];
+      if (urlPart) push(resolveUrl(urlPart, pageUrl));
+    }
+    i = end + 1;
+  }
+
+  // Score: happy-hour-ish names first.
+  const scored = found.map((u) => {
+    const l = u.toLowerCase();
+    let score = 0;
+    if (l.includes("happy") || l.includes("hh")) score += 5;
+    if (l.includes("special") || l.includes("specials")) score += 4;
+    if (l.includes("flyer") || l.includes("menu")) score += 3;
+    if (l.includes("hour")) score += 2;
+    if (l.includes(".png") || l.includes(".jpg") || l.includes(".jpeg")) score += 1;
+    return { u, score };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  // Cap: OCR is expensive; try top few.
+  return scored.slice(0, 5).map((s) => s.u);
+}
+
+function resolveUrl(href, base) {
+  try {
+    return new URL(href, base).href;
+  } catch {
+    return null;
+  }
+}
+
+async function ocrImageUrl(imageUrl, cache) {
+  const key = `ocr:${imageUrl}`;
+  if (cache.has(key)) return cache.get(key);
+  const promise = (async () => {
+    const fetched = await fetchSource(imageUrl);
+    if (!fetched.ok) return { ok: false, reason: fetched.reason, url: imageUrl };
+    const extracted = await extractText(fetched.buf, imageUrl, fetched.contentType || "image/png");
+    if (extracted.error && !extracted.text) {
+      return { ok: false, reason: extracted.error, url: imageUrl };
+    }
+    return { ok: true, text: extracted.text, url: imageUrl };
+  })();
+  cache.set(key, promise);
+  return promise;
 }
 
 function guessImageExt(url, contentType) {
@@ -405,10 +618,13 @@ async function checkVenue(venue, cache) {
     }
     texts.set(u, {
       ok: true,
-      normText: normalizeText(extracted.text),
+      // Keep original extract for matching (itemFoundInSource strips whitespace itself).
+      text: extracted.text,
+      html: extracted.html ?? null,
       kind: extracted.kind,
       lastModified: fetched.lastModified ?? null,
       rawLen: extracted.text?.length ?? 0,
+      pageUrl: u,
     });
   }
 
@@ -427,30 +643,90 @@ async function checkVenue(venue, cache) {
     };
   }
 
-  let found = 0;
-  let total = 0;
-  let unreadItems = 0;
-  for (const row of priced) {
-    total += 1;
-    const t = texts.get(row.sourceUrl);
-    if (!t?.ok) {
-      unreadItems += 1;
-      continue;
+  const scoreItems = (textByUrl) => {
+    let found = 0;
+    let total = 0;
+    let unreadItems = 0;
+    for (const row of priced) {
+      total += 1;
+      const t = textByUrl.get(row.sourceUrl);
+      if (!t?.ok) {
+        unreadItems += 1;
+        continue;
+      }
+      if (itemFoundInSource(t.text, row.item)) found += 1;
     }
-    if (itemFoundInSource(t.normText, row.item)) found += 1;
+    return { found, total, unreadItems };
+  };
+
+  let { found, total, unreadItems } = scoreItems(texts);
+
+  // Cause 3: HTML page with zero price matches → try flyer OCR before MISMATCH.
+  let ocrNote = null;
+  if (found === 0 && unreadItems === 0) {
+    const htmlSources = [...texts.entries()].filter(([, t]) => t.ok && t.kind === "html" && t.html);
+    if (htmlSources.length > 0) {
+      let ocrTextParts = [];
+      let triedImages = 0;
+      let anyCandidate = false;
+      for (const [pageUrl, t] of htmlSources) {
+        const candidates = candidateImageUrls(t.html, pageUrl);
+        if (candidates.length) anyCandidate = true;
+        for (const imgUrl of candidates) {
+          triedImages += 1;
+          const ocr = await ocrImageUrl(imgUrl, cache);
+          if (ocr.ok && ocr.text) ocrTextParts.push(ocr.text);
+        }
+      }
+      if (ocrTextParts.length > 0) {
+        const combined = ocrTextParts.join("\n");
+        ocrNote = `ocr ${triedImages} image(s)`;
+        // Re-score every item against page text + OCR text for its HTML source.
+        found = 0;
+        for (const row of priced) {
+          const t = texts.get(row.sourceUrl);
+          const base = t?.ok ? t.text : "";
+          const blob = base + "\n" + combined;
+          if (itemFoundInSource(blob, row.item)) found += 1;
+        }
+      } else if (anyCandidate) {
+        // Images existed but OCR/fetch failed — cannot accuse the data.
+        return {
+          id: venue.id,
+          status: "UNKNOWN",
+          detail: "prices not in page text; image OCR failed",
+          found: 0,
+          total,
+          pdfMeta: collectPdfMeta(texts),
+        };
+      } else {
+        // No candidate image on HTML page — not a MISMATCH.
+        return {
+          id: venue.id,
+          status: "UNKNOWN",
+          detail: "prices not in page text",
+          found: 0,
+          total,
+          pdfMeta: collectPdfMeta(texts),
+        };
+      }
+    }
   }
 
   // If we could not read the source for every item, treat as UNKNOWN when
-  // zero were readable for this venue (already handled). Partial: report
-  // MISMATCH / PASS on the readable subset? Ticket says "fetch failed →
-  // UNKNOWN, never PASS". If any fetch failed for this venue's items, never PASS.
+  // zero were readable for this venue (already handled). Ticket: fetch failed →
+  // UNKNOWN, never PASS. If any fetch failed for this venue's items, never PASS.
   let status;
   let detail = `${found}/${total}`;
+  if (ocrNote) detail += ` (${ocrNote})`;
   if (unreadItems > 0) {
     status = "UNKNOWN";
     detail = `fetch failed for ${unreadItems}/${total} items; matched ${found}/${total - unreadItems} readable`;
   } else if (found === total) {
     status = "PASS";
+  } else if (found === 0) {
+    // Non-HTML zero-match (PDF/image) still reports MISMATCH — the source was readable.
+    status = "MISMATCH";
   } else {
     status = "MISMATCH";
   }

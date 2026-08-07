@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/FELLS_POINT_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + INNER_HARBOR_DEALS.md + LOCUST_POINT_DEALS.md as of 2026-08-06 (Deal Scout pass for Eric)",
+  "derived_from": "RESEARCH/HAMPDEN_DEALS.md 2026-08-07 deal-first (Papi Hampden) + FELLS ship Horse/Rockwell/Papi 2026-08-07; RESEARCH/CANTON_DEALS.md as of 2026-08-05 \u00a78f food_categories + \u00a78g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/FED_HILL_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/FELLS_POINT_DEALS.md as of 2026-08-06 pass 1 (Deal Scout); RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + INNER_HARBOR_DEALS.md + LOCUST_POINT_DEALS.md as of 2026-08-06 (Deal Scout pass for Eric)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -3672,6 +3672,327 @@
       "lat": 39.2769,
       "lon": -76.6138,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+    },
+    {
+      "id": "the-horse-you-came-in-on",
+      "name": "The Horse You Came In On Saloon",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1626 Thames Street, Baltimore, MD 21231",
+      "phone": "(410) 327-8111",
+      "source_url": "https://www.thehorsebaltimore.com/specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "ops_notes": "Deal Scout + CoS 2026-08-07. Mon–Thu 4–8 HH + Wed/Thu late + weekend buckets. Monday Industry Night 25% for hospitality workers NOT shipped (worker-contingent). Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "deals": [
+        {
+          "days": ["mon", "tue", "wed", "thu"],
+          "items": [
+            { "text": "$3 Domestic Bottles", "price": "$3" },
+            { "text": "$4 Seltzers", "price": "$4" },
+            { "text": "$5 Green Tea | Lemon Drops", "price": "$5" },
+            { "text": "$6 Well Cocktails", "price": "$6" }
+          ],
+          "start": 960,
+          "end": 1200,
+          "time_window": "4pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.thehorsebaltimore.com/specials",
+          "food_categories": ["drink"]
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            { "text": "$5 Green Tea Shots", "price": "$5" },
+            { "text": "$6 Sagamore Rye", "price": "$6" },
+            { "text": "$7 Vegas Bombs", "price": "$7" }
+          ],
+          "start": 1200,
+          "end": null,
+          "time_window": "8pm-close",
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.thehorsebaltimore.com/specials",
+          "food_categories": ["drink"]
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            { "text": "$5 Dogfish Drafts", "price": "$5" },
+            { "text": "$6 Margaritas", "price": "$6" },
+            { "text": "$7 Mules", "price": "$7" }
+          ],
+          "start": 1200,
+          "end": null,
+          "time_window": "8pm-close",
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.thehorsebaltimore.com/specials",
+          "food_categories": ["drink"]
+        },
+        {
+          "days": ["sat", "sun"],
+          "items": [
+            { "text": "$25 Buckets of Domestic Beer | Seltzer", "price": "$25" }
+          ],
+          "start": 720,
+          "end": 1320,
+          "time_window": "12pm-10pm",
+          "verified_date": "2026-08-07",
+          "source_url": "https://www.thehorsebaltimore.com/specials",
+          "food_categories": ["drink"]
+        }
+      ],
+      "lat": 39.281515,
+      "lon": -76.594131,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "the-rockwell-fells",
+      "name": "The Rockwell",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "702 S. Broadway, Baltimore, MD 21231",
+      "source_url": "http://www.therockwellbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "ops_notes": "CoS 2026-08-07: ship Tuesday only ($4 beer & claws, $6 bombs & tequila). Do NOT ship 'every night until 10' or Sun all-night HH — no $ on site; same page says Mon CLOSED. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "deals": [
+        {
+          "days": ["tue"],
+          "items": [
+            { "text": "$4 Beer & Claws", "price": "$4" },
+            { "text": "$6 Bombs & Tequila", "price": "$6" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "Tuesday (karaoke night; no clock window published)",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "http://www.therockwellbaltimore.com/",
+          "food_categories": ["drink"]
+        }
+      ],
+      "lat": 39.283313,
+      "lon": -76.593775,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "papis-taco-joint-fells",
+      "name": "Papi's Taco Joint (Fells Point)",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1703 Aliceanna Street, Baltimore, MD 21231",
+      "phone": "(443) 438-9144",
+      "source_url": "https://papistacojoint.com/fellspoint",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "ops_notes": "CoS re-verified /fellspoint 2026-08-07 (root is brand shell only). HH Tue–Fri 3–6 tiers + daily specials. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "deals": [
+        {
+          "days": ["tue", "wed", "thu", "fri"],
+          "items": [
+            { "text": "$5 Lunazul Blanco Shots · All Draft Beers", "price": "$5" },
+            { "text": "$6 Lunazul Reposado · Yuca Frita", "price": "$6" },
+            { "text": "$7 Lunazul Añejo · wine · house sangria · queso fundido · platanos", "price": "$7" },
+            { "text": "$8 House Margaritas · Elote · 3 Gringo Style Tacos", "price": "$8" },
+            { "text": "$10 Happy Hour Wings", "price": "$10" }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["drink", "wings", "tacos", "small-plate/apps"]
+        },
+        {
+          "days": ["mon"],
+          "items": [
+            { "text": "$10 enchiladas until 5", "price": "$10" },
+            { "text": "$7 house margs", "price": "$7" },
+            { "text": "Kids eat free after 5 (restrictions apply)" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (enchiladas until 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["tue"],
+          "items": [
+            { "text": "Free street taco with order of two" },
+            { "text": "$5 all draft beers", "price": "$5" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            { "text": "$10 burritos until 5", "price": "$10" },
+            { "text": "$10 wings after 5", "price": "$10" },
+            { "text": "$7 wine", "price": "$7" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (burritos until 5pm; wings after 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["tacos", "wings", "drink"]
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            { "text": "$10 quesadillas until 5", "price": "$10" },
+            { "text": "$7 sangrias", "price": "$7" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (quesadillas until 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["fri"],
+          "items": [
+            { "text": "Free house marg/draft/sangria/wine with Fajita Mixto" },
+            { "text": "$13 Dos Manos margs", "price": "$13" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["fajitas", "drink"]
+        },
+        {
+          "days": ["sun"],
+          "items": [
+            { "text": "$10 chimichangas until 5", "price": "$10" }
+          ],
+          "start": null,
+          "end": 1020,
+          "time_window": "until 5pm",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": ["tacos"]
+        }
+      ],
+      "lat": 39.283417,
+      "lon": -76.592883,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "papis-taco-joint-hampden",
+      "name": "Papi's Taco Joint (Hampden)",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "3820 Falls Road, Baltimore, MD 21211",
+      "phone": "(443) 449-5796",
+      "source_url": "https://papistacojoint.com/hampden",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-07",
+      "ops_notes": "Deal Scout deal-first hit #1 Hampden 2026-08-07. Use /hampden path only. City-wide * board picks up Hampden automatically; no Hampden switcher view yet. Restaurant Week banner seasonal — not loaded. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "deals": [
+        {
+          "days": ["mon", "tue", "wed", "thu", "fri"],
+          "items": [
+            { "text": "$5 Lunazul Blanco Shots · All Draft Beers", "price": "$5" },
+            { "text": "$6 Lunazul Reposado · Yuca Frita", "price": "$6" },
+            { "text": "$7 Lunazul Añejo · wine · house sangria · queso fundido · platanos", "price": "$7" },
+            { "text": "$8 House Margaritas · Elote · 3 Gringo Style Tacos", "price": "$8" },
+            { "text": "$10 Happy Hour Wings", "price": "$10" }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["drink", "wings", "tacos", "small-plate/apps"]
+        },
+        {
+          "days": ["mon"],
+          "items": [
+            { "text": "$10 enchiladas until 5", "price": "$10" },
+            { "text": "$7 house margs", "price": "$7" },
+            { "text": "Kids eat free after 5 (restrictions apply)" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (enchiladas until 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["tue"],
+          "items": [
+            { "text": "Free street taco with order of two" },
+            { "text": "$5 all draft beers", "price": "$5" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["wed"],
+          "items": [
+            { "text": "$10 burritos until 5", "price": "$10" },
+            { "text": "$10 wings after 5", "price": "$10" },
+            { "text": "$7 wine", "price": "$7" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (burritos until 5pm; wings after 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["tacos", "wings", "drink"]
+        },
+        {
+          "days": ["thu"],
+          "items": [
+            { "text": "$10 quesadillas until 5", "price": "$10" },
+            { "text": "$7 sangrias", "price": "$7" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (quesadillas until 5pm)",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["tacos", "drink"]
+        },
+        {
+          "days": ["fri"],
+          "items": [
+            { "text": "Free house marg/draft/sangria/wine with Fajita Mixto" },
+            { "text": "$13 Dos Manos margs", "price": "$13" }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": ["fajitas", "drink"]
+        }
+      ],
+      "lat": 39.334278,
+      "lon": -76.636191,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
     }
   ]
 }

@@ -547,7 +547,7 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
 // --- BD-2c: structured times, prices, notes split -------------------------
 
 
-test("dealTiming: finished vs on now vs starts later; end:null never finished", () => {
+test("dealTiming: finished vs on now vs starts later vs hours_unlisted; end:null never finished", () => {
   // Lead pin: deal ending at 18:00 is finished at 18:30 and on now at 17:30.
   const timed = { start: 15 * 60, end: 18 * 60 }; // 3pm–6pm
   assert.equal(dealTiming(timed, 17 * 60 + 30), "on_now");
@@ -563,9 +563,45 @@ test("dealTiming: finished vs on now vs starts later; end:null never finished", 
   assert.equal(dealTiming(openEnded, 22 * 60), "starts_later");
   assert.equal(dealTiming(openEnded, 23 * 60 + 1), "on_now");
 
-  // Untimed / all-day — no meaningful window → on now, never invent start.
-  assert.equal(dealTiming({ start: null, end: null }, 12 * 60), "on_now");
-  assert.equal(dealTiming({ start: undefined, end: undefined }, 3 * 60), "on_now");
+  // Untimed / all-day — no start → hours_unlisted, never invent a window.
+  assert.equal(dealTiming({ start: null, end: null }, 12 * 60), "hours_unlisted");
+  assert.equal(dealTiming({ start: undefined, end: undefined }, 3 * 60), "hours_unlisted");
+});
+
+// --- B1: untimed deals stop claiming "On now" -----------------------------
+
+test("B1: untimed row at 9am is hours_unlisted, not on_now", () => {
+  // 65 of 146 deals have no start — at 9am they'd false-claim "On now".
+  assert.equal(dealTiming({ start: null, end: null }, 9 * 60), "hours_unlisted");
+  assert.notEqual(dealTiming({ start: null, end: null }, 9 * 60), "on_now");
+});
+
+test("B1: 'until 7pm' row (start null, end set) at 9am → unlisted; at 19:30 → finished", () => {
+  // A venue that publishes an end time but no start, e.g. "Specials until 7pm".
+  const until7 = { start: null, end: 19 * 60 }; // end 7pm
+  assert.equal(dealTiming(until7, 9 * 60), "hours_unlisted");
+  // At 7:30pm the end has passed → finished via the existing hasEnded path.
+  assert.equal(dealTiming(until7, 19 * 60 + 30), "finished");
+  // Before end but no start → still hours_unlisted (not on_now).
+  assert.equal(dealTiming(until7, 14 * 60), "hours_unlisted");
+});
+
+test("B1: fully-timed row buckets exactly as before", () => {
+  const timed = { start: 15 * 60, end: 18 * 60 };
+  assert.equal(dealTiming(timed, 14 * 60), "starts_later");
+  assert.equal(dealTiming(timed, 17 * 60), "on_now");
+  assert.equal(dealTiming(timed, 18 * 60 + 30), "finished");
+});
+
+// Mutation test: verify the suite catches a revert to the old rule.
+test("B1 mutation: if untimed were on_now again, this test would fail (prove we'd catch the revert)", () => {
+  // This is the CORRECT behaviour — untimed is NOT on_now.
+  assert.notEqual(dealTiming({ start: null, end: null }, 9 * 60), "on_now");
+
+  // If someone reverts dealTiming to return "on_now" for null start, the line
+  // above would flip from notEqual to equal and still pass — so we also assert
+  // the actual value. A revert changes this to "on_now" and the suite goes red.
+  assert.equal(dealTiming({ start: null, end: null }, 9 * 60), "hours_unlisted");
 });
 
 test("minutesNowInZone reads Baltimore, not a hard-coded offset", () => {

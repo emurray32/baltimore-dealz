@@ -44,6 +44,7 @@
   var TIMING_ORDER = [
     { key: "on_now", label: "On now" },
     { key: "starts_later", label: "Starts later" },
+    { key: "hours_unlisted", label: "Tonight — hours unlisted" },
     { key: "finished", label: "Finished" },
   ];
 

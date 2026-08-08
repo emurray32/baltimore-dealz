@@ -87,6 +87,16 @@ test("client dealTiming matches server (end:null never finished)", async () => {
     assert.equal(BD.dealTiming(open, m), dealTiming(open, m));
     assert.notEqual(BD.dealTiming(open, m), "finished");
   }
+  // B1: untimed deals — both sides return hours_unlisted.
+  const untimed = { start: null, end: null };
+  assert.equal(BD.dealTiming(untimed, 9 * 60), dealTiming(untimed, 9 * 60));
+  assert.equal(BD.dealTiming(untimed, 9 * 60), "hours_unlisted");
+  // start null but end set: hours_unlisted then finished.
+  const until7 = { start: null, end: 19 * 60 };
+  assert.equal(BD.dealTiming(until7, 9 * 60), dealTiming(until7, 9 * 60));
+  assert.equal(BD.dealTiming(until7, 9 * 60), "hours_unlisted");
+  assert.equal(BD.dealTiming(until7, 19 * 60 + 30), dealTiming(until7, 19 * 60 + 30));
+  assert.equal(BD.dealTiming(until7, 19 * 60 + 30), "finished");
   const fri11 = new Date("2026-08-08T03:00:00Z");
   assert.equal(BD.minutesNowInZone(fri11), minutesNowInZone(fri11));
 });

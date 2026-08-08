@@ -239,10 +239,11 @@ export function minutesNowInZone(date = new Date(), timeZone = BALTIMORE_TZ) {
 //
 // - finished: published end is at or before now (end:null is NEVER finished)
 // - starts_later: published start is still in the future
-// - on_now: already started, or untimed / all-day (no start) — never invent a window
+// - on_now: already started
+// - hours_unlisted: the venue did not publish a start time — never invent a window
 export function dealTiming(deal, minutesNow) {
   if (hasEnded(deal, minutesNow)) return "finished";
-  if (deal.start === null || deal.start === undefined) return "on_now";
+  if (deal.start === null || deal.start === undefined) return "hours_unlisted";
   if (minutesNow < deal.start) return "starts_later";
   return "on_now";
 }

@@ -23,6 +23,17 @@ export function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+// Normalise a phone number to (XXX) XXX-XXXX. Passes through non-10-digit
+// numbers unchanged (extensions, international). One formatter used by every
+// place a phone is printed, so a new venue cannot reintroduce the drift.
+export function formatPhone(raw) {
+  const digits = raw.replace(/[^0-9]/g, "");
+  if (digits.length === 10) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  return raw;
+}
+
 // Every meta line is built from the fields a venue actually has. A venue with
 // no phone loses the phone link; it does not take the board down with it.
 // Prefer the deal's own verification URL over the venue homepage — Mama's brunch
@@ -35,11 +46,11 @@ function metaLines(venue, deal = null) {
   const provenance = [];
   if (venue.phone) {
     const dialable = venue.phone.replace(/[^0-9+]/g, "");
-    provenance.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(venue.phone)}</a>`);
+    provenance.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(formatPhone(venue.phone))}</a>`);
   }
   const sourceUrl = deal?.source_url || venue.source_url;
   if (sourceUrl) {
-    provenance.push(`<a href="${escapeHtml(sourceUrl)}">source</a>`);
+    provenance.push(`<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener">source</a>`);
   }
   if (venue.last_verified) {
     provenance.push(`last verified ${escapeHtml(venue.last_verified)}`);
@@ -315,6 +326,14 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const calendarHref = options.calendarHref ?? `/${view.slug}/calendar.ics`;
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
+  // Multi-neighborhood note — explain why bars from a smaller neighborhood
+  // show under the larger board label when a view spans multiple neighbourhoods.
+  const hoods = Array.isArray(view.neighborhoods) ? view.neighborhoods : null;
+  const hoodsNote =
+    hoods && hoods.length > 1
+      ? `<p class="meta view-note">Includes ${hoods.map(escapeHtml).join(" and ")}.</p>`
+      : "";
+
   // Client scripts always load: day accuracy + on-now / starts-later / finished
   // grouping from the browser clock. Static Pages build also embeds one
   // <template> per weekday so the browser can swap "On tonight" without the
@@ -353,6 +372,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     ${viewSwitcher(views, view, viewHref)}
     <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>
+  ${hoodsNote}
   <main>
     <section id="tonight-board">
       <h2>On tonight</h2>

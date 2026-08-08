@@ -10,11 +10,9 @@
   if (!bar) return;
   var status = document.getElementById("filter-status");
   var buttons = Array.prototype.slice.call(bar.querySelectorAll(".filter-btn"));
-  // All food-tagged cards: tonight (including timing groups) + week accordion.
   var cards = Array.prototype.slice.call(document.querySelectorAll(".card[data-food]"));
 
   function apply(cat) {
-    var showing = 0;
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
       var food = card.getAttribute("data-food") || "";
@@ -23,7 +21,6 @@
       // Use a class so search (hidden) and filter can compose.
       if (match) {
         card.classList.remove("filter-hide");
-        showing++;
       } else {
         card.classList.add("filter-hide");
       }
@@ -50,12 +47,26 @@
     if (status) {
       if (cat === "") {
         status.textContent = "";
-      } else if (showing === 0) {
-        status.textContent = "No deals match that filter.";
-      } else if (showing === 1) {
-        status.textContent = "1 deal matches that filter on this board.";
       } else {
-        status.textContent = showing + " deals match that filter on this board.";
+        // Read count from the chip button's filter-count span — the same
+        // number the server baked into the button. Chip and status share
+        // one counting rule (dealsForDay summed over the week) so they
+        // cannot drift apart.
+        var n = 0;
+        for (var b = 0; b < buttons.length; b++) {
+          if (buttons[b].getAttribute("data-filter") === cat) {
+            var countSpan = buttons[b].querySelector(".filter-count");
+            n = countSpan ? parseInt(countSpan.textContent, 10) : 0;
+            break;
+          }
+        }
+        if (n === 0) {
+          status.textContent = "No deals match that filter.";
+        } else if (n === 1) {
+          status.textContent = "1 deal matches that filter on this board.";
+        } else {
+          status.textContent = n + " deals match that filter on this board.";
+        }
       }
     }
   }

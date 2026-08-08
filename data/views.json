@@ -61,6 +61,13 @@
         "Mount Vernon",
         "Mid-Town Belvedere"
       ]
+    },
+    {
+      "slug": "station-north",
+      "label": "Station North",
+      "neighborhoods": [
+        "Charles North"
+      ]
     }
   ]
 }

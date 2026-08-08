@@ -5933,8 +5933,8 @@
       "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-08",
-      "notes_public": "Spanish tapas bar under Charles St / Ulysses. Vermouth hour Mon–Thu 4–6.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Image PDF (no text layer) — items from visual/OCR read, not pdftotext. source_document_date=2026-06-30 (PDF metadata). Window LA HORA DE VERMUT Mon–Thu 4–6. Ship \"20% off Care Bottles $28\" as one line (states saving + price). Address 909 N Charles from Deal Scout — CoS did not confirm on PDF. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/BarDali_HH_june_2026.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "notes_public": "Vermouth hour Mon–Thu 4–6.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Image PDF (no text layer) — items from visual/OCR read, not pdftotext. source_document_date=2026-06-30 (PDF metadata). Window LA HORA DE VERMUT Mon–Thu 4–6. Ship \"20% off Care Bottles $28\" as one line (states saving + price). Address 909 N Charles from Deal Scout — CoS did not confirm on PDF. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/BarDali_HH_june_2026.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md. notes_public: cut unsourced room description (CoS 2026-08-08).",
       "deals": [
         {
           "days": [
@@ -5991,8 +5991,8 @@
       "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
       "source_type": "venue_website",
       "last_verified": "2026-08-08",
-      "notes_public": "French brasserie / dinner theatre, Harbor East. Happy hour Tue–Sat 5–7.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. HH PDF multi-column — CoS read via word bounding boxes, not pdftotext -layout. source_document_date=2026-03-13 (Last-Modified Fri 13 Mar 2026). Window Tue–Sat 5–7. Food includes Oysters Rockefeller (3) $10 and Spinach & Artichoke Dip $10 (missing from initial hand-off; left column at $10). Oysters (3) $6 is raw with mignonette — different dish. Spirits $8 line carries *$3 upcharge for cocktails* as qualifier, not a separate row. Archive RESEARCH/ig-evidence-2026-08-05/Monarque_HH_03132026.pdf. Source: RESEARCH/INNER_HARBOR_DEALS.md.",
+      "notes_public": "Happy hour Tue–Sat 5–7.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. HH PDF multi-column — CoS read via word bounding boxes, not pdftotext -layout. source_document_date=2026-03-13 (Last-Modified Fri 13 Mar 2026). Window Tue–Sat 5–7. Food includes Oysters Rockefeller (3) $10 and Spinach & Artichoke Dip $10 (missing from initial hand-off; left column at $10). Oysters (3) $6 is raw with mignonette — different dish. Spirits $8 line carries *$3 upcharge for cocktails* as qualifier, not a separate row. Archive RESEARCH/ig-evidence-2026-08-05/Monarque_HH_03132026.pdf. Source: RESEARCH/INNER_HARBOR_DEALS.md. notes_public: cut unsourced room description (CoS 2026-08-08).",
       "deals": [
         {
           "days": [
@@ -6087,14 +6087,13 @@
       "source_type": "venue_website",
       "last_verified": "2026-08-08",
       "notes_public": "Happy hour is at the bar only. Closed Mon–Tue. Sunday: happy hour prices all night.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Menu image Happy Hour @ the Bar (2026-06-20 archive). Window Wed–Fri + Sun 5–7 with real start/end — Sunday all-night claim in notes_public only (opens 5pm; no bare all-night row). Bar-only restriction on card (time_window + notes). Image menu — not pdftotext. NSA Charles North → station-north view. Archive RESEARCH/ig-evidence-2026-08-05/Alma_HH_2026-06-20.full.png. Source: RESEARCH/STATION_NORTH_DEALS.md.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Menu image Happy Hour @ the Bar (2026-06-20 archive). Wed/Thu/Fri 5–7 (bar only). Sunday own row: 5pm-close (bar only), start 1020 end null — menu says all night + venue opens 5pm Wed–Sun (Lead correction; end null never finished, src/deals.js). Bar-only on time_window + notes. Image menu — not pdftotext. NSA Charles North → station-north view. Archive RESEARCH/ig-evidence-2026-08-05/Alma_HH_2026-06-20.full.png. Source: RESEARCH/STATION_NORTH_DEALS.md.",
       "deals": [
         {
           "days": [
             "wed",
             "thu",
-            "fri",
-            "sun"
+            "fri"
           ],
           "items": [
             {
@@ -6133,6 +6132,56 @@
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm (bar only)",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.almacocinalatina.com/happy-hour",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Wine $10 glass / $38 bottle",
+              "price": "$10"
+            },
+            {
+              "text": "Beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "Vermouth $8",
+              "price": "$8"
+            },
+            {
+              "text": "Classic Latin cocktails $10",
+              "price": "$10"
+            },
+            {
+              "text": "Tequeños $10",
+              "price": "$10"
+            },
+            {
+              "text": "Ostra Playera (3 oysters) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Pollo Frito $12",
+              "price": "$12"
+            },
+            {
+              "text": "Vanilla Quesillo $8",
+              "price": "$8"
+            }
+          ],
+          "start": 1020,
+          "end": null,
+          "time_window": "5pm-close (bar only)",
           "happy_hour": true,
           "verified_date": "2026-08-08",
           "source_url": "https://www.almacocinalatina.com/happy-hour",

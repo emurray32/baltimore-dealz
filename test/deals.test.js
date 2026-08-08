@@ -2218,20 +2218,27 @@ test("Monarque, Alma, Wicked Sisters, Bluebird CoS ship 2026-08-08 — board hit
   assert.ok(!mon.deals[0].items.some((i) => i.text === "$3 upcharge for cocktails"));
   assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "monarque"));
 
-  // Alma — Charles North; Wed/Thu/Fri/Sun 5–7 bar only; Sunday all-night in notes.
+  // Alma — Charles North; Wed/Thu/Fri 5–7 bar only; Sunday own 5pm-close row (end null).
   const alma = byId["alma-cocina-latina"];
   assert.equal(alma.status, "verified");
   assert.equal(alma.neighborhood, "Charles North");
   assert.equal(alma.phone, "(667) 212-4273");
   assert.match(alma.notes_public ?? "", /bar only/i);
   assert.match(alma.notes_public ?? "", /Sunday.*all night/i);
-  assert.deepEqual(alma.deals[0].days, ["wed", "thu", "fri", "sun"]);
+  assert.equal(alma.deals.length, 2);
+  assert.deepEqual(alma.deals[0].days, ["wed", "thu", "fri"]);
   assert.equal(alma.deals[0].start, 1020);
   assert.equal(alma.deals[0].end, 1140);
-  assert.match(alma.deals[0].time_window, /bar only/i);
+  assert.equal(alma.deals[0].time_window, "5pm-7pm (bar only)");
+  assert.deepEqual(alma.deals[1].days, ["sun"]);
+  assert.equal(alma.deals[1].start, 1020);
+  assert.equal(alma.deals[1].end, null);
+  assert.equal(alma.deals[1].time_window, "5pm-close (bar only)");
   assert.ok(!alma.deals[0].days.includes("mon") && !alma.deals[0].days.includes("tue"));
+  assert.ok(!alma.deals[0].days.includes("sun"));
   assert.ok(alma.deals[0].items.some((i) => /Tequeños \$10/.test(i.text)));
   assert.ok(alma.deals[0].items.some((i) => /Classic Latin cocktails \$10/.test(i.text)));
+  assert.ok(alma.deals[1].items.some((i) => /Tequeños \$10/.test(i.text)));
   assert.ok(venuesInView(venues, sn).some((v) => v.id === "alma-cocina-latina"));
 
   // Wicked Sisters — Hampden Mon–Fri 3–6; regular-price proof in ops_notes.

@@ -1038,7 +1038,7 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
 
 test("Lee's notes_public is a reason, not an offer", async () => {
   const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
-  assert.match(lees.notes_public, /image we cannot read/i);
+  assert.match(lees.notes_public, /image.*prices not listed/i);
   assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday/i);
 });
 
@@ -2338,6 +2338,49 @@ test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-
     assert.ok(d.items.some((i) => /prices not published/i.test(i.text)));
     assert.ok(!d.items.some((i) => /\$\d/.test(i.text) && /cocktail|beer|wine/i.test(i.text)));
   }
+});
+
+// --- D-batch stability: verified_date coverage + banned-phrase guard ---
+
+test("D-batch: every renderable deal row carries a verified_date", async () => {
+  const venues = await loadVenues();
+  const missing = [];
+  for (const v of venues) {
+    if (!isRenderable(v)) continue;
+    for (const d of v.deals) {
+      if (d.status === "held") continue;
+      if (!d.verified_date) {
+        missing.push(`${v.name} ${d.days.join(",")} ${d.items.map((i) => i.text.slice(0, 30)).join(" | ")}`);
+      }
+    }
+  }
+  assert.deepEqual(missing, [], `renderable rows missing verified_date: ${missing.length}`);
+});
+
+test("D-batch: public pages never leak internal process language", async () => {
+  const banned = ["ship set", "Quiet group", "we can re-read", "we cannot read", "we cannot show"];
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const html = renderBoard(venuesInView(venues, views[0]), views[0], views, SAT_1AM_EDT);
+  for (const phrase of banned) {
+    assert.doesNotMatch(html, new RegExp(phrase, "i"), `banned phrase found in board HTML: "${phrase}"`);
+  }
+  // Also check raw notes_public on every venue — open_unverifiable venues
+  // don't render on the board, but their notes_public appear on venue pages.
+  for (const v of venues) {
+    if (!v.notes_public) continue;
+    for (const phrase of banned) {
+      assert.doesNotMatch(v.notes_public, new RegExp(phrase, "i"),
+        `banned phrase "${phrase}" in ${v.name} notes_public: "${v.notes_public}"`);
+    }
+  }
+});
+
+test("D-batch mutation: banned-phrase guard catches a regression", () => {
+  // The guard must fail if a banned phrase re-enters — prove it.
+  assert.throws(() => {
+    assert.doesNotMatch("notes include ship set jargon", /ship set/i);
+  });
 });
 
 // --- B3: external links open in a new tab ---

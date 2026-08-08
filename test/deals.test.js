@@ -2322,10 +2322,20 @@ test("D-batch: every renderable deal row carries a verified_date", async () => {
 
 test("D-batch: public pages never leak internal process language", async () => {
   const banned = ["ship set", "Quiet group", "we can re-read", "we cannot read", "we cannot show"];
+  const venues = await loadVenues();
   const views = await loadViews();
-  const html = renderBoard(venuesInView(await loadVenues(), views[0]), views[0], views, SAT_1AM_EDT);
+  const html = renderBoard(venuesInView(venues, views[0]), views[0], views, SAT_1AM_EDT);
   for (const phrase of banned) {
-    assert.doesNotMatch(html, new RegExp(phrase, "i"), `banned phrase found: "${phrase}"`);
+    assert.doesNotMatch(html, new RegExp(phrase, "i"), `banned phrase found in board HTML: "${phrase}"`);
+  }
+  // Also check raw notes_public on every venue — open_unverifiable venues
+  // don't render on the board, but their notes_public appear on venue pages.
+  for (const v of venues) {
+    if (!v.notes_public) continue;
+    for (const phrase of banned) {
+      assert.doesNotMatch(v.notes_public, new RegExp(phrase, "i"),
+        `banned phrase "${phrase}" in ${v.name} notes_public: "${v.notes_public}"`);
+    }
   }
 });
 

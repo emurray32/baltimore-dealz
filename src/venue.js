@@ -9,7 +9,7 @@ import {
   isVerifiedDateStale,
   WEEK,
 } from "./deals.js";
-import { escapeHtml } from "./page.js";
+import { escapeHtml, formatPhone } from "./page.js";
 
 // Which board "owns" this venue for the back-link — first *neighbourhood*
 // view whose list includes it, else the default view. City-wide ("*") is
@@ -68,7 +68,7 @@ function scheduleDeal(deal, now) {
       ? '<p class="meta">Prices not published by the venue.</p>'
       : "";
   const source = deal.source_url
-    ? `<p class="meta"><a href="${escapeHtml(deal.source_url)}">source</a></p>`
+    ? `<p class="meta"><a href="${escapeHtml(deal.source_url)}" target="_blank" rel="noopener">source</a></p>`
     : "";
   return `
     <article class="card venue-deal">
@@ -95,12 +95,12 @@ export function renderVenuePage(venue, views, now = new Date(), options = {}) {
   if (venue.phone) {
     const dialable = venue.phone.replace(/[^0-9+]/g, "");
     provenance.push(
-      `<a href="tel:${escapeHtml(dialable)}">${escapeHtml(venue.phone)}</a>`,
+      `<a href="tel:${escapeHtml(dialable)}">${escapeHtml(formatPhone(venue.phone))}</a>`,
     );
   }
   if (venue.source_url) {
     provenance.push(
-      `<a href="${escapeHtml(venue.source_url)}">source</a>`,
+      `<a href="${escapeHtml(venue.source_url)}" target="_blank" rel="noopener">source</a>`,
     );
   }
   if (venue.last_verified) {

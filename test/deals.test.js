@@ -1936,10 +1936,10 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
   // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
   // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
-  // Minato + Brass Tap → showable 43, total 71.
+  // Coral Wig + Magdalena + Bar Dalí → showable 46, total 74.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 43);
-  assert.equal(venues.length, 71);
+  assert.equal(showable, 46);
+  assert.equal(venues.length, 74);
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
@@ -2134,6 +2134,62 @@ test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
   assert.ok(brass.deals[0].items.some((i) => /Cheeseburger & Fries \$9/.test(i.text)));
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "brass-tap-baltimore"));
 });
+
+test("Coral Wig, Magdalena, Bar Dalí CoS ship 2026-08-08", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const mv = Object.fromEntries(views.map((v) => [v.slug, v]))["mount-vernon"];
+  assert.deepEqual(mv.neighborhoods, ["Mount Vernon", "Mid-Town Belvedere"]);
+
+  // Coral Wig — Mount Vernon; Mon–Fri 5–7; no phone; Monday all-night in notes.
+  const coral = byId["coral-wig"];
+  assert.equal(coral.status, "verified");
+  assert.equal(coral.neighborhood, "Mount Vernon");
+  assert.equal(coral.phone, undefined);
+  assert.match(coral.notes_public ?? "", /Monday.*all night/i);
+  assert.equal(coral.deals.length, 1);
+  assert.deepEqual(coral.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(coral.deals[0].start, 1020);
+  assert.equal(coral.deals[0].end, 1140);
+  assert.ok(coral.deals[0].items.some((i) => /Painkillers \$10/.test(i.text)));
+  assert.ok(coral.deals[0].items.some((i) => /\$2 off.*Estate Martinis/i.test(i.text)));
+  assert.ok(coral.deals[0].items.some((i) => /1\/2 price.*Sparkling/i.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "coral-wig"));
+
+  // Magdalena — Mid-Town Belvedere; Tue–Fri 4:30–6:30; rotating cocktail tier only.
+  const mag = byId.magdalena;
+  assert.equal(mag.status, "verified");
+  assert.equal(mag.neighborhood, "Mid-Town Belvedere");
+  assert.equal(mag.phone, "(410) 514-0303");
+  assert.equal(mag.address, "205 E Biddle St, Baltimore, MD 21202");
+  assert.deepEqual(mag.deals[0].days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(mag.deals[0].start, 990);
+  assert.equal(mag.deals[0].end, 1110);
+  assert.ok(mag.deals[0].items.some((i) => /Vermu Spritz \$7/.test(i.text)));
+  assert.ok(mag.deals[0].items.some((i) => /Weekly rotating cocktail special \$7/.test(i.text)));
+  assert.ok(mag.deals[0].items.some((i) => /Good Time Pilsner.*\$5/.test(i.text)));
+  const magText = mag.deals[0].items.map((i) => i.text).join(" | ");
+  assert.doesNotMatch(magText, /Old Fashioned|Green Brier|Nelson/i);
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "magdalena"));
+
+  // Bar Dalí — Mount Vernon; Mon–Thu 4–6; 20% off Care Bottles as one line; image PDF source.
+  const dali = byId["bar-dali"];
+  assert.equal(dali.status, "verified");
+  assert.equal(dali.neighborhood, "Mount Vernon");
+  assert.equal(dali.phone, undefined);
+  assert.match(dali.source_url, /happy-hour-june-2026-bar-dali\.pdf/);
+  assert.match(dali.ops_notes ?? "", /source_document_date=2026-06-30/);
+  assert.match(dali.ops_notes ?? "", /no text layer|image PDF/i);
+  assert.deepEqual(dali.deals[0].days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(dali.deals[0].start, 960);
+  assert.equal(dali.deals[0].end, 1080);
+  assert.ok(dali.deals[0].items.some((i) => /Mahou.*Natty Boh.*\$5/.test(i.text)));
+  assert.ok(dali.deals[0].items.some((i) => i.text === "20% off Care Bottles $28"));
+  assert.ok(dali.deals[0].items.some((i) => /Dawn & Stormy.*\$10/.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "bar-dali"));
+});
+
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {
   const venues = await loadVenues();

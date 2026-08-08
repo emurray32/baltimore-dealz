@@ -3,7 +3,7 @@
 // itself with prices, "last verified <date>" when the data carries one).
 // Pure string rendering like page.js so the suite can pin it without a browser.
 
-import { escapeHtml } from "./page.js";
+import { escapeHtml, formatPhone } from "./page.js";
 import {
   FOOD_CATEGORY_LABELS,
   hasShowableDeal,
@@ -127,10 +127,10 @@ export function popupHtml(entry, now = new Date()) {
   const meta = [];
   if (entry.phone) {
     const dialable = entry.phone.replace(/[^0-9+]/g, "");
-    meta.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(entry.phone)}</a>`);
+    meta.push(`<a href="tel:${escapeHtml(dialable)}">${escapeHtml(formatPhone(entry.phone))}</a>`);
   }
   if (entry.source_url) {
-    meta.push(`<a href="${escapeHtml(entry.source_url)}">source</a>`);
+    meta.push(`<a href="${escapeHtml(entry.source_url)}" target="_blank" rel="noopener">source</a>`);
   }
   // "last verified <date>" renders only when the field exists — the map does
   // not wait on the per-deal verified_date data pass.

@@ -97,10 +97,10 @@
     return hour * 60 + minute;
   };
 
-  // on_now | starts_later | finished — same rules as src/deals.js dealTiming.
+  // on_now | starts_later | hours_unlisted | finished — same as src/deals.js.
   BD.dealTiming = function dealTiming(deal, minutesNow) {
     if (BD.hasEnded(deal, minutesNow)) return "finished";
-    if (deal.start === null || deal.start === undefined) return "on_now";
+    if (deal.start === null || deal.start === undefined) return "hours_unlisted";
     if (minutesNow < deal.start) return "starts_later";
     return "on_now";
   };

@@ -78,6 +78,14 @@ header > p.meta {
   padding: 0;
 }
 
+/* Multi-neighborhood note — explains multi-neighborhood coverage. */
+.view-note {
+  font-size: .75rem;
+  color: var(--note-ink);
+  font-style: italic;
+  margin: -.25rem 0 .75rem;
+}
+
 /* section labels — "ON TONIGHT", "BROWSE THE WEEK" */
 h2 {
   font-family: 'Space Mono', monospace;
@@ -574,8 +582,13 @@ body.map-page {
   min-height: 0;
   scrollbar-width: thin;
   scrollbar-color: var(--muted) transparent;
+  scrollbar-gutter: stable;
+  -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 1.5rem), transparent 100%);
+  mask-image: linear-gradient(to bottom, black calc(100% - 1.5rem), transparent 100%);
+  padding-bottom: 1rem;
 }
 .pop-scroll::-webkit-scrollbar { width: 6px; }
+.pop-scroll::-webkit-scrollbar-track { background: var(--chip-bg); }
 .pop-scroll::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
 .pop-name {
   font-family: 'Bebas Neue', sans-serif;
@@ -629,6 +642,15 @@ body.map-page {
   font-size: 1.2rem;
   padding: 6px 8px 0 0;
 }
+/* Keep zoom/attribution controls below an open popup.
+   Leaflet's corner containers (.leaflet-top, .leaflet-bottom) are SIBLINGS
+   of .leaflet-map-pane (z-index 400), not children.  The popup pane sits at
+   z-index 700 inside the map pane, so it can never stack above a sibling at
+   z-index 1000 regardless of its own z-index.
+   Fix: lift the map pane above the corner containers so everything inside it
+   (including the popup pane at 700) renders on top. */
+.leaflet-top, .leaflet-bottom { z-index: 990 !important; }
+.leaflet-map-pane      { z-index: 1000 !important; }
 
 /* ---- responsive ---- */
 @media (max-width: 40rem) {

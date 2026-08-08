@@ -1935,9 +1935,11 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
   // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
+  // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
+  // Minato + Brass Tap → showable 43, total 71.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 38);
-  assert.equal(venues.length, 66);
+  assert.equal(showable, 43);
+  assert.equal(venues.length, 71);
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
@@ -2005,6 +2007,132 @@ test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
   assert.ok(rusty.deals[0].items.some((i) => i.price === "$4.50"));
   assert.ok(rusty.deals[0].items.every((i) => !/- \d/.test(i.text)));
   assert.ok(venuesInView(venues, fed).some((v) => v.id === "rusty-scupper"));
+});
+
+test("Mount Vernon batch 1: Owl Bar, Sugarvale, Unity CoS ship 2026-08-07", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+  const mv = bySlug["mount-vernon"];
+  assert.deepEqual(mv.neighborhoods, ["Mount Vernon", "Mid-Town Belvedere"]);
+
+  // Owl Bar — Mid-Town Belvedere; Tue–Fri 4–7 + Sat 2–6; nine items.
+  const owl = byId["owl-bar"];
+  assert.equal(owl.status, "verified");
+  assert.equal(owl.neighborhood, "Mid-Town Belvedere");
+  assert.equal(owl.phone, "(410) 347-0888");
+  assert.equal(owl.deals.length, 2);
+  const owlWeek = owl.deals.find((d) => d.days.includes("tue") && d.days.length === 4);
+  const owlSat = owl.deals.find((d) => d.days.length === 1 && d.days[0] === "sat");
+  assert.equal(owlWeek.start, 960);
+  assert.equal(owlWeek.end, 1140);
+  assert.equal(owlSat.start, 840);
+  assert.equal(owlSat.end, 1080);
+  assert.equal(owlWeek.items.length, 9);
+  assert.ok(owlWeek.items.some((i) => i.price === "$6.50" && /Sangria/i.test(i.text)));
+  assert.ok(!owl.deals.some((d) => d.days.includes("mon") || d.days.includes("sun")));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "owl-bar"));
+
+  // Sugarvale — Tue–Sun 5–7; no Monday; no phone; Sunday all-night is note only.
+  const sugar = byId.sugarvale;
+  assert.equal(sugar.status, "verified");
+  assert.equal(sugar.neighborhood, "Mount Vernon");
+  assert.equal(sugar.phone, undefined);
+  assert.match(sugar.notes_public ?? "", /Sunday.*all night/i);
+  const sugarHh = sugar.deals.find((d) => d.happy_hour === true);
+  assert.deepEqual(sugarHh.days, ["tue", "wed", "thu", "fri", "sat", "sun"]);
+  assert.equal(sugarHh.start, 1020);
+  assert.equal(sugarHh.end, 1140);
+  assert.ok(!sugarHh.days.includes("mon"));
+  assert.ok(sugarHh.items.some((i) => /\$10/.test(i.text) && /cocktail/i.test(i.text)));
+  const sugarTue = sugar.deals.find((d) => d.days[0] === "tue" && d.items.some((i) => /SV Burger/i.test(i.text)));
+  const sugarWed = sugar.deals.find((d) => d.days[0] === "wed" && d.items.some((i) => /wine glasses/i.test(i.text)));
+  assert.ok(sugarTue);
+  assert.ok(sugarWed);
+  // Opens 5pm and calls these NIGHT — "all day" would imply noon walk-in (CoS 2026-08-07).
+  assert.equal(sugarTue.time_window, "all night");
+  assert.equal(sugarWed.time_window, "all night");
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "sugarvale"));
+
+  // Unity — Mon–Fri 4–7 HH only; no daily-special deal rows; gratuity note.
+  const unity = byId["unity-bar-restaurant"];
+  assert.equal(unity.status, "verified");
+  assert.equal(unity.neighborhood, "Mount Vernon");
+  assert.equal(unity.phone, "(443) 759-4082");
+  assert.match(unity.notes_public ?? "", /18% gratuity/i);
+  assert.match(unity.notes_public ?? "", /Daily specials/i);
+  assert.match(unity.ops_notes ?? "", /source_document_date=2025-12-17/);
+  assert.equal(unity.deals.length, 1);
+  assert.deepEqual(unity.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(unity.deals[0].start, 960);
+  assert.equal(unity.deals[0].end, 1140);
+  assert.ok(unity.deals[0].items.some((i) => i.price === "$3.50"));
+  assert.ok(unity.deals[0].items.some((i) => /Wings \(6\) \$10/.test(i.text)));
+  // Daily specials must not appear as deal items.
+  const unityText = unity.deals.flatMap((d) => d.items).map((i) => i.text).join(" | ");
+  assert.doesNotMatch(unityText, /Steak|Catfish|Burger and fries|prosecco|bottle of wine/i);
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "unity-bar-restaurant"));
+});
+
+test("Minato and Brass Tap CoS ship 2026-08-07", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const mv = Object.fromEntries(views.map((v) => [v.slug, v]))["mount-vernon"];
+
+  // Minato — HTML source_url (not PDF); Mon–Sat 4–7; dine-in + gratuity note.
+  const minato = byId["minato-sushi-bar"];
+  assert.equal(minato.status, "verified");
+  assert.equal(minato.neighborhood, "Mid-Town Belvedere");
+  assert.equal(minato.phone, "(410) 332-0332");
+  assert.equal(minato.source_url, "https://www.minatosushibar.com/happy-hour/");
+  assert.match(minato.notes_public ?? "", /Dine-in only/i);
+  assert.match(minato.notes_public ?? "", /20% gratuity/i);
+  assert.match(minato.ops_notes ?? "", /403|plain fetch/i);
+  assert.equal(minato.deals.length, 1);
+  assert.deepEqual(minato.deals[0].days, ["mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.ok(!minato.deals[0].days.includes("sun"));
+  assert.equal(minato.deals[0].start, 960);
+  assert.equal(minato.deals[0].end, 1140);
+  // Eight price tiers — not the full menu (CoS after Eric card-length feedback).
+  assert.equal(minato.deals[0].items.length, 8);
+  assert.ok(minato.deals[0].items.some((i) => /special maki.*\$12\.50/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /\$8\.95/.test(i.text) && /Cocktail/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Small beers \$3\.95/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Apps.*\$5\.50/i.test(i.text)));
+  assert.ok(minato.deals[0].items.some((i) => /Wine \$6\.75/i.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "minato-sushi-bar"));
+
+  // Brass Tap — PDF prices; window Mon–Sat 2–7 from /baltimore in ops_notes; no late night; no drink name.
+  const brass = byId["brass-tap-baltimore"];
+  assert.equal(brass.status, "verified");
+  assert.equal(brass.neighborhood, "Mid-Town Belvedere");
+  assert.equal(brass.phone, "(888) 901-2337");
+  assert.match(brass.source_url, /happyhour\/71\.pdf/);
+  assert.match(brass.ops_notes ?? "", /brasstapbeerbar\.com\/baltimore/);
+  assert.match(brass.ops_notes ?? "", /source_document_date=2026-05-30/);
+  assert.match(brass.ops_notes ?? "", /Late Night|latehappyhour/i);
+  assert.equal(brass.deals.length, 1);
+  assert.deepEqual(brass.deals[0].days, ["mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(brass.deals[0].start, 840);
+  assert.equal(brass.deals[0].end, 1140);
+  // $5 tier: Golden Truth, Select Pints, House Wine (not Coconut — that is $4.50 shots).
+  assert.ok(brass.deals[0].items.some((i) => /Golden Truth \$5/.test(i.text)));
+  assert.ok(brass.deals[0].items.some((i) => /Select Pints \$5/.test(i.text)));
+  assert.ok(brass.deals[0].items.some((i) => /House Wine \$5/.test(i.text)));
+  // CoS PDF layout: Coconut Key Lime Pie is $4.50 SHOTS group (regular $6), not $5.
+  assert.ok(brass.deals[0].items.some((i) => i.text === "Coconut Key Lime Pie $4.50" && i.price === "$4.50"));
+  assert.ok(!brass.deals[0].items.some((i) => /Coconut Key Lime Pie \$5/.test(i.text)));
+  // Drink of the Week tier only — not this week's cocktail name.
+  assert.ok(brass.deals[0].items.some((i) => i.text === "Drink of the Week $7"));
+  const brassText = brass.deals[0].items.map((i) => i.text).join(" | ");
+  assert.doesNotMatch(brassText, /Blue Mermaid/i);
+  assert.doesNotMatch(brassText, /Late Night|9pm|10pm/i);
+  // $6 Shots is regular menu price, not HH.
+  assert.doesNotMatch(brassText, /\$6 Shots/i);
+  assert.ok(brass.deals[0].items.some((i) => /Cheeseburger & Fries \$9/.test(i.text)));
+  assert.ok(venuesInView(venues, mv).some((v) => v.id === "brass-tap-baltimore"));
 });
 
 test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-link", async () => {

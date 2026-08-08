@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
+  "derived_from": "RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -5801,6 +5801,183 @@
       ],
       "lat": 39.3067858,
       "lon": -76.6196397,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "coral-wig",
+      "name": "The Coral Wig",
+      "neighborhood": "Mount Vernon",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "2 E. Read St., Historic Mount Vernon, Baltimore, MD 21202",
+      "source_url": "https://www.thecoralwig.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "Mondays: industry specials and happy hour prices all night.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Mon–Fri HH 5–7 (opens 5). No phone — site +852 1234 5678 is Squarespace placeholder. Monday all-night HH in notes_public only; do not invent prices for named mojitos/margs. NSA Mount Vernon. Archive RESEARCH/ig-evidence-2026-08-05/CoralWig_site_extract_2026-08-07.txt. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Painkillers $10",
+              "price": "$10"
+            },
+            {
+              "text": "$2 off beer, wine, Estate Martinis",
+              "price": "$2 off"
+            },
+            {
+              "text": "1/2 price bottles of Sparkling wine",
+              "price": "1/2 price"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.thecoralwig.com/",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.299818,
+      "lon": -76.6154716,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "magdalena",
+      "name": "Magdalena",
+      "neighborhood": "Mid-Town Belvedere",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "205 E Biddle St, Baltimore, MD 21202",
+      "phone": "(410) 514-0303",
+      "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "At The Ivy Hotel. Happy hour drinks Tue–Fri 4:30–6:30.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Window Tue–Fri 4:30–6:30 as menu states — footer 5pm is dining-room reservation schedule, not door time (same ruling as Owl Bar). Rotating cocktail = tier text only, do not pin this week's name. Address 205 E Biddle St (Ivy footer). NSA Mid-Town Belvedere under mount-vernon view. Archive RESEARCH/ig-evidence-2026-08-05/Magdalena_menu_extract_2026-08-07.txt. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "La Fiera Pinot Grigio $7",
+              "price": "$7"
+            },
+            {
+              "text": "Barnard Griffin Rosé of Sangiovese $7",
+              "price": "$7"
+            },
+            {
+              "text": "Valle Reale Montepulciano d'Abruzzo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Vermu Spritz $7",
+              "price": "$7"
+            },
+            {
+              "text": "Weekly rotating cocktail special $7",
+              "price": "$7"
+            },
+            {
+              "text": "Peabody Heights Old Oriole Park Bohemian $5",
+              "price": "$5"
+            },
+            {
+              "text": "Peabody Heights Astrodon Hazy IPA $5",
+              "price": "$5"
+            },
+            {
+              "text": "Good Time Pilsner (non-alcoholic) $5",
+              "price": "$5"
+            }
+          ],
+          "start": 990,
+          "end": 1110,
+          "time_window": "4:30pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3033608,
+      "lon": -76.613036,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "bar-dali",
+      "name": "Bar Dalí",
+      "neighborhood": "Mount Vernon",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "909 N. Charles St., Baltimore, MD 21201",
+      "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "Spanish tapas bar under Charles St / Ulysses. Vermouth hour Mon–Thu 4–6.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Image PDF (no text layer) — items from visual/OCR read, not pdftotext. source_document_date=2026-06-30 (PDF metadata). Window LA HORA DE VERMUT Mon–Thu 4–6. Ship \"20% off Care Bottles $28\" as one line (states saving + price). Address 909 N Charles from Deal Scout — CoS did not confirm on PDF. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/BarDali_HH_june_2026.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Mahou & Natty Boh Drafts (17oz) $5",
+              "price": "$5"
+            },
+            {
+              "text": "Draft Vermouth $6",
+              "price": "$6"
+            },
+            {
+              "text": "Care Wines By The Glass $7",
+              "price": "$7"
+            },
+            {
+              "text": "20% off Care Bottles $28",
+              "price": "$28"
+            },
+            {
+              "text": "Dawn & Stormy (Licor 43, ginger beer, lemon) $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3000388,
+      "lon": -76.6155273,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
     }
   ]

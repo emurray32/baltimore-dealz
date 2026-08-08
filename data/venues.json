@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
+  "derived_from": "RESEARCH/INNER_HARBOR_DEALS.md + STATION_NORTH_DEALS.md + HAMPDEN_DEALS.md CoS-cleared ship 2026-08-08 (Monarque, Alma Cocina Latina, Wicked Sisters, The Bluebird) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -5978,6 +5978,327 @@
       ],
       "lat": 39.3000388,
       "lon": -76.6155273,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "monarque",
+      "name": "Monarque",
+      "neighborhood": "Harbor East",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1010 Fleet Street, Baltimore, MD 21202",
+      "phone": "(443) 384-1480",
+      "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "French brasserie / dinner theatre, Harbor East. Happy hour Tue–Sat 5–7.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. HH PDF multi-column — CoS read via word bounding boxes, not pdftotext -layout. source_document_date=2026-03-13 (Last-Modified Fri 13 Mar 2026). Window Tue–Sat 5–7. Food includes Oysters Rockefeller (3) $10 and Spinach & Artichoke Dip $10 (missing from initial hand-off; left column at $10). Oysters (3) $6 is raw with mignonette — different dish. Spirits $8 line carries *$3 upcharge for cocktails* as qualifier, not a separate row. Archive RESEARCH/ig-evidence-2026-08-05/Monarque_HH_03132026.pdf. Source: RESEARCH/INNER_HARBOR_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "The Monarque Martini $8",
+              "price": "$8"
+            },
+            {
+              "text": "Spirits $8 (neat, rocks, or one mixer; $3 upcharge for cocktails)",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $6",
+              "price": "$6"
+            },
+            {
+              "text": "Bottled beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Oysters (3) $6",
+              "price": "$6"
+            },
+            {
+              "text": "Truffle French fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Salad Lyonnaise $8",
+              "price": "$8"
+            },
+            {
+              "text": "Truffle grilled cheese $8",
+              "price": "$8"
+            },
+            {
+              "text": "Sliders (2) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Black truffle mouillette $10",
+              "price": "$10"
+            },
+            {
+              "text": "Mussels $10",
+              "price": "$10"
+            },
+            {
+              "text": "Oysters Rockefeller (3) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Spinach & Artichoke Dip $10",
+              "price": "$10"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "sliders",
+            "small-plate/apps",
+            "sandwich/cheesesteak"
+          ]
+        }
+      ],
+      "lat": 39.2844291,
+      "lon": -76.5996797,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "alma-cocina-latina",
+      "name": "Alma Cocina Latina",
+      "neighborhood": "Charles North",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "1701 North Charles Street, Baltimore, MD 21201",
+      "phone": "(667) 212-4273",
+      "source_url": "https://www.almacocinalatina.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "Happy hour is at the bar only. Closed Mon–Tue. Sunday: happy hour prices all night.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Menu image Happy Hour @ the Bar (2026-06-20 archive). Window Wed–Fri + Sun 5–7 with real start/end — Sunday all-night claim in notes_public only (opens 5pm; no bare all-night row). Bar-only restriction on card (time_window + notes). Image menu — not pdftotext. NSA Charles North → station-north view. Archive RESEARCH/ig-evidence-2026-08-05/Alma_HH_2026-06-20.full.png. Source: RESEARCH/STATION_NORTH_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Wine $10 glass / $38 bottle",
+              "price": "$10"
+            },
+            {
+              "text": "Beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "Vermouth $8",
+              "price": "$8"
+            },
+            {
+              "text": "Classic Latin cocktails $10",
+              "price": "$10"
+            },
+            {
+              "text": "Tequeños $10",
+              "price": "$10"
+            },
+            {
+              "text": "Ostra Playera (3 oysters) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Pollo Frito $12",
+              "price": "$12"
+            },
+            {
+              "text": "Vanilla Quesillo $8",
+              "price": "$8"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm (bar only)",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.almacocinalatina.com/happy-hour",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3089844,
+      "lon": -76.6161481,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "wicked-sisters",
+      "name": "Wicked Sisters",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "3845 Falls Rd, Baltimore, MD 21211",
+      "phone": "(410) 878-0884",
+      "source_url": "https://www.wickedsistershampden.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "Happy hour weekdays 3–6 at the bar and on the patio.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. WEEKDAYS = Mon–Fri 3–6. Regular-price proof on same page: Zadies Lager $5→$3 HH; Old Fashioned $13→$10; House Martini $14/$13→$11 — record for future summary line. Daily specials on site not loaded (HH block only). Archive RESEARCH/ig-evidence-2026-08-05/WickedSisters_HH_extract_2026-08-07.txt. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 off select drafts",
+              "price": "$2 off"
+            },
+            {
+              "text": "Zadies Lager $3",
+              "price": "$3"
+            },
+            {
+              "text": "OMG 16oz cans $4",
+              "price": "$4"
+            },
+            {
+              "text": "Wines $6",
+              "price": "$6"
+            },
+            {
+              "text": "House liquor $8",
+              "price": "$8"
+            },
+            {
+              "text": "Spritzes $9",
+              "price": "$9"
+            },
+            {
+              "text": "Old Fashioned / Margarita / Whiskey Sour $10",
+              "price": "$10"
+            },
+            {
+              "text": "Martini $11",
+              "price": "$11"
+            },
+            {
+              "text": "Mac n' cheese $10",
+              "price": "$10"
+            },
+            {
+              "text": "Wings $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fried pickles $10",
+              "price": "$10"
+            },
+            {
+              "text": "Brussels sprouts $10",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "drink",
+            "wings",
+            "pasta/comfort",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3350174,
+      "lon": -76.6359819,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+    },
+    {
+      "id": "the-bluebird",
+      "name": "The Bluebird",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "status": "verified",
+      "address": "3600 Hickory Avenue, Baltimore, MD 21211",
+      "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-08",
+      "notes_public": "Cocktail Room happy hour Mon–Fri 5:00–6:30.",
+      "ops_notes": "Deal Scout + CoS 2026-08-08. Select classic cocktails $10 tier expands on page to Champagne Cocktail, Lemon Drop, Aviation — names for monitor match, not separate card rows. Address from HH page: 3600 Hickory Avenue. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/Bluebird_HH_extract_2026-08-07.txt. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Select classic cocktails $10",
+              "price": "$10"
+            },
+            {
+              "text": "House wines $10",
+              "price": "$10"
+            },
+            {
+              "text": "Rotating draft $5/$7",
+              "price": "$5"
+            },
+            {
+              "text": "Birdseed $3",
+              "price": "$3"
+            },
+            {
+              "text": "Frites $9",
+              "price": "$9"
+            },
+            {
+              "text": "Bluebird Cheeseburger $13",
+              "price": "$13"
+            }
+          ],
+          "start": 1020,
+          "end": 1110,
+          "time_window": "5pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-08",
+          "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
+          "food_categories": [
+            "drink",
+            "burger",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3312305,
+      "lon": -76.6339767,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
     }
   ]

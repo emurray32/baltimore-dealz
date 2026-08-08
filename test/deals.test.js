@@ -1936,10 +1936,10 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Board math: 28 showable before this load → 35 after (6 new + Watershed upgrade).
   // AJ's / Nick's / Rusty (batch 39) bumps showable 35 → 38 and total 63 → 66.
   // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
-  // Coral Wig + Magdalena + Bar Dalí → showable 46, total 74.
+  // Fifty: +Monarque Alma Wicked Bluebird → showable 50, total 78.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 46);
-  assert.equal(venues.length, 74);
+  assert.equal(showable, 50);
+  assert.equal(venues.length, 78);
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
@@ -2188,6 +2188,81 @@ test("Coral Wig, Magdalena, Bar Dalí CoS ship 2026-08-08", async () => {
   assert.ok(dali.deals[0].items.some((i) => i.text === "20% off Care Bottles $28"));
   assert.ok(dali.deals[0].items.some((i) => /Dawn & Stormy.*\$10/.test(i.text)));
   assert.ok(venuesInView(venues, mv).some((v) => v.id === "bar-dali"));
+});
+
+
+test("Monarque, Alma, Wicked Sisters, Bluebird CoS ship 2026-08-08 — board hits 50", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  // station-north view for Charles North (Alma) — not folded into Mount Vernon.
+  const sn = bySlug["station-north"];
+  assert.deepEqual(sn.neighborhoods, ["Charles North"]);
+
+  // Monarque — Harbor East; Tue–Sat 5–7; two $10 food rows CoS added via bounding boxes.
+  const mon = byId.monarque;
+  assert.equal(mon.status, "verified");
+  assert.equal(mon.neighborhood, "Harbor East");
+  assert.equal(mon.phone, "(443) 384-1480");
+  assert.match(mon.source_url, /MonQHH-03132026\.pdf/);
+  assert.match(mon.ops_notes ?? "", /source_document_date=2026-03-13/);
+  assert.deepEqual(mon.deals[0].days, ["tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(mon.deals[0].start, 1020);
+  assert.equal(mon.deals[0].end, 1140);
+  assert.ok(mon.deals[0].items.some((i) => /Oysters \(3\) \$6/.test(i.text)));
+  assert.ok(mon.deals[0].items.some((i) => /Oysters Rockefeller \(3\) \$10/.test(i.text)));
+  assert.ok(mon.deals[0].items.some((i) => /Spinach & Artichoke Dip \$10/.test(i.text)));
+  assert.ok(mon.deals[0].items.some((i) => /\$3 upcharge for cocktails/.test(i.text)));
+  assert.ok(!mon.deals[0].items.some((i) => i.text === "$3 upcharge for cocktails"));
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "monarque"));
+
+  // Alma — Charles North; Wed/Thu/Fri/Sun 5–7 bar only; Sunday all-night in notes.
+  const alma = byId["alma-cocina-latina"];
+  assert.equal(alma.status, "verified");
+  assert.equal(alma.neighborhood, "Charles North");
+  assert.equal(alma.phone, "(667) 212-4273");
+  assert.match(alma.notes_public ?? "", /bar only/i);
+  assert.match(alma.notes_public ?? "", /Sunday.*all night/i);
+  assert.deepEqual(alma.deals[0].days, ["wed", "thu", "fri", "sun"]);
+  assert.equal(alma.deals[0].start, 1020);
+  assert.equal(alma.deals[0].end, 1140);
+  assert.match(alma.deals[0].time_window, /bar only/i);
+  assert.ok(!alma.deals[0].days.includes("mon") && !alma.deals[0].days.includes("tue"));
+  assert.ok(alma.deals[0].items.some((i) => /Tequeños \$10/.test(i.text)));
+  assert.ok(alma.deals[0].items.some((i) => /Classic Latin cocktails \$10/.test(i.text)));
+  assert.ok(venuesInView(venues, sn).some((v) => v.id === "alma-cocina-latina"));
+
+  // Wicked Sisters — Hampden Mon–Fri 3–6; regular-price proof in ops_notes.
+  const wicked = byId["wicked-sisters"];
+  assert.equal(wicked.status, "verified");
+  assert.equal(wicked.neighborhood, "Hampden");
+  assert.equal(wicked.phone, "(410) 878-0884");
+  assert.match(wicked.ops_notes ?? "", /Zadies Lager \$5/);
+  assert.match(wicked.ops_notes ?? "", /Old Fashioned \$13/);
+  assert.deepEqual(wicked.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(wicked.deals[0].start, 900);
+  assert.equal(wicked.deals[0].end, 1080);
+  assert.ok(wicked.deals[0].items.some((i) => /Zadies Lager \$3/.test(i.text)));
+  assert.ok(wicked.deals[0].items.some((i) => /Wings \$10/.test(i.text)));
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "wicked-sisters"));
+
+  // Bluebird — Hampden Mon–Fri 5–6:30; cocktail tier + address; no pinned cocktail names on card.
+  const bird = byId["the-bluebird"];
+  assert.equal(bird.status, "verified");
+  assert.equal(bird.neighborhood, "Hampden");
+  assert.equal(bird.phone, undefined);
+  assert.equal(bird.address, "3600 Hickory Avenue, Baltimore, MD 21211");
+  assert.deepEqual(bird.deals[0].days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(bird.deals[0].start, 1020);
+  assert.equal(bird.deals[0].end, 1110);
+  assert.ok(bird.deals[0].items.some((i) => i.text === "Select classic cocktails $10"));
+  assert.ok(bird.deals[0].items.some((i) => /Bluebird Cheeseburger \$13/.test(i.text)));
+  const birdText = bird.deals[0].items.map((i) => i.text).join(" | ");
+  assert.doesNotMatch(birdText, /Champagne Cocktail|Lemon Drop|Aviation/i);
+  assert.match(bird.ops_notes ?? "", /Champagne Cocktail|Lemon Drop|Aviation/);
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "the-bluebird"));
 });
 
 

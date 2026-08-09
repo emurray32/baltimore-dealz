@@ -108,7 +108,7 @@ test("dealsForDay returns only that day's deals", async () => {
 test("a deal listed on two days shows up on both", async () => {
   const venues = await loadVenues();
   const brunchDays = weekByDay(venues)
-    .filter((day) => day.rows.some((row) => row.deal.items.some((i) => i.text === "Brunch")))
+    .filter((day) => day.rows.some((row) => row.deals.some((d) => d.items.some((i) => i.text === "Brunch"))))
     .map((day) => day.key);
 
   assert.deepEqual(brunchDays, ["sat", "sun"]);
@@ -119,6 +119,29 @@ test("every day of the week has at least one seeded deal", async () => {
   for (const day of weekByDay(venues)) {
     assert.ok(day.rows.length > 0, `no deals seeded for ${day.key}`);
   }
+});
+
+test("exactly one tile per venue, even when a venue has multiple same-day deals", async () => {
+  // Monday: Huck's has 2 deals, Claddagh has 2 deals, Smaltimore has 2 deals.
+  // Scope to the "On tonight" cards, not the full board with accordion.
+  const html = await boardFor(new Date("2026-08-03T20:00:00Z"));
+  const tonight = html.split('<section id="tonight-board"')[1].split("</section>")[0];
+
+  const tileCount = (name) => {
+    const escaped = escapeHtml(name);
+    let count = 0;
+    const blocks = tonight.split("<article class=\"card\"");
+    for (const block of blocks) {
+      if (block.includes(`>${escaped}<`) || block.includes(`>${escaped} `)) {
+        count++;
+      }
+    }
+    return count;
+  };
+
+  assert.equal(tileCount("Huck's American Craft"), 1, "Huck's must be exactly one tile");
+  assert.equal(tileCount("Claddagh Pub"), 1, "Claddagh must be exactly one tile");
+  assert.equal(tileCount("Smaltimore"), 1, "Smaltimore must be exactly one tile");
 });
 
 // --- status: unverified venues never reach the board ---------------------

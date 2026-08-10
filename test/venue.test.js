@@ -100,13 +100,13 @@ test("quiet venue page is honest, not 404", async () => {
   assert.ok(schedule.every((d) => d.deals.length === 0));
 });
 
-test("prices_published:false still prints on venue page", async () => {
+test("price-unknown rows remain held in venue data", async () => {
   const venues = await loadVenues();
   const views = await loadViews();
   const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
   assert.ok(stack.deals.some((d) => d.prices_published === false));
   const html = renderVenuePage(stack, views, FRI_11PM_EDT);
-  assert.match(html, /Prices not published by the venue/);
+  assert.match(html, /no prices are currently listed by the venue/i);
 });
 
 test("boardViewForVenue picks a view that includes the neighbourhood", async () => {

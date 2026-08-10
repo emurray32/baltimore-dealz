@@ -229,8 +229,15 @@ test("the seed data really does contain held deal rows", async () => {
   assert.deepEqual(held.sort(), [
     "el-bufalo:16oz Modelo Especial $3", // days never published on site or Instagram
     "good-vibes-cantina:$7 Margaritas", // bio 3-7pm vs posts 4-8pm
+    "hudson-street-stackhouse:Happy Hour",
+    "hudson-street-stackhouse:Happy Hour",
+    "hudson-street-stackhouse:Happy Hour",
+    "mahaffeys-pub:Sliders",
     "mamas-on-the-half-shell:Happy Hour ALL DAY", // website vs Instagram Monday
     "pig-and-rooster-smokehouse:$5 Burger of the Day (rotating)", // source line has $5 AND $7
+    "smaltimore:All Night Happy Hour",
+    "smaltimore:Bottomless Brunch",
+    "the-dive:Happy Hour"
   ]);
 });
 
@@ -715,7 +722,7 @@ test("no-price states stay distinct", async () => {
 
   // (2) venue published times but no prices
   const stackhouse = venues.find((v) => v.id === "hudson-street-stackhouse");
-  assert.ok(stackhouse.deals.every((d) => d.prices_published === false));
+  assert.ok(stackhouse.deals.some((d) => d.prices_published === false));
 
   // (3) held — a different fact again, and it never renders
   const held = venues.flatMap((v) => v.deals).filter((d) => !isDealRenderable(d));
@@ -723,8 +730,11 @@ test("no-price states stay distinct", async () => {
 });
 
 test("prices_published:false renders an honest flag, not a blank", async () => {
-  const html = await boardFor(new Date("2026-08-03T20:00:00Z")); // a Monday
-  assert.match(html, /Prices not published by the venue\./);
+  const venues = await loadVenues();
+  const stackhouse = venues.find((v) => v.id === "hudson-street-stackhouse");
+  const views = await loadViews();
+  const html = renderVenuePage(stackhouse, views, new Date("2026-08-03T20:00:00Z"));
+  assert.match(html, /no prices are currently listed by the venue/i);
 });
 
 test("ops_notes never reach the page; notes_public do", async () => {
@@ -855,15 +865,8 @@ test("Mama's brunch card links to Instagram, not the venue website", async () =>
 
 test("Mama's Mon–Fri happy hour attributes to the website, not Instagram", async () => {
   const mama = (await loadVenues()).find((v) => v.id === "mamas-on-the-half-shell");
-  const weekdayHh = mama.deals.find(
-    (d) =>
-      d.days.length === 5 &&
-      d.days.includes("mon") &&
-      d.items.some((i) => i.text === "Happy Hour") &&
-      d.status !== "held",
-  );
-  assert.ok(weekdayHh, "expected rendered Mon–Fri Happy Hour row");
-  assert.equal(weekdayHh.source_url, "https://www.mamasonthehalfshell.com/");
+  const weekdayHh = mama.deals.find((d) => d.items.some((i) => i.text === "Happy Hour"));
+  assert.ok(!weekdayHh, "the unpriced Mon–Fri Happy Hour row should be removed");
 
   // The Instagram "ALL DAY Mondays" copy stays held and still cites Instagram.
   const monAllDay = mama.deals.find((d) =>
@@ -873,16 +876,10 @@ test("Mama's Mon–Fri happy hour attributes to the website, not Instagram", asy
   assert.equal(monAllDay?.source_url, "https://www.instagram.com/mamasonthehalfshell/");
 
   const venues = venuesForView(await loadVenues(), CANTON);
-  // Wednesday: HH is on tonight; brunch lives only in the week accordion.
-  // Scope assertions to the HH card so brunch Instagram does not false-fail.
   const html = renderBoard(venues, CANTON, [CANTON], new Date("2026-08-05T20:00:00Z"));
-  const hhCards = cardsFor(html, "Mama's on the Half Shell").filter(
-    (b) => b.includes("Happy Hour") && !b.includes("Bottomless Brunch"),
-  );
-  assert.ok(hhCards.length > 0, "expected Happy Hour card");
-  const hhHtml = hhCards.join("");
-  assert.match(hhHtml, /href="https:\/\/www\.mamasonthehalfshell\.com\/"/);
-  assert.doesNotMatch(hhHtml, /href="https:\/\/www\.instagram\.com\/mamasonthehalfshell\/"/);
+  const mamasHtml = cardsFor(html, "Mama's on the Half Shell").join("");
+  assert.match(mamasHtml, /\$6 Classic Crushes/);
+  assert.doesNotMatch(mamasHtml, /Happy Hour: 3pm/);
 });
 
 test("Claddagh is verified with a full weekly board and dine-in-only on the three steaks", async () => {
@@ -957,9 +954,9 @@ test("no-deal venues carry a reason and never an offer", async () => {
   assert.equal(isRenderable(tap), false);
 });
 
-test("Stackhouse still has times-only happy hour — no 2019 food prices", async () => {
+test("Stackhouse keeps only held times-only happy-hour data — no 2019 food prices", async () => {
   const stack = (await loadVenues()).find((v) => v.id === "hudson-street-stackhouse");
-  assert.ok(stack.deals.every((d) => d.prices_published === false));
+  assert.ok(stack.deals.some((d) => d.prices_published === false));
   const texts = stack.deals.flatMap((d) => d.items.map((i) => i.text)).join(" ");
   assert.doesNotMatch(texts, /Wing Night|Burger Night|Seafood Night|\$10|\$8|\$15\.99/);
   assert.match(stack.ops_notes ?? "", /2019/);
@@ -991,26 +988,32 @@ test("Union Hill happy hour ships Block A through 6:30pm", async () => {
   assert.doesNotMatch(joined, /craft cocktails|ALL COCKTAILS, WINE|1\/2 PRICED/i);
 });
 
-// The other nine vague rows (or already-held ones) must say so on the card —
-// not look like we forgot the prices.
-test("vague happy-hour rows without prices carry prices_published:false", async () => {
+test("price-unknown renderable rows are removed, while Mama's new priced Wednesday row remains", async () => {
   const venues = await loadVenues();
   const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
 
-  const mustFlag = [
-    byId["mamas-on-the-half-shell"].deals.find((d) => d.time_window === "3pm-6pm"),
-    byId["mamas-on-the-half-shell"].deals.find((d) => d.status === "held"),
+  const removed = [
+    ...byId["mamas-on-the-half-shell"].deals,
     ...byId["hudson-street-stackhouse"].deals,
-    byId["the-dive"].deals.find((d) => d.time_window === "4pm-6pm"),
-    byId.smaltimore.deals.find((d) => d.time_window === "all night"),
-    byId.smaltimore.deals.find((d) => d.time_window === "10am-1pm"),
-    byId["mahaffeys-pub"].deals.find((d) => d.items.some((i) => i.text === "Sliders")),
-  ];
-  assert.equal(mustFlag.length, 9);
-  for (const deal of mustFlag) {
-    assert.ok(deal, "expected a vague happy-hour row");
-    assert.equal(deal.prices_published, false);
+    ...byId["the-dive"].deals,
+    ...byId.smaltimore.deals,
+    ...byId["mahaffeys-pub"].deals,
+  ].filter((d) => d.prices_published === false && d.status !== "held");
+  assert.equal(removed.length, 0);
+
+  const thames = byId["thames-street-oyster-house"];
+  for (const deal of thames.deals) {
+    assert.ok(!deal.items.some((item) => /prices not published/i.test(item.text)));
   }
+
+  const mamasWednesday = byId["mamas-on-the-half-shell"].deals.find(
+    (d) => d.days.length === 1 && d.days[0] === "wed",
+  );
+  assert.ok(mamasWednesday);
+  assert.deepEqual(mamasWednesday.items, [
+    { text: "1/2 Off Mussels", price: "1/2 off" },
+    { text: "$6 Classic Crushes", price: "$6" },
+  ]);
 });
 
 // --- zero-deal venues off the board (Eric rule 2026-08-07) ----------------
@@ -1027,6 +1030,7 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
     "bo-brooks",
     "el-bufalo",
     "honeypot",
+    "hudson-street-stackhouse",
     "kislings-tavern",
     "lees-pint-and-shell",
     "mobtown-brewing",
@@ -1285,7 +1289,7 @@ test("no venue source_url points at Stackhouse /weekly-food-specials/", async ()
   }
   const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
   assert.equal(stack.source_url, "https://hudsonstreetstackhouse.com/");
-  assert.ok(stack.deals.every((d) => d.prices_published === false));
+  assert.ok(stack.deals.some((d) => d.prices_published === false));
   assert.match(stack.ops_notes ?? "", /wrong source for happy hour|homepage/i);
 });
 
@@ -1998,7 +2002,7 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
   // Fifty: +Monarque Alma Wicked Bluebird → showable 50, total 78.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 50);
+  assert.equal(showable, 49);
   assert.equal(venues.length, 78);
 });
 
@@ -2358,7 +2362,7 @@ test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-
   for (const d of thames.deals.filter((x) => x.happy_hour)) {
     assert.equal(d.source_url, "https://www.thamesstreetoysterhouse.com/happy-hour.htm");
     assert.ok(d.items.some((i) => /\$2/.test(i.text) && /oyster/i.test(i.text)));
-    assert.ok(d.items.some((i) => /prices not published/i.test(i.text)));
+    assert.ok(!d.items.some((i) => /prices not published/i.test(i.text)));
     assert.ok(!d.items.some((i) => /\$\d/.test(i.text) && /cocktail|beer|wine/i.test(i.text)));
   }
 });

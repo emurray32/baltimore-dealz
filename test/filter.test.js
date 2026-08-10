@@ -40,7 +40,7 @@ test("proof_quote renders on cards and never invents paraphrase", async () => {
   const canton = views.find((v) => v.slug === "canton");
   const html = renderBoard(venuesInView(await loadVenues(), canton), canton, views, SAT);
   assert.match(html, /class="proof"/);
-  assert.match(html, /MONDAY — ALL NIGHT HAPPY HOUR/);
+  assert.doesNotMatch(html, /MONDAY — ALL NIGHT HAPPY HOUR/);
   assert.match(html, /client-filter\.js/);
 });
 

@@ -5,6 +5,7 @@ import {
   dayKeyInZone,
   dayLabel,
   dealsForDay,
+  dealsGroupedForDay,
   EARTH_RADIUS_M,
   FOOD_CATEGORY_LABELS,
   hasShowableDeal,
@@ -137,6 +138,88 @@ function dealCard({ venue, deal }, now = new Date(), options = {}) {
       </article>`;
 }
 
+// One card per venue, with all showable deals for the day inside it. Multiple
+// specials live inside one tile instead of duplicating the venue name across
+// cards (Eric rule 2026-08-09: exactly one tile per venue).
+export function venueCard({ venue, deals }, now = new Date(), options = {}) {
+  const venueHref =
+    typeof options.venueHref === "function"
+      ? options.venueHref(venue.id)
+      : `/venue/${venue.id}`;
+  const nameHtml = `<a class="venue-link" href="${escapeHtml(venueHref)}">${escapeHtml(venue.name)}</a>`;
+
+  const coords =
+    typeof venue.lat === "number" && typeof venue.lon === "number"
+      ? ` data-lat="${venue.lat}" data-lon="${venue.lon}"`
+      : "";
+
+  // Union of food categories across all day's deals.
+  const foodSet = new Set();
+  for (const deal of deals) {
+    if (Array.isArray(deal.food_categories)) {
+      for (const cat of deal.food_categories) foodSet.add(cat);
+    }
+  }
+  const food =
+    foodSet.size > 0
+      ? ` data-food="${escapeHtml([...foodSet].join(" "))}"`
+      : "";
+
+  // Only set start/end when ALL deals carry them — a mixed-window venue
+  // cannot be assigned a single timing group by the client script.
+  const allHaveStart = deals.every((d) => d.start !== null && d.start !== undefined);
+  const allHaveEnd = deals.every((d) => d.end !== null && d.end !== undefined);
+  const startAttr = allHaveStart ? String(Math.min(...deals.map((d) => d.start))) : "";
+  const endAttr = allHaveEnd ? String(Math.max(...deals.map((d) => d.end))) : "";
+
+  const dealRows = deals
+    .map((deal) => {
+      const window = deal.time_window
+        ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
+        : "";
+      const items = deal.items
+        .map((item) => `<li>${escapeHtml(item.text)}</li>`)
+        .join("");
+      const proof = deal.proof_quote
+        ? `<blockquote class="proof">${escapeHtml(deal.proof_quote)}</blockquote>`
+        : "";
+      const noPrices =
+        deal.prices_published === false
+          ? '<p class="meta">Prices not published by the venue.</p>'
+          : "";
+      return `<div class="deal-row">${dealChips(deal, now)}${window}<ul>${items}</ul>${proof}${noPrices}</div>`;
+    })
+    .join("");
+
+  // Collect unique source URLs across all deal rows. When one deal carries a
+  // specific verification URL and another carries a different one, show both
+  // rather than silently dropping one and falling back to the venue homepage.
+  const dealSourceUrls = [...new Set(deals.map((d) => d.source_url).filter(Boolean))];
+
+  // Build the meta provenance line inline so every unique deal source URL
+  // gets a visible link. Phone, neighbourhood, and last_verified stay
+  // identical to metaLines — only the source portion changes.
+  const place = venue.neighborhood ? escapeHtml(venue.neighborhood) : "";
+  const phoneLink = venue.phone
+    ? `<a href="tel:${escapeHtml(venue.phone.replace(/[^0-9+]/g, ""))}">${escapeHtml(formatPhone(venue.phone))}</a>`
+    : "";
+  const sourceLinks = dealSourceUrls.length > 0
+    ? dealSourceUrls.map((u) => `<a href="${escapeHtml(u)}" target="_blank" rel="noopener">source</a>`).join(" · ")
+    : venue.source_url
+      ? `<a href="${escapeHtml(venue.source_url)}" target="_blank" rel="noopener">source</a>`
+      : "";
+  const verified = venue.last_verified ? `last verified ${escapeHtml(venue.last_verified)}` : "";
+  const provenance = [phoneLink, sourceLinks, verified].filter(Boolean).join(" · ");
+  const cardMeta = [place, provenance].filter(Boolean).join("<br>");
+
+  return `
+      <article class="card"${coords}${food} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
+        <h3>${nameHtml}</h3>
+        ${dealRows}
+        <p class="meta">${cardMeta}</p>
+      </article>`;
+}
+
 // Notes on venues that still have deals on the board — not the no-deal group.
 function notesSection(venues) {
   const notes = venues
@@ -169,11 +252,11 @@ function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
 // Cards (or the empty-state line) for one day — same markup renderBoard uses.
 // Exported so the static build can embed one <template> per weekday.
 export function cardsHtmlForDay(venues, dayKey, now = new Date(), options = {}) {
-  const rows = dealsForDay(venues, dayKey);
+  const rows = dealsGroupedForDay(venues, dayKey);
   if (!rows.length) {
     return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
   }
-  return rows.map((row) => dealCard(row, now, options)).join("");
+  return rows.map((row) => venueCard(row, now, options)).join("");
 }
 
 // One button per food category that appears on the board this week, with the
@@ -304,7 +387,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const today = cardsHtmlForDay(venues, todayKey, now, cardOpts);
   const staticClient = options.staticClient === true;
 
-  const card = (row) => dealCard(row, now, cardOpts);
+  const card = (row) => venueCard(row, now, cardOpts);
 
   // Today stays collapsed here — it is already spelled out above.
   // data-day is static-only: the client retargets "(tonight)" without parsing

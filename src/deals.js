@@ -98,8 +98,28 @@ export function dealsForDay(venues, dayKey) {
   return rows;
 }
 
+// Same filtering as dealsForDay but grouped by venue so each venue produces
+// at most one row per day, with all of its showable deals in that row.
+export function dealsGroupedForDay(venues, dayKey) {
+  const groups = new Map();
+  for (const venue of venues) {
+    if (!isRenderable(venue)) continue;
+    const deals = [];
+    for (const deal of venue.deals) {
+      if (!isDealRenderable(deal)) continue;
+      if (deal.days.includes(dayKey)) {
+        deals.push(deal);
+      }
+    }
+    if (deals.length > 0) {
+      groups.set(venue.id, { venue, deals });
+    }
+  }
+  return [...groups.values()];
+}
+
 export function weekByDay(venues) {
-  return WEEK.map((day) => ({ ...day, rows: dealsForDay(venues, day.key) }));
+  return WEEK.map((day) => ({ ...day, rows: dealsGroupedForDay(venues, day.key) }));
 }
 
 // Great-circle distance in meters between two lat/lon points (haversine,

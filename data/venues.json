@@ -309,26 +309,6 @@
         },
         {
           "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "All Night Happy Hour"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all night",
-          "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "prices_published": false,
-          "proof_quote": "MONDAY — ALL NIGHT HAPPY HOUR",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
             "tue"
           ],
           "items": [
@@ -411,6 +391,27 @@
         },
         {
           "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "All Night Happy Hour"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "status": "held",
+          "prices_published": false,
+          "time_window": "all night",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
+          "proof_quote": "MONDAY — ALL NIGHT HAPPY HOUR",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
             "sat",
             "sun"
           ],
@@ -421,13 +422,14 @@
           ],
           "start": 600,
           "end": 780,
-          "time_window": "10am-1pm",
+          "status": "held",
           "prices_published": false,
+          "time_window": "10am-1pm",
+          "verified_date": "2026-08-06",
           "proof_quote": "Bottomless Brunch 10am-1pm",
           "food_categories": [
             "brunch"
-          ],
-          "verified_date": "2026-08-06"
+          ]
         }
       ],
       "lat": 39.283232,
@@ -522,31 +524,6 @@
       "deals": [
         {
           "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Happy Hour"
-            }
-          ],
-          "start": 900,
-          "end": 1080,
-          "time_window": "3pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "prices_published": false,
-          "source_url": "https://www.mamasonthehalfshell.com/",
-          "proof_quote": "Happy Hour: 3pm – 6pm / Mon-Fri, 1st floor indoors only",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
             "mon"
           ],
           "items": [
@@ -562,6 +539,32 @@
           "status": "held",
           "source_url": "https://www.instagram.com/mamasonthehalfshell/",
           "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "1/2 Off Mussels",
+              "price": "1/2 off"
+            },
+            {
+              "text": "$6 Classic Crushes",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": true,
+          "verified_date": "2026-08-10",
+          "source_url": "https://www.mamasonthehalfshell.com/",
+          "proof_quote": "Wednesdays: 1/2 OFF Mussels & $6 Classic Crushes",
+          "food_categories": [
+            "seafood/crab",
             "drink"
           ]
         },
@@ -621,10 +624,11 @@
           ],
           "start": 900,
           "end": 1140,
+          "status": "held",
+          "prices_published": false,
           "time_window": "3pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false,
           "proof_quote": "Monday - Thursday → 3pm - 7pm",
           "food_categories": [
             "drink"
@@ -641,10 +645,11 @@
           ],
           "start": 840,
           "end": 1140,
+          "status": "held",
+          "prices_published": false,
           "time_window": "2pm-7pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false,
           "proof_quote": "Friday → 2pm - 7pm",
           "food_categories": [
             "drink"
@@ -662,10 +667,11 @@
           ],
           "start": 660,
           "end": 1020,
+          "status": "held",
+          "prices_published": false,
           "time_window": "11am-5pm",
           "happy_hour": true,
           "verified_date": "2026-08-03",
-          "prices_published": false,
           "proof_quote": "Saturday / Sunday → 11am - 5pm",
           "food_categories": [
             "drink"
@@ -674,7 +680,8 @@
       ],
       "lat": 39.282206,
       "lon": -76.578918,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
+      "notes_public": "Happy hour times are published, but no prices are currently listed by the venue; no priced deal is shown until that changes."
     },
     {
       "id": "ellies-tavern",
@@ -847,12 +854,13 @@
           ],
           "start": null,
           "end": null,
+          "status": "held",
           "prices_published": false,
+          "verified_date": "2026-08-07",
           "proof_quote": "Sliders — Industry Night",
           "food_categories": [
             "sliders"
-          ],
-          "verified_date": "2026-08-07"
+          ]
         }
       ],
       "lat": 39.281303,
@@ -1158,29 +1166,6 @@
       "deals": [
         {
           "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Happy Hour"
-            }
-          ],
-          "start": 960,
-          "end": 1080,
-          "time_window": "4pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "prices_published": false,
-          "proof_quote": "HH mon-thurs 4-6pm",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
             "mon"
           ],
           "items": [
@@ -1267,6 +1252,30 @@
             "drink"
           ],
           "verified_date": "2026-08-06"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "status": "held",
+          "prices_published": false,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-03",
+          "proof_quote": "HH mon-thurs 4-6pm",
+          "food_categories": [
+            "drink"
+          ]
         }
       ],
       "lat": 39.27912,
@@ -2916,9 +2925,6 @@
             {
               "text": "$2 local, mid-Atlantic, and northeastern oysters",
               "price": "$2"
-            },
-            {
-              "text": "Seasonal bar offerings (prices not published by the venue)"
             }
           ],
           "start": 990,
@@ -2941,9 +2947,6 @@
             {
               "text": "$2 local, mid-Atlantic, and northeastern oysters",
               "price": "$2"
-            },
-            {
-              "text": "Seasonal bar offerings (prices not published by the venue)"
             }
           ],
           "start": 900,

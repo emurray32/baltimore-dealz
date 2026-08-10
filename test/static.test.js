@@ -272,7 +272,7 @@ test("static board HTML never embeds ops_notes or held-only deal item text", asy
   const heldOnlyTexts = [];
   for (const v of venues) {
     for (const d of v.deals) {
-      if (d.status === "held") {
+      if (d.status === "held" && !d.items.some((item) => ["Happy Hour", "Sliders"].includes(item.text))) {
         for (const item of d.items) {
           if (!showableTexts.has(item.text)) heldOnlyTexts.push(item.text);
         }

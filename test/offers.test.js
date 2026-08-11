@@ -259,3 +259,18 @@ test("style.css ships the disclosure so the collapsed rows are reachable", async
   assert.match(css, /\.more-offers\s*>\s*summary/);
   assert.match(css, /cursor:\s*pointer/);
 });
+
+test("the board is light in every device setting — no dark theme", async () => {
+  // Eric, 2026-08-11: "I logged on yesterday and it went dark mode? I only
+  // want light mode." A device set to dark must not repaint the board.
+  const { readFile } = await import("node:fs/promises");
+  const { fileURLToPath } = await import("node:url");
+  const root = fileURLToPath(new URL("..", import.meta.url));
+  const css = await readFile(`${root}public/style.css`, "utf8");
+
+  assert.doesNotMatch(css, /prefers-color-scheme:\s*dark/);
+  // Declaring `light` (not `light dark`) also stops the browser darkening
+  // scrollbars and form controls on a dark device.
+  assert.match(css, /color-scheme:\s*light\s*;/);
+  assert.doesNotMatch(css, /color-scheme:\s*light\s+dark/);
+});

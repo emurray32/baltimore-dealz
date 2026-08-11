@@ -5,7 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Caveat:wght@700&display=swap');
 
 :root {
-  color-scheme: light dark;
+  /* Light only. Eric, 2026-08-11: "I logged on yesterday and it went dark
+     mode? I only want light mode." Naming just `light` also stops the browser
+     from darkening form controls and scrollbars on a device set to dark. */
+  color-scheme: light;
 
   /* palette — warm cream paper, poster-faithful accent + highlight */
   --paper:     #e8e4db;
@@ -688,33 +691,9 @@ body.map-page {
   border-radius: 6px;
 }
 
-/* ---- dark — deep black with the same 80s accents ---- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper:   #0e0c0a;
-    --surface: #1a1714;
-    --ink:     #f0ebe2;
-    --muted:   #948c82;
-    --hair:    #38332e;
-    --accent:  #ff4a4a;
-    --highlight: #ffff00;
-    --chip-bg:  #ffff00;
-    --chip-ink: #0a0a0a;
-    --note-bg:  #3a2e00;
-    --note-ink: #f0c040;
-    --focus:    #ff4a4a;
-  }
-
-  /* grid lines barely visible on black */
-  body {
-    background-image:
-      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-  }
-
-  /* dim the map tiles so they don't blast a white rectangle */
-  #map .leaflet-tile-pane { filter: brightness(.82) saturate(.75) contrast(.95); }
-}
+/* No dark theme by design — the board stays light in every device setting.
+   A dark colour-scheme media block was removed here on 2026-08-11 at Eric's
+   request; a test fails if one is reintroduced. */
 
 /* ---- print ---- */
 @media print {

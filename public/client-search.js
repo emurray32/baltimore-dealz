@@ -48,6 +48,20 @@
     return (li.textContent || "").toLowerCase();
   }
 
+  // A card's long-list overflow is collapsed by default. When the query only
+  // matches a line inside it, open it — otherwise the card appears as a hit
+  // with nothing on it that matches. Closes again on an empty query.
+  function revealMatchInOverflow(card, query) {
+    var more = card.querySelectorAll("details.more-offers");
+    for (var m = 0; m < more.length; m++) {
+      if (!query) {
+        more[m].open = false;
+        continue;
+      }
+      more[m].open = (more[m].textContent || "").toLowerCase().indexOf(query) !== -1;
+    }
+  }
+
   function apply(q) {
     var query = (q || "").trim().toLowerCase();
     var anyVisible = false;
@@ -63,6 +77,7 @@
         var show = !query || cardText(card).indexOf(query) !== -1;
         card.hidden = !show;
         if (show) {
+          revealMatchInOverflow(card, query);
           groupHit = true;
           anyVisible = true;
         }

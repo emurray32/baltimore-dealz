@@ -11,6 +11,7 @@ import {
   hasShowableDeal,
   isVerifiedDateStale,
   METERS_PER_MILE,
+  splitOffers,
   WEEK,
   weekByDay,
 } from "./deals.js";
@@ -86,11 +87,27 @@ function dealChips(deal, now) {
   return chips.length ? `<p class="chips">${chips.join(" ")}</p>` : "";
 }
 
+// A card lists its best few offers, not the venue's whole happy-hour menu.
+// Stated savings first, then cheapest — then the rest collapse behind a
+// disclosure. Everything still ships in the document, so search, the food
+// filters and a reader with JS off all reach every line; only the default
+// height changes.
+function offerList(items) {
+  const { shown, rest } = splitOffers(items);
+  const li = (item) => `<li>${escapeHtml(item.text)}</li>`;
+  const head = `<ul>${shown.map(li).join("")}</ul>`;
+  if (rest.length === 0) return head;
+  const label = `+${rest.length} more`;
+  return `${head}<details class="more-offers"><summary>${escapeHtml(label)}</summary><ul>${rest
+    .map(li)
+    .join("")}</ul></details>`;
+}
+
 function dealCard({ venue, deal }, now = new Date(), options = {}) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
-  const items = deal.items.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("");
+  const items = offerList(deal.items);
   // Proof next to the claim: the venue's own words, verbatim, so the source
   // link is a backup rather than the whole argument.
   const proof = deal.proof_quote
@@ -131,7 +148,7 @@ function dealCard({ venue, deal }, now = new Date(), options = {}) {
       <article class="card"${coords}${food} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
         <h3>${nameHtml} ${window}</h3>
         ${dealChips(deal, now)}
-        <ul>${items}</ul>
+        ${items}
         ${proof}
         ${noPrices}
         <p class="meta">${metaLines(venue, deal)}</p>
@@ -177,9 +194,7 @@ export function venueCard({ venue, deals }, now = new Date(), options = {}) {
       const window = deal.time_window
         ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
         : "";
-      const items = deal.items
-        .map((item) => `<li>${escapeHtml(item.text)}</li>`)
-        .join("");
+      const items = offerList(deal.items);
       const proof = deal.proof_quote
         ? `<blockquote class="proof">${escapeHtml(deal.proof_quote)}</blockquote>`
         : "";
@@ -187,7 +202,7 @@ export function venueCard({ venue, deals }, now = new Date(), options = {}) {
         deal.prices_published === false
           ? '<p class="meta">Prices not published by the venue.</p>'
           : "";
-      return `<div class="deal-row">${dealChips(deal, now)}${window}<ul>${items}</ul>${proof}${noPrices}</div>`;
+      return `<div class="deal-row">${dealChips(deal, now)}${window}${items}${proof}${noPrices}</div>`;
     })
     .join("");
 

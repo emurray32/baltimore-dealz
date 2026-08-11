@@ -332,6 +332,105 @@ export function isVerifiedDateStale(verifiedDate, now = new Date(), maxAgeDays =
 // A venue that publishes its deals in a form we cannot machine-read.
 export const DEAL_FORMATS = ["image"];
 
+// How many offer lines a board card shows before the rest collapse. Eric,
+// 2026-08-10: a card listing all 18 happy-hour items reads as a menu, not as a
+// set of deals. 36 of 51 venues were over this line.
+export const CARD_OFFER_LIMIT = 6;
+
+// A price the VENUE itself stated as a saving: "$3 off", "1/2 price", "BOGO",
+// "2 for 1", "Free". These are the only lines a customer can judge without
+// knowing the regular price, so they go to the top of every card.
+//
+// This reads the structured `price` field, never the item text. Prose matching
+// is how "1/2 Lb. Peel & Eat Shrimp $16" once got promoted as half-price.
+const STATED_SAVING_RE = /(off\b|\bprice\b|\bbogo\b|\bfor\b|\bfree\b)/i;
+
+// Some saving lines carry no price field at all ("Free street taco with order
+// of two", "Kids eat free after 5"). Those are among the clearest deals on the
+// board, so they must not sink to the bottom with the trivia nights.
+//
+// This one runs against item TEXT, so it is deliberately narrower than the
+// price-field test: whole phrases only, never a bare "off", "price" or "for".
+// Every line it fires on is pinned by a test.
+const TEXT_SAVING_RE =
+  /(\bfree\b|\bb\.?o\.?g\.?o\.?\b|\d+\s*%\s*off\b|\$\s*\d+(?:\.\d+)?\s*off\b|\b(?:half|1\/2)\s+(?:off|price)\b)/i;
+
+// Leading dollar amount. A range ("$8.50–$12") sorts on its low end — the
+// cheapest way in is what makes the line worth showing.
+const AMOUNT_RE = /\$\s*(\d+(?:\.\d+)?)/;
+
+// Sort key for one offer: [tier, amount]. Lower sorts first.
+// - tier 0: a stated saving, from the price field or an unmistakable phrase
+// - tier 1: a plain price, cheapest first
+// - tier 2: no readable price (event lines like "Trivia Night") — last
+export function offerRank(item) {
+  const price = typeof item?.price === "string" ? item.price : "";
+  const text = typeof item?.text === "string" ? item.text : "";
+  if (price) {
+    if (STATED_SAVING_RE.test(price)) return [0, 0];
+    const amount = AMOUNT_RE.exec(price);
+    if (amount) return [1, Number(amount[1])];
+  }
+  // No usable price field — the item's own words can still prove a saving.
+  // Deliberately NOT parsing an amount out of free text: "Bmore Trivia — win a
+  // $50 gift card" is a prize, not a price. A line that needs a price gets a
+  // price field in the data.
+  if (TEXT_SAVING_RE.test(text)) return [0, 0];
+  return [2, 0];
+}
+
+// Stated savings first, then cheapest first, then unpriced lines — stable
+// within each tier so the venue's own ordering survives where we add nothing.
+export function rankOffers(items) {
+  if (!Array.isArray(items)) return [];
+  return items
+    .map((item, index) => ({ item, index, rank: offerRank(item) }))
+    .sort((a, b) => {
+      if (a.rank[0] !== b.rank[0]) return a.rank[0] - b.rank[0];
+      if (a.rank[1] !== b.rank[1]) return a.rank[1] - b.rank[1];
+      return a.index - b.index;
+    })
+    .map((entry) => entry.item);
+}
+
+// Above this, a price with no stated saving is just a menu item. Eric,
+// 2026-08-10: "If it's $4 drafts, that's a deal, but simply naming things and
+// giving prices isn't what we're going for." A $28 wing platter may well be
+// good value, but nobody can tell from the number alone, so it does not lead
+// the card. Lines carrying a stated saving are exempt at any price.
+//
+// This is a judgment call, not a measurement — one number, easy to move.
+export const JUDGEABLE_MAX_PRICE = 12;
+
+// Never leave a card with nothing on it. A venue whose every line is above the
+// ceiling still shows its cheapest few rather than collapsing to a bare header.
+export const CARD_OFFER_FLOOR = 3;
+
+// True when a customer can tell this is a deal without knowing the regular
+// price: the venue stated the saving, or the number is plainly cheap.
+export function isJudgeableOffer(item, maxPrice = JUDGEABLE_MAX_PRICE) {
+  const [tier, amount] = offerRank(item);
+  if (tier === 0) return true;
+  if (tier === 1) return amount <= maxPrice;
+  return false;
+}
+
+// Split ranked offers into what a card shows and what collapses behind
+// "+N more". Nothing is ever dropped — the rest ship in the same document so
+// search, filters and JS-off readers still reach every line.
+export function splitOffers(items, limit = CARD_OFFER_LIMIT) {
+  const ranked = rankOffers(items);
+  const judgeable = ranked.filter((item) => isJudgeableOffer(item));
+  // Prefer the lines a customer can actually judge. If too few qualify, top up
+  // from the front of the ranked list so a card is never bare.
+  const head =
+    judgeable.length >= CARD_OFFER_FLOOR
+      ? judgeable.slice(0, limit)
+      : ranked.slice(0, Math.min(CARD_OFFER_FLOOR, ranked.length));
+  const shownSet = new Set(head);
+  return { shown: head, rest: ranked.filter((item) => !shownSet.has(item)) };
+}
+
 // Minutes past midnight, or null. `end: null` MEANS the venue published no end
 // time — so hasEnded can never be true for it. That is the whole point of the
 // split: the canon stops being a rule someone remembers and becomes a shape.

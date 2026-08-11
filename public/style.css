@@ -266,6 +266,28 @@ nav.meta strong {
 }
 .card ul li:first-child { border-top: 0; padding-top: .1rem; }
 
+/* "+N more" — the rest of a long happy-hour list, collapsed by default so a
+   card reads as a set of deals rather than as the venue's whole menu. The
+   items are in the document either way; only the default height changes. */
+.more-offers > summary {
+  margin-top: .45rem;
+  padding: .35rem 0 .1rem;
+  border-top: 1px dashed var(--hair);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--note-ink);
+}
+.more-offers > summary:hover { color: var(--ink); }
+.more-offers > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.more-offers[open] > summary { color: var(--ink); }
+/* The disclosure's own list continues the one above it, so its first row keeps
+   the dashed rule that .card ul li:first-child would otherwise strip. */
+.more-offers ul li:first-child { border-top: 1px dashed var(--hair); padding-top: .5rem; }
+.more-offers ul { margin-top: 0; }
+
 /* proof next to the claim — venue's own words, verbatim */
 .proof {
   margin: .6rem 0 0;

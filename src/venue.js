@@ -7,6 +7,7 @@ import {
   isDealRenderable,
   isRenderable,
   isVerifiedDateStale,
+  rankOffers,
   WEEK,
 } from "./deals.js";
 import { escapeHtml, formatPhone } from "./page.js";
@@ -62,7 +63,11 @@ function scheduleDeal(deal, now) {
   const window = deal.time_window
     ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
     : "";
-  const items = deal.items.map((item) => `<li>${escapeHtml(item.text)}</li>`).join("");
+  // The venue page is where someone goes for the whole list, so it never
+  // truncates — but it still leads with the stated savings and the cheap end.
+  const items = rankOffers(deal.items)
+    .map((item) => `<li>${escapeHtml(item.text)}</li>`)
+    .join("");
   const noPrices =
     deal.prices_published === false
       ? '<p class="meta">Prices not published by the venue.</p>'

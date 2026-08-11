@@ -121,7 +121,21 @@ test("client-search filters cards within timing groups and reports empty results
     return false;
   }
 
-  const claddagh = el("article", { className: "card", textContent: "Claddagh Pub 4pm-7pm Happy Hour" });
+  // Claddagh carries a collapsed overflow list. A query that only matches a
+  // line inside it must open it, or the card shows as a hit with nothing on it
+  // that matches.
+  const overflow = el("details", {
+    className: "more-offers",
+    textContent: "+3 more Bottles of Wine 1/2 OFF Espresso Martini $8",
+  });
+  overflow.open = false;
+  const claddagh = el("article", {
+    className: "card",
+    textContent: "Claddagh Pub 4pm-7pm Happy Hour Bud Light $3 +3 more Espresso Martini $8",
+  });
+  claddagh.appendChild(overflow);
+  claddagh.querySelectorAll = (sel) =>
+    sel === "details.more-offers" ? [overflow] : [];
   const mahaffeys = el("article", { className: "card", textContent: "Mahaffey's Pub Sliders" });
   const host = el("div", { className: "timing-cards" }, [claddagh, mahaffeys]);
   const group = el("div", { className: "timing-group" }, [
@@ -261,6 +275,18 @@ test("client-search filters cards within timing groups and reports empty results
   assert.equal(group.hidden, false);
   assert.equal(barracudas.hidden, true);
   assert.equal(quiet.hidden, true);
+
+  // A match that lives only in the collapsed overflow opens it.
+  input.value = "espresso";
+  input.dispatch("input");
+  assert.equal(claddagh.hidden, false, "card with an overflow match stays visible");
+  assert.equal(overflow.open, true, "overflow must open so the match is visible");
+
+  // A match on the face of the card leaves the overflow closed.
+  input.value = "4pm-7pm";
+  input.dispatch("input");
+  assert.equal(claddagh.hidden, false);
+  assert.equal(overflow.open, false, "no overflow match — stays collapsed");
 
   // Barracudas in quiet group
   input.value = "barracudas";

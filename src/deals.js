@@ -337,6 +337,10 @@ export const DEAL_FORMATS = ["image"];
 // set of deals. 36 of 51 venues were over this line.
 export const CARD_OFFER_LIMIT = 6;
 
+// The calendar is a summary, one line per venue per day, so it shows fewer
+// still and then a count.
+export const CALENDAR_OFFER_LIMIT = 3;
+
 // A price the VENUE itself stated as a saving: "$3 off", "1/2 price", "BOGO",
 // "2 for 1", "Free". These are the only lines a customer can judge without
 // knowing the regular price, so they go to the top of every card.

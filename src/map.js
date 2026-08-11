@@ -9,6 +9,7 @@ import {
   hasShowableDeal,
   isDealRenderable,
   isVerifiedDateStale,
+  splitOffers,
 } from "./deals.js";
 
 // The payload the browser script reads. Built server-side from the same
@@ -105,9 +106,17 @@ export function popupHtml(entry, now = new Date()) {
         const window = deal.time_window
           ? `<span class="window">${escapeHtml(deal.time_window)}</span>`
           : "";
-        const items = deal.items
-          .map((item) => `<li>${escapeHtml(item.text)}</li>`)
-          .join("");
+        // Same rule as the board card, and it matters more here: a popup is
+        // small, so an eighteen-line menu buries the map behind it.
+        const split = splitOffers(deal.items);
+        const li = (item) => `<li>${escapeHtml(item.text)}</li>`;
+        const items =
+          `<ul>${split.shown.map(li).join("")}</ul>` +
+          (split.rest.length === 0
+            ? ""
+            : `<details class="more-offers"><summary>${escapeHtml(
+                `+${split.rest.length} more`,
+              )}</summary><ul>${split.rest.map(li).join("")}</ul></details>`);
         const noPrices =
           deal.prices_published === false
             ? '<p class="pop-noprice">Prices not published by the venue.</p>'
@@ -115,7 +124,7 @@ export function popupHtml(entry, now = new Date()) {
         const proof = deal.proof_quote
           ? `<blockquote class="pop-proof">${escapeHtml(deal.proof_quote)}</blockquote>`
           : "";
-        return `<div class="pop-deal">${popupChips(deal, now)}${window}<ul>${items}</ul>${proof}${noPrices}</div>`;
+        return `<div class="pop-deal">${popupChips(deal, now)}${window}${items}${proof}${noPrices}</div>`;
       })
       .join("");
     body = `<div class="pop-scroll">${dealBlocks}</div>`;

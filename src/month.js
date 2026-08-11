@@ -4,14 +4,28 @@
 // month at a glance; the list below it is the readable form, one dated heading
 // per day that actually has something on it. Both read from the same two feeds.
 
-import { WEEK, dayLabel, dealsGroupedForDay, isDealRenderable } from "./deals.js";
+import {
+  CALENDAR_OFFER_LIMIT,
+  WEEK,
+  dayLabel,
+  dealsGroupedForDay,
+  isDealRenderable,
+  rankOffers,
+} from "./deals.js";
 import { addMonths, eventsOnDate, monthGrid, monthLabel, todayIso } from "./events.js";
 import { escapeHtml } from "./page.js";
 
+// One line per venue per day, so the calendar summarises rather than
+// transcribes: the best few offers, then a count. Loch Bar's eighteen
+// happy-hour items would otherwise run across the whole row.
 function dealText(deal) {
-  return deal.items
+  const ranked = rankOffers(deal.items);
+  const head = ranked
+    .slice(0, CALENDAR_OFFER_LIMIT)
     .map((item) => (item.price ? `${item.text} ${item.price}` : item.text))
     .join(" · ");
+  const hidden = ranked.length - CALENDAR_OFFER_LIMIT;
+  return hidden > 0 ? `${head} · +${hidden} more` : head;
 }
 
 // Everything happening on one calendar cell, from both feeds, kept apart.

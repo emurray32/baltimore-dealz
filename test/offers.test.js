@@ -209,6 +209,48 @@ test("venue page reorders the venue's own list to lead with the cheap end", asyn
   );
 });
 
+test("map popup collapses a long list too — a popup is smaller than a card", async () => {
+  const { mapPayload, popupHtml } = await import("../src/map.js");
+  const venues = await loadVenues();
+  const payload = mapPayload(venues);
+  const entry = payload.find((e) => e.id === "loch-bar");
+  assert.ok(entry, "Loch Bar must be on the map");
+
+  const html = popupHtml(entry, FRI_4PM_EDT);
+  assert.match(html, /<details class="more-offers">/);
+  assert.match(html, /\+\d+ more/);
+
+  // Tag balance: the popup markup must not leave an empty <ul>.
+  assert.doesNotMatch(html, /<ul><\/ul>/);
+
+  // Every line still reaches the popup — collapsed, not dropped.
+  const loch = venues.find((v) => v.id === "loch-bar");
+  for (const item of loch.deals[0].items) {
+    assert.ok(html.includes(escapeHtml(item.text)), `popup must still carry: ${item.text}`);
+  }
+
+  // The expensive lines are behind the disclosure, not on the face.
+  const face = html.slice(0, html.indexOf('<details class="more-offers">'));
+  assert.doesNotMatch(face, /1\/2 Lb\. Peel &amp; Eat Shrimp/);
+});
+
+test("calendar summarises a day's offers instead of transcribing them", async () => {
+  const { renderCalendar } = await import("../src/month.js");
+  const { CALENDAR_OFFER_LIMIT } = await import("../src/deals.js");
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const view = views.find((v) => v.slug === "baltimore") ?? views[0];
+
+  const html = renderCalendar(venues, [], view, views, { year: 2026, month: 8 }, FRI_4PM_EDT);
+
+  // Long lists are cut to a count rather than run across the row.
+  assert.match(html, /\+\d+ more/);
+
+  // Loch Bar's most expensive menu line never reaches the calendar.
+  assert.doesNotMatch(html, /1\/2 Lb\. Peel &amp; Eat Shrimp/);
+  assert.ok(CALENDAR_OFFER_LIMIT < CARD_OFFER_LIMIT, "calendar shows fewer than a card");
+});
+
 test("style.css ships the disclosure so the collapsed rows are reachable", async () => {
   const { readFile } = await import("node:fs/promises");
   const { fileURLToPath } = await import("node:url");

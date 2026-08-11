@@ -33,6 +33,92 @@ export function dayLabel(dayKey) {
   return WEEK.find((day) => day.key === dayKey)?.label ?? dayKey;
 }
 
+// ---- Monthly recurrence ----------------------------------------------------
+// Most deals run every week, so `recurrence` is absent on almost every row and
+// absent means weekly. A row that says "first Wednesday of the month" (Lee's
+// $5.99 burger) carries recurrence: "first". Saving that as a plain weekly row
+// would advertise it on four Wednesdays out of five — the reason Lee's sat off
+// the board with zero deals until now.
+export const RECURRENCES = ["first", "second", "third", "fourth", "last"];
+
+const YMD_FORMATTERS = new Map();
+
+function ymdFormatter(timeZone) {
+  let formatter = YMD_FORMATTERS.get(timeZone);
+  if (!formatter) {
+    formatter = new Intl.DateTimeFormat("en-CA", {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+    YMD_FORMATTERS.set(timeZone, formatter);
+  }
+  return formatter;
+}
+
+// Calendar date *in Baltimore*, not on the serving machine. A board rendered at
+// 01:00 UTC is still on the previous Baltimore day, and the ordinal has to
+// follow the same clock the rest of the board does.
+export function zonedYmd(date, timeZone = BALTIMORE_TZ) {
+  const [year, month, day] = ymdFormatter(timeZone).format(date).split("-").map(Number);
+  return { year, month, day };
+}
+
+function daysInMonth(year, month) {
+  return new Date(Date.UTC(year, month, 0)).getUTCDate();
+}
+
+// Where this date falls among the same weekdays of its month, plus whether it is
+// the final one. Occurrences of a weekday are exactly 7 days apart, so the
+// position follows from the day-of-month alone.
+function ordinalParts(date, dayKey, timeZone = BALTIMORE_TZ) {
+  if (dayKeyInZone(date, timeZone) !== dayKey) return null;
+  const { year, month, day } = zonedYmd(date, timeZone);
+  return {
+    position: Math.floor((day - 1) / 7) + 1,
+    isLast: day + 7 > daysInMonth(year, month),
+  };
+}
+
+// "first" | "second" | "third" | "fourth" | "last", or null when `date` is not
+// that weekday at all. The final occurrence reports "last" even when it is also
+// the fourth — "last Friday" is how venues write it, and a month with four
+// Fridays has no separate last one.
+export function ordinalOfDate(date, dayKey, timeZone = BALTIMORE_TZ) {
+  const parts = ordinalParts(date, dayKey, timeZone);
+  if (!parts) return null;
+  return parts.isLast ? "last" : RECURRENCES[parts.position - 1];
+}
+
+// Does this deal run on this specific date? Weekly rows (no recurrence) run on
+// every matching weekday. A "fourth" row still matches the fourth occurrence in
+// a month where that is also the last one — otherwise a deal written as
+// "fourth" would silently vanish in every four-occurrence month.
+export function dealRunsOnDate(deal, date, timeZone = BALTIMORE_TZ) {
+  const dayKey = dayKeyInZone(date, timeZone);
+  if (!deal.days?.includes(dayKey)) return false;
+  if (deal.recurrence === undefined) return true;
+  const parts = ordinalParts(date, dayKey, timeZone);
+  if (!parts) return false;
+  if (deal.recurrence === "last") return parts.isLast;
+  return deal.recurrence === RECURRENCES[parts.position - 1];
+}
+
+// The seven Baltimore dates of the Mon-first week containing `now`. Used so the
+// week accordion asks the recurrence question against real dates rather than
+// bare weekday names.
+export function weekDatesFor(now = new Date(), timeZone = BALTIMORE_TZ) {
+  const { year, month, day } = zonedYmd(now, timeZone);
+  // Noon UTC anchor: far enough from either midnight that adding whole days
+  // never trips over a DST boundary.
+  const anchor = Date.UTC(year, month - 1, day, 12);
+  const todayKey = dayKeyInZone(now, timeZone);
+  const offsetIntoWeek = WEEK.findIndex((d) => d.key === todayKey);
+  const monday = anchor - offsetIntoWeek * 86400000;
+  return WEEK.map((d, i) => ({ key: d.key, label: d.label, date: new Date(monday + i * 86400000) }));
+}
+
 // Only "verified" venues can contribute deal cards. Everything else stays in
 // venues.json (and on /venue pages) but is not listed on the board or map.
 export const VERIFIED = "verified";
@@ -84,15 +170,18 @@ export function noDealVenues(venues) {
 // Flattens venues into one row per deal running on dayKey. The status checks are
 // repeated here on purpose: no caller can put an unverified venue, or a held
 // deal row, on the board.
-export function dealsForDay(venues, dayKey) {
+// `date` is optional. Given one, monthly rows are asked whether they run on that
+// actual date; omitted, every row matching the weekday comes back, which is the
+// long-standing behaviour every existing caller relies on.
+export function dealsForDay(venues, dayKey, date) {
   const rows = [];
   for (const venue of venues) {
     if (!isRenderable(venue)) continue;
     for (const deal of venue.deals) {
       if (!isDealRenderable(deal)) continue;
-      if (deal.days.includes(dayKey)) {
-        rows.push({ venue, deal });
-      }
+      if (!deal.days.includes(dayKey)) continue;
+      if (date && !dealRunsOnDate(deal, date)) continue;
+      rows.push({ venue, deal });
     }
   }
   return rows;
@@ -100,16 +189,16 @@ export function dealsForDay(venues, dayKey) {
 
 // Same filtering as dealsForDay but grouped by venue so each venue produces
 // at most one row per day, with all of its showable deals in that row.
-export function dealsGroupedForDay(venues, dayKey) {
+export function dealsGroupedForDay(venues, dayKey, date) {
   const groups = new Map();
   for (const venue of venues) {
     if (!isRenderable(venue)) continue;
     const deals = [];
     for (const deal of venue.deals) {
       if (!isDealRenderable(deal)) continue;
-      if (deal.days.includes(dayKey)) {
-        deals.push(deal);
-      }
+      if (!deal.days.includes(dayKey)) continue;
+      if (date && !dealRunsOnDate(deal, date)) continue;
+      deals.push(deal);
     }
     if (deals.length > 0) {
       groups.set(venue.id, { venue, deals });
@@ -118,8 +207,16 @@ export function dealsGroupedForDay(venues, dayKey) {
   return [...groups.values()];
 }
 
-export function weekByDay(venues) {
-  return WEEK.map((day) => ({ ...day, rows: dealsGroupedForDay(venues, day.key) }));
+// The week accordion. Given `now`, each weekday is resolved to its real date in
+// that week so a "first Wednesday" row is asked about *this* Wednesday rather
+// than about Wednesdays in general.
+export function weekByDay(venues, now) {
+  if (!now) return WEEK.map((day) => ({ ...day, rows: dealsGroupedForDay(venues, day.key) }));
+  return weekDatesFor(now).map((day) => ({
+    key: day.key,
+    label: day.label,
+    rows: dealsGroupedForDay(venues, day.key, day.date),
+  }));
 }
 
 // Great-circle distance in meters between two lat/lon points (haversine,
@@ -167,6 +264,9 @@ const DEAL_KEYS = new Set([
   // claim). Rendered as a blockquote on the card so the source link is a
   // backup, not the whole argument. Exact words only — never paraphrased.
   "proof_quote",
+  // Optional monthly ordinal: "first" | "second" | "third" | "fourth" | "last".
+  // Absent means weekly, which is what nearly every row is.
+  "recurrence",
 ]);
 const ITEM_KEYS = new Set(["text", "price"]);
 
@@ -380,6 +480,13 @@ export function venueShapeErrors(venue) {
     }
     if (deal.happy_hour !== undefined && typeof deal.happy_hour !== "boolean") {
       errors.push(`${label}: happy_hour must be a boolean when present`);
+    }
+    // Absent is weekly. Anything present must name a real ordinal — "monthly"
+    // or "1st" would otherwise sail through and quietly render every week.
+    if (deal.recurrence !== undefined && !RECURRENCES.includes(deal.recurrence)) {
+      errors.push(
+        `${label}: recurrence must be one of ${RECURRENCES.join(", ")} when present`,
+      );
     }
     if (deal.verified_date !== undefined) {
       if (typeof deal.verified_date !== "string" || !DATE_RE.test(deal.verified_date)) {

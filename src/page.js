@@ -252,7 +252,10 @@ function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
 // Cards (or the empty-state line) for one day — same markup renderBoard uses.
 // Exported so the static build can embed one <template> per weekday.
 export function cardsHtmlForDay(venues, dayKey, now = new Date(), options = {}) {
-  const rows = dealsGroupedForDay(venues, dayKey);
+  // `dayForDate` lets the static build ask about a specific calendar date; the
+  // live board asks about today, which is the day `now` already names.
+  const date = options.date ?? (dayKeyInZone(now) === dayKey ? now : undefined);
+  const rows = dealsGroupedForDay(venues, dayKey, date);
   if (!rows.length) {
     return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
   }
@@ -392,7 +395,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   // Today stays collapsed here — it is already spelled out above.
   // data-day is static-only: the client retargets "(tonight)" without parsing
   // English day names. Live server HTML stays free of the attribute.
-  const week = weekByDay(venues)
+  const week = weekByDay(venues, now)
     .map((day) => {
       const dayAttr = staticClient ? ` data-day="${escapeHtml(day.key)}"` : "";
       return `

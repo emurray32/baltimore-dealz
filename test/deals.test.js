@@ -165,7 +165,6 @@ test("the seed data really does contain unverified venues", async () => {
       "gameon-bar-arcade",
       "honeypot",
       "kislings-tavern",
-      "lees-pint-and-shell",
       "limoncello",
       "locals-only",
       "market-ale-house",
@@ -769,8 +768,12 @@ test("no venue carries the retired single notes field", async () => {
 
 test("Lee's carries the image-only deal format", async () => {
   const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
+  // Still image-only: the $5.99 was read off the homepage graphic, not page text.
+  // The flag records where the price came from, not whether we have one.
   assert.equal(lees.deal_format, "image");
-  assert.deepEqual(lees.deals, []);
+  assert.equal(lees.deals.length, 1);
+  assert.equal(lees.deals[0].recurrence, "first");
+  assert.deepEqual(lees.deals[0].days, ["wed"]);
 
   assert.ok(venueShapeErrors(venue({ deal_format: "image" })).length === 0);
   assert.ok(venueShapeErrors(venue({ deal_format: "pdf" })).some((e) => e.includes("deal_format")));
@@ -1032,7 +1035,6 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
     "honeypot",
     "hudson-street-stackhouse",
     "kislings-tavern",
-    "lees-pint-and-shell",
     "mobtown-brewing",
     "sopro",
     "sports-balls",
@@ -1065,8 +1067,11 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
 
 test("Lee's notes_public is a reason, not an offer", async () => {
   const lees = (await loadVenues()).find((v) => v.id === "lees-pint-and-shell");
-  assert.match(lees.notes_public, /image.*prices not listed/i);
-  assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday/i);
+  // The rule is unchanged: notes_public describes the venue, it never restates
+  // the offer. The offer lives in the deal row, where the source URL and proof
+  // quote travel with it.
+  assert.match(lees.notes_public, /monthly special/i);
+  assert.doesNotMatch(lees.notes_public, /Build-your-own-burger|first Wednesday|5\.99|Cheeseburger/i);
 });
 
 // --- happy_hour + verified_date (optional deal fields) --------------------
@@ -2002,7 +2007,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Mount Vernon batch 1 (Owl / Sugarvale / Unity) → showable 41, total 69.
   // Fifty: +Monarque Alma Wicked Bluebird → showable 50, total 78.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 49);
+  // 2026-08-10: Lee's Pint & Shell joins on monthly recurrence (first Wednesday),
+  // taking showable 49 -> 50.
+  assert.equal(showable, 50);
   assert.equal(venues.length, 78);
 });
 

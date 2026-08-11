@@ -3,7 +3,9 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { buildHappyHourIcs } from "./src/calendar.js";
 import { venuesInView } from "./src/deals.js";
+import { loadEvents } from "./src/events.js";
 import { renderMap } from "./src/map.js";
+import { parseMonthParam, renderCalendar } from "./src/month.js";
 import { renderBoard } from "./src/page.js";
 import { boardViewForVenue, renderVenuePage } from "./src/venue.js";
 import { loadVenues } from "./src/venues.js";
@@ -82,6 +84,14 @@ const server = createServer(async (req, res) => {
       return;
     }
 
+    // /calendar — the month page on the default view. Distinct from
+    // /calendar.ics, which is the subscribable happy-hour feed.
+    if (path === "/calendar") {
+      res.writeHead(302, { location: `/${defaultView(views).slug}/calendar` });
+      res.end();
+      return;
+    }
+
     // /venue/<id> — one page per venue, neighbourhood-independent.
     const venueMatch = path.match(/^\/venue\/([a-z0-9-]+)\/?$/);
     if (venueMatch) {
@@ -132,6 +142,22 @@ const server = createServer(async (req, res) => {
           "cache-control": "public, max-age=300",
         });
         res.end(ics);
+        return;
+      }
+    }
+
+    // /<view>/calendar — month grid of deals and events. ?month=YYYY-MM pages
+    // through; anything unparseable falls back to the current month.
+    const monthMatch = path.match(/^\/([a-z0-9-]+)\/calendar$/);
+    if (monthMatch) {
+      const monthView = findView(views, monthMatch[1]);
+      if (monthView) {
+        const url = new URL(req.url, "http://localhost");
+        const venues = venuesInView(await loadVenues(), monthView);
+        const events = await loadEvents();
+        const when = parseMonthParam(url.searchParams.get("month"));
+        res.writeHead(200, { "content-type": "text/html; charset=utf-8" });
+        res.end(renderCalendar(venues, events, monthView, views, when));
         return;
       }
     }

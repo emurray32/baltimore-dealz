@@ -1350,16 +1350,38 @@
       "name": "Lee's Pint & Shell",
       "neighborhood": "Canton",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "2844 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 327-2883",
       "source_url": "https://www.leespintandshell.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "notes_public": "Publishes a monthly promo as an image; prices not listed as text.",
-      "ops_notes": "The weekly model cannot express monthly recurrence; the promo is image-only. /specials and /special-event both 404.",
+      "last_verified": "2026-08-10",
+      "notes_public": "Runs one monthly special, advertised on its own homepage.",
+      "ops_notes": "Promo is published as an image on the homepage, but \"1st Wednesday of the month\" is also present as text in the page HTML. Price read from the image (63f3cdc4b3f89908ed55bef7_Build-your-own-burger.jpg) and confirmed by Chief Of Staff 2026-08-10. /specials and /special-event both 404.",
       "deal_format": "image",
-      "deals": [],
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "recurrence": "first",
+          "items": [
+            {
+              "text": "Build Your Own 11 oz. Double Cheeseburger",
+              "price": "$5.99"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "1st Wednesday of the month",
+          "verified_date": "2026-08-10",
+          "source_url": "https://www.leespintandshell.com/",
+          "proof_quote": "1st Wednesday of the month",
+          "food_categories": [
+            "burger"
+          ]
+        }
+      ],
       "lat": 39.282417,
       "lon": -76.575695,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"

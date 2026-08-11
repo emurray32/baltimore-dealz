@@ -252,7 +252,10 @@ function viewSwitcher(views, currentView, linkFor = (slug) => `/${slug}`) {
 // Cards (or the empty-state line) for one day — same markup renderBoard uses.
 // Exported so the static build can embed one <template> per weekday.
 export function cardsHtmlForDay(venues, dayKey, now = new Date(), options = {}) {
-  const rows = dealsGroupedForDay(venues, dayKey);
+  // `dayForDate` lets the static build ask about a specific calendar date; the
+  // live board asks about today, which is the day `now` already names.
+  const date = options.date ?? (dayKeyInZone(now) === dayKey ? now : undefined);
+  const rows = dealsGroupedForDay(venues, dayKey, date);
   if (!rows.length) {
     return `<p class="meta">Nothing on the list for ${escapeHtml(dayLabel(dayKey))} yet.</p>`;
   }
@@ -392,7 +395,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   // Today stays collapsed here — it is already spelled out above.
   // data-day is static-only: the client retargets "(tonight)" without parsing
   // English day names. Live server HTML stays free of the attribute.
-  const week = weekByDay(venues)
+  const week = weekByDay(venues, now)
     .map((day) => {
       const dayAttr = staticClient ? ` data-day="${escapeHtml(day.key)}"` : "";
       return `
@@ -407,6 +410,8 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const styleHref = options.styleHref ?? "/style.css";
   const mapHref = options.mapHref ?? `/${view.slug}/map`;
   const calendarHref = options.calendarHref ?? `/${view.slug}/calendar.ics`;
+  // The browsable month page, distinct from the subscribable .ics feed above.
+  const monthHref = options.monthHref ?? `/${view.slug}/calendar`;
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
   // Multi-neighborhood note — explain why bars from a smaller neighborhood
@@ -453,7 +458,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))}</p>
     ${viewSwitcher(views, view, viewHref)}
-    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
+    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(monthHref)}">Calendar</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>
   ${hoodsNote}
   <main>

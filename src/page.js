@@ -410,6 +410,8 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   const styleHref = options.styleHref ?? "/style.css";
   const mapHref = options.mapHref ?? `/${view.slug}/map`;
   const calendarHref = options.calendarHref ?? `/${view.slug}/calendar.ics`;
+  // The browsable month page, distinct from the subscribable .ics feed above.
+  const monthHref = options.monthHref ?? `/${view.slug}/calendar`;
   const viewHref = options.viewHref ?? ((slug) => `/${slug}`);
 
   // Multi-neighborhood note — explain why bars from a smaller neighborhood
@@ -456,7 +458,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
     <h1>${escapeHtml(title)}</h1>
     <p class="meta">${escapeHtml(dayLabel(todayKey))}</p>
     ${viewSwitcher(views, view, viewHref)}
-    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
+    <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(monthHref)}">Calendar</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>
   ${hoodsNote}
   <main>

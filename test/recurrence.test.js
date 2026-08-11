@@ -130,13 +130,13 @@ test("Lee's is verified with shape-legal monthly deal", async () => {
   assert.deepEqual(venueShapeErrors(lees), []);
 });
 
-test("/baltimore showable count is 50 (Lee's joins the board)", async () => {
+test("/baltimore showable count is 51 (Lee's, then El Bufalo, join the board)", async () => {
   const venues = await loadVenues();
   const views = await loadViews();
   const city = views.find((v) => v.slug === "baltimore");
   const inCity = venuesInView(venues, city);
   const showable = inCity.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 50);
+  assert.equal(showable, 51);
   assert.equal(inCity.length, 78);
 });
 

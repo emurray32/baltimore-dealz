@@ -226,7 +226,7 @@ test("the seed data really does contain held deal rows", async () => {
   );
   assert.ok(held.length > 0, "no held row in the data — the hold tests prove nothing");
   assert.deepEqual(held.sort(), [
-    "el-bufalo:16oz Modelo Especial $3", // days never published on site or Instagram
+    // El Bufalo left this list on 2026-08-11: its Instagram states the days.
     "good-vibes-cantina:$7 Margaritas", // bio 3-7pm vs posts 4-8pm
     "hudson-street-stackhouse:Happy Hour",
     "hudson-street-stackhouse:Happy Hour",
@@ -278,21 +278,25 @@ test("a held deal row never appears in the rendered board, any day", async () =>
 
 test("a venue whose only deal is held drops off deal cards but keeps its data", async () => {
   const all = await loadVenues();
-  const elBufalo = all.find((v) => v.id === "el-bufalo");
+  // Was El Bufalo until 2026-08-11, when its Instagram settled the days and it
+  // shipped. Stackhouse is the held-only venue now: it publishes happy-hour
+  // windows but no prices anywhere current (its only priced page is from 2019).
+  const heldOnly = all.find((v) => v.id === "hudson-street-stackhouse");
 
-  assert.equal(elBufalo.status, "verified");
-  assert.ok(elBufalo.deals.every((d) => !isDealRenderable(d)));
-  assert.deepEqual(venueShapeErrors(elBufalo), []); // still valid data
-  assert.equal(hasShowableDeal(elBufalo), false);
+  assert.equal(heldOnly.status, "verified");
+  assert.ok(heldOnly.deals.length > 0, "fixture must actually have deals");
+  assert.ok(heldOnly.deals.every((d) => !isDealRenderable(d)), "fixture must be held-only");
+  assert.deepEqual(venueShapeErrors(heldOnly), []); // still valid data
+  assert.equal(hasShowableDeal(heldOnly), false);
 
   // Held-only = zero showable: still in venues.json, off the board (Eric rule).
   const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
-  assert.ok(!html.includes(`<h3>${escapeHtml(elBufalo.name)}`), "El Bufalo has a deal card");
-  assert.ok(!html.includes(escapeHtml(elBufalo.name)), "held-only name must not list on board");
-  for (const item of elBufalo.deals.flatMap((d) => d.items.map((i) => i.text))) {
-    assert.ok(!html.includes(escapeHtml(item)), `held item "${item}" rendered`);
-  }
+  assert.ok(!html.includes(`<h3>${escapeHtml(heldOnly.name)}`), "held-only venue has a deal card");
+  assert.ok(!html.includes(escapeHtml(heldOnly.name)), "held-only name must not list on board");
   assert.doesNotMatch(html, /class="quiet"/);
+  // Stackhouse's held item text is the bare phrase "Happy Hour", which renders
+  // legitimately as a chip on other venues — so the held-item-text guard is
+  // carried by the Good Vibes "$7 Margaritas" assertion further down, not here.
 });
 
 test("dealsForDay drops held rows but keeps the venue's other rows", () => {
@@ -1031,7 +1035,6 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
     "baltimore-tap-house",
     "bark-social-canton",
     "bo-brooks",
-    "el-bufalo",
     "honeypot",
     "hudson-street-stackhouse",
     "kislings-tavern",
@@ -1054,8 +1057,10 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
     assert.ok(!html.includes(`<h3>${escapeHtml(v.name)}`), `${v.id} leaked a deal card`);
   }
 
-  // Held offer text must never appear for El Bufalo.
-  assert.doesNotMatch(html, /16oz Modelo Especial/);
+  // Held offer text must never appear. "$7 Sangria" is a HELD-ONLY line (Good
+  // Vibes' window is still disputed); "$7 Margaritas" would be a false marker
+  // because it also sits in one of their renderable rows.
+  assert.doesNotMatch(html, /\$7 Sangria/);
   // Lee's reason (and inventable promo text) must not appear on the board.
   assert.doesNotMatch(html, /monthly promo as an image we cannot read/i);
   assert.doesNotMatch(html, /Build-your-own-burger/i);
@@ -1233,9 +1238,11 @@ test("seed happy-hour tags match Deal Scout: confirmed get dates; disputed omit 
   assert.equal(goodVibesHeld.happy_hour, true);
   assert.equal(goodVibesHeld.verified_date, undefined);
 
-  const elBufaloHeld = byId["el-bufalo"].deals.find((d) => d.status === "held");
-  assert.equal(elBufaloHeld.happy_hour, true);
-  assert.equal(elBufaloHeld.verified_date, undefined);
+  // El Bufalo shipped 2026-08-11 — it now carries a real verified_date, which
+  // is the point: a hold clears only when the disputed fact is settled.
+  const elBufalo = byId["el-bufalo"].deals.find((d) => d.happy_hour === true);
+  assert.equal(elBufalo.status, undefined, "El Bufalo must no longer be held");
+  assert.equal(elBufalo.verified_date, "2026-08-11");
 
   // Cowboy Row is NOT VERIFIED as a happy hour — never tag it.
   assert.ok(byId["cowboy-row"].deals.every((d) => d.happy_hour !== true));
@@ -2008,8 +2015,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Fifty: +Monarque Alma Wicked Bluebird → showable 50, total 78.
   const showable = venues.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
   // 2026-08-10: Lee's Pint & Shell joins on monthly recurrence (first Wednesday),
-  // taking showable 49 -> 50.
-  assert.equal(showable, 50);
+  // taking showable 49 -> 50. 2026-08-11: El Bufalo unheld (Instagram settled
+  // its days), 50 -> 51.
+  assert.equal(showable, 51);
   assert.equal(venues.length, 78);
 });
 

@@ -251,7 +251,7 @@ test("static board tonight templates match server cardsHtmlForDay at Fri 11pm an
 
 test("static board HTML never embeds ops_notes or held-only deal item text", async () => {
   // Reviewer blocker: full venues JSON in the page put internal notes and
-  // held prices (e.g. El Bufalo Modelo) in View Source even though cards omit them.
+  // held prices in View Source even though cards omit them.
   // Scope held text to strings that do NOT also appear on a showable deal —
   // "$7 Margaritas" is held at Good Vibes and real at Smaltimore (global
   // substring would false-fail).
@@ -280,9 +280,12 @@ test("static board HTML never embeds ops_notes or held-only deal item text", asy
     }
   }
   assert.ok(heldOnlyTexts.length > 0, "seed has no held-only items — test proves nothing");
+  // El Bufalo's Modelo lines were this test's example until 2026-08-11, when
+  // Instagram settled its days and it shipped. Good Vibes' sangria is the
+  // held-only example now — its window (3-7pm vs 4-8pm) is still disputed.
   assert.ok(
-    heldOnlyTexts.some((t) => /Modelo/i.test(t)),
-    "expected a known held Modelo line in seed (Reviewer's example)",
+    heldOnlyTexts.some((t) => /\$7 Sangria/i.test(t)),
+    "expected a known held-only priced line in seed",
   );
 
   for (const view of views) {

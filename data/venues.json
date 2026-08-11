@@ -446,8 +446,8 @@
       "phone": "410-814-0594",
       "source_url": "https://www.elbufalobaltimore.net/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Days absent from the site AND Instagram; the hold is effectively permanent without a door photo.",
+      "last_verified": "2026-08-11",
+      "ops_notes": "Happy hour DAYS and WINDOW come from the venue's own Instagram (@el_bufalo), not the site. The homepage still says \"Happy Hour ALL Day!!\" with no days — treated as STALE: three IG posts state 3-6pm, two of them within the last fortnight. Dating (CoS 2026-08-11): \"Introducing our new happy hour #InTheBuf Monday - Friday from 3-6pm!\" posted ~5 months ago; \"Wednesday pick me up | Happy hour 3-6pm\" 13 days ago (a Wednesday); \"Let's go girls- it's the weekend! Open at 11:30am | Happy hour 3-6pm\" 11 days ago (a FRIDAY, so it does not contradict Mon-Fri). Post ages are internally consistent with their own captions' weekdays. Prices are re-verified from the homepage. A 2-year-old Taco Tuesday post ($3 tacos, $2 Coronitas, $22 marg buckets) is NOT recorded: too old, and its $2 Coronita contradicts the site's $3.",
       "deals": [
         {
           "days": [
@@ -455,9 +455,7 @@
             "tue",
             "wed",
             "thu",
-            "fri",
-            "sat",
-            "sun"
+            "fri"
           ],
           "items": [
             {
@@ -493,20 +491,21 @@
               "price": "$9"
             }
           ],
-          "start": null,
-          "end": null,
-          "time_window": "all day",
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
           "happy_hour": true,
-          "status": "held",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "verified_date": "2026-08-11",
+          "source_url": "https://www.instagram.com/el_bufalo/"
         }
       ],
       "lat": 39.27989,
       "lon": -76.574579,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
-      "notes_public": "They publish a happy hour but name no days on their site or Instagram."
+      "notes_public": "Happy hour times are posted on their Instagram; their website still advertises it as all day."
     },
     {
       "id": "mamas-on-the-half-shell",

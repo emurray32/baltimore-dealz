@@ -70,11 +70,18 @@ test("venue page shows full weekly schedule; held deals and ops_notes never appe
   assert.match(html, /Friday/);
   assert.doesNotMatch(html, /ops_notes/);
 
-  // Held-only text (e.g. El Bufalo Modelo) must not appear on that venue page.
-  const bufalo = venues.find((v) => v.id === "el-bufalo");
+  // Held-only text must not appear on that venue page. Was El Bufalo until
+  // 2026-08-11; Good Vibes is the held example now. Its held row shares
+  // "$7 Margaritas" with a renderable row, so subtract anything showable —
+  // a shared line is not evidence of a leak.
+  const bufalo = venues.find((v) => v.id === "good-vibes-cantina");
+  const showableText = new Set(
+    bufalo.deals.filter(isDealRenderable).flatMap((d) => d.items.map((i) => i.text)),
+  );
   const heldOnly = bufalo.deals
     .filter((d) => !isDealRenderable(d))
-    .flatMap((d) => d.items.map((i) => i.text));
+    .flatMap((d) => d.items.map((i) => i.text))
+    .filter((t) => !showableText.has(t));
   assert.ok(heldOnly.length > 0, "need held seed rows");
   const bufaloHtml = renderVenuePage(bufalo, views, FRI_11PM_EDT);
   for (const text of heldOnly) {
@@ -132,9 +139,9 @@ test("static build writes a venue page for every venue without ops_notes leaks",
     assert.doesNotMatch(html, /ops_notes/);
     assert.ok(html.includes(escapeHtml(v.name)), `name missing on ${rel}`);
   }
-  // Sample held-only Modelo must not appear on El Bufalo venue page.
-  const bufalo = await readFile(join(outDir, "venue/el-bufalo/index.html"), "utf8");
-  assert.doesNotMatch(bufalo, /16oz Modelo Especial/);
+  // Sample held-only line must not appear on that venue's page.
+  const bufalo = await readFile(join(outDir, "venue/good-vibes-cantina/index.html"), "utf8");
+  assert.doesNotMatch(bufalo, /\$7 Sangria/);
   await rm(outDir, { recursive: true, force: true });
 });
 

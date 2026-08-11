@@ -114,6 +114,16 @@ export function renderCalendar(venues, events, view, views, { year, month }, now
   const prev = addMonths(year, month, -1);
   const next = addMonths(year, month, 1);
 
+  // A static host pre-renders a bounded window of months, so calHref may return
+  // null for a neighbour outside it. Render that as plain text rather than a
+  // link to a page that does not exist.
+  const monthNav = (when, label) => {
+    const href = calHref(view.slug, when.year, when.month);
+    return href
+      ? `<a href="${escapeHtml(href)}">${escapeHtml(label)}</a>`
+      : `<span class="cal-nav-off">${escapeHtml(label)}</span>`;
+  };
+
   const rows = [];
   for (let i = 0; i < cells.length; i += 7) {
     rows.push(
@@ -147,9 +157,9 @@ export function renderCalendar(venues, events, view, views, { year, month }, now
   </header>
   <main>
     <nav class="cal-nav meta">
-      <a href="${escapeHtml(calHref(view.slug, prev.year, prev.month))}">&larr; ${escapeHtml(monthLabel(prev.year, prev.month))}</a>
+      ${monthNav(prev, `← ${monthLabel(prev.year, prev.month)}`)}
       <strong>${escapeHtml(monthLabel(year, month))}</strong>
-      <a href="${escapeHtml(calHref(view.slug, next.year, next.month))}">${escapeHtml(monthLabel(next.year, next.month))} &rarr;</a>
+      ${monthNav(next, `${monthLabel(next.year, next.month)} →`)}
     </nav>
     <table class="cal-grid">
       <caption class="meta">Deals and events in ${escapeHtml(monthLabel(year, month))}. Deals are prices; events are dates.</caption>

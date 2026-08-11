@@ -11,12 +11,18 @@
 //   dist/<view>/calendar.ics     → happy-hour feed for that view
 //   dist/style.css, vendor/*, client-*.js
 
+// How many months ahead the static host pre-renders. The live server is not
+// bounded -- it serves any month from ?month=YYYY-MM.
+const STATIC_MONTHS = 6;
+
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { buildHappyHourIcs } from "../src/calendar.js";
 import { venuesInView } from "../src/deals.js";
+import { addMonths, loadEvents } from "../src/events.js";
 import { renderMap } from "../src/map.js";
+import { renderCalendar } from "../src/month.js";
 import { renderBoard } from "../src/page.js";
 import { boardViewForVenue, renderVenuePage } from "../src/venue.js";
 import { loadVenues } from "../src/venues.js";
@@ -86,6 +92,9 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     "client-filter.js",
   ];
 
+  const events = await loadEvents();
+  const stampNow = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+
   for (const view of views) {
     const venues = venuesInView(allVenues, view);
 
@@ -94,6 +103,7 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
       styleHref: "../style.css",
       mapHref: "map/",
       calendarHref: "calendar.ics",
+      monthHref: "calendar/",
       viewHref: (slug) => `../${slug}/`,
       venueHref: (id) => `../venue/${id}/`,
       staticClient: true,
@@ -126,6 +136,38 @@ export async function buildStatic({ outDir = DIST, now = new Date() } = {}) {
     const icsPath = join(view.slug, "calendar.ics");
     await write(join(outDir, icsPath), ics);
     written.push(icsPath);
+
+    // Month pages. A static host has no query strings, so each month is its own
+    // file and the nav links file-to-file. STATIC_MONTHS bounds the window --
+    // the live server still serves any month via ?month=YYYY-MM.
+    const first = { year: now.getFullYear(), month: now.getMonth() + 1 };
+    for (let i = 0; i < STATIC_MONTHS; i += 1) {
+      const when = addMonths(first.year, first.month, i);
+      const stamp = (y, m) => `${y}-${String(m).padStart(2, "0")}`;
+      const inWindow = (y, m) => {
+        const delta = (y * 12 + m - 1) - (first.year * 12 + first.month - 1);
+        return delta >= 0 && delta < STATIC_MONTHS;
+      };
+      // Calendar lives at dist/<slug>/calendar/<stamp>/ -> assets three levels up.
+      const html = renderCalendar(venues, events, view, views, when, now, {
+        styleHref: "../../../style.css",
+        boardHref: "../../",
+        venueHref: (id) => `../../../venue/${id}/`,
+        // Neighbouring months that were not pre-rendered would be dead links.
+        calendarHref: (slug, y, m) => (inWindow(y, m) ? `../${stamp(y, m)}/` : null),
+      });
+      const monthPath = join(view.slug, "calendar", stamp(when.year, when.month), "index.html");
+      await write(join(outDir, monthPath), html);
+      written.push(monthPath);
+    }
+
+    // dist/<slug>/calendar/ -> the current month, so the board's link lands.
+    const landing = join(view.slug, "calendar", "index.html");
+    await write(
+      join(outDir, landing),
+      redirectHtml(`${stampNow}/`, `${view.label} calendar`),
+    );
+    written.push(landing);
   }
 
   // One page per venue at dist/venue/<id>/index.html — neighbourhood-independent.

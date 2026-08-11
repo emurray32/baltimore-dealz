@@ -230,3 +230,29 @@ test("event titles and sources are HTML-escaped", () => {
   assert.match(html, /&lt;script&gt;/);
   assert.match(html, /a=1&amp;b=2/);
 });
+
+// ---- the static host ------------------------------------------------------
+// A static host has no query strings, so months are pre-rendered files. The
+// board's calendar link pointed at a page that did not exist until this was
+// added -- pin it so the dead link cannot come back.
+
+test("out-of-window months render as plain text, never a dead link", () => {
+  const views = [{ slug: "baltimore", label: "Baltimore", neighborhoods: "*" }];
+  const html = renderCalendar([], [], views[0], views, { year: 2026, month: 9 }, new Date(), {
+    // Only September was pre-rendered; both neighbours are outside the window.
+    calendarHref: () => null,
+  });
+  assert.doesNotMatch(html, /href="null"/);
+  assert.doesNotMatch(html, /href="undefined"/);
+  assert.match(html, /<span class="cal-nav-off">← August 2026<\/span>/);
+  assert.match(html, /<span class="cal-nav-off">October 2026 →<\/span>/);
+});
+
+test("in-window months still link, and the label survives escaping", () => {
+  const views = [{ slug: "baltimore", label: "Baltimore", neighborhoods: "*" }];
+  const html = renderCalendar([], [], views[0], views, { year: 2026, month: 9 }, new Date(), {
+    calendarHref: (slug, y, m) => `../${y}-${String(m).padStart(2, "0")}/`,
+  });
+  assert.match(html, /href="\.\.\/2026-08\/"/);
+  assert.match(html, /href="\.\.\/2026-10\/"/);
+});

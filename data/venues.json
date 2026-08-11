@@ -605,8 +605,8 @@
       "phone": "(410) 342-0592",
       "source_url": "https://hudsonstreetstackhouse.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Happy hour times come from the homepage (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5) — not /weekly-food-specials/. That specials page is the wrong source for happy hour (it does not publish the HH windows) and is dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Do not re-point source_url at /weekly-food-specials/. Re-verify before any prices ship (Deal Scout 2026-08-05; Lead 2026-08-06).",
+      "last_verified": "2026-08-11",
+      "ops_notes": "Happy hour times come from the homepage (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5) — not /weekly-food-specials/. That specials page is the wrong source for happy hour (it does not publish the HH windows) and is dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Do not re-point source_url at /weekly-food-specials/. Re-verify before any prices ship (Deal Scout 2026-08-05; Lead 2026-08-06). 2026-08-11 (CoS): happy-hour windows re-read live from the homepage and unchanged (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5). Unheld under Eric's 2026-08-11 decision to show times-only happy hours. Still NO prices: the only priced page remains dated April 2019 — do not ship it.",
       "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {
@@ -623,11 +623,10 @@
           ],
           "start": 900,
           "end": 1140,
-          "status": "held",
           "prices_published": false,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
+          "verified_date": "2026-08-11",
           "proof_quote": "Monday - Thursday → 3pm - 7pm",
           "food_categories": [
             "drink"
@@ -644,11 +643,10 @@
           ],
           "start": 840,
           "end": 1140,
-          "status": "held",
           "prices_published": false,
           "time_window": "2pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
+          "verified_date": "2026-08-11",
           "proof_quote": "Friday → 2pm - 7pm",
           "food_categories": [
             "drink"
@@ -666,11 +664,10 @@
           ],
           "start": 660,
           "end": 1020,
-          "status": "held",
           "prices_published": false,
           "time_window": "11am-5pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
+          "verified_date": "2026-08-11",
           "proof_quote": "Saturday / Sunday → 11am - 5pm",
           "food_categories": [
             "drink"
@@ -680,7 +677,7 @@
       "lat": 39.282206,
       "lon": -76.578918,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
-      "notes_public": "Happy hour times are published, but no prices are currently listed by the venue; no priced deal is shown until that changes."
+      "notes_public": "Happy hour times are published by the venue, but no prices are currently listed by the venue."
     },
     {
       "id": "ellies-tavern",
@@ -2909,16 +2906,51 @@
       "name": "The Point in Fells",
       "neighborhood": "Fells Point",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "1738 Thames St, Baltimore, MD 21231",
       "phone": "(410) 327-7264",
       "source_url": "https://www.thepointfells.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "notes_public": "Happy hour prices live only in flyer images; prices not listed as text; page text has no dollar amounts.",
-      "ops_notes": "CoS 2026-08-06 hold: official HH page text has zero $ amounts (hours only). Flyer PNG prices not shipable as readable text. 'Friday all-day happy hour' is Instagram caption alt text for a one-off DJ promo (TGIFF), not a standing weekly schedule. Real domain is thepointfells.com (no 'in') — thepointinfells.com is cert-invalid. Quiet group until prices appear in page text. Closed Tue per bar hours.",
+      "last_verified": "2026-08-11",
+      "notes_public": "Happy hour days and times are published by the venue; their prices appear only in images we do not read.",
+      "ops_notes": "CoS 2026-08-06 hold: official HH page text has zero $ amounts (hours only). Flyer PNG prices not shipable as readable text. 'Friday all-day happy hour' is Instagram caption alt text for a one-off DJ promo (TGIFF), not a standing weekly schedule. Real domain is thepointfells.com (no 'in') — thepointinfells.com is cert-invalid. Quiet group until prices appear in page text. Closed Tue per bar hours. | 2026-08-11 (CoS): unheld under Eric's decision to show times-only happy hours. Days/times re-read from thepointfells.com/happy-hour: \"MON | WED | THUR 4-7PM\" and \"FRIDAY | ALL DAY HAPPY HOUR!\". **The 2026-08-06 note above says the Friday line is Instagram caption ALT TEXT for a one-off DJ promo. I checked that specifically and it no longer holds:** in today's raw HTML the Friday line is a Squarespace text block — literally <p style=\"white-space:pre-wrap;\">FRIDAY |  ALL DAY HAPPY HOUR! </p> — on the venue's own happy-hour page, sitting in the same block sequence as the MON|WED|THUR line. Tag-stripped extraction cannot surface alt text, so this is page copy. Friday therefore ships with NO clock (start/end null): the venue states only \"all day\", and its 11am open is NOT used to invent one. NO TUESDAY — they are closed. Prices still exist only inside flyer images, so none are recorded.",
       "deal_format": "image",
-      "deals": [],
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-11"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-11"
+        }
+      ],
       "lat": 39.2821,
       "lon": -76.591346,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
@@ -3590,15 +3622,36 @@
       "name": "Blackwall Hitch",
       "neighborhood": "Inner Harbor",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "700 E Pratt St, Baltimore, MD 21202",
       "phone": "(443) 759-7176",
       "source_url": "https://www.blackwallhitchbaltimoremd.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "notes_public": "Advertises happy hour Mon–Fri 3–6; prices not published on the menus page.",
-      "ops_notes": "Times only on site; menus page has regular prices not HH $. Deal Scout INNER_HARBOR 2026-08-06.",
-      "deals": [],
+      "last_verified": "2026-08-11",
+      "notes_public": "Advertises happy hour Monday to Friday 3-6pm; prices are not published on their menus page.",
+      "ops_notes": "Times only on site; menus page has regular prices not HH $. Deal Scout INNER_HARBOR 2026-08-06. | 2026-08-11 (CoS): unheld under Eric's times-only decision. Homepage states \"Happy Hour | Mon - Fri | 3PM-6PM\" twice (one instance prefixed \"All Day\", but both carry the explicit 3PM-6PM clock, so the clock is used). Still no dollar amount anywhere on the site.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-11"
+        }
+      ],
       "lat": 39.287043,
       "lon": -76.606434,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
@@ -3661,15 +3714,36 @@
       "name": "The Outpost",
       "neighborhood": "Federal Hill",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "1032 Riverside Ave, Baltimore, MD 21230",
       "phone": "(443) 388-9113",
       "source_url": "https://www.theoutpostbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "notes_public": "Happy hour Mon–Fri 4–6; prices not published by the venue.",
-      "ops_notes": "NSA Federal Hill (not Locust Point). Times only. Deal Scout 2026-08-06.",
-      "deals": [],
+      "last_verified": "2026-08-11",
+      "notes_public": "Happy hour Monday to Friday 4-6pm; the venue does not publish prices.",
+      "ops_notes": "NSA Federal Hill (not Locust Point). Times only. Deal Scout 2026-08-06. | 2026-08-11 (CoS): unheld under Eric's times-only decision. Homepage states \"happy hour / mon-friday 4pm-6pm\". Still no prices published anywhere on the site.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-11"
+        }
+      ],
       "lat": 39.277439,
       "lon": -76.609268,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"

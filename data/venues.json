@@ -1330,7 +1330,8 @@
           ],
           "items": [
             {
-              "text": "$5 Burger of the Day (rotating)"
+              "text": "$5 Burger of the Day (rotating)",
+              "price": "$5"
             }
           ],
           "start": null,

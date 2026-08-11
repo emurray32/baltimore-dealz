@@ -158,7 +158,6 @@ test("the seed data really does contain unverified venues", async () => {
       "baltimore-tap-house",
       "bark-social-canton",
       "barracudas-locust-point",
-      "blackwall-hitch",
       "bo-brooks",
       "cross-street-market",
       "crossbar",
@@ -176,8 +175,6 @@ test("the seed data really does contain unverified venues", async () => {
       "sopro",
       "sports-balls",
       "stuggys",
-      "the-outpost",
-      "the-point-in-fells",
       "the-worthington",
       "walts-inn",
     ],
@@ -228,9 +225,6 @@ test("the seed data really does contain held deal rows", async () => {
   assert.deepEqual(held.sort(), [
     // El Bufalo left this list on 2026-08-11: its Instagram states the days.
     "good-vibes-cantina:$7 Margaritas", // bio 3-7pm vs posts 4-8pm
-    "hudson-street-stackhouse:Happy Hour",
-    "hudson-street-stackhouse:Happy Hour",
-    "hudson-street-stackhouse:Happy Hour",
     "mahaffeys-pub:Sliders",
     "mamas-on-the-half-shell:Happy Hour ALL DAY", // website vs Instagram Monday
     "pig-and-rooster-smokehouse:$5 Burger of the Day (rotating)", // source line has $5 AND $7
@@ -277,26 +271,46 @@ test("a held deal row never appears in the rendered board, any day", async () =>
 });
 
 test("a venue whose only deal is held drops off deal cards but keeps its data", async () => {
-  const all = await loadVenues();
-  // Was El Bufalo until 2026-08-11, when its Instagram settled the days and it
-  // shipped. Stackhouse is the held-only venue now: it publishes happy-hour
-  // windows but no prices anywhere current (its only priced page is from 2019).
-  const heldOnly = all.find((v) => v.id === "hudson-street-stackhouse");
+  // No seed venue is held-only any more (El Bufalo shipped 2026-08-11, then
+  // Stackhouse). The rule still has to hold, so build the case rather than
+  // delete the guard or pin it to whichever venue happens to be parked today.
+  const heldOnly = venue({
+    id: "held-only-fixture",
+    name: "Held Only Fixture",
+    deals: [
+      {
+        days: ["sat"],
+        items: [{ text: "Zqx Held Fixture Pint", price: "$4" }],
+        start: 900,
+        end: 1080,
+        time_window: "3pm-6pm",
+        status: "held",
+        food_categories: ["drink"],
+      },
+    ],
+  });
 
-  assert.equal(heldOnly.status, "verified");
-  assert.ok(heldOnly.deals.length > 0, "fixture must actually have deals");
-  assert.ok(heldOnly.deals.every((d) => !isDealRenderable(d)), "fixture must be held-only");
   assert.deepEqual(venueShapeErrors(heldOnly), []); // still valid data
+  assert.ok(heldOnly.deals.every((d) => !isDealRenderable(d)));
   assert.equal(hasShowableDeal(heldOnly), false);
 
-  // Held-only = zero showable: still in venues.json, off the board (Eric rule).
+  // And the real seed still honours it: nothing held reaches a board.
+  const all = await loadVenues();
   const html = await boardFor(new Date("2026-08-08T20:00:00Z")); // a Saturday
-  assert.ok(!html.includes(`<h3>${escapeHtml(heldOnly.name)}`), "held-only venue has a deal card");
-  assert.ok(!html.includes(escapeHtml(heldOnly.name)), "held-only name must not list on board");
+  for (const v of all) {
+    for (const d of v.deals.filter((x) => !isDealRenderable(x))) {
+      for (const item of d.items) {
+        // Skip texts that also live on a showable row — a shared line on the
+        // board is not evidence of a held leak.
+        const shared = all.some((o) =>
+          o.deals.some((od) => isDealRenderable(od) && od.items.some((i) => i.text === item.text)),
+        );
+        if (shared) continue;
+        assert.ok(!html.includes(escapeHtml(item.text)), `${v.id}: held "${item.text}" rendered`);
+      }
+    }
+  }
   assert.doesNotMatch(html, /class="quiet"/);
-  // Stackhouse's held item text is the bare phrase "Happy Hour", which renders
-  // legitimately as a chip on other venues — so the held-item-text guard is
-  // carried by the Good Vibes "$7 Margaritas" assertion further down, not here.
 });
 
 test("dealsForDay drops held rows but keeps the venue's other rows", () => {
@@ -733,11 +747,17 @@ test("no-price states stay distinct", async () => {
 });
 
 test("prices_published:false renders an honest flag, not a blank", async () => {
+  // Until 2026-08-11 Stackhouse was held, so the only honest signal was its
+  // notes_public sentence. Now the row renders, and the flag rides the card
+  // itself — which is where someone actually reads it. notes_public is not
+  // printed once a venue has a showable deal.
   const venues = await loadVenues();
   const stackhouse = venues.find((v) => v.id === "hudson-street-stackhouse");
   const views = await loadViews();
   const html = renderVenuePage(stackhouse, views, new Date("2026-08-03T20:00:00Z"));
-  assert.match(html, /no prices are currently listed by the venue/i);
+  assert.match(html, /Prices not published by the venue/i);
+  assert.match(html, /3pm-7pm/i, "the published window still shows");
+  assert.doesNotMatch(html, /\$\d/, "a times-only venue must show no price");
 });
 
 test("ops_notes never reach the page; notes_public do", async () => {
@@ -995,18 +1015,41 @@ test("Union Hill happy hour ships Block A through 6:30pm", async () => {
   assert.doesNotMatch(joined, /craft cocktails|ALL COCKTAILS, WINE|1\/2 PRICED/i);
 });
 
-test("price-unknown renderable rows are removed, while Mama's new priced Wednesday row remains", async () => {
+test("an unpriced row may render only as a real happy hour with a published window", async () => {
+  // 2026-08-10 rule: unpriced rows came OFF the board — a bare name is not a deal.
+  // 2026-08-11, Eric: "Happy hour 3-6pm works—that's OK". So the rule narrows
+  // rather than disappears. An unpriced row is allowed ONLY when it is a happy
+  // hour AND the venue published the window; everything else stays held.
   const venues = await loadVenues();
   const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
 
-  const removed = [
+  const unpricedShowing = venues.flatMap((v) =>
+    v.deals
+      .filter((d) => d.prices_published === false && isDealRenderable(d))
+      .map((d) => ({ id: v.id, deal: d })),
+  );
+
+  assert.deepEqual(
+    [...new Set(unpricedShowing.map((r) => r.id))].sort(),
+    ["blackwall-hitch", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
+    "only Eric's four times-only venues may show an unpriced row",
+  );
+
+  for (const { id, deal } of unpricedShowing) {
+    assert.equal(deal.happy_hour, true, `${id}: an unpriced row must be a happy hour`);
+    assert.ok(deal.time_window, `${id}: an unpriced row must carry a published window`);
+    assert.ok(deal.verified_date, `${id}: an unpriced row must be dated`);
+  }
+
+  // The venues whose rows were pulled in the 2026-08-10 cleanup stay pulled:
+  // each is held for its own unresolved reason, not for want of a price.
+  const stillHeld = [
     ...byId["mamas-on-the-half-shell"].deals,
-    ...byId["hudson-street-stackhouse"].deals,
     ...byId["the-dive"].deals,
     ...byId.smaltimore.deals,
     ...byId["mahaffeys-pub"].deals,
-  ].filter((d) => d.prices_published === false && d.status !== "held");
-  assert.equal(removed.length, 0);
+  ].filter((d) => d.prices_published === false && isDealRenderable(d));
+  assert.equal(stillHeld.length, 0);
 
   const thames = byId["thames-street-oyster-house"];
   for (const deal of thames.deals) {
@@ -1036,7 +1079,6 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
     "bark-social-canton",
     "bo-brooks",
     "honeypot",
-    "hudson-street-stackhouse",
     "kislings-tavern",
     "mobtown-brewing",
     "sopro",
@@ -1393,7 +1435,8 @@ test("expansion quiet stubs never invent happy-hour prices", async () => {
     "maxs-taphouse",
     "admirals-cup",
     "stuggys",
-    "blackwall-hitch",
+    // blackwall-hitch left this list 2026-08-11 — it now shows a times-only
+    // happy hour. It still invents no prices, which is what this guards.
     "barracudas-locust-point",
     "bark-social-canton",
   ];
@@ -1640,8 +1683,15 @@ test("seed food_categories: every deal tagged; Claddagh multi-rows still pinned"
   // Expansion added priced rows; pin that the board grew past the original 87, not a brittle total.
   assert.ok(deals.length >= 87, `expected at least 87 deal rows, got ${deals.length}`);
 
-  // Every seed row carries the field (optional in schema; filled in seed).
+  // Every seed row that names what is on offer carries the field. A times-only
+  // happy hour (Eric 2026-08-11) publishes no items, so there is nothing to
+  // categorise — tagging it "drink" would be a guess, and it correctly means
+  // those venues do not surface under a food filter.
   for (const { venue, deal } of deals) {
+    // A times-only happy hour (Eric 2026-08-11) publishes no items, so there
+    // may be nothing to categorise. Some carry a category from earlier
+    // research; neither is required, so this rule simply does not apply.
+    if (deal.prices_published === false && isDealRenderable(deal)) continue;
     assert.ok(
       Array.isArray(deal.food_categories) && deal.food_categories.length > 0,
       `${venue.id}: missing food_categories on ${deal.items[0].text}`,
@@ -1649,7 +1699,7 @@ test("seed food_categories: every deal tagged; Claddagh multi-rows still pinned"
   }
 
   // Claddagh Sat + Wed multi-category rows remain (original §8f pins).
-  const multi = deals.filter(({ deal }) => deal.food_categories.length > 1);
+  const multi = deals.filter(({ deal }) => (deal.food_categories?.length ?? 0) > 1);
   assert.ok(multi.length >= 2, multi.map((m) => `${m.venue.id}:${m.deal.items[0].text}`).join("; "));
 
   const claddagh = venues.find((v) => v.id === "claddagh-pub");
@@ -1788,9 +1838,11 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
 
   assert.equal(byId["alexanders-tavern-fells"].status, "verified");
   assert.equal(byId["thames-street-oyster-house"].status, "verified");
-  // CoS hold: flyer-only prices / no $ in page text → not priced cards.
-  assert.equal(byId["the-point-in-fells"].status, "open_unverifiable");
-  assert.equal(byId["the-point-in-fells"].deals.length, 0);
+  // 2026-08-11: shipped as a times-only happy hour (Eric). Prices still live
+  // only in flyer images, so it carries a window and no dollar amounts.
+  assert.equal(byId["the-point-in-fells"].status, "verified");
+  assert.equal(byId["the-point-in-fells"].deals.length, 2);
+  assert.ok(byId["the-point-in-fells"].deals.every((d) => d.prices_published === false));
   assert.match(byId["the-point-in-fells"].notes_public ?? "", /flyer|image/i);
   assert.match(byId["the-point-in-fells"].source_url, /thepointfells\.com/);
   assert.doesNotMatch(byId["the-point-in-fells"].source_url, /thepointinfells/);
@@ -2017,7 +2069,7 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-10: Lee's Pint & Shell joins on monthly recurrence (first Wednesday),
   // taking showable 49 -> 50. 2026-08-11: El Bufalo unheld (Instagram settled
   // its days), 50 -> 51.
-  assert.equal(showable, 51);
+  assert.equal(showable, 55);
   assert.equal(venues.length, 78);
 });
 
@@ -2365,9 +2417,17 @@ test("Fells Point honesty pins: Fri all-day split, The Point held, oysters deep-
   assert.equal(friHh.end, 1080);
   assert.match(friHh.time_window, /all day until 6pm/i);
 
+  // The Point shipped 2026-08-11 (times only, no prices). The 2026-08-06 hold
+  // note is PRESERVED in ops_notes, not overwritten — it is the audit trail,
+  // and the new note records why its Friday finding no longer holds.
   const point = venues.find((v) => v.id === "the-point-in-fells");
-  assert.equal(point.deals.length, 0);
+  assert.equal(point.deals.length, 2, "Mon/Wed/Thu 4-7pm plus Friday all day");
   assert.match(point.ops_notes ?? "", /CoS 2026-08-06 hold/i);
+  assert.match(point.ops_notes ?? "", /no longer holds/i);
+  assert.ok(!point.deals.some((d) => d.days.includes("tue")), "closed Tuesdays");
+  const pointFri = point.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  assert.equal(pointFri.start, null, "no clock invented from opening hours");
+  assert.equal(pointFri.end, null);
 
   const thames = venues.find((v) => v.id === "thames-street-oyster-house");
   assert.equal(

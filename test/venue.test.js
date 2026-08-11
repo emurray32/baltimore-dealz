@@ -107,13 +107,17 @@ test("quiet venue page is honest, not 404", async () => {
   assert.ok(schedule.every((d) => d.deals.length === 0));
 });
 
-test("price-unknown rows remain held in venue data", async () => {
+test("price-unknown rows say so on the card instead of showing a blank", async () => {
+  // Renamed 2026-08-11: these rows no longer stay held (Eric approved
+  // times-only happy hours). They render, and each one states plainly that the
+  // venue publishes no prices.
   const venues = await loadVenues();
   const views = await loadViews();
   const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
   assert.ok(stack.deals.some((d) => d.prices_published === false));
   const html = renderVenuePage(stack, views, FRI_11PM_EDT);
-  assert.match(html, /no prices are currently listed by the venue/i);
+  assert.match(html, /Prices not published by the venue/i);
+  assert.doesNotMatch(html, /\$\d/, "a times-only venue must show no price");
 });
 
 test("boardViewForVenue picks a view that includes the neighbourhood", async () => {

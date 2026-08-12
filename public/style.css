@@ -565,6 +565,7 @@ body.map-page {
 }
 .lg-deal  { background: var(--ink); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--hair); }
 .lg-quiet { background: var(--surface); border: 2px solid var(--muted); }
+.lg-city  { width: 14px; height: 3px; border-radius: 0; background: #b3541e; vertical-align: 2px; }
 
 /* map pins */
 .bd-pin { background: none; border: none; }

@@ -4,6 +4,7 @@
 // Pure string rendering like page.js so the suite can pin it without a browser.
 
 import { escapeHtml, formatPhone } from "./page.js";
+import { cityBoundaryPolyline } from "./boundary.js";
 import {
   FOOD_CATEGORY_LABELS,
   hasShowableDeal,
@@ -169,6 +170,7 @@ const MAP_SCRIPT = `<script src="/vendor/leaflet.js"></` + `script>
   var points = window.BD_MAP_POINTS || [];
   var popups = window.BD_MAP_POPUPS || {};
   var center = window.BD_MAP_CENTER;
+  var cityLine = window.BD_CITY_BOUNDARY || null;
   if (!center || points.length === 0) return;
   var map = L.map("map", { scrollWheelZoom: false }).setView(center, 15);
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -176,6 +178,15 @@ const MAP_SCRIPT = `<script src="/vendor/leaflet.js"></` + `script>
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  // City limits first so venue pins sit on top of the line.
+  if (cityLine) {
+    L.polyline(cityLine, {
+      color: "#b3541e",
+      weight: 2,
+      opacity: 0.7,
+      interactive: false
+    }).addTo(map);
+  }
   // One marker per showable venue (quiet venues are filtered out of the payload).
   points.forEach(function (p) {
     var icon = L.divIcon({
@@ -250,13 +261,14 @@ export function renderMap(venues, view, views = [view], now = new Date(), option
   </header>
   <main>
     <div id="map" role="region" aria-label="Map of tracked venues in ${escapeHtml(view.label)}"></div>
-    <p class="meta map-legend"><span class="lg lg-deal"></span> places with a deal we can show</p>
+    <p class="meta map-legend"><span class="lg lg-deal"></span> places with a deal we can show · <span class="lg lg-city"></span> Baltimore City limits</p>
     ${missingNote}
     <p class="meta map-credit">Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Free tiles, no account, no key.</p>
   </main>
   <script>window.BD_MAP_POINTS = ${safeJson(payload)};</script>
   <script>window.BD_MAP_POPUPS = ${safeJson(popups)};</script>
   <script>window.BD_MAP_CENTER = ${safeJson(center)};</script>
+  <script>window.BD_CITY_BOUNDARY = ${safeJson(cityBoundaryPolyline())};</script>
   ${mapScript}
 </body>
 </html>

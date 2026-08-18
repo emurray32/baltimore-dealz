@@ -114,8 +114,16 @@ export function renderVenuePage(venue, views, now = new Date(), options = {}) {
 
   const schedule = venueScheduleByDay(venue);
   const hasAnyDeal = schedule.some((d) => d.deals.length > 0);
+  // The empty-state branch below already surfaces notes_public as its "reason"
+  // text, so the dedicated block near the name only fires when there is a
+  // weekly schedule to annotate — otherwise the note would render twice.
+  const showsWeeklySchedule = isRenderable(venue) && hasShowableDeal(venue) && hasAnyDeal;
+  const notesPublicHtml =
+    venue.notes_public && showsWeeklySchedule
+      ? `<p class="meta">${escapeHtml(venue.notes_public)}</p>`
+      : "";
   let scheduleHtml;
-  if (!isRenderable(venue) || !hasShowableDeal(venue) || !hasAnyDeal) {
+  if (!showsWeeklySchedule) {
     const reason =
       venue.notes_public ||
       "No specials we can verify from an official source.";
@@ -160,6 +168,7 @@ export function renderVenuePage(venue, views, now = new Date(), options = {}) {
   <header>
     <p class="meta"><a href="${escapeHtml(boardHref)}">${escapeHtml(listLabel)}</a>${mapLink}</p>
     <h1>${escapeHtml(venue.name)}</h1>
+    ${notesPublicHtml}
     <p class="meta">${placeBits.join(" · ")}</p>
     ${provenance.length ? `<p class="meta">${provenance.join(" · ")}</p>` : ""}
   </header>

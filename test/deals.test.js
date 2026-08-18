@@ -2081,8 +2081,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Angie's Seafood → 66 -> 67 / 89 -> 90.
   // 2026-08-18: Animal Boy → 67 -> 68 / 90 -> 91.
   // 2026-08-18: Baltimore Seafood → 68 -> 69 / 91 -> 92.
-  assert.equal(showable, 69);
-  assert.equal(venues.length, 92);
+  // 2026-08-18: The Barn & Lodge at The Rotunda → 69 -> 70 / 92 -> 93.
+  assert.equal(showable, 70);
+  assert.equal(venues.length, 93);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2990,6 +2991,78 @@ test("Baltimore Seafood joins 2026-08-18 (Canton daily specials, no clock)", asy
     !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "baltimore-seafood"),
     "Canton must not fold into /fells-point",
   );
+});
+
+test("The Barn & Lodge at The Rotunda joins 2026-08-18 (Hampden)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const bl = byId["barn-and-lodge"];
+  assert.ok(bl, "barn-and-lodge missing");
+  assert.deepEqual(venueShapeErrors(bl), []);
+  assert.equal(bl.name, "The Barn & Lodge at The Rotunda");
+  assert.equal(bl.neighborhood, "Hampden");
+  assert.equal(
+    bl.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(bl.status, "verified");
+  assert.equal(bl.address, "729 W 40th Street, Baltimore, MD 21211");
+  assert.equal(bl.phone, "(667) 260-2049");
+  assert.equal(bl.source_url, "https://www.barnandlodge.com/rotunda/menu/");
+  assert.equal(bl.source_type, "venue_website");
+  assert.equal(bl.last_verified, "2026-08-18");
+  assert.equal(bl.lat, 39.3370599);
+  assert.equal(bl.lon, -76.6306443);
+  assert.equal(bl.deals.length, 4);
+  assert.match(bl.ops_notes, /Name=Hampden/);
+  assert.match(bl.ops_notes, /Roland Park -- not used/);
+  assert.match(bl.ops_notes, /dine-in only/);
+  assert.match(bl.ops_notes, /Prime Rib \$38/);
+  assert.match(bl.ops_notes, /Already in \/hampden/);
+  assert.match(bl.ops_notes, /Do not invent a Roland Park view/);
+
+  const gathering = bl.deals.find((d) => d.happy_hour === true);
+  const mon = bl.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const tue = bl.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = bl.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  assert.ok(gathering && mon && tue && wed, "expected Gathering Hour + three daily rows");
+
+  assert.deepEqual(gathering.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(gathering.start, 900);
+  assert.equal(gathering.end, 1080);
+  assert.equal(gathering.time_window, "3pm-6pm");
+  assert.deepEqual(gathering.food_categories, ["drink", "pizza"]);
+  assert.ok(gathering.items.some((i) => i.text === "Half price artisan pizzas" && i.price === "half off"));
+  assert.ok(gathering.items.some((i) => i.text === "$9 featured cocktails" && i.price === "$9"));
+  assert.ok(gathering.items.some((i) => i.text === "$5 well drinks" && i.price === "$5"));
+  assert.ok(gathering.items.some((i) => i.text === "$5 wines by the glass" && i.price === "$5"));
+  assert.ok(gathering.items.some((i) => i.text === "$5 bottled beer" && i.price === "$5"));
+  assert.match(gathering.proof_quote, /Monday – Friday 3pm – 6pm/);
+
+  assert.equal(mon.start, null);
+  assert.equal(mon.end, null);
+  assert.equal(mon.time_window, "all day");
+  assert.deepEqual(mon.food_categories, ["burger"]);
+  assert.deepEqual(mon.items.map((i) => [i.text, i.price]), [["Half off Lodge Burger", "half off"]]);
+  assert.match(mon.proof_quote, /Burger Night/);
+
+  assert.equal(tue.time_window, "all day");
+  assert.deepEqual(tue.food_categories, ["pizza"]);
+  assert.deepEqual(tue.items.map((i) => [i.text, i.price]), [["Half off artisan pizzas", "half off"]]);
+  assert.match(tue.proof_quote, /Half Price All Artisan Pizzas/);
+
+  assert.equal(wed.time_window, "all day");
+  assert.deepEqual(wed.food_categories, ["pasta/comfort"]);
+  assert.deepEqual(wed.items.map((i) => [i.text, i.price]), [["Half off housemade pasta", "half off"]]);
+  assert.match(wed.proof_quote, /Half Price Housemade Pasta Night/);
+
+  assert.ok(!bl.deals.some((d) => /Prime Rib/.test(d.proof_quote ?? "")), "Thursday Prime Rib must not ship");
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "barn-and-lodge"));
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "barn-and-lodge"));
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

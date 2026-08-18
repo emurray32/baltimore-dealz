@@ -130,14 +130,14 @@ test("Lee's is verified with shape-legal monthly deal", async () => {
   assert.deepEqual(venueShapeErrors(lees), []);
 });
 
-test("/baltimore showable count is 68 (Animal Boy)", async () => {
+test("/baltimore showable count is 69 (Baltimore Seafood)", async () => {
   const venues = await loadVenues();
   const views = await loadViews();
   const city = views.find((v) => v.slug === "baltimore");
   const inCity = venuesInView(venues, city);
   const showable = inCity.filter((v) => (v.deals || []).some((d) => d.status !== "held")).length;
-  assert.equal(showable, 68);
-  assert.equal(inCity.length, 91);
+  assert.equal(showable, 69);
+  assert.equal(inCity.length, 92);
 });
 
 test("recurrence: dealsForDay with date respects monthly ordinal", () => {

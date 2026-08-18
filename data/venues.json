@@ -7610,6 +7610,123 @@
       "lat": 39.2827389,
       "lon": -76.5834654,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "barn-and-lodge",
+      "name": "The Barn & Lodge at The Rotunda",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "729 W 40th Street, Baltimore, MD 21211",
+      "phone": "(667) 260-2049",
+      "source_url": "https://www.barnandlodge.com/rotunda/menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "notes_public": "Daily specials (Mon/Tue/Wed) are dine-in only, not available for carryout, and can't be combined with any other offer.",
+      "ops_notes": "NSA Hampden (MapServer/0 query Name=Hampden, 2026-08-18; Nominatim house 729 W 40th 39.3370599,-76.6306443). A second 729 W 40th hit at 39.3372941,-76.6289309 is Roland Park -- not used. Gathering Hour quoted from https://www.barnandlodge.com/rotunda/menu/ (Gathering Hour tab), daily rows from https://www.barnandlodge.com/rotunda/daily-specials/ -- both HTTP 200 today. Phone on both pages today is (667) 260-2049. Daily-specials page banner sits above all day blocks: \"These specials run all day and can't be combined with any other offer or promotion. Offers subject to change depending on availability of items. Available for dine-in only. Specials are not available for carryout orders.\" -- covers Mon, Tue and Wed alike, not Monday only. Same page describes Gathering Hour as \"at the bar from 3pm-6 pm\" under each day heading; the menu page's Gathering Hour tab does not say at-the-bar. Thursday Prime Rib $38 sits in elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile today -- not shipped. Already in /hampden. Do not invent a Roland Park view.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Half price artisan pizzas",
+              "price": "half off"
+            },
+            {
+              "text": "$9 featured cocktails",
+              "price": "$9"
+            },
+            {
+              "text": "$5 well drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$5 wines by the glass",
+              "price": "$5"
+            },
+            {
+              "text": "$5 bottled beer",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Monday – Friday 3pm – 6pm / Half Price Artisan Pizzas / $9 FEATURED COCKTAILS / $5 WELL DRINKS / $5 Wines By The Glass / $5 Bottled Beer",
+          "food_categories": [
+            "drink",
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Half off Lodge Burger",
+              "price": "half off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-18",
+          "proof_quote": "Burger Night / All day burger special with half off our Lodge Burger",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Half off artisan pizzas",
+              "price": "half off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-18",
+          "proof_quote": "Half Price All Artisan Pizzas / All day artisan pizza special with half off any of our artisan pizzas",
+          "food_categories": [
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Half off housemade pasta",
+              "price": "half off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-18",
+          "proof_quote": "Half Price Housemade Pasta Night / All day pasta special with half off any of our signature housemade pasta dishes",
+          "food_categories": [
+            "pasta/comfort"
+          ]
+        }
+      ],
+      "lat": 39.3370599,
+      "lon": -76.6306443,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

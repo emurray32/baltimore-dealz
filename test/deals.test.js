@@ -523,8 +523,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury has no home page; Ambassador is citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury"]);
+  // Tuscany-Canterbury / Little Italy have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2077,8 +2077,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Waterfront Hotel + The Chasseur + Raw & Refined → 57 -> 60 / 80 -> 83.
   // 2026-08-18: Verde + HappyJack + Pusser's + Tutti Gusti → 60 -> 64 / 83 -> 87.
   // 2026-08-18: Ambassador Dining Room → 64 -> 65 / 87 -> 88.
-  assert.equal(showable, 65);
-  assert.equal(venues.length, 88);
+  // 2026-08-18: Amicci's → 65 -> 66 / 88 -> 89.
+  assert.equal(showable, 66);
+  assert.equal(venues.length, 89);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2644,6 +2645,83 @@ test("Ambassador Dining Room joins 2026-08-18 (Tuscany-Canterbury, citywide only
     "Tuscany-Canterbury must not fold into /canton",
   );
   assert.equal(bySlug["tuscany-canterbury"], undefined, "do not invent a neighborhood view");
+});
+
+test("Amicci's joins 2026-08-18 (Little Italy, citywide only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const amiccis = byId.amiccis;
+  assert.ok(amiccis, "amiccis missing");
+  assert.deepEqual(venueShapeErrors(amiccis), []);
+  assert.equal(amiccis.name, "Amicci's");
+  assert.equal(amiccis.neighborhood, "Little Italy");
+  assert.equal(
+    amiccis.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(amiccis.status, "verified");
+  assert.equal(amiccis.address, "231 S High St, Baltimore, MD 21202");
+  assert.equal(amiccis.phone, "(410) 528-1096");
+  assert.equal(amiccis.source_url, "https://www.amiccis.com/daily-specials");
+  assert.equal(amiccis.source_type, "venue_website");
+  assert.equal(amiccis.last_verified, "2026-08-18");
+  assert.equal(amiccis.notes_public, undefined);
+  assert.equal(amiccis.lat, 39.2867222);
+  assert.equal(amiccis.lon, -76.6018584);
+  assert.equal(amiccis.deals.length, 2);
+  assert.match(amiccis.ops_notes, /Monday — Thursday 11:00am — 9:00pm/);
+  assert.match(amiccis.ops_notes, /Friday — Saturday 11:00am — 10:00pm/);
+  assert.match(amiccis.ops_notes, /Sunday 11:00am — 9:00pm/);
+
+  const hh = amiccis.deals.find((d) => d.happy_hour === true);
+  assert.ok(hh, "HH drinks + apps row missing");
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price]),
+    [
+      ["$2 off beers, house wines, homemade sangria", "$2 off"],
+      ["$2 off appetizers (excluding salads and grlic bread)", "$2 off"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.match(hh.proof_quote, /Happy Hour!!/);
+  assert.match(hh.proof_quote, /Monday - Friday/);
+  assert.match(hh.proof_quote, /3pm to 6pm/);
+  assert.match(hh.proof_quote, /\(excluding Holidays\)/);
+  assert.match(hh.items[1].text, /grlic/);
+
+  const carryout = amiccis.deals.find((d) => /3 Courses/.test(d.proof_quote));
+  assert.ok(carryout, "carryout 3-course row missing");
+  assert.deepEqual(carryout.days, ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]);
+  assert.equal(carryout.start, null);
+  assert.equal(carryout.end, null);
+  assert.equal(carryout.time_window, undefined);
+  assert.equal(carryout.happy_hour, undefined);
+  assert.deepEqual(
+    carryout.items.map((i) => [i.text, i.price]),
+    [["$25 3 Courses (carryout only)", "$25"]],
+  );
+  assert.deepEqual(carryout.food_categories, ["pasta/comfort"]);
+  assert.match(carryout.proof_quote, /EVERYDAY!!!/);
+  assert.match(carryout.proof_quote, /3 Courses for \$25/);
+  assert.match(carryout.proof_quote, /Carryout only/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "amiccis"));
+  assert.ok(
+    !venuesInView(venues, bySlug.canton).some((v) => v.id === "amiccis"),
+    "Little Italy must not fold into /canton",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "amiccis"),
+    "Little Italy must not fold into /fells-point",
+  );
+  assert.equal(bySlug["little-italy"], undefined, "do not invent a neighborhood view");
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

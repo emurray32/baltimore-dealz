@@ -7241,6 +7241,76 @@
       "lat": 39.3353246,
       "lon": -76.6198238,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "amiccis",
+      "name": "Amicci's",
+      "neighborhood": "Little Italy",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "231 S High St, Baltimore, MD 21202",
+      "phone": "(410) 528-1096",
+      "source_url": "https://www.amiccis.com/daily-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Little Italy (MapServer/0 query Name=Little Italy, 2026-08-18; Nominatim of 231 S High St 39.2867222,-76.6018584). /daily-specials 2026-08-18: Happy Hour!! Monday - Friday 3pm to 6pm (excluding Holidays); EVERYDAY!!! 3 Courses for $25 Carryout only. Hours: Monday — Thursday 11:00am — 9:00pm · Friday — Saturday 11:00am — 10:00pm · Sunday 11:00am — 9:00pm. Little Italy has no neighborhood view — citywide board only. Do not fold into /fells-point or /canton. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 off beers, house wines, homemade sangria",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 off appetizers (excluding salads and grlic bread)",
+              "price": "$2 off"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Happy Hour!! / Monday - Friday / 3pm to 6pm / (excluding Holidays)",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$25 3 Courses (carryout only)",
+              "price": "$25"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "EVERYDAY!!! / 3 Courses for $25 / Carryout only",
+          "food_categories": [
+            "pasta/comfort"
+          ]
+        }
+      ],
+      "lat": 39.2867222,
+      "lon": -76.6018584,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

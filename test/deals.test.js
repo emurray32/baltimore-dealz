@@ -2069,8 +2069,106 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-10: Lee's Pint & Shell joins on monthly recurrence (first Wednesday),
   // taking showable 49 -> 50. 2026-08-11: El Bufalo unheld (Instagram settled
   // its days), 50 -> 51.
-  assert.equal(showable, 55);
-  assert.equal(venues.length, 78);
+  assert.equal(showable, 57);
+  assert.equal(venues.length, 80);
+});
+
+test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const olar = byId["of-love-and-regret"];
+  assert.ok(olar, "of-love-and-regret missing");
+  assert.deepEqual(venueShapeErrors(olar), []);
+  assert.equal(olar.name, "Of Love & Regret");
+  assert.equal(olar.neighborhood, "Canton");
+  assert.match(
+    olar.neighborhood_source,
+    /Baltimore City Neighborhood Statistical Areas.*2026-08-18/,
+  );
+  assert.equal(olar.status, "verified");
+  assert.equal(olar.address, "1028 S. Conkling St., Baltimore, MD 21224");
+  assert.equal(olar.phone, "(410) 327-0760");
+  assert.equal(olar.source_url, "https://www.olarbmore.com/");
+  assert.equal(olar.source_type, "venue_website");
+  assert.equal(olar.deal_format, "image");
+  assert.equal(olar.last_verified, "2026-08-18");
+  assert.equal(olar.notes_public, undefined);
+  assert.equal(olar.deals.length, 1);
+  const olarHh = olar.deals[0];
+  assert.deepEqual(olarHh.days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(olarHh.start, 960);
+  assert.equal(olarHh.end, 1110);
+  assert.equal(olarHh.time_window, "4pm-6:30pm");
+  assert.equal(olarHh.happy_hour, true);
+  assert.deepEqual(
+    olarHh.items.map((i) => [i.text, i.price]),
+    [
+      ["$5 Burgers", "$5"],
+      ["$2 Oysters", "$2"],
+    ],
+  );
+  assert.deepEqual(olarHh.food_categories, ["burger", "seafood/crab"]);
+  assert.equal(olarHh.proof_quote, "Tuesday to Friday | 4 PM - 6:30 PM");
+  assert.doesNotMatch(
+    olar.deals.flatMap((d) => d.items.map((i) => i.text)).join(" | "),
+    /brunch/i,
+  );
+  assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "of-love-and-regret"));
+
+  const lps = byId["lp-steamers"];
+  assert.ok(lps, "lp-steamers missing");
+  assert.deepEqual(venueShapeErrors(lps), []);
+  assert.equal(lps.name, "L.P. Steamers");
+  assert.equal(lps.neighborhood, "Riverside");
+  assert.match(
+    lps.neighborhood_source,
+    /Baltimore City Neighborhood Statistical Areas.*2026-08-18/,
+  );
+  assert.equal(lps.status, "verified");
+  assert.equal(lps.address, "1100 E Fort Ave, Baltimore, MD 21230");
+  assert.equal(lps.phone, "(410) 576-9294");
+  assert.equal(lps.source_url, "https://www.locustpointsteamers.com/");
+  assert.equal(lps.source_type, "venue_website");
+  assert.equal(lps.last_verified, "2026-08-18");
+  assert.equal(lps.notes_public, undefined);
+  assert.equal(lps.deals.length, 2);
+  const lpsTue = lps.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const lpsWed = lps.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  assert.equal(lpsTue.start, null);
+  assert.equal(lpsTue.end, null);
+  assert.equal(lpsTue.time_window, undefined);
+  assert.deepEqual(
+    lpsTue.items.map((i) => [i.text, i.price]),
+    [["$1 off raw or steamed oysters", "$1 off"]],
+  );
+  assert.deepEqual(lpsTue.food_categories, ["seafood/crab"]);
+  assert.equal(
+    lpsTue.proof_quote,
+    "Tuesdays- We offer Fried Hard Crabs (recently featured on Travel Channel's Food Paradise) & $1 off raw or steamed oysters!",
+  );
+  assert.ok(
+    !lps.deals.some((d) => d.items.some((i) => /fried hard crab/i.test(i.text))),
+    "fried hard crabs have no dollar amount and must stay off the card",
+  );
+  assert.equal(lpsWed.start, null);
+  assert.equal(lpsWed.end, null);
+  assert.equal(lpsWed.time_window, undefined);
+  assert.deepEqual(
+    lpsWed.items.map((i) => [i.text, i.price]),
+    [
+      ["1/2 priced steamed shrimp", "1/2 off"],
+      ["$2 Natty Boh Drafts", "$2"],
+    ],
+  );
+  assert.deepEqual(lpsWed.food_categories, ["seafood/crab", "drink"]);
+  assert.equal(
+    lpsWed.proof_quote,
+    "Wednesdays- 1/2 priced Steamed Shrimp & $2 Natty Boh Drafts",
+  );
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "lp-steamers"));
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

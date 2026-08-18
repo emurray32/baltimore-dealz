@@ -523,8 +523,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2079,8 +2079,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Ambassador Dining Room → 64 -> 65 / 87 -> 88.
   // 2026-08-18: Amicci's → 65 -> 66 / 88 -> 89.
   // 2026-08-18: Angie's Seafood → 66 -> 67 / 89 -> 90.
-  assert.equal(showable, 67);
-  assert.equal(venues.length, 90);
+  // 2026-08-18: Animal Boy → 67 -> 68 / 90 -> 91.
+  assert.equal(showable, 68);
+  assert.equal(venues.length, 91);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2800,6 +2801,93 @@ test("Angie's Seafood joins 2026-08-18 (Upper Fells Point, citywide only)", asyn
     "Upper Fells Point must not fold into /fells-point",
   );
   assert.equal(bySlug["upper-fells-point"], undefined, "do not invent a neighborhood view");
+});
+
+test("Animal Boy joins 2026-08-18 (Waltherson, citywide only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const animal = byId["animal-boy"];
+  assert.ok(animal, "animal-boy missing");
+  assert.deepEqual(venueShapeErrors(animal), []);
+  assert.equal(animal.name, "Animal Boy");
+  assert.equal(animal.neighborhood, "Waltherson");
+  assert.equal(
+    animal.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(animal.status, "verified");
+  assert.equal(animal.address, "4801 Harford Rd S2, Baltimore MD 21214");
+  assert.equal(animal.phone, "(443) 869-6620");
+  assert.equal(animal.source_url, "https://www.animalboybaltimore.com/");
+  assert.equal(animal.source_type, "venue_website");
+  assert.equal(animal.last_verified, "2026-08-18");
+  assert.equal(animal.notes_public, undefined);
+  assert.equal(animal.lat, 39.3447319);
+  assert.equal(animal.lon, -76.5673653);
+  assert.equal(animal.deals.length, 2);
+  assert.match(animal.ops_notes, /happy\.jpg Last-Modified 2026-08-17/);
+  assert.match(animal.ops_notes, /still links both flyers/);
+  assert.match(animal.ops_notes, /443-869-6620/);
+  assert.match(animal.ops_notes, /Visible #hours and JSON-LD openingHours disagree/);
+  assert.match(animal.ops_notes, /Tuesday 11-4pm/);
+  assert.match(animal.ops_notes, /Mo 12:00-20:00, Tu Closed, We Closed/);
+  assert.match(animal.ops_notes, /Tuesday visible close is 4pm vs HH 4–6/);
+  assert.match(animal.ops_notes, /Do not invent a neighborhood view/);
+
+  const hh = animal.deals.find((d) => d.time_window === "4pm-6pm");
+  assert.ok(hh, "HH 4–6 row missing");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1080);
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price]),
+    [
+      ["$1 off drafts", "$1 off"],
+      ["$1 off wine", "$1 off"],
+    ],
+  );
+  assert.match(hh.proof_quote, /ANIMAL BOY HAPPY HOUR/);
+  assert.match(hh.proof_quote, /MONDAY - FRIDAY/);
+  assert.match(hh.proof_quote, /4 PM - 6 PM/);
+  assert.match(hh.proof_quote, /\$1 OFF DRAFTS/);
+  assert.match(hh.proof_quote, /\$1 OFF WINE/);
+
+  const unhappy = animal.deals.find((d) => d.time_window === "8pm-10pm");
+  assert.ok(unhappy, "Unhappy Hour 8–10 row missing");
+  assert.equal(unhappy.happy_hour, true);
+  assert.deepEqual(unhappy.days, ["wed", "thu", "fri"]);
+  assert.equal(unhappy.start, 1200);
+  assert.equal(unhappy.end, 1320);
+  assert.deepEqual(unhappy.food_categories, ["drink"]);
+  assert.deepEqual(
+    unhappy.items.map((i) => [i.text, i.price]),
+    [
+      ["$1 off select cans", "$1 off"],
+      ["$10 beer shot combos", "$10"],
+      ["$2 off snacks", "$2 off"],
+    ],
+  );
+  assert.match(unhappy.proof_quote, /Unhappy Hour/);
+  assert.match(unhappy.proof_quote, /WEDNESDAY - FRIDAY 8 PM - 10 PM/);
+  assert.match(unhappy.proof_quote, /\$1 OFF SELECT CANS/);
+  assert.match(unhappy.proof_quote, /\$10 BEER SHOT COMBOS/);
+  assert.match(unhappy.proof_quote, /\$2 OFF SNACKS/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "animal-boy"));
+  assert.ok(
+    !venuesInView(venues, bySlug.canton).some((v) => v.id === "animal-boy"),
+    "Waltherson must not fold into /canton",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "animal-boy"),
+    "Waltherson must not fold into /fells-point",
+  );
+  assert.equal(bySlug.waltherson, undefined, "do not invent a neighborhood view");
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

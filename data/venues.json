@@ -7424,6 +7424,82 @@
       "lat": 39.2893554,
       "lon": -76.5933716,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "animal-boy",
+      "name": "Animal Boy",
+      "neighborhood": "Waltherson",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "4801 Harford Rd S2, Baltimore MD 21214",
+      "phone": "(443) 869-6620",
+      "source_url": "https://www.animalboybaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Waltherson (MapServer/0 query Name=Waltherson, 2026-08-18; Nominatim of 4801 Harford Rd 39.3447319,-76.5673653). Homepage 2026-08-18 still links both flyers (images/happy.jpg, images/unhappy.jpg). happy.jpg Last-Modified 2026-08-17. Phone on homepage today is 443-869-6620. Visible #hours and JSON-LD openingHours disagree — recorded both, did not pick one. Visible: Sunday 11–9pm · Monday 11–9pm · Tuesday 11-4pm · Wednesday 11-10pm · Thursday 11am–10pm · Friday 11am–10pm · Saturday 11am–10pm. JSON-LD: Mo 12:00-20:00, Tu Closed, We Closed, Th 11:00-22:00, Fr 11:00-22:00, Sa 11:00-22:00, Su 12:00-20:00. Tuesday visible close is 4pm vs HH 4–6 Mon–Fri — overlap recorded; Tuesday kept on flyer days. Waltherson has no neighborhood view — citywide board only. Do not invent a neighborhood view.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 off drafts",
+              "price": "$1 off"
+            },
+            {
+              "text": "$1 off wine",
+              "price": "$1 off"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "ANIMAL BOY HAPPY HOUR / MONDAY - FRIDAY / 4 PM - 6 PM / $1 OFF DRAFTS / $1 OFF WINE",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 off select cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$10 beer shot combos",
+              "price": "$10"
+            },
+            {
+              "text": "$2 off snacks",
+              "price": "$2 off"
+            }
+          ],
+          "start": 1200,
+          "end": 1320,
+          "time_window": "8pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Unhappy Hour / WEDNESDAY - FRIDAY 8 PM - 10 PM / $1 OFF SELECT CANS / $10 BEER SHOT COMBOS / $2 OFF SNACKS",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3447319,
+      "lon": -76.5673653,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

@@ -523,8 +523,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2078,8 +2078,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Verde + HappyJack + Pusser's + Tutti Gusti → 60 -> 64 / 83 -> 87.
   // 2026-08-18: Ambassador Dining Room → 64 -> 65 / 87 -> 88.
   // 2026-08-18: Amicci's → 65 -> 66 / 88 -> 89.
-  assert.equal(showable, 66);
-  assert.equal(venues.length, 89);
+  // 2026-08-18: Angie's Seafood → 66 -> 67 / 89 -> 90.
+  assert.equal(showable, 67);
+  assert.equal(venues.length, 90);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2722,6 +2723,83 @@ test("Amicci's joins 2026-08-18 (Little Italy, citywide only)", async () => {
     "Little Italy must not fold into /fells-point",
   );
   assert.equal(bySlug["little-italy"], undefined, "do not invent a neighborhood view");
+});
+
+test("Angie's Seafood joins 2026-08-18 (Upper Fells Point, citywide only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const angies = byId["angies-seafood"];
+  assert.ok(angies, "angies-seafood missing");
+  assert.deepEqual(venueShapeErrors(angies), []);
+  assert.equal(angies.name, "Angie's Seafood");
+  assert.equal(angies.neighborhood, "Upper Fells Point");
+  assert.equal(
+    angies.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(angies.status, "verified");
+  assert.equal(angies.address, "1727 E Pratt St, Baltimore, MD 21231");
+  assert.equal(angies.phone, "(410) 342-0917");
+  assert.equal(
+    angies.source_url,
+    "https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf",
+  );
+  assert.equal(angies.source_type, "venue_website");
+  assert.equal(angies.last_verified, "2026-08-18");
+  assert.equal(angies.notes_public, undefined);
+  assert.equal(angies.lat, 39.2893554);
+  assert.equal(angies.lon, -76.5933716);
+  assert.equal(angies.deals.length, 1);
+  assert.match(angies.ops_notes, /Last-Modified 2025-12-16/);
+  assert.match(angies.ops_notes, /\/menu still links/);
+  assert.match(angies.ops_notes, /410-342-0917/);
+  assert.match(angies.ops_notes, /Do not fold into \/fells-point/);
+
+  const hh = angies.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(hh.start, null);
+  assert.equal(hh.end, null);
+  assert.equal(hh.time_window, "all day");
+  assert.deepEqual(hh.food_categories, ["seafood/crab"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price]),
+    [
+      ["Hot crab pretzel", "$18"],
+      ["Mussels in garlic sauce", "$15"],
+      ["Shrimp or fish tacos", "$15"],
+      ["Salmon slider", "$18"],
+      ["Shrimp & crab eggrolls", "$24"],
+      ["Garlic shrimp potato skins", "$14"],
+      ["Buffalo wings", "$12"],
+      ["Steak sliders", "$18"],
+      ["Mozzarella sticks", "$12"],
+      ["Lamb chops", "$25"],
+      ["Cocktail flights", "$15"],
+      ["Angie's Relaxer", "$12"],
+      ["Margarita", "$12"],
+      ["Long Island", "$12"],
+      ["Lemon Drop", "$12"],
+      ["House shot", "$9"],
+      ["Espolòn", "$12"],
+      ["Jose Cuervo", "$12"],
+      ["Beers (Bud Light, Coors Light, Blue Moon)", "$5"],
+    ],
+  );
+  assert.match(hh.proof_quote, /Happy Hour Menu/);
+  assert.match(hh.proof_quote, /MONDAY - THURSDAY/);
+  assert.match(hh.proof_quote, /ALL DAY/);
+  assert.match(hh.items.find((i) => i.text === "Espolòn").text, /Espolòn/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "angies-seafood"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "angies-seafood"),
+    "Upper Fells Point must not fold into /fells-point",
+  );
+  assert.equal(bySlug["upper-fells-point"], undefined, "do not invent a neighborhood view");
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

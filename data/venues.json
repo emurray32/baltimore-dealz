@@ -7311,6 +7311,119 @@
       "lat": 39.2867222,
       "lon": -76.6018584,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "angies-seafood",
+      "name": "Angie's Seafood",
+      "neighborhood": "Upper Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "1727 E Pratt St, Baltimore, MD 21231",
+      "phone": "(410) 342-0917",
+      "source_url": "https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Upper Fells Point (MapServer/0 query Name=Upper Fells Point, 2026-08-18; Nominatim of 1727 E Pratt St 39.2893554,-76.5933716). Happy Hour PDF Last-Modified 2025-12-16 (response header, not the filename). /menu still links https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf today. Phone on homepage today is 410-342-0917. Site HTML does not publish opening hours — do not invent clocks. Lunch PDF on /menu has no days — not loaded. Upper Fells Point has no neighborhood view — citywide board only. Do not fold into /fells-point.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Hot crab pretzel",
+              "price": "$18"
+            },
+            {
+              "text": "Mussels in garlic sauce",
+              "price": "$15"
+            },
+            {
+              "text": "Shrimp or fish tacos",
+              "price": "$15"
+            },
+            {
+              "text": "Salmon slider",
+              "price": "$18"
+            },
+            {
+              "text": "Shrimp & crab eggrolls",
+              "price": "$24"
+            },
+            {
+              "text": "Garlic shrimp potato skins",
+              "price": "$14"
+            },
+            {
+              "text": "Buffalo wings",
+              "price": "$12"
+            },
+            {
+              "text": "Steak sliders",
+              "price": "$18"
+            },
+            {
+              "text": "Mozzarella sticks",
+              "price": "$12"
+            },
+            {
+              "text": "Lamb chops",
+              "price": "$25"
+            },
+            {
+              "text": "Cocktail flights",
+              "price": "$15"
+            },
+            {
+              "text": "Angie's Relaxer",
+              "price": "$12"
+            },
+            {
+              "text": "Margarita",
+              "price": "$12"
+            },
+            {
+              "text": "Long Island",
+              "price": "$12"
+            },
+            {
+              "text": "Lemon Drop",
+              "price": "$12"
+            },
+            {
+              "text": "House shot",
+              "price": "$9"
+            },
+            {
+              "text": "Espolòn",
+              "price": "$12"
+            },
+            {
+              "text": "Jose Cuervo",
+              "price": "$12"
+            },
+            {
+              "text": "Beers (Bud Light, Coors Light, Blue Moon)",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Happy Hour Menu / MONDAY - THURSDAY / ALL DAY",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.2893554,
+      "lon": -76.5933716,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

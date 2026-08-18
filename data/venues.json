@@ -7122,6 +7122,125 @@
       "lat": 39.2835159,
       "lon": -76.5725785,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "ambassador-dining-room",
+      "name": "Ambassador Dining Room",
+      "neighborhood": "Tuscany-Canterbury",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "3811 Canterbury Rd, Baltimore, MD 21218",
+      "phone": "(410) 366-1484",
+      "source_url": "https://ambassadordining.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Tuscany-Canterbury (MapServer/0 query Name=Tuscany-Canterbury, 2026-08-18; Nominatim of 3811 Canterbury Rd 39.3353246,-76.6198238). Homepage 2026-08-18: Happy Hour Specials Mon - Thu 5:00 PM - 6:30 PM; Buffet $21.95 Tue - Fri 11:00 AM to 2:30 PM; Brunch $29.95 Sat & Sun 11:00 AM to 2:30 PM. Hours: Tue - Sun: 11:00 AM to 10:00 PM · Mon: 5:00 PM to 10:00 PM. Tuscany-Canterbury has no neighborhood view — citywide board only. Do not fold into /canton. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$10.95 Cranberry Bourbon",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Gin Tonica",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Sea Breeze",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Goan Margarita",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Ginger Mojito",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Gin Amarood",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Maryland Orange Crush",
+              "price": "$10.95"
+            },
+            {
+              "text": "$10.95 Martini",
+              "price": "$10.95"
+            },
+            {
+              "text": "$4.50 Beer (Blue Moon, Corona Extra, Budweiser)",
+              "price": "$4.50"
+            }
+          ],
+          "start": 1020,
+          "end": 1110,
+          "time_window": "5pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Happy Hour Specials / Mon - Thu / 5:00 PM - 6:30 PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$21.95 Lunch buffet",
+              "price": "$21.95"
+            }
+          ],
+          "start": 660,
+          "end": 870,
+          "time_window": "11am-2:30pm",
+          "verified_date": "2026-08-18",
+          "proof_quote": "Buffet $21.95 Tue - Fri",
+          "food_categories": [
+            "pasta/comfort"
+          ]
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$29.95 Brunch",
+              "price": "$29.95"
+            },
+            {
+              "text": "Unlimited mimosas & soft drinks with Saturday & Sunday Brunch"
+            }
+          ],
+          "start": 660,
+          "end": 870,
+          "time_window": "11am-2:30pm",
+          "verified_date": "2026-08-18",
+          "proof_quote": "Brunch $29.95 Sat & Sun",
+          "food_categories": [
+            "brunch",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3353246,
+      "lon": -76.6198238,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

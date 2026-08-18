@@ -91,6 +91,40 @@ test("venue page shows full weekly schedule; held deals and ops_notes never appe
   assert.doesNotMatch(bufaloHtml, /ops_notes/);
 });
 
+test("venue page renders notes_public near the name when the venue has a weekly schedule", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const stack = venues.find((v) => v.id === "hudson-street-stackhouse");
+  assert.ok(stack?.notes_public, "fixture must carry notes_public");
+  assert.ok(stack.deals.length > 0, "fixture must have a real schedule");
+
+  const html = renderVenuePage(stack, views, FRI_11PM_EDT);
+  assert.match(html, /Hudson Street Stackhouse/);
+  assert.ok(
+    html.includes(escapeHtml(stack.notes_public)),
+    "notes_public text must render on the page",
+  );
+  // Same class the board reuses for its own notes, no bespoke markup.
+  assert.match(
+    html,
+    new RegExp(`<p class="meta">${escapeHtml(stack.notes_public).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</p>`),
+  );
+});
+
+test("venue page renders no empty notes_public element when the venue has none", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const vibes = venues.find((v) => v.id === "good-vibes-cantina");
+  assert.ok(vibes && !vibes.notes_public, "fixture must have no notes_public");
+  assert.ok(vibes.deals.length > 0, "fixture must have a real schedule");
+
+  const html = renderVenuePage(vibes, views, FRI_11PM_EDT);
+  assert.match(html, /Good Vibes/);
+  // No stray empty <p class="meta"></p> where the note would have gone.
+  assert.doesNotMatch(html, /<p class="meta">\s*<\/p>/);
+  assert.doesNotMatch(html, /<h1>.*<\/h1>\s*<p class="meta">\s*<\/p>/s);
+});
+
 test("quiet venue page is honest, not 404", async () => {
   const venues = await loadVenues();
   const views = await loadViews();

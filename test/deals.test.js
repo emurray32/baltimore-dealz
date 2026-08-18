@@ -523,12 +523,15 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
+  // Tuscany-Canterbury has no home page; Ambassador is citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
       .flatMap((view) => view.neighborhoods),
   );
   for (const v of await loadVenues()) {
+    if (citywideOnly.has(v.neighborhood)) continue;
     assert.ok(covered.has(v.neighborhood), `${v.id}: "${v.neighborhood}" is in no view`);
   }
 });
@@ -2073,8 +2076,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // its days), 50 -> 51.
   // 2026-08-18: Waterfront Hotel + The Chasseur + Raw & Refined → 57 -> 60 / 80 -> 83.
   // 2026-08-18: Verde + HappyJack + Pusser's + Tutti Gusti → 60 -> 64 / 83 -> 87.
-  assert.equal(showable, 64);
-  assert.equal(venues.length, 87);
+  // 2026-08-18: Ambassador Dining Room → 64 -> 65 / 87 -> 88.
+  assert.equal(showable, 65);
+  assert.equal(venues.length, 88);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2550,6 +2554,96 @@ test("Verde, The HappyJack Tavern, Pusser's Landing, and Tutti Gusti join 2026-0
     "customer-review 10% cash discount is not the venue and must stay off the card",
   );
   assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "tutti-gusti"));
+});
+
+test("Ambassador Dining Room joins 2026-08-18 (Tuscany-Canterbury, citywide only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const adr = byId["ambassador-dining-room"];
+  assert.ok(adr, "ambassador-dining-room missing");
+  assert.deepEqual(venueShapeErrors(adr), []);
+  assert.equal(adr.name, "Ambassador Dining Room");
+  assert.equal(adr.neighborhood, "Tuscany-Canterbury");
+  assert.equal(
+    adr.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(adr.status, "verified");
+  assert.equal(adr.address, "3811 Canterbury Rd, Baltimore, MD 21218");
+  assert.equal(adr.phone, "(410) 366-1484");
+  assert.equal(adr.source_url, "https://ambassadordining.com/");
+  assert.equal(adr.source_type, "venue_website");
+  assert.equal(adr.last_verified, "2026-08-18");
+  assert.equal(adr.notes_public, undefined);
+  assert.equal(adr.lat, 39.3353246);
+  assert.equal(adr.lon, -76.6198238);
+  assert.equal(adr.deals.length, 3);
+  assert.match(adr.ops_notes, /Tue - Sun: 11:00 AM to 10:00 PM/);
+  assert.match(adr.ops_notes, /Mon: 5:00 PM to 10:00 PM/);
+
+  const hh = adr.deals.find((d) => d.happy_hour === true);
+  assert.ok(hh, "HH drinks row missing");
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(hh.start, 1020);
+  assert.equal(hh.end, 1110);
+  assert.equal(hh.time_window, "5pm-6:30pm");
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price]),
+    [
+      ["$10.95 Cranberry Bourbon", "$10.95"],
+      ["$10.95 Gin Tonica", "$10.95"],
+      ["$10.95 Sea Breeze", "$10.95"],
+      ["$10.95 Goan Margarita", "$10.95"],
+      ["$10.95 Ginger Mojito", "$10.95"],
+      ["$10.95 Gin Amarood", "$10.95"],
+      ["$10.95 Maryland Orange Crush", "$10.95"],
+      ["$10.95 Martini", "$10.95"],
+      ["$4.50 Beer (Blue Moon, Corona Extra, Budweiser)", "$4.50"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.match(hh.proof_quote, /Happy Hour Specials/);
+  assert.match(hh.proof_quote, /Mon - Thu/);
+  assert.match(hh.proof_quote, /5:00 PM - 6:30 PM/);
+
+  const lunch = adr.deals.find((d) => d.proof_quote === "Buffet $21.95 Tue - Fri");
+  assert.ok(lunch, "lunch buffet row missing");
+  assert.deepEqual(lunch.days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(lunch.start, 660);
+  assert.equal(lunch.end, 870);
+  assert.equal(lunch.time_window, "11am-2:30pm");
+  assert.equal(lunch.happy_hour, undefined);
+  assert.deepEqual(
+    lunch.items.map((i) => [i.text, i.price]),
+    [["$21.95 Lunch buffet", "$21.95"]],
+  );
+  assert.deepEqual(lunch.food_categories, ["pasta/comfort"]);
+
+  const brunch = adr.deals.find((d) => d.proof_quote === "Brunch $29.95 Sat & Sun");
+  assert.ok(brunch, "brunch row missing");
+  assert.deepEqual(brunch.days, ["sat", "sun"]);
+  assert.equal(brunch.start, 660);
+  assert.equal(brunch.end, 870);
+  assert.equal(brunch.time_window, "11am-2:30pm");
+  assert.equal(brunch.happy_hour, undefined);
+  assert.deepEqual(
+    brunch.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$29.95 Brunch", "$29.95"],
+      ["Unlimited mimosas & soft drinks with Saturday & Sunday Brunch", null],
+    ],
+  );
+  assert.deepEqual(brunch.food_categories, ["brunch", "drink"]);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "ambassador-dining-room"));
+  assert.ok(
+    !venuesInView(venues, bySlug.canton).some((v) => v.id === "ambassador-dining-room"),
+    "Tuscany-Canterbury must not fold into /canton",
+  );
+  assert.equal(bySlug["tuscany-canterbury"], undefined, "do not invent a neighborhood view");
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

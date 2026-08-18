@@ -7500,6 +7500,116 @@
       "lat": 39.3447319,
       "lon": -76.5673653,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "baltimore-seafood",
+      "name": "Baltimore Seafood",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "2324 Boston St, Baltimore, MD 21224",
+      "phone": "(410) 624-5166",
+      "source_url": "https://www.bmoreseafood.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim building 2324 Boston St 39.2827389,-76.5834654 and house 39.2829566,-76.5840318 also Canton). /menu 2026-08-18 still hosts DAILY SPECIALS (2022).png (Wix media Last-Modified 2022-08-13; filename recorded — graphic is the live official menu image today). No clock on the graphic — start/end null, no time_window. Happy Hour tab on /menu is a heading only — no days/window/$ extracted. Do not invent 3–7 from IG. Phone on the menu page today is 410-624-5166. Pin site address 2324 Boston St, not the license range 2324-32. Daily specials, not happy hour — do not set happy_hour true. Already in /canton. Do not invent a neighborhood view.",
+      "deal_format": "image",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "1LB black mussels + 0.5LB shrimp head-on",
+              "price": "$24"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "MUSSEL MONDAY / 1LB BLACK MUSSELS / 0.5LB SHRIMP HEAD-ON / $24",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "1LB crawfish + 0.5LB shrimp head-on",
+              "price": "$24"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "CRAWFISH TUESDAY / 1LB CRAWFISH / 0.5LB SHRIMP HEAD-ON / $24",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "1LB head-off shrimp + 0.5LB snow crab legs",
+              "price": "$35"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "SHRIMP WEDNESDAY / 1LB HEAD-OFF SHRIMP / 0.5LB SNOW CRAB LEGS / $35",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "1LB snow crab legs + 0.5LB shrimp head-off",
+              "price": "$39"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "CRAB LEG THURSDAY / 1LB SNOW CRAB LEGS / 0.5LB SHRIMP HEAD-OFF / $39",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "1LB head-off shrimp + 1LB crawfish + 0.5LB snow crab legs",
+              "price": "$49"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "WEEKEND ROYALE / 1LB HEAD-OFF SHRIMP / 1LB CRAWFISH / 0.5LB SNOW CRAB LEGS / $49",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.2827389,
+      "lon": -76.5834654,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

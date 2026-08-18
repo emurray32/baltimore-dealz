@@ -2080,8 +2080,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Amicci's → 65 -> 66 / 88 -> 89.
   // 2026-08-18: Angie's Seafood → 66 -> 67 / 89 -> 90.
   // 2026-08-18: Animal Boy → 67 -> 68 / 90 -> 91.
-  assert.equal(showable, 68);
-  assert.equal(venues.length, 91);
+  // 2026-08-18: Baltimore Seafood → 68 -> 69 / 91 -> 92.
+  assert.equal(showable, 69);
+  assert.equal(venues.length, 92);
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -2888,6 +2889,107 @@ test("Animal Boy joins 2026-08-18 (Waltherson, citywide only)", async () => {
     "Waltherson must not fold into /fells-point",
   );
   assert.equal(bySlug.waltherson, undefined, "do not invent a neighborhood view");
+});
+
+test("Baltimore Seafood joins 2026-08-18 (Canton daily specials, no clock)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const bs = byId["baltimore-seafood"];
+  assert.ok(bs, "baltimore-seafood missing");
+  assert.deepEqual(venueShapeErrors(bs), []);
+  assert.equal(bs.name, "Baltimore Seafood");
+  assert.equal(bs.neighborhood, "Canton");
+  assert.equal(
+    bs.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+  );
+  assert.equal(bs.status, "verified");
+  assert.equal(bs.address, "2324 Boston St, Baltimore, MD 21224");
+  assert.doesNotMatch(bs.address, /2324-32/);
+  assert.equal(bs.phone, "(410) 624-5166");
+  assert.equal(bs.source_url, "https://www.bmoreseafood.com/menu");
+  assert.equal(bs.source_type, "venue_website");
+  assert.equal(bs.last_verified, "2026-08-18");
+  assert.equal(bs.deal_format, "image");
+  assert.equal(bs.notes_public, undefined);
+  assert.equal(bs.lat, 39.2827389);
+  assert.equal(bs.lon, -76.5834654);
+  assert.equal(bs.deals.length, 5);
+  assert.match(bs.ops_notes, /DAILY SPECIALS \(2022\)\.png/);
+  assert.match(bs.ops_notes, /410-624-5166/);
+  assert.match(bs.ops_notes, /2324 Boston St, not the license range 2324-32/);
+  assert.match(bs.ops_notes, /Happy Hour tab on \/menu is a heading only/);
+  assert.match(bs.ops_notes, /Do not invent 3–7 from IG/);
+  assert.match(bs.ops_notes, /do not set happy_hour true/);
+  assert.match(bs.ops_notes, /Already in \/canton/);
+  assert.match(bs.ops_notes, /Do not invent a neighborhood view/);
+
+  const mon = bs.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const tue = bs.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = bs.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const thu = bs.deals.find((d) => d.days.length === 1 && d.days[0] === "thu");
+  const weekend = bs.deals.find((d) => d.days.includes("sat") && d.days.includes("sun"));
+  assert.ok(mon && tue && wed && thu && weekend, "expected five daily-special rows");
+  assert.ok(!bs.deals.some((d) => d.days.includes("fri")), "no Friday row on the graphic");
+  for (const row of [mon, tue, wed, thu, weekend]) {
+    assert.equal(row.start, null);
+    assert.equal(row.end, null);
+    assert.equal(row.time_window, undefined);
+    assert.equal(row.happy_hour, undefined);
+    assert.deepEqual(row.food_categories, ["seafood/crab"]);
+  }
+  assert.deepEqual(
+    mon.items.map((i) => [i.text, i.price]),
+    [["1LB black mussels + 0.5LB shrimp head-on", "$24"]],
+  );
+  assert.match(mon.proof_quote, /MUSSEL MONDAY/);
+  assert.match(mon.proof_quote, /1LB BLACK MUSSELS/);
+  assert.match(mon.proof_quote, /0\.5LB SHRIMP HEAD-ON/);
+  assert.match(mon.proof_quote, /\$24/);
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price]),
+    [["1LB crawfish + 0.5LB shrimp head-on", "$24"]],
+  );
+  assert.match(tue.proof_quote, /CRAWFISH TUESDAY/);
+  assert.match(tue.proof_quote, /1LB CRAWFISH/);
+  assert.match(tue.proof_quote, /0\.5LB SHRIMP HEAD-ON/);
+  assert.match(tue.proof_quote, /\$24/);
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price]),
+    [["1LB head-off shrimp + 0.5LB snow crab legs", "$35"]],
+  );
+  assert.match(wed.proof_quote, /SHRIMP WEDNESDAY/);
+  assert.match(wed.proof_quote, /1LB HEAD-OFF SHRIMP/);
+  assert.match(wed.proof_quote, /0\.5LB SNOW CRAB LEGS/);
+  assert.match(wed.proof_quote, /\$35/);
+  assert.deepEqual(
+    thu.items.map((i) => [i.text, i.price]),
+    [["1LB snow crab legs + 0.5LB shrimp head-off", "$39"]],
+  );
+  assert.match(thu.proof_quote, /CRAB LEG THURSDAY/);
+  assert.match(thu.proof_quote, /1LB SNOW CRAB LEGS/);
+  assert.match(thu.proof_quote, /0\.5LB SHRIMP HEAD-OFF/);
+  assert.match(thu.proof_quote, /\$39/);
+  assert.deepEqual(weekend.days, ["sat", "sun"]);
+  assert.deepEqual(
+    weekend.items.map((i) => [i.text, i.price]),
+    [["1LB head-off shrimp + 1LB crawfish + 0.5LB snow crab legs", "$49"]],
+  );
+  assert.match(weekend.proof_quote, /WEEKEND ROYALE/);
+  assert.match(weekend.proof_quote, /1LB HEAD-OFF SHRIMP/);
+  assert.match(weekend.proof_quote, /1LB CRAWFISH/);
+  assert.match(weekend.proof_quote, /0\.5LB SNOW CRAB LEGS/);
+  assert.match(weekend.proof_quote, /\$49/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "baltimore-seafood"));
+  assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "baltimore-seafood"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "baltimore-seafood"),
+    "Canton must not fold into /fells-point",
+  );
 });
 
 test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {

@@ -6793,6 +6793,335 @@
       "lat": 39.2774398,
       "lon": -76.5777849,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "verde",
+      "name": "Verde",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "641 S Montford Ave., Baltimore, MD 21224",
+      "phone": "(410) 522-1000",
+      "source_url": "https://www.instagram.com/verdepizza/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2841064,-76.5825193). verdepizza.com has no weekly $. Official IG @verdepizza: Mon post 2026-08-17 https://www.instagram.com/verdepizza/p/DcJ5FW9x50Q/ every Monday 25% off all pizza (no clock); Tue post 2026-08-04 https://www.instagram.com/verdepizza/p/Dbov91iRQlZ/ Tuesdays half-priced bottle night (no clock). Do not ship Maryland Vegan Restaurant Week (ended Aug 16). Hours conflict — did not pick one: IG bio Mon-Th 5-9p / Fri 5-10p vs Linktree Monday - Friday: 5:00 pm - 9:00 pm, & Saturday and Sunday: noon - 9:00 pm. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "deal_format": "image",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "25% off all pizzas",
+              "price": "25% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "every Monday at @verdepizza is 25% off all pizza",
+          "food_categories": [
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "50% off bottles of wine",
+              "price": "1/2 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Tuesdays are half-priced bottle night",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2841064,
+      "lon": -76.5825193,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "the-happyjack-tavern",
+      "name": "The HappyJack Tavern",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "2822 Hudson St, Baltimore, MD 21224",
+      "phone": "(443) 835-2843",
+      "source_url": "https://www.happyjacktavern.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2823496,-76.5763606). /happy-hour 2026-08-18: HH food Mon–Thu 4–6 dine-in all $8 smash/veggie/grilled chicken/grilled cheese; HH drinks Mon–Fri 4–6 and Sun 12–11 $1 off marked beer/wine/cocktails + $5 rails; daily 4pm–close Mon $8 mango margs, Tue $15 lb wings + natty/rail dine-in, Wed $5 smash or grilled cheese dine-in, Thu $8 boh'tails (venue spells THURDSDAY). No Fri/Sat daily published. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "notes_public": "Happy hour food and Tuesday/Wednesday daily specials are dine-in only",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8 Smash Burger",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Veggie Burger",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Grilled Chicken",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Classic Grilled Cheese",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "MON-THURS 4-6PM | DINE-IN ONLY",
+          "food_categories": [
+            "burger",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 off select beer, wine & cocktails marked w/ an *",
+              "price": "$1 off"
+            },
+            {
+              "text": "$5 rail liquor drinks",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "MON-FRI 4-6PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$1 off select beer, wine & cocktails marked w/ an *",
+              "price": "$1 off"
+            },
+            {
+              "text": "$5 rail liquor drinks",
+              "price": "$5"
+            }
+          ],
+          "start": 720,
+          "end": 1380,
+          "time_window": "12pm-11pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "SUN 12PM-11PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$8 just another guava mango margs",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "DAILY SPECIALS 4PM-CLOSE",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$15 one pound of wings w/ choice of natty boh or rail liquor drink",
+              "price": "$15"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "TUESDAY – DINE-IN ONLY",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$5 single smash burgers or classic grilled cheese",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "WEDNESDAY – DINE-IN ONLY",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8 all boh'tails",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "THURDSDAY",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2823496,
+      "lon": -76.5763606,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "pussers-landing",
+      "name": "Pusser's Landing",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "2780 Lighthouse Point E, Baltimore, MD 21224",
+      "phone": "(443) 869-2067",
+      "source_url": "https://pusserslanding.com/specials/happy-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim of official pin 39.2772322,-76.5789485; Nominatim display name is Bo Brooks building at same address). Pin 2780 Lighthouse Point E, not license 2711 Boston. /specials/happy-hour/ 2026-08-18: Monday–Thursday 3–6pm half off Painkillers, draft beer, house wine, wings, nachos. No Friday HH published. Tuesday trivia 7–9pm has no $. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "1/2 off Pusser's Rum Painkillers",
+              "price": "1/2 off"
+            },
+            {
+              "text": "1/2 off Draft Beer",
+              "price": "1/2 off"
+            },
+            {
+              "text": "1/2 off House Wine",
+              "price": "1/2 off"
+            },
+            {
+              "text": "1/2 off Wings",
+              "price": "1/2 off"
+            },
+            {
+              "text": "1/2 off Nachos",
+              "price": "1/2 off"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Join us Monday - Thursday for half off Pusser's Rum Painkillers, Draft Beer, House Wine, Wings & Nachos.",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2772322,
+      "lon": -76.5789485,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+    },
+    {
+      "id": "tutti-gusti",
+      "name": "Tutti Gusti",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "status": "verified",
+      "address": "3102 Fait Ave, Baltimore, MD 21224",
+      "phone": "(410) 534-4040",
+      "source_url": "https://www.tuttigusti.net/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-18",
+      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim of 3102 Fait 39.2835159,-76.5725785 and of 3100 Fait 39.2835374,-76.5726334). Pin site address 3102 Fait, not license 3100 Fait. Homepage 2026-08-18 Monday Night Special: buy any pizza at regular menu price, same-size cheese pizza $3. No clock — start/end null, no time_window. Do not ship customer-review 10% discount for cash. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Same-size cheese pizza $3 with any pizza at regular menu price",
+              "price": "$3"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-18",
+          "proof_quote": "Buy Any Pizza at Regular menu Price, Get Same Size Cheese Pizza for Only $3.00.",
+          "food_categories": [
+            "pizza"
+          ]
+        }
+      ],
+      "lat": 39.2835159,
+      "lon": -76.5725785,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
     }
   ]
 }

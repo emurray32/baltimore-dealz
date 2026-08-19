@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/INNER_HARBOR_DEALS.md + STATION_NORTH_DEALS.md + HAMPDEN_DEALS.md CoS-cleared ship 2026-08-08 (Monarque, Alma Cocina Latina, Wicked Sisters, The Bluebird) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06 + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Of Love & Regret, L.P. Steamers) + Deal Scout 2026-08-19 official-site pass (filled Bark Social Canton; added Hull Street Blues, Rye Street Tavern, Phillips Seafood Inner Harbor, Holy Frijoles)",
+  "derived_from": "RESEARCH/INNER_HARBOR_DEALS.md + STATION_NORTH_DEALS.md + HAMPDEN_DEALS.md CoS-cleared ship 2026-08-08 (Monarque, Alma Cocina Latina, Wicked Sisters, The Bluebird) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06 + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Of Love & Regret, L.P. Steamers) + Deal Scout 2026-08-19 official-site pass (filled Bark Social Canton; added Hull Street Blues, Rye Street Tavern, Phillips Seafood Inner Harbor, Holy Frijoles) + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Captain James Landing)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -8258,6 +8258,126 @@
       ],
       "lat": 39.3312501,
       "lon": -76.6314458,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+    },
+    {
+      "id": "captain-james-landing",
+      "name": "Captain James Landing",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+      "status": "verified",
+      "address": "2127 Boston St, Baltimore, MD 21231",
+      "phone": "(410) 327-8600",
+      "source_url": "https://www.captainjameslanding.com/happenings/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-19",
+      "notes_public": "Happy Hour at the Crab House is dine-in only, Monday–Friday 4–7pm.",
+      "ops_notes": "Builder 2026-08-19 off census + live event pages HTTP 200. Pin restaurant 2127 Boston St / (410) 327-8600 — not the crab house at 2121 Aliceanna / (410) 675-1819. Do not pin the crab house. Nominatim amenity 39.2840331,-76.5862367 neighbourhood=Canton. CityView Neighborhoods MapServer/0 query today on that point: Name=Canton. Weekday plates have no clock — start/end null, do not invent all day. Crab House HH 4PM-7PM Mon-Fri (Dine In only), no $ — prices_published false; do not invent IG $3 Natty / $4 Corona. All You Can Eat Crabs $48 two windows (12PM-4PM restaurant / 4PM-9PM crab house), no days — not shipped. Already in /canton. Do not fold the crab house into a new view.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Double crab cake platter with two sides $39.99",
+              "price": "$39.99"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-19",
+          "source_url": "https://www.captainjameslanding.com/event/monday-double-crab-cake-platter/",
+          "proof_quote": "Monday: Double Crab Cake Platter / Served with two sides $39.99",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Poboy (shrimp, steak, or fried oysters) with fries $12",
+              "price": "$12"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-19",
+          "source_url": "https://www.captainjameslanding.com/event/tuesday-poboys/",
+          "proof_quote": "Tuesday: POBOYS / Your choice of (Shrimp, Steak, or Fried Oysters) served with fries $12",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Lobster roll with homemade chips $25.00",
+              "price": "$25.00"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-19",
+          "source_url": "https://www.captainjameslanding.com/event/wednesday-lobster-roll/",
+          "proof_quote": "Wednesday: Lobster Roll / Served with homemade chips $25.00",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Whole fish with rice $32.00",
+              "price": "$32.00"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-19",
+          "source_url": "https://www.captainjameslanding.com/event/thursday-whole-fish/",
+          "proof_quote": "Thursday: Whole Fish / Served with rice $32.00",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour at the Crab House"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-19",
+          "source_url": "https://www.captainjameslanding.com/event/happy-hour-at-the-crab-house/",
+          "proof_quote": "Happy Hour at the Crab House / 4PM -7PM Monday - Friday (Dine In only)",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2840331,
+      "lon": -76.5862367,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
     }
   ]

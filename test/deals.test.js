@@ -1033,7 +1033,7 @@ test("an unpriced row may render only as a real happy hour with a published wind
 
   assert.deepEqual(
     [...new Set(unpricedShowing.map((r) => r.id))].sort(),
-    ["blackwall-hitch", "holy-frijoles", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
+    ["blackwall-hitch", "captain-james-landing", "holy-frijoles", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
     "only the times-only happy-hour venues may show an unpriced row",
   );
 
@@ -2084,8 +2084,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: The Barn & Lodge at The Rotunda → 69 -> 70 / 92 -> 93.
   // 2026-08-19: Bark Social Canton filled + Hull Street Blues, Rye Street Tavern,
   // Phillips Seafood Inner Harbor, Holy Frijoles → 70 -> 75 / 93 -> 97.
-  assert.equal(showable, 75);
-  assert.equal(venues.length, 97);
+  // 2026-08-19: Captain James Landing → 75 -> 76 / 97 -> 98.
+  assert.equal(showable, 76);
+  assert.equal(venues.length, 98);
 });
 
 
@@ -2155,6 +2156,116 @@ test("2026-08-19 official-site pass: Bark Social fill + thin-hood adds", async (
   assert.equal(holy.neighborhood, "Hampden");
   assert.equal(holy.deals[0].prices_published, false);
   assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "holy-frijoles"));
+});
+
+test("Captain James Landing joins 2026-08-19 (Canton weekday plates + crab house HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const cj = byId["captain-james-landing"];
+  assert.ok(cj, "captain-james-landing missing");
+  assert.deepEqual(venueShapeErrors(cj), []);
+  assert.equal(cj.name, "Captain James Landing");
+  assert.equal(cj.neighborhood, "Canton");
+  assert.equal(
+    cj.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+  );
+  assert.equal(cj.status, "verified");
+  assert.equal(cj.address, "2127 Boston St, Baltimore, MD 21231");
+  assert.doesNotMatch(cj.address, /Aliceanna|2121/);
+  assert.equal(cj.phone, "(410) 327-8600");
+  assert.doesNotMatch(cj.phone ?? "", /675-1819/);
+  assert.equal(cj.source_url, "https://www.captainjameslanding.com/happenings/");
+  assert.equal(cj.source_type, "venue_website");
+  assert.equal(cj.last_verified, "2026-08-19");
+  assert.equal(cj.lat, 39.2840331);
+  assert.equal(cj.lon, -76.5862367);
+  assert.equal(cj.deals.length, 5);
+  assert.match(
+    cj.notes_public ?? "",
+    /dine-?in only/i,
+    "Crab House HH dine-in restriction must be public",
+  );
+  assert.match(cj.ops_notes ?? "", /Name=Canton/);
+  assert.match(cj.ops_notes ?? "", /2127 Boston/);
+  assert.match(cj.ops_notes ?? "", /Do not pin the crab house|2121 Aliceanna/);
+  assert.match(cj.ops_notes ?? "", /no clock|do not invent all day/i);
+  assert.match(cj.ops_notes ?? "", /All You Can Eat|AYCE/);
+  assert.match(cj.ops_notes ?? "", /Already in \/canton/);
+  assert.match(cj.ops_notes ?? "", /Do not fold the crab house into a new view/i);
+
+  const mon = cj.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const tue = cj.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = cj.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const thu = cj.deals.find((d) => d.days.length === 1 && d.days[0] === "thu");
+  const hh = cj.deals.find((d) => d.happy_hour === true);
+  assert.ok(mon && tue && wed && thu && hh, "expected four weekday plates + crab house HH");
+
+  for (const row of [mon, tue, wed, thu]) {
+    assert.equal(row.start, null);
+    assert.equal(row.end, null);
+    assert.equal(row.time_window, undefined, "do not invent all day");
+    assert.equal(row.happy_hour, undefined);
+  }
+
+  assert.deepEqual(
+    mon.items.map((i) => [i.text, i.price]),
+    [["Double crab cake platter with two sides $39.99", "$39.99"]],
+  );
+  assert.deepEqual(mon.food_categories, ["seafood/crab"]);
+  assert.match(mon.proof_quote, /Double Crab Cake Platter/);
+  assert.match(mon.proof_quote, /Served with two sides \$39\.99/);
+  assert.equal(mon.source_url, "https://www.captainjameslanding.com/event/monday-double-crab-cake-platter/");
+
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price]),
+    [["Poboy (shrimp, steak, or fried oysters) with fries $12", "$12"]],
+  );
+  assert.deepEqual(tue.food_categories, ["sandwich/cheesesteak"]);
+  assert.match(tue.proof_quote, /POBOYS/);
+  assert.match(tue.proof_quote, /Shrimp, Steak, or Fried Oysters/);
+  assert.match(tue.proof_quote, /served with fries \$12/);
+  assert.equal(tue.source_url, "https://www.captainjameslanding.com/event/tuesday-poboys/");
+
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price]),
+    [["Lobster roll with homemade chips $25.00", "$25.00"]],
+  );
+  assert.deepEqual(wed.food_categories, ["seafood/crab"]);
+  assert.match(wed.proof_quote, /Lobster Roll/);
+  assert.match(wed.proof_quote, /Served with homemade chips \$25\.00/);
+  assert.equal(wed.source_url, "https://www.captainjameslanding.com/event/wednesday-lobster-roll/");
+
+  assert.deepEqual(
+    thu.items.map((i) => [i.text, i.price]),
+    [["Whole fish with rice $32.00", "$32.00"]],
+  );
+  assert.deepEqual(thu.food_categories, ["seafood/crab"]);
+  assert.match(thu.proof_quote, /Whole Fish/);
+  assert.match(thu.proof_quote, /Served with rice \$32\.00/);
+  assert.equal(thu.source_url, "https://www.captainjameslanding.com/event/thursday-whole-fish/");
+
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "4pm-7pm");
+  assert.equal(hh.prices_published, false);
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.match(hh.proof_quote, /Happy Hour at the Crab House/);
+  assert.match(hh.proof_quote, /4PM -7PM Monday - Friday/);
+  assert.match(hh.proof_quote, /Dine In only/);
+  assert.equal(hh.source_url, "https://www.captainjameslanding.com/event/happy-hour-at-the-crab-house/");
+
+  const allText = cj.deals.flatMap((d) => d.items.map((i) => i.text)).join(" | ");
+  assert.doesNotMatch(allText, /All You Can Eat|\$48/);
+  assert.doesNotMatch(allText, /Natty|Corona/i);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "captain-james-landing"));
+  assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "captain-james-landing"));
+  assert.equal(bySlug["crab-house"], undefined, "do not invent a crab house view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

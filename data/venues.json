@@ -8530,6 +8530,72 @@
       "lat": 39.327747,
       "lon": -76.565704,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+    },
+    {
+      "id": "blue-pit-bbq",
+      "name": "Blue Pit BBQ",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+      "status": "verified",
+      "address": "1601 Union Ave, Baltimore, MD 21211",
+      "phone": "(443) 948-5590",
+      "source_url": "https://bluepitbbq.com/menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-19",
+      "ops_notes": "Builder 2026-08-19 off census + live /menu/ HTTP 200. Pin 1601 Union Ave / (443) 948-5590. Nominatim 39.331849,-76.640820. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. Do not invent IG 3–7. One Happy Hour row only: Every Wednesday – Friday from 3 pm to 6 pm. Skip Flights & Bites in the same accordion (Heaven Hill Private Barrel Flight with 3 Sliders $29, Buffalo Trace Single Barrel Fight with 3 Sliders $27). notes_public omitted — no dine-in / bar-only on the happy-hour block today.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "1 slider $5 (pulled pork, pulled chicken, or chopped brisket with slaw)",
+              "price": "$5"
+            },
+            {
+              "text": "3 sliders $12",
+              "price": "$12"
+            },
+            {
+              "text": "Select draft beers $5",
+              "price": "$5"
+            },
+            {
+              "text": "Non-alcoholic beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Glasses of wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "House Old Fashioned $7 (with Benchmark)",
+              "price": "$7"
+            },
+            {
+              "text": "Signature Mule $7",
+              "price": "$7"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-19",
+          "source_url": "https://bluepitbbq.com/menu/",
+          "proof_quote": "Happy Hour / Every Wednesday – Friday from 3 pm to 6 pm / 1 Slider 5 Pulled Pork, Pulled Chicken or Chopped Brisket with Slaw / 3 Sliders 12 / Select Draft Beers 5 / Non-Alcoholic Beer 5 / Glasses of Wine 5 / House Old Fashioned 7 with Benchmark / Signature Mule 7",
+          "food_categories": [
+            "sliders",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.331849,
+      "lon": -76.640820,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
     }
   ]
 }

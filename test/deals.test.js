@@ -2087,8 +2087,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Phillips Seafood Inner Harbor, Holy Frijoles → 70 -> 75 / 93 -> 97.
   // 2026-08-19: Captain James Landing → 75 -> 76 / 97 -> 98.
   // 2026-08-19: Bertha's Soul Food → 76 -> 77 / 98 -> 99.
-  assert.equal(showable, 77);
-  assert.equal(venues.length, 99);
+  // 2026-08-19: Blue Pit BBQ → 77 -> 78 / 99 -> 100.
+  assert.equal(showable, 78);
+  assert.equal(venues.length, 100);
 });
 
 
@@ -2403,6 +2404,78 @@ test("Bertha's Soul Food joins 2026-08-19 (Belair-Edison, citywide only)", async
     "Belair-Edison must not fold into /canton",
   );
   assert.equal(bySlug["belair-edison"], undefined, "do not invent a Belair-Edison page");
+});
+
+test("Blue Pit BBQ joins 2026-08-19 (Hampden, Wed–Fri 3–6 happy hour)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const pit = byId["blue-pit-bbq"];
+  assert.ok(pit, "blue-pit-bbq missing");
+  assert.deepEqual(venueShapeErrors(pit), []);
+  assert.equal(pit.name, "Blue Pit BBQ");
+  assert.equal(pit.neighborhood, "Hampden");
+  assert.equal(
+    pit.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+  );
+  assert.equal(pit.status, "verified");
+  assert.equal(pit.address, "1601 Union Ave, Baltimore, MD 21211");
+  assert.equal(pit.phone, "(443) 948-5590");
+  assert.equal(pit.source_url, "https://bluepitbbq.com/menu/");
+  assert.equal(pit.source_type, "venue_website");
+  assert.equal(pit.last_verified, "2026-08-19");
+  assert.equal(pit.notes_public, undefined, "no dine-in / bar-only on the happy-hour block");
+  assert.equal(pit.lat, 39.331849);
+  assert.equal(pit.lon, -76.640820);
+  assert.equal(pit.deals.length, 1);
+  assert.match(pit.ops_notes ?? "", /Name=Hampden/);
+  assert.match(pit.ops_notes ?? "", /Already in \/hampden/);
+  assert.match(pit.ops_notes ?? "", /Do not invent IG 3–7|Do not invent IG 3-7/);
+  assert.match(pit.ops_notes ?? "", /Flights & Bites|Heaven Hill|Buffalo Trace/);
+
+  const hh = pit.deals[0];
+  assert.deepEqual(hh.days, ["wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.equal(hh.happy_hour, true);
+  assert.equal(hh.source_url, "https://bluepitbbq.com/menu/");
+  assert.deepEqual(hh.food_categories, ["sliders", "drink"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["1 slider $5 (pulled pork, pulled chicken, or chopped brisket with slaw)", "$5"],
+      ["3 sliders $12", "$12"],
+      ["Select draft beers $5", "$5"],
+      ["Non-alcoholic beer $5", "$5"],
+      ["Glasses of wine $5", "$5"],
+      ["House Old Fashioned $7 (with Benchmark)", "$7"],
+      ["Signature Mule $7", "$7"],
+    ],
+  );
+  assert.match(hh.proof_quote, /Happy Hour/);
+  assert.match(hh.proof_quote, /Every Wednesday/);
+  assert.match(hh.proof_quote, /3 pm to 6 pm/);
+  assert.match(hh.proof_quote, /1 Slider/);
+  assert.match(hh.proof_quote, /Pulled Pork, Pulled Chicken or Chopped Brisket with Slaw/);
+  assert.match(hh.proof_quote, /3 Sliders/);
+  assert.match(hh.proof_quote, /Select Draft Beers/);
+  assert.match(hh.proof_quote, /Non-Alcoholic Beer/);
+  assert.match(hh.proof_quote, /Glasses of Wine/);
+  assert.match(hh.proof_quote, /House Old Fashioned/);
+  assert.match(hh.proof_quote, /with Benchmark/);
+  assert.match(hh.proof_quote, /Signature Mule/);
+
+  const allText = pit.deals.flatMap((d) => d.items.map((i) => i.text)).join(" | ");
+  assert.doesNotMatch(allText, /Heaven Hill|Buffalo Trace|Flight|Fight/i);
+  assert.doesNotMatch(allText, /3\s*[–-]\s*7/);
+  assert.doesNotMatch(hh.time_window, /3\s*[–-]\s*7|3pm-7/);
+
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "blue-pit-bbq"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "blue-pit-bbq"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

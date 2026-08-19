@@ -1,6 +1,6 @@
 {
   "schema_version": 7,
-  "derived_from": "RESEARCH/INNER_HARBOR_DEALS.md + STATION_NORTH_DEALS.md + HAMPDEN_DEALS.md CoS-cleared ship 2026-08-08 (Monarque, Alma Cocina Latina, Wicked Sisters, The Bluebird) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06 + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Of Love & Regret, L.P. Steamers) + Deal Scout 2026-08-19 official-site pass (filled Bark Social Canton; added Hull Street Blues, Rye Street Tavern, Phillips Seafood Inner Harbor, Holy Frijoles) + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Captain James Landing)",
+  "derived_from": "RESEARCH/INNER_HARBOR_DEALS.md + STATION_NORTH_DEALS.md + HAMPDEN_DEALS.md CoS-cleared ship 2026-08-08 (Monarque, Alma Cocina Latina, Wicked Sisters, The Bluebird) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-08 (Coral Wig, Magdalena, Bar Dalí) + RESEARCH/MOUNT_VERNON_DEALS.md CoS-cleared ship 2026-08-07 (Owl Bar, Sugarvale, Unity Bar & Restaurant, Minato Sushi Bar, Brass Tap Baltimore) + RESEARCH/FED_HILL_DEALS.md + LOCUST_POINT_DEALS.md CoS-cleared ship 2026-08-07 (AJ's on Hanover Mon–Fri+Sat, Nick's Fish House Port Covington, Rusty Scupper) + RESEARCH/FELLS_POINT_DEALS.md + INNER_HARBOR_DEALS.md + FED_HILL_DEALS.md deal-first CoS-cleared ship 2026-08-07 (Harbor Tandoor, Todd Conner's, The Choptank, James Joyce, Azumi, Order of the Ace, Watershed) + RESEARCH/HAMPDEN_DEALS.md 2026-08-07 (Papi Hampden) + FELLS ship Horse/Rockwell/Papi; RESEARCH/CANTON_DEALS.md as of 2026-08-05 §8f food_categories + §8g completeness (Deal Scout + Chief Of Staff), sha256 dfb483b68b6dacb803ccd0a46810cf34a8f5a374779c16805caa8caaa5a63871; RESEARCH/TWENTY_FIVE_NEW_PLACES_2026_08_06.md + LOCUST_POINT_DEALS.md as of 2026-08-06 + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Of Love & Regret, L.P. Steamers) + Deal Scout 2026-08-19 official-site pass (filled Bark Social Canton; added Hull Street Blues, Rye Street Tavern, Phillips Seafood Inner Harbor, Holy Frijoles) + RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md (Captain James Landing, Bertha's Soul Food)",
   "venues": [
     {
       "id": "hucks-american-craft",
@@ -8378,6 +8378,157 @@
       ],
       "lat": 39.2840331,
       "lon": -76.5862367,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+    },
+    {
+      "id": "berthas-soul-food",
+      "name": "Bertha's Soul Food",
+      "neighborhood": "Belair-Edison",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+      "status": "verified",
+      "address": "4201 Belair Road, Baltimore, MD 21206",
+      "phone": "(443) 759-9701",
+      "source_url": "https://berthassoulfood.com/specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-19",
+      "ops_notes": "Builder 2026-08-19 off census + live /specials HTTP 200. Pin 4201 Belair Road / (443) 759-9701. Nominatim 39.327747,-76.565704. CityView Neighborhoods MapServer/0 query today on that point: Name=Belair-Edison. Citywide only. Do not invent a Belair-Edison page. Do not fold into /canton. notes_public omitted — no dine-in / bar-only / cash-only on the specials page today. Keep site typo ESPELON. Sat late live page prints JACK S8 HENNESSY (missing $); shipped $8 and quoted S8. Quote SOUL FOOD MENU EXTENDED UNTIL MIDNIGHT on that row; not its own deal. 90-minute mimosa limit stays in brunch deal text. Fri/Sat late end 1440 (midnight).",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "3 tacos for $10 (shrimp, beef, or fish / catfish or salmon)",
+              "price": "$10"
+            },
+            {
+              "text": "$2 off all tequila",
+              "price": "$2 off"
+            },
+            {
+              "text": "$20 flights",
+              "price": "$20"
+            }
+          ],
+          "start": 1080,
+          "end": 1260,
+          "time_window": "6pm-9pm",
+          "verified_date": "2026-08-19",
+          "source_url": "https://berthassoulfood.com/specials",
+          "proof_quote": "Taco Tuesday / 3 Tacos for $10 Shrimp, Beef, or Fish (catfish or salmon) / $2 off of all Tequila & $20 Flights",
+          "food_categories": [
+            "tacos",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$10 subs & fries",
+              "price": "$10"
+            },
+            {
+              "text": "$10 wings & fries",
+              "price": "$10"
+            },
+            {
+              "text": "$8 Long Islands",
+              "price": "$8"
+            },
+            {
+              "text": "$20 flights (lemon drop, margarita, green tea)",
+              "price": "$20"
+            }
+          ],
+          "start": 1260,
+          "end": 1440,
+          "time_window": "9pm-12am",
+          "verified_date": "2026-08-19",
+          "source_url": "https://berthassoulfood.com/specials",
+          "proof_quote": "$10 Subs & Fries / $10 Wings & Fries / $8 Long Islands / $20 Flights (Lemon drop, Margarita, Green Tea)",
+          "food_categories": [
+            "sandwich/cheesesteak",
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$35 bottomless mimosas, 90 min limit",
+              "price": "$35"
+            }
+          ],
+          "start": 720,
+          "end": 900,
+          "time_window": "12pm-3pm",
+          "verified_date": "2026-08-19",
+          "source_url": "https://berthassoulfood.com/specials",
+          "proof_quote": "Brunch Every Saturday $35 Bottomless Mimosas | 90 min Limit",
+          "food_categories": [
+            "brunch",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$6 Tito's / Jameson / Crown / Jack",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Hennessy / ESPELON",
+              "price": "$8"
+            },
+            {
+              "text": "$2 off Casamigos & Dusse",
+              "price": "$2 off"
+            }
+          ],
+          "start": 1260,
+          "end": 1440,
+          "time_window": "9pm-12am",
+          "verified_date": "2026-08-19",
+          "source_url": "https://berthassoulfood.com/specials",
+          "proof_quote": "$6 TITO'S | JAMESON | CROWN | JACK S8 HENNESSY | ESPELON / $2 OFF CASAMIGOS & DUSSE / SOUL FOOD MENU EXTENDED UNTIL MIDNIGHT",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$35 bottomless mimosas, 90 min limit",
+              "price": "$35"
+            }
+          ],
+          "start": 720,
+          "end": 960,
+          "time_window": "12pm-4pm",
+          "verified_date": "2026-08-19",
+          "source_url": "https://berthassoulfood.com/specials",
+          "proof_quote": "Brunch & Karaoke Every Sunday $35 Bottomless Mimosas | 90 min Limit",
+          "food_categories": [
+            "brunch",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.327747,
+      "lon": -76.565704,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
     }
   ]

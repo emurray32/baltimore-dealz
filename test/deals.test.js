@@ -156,7 +156,6 @@ test("the seed data really does contain unverified venues", async () => {
     [
       "admirals-cup",
       "baltimore-tap-house",
-      "bark-social-canton",
       "barracudas-locust-point",
       "bo-brooks",
       "cross-street-market",
@@ -583,7 +582,7 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
 
   assert.deepEqual(
     venues.filter((v) => v.neighborhood === "Brewers Hill").map((v) => v.id).sort(),
-    ["hucks-american-craft", "mobtown-brewing"].sort(),
+    ["bark-social-canton", "hucks-american-craft", "mobtown-brewing"].sort(),
   );
 
   for (const v of venues) {
@@ -1034,8 +1033,8 @@ test("an unpriced row may render only as a real happy hour with a published wind
 
   assert.deepEqual(
     [...new Set(unpricedShowing.map((r) => r.id))].sort(),
-    ["blackwall-hitch", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
-    "only Eric's four times-only venues may show an unpriced row",
+    ["blackwall-hitch", "holy-frijoles", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
+    "only the times-only happy-hour venues may show an unpriced row",
   );
 
   for (const { id, deal } of unpricedShowing) {
@@ -1079,7 +1078,6 @@ test("zero-deal and held-only venues stay in data but off the board and map sect
   // Still in venues.json (helper still finds them) — render change, not delete.
   assert.deepEqual(ids, [
     "baltimore-tap-house",
-    "bark-social-canton",
     "bo-brooks",
     "honeypot",
     "kislings-tavern",
@@ -1366,6 +1364,7 @@ test("expansion load: four priced venues and two new views", async () => {
     "Locust Point",
     "Riverside",
     "Port Covington",
+    "Baltimore Peninsula",
   ]);
 
   const venues = await loadVenues();
@@ -1440,8 +1439,9 @@ test("expansion quiet stubs never invent happy-hour prices", async () => {
     "stuggys",
     // blackwall-hitch left this list 2026-08-11 — it now shows a times-only
     // happy hour. It still invents no prices, which is what this guards.
+    // bark-social-canton left this list 2026-08-19 — official Baltimore HH
+    // page now publishes priced weekday specials.
     "barracudas-locust-point",
-    "bark-social-canton",
   ];
   for (const id of stubIds) {
     const v = venues.find((x) => x.id === id);
@@ -2082,8 +2082,79 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-18: Animal Boy → 67 -> 68 / 90 -> 91.
   // 2026-08-18: Baltimore Seafood → 68 -> 69 / 91 -> 92.
   // 2026-08-18: The Barn & Lodge at The Rotunda → 69 -> 70 / 92 -> 93.
-  assert.equal(showable, 70);
-  assert.equal(venues.length, 93);
+  // 2026-08-19: Bark Social Canton filled + Hull Street Blues, Rye Street Tavern,
+  // Phillips Seafood Inner Harbor, Holy Frijoles → 70 -> 75 / 93 -> 97.
+  assert.equal(showable, 75);
+  assert.equal(venues.length, 97);
+});
+
+
+test("2026-08-19 official-site pass: Bark Social fill + thin-hood adds", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const bark = byId["bark-social-canton"];
+  assert.ok(bark);
+  assert.deepEqual(venueShapeErrors(bark), []);
+  assert.equal(bark.status, "verified");
+  assert.equal(bark.id, "bark-social-canton");
+  assert.equal(bark.neighborhood, "Brewers Hill");
+  assert.equal(bark.source_url, "https://barksocial.com/pages/baltimore-happy-hour");
+  assert.equal(bark.last_verified, "2026-08-19");
+  assert.equal(bark.deals.length, 5);
+  assert.equal(
+    bark.notes_public,
+    "Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass — club $45/month or $385/year; weekday day pass $12, weekend $15. Register the dog before you arrive. No Saturday or Sunday specials on the happy hour menu.",
+  );
+  assert.match(bark.ops_notes ?? "", /barksocial\.com\/pages\/membership/);
+  assert.match(bark.ops_notes ?? "", /barksocial\.com\/pages\/faq/);
+  assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "bark-social-canton"));
+
+  const hull = byId["hull-street-blues"];
+  assert.ok(hull);
+  assert.deepEqual(venueShapeErrors(hull), []);
+  assert.equal(hull.neighborhood, "Locust Point");
+  assert.equal(hull.status, "verified");
+  assert.ok(hull.deals.some((d) => d.days.includes("mon") && d.items.some((i) => i.price === "$13")));
+  const hullTrivia = hull.deals.find((d) => d.items.some((i) => /Trivia/i.test(i.text)));
+  assert.ok(hullTrivia);
+  assert.equal(hullTrivia.start, 1170);
+  assert.equal(hullTrivia.time_window, "7:30pm");
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "hull-street-blues"));
+
+  const rye = byId["rye-street-tavern"];
+  assert.ok(rye);
+  assert.deepEqual(venueShapeErrors(rye), []);
+  assert.equal(rye.neighborhood, "Baltimore Peninsula");
+  assert.ok(rye.deals[0].happy_hour);
+  assert.equal(rye.notes_public, undefined);
+  assert.doesNotMatch(rye.notes_public ?? "", /published for the bar/i);
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "rye-street-tavern"));
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "nicks-fish-house"));
+
+  const phillips = byId["phillips-seafood-inner-harbor"];
+  assert.ok(phillips);
+  assert.deepEqual(venueShapeErrors(phillips), []);
+  assert.equal(phillips.neighborhood, "Inner Harbor");
+  assert.ok(phillips.deals[0].items.some((i) => i.price === "$5"));
+  const phText = phillips.deals[0].items.map((i) => i.text).join(" | ");
+  assert.match(phText, /Hush puppies \$9/i);
+  assert.match(phText, /mussels \$14/i);
+  assert.match(phText, /shrimp \$16/i);
+  assert.match(phText, /pretzel.*\$19/i);
+  assert.match(phText, /quesadilla \$19/i);
+  assert.match(phText, /hot dog \$16/i);
+  assert.match(phillips.notes_public ?? "", /bar and lounge only/i);
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "phillips-seafood-inner-harbor"));
+
+  const holy = byId["holy-frijoles"];
+  assert.ok(holy);
+  assert.deepEqual(venueShapeErrors(holy), []);
+  assert.equal(holy.neighborhood, "Hampden");
+  assert.equal(holy.deals[0].prices_published, false);
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "holy-frijoles"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {
@@ -3109,9 +3180,10 @@ test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
   assert.equal(nicks.deals[0].end, 1080);
   assert.ok(nicks.deals[0].items.some((i) => /Raw Oysters \$1\.50/.test(i.text)));
   assert.ok(nicks.deals[0].items.some((i) => /Draft Beer \$5/.test(i.text)));
-  assert.deepEqual(locust.neighborhoods, ["Locust Point", "Riverside", "Port Covington"]);
+  assert.deepEqual(locust.neighborhoods, ["Locust Point", "Riverside", "Port Covington", "Baltimore Peninsula"]);
   assert.ok(venuesInView(venues, locust).some((v) => v.id === "nicks-fish-house"));
   assert.ok(venuesInView(venues, locust).some((v) => v.id === "copper-shark"));
+  assert.ok(venuesInView(venues, locust).some((v) => v.id === "rye-street-tavern"));
 
   // Rusty Scupper — Mon–Fri 4–6; $ prices; holidays/special-events on card.
   const rusty = byId["rusty-scupper"];

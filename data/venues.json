@@ -4004,15 +4004,15 @@
     {
       "id": "bark-social-canton",
       "name": "Bark Social Canton",
-      "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "neighborhood": "Brewers Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "3822 Boston St, Baltimore, MD 21224",
       "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
       "source_type": "venue_website",
       "last_verified": "2026-08-19",
-      "notes_public": "Happy hour is published on the Baltimore happy hour menu; no Saturday or Sunday specials on that page.",
-      "ops_notes": "Deal Scout 2026-08-19. Official Baltimore HH page HTTP 200: https://barksocial.com/pages/baltimore-happy-hour — Unleashed Mondays / Twofer Tuesdays / Wine Wednesdays / Thirsty Thursdays / Frozen Fridays, each 3–7pm. No Sat/Sun row. Prior 2026-08-06 note (HH only on IG) is superseded. Canton already well covered; this is an empty-venue fill, not a Canton flood.",
+      "notes_public": "Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass — club $45/month or $385/year; weekday day pass $12, weekend $15. Register the dog before you arrive. No Saturday or Sunday specials on the happy hour menu.",
+      "ops_notes": "Deal Scout 2026-08-19. Official Baltimore HH page HTTP 200: https://barksocial.com/pages/baltimore-happy-hour — Unleashed Mondays / Twofer Tuesdays / Wine Wednesdays / Thirsty Thursdays / Frozen Fridays, each 3–7pm. No Sat/Sun row. Prior 2026-08-06 note (HH only on IG) is superseded. Canton already well covered; this is an empty-venue fill, not a Canton flood. Deal Scout 2026-08-19 review fix: stored point 39.278045,-76.562874 → City NSA MapServer/0 Name=Brewers Hill (id kept bark-social-canton; canton view already includes Brewers Hill). notes_public quotes FAQ + membership, not a generic paid-club warning. FAQ https://barksocial.com/pages/faq: “No! Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass to enter.” Membership https://barksocial.com/pages/membership: “Join the Bark Social Club at $385/year or $45/month!” Pricing table First Dog Weekday Pass $12 / Weekend Pass $15. “Be sure to register before you come to the park for easy check-in!” Day passes in person only. HH menu itself does not say a pass is required.",
       "deals": [
         {
           "days": [
@@ -7873,7 +7873,7 @@
       "source_type": "venue_website",
       "last_verified": "2026-08-19",
       "notes_public": "Weekly food specials are published on the homepage. No happy-hour drink prices on the site.",
-      "ops_notes": "Deal Scout 2026-08-19. Official homepage WEEKLY SPECIALS HTTP 200: Mon Smash Burger + Fries $13 all day; Tue Crab Cake Day (single cake / salad / sandwich + fries) $20 all day; Wed Ramen Bowl Night $22 + Trivia Night hosted by BrainTease starts at 7:30; Thu Surf + Turf Night NY Strip + Fried Shrimp $30 / NY Strip + Crab Cake $35. No Fri/Sat/Sun row. No drink HH $. Phone + hours from /reservations. Nominatim 39.2722844,-76.5921086 neighbourhood=Locust Point. NSA MapServer unreachable this session; Nominatim label matches locust-point view NSA.",
+      "ops_notes": "Deal Scout 2026-08-19. Official homepage WEEKLY SPECIALS HTTP 200: Mon Smash Burger + Fries $13 all day; Tue Crab Cake Day (single cake / salad / sandwich + fries) $20 all day; Wed Ramen Bowl Night $22 + Trivia Night hosted by BrainTease starts at 7:30; Thu Surf + Turf Night NY Strip + Fried Shrimp $30 / NY Strip + Crab Cake $35. No Fri/Sat/Sun row. No drink HH $. Phone + hours from /reservations. Nominatim 39.2722844,-76.5921086 neighbourhood=Locust Point. NSA MapServer unreachable this session; Nominatim label matches locust-point view NSA. Deal Scout 2026-08-19 review fix: trivia `start` was 1110 (6:30pm); homepage says “starts at 7:30” so `start` is 1170. Source: https://www.hullstreetblues.com/",
       "deals": [
         {
           "days": [
@@ -7944,7 +7944,7 @@
               "text": "Trivia Night hosted by BrainTease"
             }
           ],
-          "start": 1110,
+          "start": 1170,
           "end": null,
           "time_window": "7:30pm",
           "verified_date": "2026-08-19",
@@ -7987,7 +7987,7 @@
     {
       "id": "rye-street-tavern",
       "name": "Rye Street Tavern",
-      "neighborhood": "Port Covington",
+      "neighborhood": "Baltimore Peninsula",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "225 E Cromwell Street, Baltimore, MD 21230",
@@ -7995,8 +7995,7 @@
       "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
       "source_type": "venue_website",
       "last_verified": "2026-08-19",
-      "notes_public": "Happy hour and oyster happy hour are published for the bar. Raw platters on the same page are full-price platters, not listed as deals.",
-      "ops_notes": "Deal Scout 2026-08-19. Official HH page HTTP 200. Drink HH Mon–Fri 3–6: $2 off draught, $3 Natty Boh, $8 white & red, $8 daiquiri and rye mules, $10 old fashioned, $8 oyster shooter. Oyster HH: half off oysters Mon–Thu 3–6 & 9–close, Fri 3–6 & 10–close. Raw platters $55–$157 not shipped (menu, not a deal). Location page: 225 E Cromwell, 443-662-8000. Nominatim 39.2624069,-76.6128868 neighbourhood=Port Covington. NSA MapServer unreachable; label matches locust-point view.",
+      "ops_notes": "Deal Scout 2026-08-19. Official HH page HTTP 200. Drink HH Mon–Fri 3–6: $2 off draught, $3 Natty Boh, $8 white & red, $8 daiquiri and rye mules, $10 old fashioned, $8 oyster shooter. Oyster HH: half off oysters Mon–Thu 3–6 & 9–close, Fri 3–6 & 10–close. Raw platters $55–$157 not shipped (menu, not a deal). Location page: 225 E Cromwell, 443-662-8000. Nominatim 39.2624069,-76.6128868 neighbourhood=Port Covington. Deal Scout 2026-08-19 review fix: City NSA MapServer/0 on stored 39.2624069,-76.6128868 answered Name=Baltimore Peninsula (earlier “MapServer unreachable / Port Covington” note was wrong). locust-point view now lists Baltimore Peninsula and keeps Port Covington so Nick's stays on that board. Dropped invented notes_public “published for the bar” — live HH page https://www.ryestreettavern.com/menu/happy-hour/ does not say bar-only.",
       "deals": [
         {
           "days": [
@@ -8151,7 +8150,7 @@
       "source_type": "venue_website",
       "last_verified": "2026-08-19",
       "notes_public": "Happy hour is bar and lounge only, Monday–Friday 3–6pm.",
-      "ops_notes": "Deal Scout 2026-08-19. Official promotion page HTTP 200: $5 beer, wine, sangria & specialty drinks; $8 Orange Crush; $6 Classic Bellini; Hush Puppies $9. Same page lists $14–$19 HH food (mussels, shrimp, crab pretzel, quesadilla, crab hot dog) — not shipped (menu, not a deal). Quote: 'Available from 3pm – 6pm Monday – Friday in the bar and lounge only.' Homepage/location page also: '$5 Drinks Happy Hour Weekdays 3-6 pm'. Nominatim 39.2860594,-76.6071214 neighbourhood=Inner Harbor (Power Plant). NSA MapServer unreachable; label matches inner-harbor view.",
+      "ops_notes": "Deal Scout 2026-08-19. Official promotion page HTTP 200: $5 beer, wine, sangria & specialty drinks; $8 Orange Crush; $6 Classic Bellini; Hush Puppies $9. Quote: 'Available from 3pm – 6pm Monday – Friday in the bar and lounge only.' Homepage/location page also: '$5 Drinks Happy Hour Weekdays 3-6 pm'. Nominatim 39.2860594,-76.6071214 neighbourhood=Inner Harbor (Power Plant). NSA MapServer unreachable; label matches inner-harbor view. Deal Scout 2026-08-19 review fix: same-page HAPPY HOUR FOOD FAVORITES now shipped with hush puppies — steamed mussels $14, steamed shrimp $16, crabby pretzel sticks $19, crab & shrimp quesadilla $19, crab hot dog $16. Source: https://phillipsseafood.com/promotion/happy-hour/",
       "deals": [
         {
           "days": [
@@ -8177,6 +8176,26 @@
             {
               "text": "Hush puppies $9",
               "price": "$9"
+            },
+            {
+              "text": "Steamed mussels $14",
+              "price": "$14"
+            },
+            {
+              "text": "Steamed shrimp $16",
+              "price": "$16"
+            },
+            {
+              "text": "Crabby pretzel sticks $19",
+              "price": "$19"
+            },
+            {
+              "text": "Crab & shrimp quesadilla $19",
+              "price": "$19"
+            },
+            {
+              "text": "Crab hot dog $16",
+              "price": "$16"
             }
           ],
           "start": 900,
@@ -8185,10 +8204,11 @@
           "happy_hour": true,
           "verified_date": "2026-08-19",
           "source_url": "https://phillipsseafood.com/promotion/happy-hour/",
-          "proof_quote": "$5 Drinks Happy Hour / Join us for $5 beer, wine, sangria & specialty drinks in the bar & lounge! Weekdays 3-6 pm / Available from 3pm – 6pm Monday – Friday in the bar and lounge only.",
+          "proof_quote": "$5 Drinks Happy Hour / Join us for $5 beer, wine, sangria & specialty drinks in the bar & lounge! Weekdays 3-6 pm / Available from 3pm – 6pm Monday – Friday in the bar and lounge only. / HAPPY HOUR FOOD FAVORITES / Hush Puppies $9 / Steamed Mussels $14 / Steamed Shrimp $16 / Crabby Pretzel Sticks $19 / Crab & Shrimp Quesadilla $19 / Crab Hot Dog $16",
           "food_categories": [
             "drink",
-            "small-plate/apps"
+            "small-plate/apps",
+            "seafood/crab"
           ]
         }
       ],

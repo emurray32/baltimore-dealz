@@ -582,7 +582,7 @@ test("neighborhood labels come from the city boundary layer, with provenance", a
 
   assert.deepEqual(
     venues.filter((v) => v.neighborhood === "Brewers Hill").map((v) => v.id).sort(),
-    ["hucks-american-craft", "mobtown-brewing"].sort(),
+    ["bark-social-canton", "hucks-american-craft", "mobtown-brewing"].sort(),
   );
 
   for (const v of venues) {
@@ -1364,6 +1364,7 @@ test("expansion load: four priced venues and two new views", async () => {
     "Locust Point",
     "Riverside",
     "Port Covington",
+    "Baltimore Peninsula",
   ]);
 
   const venues = await loadVenues();
@@ -2098,9 +2099,17 @@ test("2026-08-19 official-site pass: Bark Social fill + thin-hood adds", async (
   assert.ok(bark);
   assert.deepEqual(venueShapeErrors(bark), []);
   assert.equal(bark.status, "verified");
+  assert.equal(bark.id, "bark-social-canton");
+  assert.equal(bark.neighborhood, "Brewers Hill");
   assert.equal(bark.source_url, "https://barksocial.com/pages/baltimore-happy-hour");
   assert.equal(bark.last_verified, "2026-08-19");
   assert.equal(bark.deals.length, 5);
+  assert.equal(
+    bark.notes_public,
+    "Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass — club $45/month or $385/year; weekday day pass $12, weekend $15. Register the dog before you arrive. No Saturday or Sunday specials on the happy hour menu.",
+  );
+  assert.match(bark.ops_notes ?? "", /barksocial\.com\/pages\/membership/);
+  assert.match(bark.ops_notes ?? "", /barksocial\.com\/pages\/faq/);
   assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "bark-social-canton"));
 
   const hull = byId["hull-street-blues"];
@@ -2109,20 +2118,35 @@ test("2026-08-19 official-site pass: Bark Social fill + thin-hood adds", async (
   assert.equal(hull.neighborhood, "Locust Point");
   assert.equal(hull.status, "verified");
   assert.ok(hull.deals.some((d) => d.days.includes("mon") && d.items.some((i) => i.price === "$13")));
+  const hullTrivia = hull.deals.find((d) => d.items.some((i) => /Trivia/i.test(i.text)));
+  assert.ok(hullTrivia);
+  assert.equal(hullTrivia.start, 1170);
+  assert.equal(hullTrivia.time_window, "7:30pm");
   assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "hull-street-blues"));
 
   const rye = byId["rye-street-tavern"];
   assert.ok(rye);
   assert.deepEqual(venueShapeErrors(rye), []);
-  assert.equal(rye.neighborhood, "Port Covington");
+  assert.equal(rye.neighborhood, "Baltimore Peninsula");
   assert.ok(rye.deals[0].happy_hour);
+  assert.equal(rye.notes_public, undefined);
+  assert.doesNotMatch(rye.notes_public ?? "", /published for the bar/i);
   assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "rye-street-tavern"));
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "nicks-fish-house"));
 
   const phillips = byId["phillips-seafood-inner-harbor"];
   assert.ok(phillips);
   assert.deepEqual(venueShapeErrors(phillips), []);
   assert.equal(phillips.neighborhood, "Inner Harbor");
   assert.ok(phillips.deals[0].items.some((i) => i.price === "$5"));
+  const phText = phillips.deals[0].items.map((i) => i.text).join(" | ");
+  assert.match(phText, /Hush puppies \$9/i);
+  assert.match(phText, /mussels \$14/i);
+  assert.match(phText, /shrimp \$16/i);
+  assert.match(phText, /pretzel.*\$19/i);
+  assert.match(phText, /quesadilla \$19/i);
+  assert.match(phText, /hot dog \$16/i);
+  assert.match(phillips.notes_public ?? "", /bar and lounge only/i);
   assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "phillips-seafood-inner-harbor"));
 
   const holy = byId["holy-frijoles"];
@@ -3156,9 +3180,10 @@ test("AJ's, Nick's, Rusty Scupper CoS ship 2026-08-07", async () => {
   assert.equal(nicks.deals[0].end, 1080);
   assert.ok(nicks.deals[0].items.some((i) => /Raw Oysters \$1\.50/.test(i.text)));
   assert.ok(nicks.deals[0].items.some((i) => /Draft Beer \$5/.test(i.text)));
-  assert.deepEqual(locust.neighborhoods, ["Locust Point", "Riverside", "Port Covington"]);
+  assert.deepEqual(locust.neighborhoods, ["Locust Point", "Riverside", "Port Covington", "Baltimore Peninsula"]);
   assert.ok(venuesInView(venues, locust).some((v) => v.id === "nicks-fish-house"));
   assert.ok(venuesInView(venues, locust).some((v) => v.id === "copper-shark"));
+  assert.ok(venuesInView(venues, locust).some((v) => v.id === "rye-street-tavern"));
 
   // Rusty Scupper — Mon–Fri 4–6; $ prices; holidays/special-events on card.
   const rusty = byId["rusty-scupper"];

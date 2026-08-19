@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -696,8 +696,9 @@ test("start and end are minutes past midnight or null, never a string", async ()
     for (const deal of v.deals) {
       for (const field of ["start", "end"]) {
         const value = deal[field];
+        const max = field === "end" ? 1440 : 1439;
         assert.ok(
-          value === null || (Number.isInteger(value) && value >= 0 && value < 1440),
+          value === null || (Number.isInteger(value) && value >= 0 && value <= max),
           `${v.id}: ${field} = ${JSON.stringify(value)}`,
         );
       }
@@ -2085,8 +2086,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-19: Bark Social Canton filled + Hull Street Blues, Rye Street Tavern,
   // Phillips Seafood Inner Harbor, Holy Frijoles → 70 -> 75 / 93 -> 97.
   // 2026-08-19: Captain James Landing → 75 -> 76 / 97 -> 98.
-  assert.equal(showable, 76);
-  assert.equal(venues.length, 98);
+  // 2026-08-19: Bertha's Soul Food → 76 -> 77 / 98 -> 99.
+  assert.equal(showable, 77);
+  assert.equal(venues.length, 99);
 });
 
 
@@ -2266,6 +2268,141 @@ test("Captain James Landing joins 2026-08-19 (Canton weekday plates + crab house
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "captain-james-landing"));
   assert.ok(venuesInView(venues, bySlug.canton).some((v) => v.id === "captain-james-landing"));
   assert.equal(bySlug["crab-house"], undefined, "do not invent a crab house view");
+});
+
+test("Bertha's Soul Food joins 2026-08-19 (Belair-Edison, citywide only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const bertha = byId["berthas-soul-food"];
+  assert.ok(bertha, "berthas-soul-food missing");
+  assert.deepEqual(venueShapeErrors(bertha), []);
+  assert.equal(bertha.name, "Bertha's Soul Food");
+  assert.equal(bertha.neighborhood, "Belair-Edison");
+  assert.equal(
+    bertha.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+  );
+  assert.equal(bertha.status, "verified");
+  assert.equal(bertha.address, "4201 Belair Road, Baltimore, MD 21206");
+  assert.equal(bertha.phone, "(443) 759-9701");
+  assert.equal(bertha.source_url, "https://berthassoulfood.com/specials");
+  assert.equal(bertha.source_type, "venue_website");
+  assert.equal(bertha.last_verified, "2026-08-19");
+  assert.equal(bertha.notes_public, undefined, "no dine-in / bar-only / cash-only on the specials page");
+  assert.equal(bertha.lat, 39.327747);
+  assert.equal(bertha.lon, -76.565704);
+  assert.equal(bertha.deals.length, 5);
+  assert.match(bertha.ops_notes ?? "", /Name=Belair-Edison/);
+  assert.match(bertha.ops_notes ?? "", /Do not invent a Belair-Edison page/);
+  assert.match(bertha.ops_notes ?? "", /Do not fold into \/canton/);
+  assert.match(bertha.ops_notes ?? "", /JACK S8 HENNESSY/);
+  assert.match(bertha.ops_notes ?? "", /ESPELON/);
+  assert.match(bertha.ops_notes ?? "", /SOUL FOOD MENU EXTENDED UNTIL MIDNIGHT/);
+
+  const tue = bertha.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const fri = bertha.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  const satBrunch = bertha.deals.find(
+    (d) => d.days.length === 1 && d.days[0] === "sat" && d.start === 720,
+  );
+  const satLate = bertha.deals.find(
+    (d) => d.days.length === 1 && d.days[0] === "sat" && d.start === 1260,
+  );
+  const sunBrunch = bertha.deals.find((d) => d.days.length === 1 && d.days[0] === "sun");
+  assert.ok(tue && fri && satBrunch && satLate && sunBrunch, "expected five windows");
+
+  assert.equal(tue.start, 1080);
+  assert.equal(tue.end, 1260);
+  assert.equal(tue.time_window, "6pm-9pm");
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["3 tacos for $10 (shrimp, beef, or fish / catfish or salmon)", "$10"],
+      ["$2 off all tequila", "$2 off"],
+      ["$20 flights", "$20"],
+    ],
+  );
+  assert.deepEqual(tue.food_categories, ["tacos", "drink"]);
+  assert.match(tue.proof_quote, /Taco Tuesday/);
+  assert.match(tue.proof_quote, /3 Tacos for \$10/);
+  assert.match(tue.proof_quote, /Shrimp, Beef, or Fish \(catfish or salmon\)/);
+  assert.match(tue.proof_quote, /\$2 off of all Tequila/);
+  assert.match(tue.proof_quote, /\$20 Flights/);
+
+  assert.equal(fri.start, 1260);
+  assert.equal(fri.end, 1440);
+  assert.equal(fri.time_window, "9pm-12am");
+  assert.deepEqual(
+    fri.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$10 subs & fries", "$10"],
+      ["$10 wings & fries", "$10"],
+      ["$8 Long Islands", "$8"],
+      ["$20 flights (lemon drop, margarita, green tea)", "$20"],
+    ],
+  );
+  assert.deepEqual(fri.food_categories, ["sandwich/cheesesteak", "wings", "drink"]);
+  assert.match(fri.proof_quote, /\$10 Subs & Fries/);
+  assert.match(fri.proof_quote, /\$10 Wings & Fries/);
+  assert.match(fri.proof_quote, /\$8 Long Islands/);
+  assert.match(fri.proof_quote, /\$20 Flights \(Lemon drop, Margarita, Green Tea\)/);
+
+  assert.equal(satBrunch.start, 720);
+  assert.equal(satBrunch.end, 900);
+  assert.equal(satBrunch.time_window, "12pm-3pm");
+  assert.deepEqual(satBrunch.food_categories, ["brunch", "drink"]);
+  assert.deepEqual(
+    satBrunch.items.map((i) => [i.text, i.price ?? null]),
+    [["$35 bottomless mimosas, 90 min limit", "$35"]],
+  );
+  assert.match(satBrunch.proof_quote, /Brunch Every Saturday/);
+  assert.match(satBrunch.proof_quote, /\$35 Bottomless Mimosas/);
+  assert.match(satBrunch.proof_quote, /90 min Limit/);
+
+  assert.equal(satLate.start, 1260);
+  assert.equal(satLate.end, 1440);
+  assert.equal(satLate.time_window, "9pm-12am");
+  assert.deepEqual(
+    satLate.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$6 Tito's / Jameson / Crown / Jack", "$6"],
+      ["$8 Hennessy / ESPELON", "$8"],
+      ["$2 off Casamigos & Dusse", "$2 off"],
+    ],
+  );
+  assert.deepEqual(satLate.food_categories, ["drink"]);
+  assert.match(satLate.proof_quote, /JACK S8 HENNESSY/);
+  assert.match(satLate.proof_quote, /ESPELON/);
+  assert.match(satLate.proof_quote, /SOUL FOOD MENU EXTENDED UNTIL MIDNIGHT/);
+  assert.doesNotMatch(
+    satLate.items.map((i) => i.text).join(" | "),
+    /SOUL FOOD MENU EXTENDED/,
+    "midnight menu line is proof only, not its own deal",
+  );
+
+  assert.equal(sunBrunch.start, 720);
+  assert.equal(sunBrunch.end, 960);
+  assert.equal(sunBrunch.time_window, "12pm-4pm");
+  assert.deepEqual(sunBrunch.food_categories, ["brunch", "drink"]);
+  assert.deepEqual(
+    sunBrunch.items.map((i) => [i.text, i.price ?? null]),
+    [["$35 bottomless mimosas, 90 min limit", "$35"]],
+  );
+  assert.match(sunBrunch.proof_quote, /\$35 Bottomless Mimosas/);
+  assert.match(sunBrunch.proof_quote, /90 min Limit/);
+
+  const allText = bertha.deals.flatMap((d) => d.items.map((i) => i.text)).join(" | ");
+  assert.match(allText, /ESPELON/);
+  assert.match(allText, /90 min limit/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "berthas-soul-food"));
+  assert.ok(
+    !venuesInView(venues, bySlug.canton).some((v) => v.id === "berthas-soul-food"),
+    "Belair-Edison must not fold into /canton",
+  );
+  assert.equal(bySlug["belair-edison"], undefined, "do not invent a Belair-Edison page");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

@@ -560,7 +560,9 @@ export function venueShapeErrors(venue) {
     }
     for (const field of ["start", "end"]) {
       const v = deal[field];
-      if (v !== null && !(Number.isInteger(v) && v >= 0 && v < 1440)) {
+      // end may be 1440 (midnight). minutesNow is 0–1439, so that window stays on through 11:59pm.
+      const max = field === "end" ? 1440 : 1439;
+      if (v !== null && !(Number.isInteger(v) && v >= 0 && v <= max)) {
         errors.push(`${label}: ${field} must be null or minutes past midnight`);
       }
     }

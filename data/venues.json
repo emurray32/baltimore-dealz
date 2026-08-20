@@ -9165,7 +9165,446 @@
       "lat": 39.2644395,
       "lon": -76.654678,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "cookhouse",
+      "name": "CookHouse",
+      "neighborhood": "Bolton Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1501 Bolton St, Baltimore, MD 21217",
+      "phone": "(410) 225-9964",
+      "source_url": "https://cookhousecafebar.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live cookhousecafebar.com HTTP 200 Last-Modified Thu, 20 Aug 2026 09:20:51 GMT; /menu/ HTTP 200 Last-Modified Thu, 20 Aug 2026 09:36:17 GMT. Pin 1501 Bolton St / (410) 225-9964 (site tel:410-225-9964). Census 39.3071688,-76.6258809. CityView Neighborhoods MapServer/0 query today on that point: Name=Bolton Hill. Citywide only. Do not invent a bolton-hill view. Quote both 50% of (homepage: $34 Steak Frites & 50% of all Wine Bottles) and 50% off (menu: 50% off All Wine Bottles & $34 Steak Frites). Keep menu wording 50% off All Wine Bottles on the item text. Saturday After Hour Cocktails / Saturdays 10:00pm – 1:00am — no $. Site says check Instagram or call to see if the bar is open. Do not load Saturday after-hours. Open WED – SAT 6pm – 10pm / menu WEDNESDAY – SATURDAY 6:00pm – 10:00pm. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$34 Steak Frites",
+              "price": "$34"
+            },
+            {
+              "text": "50% off All Wine Bottles",
+              "price": "50% off"
+            }
+          ],
+          "start": 1080,
+          "end": 1320,
+          "time_window": "6pm-10pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://cookhousecafebar.com/",
+          "proof_quote": "Wednesdays: Steak & Wine Night | 50% off All Wine Bottles & $34 Steak Frites",
+          "food_categories": [
+            "steak",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3071688,
+      "lon": -76.6258809,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "cosima",
+      "name": "Cosima",
+      "neighborhood": "Jones Falls Area",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "3000 Falls Road, Mill No. 1, Baltimore, MD 21211",
+      "phone": "(443) 708-7352",
+      "source_url": "https://www.cosimamill1.com/s/NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf 302 → Squarespace PDF HTTP 200. Title NEW VERSION Happy Hour Menu (Book Format) 4.28.26.pdf. CreationDate 2026-04-29. 2 pages. pdftotext works. Homepage nav still links it today. Pin 3000 Falls Road, Mill No. 1 / (443) 708-7352. Census 39.3230125,-76.6305904. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Nominatim display says Hampden; city Name wins. Citywide only. Do not invent a jones-falls-area view. Do not fold into /hampden. Homepage footnote (record, do not pick over the PDF): *From 4-5 Tuesday-Saturday only our Happy Hour menu will be available. Hours line: Closed Monday, Tuesday-Thursday, 4-9*, Friday & Saturday, 4-10, Sunday 5-9. Do not invent a 4–5-only row. Stay off Summer Restaurant Week 2026 PDF and stale 2020 HH PDF Happy-Hour-Menu-Online-Format-121020.pdf. Keep PDF wording including 9*. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Negronis & Spritzes $5",
+              "price": "$5"
+            },
+            {
+              "text": "Arancina $9*",
+              "price": "$9"
+            },
+            {
+              "text": "Venticello $8",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $7",
+              "price": "$7"
+            },
+            {
+              "text": "Beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Warm baguette $6",
+              "price": "$6"
+            },
+            {
+              "text": "Garlic bread $10",
+              "price": "$10"
+            },
+            {
+              "text": "Formaggio $14",
+              "price": "$14"
+            },
+            {
+              "text": "Olive fritte $8",
+              "price": "$8"
+            },
+            {
+              "text": "Ripieni di tonno $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fritto misto $18",
+              "price": "$18"
+            },
+            {
+              "text": "Pinsa romana $12",
+              "price": "$12"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.cosimamill1.com/s/NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf",
+          "proof_quote": "HAPPY HOUR Tues-Sat 4pm-7pm NEGRONIS & SPRITZES $5 COSIMA CLASSICS ARANCINA 9* VENTICELLO 8 WINE $7 BEER $5 WARM BAGUETTE $6 GARLIC BREAD $10 FORMAGGIO 14 OLIVE FRITTE 8 RIPIENI DI TONNO 10 FRITTO MISTO 18 PINSA ROMANA 12",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "pizza"
+          ]
+        }
+      ],
+      "lat": 39.3230125,
+      "lon": -76.6305904,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "cypriana",
+      "name": "Cypriana",
+      "neighborhood": "Tuscany-Canterbury",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "105 West 39th Street, Baltimore, MD 21210",
+      "phone": "(410)-837-PITA",
+      "source_url": "https://cypriana.com/baltimore-hampden-cypriana-restaurant-happy-hours-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live specials HTTP 200 (homepage also HTTP 200). Pin 105 West 39th Street / (410)-837-PITA. License street 116 W University Pkwy around the corner — both points query Tuscany-Canterbury today. Do not pin the license street. Census site 39.335977,-76.621456 and license 39.3360306,-76.6224505. CityView Neighborhoods MapServer/0 query today: Name=Tuscany-Canterbury on both. Tuscany-Canterbury already citywide-only (Ambassador). Do not add a view. Do not fold into /hampden (specials URL slug says hampden; city Name is Tuscany-Canterbury). Homepage: Happy Hour 5pm-6pm Every Weeknight!!! Monday: Closed *Weekday Happy Hour 5-6pm*. This week cards: Thu Aug 20 HH 5–6 and 1/2 priced Martinis 5–9; Fri Aug 21 HH 5–6 only; Sun Aug 23 Street-food Sunday!!! no $ plus Burgers at the Bar $20 5–9; Tue Aug 25 HH 5–6; Wed Aug 26 HH 5–6 and All WINE BOTTLES $50 and up, half price!!! 5–9. No Saturday card this week. Keep site wording 1/2 Price MEZZES. Do not invent Monday. Stay off Street-food Sunday!!! — no $. Homepage CLOSED TONIGHT for Repairs July 5, 2026 SUNDAY is a dated past closure — do not hold the weekly rows. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "1/2 Price MEZZES",
+              "price": "1/2 price"
+            },
+            {
+              "text": "$2 OFF all cocktails and wine",
+              "price": "$2 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1080,
+          "time_window": "5pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://cypriana.com/baltimore-hampden-cypriana-restaurant-happy-hours-specials",
+          "proof_quote": "Happy hour at the bar! 1/2 Price MEZZES $2 OFF all cocktails and wine 05:00 PM - 06:00 PM",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "All WINE BOTTLES $50 and up, half price!!! (some exclusions apply)",
+              "price": "50% off"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "5pm-9pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://cypriana.com/baltimore-hampden-cypriana-restaurant-happy-hours-specials",
+          "proof_quote": "All WINE BOTTLES $50 and up, half price!!! (some exclusions apply) 05:00 PM - 09:00 PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "1/2 priced Martinis at the bar, all night!",
+              "price": "1/2 price"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "5pm-9pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://cypriana.com/baltimore-hampden-cypriana-restaurant-happy-hours-specials",
+          "proof_quote": "1/2 priced Martinis at the bar, all night! 05:00 PM - 09:00 PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Burgers at the Bar",
+              "price": "$20"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "5pm-9pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://cypriana.com/baltimore-hampden-cypriana-restaurant-happy-hours-specials",
+          "proof_quote": "Burgers at the Bar - Sunday only! Enjoy a homemade bun and flavorful toppings, cooked to perfection! Make it vegetarian or vegan with a delicious grilled eggplant, salmon, or portobello mushroom option. $20 05:00 PM - 09:00 PM",
+          "food_categories": [
+            "burger"
+          ]
+        }
+      ],
+      "lat": 39.335977,
+      "lon": -76.621456,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "don-tigre",
+      "name": "Don Tigre Mexican Grill",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "900 E Fort Ave Suite 105, Baltimore, MD 21230",
+      "phone": "(301) 701-5464",
+      "source_url": "https://www.dontigremexicancuisine.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live dontigremexicancuisine.com HTTP 200. Pin 900 E Fort Ave Suite 105 / (301) 701-5464 (Slice header on the official order page today). JSON-LD on the same page is +14434384450 — record that mismatch here; do not swap the public phone. Census 39.271781,-76.6008455. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Site says Locust Point; city Name wins. Already in /locust-point. Do not invent a Riverside-only view. Availabilities in the page JSON: Taco Tuesday Special $11.00 3 tacos arbacoa, or captus Tuesday 12:00–21:30; Wednesday - Sunday Specials 18% off on the whole menu Sun+Wed–Sat 17:00–19:00. Keep site typo arbacoa / captus. Stay off 10% OFF Online only — not a weekly door deal. Stay off Buy 2 stuffed crispy rolled tacos, third half price — no day. dontigremexican.com mixed Locust Point / Owings Mills. Do not invent Owings Mills HH for this door. Hours JSON-LD: Tue–Sun 12:00–21:30 (no Monday). notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Taco Tuesday Special",
+              "price": "$11"
+            }
+          ],
+          "start": 720,
+          "end": 1290,
+          "time_window": "12pm-9:30pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.dontigremexicancuisine.com/",
+          "proof_quote": "Taco Tuesday Special Get 3 freshly made tortilla tacos. Choice of tortillas: Flour, corn, or hard shell. Al pastor, chicken, steak, veggies, ground beef, carnitas, chorizo, arbacoa, or captus. $11.00 Tuesday 12:00–21:30",
+          "food_categories": [
+            "tacos"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "18% off on the whole menu",
+              "price": "18% off"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.dontigremexicancuisine.com/",
+          "proof_quote": "Wednesday - Sunday Specials 17:00 - 19:00 18% off on the whole menu"
+        }
+      ],
+      "lat": 39.271781,
+      "lon": -76.6008455,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "dutch-courage",
+      "name": "Dutch Courage",
+      "neighborhood": "Old Goucher",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "2229 N. Charles Street, Baltimore, MD 21218",
+      "phone": "(667) 309-7167",
+      "source_url": "https://dutchcouragebar.com/wp-content/uploads/2026/04/HH2Menu.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live HH2Menu.pdf HTTP 200 Last-Modified Wed, 22 Apr 2026 00:55:53 GMT. CreationDate 2026-04-21. 1 page. pdftotext empty — PDF is image-only; still the live /menus/ HH file (Happy Hour button links HH2Menu.pdf today). Pin 2229 N. Charles Street / (667) 309-7167. Census 39.3151574,-76.6164641. CityView Neighborhoods MapServer/0 query today on that point: Name=Old Goucher. Citywide only. Do not invent an old-goucher view. Do not fold into /station-north or /mount-vernon. Homepage HTTP 200: Sun–Thu 4pm–11pm · Fri–Sat 4pm–1am · HAPPY HOUR Monday – Friday 4 – 6pm — no $ on that footer. The PDF is the priced source. Visual quotes: Happy Hour / M-F 4-6pm / COCKTAILS / Daily Featured Cocktail / House G&T / both cocktails $8 / BEER & WINE / $2 off all our beer and wine / FOOD / Snacks / $2 off our snacks: marinated olives, cheddar snacks, house pickles, spiced corn nuts / Kale Salad (gf, v+) / $14 / MD Crab Dip (contains shellfish) / $20 / Patatas Bravas (v) / $13. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Daily Featured Cocktail or House G&T $8",
+              "price": "$8"
+            },
+            {
+              "text": "$2 off all our beer and wine",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 off snacks",
+              "price": "$2 off"
+            },
+            {
+              "text": "Kale Salad $14",
+              "price": "$14"
+            },
+            {
+              "text": "MD Crab Dip $20",
+              "price": "$20"
+            },
+            {
+              "text": "Patatas Bravas $13",
+              "price": "$13"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://dutchcouragebar.com/wp-content/uploads/2026/04/HH2Menu.pdf",
+          "proof_quote": "Happy Hour M-F 4-6pm COCKTAILS Daily Featured Cocktail House G&T both cocktails $8 BEER & WINE $2 off all our beer and wine FOOD Snacks $2 off our snacks: marinated olives, cheddar snacks, house pickles, spiced corn nuts Kale Salad (gf, v+) $14 MD Crab Dip (contains shellfish) $20 Patatas Bravas (v) $13",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.3151574,
+      "lon": -76.6164641,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "dylans-oyster-cellar",
+      "name": "Dylan's Oyster Cellar",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "3601 Chestnut Avenue, Baltimore, MD 21211",
+      "phone": "(443) 759-6595",
+      "source_url": "https://dylansoyster.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live dylansoyster.com HTTP 200. Pin 3601 Chestnut Avenue / (443) 759-6595. Census 39.3313518,-76.6291481. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. Homepage still says Closed for Summer Break August 9th-17th. Re-opening August 18th! — that break ended Aug 18. Do not hold the weekly rows. Regular sample-menu $ (Last Updated 7/30/2026) are not weekly specials. Hours: Tuesday through Saturday 5pm-10pm / Closed Sundays & Mondays. Happy Hour Drinks weekdays 5pm to 7pm (excludes Saturday). Oyster Happy Hour Daily 5pm to 7pm (except Friday & Saturday). Keep site wording the a half dozen and $8 High & Mellow(High Life PONY & a SHOT). Pin no Saturday drink HH and no Fri/Sat oyster HH. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 off Drafts",
+              "price": "$1 off"
+            },
+            {
+              "text": "*$8 select Sparkling / Rosé/ White",
+              "price": "$8"
+            },
+            {
+              "text": "$8 High & Mellow(High Life PONY & a SHOT)",
+              "price": "$8"
+            },
+            {
+              "text": "$5 Pickle Back",
+              "price": "$5"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://dylansoyster.com/",
+          "proof_quote": "Happy Hour Drinks Weekdays: 5pm to 7pm //  (excludes Saturday) $1 off Drafts, *$8 select Sparkling / Rosé/ White $8 High & Mellow(High Life PONY & a SHOT) $5 Pickle Back",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$5 off the a half dozen of the “Oyster of the Day”",
+              "price": "$5 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://dylansoyster.com/",
+          "proof_quote": "$5 off the a half dozen of the “Oyster of the Day” Daily 5pm to 7pm (except Friday & Saturday)",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.3313518,
+      "lon": -76.6291481,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
     }
   ]
 }
-

@@ -9605,6 +9605,545 @@
       "lat": 39.3313518,
       "lon": -76.6291481,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "facci",
+      "name": "Facci Ristorante",
+      "neighborhood": "Otterbein",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "414 Light Street, Baltimore, MD 21202",
+      "phone": "(443) 835-2789",
+      "source_url": "https://faccirestaurant.com/happy-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Happy hour is at the bar only, 3–6pm daily.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live faccirestaurant.com/happy-hour/ HTTP 200 Last-Modified Thu, 20 Aug 2026; /baltimore/ same (HAPPY HOUR STARTS EARLY HERE EVERY DAY FROM 3 – 6P); /contact/ Phone: (443) 835 2789. Carry-out (443) 835 2765 is ops only — do not swap the public phone. Pin 414 Light Street / (443) 835-2789. Census 39.283737,-76.6137484. CityView Neighborhoods MapServer/0 query today on that point: Name=Otterbein. Site self-describes Inner Harbor; city Name wins. Citywide only. Do not invent an otterbein view. Do not fold into /inner-harbor. HH graphics still published Last-Modified Wed, 08 Oct 2025: HAPPY-HOUR-1-2-scaled.jpg + Small-plates-2-scaled.jpg. Visual-read: HAPPY HOUR MENU / AT THE BAR ONLY / 3-6PM DAILY. Keep site wording BRUSSEL and 3 – 6P. Contact hours 11A – 10P (no day split). notes_public is the bar-only GET-the-deal restriction.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Facci Martini $11",
+              "price": "$11"
+            },
+            {
+              "text": "Facci Margarita $11",
+              "price": "$11"
+            },
+            {
+              "text": "Figgin Peachy $12",
+              "price": "$12"
+            },
+            {
+              "text": "Bada Bing $12",
+              "price": "$12"
+            },
+            {
+              "text": "Sangria $10",
+              "price": "$10"
+            },
+            {
+              "text": "Lemon Drop Martini $12",
+              "price": "$12"
+            },
+            {
+              "text": "Wine by the glass $1 off",
+              "price": "$1 off"
+            },
+            {
+              "text": "$2 off draft & bottle beers",
+              "price": "$2 off"
+            },
+            {
+              "text": "Parmesan Brussel Sprouts $13",
+              "price": "$13"
+            },
+            {
+              "text": "Mozzarella Caprese $12",
+              "price": "$12"
+            },
+            {
+              "text": "Facci Bruschetta $8",
+              "price": "$8"
+            },
+            {
+              "text": "Shrimp & Bacon $15",
+              "price": "$15"
+            },
+            {
+              "text": "Polpette della Casa $12",
+              "price": "$12"
+            },
+            {
+              "text": "Smash Burger Slider $15",
+              "price": "$15"
+            },
+            {
+              "text": "Pomodori & Quattro Formaggi Flat Bread $10",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://faccirestaurant.com/happy-hour/",
+          "proof_quote": "HAPPY HOUR STARTS EARLY HERE EVERY DAY FROM 3 – 6P / HAPPY HOUR MENU AT THE BAR ONLY 3-6PM DAILY FACCI MARTINI 11 FACCI MARGARITA 11 FIGGIN PEACHY 12 BADA BING 12 SANGRIA 10 LEMON DROP MARTINI 12 WINE BY THE GLASS $1 OFF $2 OFF DRAFT & BOTTLE BEERS PARMESAN BRUSSEL SPROUTS 13 MOZZARELLA CAPRESE 12 FACCI BRUSCHETTA 8 SHRIMP & BACON 15 POLPETTE DELLA CASA 12 SMASH BURGER SLIDER 15 POMODORI & QUATTRO FORMAGGI FLAT BREAD 10",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab",
+            "burger",
+            "sliders",
+            "pizza"
+          ]
+        }
+      ],
+      "lat": 39.283737,
+      "lon": -76.6137484,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "fogo-de-chao",
+      "name": "Fogo de Chao",
+      "neighborhood": "Inner Harbor",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "600 E. Pratt St. #102, Baltimore, MD 21202",
+      "phone": "(410) 528-9292",
+      "source_url": "https://fogodechao.com/location/baltimore/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "All-day drink happy hour is at Bar Fogo. Half-price South American wine bottles under $130 are in the dining room and bar.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live fogodechao.com/location/baltimore/ HTTP 200. Pin 600 E. Pratt St. #102 / (410) 528-9292. Census 39.2872129,-76.6073897. CityView Neighborhoods MapServer/0 query today on that point: Name=Inner Harbor. Already in /inner-harbor. Hours (not the deal clock): Lunch MON-FRI 11:30 AM - 3:00 PM · Dinner Mon - Thu 3:00 PM - 9:00 PM / Fri 3:00 PM - 10:00 PM / Sat 2:00 PM - 10:00 PM / Sun 2:00 PM - 9:00 PM · Brunch SAT - SUN 11:30 AM - 2:00 PM. A second hours strip also prints FRI - SAT 11:15 AM - 9:45 PM / SUN 11:15 AM - 8:45 PM — record both; do not pick one for kitchen vs bar. Happy Hour SUN - SAT - All Day. Stay off National Caipirinha Day Thursday September 10 — one-off. Do not ship.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$6 Beers",
+              "price": "$6"
+            },
+            {
+              "text": "$8 South American Wines",
+              "price": "$8"
+            },
+            {
+              "text": "$10 Brazilian-Inspired Cocktails",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://fogodechao.com/location/baltimore/",
+          "proof_quote": "ALL DAY HAPPY HOUR Join us for All Day Happy Hour at Bar Fogo, featuring $6 Beers, $8 South American Wines and $10 Brazilian-Inspired Cocktails. Happy Hour SUN - SAT - All Day",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Half-Price South American bottles of wine under $130",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-20",
+          "source_url": "https://fogodechao.com/location/baltimore/",
+          "proof_quote": "We're offering Happy Hour Specials and Half-Price South American bottles of wine under $130. All Day Every Day. In the dining room and bar.",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2872129,
+      "lon": -76.6073897,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "the-food-market",
+      "name": "The Food Market",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1017 W 36th St, Baltimore, MD 21211",
+      "phone": "(410) 366-0606",
+      "source_url": "https://www.the-food-market.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Happy hour is bar only, Monday–Friday 4–6pm.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live the-food-market.com/happy-hour HTTP 200. Pin 1017 W 36th St / (410) 366-0606 (HH/about footer 410.366.0606). Census 39.3308684,-76.6332423. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. HH page: HAPPY HOUR Monday - Friday, 4-6pm, Bar only, menu varies per location. Keep 2.75 a pop. Hampden about page: pm happy hour Mon - Fri 3pm - 6pm and am happy hour Mon - Sun 10am - 2:30 pm (no $ on those two lines). About also: Amish Soft Pretzels are available by the each for $3 during happy hour! Conflict: about prints PM start 3pm; priced HH page prints 4-6pm. Overlap is 4–6pm. Ship the overlap from the priced page. AM window has no $ — not shipped. Do not invent the about-page $3 pretzel as a separate row. Do not invent a 3–4pm-only row. notes_public is the bar-only GET-the-deal restriction.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Draft beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "White marble wit $7",
+              "price": "$7"
+            },
+            {
+              "text": "Wine by the glass $6",
+              "price": "$6"
+            },
+            {
+              "text": "House bubbles $4",
+              "price": "$4"
+            },
+            {
+              "text": "Specialty cocktails $6",
+              "price": "$6"
+            },
+            {
+              "text": "Shot and a beer $6",
+              "price": "$6"
+            },
+            {
+              "text": "Edamame $4",
+              "price": "$4"
+            },
+            {
+              "text": "Cracker smack deluxe $7",
+              "price": "$7"
+            },
+            {
+              "text": "Truffle parmesan fries $5",
+              "price": "$5"
+            },
+            {
+              "text": "Amish soft pretzels $5",
+              "price": "$5"
+            },
+            {
+              "text": "Pan roasted mussels $12",
+              "price": "$12"
+            },
+            {
+              "text": "Buffalo pickles $6",
+              "price": "$6"
+            },
+            {
+              "text": "Garlicky shrimp torn bread $12",
+              "price": "$12"
+            },
+            {
+              "text": "Braised pork taco (2.75 a pop)",
+              "price": "$2.75"
+            },
+            {
+              "text": "Crab ball steam bun $8",
+              "price": "$8"
+            },
+            {
+              "text": "Crazy corn wings $10",
+              "price": "$10"
+            },
+            {
+              "text": "Pat LaFrieda burger $10",
+              "price": "$10"
+            },
+            {
+              "text": "1/2 cooked blondie $5",
+              "price": "$5"
+            },
+            {
+              "text": "Heathbar bread pudding $5",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.the-food-market.com/happy-hour",
+          "proof_quote": "HAPPY HOUR Monday - Friday, 4-6pm, Bar only, menu varies per location draft beer 5 white marble wit 7 wine by the glass 6 house bubbles 4 specialty cocktails 6 shot and a beer 6 edamame 4 cracker smack deluxe 7 truffle parmesan fries 5 amish soft pretzels 5 pan roasted mussels 12 buffalo pickles 6 garlicky shrimp torn bread 12 2.75 a pop braised pork taco crab ball steam bun 8 crazy corn wings 10 pat lafrieda burger 10 1/2 cooked blondie 5 heathbar bread pudding 5",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "pretzel",
+            "tacos",
+            "wings",
+            "burger",
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.3308684,
+      "lon": -76.6332423,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "gertrudes",
+      "name": "Gertrude's Restaurant",
+      "neighborhood": "Johns Hopkins Homewood",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "10 Art Museum Drive, Baltimore, MD 21218",
+      "phone": "410-889-3399",
+      "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Thursday $20 dinners. Boardwalk Crab Cake is a $5 upcharge. No discounts or substitutions.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live gertrudesbaltimore.com/thursdays-with-gertie HTTP 200; homepage HTTP 200. Pin 10 Art Museum Drive / 410-889-3399. Census 39.3262199,-76.6190802. CityView Neighborhoods MapServer/0 query today on that point: Name=Johns Hopkins Homewood. Site self-describes Baltimore Museum of Art; city Name wins. Citywide only. Do not invent a johns-hopkins-homewood view. Do not fold into /hampden or /inner-harbor. Homepage hours: Monday - Tuesday Closed · Wednesday - Friday Lunch 11:00 am - 3:00 pm Lite Fare 3:00 pm - 4:30pm Dinner 4:30 pm - 8:00 pm. Lite Fare 3–4:30 is hours, not a deal. Do not invent all day. Stay off Events archive Wine Wednesday / Tuesdays with Gertie — 2020, stale; do not ship. Boardwalk Crab Cake ($5-Upcharge) is notes_public, not a separate row. Prix-fixe spans the menu — omit food_categories on both Thursday rows.",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$20 Dinners",
+              "price": "$20"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
+          "proof_quote": "$20 Dinners Maryland Pan-Fried Chicken Only offered on Thursday nights! Boardwalk Crab Cake ($5-Upcharge) Sorry, no discounts or substitutions are available with this menu."
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$36 3-Course Dinner",
+              "price": "$36"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
+          "proof_quote": "$36 3-Course Dinner Includes coffee and tea Soup or Salad from our regular menu Excludes Seafood Salad Main Course Dinner from above $20 selections Dessert from our seasonal menu!"
+        }
+      ],
+      "lat": 39.3262199,
+      "lon": -76.6190802,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "guilford-hall",
+      "name": "Guilford Hall Brewery",
+      "neighborhood": "Greenmount West",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1611 Guilford Ave, Baltimore, MD 21202",
+      "phone": "(410) 305-9953",
+      "source_url": "https://www.guilfordhall.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Kitchen hours conclude 1 hour before close.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live guilfordhall.com/happy-hour HTTP 200. Pin 1611 Guilford Ave / (410) 305-9953. Census 39.3084005,-76.6120480. CityView Neighborhoods MapServer/0 query today on that point: Name=Greenmount West. Homepage self-describes Station North Arts District; city Name wins. Citywide only. Do not invent a greenmount-west view. Do not fold into /station-north (that view is Charles North only). Hours: Monday: Closed · Tuesday - Friday: 4pm-10pm · Saturday: 11am-10pm · Sunday: 11am-9pm · Kitchen hours conclude 1 hour before the business closes. TUESDAY – INDUSTRY NIGHT is industry-gated. Do not ship as a public row. THURSDAY – CHEFS CHOICE / SUNDAY – CHEF'S CHOICE — no $. Do not ship. Keep site spelling BURGUER. Linked PDF 985cc1_f52a7a49a62947ca8e3310cdd7e93cb1.pdf is still the regular drinks/beer list, not the weekly specials. Do not invent a 4–6 half-off pint row from Instagram. Cashless is on that PDF — ops_notes only, not notes_public. No clock on the specials; do not copy venue hours onto the deal.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Wings & Beer $15",
+              "price": "$15"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.guilfordhall.com/happy-hour",
+          "proof_quote": "WEDNESDAY – WINGS & BEER… 15 1LB of Bone-IN Wings your WAY Half Liter of CHOICE: GUILFORD LAGER OR BALTIMORE PILSNER",
+          "food_categories": [
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Burger & Brew $16",
+              "price": "$16"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.guilfordhall.com/happy-hour",
+          "proof_quote": "FRIDAY – BURGUER & BREW … 16 Signature brisket, short rib, chuck blend ½ pound burger, LTO, choice of cheese on a brioche bun. Half liter of choice: Guilford Lager or Baltimore Pilsner",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3084005,
+      "lon": -76.612048,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "hair-of-the-dog",
+      "name": "Hair of the Dog",
+      "neighborhood": "South Baltimore",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1649 South Hanover Street, Baltimore, MD 21230",
+      "phone": "410.814.0342",
+      "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Friday drink BOGO is 7–10pm. Thursday $6 burgers: extra toppings extra.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live hairofthedogbaltimore.com/weekly-specials HTTP 200; homepage HTTP 200. Pin 1649 South Hanover Street, Baltimore, MD 21230 (site omits zip; license is 21230) / 410.814.0342. Census 39.2705710,-76.6149790. CityView Neighborhoods MapServer/0 query today on that point: Name=South Baltimore. Already in /federal-hill. Homepage hours: Mon 04:30 pm – 02:00 am through Fri same · Sat 11:00 am – 02:00 am · Sun 11:00 am – 02:00 am · also We are open at 10 am for Sunday 1pm Ravens Games — record both Sunday lines; do not pick one. Keep site wording TUESDAYs / WEDNESDAYs in these quotes. Stay off Greg's Shitty Trivia / 8pm — no $. Do not ship trivia as a food/drink row. Pin no Saturday deal.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "BOGO appetizers",
+              "price": "BOGO"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "proof_quote": "MONDAYS BOGO APPETIZERS Buy any appetizers and get a second appetizer of equal or lesser value for free",
+          "food_categories": [
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Two chicken or ground beef tacos $6",
+              "price": "$6"
+            },
+            {
+              "text": "$6 select tequilas",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "proof_quote": "TUESDAYs TACO and TEQUILA NIGHT Two chicken or ground beef tacos just $6 and $6 select tequilas",
+          "food_categories": [
+            "tacos",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$6 cheesesteaks",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "proof_quote": "WEDNESDAYs CHEESESTEAK NIGHT $6 cheesesteaks",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$6 Burgers",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "proof_quote": "THURSDAYS BURGER NIGHT $6 Burgers, extra TOPPINGS additional charge",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "BOGO domestic drafts, domestic cans, Nutrl cans, Surfside cans, rail cocktails, and house wine",
+              "price": "BOGO"
+            }
+          ],
+          "start": 1140,
+          "end": 1320,
+          "time_window": "7pm-10pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "proof_quote": "FRIDAYS BOGO NIGHT From 7pm to 10 pm BOGO domestic drafts, domestic cans, Nutrl cans, Surfside cans, rail cocktails, and house wine",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.270571,
+      "lon": -76.614979,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
     }
   ]
 }

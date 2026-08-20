@@ -8746,6 +8746,426 @@
       "lat": 39.282584,
       "lon": -76.590993,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "brewers-cask",
+      "name": "Brewer's Cask",
+      "neighborhood": "Federal Hill",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1236 Light St, Baltimore, MD 21230",
+      "phone": "(410) 273-9377",
+      "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live happy-hours-specials HTTP 200. Pin 1236 Light St / (410) 273-9377. Census 39.2751037,-76.6123063. CityView Neighborhoods MapServer/0 query today on that point: Name=Federal Hill. Already in /federal-hill. Do not invent a view. Dated weekly cards today Thu Aug 20 through Wed Aug 26; priced HH lines repeat. Sat Happy Hour 2–7 no $. 7pm/8pm clocks are Live Music / Open Mic / Trivia / Karaoke — not HH, except Trivia $5 Off Burgers. Skip Side Car Sides. Do not invent one window. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 Drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$3 of Appetizers",
+              "price": "$3"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
+          "proof_quote": "Happy Hour! $5 Drafts, $3 of Appetizers / 03:00 PM - 06:00 PM",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$5 Drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$3 of Appetizers",
+              "price": "$3"
+            }
+          ],
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
+          "proof_quote": "Happy Hour! $5 Drafts, $3 of Appetizers / 05:00 PM - 11:00 PM",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$5 Off Burgers",
+              "price": "$5 off"
+            }
+          ],
+          "start": 1140,
+          "end": null,
+          "time_window": "7pm-1am",
+          "verified_date": "2026-08-20",
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
+          "proof_quote": "Trivia! $5 Off Burgers! / 07:00 PM - 01:00 AM",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$10 beer & wings",
+              "price": "$10"
+            }
+          ],
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
+          "proof_quote": "Industry Night! $10 beer & wings / 05:00 PM - 11:00 PM",
+          "food_categories": [
+            "drink",
+            "wings"
+          ]
+        }
+      ],
+      "lat": 39.2751037,
+      "lon": -76.6123063,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "charles-village-pub",
+      "name": "Charles Village Pub",
+      "neighborhood": "Charles Village",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "3107 St. Paul St, Baltimore, MD 21218",
+      "phone": "(410) 243-1611",
+      "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live weekly-specials.html HTTPS 200 / HTTP 200. Last-Modified 2020-06-14. Footer still ©2015; still the live official weekly-specials page. Pin 3107 St. Paul St / (410) 243-1611. Census 39.3261512,-76.6155528. CityView Neighborhoods MapServer/0 query today on that point: Name=Charles Village. Citywide only. Do not invent a charles-village view. Do not fold into /station-north or /mount-vernon. Friday HAPPY HOUR FROM 4:00-6:30 — no $. Pin no fri deal. Keep site typo $2.oo. Skybox raffle is not a food/drink $ — omit. Homepage hours (not the deal window): 11:00 AM - 2:00 AM Daily, kitchen until 12:00 AM. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$3 mimosas",
+              "price": "$3"
+            }
+          ],
+          "start": 660,
+          "end": 840,
+          "time_window": "11am-2pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "SUNDAY ........ NFL SUNDAY TICKET!!! Brunch served from 11am until 2pm with $3 mimosas",
+          "food_categories": [
+            "brunch",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$10 Domestic Buckets O' Beer",
+              "price": "$10"
+            }
+          ],
+          "start": 1140,
+          "end": null,
+          "time_window": "7-close",
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "MONDAY ....... $10 Domestic Buckets O' Beer from 7-close. Enter to win Ravens skybox tickets with every bucket purchased.",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "13oz Burger-$3.00 off!",
+              "price": "$3 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "TUESDAY ...... IT'S BIG DADDY PUB BURGER NIGHT (13oz Burger-$3.00 off!)",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$1.00 OFF ALL DRAFTS",
+              "price": "$1 off"
+            },
+            {
+              "text": "$1.00 off every rack",
+              "price": "$1 off"
+            },
+            {
+              "text": "$2.oo off every rack and a half",
+              "price": "$2 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "WEDNESDAY ... $1.00 OFF ALL DRAFTS Rib Night as well... $1.00 off every rack, $2.oo off every rack and a half",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$11.95 10 oz NY Strip and choice of side",
+              "price": "$11.95"
+            },
+            {
+              "text": "$3.00 PBR TALL BOYS ALL NIGHT!",
+              "price": "$3"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "THURSDAY ..... CVP Steak Night: $11.95 for a 10 oz NY Strip and choice of side / $3.00 PBR TALL BOYS ALL NIGHT!",
+          "food_categories": [
+            "steak",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$4 Drafts",
+              "price": "$4"
+            },
+            {
+              "text": "$3 bottles",
+              "price": "$3"
+            }
+          ],
+          "start": 1320,
+          "end": null,
+          "time_window": "10-close",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://charlesvillagepubbaltimore.com/weekly-specials.html",
+          "proof_quote": "SATURDAY ..... LATE NIGHT HAPPY HOUR ($4 Drafts, $3 bottles) and DRINK SPECIALS (10-CLOSE)",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3261512,
+      "lon": -76.6155528,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "chucks-trading-post",
+      "name": "Chuck's Trading Post",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1506 W 36th St, Baltimore, MD 21211",
+      "phone": "(410) 366-0178",
+      "source_url": "https://www.chuckstradingpost.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live chuckstradingpost.com HTTP 200. Pin 1506 W 36th St / (410) 366-0178. Census 39.3301604,-76.6394985. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. One row: Wednesday burger night 5pm-8pm (Burger, Fries, and 1 beer) $15. Stay off Thirsty Thursday 4pm-8pm — no $. Stay off SPECIALS WEEK OF August 11, 2026 brunch cocktails — dated week, not a standing weekly row (still that header today). Site hours: Mon closed · Tue 8am–3pm · Wed 8am–3pm + burger night 5–8 · Thu 8am–3pm · Fri 8am–3pm · Sat 9am–3pm · Sun 9am–3pm. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "(Burger, Fries, and 1 beer) $15",
+              "price": "$15"
+            }
+          ],
+          "start": 1020,
+          "end": 1200,
+          "time_window": "5pm-8pm",
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.chuckstradingpost.com/",
+          "proof_quote": "Wednesday: BURGER NIGHT 5-8 PM (Burger, Fries, and 1 beer) $15",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3301604,
+      "lon": -76.6394985,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "cinghiale",
+      "name": "Cinghiale",
+      "neighborhood": "Harbor East",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "822 Lancaster St, Baltimore, MD 21202",
+      "phone": "(410) 547-8282",
+      "source_url": "https://www.cgeno.com/specials-and-events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Cellar Raid is Enoteca or bar during lunch and dinner.",
+      "ops_notes": "Builder 2026-08-20 off census + live /specials-and-events HTTP 200. Pin 822 Lancaster St / (410) 547-8282. Census 39.2824892,-76.6008354. CityView Neighborhoods MapServer/0 query today on that point: Name=Harbor East. Already in /inner-harbor. Do not invent a Harbor East-only view. Cellar Raid Tuesdays only. Keep site wording all of bottles. Daily HH DAILY, MON-SUN | 4-6 PM / BAR + PATIO — no $ on that page; do not invent aperitivo prices from the specials copy. Linked HH PDF CG_HH.pdf HTTP 200 Last-Modified 2026-07-22 does extract snack/$7 drink prices today. Not this ticket. Do not load it. Dated events: Paitin wine dinner Sep 1 / Spritz & Salumi Aug 23 / Opera Salon Sep 13. Pin no Mon–Sun 4–6 HH row.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "50% off all of bottles of wine",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "Lunch and Dinner",
+          "verified_date": "2026-08-20",
+          "source_url": "https://www.cgeno.com/specials-and-events",
+          "proof_quote": "EVERY TUESDAY | ENOTECA + BAR Receive 50% off all of bottles of wine when you dine with us in our Enoteca or bar during Lunch and Dinner.",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2824892,
+      "lon": -76.6008354,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "clase-lounge",
+      "name": "Clasé Lounge",
+      "neighborhood": "Morrell Park",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "2709 Washington Blvd, Baltimore, MD 21230",
+      "phone": "(443) 835-2421",
+      "source_url": "https://claselounge.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 off census + live claselounge.com HTTP 200 (Wednesday priced lines also on /events today). Pin 2709 Washington Blvd / (443) 835-2421. Census 39.2644395,-76.654678. CityView Neighborhoods MapServer/0 query today on that point: Name=Morrell Park. Citywide only. Do not invent a morrell-park view. Do not fold into /federal-hill or /locust-point. Find Us today (quote both; do not pick): lounge Tue–Thu 6pm - 12am; liquor Satuday typo. Lounge open 6pm vs Rush Hour 5–9pm — overlap recorded here; do not drop Wednesday 5pm. Keep 2-for-1. Throwback Thursdays 6pm–12am / Food & drink specials all night long — no $. Grown & Sexy Saturdays ladies-free until 11 — cover, not a food/drink $. Jump Off Sundays 2-for-1 shots/wings/crabs — HOLD. Homepage HTML still puts With Moe the Bartender after Jump Off Sundays. /events still puts the same Moe line before that heading. Do not pick a day. Pin no sun deal. notes_public omitted.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "2-for-1 drinks",
+              "price": "2-for-1"
+            },
+            {
+              "text": "$7 shots",
+              "price": "$7"
+            },
+            {
+              "text": "$1 wings",
+              "price": "$1"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "5pm-9pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://claselounge.com/",
+          "proof_quote": "Rush Hour Wednesdays · 5pm–9pm Happy hour the way it should be. 2-for-1 drinks. $7 shots. $1 wings.",
+          "food_categories": [
+            "drink",
+            "wings"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$5 shots",
+              "price": "$5"
+            },
+            {
+              "text": "$1 wings",
+              "price": "$1"
+            }
+          ],
+          "start": 1260,
+          "end": 1440,
+          "time_window": "9pm-12am",
+          "verified_date": "2026-08-20",
+          "source_url": "https://claselounge.com/",
+          "proof_quote": "Wild Out Wednesdays · 9pm–12am Sounds by DJ King Freeman. $5 shots. $1 wings.",
+          "food_categories": [
+            "drink",
+            "wings"
+          ]
+        }
+      ],
+      "lat": 39.2644395,
+      "lon": -76.654678,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
     }
   ]
 }
+

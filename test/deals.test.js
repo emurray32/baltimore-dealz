@@ -1885,12 +1885,13 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 14);
+  assert.equal(inView.length, 15);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
       "admirals-cup",
       "alexanders-tavern-fells",
+      "bunnys-buckets",
       "harbor-tandoor",
       "maxs-taphouse",
       "papis-taco-joint-fells",
@@ -2088,8 +2089,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-19: Captain James Landing → 75 -> 76 / 97 -> 98.
   // 2026-08-19: Bertha's Soul Food → 76 -> 77 / 98 -> 99.
   // 2026-08-19: Blue Pit BBQ → 77 -> 78 / 99 -> 100.
-  assert.equal(showable, 78);
-  assert.equal(venues.length, 100);
+  // 2026-08-20: Bunny's Buckets & Bubbles → 78 -> 79 / 100 -> 101.
+  assert.equal(showable, 79);
+  assert.equal(venues.length, 101);
 });
 
 
@@ -2476,6 +2478,94 @@ test("Blue Pit BBQ joins 2026-08-19 (Hampden, Wed–Fri 3–6 happy hour)", asyn
 
   assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "blue-pit-bbq"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "blue-pit-bbq"));
+});
+
+test("Bunny's Buckets & Bubbles joins 2026-08-20 (Fells Point, two hoppy hours)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const bunny = byId["bunnys-buckets"];
+  assert.ok(bunny, "bunnys-buckets missing");
+  assert.deepEqual(venueShapeErrors(bunny), []);
+  assert.equal(bunny.name, "Bunny's Buckets & Bubbles");
+  assert.equal(bunny.neighborhood, "Fells Point");
+  assert.equal(
+    bunny.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+  );
+  assert.equal(bunny.status, "verified");
+  assert.equal(bunny.address, "801 S Ann St, Baltimore, MD 21231");
+  assert.equal(bunny.phone, "(443) 708-3861");
+  assert.equal(
+    bunny.source_url,
+    "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
+  );
+  assert.equal(bunny.source_type, "venue_website");
+  assert.equal(bunny.last_verified, "2026-08-20");
+  assert.match(bunny.notes_public ?? "", /bar seating/i);
+  assert.match(bunny.notes_public ?? "", /downstairs bar/i);
+  assert.equal(bunny.lat, 39.282584);
+  assert.equal(bunny.lon, -76.590993);
+  assert.equal(bunny.deals.length, 2);
+  assert.match(bunny.ops_notes ?? "", /image-only/i);
+  assert.match(bunny.ops_notes ?? "", /2024-11-20/);
+  assert.match(bunny.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(bunny.ops_notes ?? "", /Already in \/fells-point/);
+
+  const weekday = bunny.deals.find((d) => d.days.includes("mon") && !d.days.includes("fri"));
+  const friday = bunny.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  assert.ok(weekday, "Mon–Thu hoppy hour missing");
+  assert.ok(friday, "Friday hoppy hour missing");
+  assert.deepEqual(weekday.days, ["mon", "tue", "wed", "thu"]);
+  assert.equal(weekday.start, 1020);
+  assert.equal(weekday.end, 1080);
+  assert.equal(weekday.time_window, "5pm-6pm");
+  assert.equal(weekday.happy_hour, true);
+  assert.deepEqual(friday.days, ["fri"]);
+  assert.equal(friday.start, 960);
+  assert.equal(friday.end, 1080);
+  assert.equal(friday.time_window, "4pm-6pm");
+  assert.equal(friday.happy_hour, true);
+  assert.ok(
+    !bunny.deals.some((d) => d.days.includes("sat") || d.days.includes("sun")),
+    "do not invent Saturday/Sunday hoppy hour",
+  );
+
+  const expectedItems = [
+    ["Fried chicken sandwich $8", "$8"],
+    ["Shrimp & grits $8", "$8"],
+    ["Chicken poutine $8", "$8"],
+    ["Baby crab rice $8", "$8"],
+    ["Chicken nuggies $8", "$8"],
+    ["Caviar & chips $8", "$8"],
+    ["Wine $6 (glass of red, white, or bubbles)", "$6"],
+    ["Jessica Rabbit or Ramona Flowers $8", "$8"],
+    ["Miller High Life bottles $3", "$3"],
+    ["Veuve Clicquot $60 bottle", "$60"],
+    ["Veuve Clicquot $20 glass", "$20"],
+  ];
+  const expectedCats = ["sandwich/cheesesteak", "seafood/crab", "small-plate/apps", "drink"];
+  for (const row of [weekday, friday]) {
+    assert.equal(
+      row.source_url,
+      "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
+    );
+    assert.deepEqual(row.food_categories, expectedCats);
+    assert.ok(!row.food_categories.includes("seafood"));
+    assert.deepEqual(
+      row.items.map((i) => [i.text, i.price ?? null]),
+      expectedItems,
+    );
+    assert.match(row.proof_quote, /BUNNY'S HOPPY HOUR/);
+    assert.match(row.proof_quote, /bar seating and downstairs bar area/);
+    assert.match(row.proof_quote, /Monday - Thursday 5pm - 6pm/);
+    assert.match(row.proof_quote, /Friday from 4pm to 6pm/);
+  }
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "bunnys-buckets"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "bunnys-buckets"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

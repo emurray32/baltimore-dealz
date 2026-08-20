@@ -8596,6 +8596,156 @@
       "lat": 39.331849,
       "lon": -76.640820,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+    },
+    {
+      "id": "bunnys-buckets",
+      "name": "Bunny's Buckets & Bubbles",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "801 S Ann St, Baltimore, MD 21231",
+      "phone": "(443) 708-3861",
+      "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Happy hour is bar seating and downstairs bar only.",
+      "ops_notes": "Builder 2026-08-20 off census + live /menu HTTP 200 + Hoppy Hour PDF HTTP 200 Last-Modified 2024-11-20. PDF is image-only (pdftotext empty). Pin 801 S Ann St / (443) 708-3861. Nominatim 39.282584,-76.590993. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not invent a view. Two Hoppy Hour rows: Mon–Thu 5pm-6pm + Fri 4pm-6pm. Do not invent Saturday/Sunday hoppy hour. Site restaurant hours (homepage, not the deal window): Mon–Thu 5:00pm–11:30pm · Fri 11:00am–12:00am · Sat–Sun 10:00am–12:00am.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Fried chicken sandwich $8",
+              "price": "$8"
+            },
+            {
+              "text": "Shrimp & grits $8",
+              "price": "$8"
+            },
+            {
+              "text": "Chicken poutine $8",
+              "price": "$8"
+            },
+            {
+              "text": "Baby crab rice $8",
+              "price": "$8"
+            },
+            {
+              "text": "Chicken nuggies $8",
+              "price": "$8"
+            },
+            {
+              "text": "Caviar & chips $8",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $6 (glass of red, white, or bubbles)",
+              "price": "$6"
+            },
+            {
+              "text": "Jessica Rabbit or Ramona Flowers $8",
+              "price": "$8"
+            },
+            {
+              "text": "Miller High Life bottles $3",
+              "price": "$3"
+            },
+            {
+              "text": "Veuve Clicquot $60 bottle",
+              "price": "$60"
+            },
+            {
+              "text": "Veuve Clicquot $20 glass",
+              "price": "$20"
+            }
+          ],
+          "start": 1020,
+          "end": 1080,
+          "time_window": "5pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
+          "proof_quote": "BUNNY'S HOPPY HOUR / Happy hour available at all bar seating and downstairs bar area / Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm / $8 FOOD SPECIALS FRIED CHICKEN SANDWICH / SHRIMP & GRITS / CHICKEN POUTINE / BABY CRAB RICE / CHICKEN NUGGIES / CAVIAR & CHIPS / $6 WINE Choose between a glass of Red, White or Bubbles / $8 COCKTAILS Our 2 most popular: Jessica Rabbit or Ramona Flowers / $3 BEER Miller High Life Bottles / VEUVE CLICQUOT $60 bottle $20 Glass",
+          "food_categories": [
+            "sandwich/cheesesteak",
+            "seafood/crab",
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Fried chicken sandwich $8",
+              "price": "$8"
+            },
+            {
+              "text": "Shrimp & grits $8",
+              "price": "$8"
+            },
+            {
+              "text": "Chicken poutine $8",
+              "price": "$8"
+            },
+            {
+              "text": "Baby crab rice $8",
+              "price": "$8"
+            },
+            {
+              "text": "Chicken nuggies $8",
+              "price": "$8"
+            },
+            {
+              "text": "Caviar & chips $8",
+              "price": "$8"
+            },
+            {
+              "text": "Wine $6 (glass of red, white, or bubbles)",
+              "price": "$6"
+            },
+            {
+              "text": "Jessica Rabbit or Ramona Flowers $8",
+              "price": "$8"
+            },
+            {
+              "text": "Miller High Life bottles $3",
+              "price": "$3"
+            },
+            {
+              "text": "Veuve Clicquot $60 bottle",
+              "price": "$60"
+            },
+            {
+              "text": "Veuve Clicquot $20 glass",
+              "price": "$20"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
+          "proof_quote": "BUNNY'S HOPPY HOUR / Happy hour available at all bar seating and downstairs bar area / Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm / $8 FOOD SPECIALS FRIED CHICKEN SANDWICH / SHRIMP & GRITS / CHICKEN POUTINE / BABY CRAB RICE / CHICKEN NUGGIES / CAVIAR & CHIPS / $6 WINE Choose between a glass of Red, White or Bubbles / $8 COCKTAILS Our 2 most popular: Jessica Rabbit or Ramona Flowers / $3 BEER Miller High Life Bottles / VEUVE CLICQUOT $60 bottle $20 Glass",
+          "food_categories": [
+            "sandwich/cheesesteak",
+            "seafood/crab",
+            "small-plate/apps",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.282584,
+      "lon": -76.590993,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
     }
   ]
 }

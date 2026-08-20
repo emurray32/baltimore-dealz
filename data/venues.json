@@ -10144,6 +10144,402 @@
       "lat": 39.270571,
       "lon": -76.614979,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "hard-rock-cafe",
+      "name": "Hard Rock Cafe",
+      "neighborhood": "Inner Harbor",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "601 E Pratt St, Baltimore, MD 21202",
+      "phone": "410-347-7625",
+      "source_url": "https://cafe.hardrock.com/baltimore/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live cafe.hardrock.com/baltimore/ HTTP 200. Pin 601 E Pratt St / 410-347-7625 (JSON-LD telephone). Census 39.2860594,-76.6071214. CityView Neighborhoods MapServer/0 query today on that point: Name=Inner Harbor. Already in /inner-harbor. JSON-LD openingHours 11AM - 8PM — record in ops; do not copy it onto the deal clock. HH PDF still live Last-Modified Thu, 10 Apr 2025: cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen_Menu_Update_Happy_Hour_No_Bleeds_1.pdf. Location page: Work Hard, Party Harder / Join Us for Happy Hour! / Available Monday - Friday: 3pm - 6pm / $8 - $10 Eats / $5 - $7 Drinks. Stay off Orioles 15% off with a game ticket (event-contingent) and holiday 10% off booking by September 1, 2026 (one-off). Do not ship.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Nachos $8",
+              "price": "$8"
+            },
+            {
+              "text": "Jumbo Pretzel $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tupelo Dippers $8",
+              "price": "$8"
+            },
+            {
+              "text": "Loaded Cheese Fries $8",
+              "price": "$8"
+            },
+            {
+              "text": "Chicken Sliders $10",
+              "price": "$10"
+            },
+            {
+              "text": "Wings $10",
+              "price": "$10"
+            },
+            {
+              "text": "Pepperoni Flatbread $10",
+              "price": "$10"
+            },
+            {
+              "text": "Domestic drafts $5",
+              "price": "$5"
+            },
+            {
+              "text": "Import/craft drafts $6",
+              "price": "$6"
+            },
+            {
+              "text": "Single liquor well drinks $6",
+              "price": "$6"
+            },
+            {
+              "text": "Select wines (6oz) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Cocktails $7",
+              "price": "$7"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://cafe.hardrock.com/baltimore/",
+          "proof_quote": "Join Us for Happy Hour! Available Monday - Friday: 3pm - 6pm $8 - $10 Eats $5 - $7 Drinks. PDF: WORK HARD, HAPPY HOUR HARDER $8 EATS Nachos Jumbo Pretzel Tupelo Dippers Loaded Cheese Fries $10 EATS Chicken Sliders Wings Pepperoni Flatbread $5 DRINKS Domestic drafts $6 DRINKS Import/craft drafts Single liquor well drinks $7 DRINKS Select wines (6oz) / cocktails",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "pretzel",
+            "sliders",
+            "wings",
+            "pizza"
+          ]
+        }
+      ],
+      "lat": 39.2860594,
+      "lon": -76.6071214,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "hershs",
+      "name": "Hersh's Pizza & Drinks",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "1843-45 Light Street, Baltimore MD 21230",
+      "phone": "443-438-4948",
+      "source_url": "https://hershs.com/events/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "notes_public": "Wine Wednesday half-off bottles is with dinner.",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live hershs.com/events/ HTTP 200; homepage banner also half off bottles of vino on Wine Wednesday. Pin 1843-45 Light Street, Baltimore MD 21230 / 443-438-4948. Census 39.2686609,-76.6116428. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Site/OpenTable color is Federal Hill; city Name wins. Already in /locust-point. Do not fold into /federal-hill. Hours footer: Tuesday thru Saturday 5:00-9:30 pm / Sunday 5:00-8:30 pm / Closed Monday. Events: Wine Wednesdays! Every Wednesday, join us for half-off bottles of wine with dinner. Happy Hour Cheap and easy drinking Wednesday-Friday 5-7pm, beer, wine and cocktail specials (no $ — times-only, same class as The Point in Fells). Stay off Frickin’ Tuesdays / Fried Chicken Tuesdays (no $), Burger Thursdays (no $), Easter Brunch 2026, Mother’s Day 2026, NYE, dated wine dinners.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "half-off bottles of wine with dinner",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hershs.com/events/",
+          "proof_quote": "Wine Wednesdays! Every Wednesday, join us for half-off bottles of wine with dinner.",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-08-20",
+          "source_url": "https://hershs.com/events/",
+          "proof_quote": "Happy Hour Cheap and easy drinking Wednesday-Friday 5-7pm, beer, wine and cocktail specials."
+        }
+      ],
+      "lat": 39.2686609,
+      "lon": -76.6116428,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "homeslyce-mt-vernon",
+      "name": "HomeSlyce Mt. Vernon",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "336 N Charles St, Baltimore, MD 21201",
+      "phone": "(443) 501-4000",
+      "source_url": "https://homeslyce.com/locations/mt-vernon/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live homeslyce.com/locations/mt-vernon/ HTTP 200. Pin 336 N Charles St / (443) 501-4000 (location page +1 443-501-4000; JSON-LD +14435014000). Same digits as homeslyce-canton — that is what this door publishes. Do not fix either phone. Do not edit homeslyce-canton. Census 39.2937348,-76.6156311. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Site self-describes Mt. Vernon; city Name wins. Already in /inner-harbor. Do not fold into /mount-vernon. Do not invent a /downtown page. Hours: Mon to Sun 11.00 AM – 10.00 PM / *Hours subject to change. JSON-LD hours Mon–Sun 11:00–22:00. Stay off Thursdays / Fridays * More details soon! (no $) and Trivia Thursdays @ Mt Vernon (no $).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 OFF Wings, Tenders & Chicken Quesadillas",
+              "price": "$3 off"
+            },
+            {
+              "text": "$5 Wines & Craft Beers",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://homeslyce.com/locations/mt-vernon/",
+          "proof_quote": "Happy Hour : $3 OFF Wings, Tenders & Chicken Quesadillas $5 Wines & Craft Beers Monday through Friday 3pm to 6pm",
+          "food_categories": [
+            "drink",
+            "wings"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "16\" 2-topping pizza $19",
+              "price": "$19"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/mt-vernon/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Mondays : 16” 2 Topping Pizza for $19 (Available only at open locations)"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$1 toppings",
+              "price": "$1"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/mt-vernon/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Tuesdays : $1 Toppings on any Build Your Own Dream Pizza or Calzone"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "12\" premium pizza $16",
+              "price": "$16"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/mt-vernon/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Wednesdays : 12” Premium Pizza is $16"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "12\" Premium Pizza & 6 Wings $25",
+              "price": "$25"
+            },
+            {
+              "text": "16\" Premium Pizza & 6 Wings $35",
+              "price": "$35"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/mt-vernon/",
+          "food_categories": [
+            "pizza",
+            "wings"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Sundays : 12” Premium Pizza & 6 Wings – $25 16″ Premium Pizza & 6 Wings – $35"
+        }
+      ],
+      "lat": 39.2937348,
+      "lon": -76.6156311,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "homeslyce-jhu",
+      "name": "HomeSlyce JHU",
+      "neighborhood": "Charles Village",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "status": "verified",
+      "address": "3333 N Charles St, Baltimore, MD 21218",
+      "phone": "(443) 315-4046",
+      "source_url": "https://homeslyce.com/locations/jhu-charles-village/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-20",
+      "ops_notes": "Builder 2026-08-20 leftover loadable + live homeslyce.com/locations/jhu-charles-village/ HTTP 200. Pin 3333 N Charles St / (443) 315-4046 (location page +1 443-315-4046; JSON-LD +14433154046). Census 39.3286352,-76.6171728. CityView Neighborhoods MapServer/0 query today on that point: Name=Charles Village. Charles Village has no home view — already in citywideOnly. Do not invent a /charles-village view. Do not fold into /hampden. Hours conflict — record all three; do not pick one; do not “fix” 12.00 AM: location page Mondays CLOSED / Tue – Fri 11:00 AM – 10:00 PM / Sat – Sun 12:00 PM – 10:00 PM / *Hours subject to change; JSON-LD Mon–Sun opens 12:00 / closes 22:00 (includes Monday); brand homepage JHU block Mon to Thu: 12.00 AM – 10.00 PM / Fri & Sat: 11.00 AM – 11.00 PM / Sun: 12.00 AM – 10.00 PM. Same priced HH and daily specials as the Mt. Vernon location page. Monday 16\" pizza is (Available only at open locations) — this door’s location page says Mondays CLOSED, so do not ship the Monday pizza row here. HH is still quoted Monday through Friday 3pm to 6pm. Ship Monday on the HH row as quoted. Record the door-closed conflict in ops. Do not invent a closed-Monday HH (do not drop mon). Stay off Trivia Tuesdays @ JHU (no $).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 OFF Wings, Tenders & Chicken Quesadillas",
+              "price": "$3 off"
+            },
+            {
+              "text": "$5 Wines & Craft Beers",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-20",
+          "source_url": "https://homeslyce.com/locations/jhu-charles-village/",
+          "proof_quote": "Happy Hour : $3 OFF Wings, Tenders & Chicken Quesadillas $5 Wines & Craft Beers Monday through Friday 3pm to 6pm",
+          "food_categories": [
+            "drink",
+            "wings"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$1 toppings",
+              "price": "$1"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/jhu-charles-village/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Tuesdays : $1 Toppings on any Build Your Own Dream Pizza or Calzone"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "12\" premium pizza $16",
+              "price": "$16"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/jhu-charles-village/",
+          "food_categories": [
+            "pizza"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Wednesdays : 12” Premium Pizza is $16"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "12\" Premium Pizza & 6 Wings $25",
+              "price": "$25"
+            },
+            {
+              "text": "16\" Premium Pizza & 6 Wings $35",
+              "price": "$35"
+            }
+          ],
+          "time_window": "all day",
+          "source_url": "https://homeslyce.com/locations/jhu-charles-village/",
+          "food_categories": [
+            "pizza",
+            "wings"
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-20",
+          "proof_quote": "Sundays : 12” Premium Pizza & 6 Wings – $25 16″ Premium Pizza & 6 Wings – $35"
+        }
+      ],
+      "lat": 39.3286352,
+      "lon": -76.6171728,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
     }
   ]
 }

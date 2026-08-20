@@ -1034,7 +1034,7 @@ test("an unpriced row may render only as a real happy hour with a published wind
 
   assert.deepEqual(
     [...new Set(unpricedShowing.map((r) => r.id))].sort(),
-    ["blackwall-hitch", "captain-james-landing", "holy-frijoles", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
+    ["blackwall-hitch", "captain-james-landing", "hershs", "holy-frijoles", "hudson-street-stackhouse", "the-outpost", "the-point-in-fells"],
     "only the times-only happy-hour venues may show an unpriced row",
   );
 
@@ -2107,8 +2107,10 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // Dutch Courage · Dylan's Oyster Cellar) → 84 -> 90 / 106 -> 112.
   // 2026-08-20: leftover loadable (Facci · Fogo de Chao · The Food Market ·
   // Gertrude's · Guilford Hall Brewery · Hair of the Dog) → 90 -> 96 / 112 -> 118.
-  assert.equal(showable, 96);
-  assert.equal(venues.length, 118);
+  // 2026-08-20: leftover loadable (Hard Rock Cafe · Hersh's · HomeSlyce Mt. Vernon ·
+  // HomeSlyce JHU) → 96 -> 100 / 118 -> 122.
+  assert.equal(showable, 100);
+  assert.equal(venues.length, 122);
 });
 
 
@@ -3903,6 +3905,349 @@ test("Hair of the Dog joins 2026-08-20 (South Baltimore / federal-hill, five wee
 
   assert.ok(venuesInView(venues, bySlug["federal-hill"]).some((v) => v.id === "hair-of-the-dog"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "hair-of-the-dog"));
+});
+
+test("Hard Rock Cafe joins 2026-08-20 (Inner Harbor, Mon–Fri 3–6 HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const hrc = byId["hard-rock-cafe"];
+  assert.ok(hrc, "hard-rock-cafe missing");
+  assert.deepEqual(venueShapeErrors(hrc), []);
+  assert.equal(hrc.name, "Hard Rock Cafe");
+  assert.equal(hrc.neighborhood, "Inner Harbor");
+  assert.equal(
+    hrc.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+  );
+  assert.equal(hrc.status, "verified");
+  assert.equal(hrc.address, "601 E Pratt St, Baltimore, MD 21202");
+  assert.equal(hrc.phone, "410-347-7625");
+  assert.equal(hrc.source_url, "https://cafe.hardrock.com/baltimore/");
+  assert.equal(hrc.source_type, "venue_website");
+  assert.equal(hrc.last_verified, "2026-08-20");
+  assert.equal(hrc.notes_public, undefined);
+  assert.equal(hrc.lat, 39.2860594);
+  assert.equal(hrc.lon, -76.6071214);
+  assert.equal(hrc.deals.length, 1);
+  assert.match(hrc.ops_notes ?? "", /Name=Inner Harbor/);
+  assert.match(hrc.ops_notes ?? "", /Already in \/inner-harbor/);
+  assert.match(hrc.ops_notes ?? "", /11AM - 8PM/);
+  assert.match(hrc.ops_notes ?? "", /do not copy it onto the deal clock/i);
+  assert.match(hrc.ops_notes ?? "", /Orioles/);
+  assert.match(hrc.ops_notes ?? "", /10 Apr 2025|2025-04-10/);
+  assert.ok(
+    !hrc.deals.some((d) => d.items.some((i) => /Orioles|holiday/i.test(i.text))),
+    "Orioles 15% and holiday booking off",
+  );
+
+  const hh = hrc.deals[0];
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Nachos $8", "$8"],
+      ["Jumbo Pretzel $8", "$8"],
+      ["Tupelo Dippers $8", "$8"],
+      ["Loaded Cheese Fries $8", "$8"],
+      ["Chicken Sliders $10", "$10"],
+      ["Wings $10", "$10"],
+      ["Pepperoni Flatbread $10", "$10"],
+      ["Domestic drafts $5", "$5"],
+      ["Import/craft drafts $6", "$6"],
+      ["Single liquor well drinks $6", "$6"],
+      ["Select wines (6oz) $7", "$7"],
+      ["Cocktails $7", "$7"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, [
+    "drink",
+    "small-plate/apps",
+    "pretzel",
+    "sliders",
+    "wings",
+    "pizza",
+  ]);
+
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "hard-rock-cafe"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "hard-rock-cafe"));
+});
+
+test("Hersh's Pizza & Drinks joins 2026-08-20 (Riverside / locust-point, Wine Wednesday + times-only HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const hersh = byId.hershs;
+  assert.ok(hersh, "hershs missing");
+  assert.deepEqual(venueShapeErrors(hersh), []);
+  assert.equal(hersh.name, "Hersh's Pizza & Drinks");
+  assert.equal(hersh.neighborhood, "Riverside");
+  assert.equal(
+    hersh.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+  );
+  assert.equal(hersh.status, "verified");
+  assert.equal(hersh.address, "1843-45 Light Street, Baltimore MD 21230");
+  assert.equal(hersh.phone, "443-438-4948");
+  assert.equal(hersh.source_url, "https://hershs.com/events/");
+  assert.equal(hersh.source_type, "venue_website");
+  assert.equal(hersh.last_verified, "2026-08-20");
+  assert.equal(hersh.notes_public, "Wine Wednesday half-off bottles is with dinner.");
+  assert.equal(hersh.lat, 39.2686609);
+  assert.equal(hersh.lon, -76.6116428);
+  assert.equal(hersh.deals.length, 2);
+  assert.match(hersh.ops_notes ?? "", /Name=Riverside/);
+  assert.match(hersh.ops_notes ?? "", /Already in \/locust-point/);
+  assert.match(hersh.ops_notes ?? "", /Do not fold into \/federal-hill/);
+  assert.match(hersh.ops_notes ?? "", /Fried Chicken|Frickin/);
+  assert.match(hersh.ops_notes ?? "", /Burger Thursdays/);
+  assert.ok(
+    !hersh.deals.some((d) => d.items.some((i) => /fried chicken|smash burger/i.test(i.text))),
+    "Fried Chicken Tuesdays and Burger Thursdays have no $",
+  );
+
+  const wine = hersh.deals.find((d) => d.days.length === 1 && d.days[0] === "wed" && d.prices_published !== false);
+  const hh = hersh.deals.find((d) => d.prices_published === false);
+  assert.ok(wine && hh, "expected Wine Wednesday and times-only happy hour");
+
+  assert.deepEqual(wine.days, ["wed"]);
+  assert.equal(wine.start, null);
+  assert.equal(wine.end, null);
+  assert.equal(wine.time_window, undefined);
+  assert.deepEqual(
+    wine.items.map((i) => [i.text, i.price ?? null]),
+    [["half-off bottles of wine with dinner", "50% off"]],
+  );
+  assert.deepEqual(wine.food_categories, ["drink"]);
+
+  assert.deepEqual(hh.days, ["wed", "thu", "fri"]);
+  assert.equal(hh.start, 1020);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "5pm-7pm");
+  assert.equal(hh.happy_hour, true);
+  assert.equal(hh.prices_published, false);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [["Happy Hour", null]],
+  );
+  assert.equal(hh.food_categories, undefined, "times-only — same class as The Point in Fells");
+
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "hershs"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "hershs"));
+  assert.ok(
+    !venuesInView(venues, bySlug["federal-hill"]).some((v) => v.id === "hershs"),
+    "Riverside must not fold into /federal-hill",
+  );
+});
+
+test("HomeSlyce Mt. Vernon joins 2026-08-20 (Downtown / inner-harbor, HH + weekly pizza)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const mv = byId["homeslyce-mt-vernon"];
+  assert.ok(mv, "homeslyce-mt-vernon missing");
+  assert.deepEqual(venueShapeErrors(mv), []);
+  assert.equal(mv.name, "HomeSlyce Mt. Vernon");
+  assert.equal(mv.neighborhood, "Downtown");
+  assert.equal(
+    mv.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+  );
+  assert.equal(mv.status, "verified");
+  assert.equal(mv.address, "336 N Charles St, Baltimore, MD 21201");
+  assert.equal(mv.phone, "(443) 501-4000");
+  assert.equal(byId["homeslyce-canton"].phone, "(443) 501-4000", "do not 'fix' Canton phone");
+  assert.equal(mv.source_url, "https://homeslyce.com/locations/mt-vernon/");
+  assert.equal(mv.source_type, "venue_website");
+  assert.equal(mv.last_verified, "2026-08-20");
+  assert.equal(mv.notes_public, undefined);
+  assert.equal(mv.lat, 39.2937348);
+  assert.equal(mv.lon, -76.6156311);
+  assert.equal(mv.deals.length, 5);
+  assert.match(mv.ops_notes ?? "", /Name=Downtown/);
+  assert.match(mv.ops_notes ?? "", /Already in \/inner-harbor/);
+  assert.match(mv.ops_notes ?? "", /Do not fold into \/mount-vernon/);
+  assert.match(mv.ops_notes ?? "", /Do not invent a \/downtown/);
+  assert.match(mv.ops_notes ?? "", /More details soon|Trivia Thursdays/);
+  assert.ok(
+    !mv.deals.some((d) => d.items.some((i) => /more details|trivia/i.test(i.text))),
+    "Thursday/Friday 'more details soon' and trivia have no $",
+  );
+
+  const hh = mv.deals.find((d) => d.happy_hour === true);
+  const mon = mv.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const tue = mv.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = mv.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const sun = mv.deals.find((d) => d.days.length === 1 && d.days[0] === "sun");
+  assert.ok(hh && mon && tue && wed && sun, "expected HH + Mon/Tue/Wed/Sun pizza rows");
+
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$3 OFF Wings, Tenders & Chicken Quesadillas", "$3 off"],
+      ["$5 Wines & Craft Beers", "$5"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink", "wings"]);
+
+  assert.equal(mon.start, null);
+  assert.equal(mon.end, null);
+  assert.equal(mon.time_window, "all day");
+  assert.deepEqual(
+    mon.items.map((i) => [i.text, i.price ?? null]),
+    [['16" 2-topping pizza $19', "$19"]],
+  );
+  assert.deepEqual(mon.food_categories, ["pizza"]);
+
+  assert.equal(tue.start, null);
+  assert.equal(tue.end, null);
+  assert.equal(tue.time_window, "all day");
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price ?? null]),
+    [["$1 toppings", "$1"]],
+  );
+  assert.deepEqual(tue.food_categories, ["pizza"]);
+
+  assert.equal(wed.start, null);
+  assert.equal(wed.end, null);
+  assert.equal(wed.time_window, "all day");
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price ?? null]),
+    [['12" premium pizza $16', "$16"]],
+  );
+  assert.deepEqual(wed.food_categories, ["pizza"]);
+
+  assert.equal(sun.start, null);
+  assert.equal(sun.end, null);
+  assert.equal(sun.time_window, "all day");
+  assert.deepEqual(
+    sun.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ['12" Premium Pizza & 6 Wings $25', "$25"],
+      ['16" Premium Pizza & 6 Wings $35', "$35"],
+    ],
+  );
+  assert.deepEqual(sun.food_categories, ["pizza", "wings"]);
+
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "homeslyce-mt-vernon"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "homeslyce-mt-vernon"));
+  assert.ok(
+    !venuesInView(venues, bySlug["mount-vernon"]).some((v) => v.id === "homeslyce-mt-vernon"),
+    "Downtown must not fold into /mount-vernon",
+  );
+  assert.equal(bySlug.downtown, undefined, "do not invent a downtown view");
+});
+
+test("HomeSlyce JHU joins 2026-08-20 (Charles Village citywide, HH + pizza, no Monday pizza)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const jhu = byId["homeslyce-jhu"];
+  assert.ok(jhu, "homeslyce-jhu missing");
+  assert.deepEqual(venueShapeErrors(jhu), []);
+  assert.equal(jhu.name, "HomeSlyce JHU");
+  assert.equal(jhu.neighborhood, "Charles Village");
+  assert.equal(
+    jhu.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+  );
+  assert.equal(jhu.status, "verified");
+  assert.equal(jhu.address, "3333 N Charles St, Baltimore, MD 21218");
+  assert.equal(jhu.phone, "(443) 315-4046");
+  assert.equal(jhu.source_url, "https://homeslyce.com/locations/jhu-charles-village/");
+  assert.equal(jhu.source_type, "venue_website");
+  assert.equal(jhu.last_verified, "2026-08-20");
+  assert.equal(jhu.notes_public, undefined);
+  assert.equal(jhu.lat, 39.3286352);
+  assert.equal(jhu.lon, -76.6171728);
+  assert.equal(jhu.deals.length, 4);
+  assert.match(jhu.ops_notes ?? "", /Name=Charles Village/);
+  assert.match(jhu.ops_notes ?? "", /Do not invent a \/charles-village|already in citywideOnly/i);
+  assert.match(jhu.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(jhu.ops_notes ?? "", /Mondays CLOSED/);
+  assert.match(jhu.ops_notes ?? "", /12\.00 AM/);
+  assert.match(jhu.ops_notes ?? "", /JSON-LD/);
+  assert.match(jhu.ops_notes ?? "", /do not drop `?mon`?|Ship Monday on the HH/i);
+  assert.ok(
+    !jhu.deals.some((d) => d.days.length === 1 && d.days[0] === "mon"),
+    "do not ship Monday pizza — door page says Mondays CLOSED",
+  );
+  assert.ok(
+    !jhu.deals.some((d) => d.items.some((i) => /trivia/i.test(i.text))),
+    "Trivia Tuesdays have no $",
+  );
+
+  const hh = jhu.deals.find((d) => d.happy_hour === true);
+  const tue = jhu.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = jhu.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const sun = jhu.deals.find((d) => d.days.length === 1 && d.days[0] === "sun");
+  assert.ok(hh && tue && wed && sun, "expected HH + Tue/Wed/Sun rows");
+  assert.ok(hh.days.includes("mon"), "ship Monday on the HH row as quoted");
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$3 OFF Wings, Tenders & Chicken Quesadillas", "$3 off"],
+      ["$5 Wines & Craft Beers", "$5"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink", "wings"]);
+
+  assert.equal(tue.start, null);
+  assert.equal(tue.end, null);
+  assert.equal(tue.time_window, "all day");
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price ?? null]),
+    [["$1 toppings", "$1"]],
+  );
+  assert.deepEqual(tue.food_categories, ["pizza"]);
+
+  assert.equal(wed.start, null);
+  assert.equal(wed.end, null);
+  assert.equal(wed.time_window, "all day");
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price ?? null]),
+    [['12" premium pizza $16', "$16"]],
+  );
+  assert.deepEqual(wed.food_categories, ["pizza"]);
+
+  assert.equal(sun.start, null);
+  assert.equal(sun.end, null);
+  assert.equal(sun.time_window, "all day");
+  assert.deepEqual(
+    sun.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ['12" Premium Pizza & 6 Wings $25', "$25"],
+      ['16" Premium Pizza & 6 Wings $35', "$35"],
+    ],
+  );
+  assert.deepEqual(sun.food_categories, ["pizza", "wings"]);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "homeslyce-jhu"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "homeslyce-jhu"),
+    "Charles Village must not fold into /hampden",
+  );
+  assert.equal(bySlug["charles-village"], undefined, "do not invent a charles-village view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

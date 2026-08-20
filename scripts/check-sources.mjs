@@ -13,7 +13,7 @@
  */
 
 import { execFile } from "node:child_process";
-import { mkdtemp, writeFile, rm } from "node:fs/promises";
+import { mkdtemp, writeFile, rm, readdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { promisify } from "node:util";
@@ -325,6 +325,90 @@ function stripTagBlock(html, tag) {
   return s;
 }
 
+function isBlankExtract(s) {
+  return String(s ?? "").trim() === "";
+}
+
+function pdfPageIndex(name) {
+  const dash = name.lastIndexOf("-");
+  const dot = name.lastIndexOf(".");
+  const n = Number(name.slice(dash + 1, dot));
+  return Number.isFinite(n) ? n : 0;
+}
+
+async function ocrPdfPages(pdfPath, dir) {
+  const prefix = join(dir, "page");
+  await execFileAsync("pdftoppm", ["-png", pdfPath, prefix], {
+    maxBuffer: 8 * 1024 * 1024,
+    timeout: TIMEOUT_MS,
+  });
+  const names = (await readdir(dir))
+    .filter((n) => n.startsWith("page-") && n.endsWith(".png"))
+    .sort((a, b) => pdfPageIndex(a) - pdfPageIndex(b));
+  if (names.length === 0) {
+    throw new Error("pdftoppm produced no pages");
+  }
+  const parts = [];
+  for (const name of names) {
+    const { stdout } = await execFileAsync("tesseract", [join(dir, name), "stdout"], {
+      maxBuffer: 8 * 1024 * 1024,
+      timeout: TIMEOUT_MS,
+    });
+    parts.push(stdout);
+  }
+  return parts.join("\n");
+}
+
+/**
+ * Render-to-image OCR is the primary PDF blob. pdftotext -layout is fallback
+ * only when OCR/pdftoppm fails or returns empty — never concatenated into a
+ * successful OCR blob (column interleaving). Empty/failed extract is not a
+ * readable source (caller → UNKNOWN, never MISMATCH).
+ */
+export async function extractPdfText(buf) {
+  const dir = await mkdtemp(join(tmpdir(), "bd-pdf-"));
+  try {
+    const pdfPath = join(dir, "source.pdf");
+    await writeFile(pdfPath, Buffer.from(buf));
+
+    let ocrText = "";
+    let ocrError = null;
+    try {
+      ocrText = await ocrPdfPages(pdfPath, dir);
+    } catch (err) {
+      ocrError = `pdftoppm/tesseract: ${err.message}`;
+    }
+
+    if (!isBlankExtract(ocrText)) {
+      return { text: ocrText, instrument: "ocr" };
+    }
+
+    let layoutText = "";
+    let layoutError = null;
+    try {
+      const { stdout } = await execFileAsync("pdftotext", ["-layout", pdfPath, "-"], {
+        maxBuffer: 8 * 1024 * 1024,
+        timeout: TIMEOUT_MS,
+      });
+      layoutText = stdout;
+    } catch (err) {
+      layoutError = `pdftotext: ${err.message}`;
+    }
+
+    if (!isBlankExtract(layoutText)) {
+      return { text: layoutText, instrument: "pdftotext" };
+    }
+
+    return {
+      text: "",
+      instrument: "none",
+      error: ocrError || layoutError || "pdf extract empty",
+    };
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+  }
+}
+
 async function extractText(buf, url, contentType) {
   const kind = classifyUrl(url, contentType);
   if (kind === "html") {
@@ -332,22 +416,16 @@ async function extractText(buf, url, contentType) {
     return { kind, text: htmlToText(html), html };
   }
 
+  if (kind === "pdf") {
+    const pdf = await extractPdfText(buf);
+    return { kind, text: pdf.text, error: pdf.error };
+  }
+
   const dir = await mkdtemp(join(tmpdir(), "bd-check-"));
   try {
-    const ext = kind === "pdf" ? ".pdf" : guessImageExt(url, contentType);
+    const ext = guessImageExt(url, contentType);
     const path = join(dir, `source${ext}`);
     await writeFile(path, Buffer.from(buf));
-    if (kind === "pdf") {
-      try {
-        const { stdout } = await execFileAsync("pdftotext", ["-layout", path, "-"], {
-          maxBuffer: 8 * 1024 * 1024,
-          timeout: TIMEOUT_MS,
-        });
-        return { kind, text: stdout };
-      } catch (err) {
-        return { kind, text: "", error: `pdftotext: ${err.message}` };
-      }
-    }
     // image → tesseract
     try {
       const { stdout } = await execFileAsync("tesseract", [path, "stdout"], {

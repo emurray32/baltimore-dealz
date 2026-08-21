@@ -13674,6 +13674,102 @@
       "lat": 39.281662,
       "lon": -76.5899386,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "the-garden-rooftop",
+      "name": "The Garden Rooftop",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "411 N Paca Street, Baltimore, MD 21201",
+      "phone": "(443) 438-5125",
+      "source_url": "https://thegardenrooftop.com/restaurant/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live thegardenrooftop.com/restaurant/ HTTP 200; homepage HTTP 200: https://thegardenrooftop.com/ ; lounge HTTP 200: https://thegardenrooftop.com/thegaradenlounge/ (site typo, keep as official); /happy-hour /menu /events 404. Prices from the live-linked HH PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw / The Dara). Button still Happy Hour Menu → https://thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.png. Filename 4-25 is April 2025; it is still the live HH Menu button today. Live PNG today byte-identical vs 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m34/garden_hh.png; sha256 1d3d07f48a3ad79f9b6d132d4216674c05e9142777e62c0b307030fa49ecd077). Pin 411 N Paca Street, Baltimore, MD 21201 / restaurant (443) 438-5125. Office (410) 244-7068 and email info@thegardenrooftop.com stay in ops. Do not use the office phone as the pin. Census 39.2943384,-76.6223979. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not add Downtown to citywideOnly. Do not invent a /downtown page. Do not invent a view. Fells roster stays 20. Nominatim of 411 N Paca Street, Baltimore, MD 21201 is 39.2943384,-76.6223979 (display_name includes Downtown / Chinatown) — same point as the row. Hours today (restaurant): dinner Thu–Sat 4:00pm–11:00pm / Sun brunch 12:00pm–4:00pm + dinner 5:00pm–10:00pm. Closed Mon–Wed for restaurant service. Record hours in ops. Do not copy restaurant close 11pm (1380) or Sunday dinner 10pm (1320) onto a deal clock. Do not copy lounge-footer start 5pm (1020) or Live After 5 4–7 PM. Restaurant-page Bar Happy Hour: 4:00pm-8:00pm Thursday, lounge prose HAPPY HOUR — Every Thursday from 4–8 PM!, and the PNG header THURSDAY 4–8 all agree. Homepage THE GARDEN LOUNGE footer still prints Thursday / Happy Hour: 5:00pm-8:00pm — record that footer, do not pick it over the menu. Homepage also prints Live After 5 / Happy Hour vibes from 4–7 PM with no $ — stay off. Kitchen: 5:00pm-11:00pm — stay off. Quotes from the HH PNG today (visual read): Happy Hour · THURSDAY 4–8. THE GARDEN DROP 10. OLD FASHIONED 12. SANGRIA 10. PINK75 10. PEACH PLEASER 10. COCOMANIA 12. MARGARITA 10. CITRUS JERK WINGS 10. FRIED CATFISH BITES 10. BEEF SLIDERS 10. SHRIMP DEVILED EGGS 11. SWEET AND SPICY SHRIMP 10. VEGGIE EGG ROLL 10. MAC & CHEESE 8. HOOKAH / $40 REFILLS / $15. Keep printed names Pink75, Cocomania, Mac & Cheese. Extra descriptors after the drinks/apps stay in ops (may ride): THE GARDEN DROP — vodka Lemon Drop with a sugared rim. Crafted to your flavor choice strawberry/peach/mango/blueberry/lavender. OLD FASHIONED — whiskey, bitters, orange zest and a cherry. SANGRIA — Cabernet Sauvignon, Peach Schnapps, lemon and pineapple juice. PINK75 — a mix of gin, lemon juice, simple syrup, and Prosecco Rose', finished with a touch of pink. PEACH PLEASER — Peach Crown Royal, Orange Curaçao, peach purée ginger crystals splash of Sprite. COCOMANIA — Casamigos Blanco, Cream of Coconut pineapple juice orange bitters, mint leaves. MARGARITA — tequila, lime juice, simple syrup and triple sec. CITRUS JERK WINGS — 6 grilled wings marinated in a special blend of citrus juices and mild jerk spices. FRIED CATFISH BITES — cornmeal fried catfish bites with house made remoulade sauce. BEEF SLIDERS — 2 Juicy mini beef patties, cheddar cheese, lettuce & tomato, and our signature sauce. SHRIMP DEVILED EGGS — creamy deviled egg topped with shrimp. SWEET AND SPICY SHRIMP — crispy shrimp and sweet and spicy sauce. VEGGIE EGG ROLL — a blend of vegetables wrapped in a golden shell. MAC & CHEESE — our delicious homemade mac & cheese. Do not invent a hookah row. Stay off: hookah · dinner PDF TheGarden_Menu3_25.pdf · brunch PDF TheGarden_BrunchMenu_1-25.pdf · lounge footer 5–8 · kitchen 5–11 · Live After 5 4–7 · office phone as the pin. happy_hour true. days thu. start 960 · end 1200 · time_window 4pm-8pm. cats drink, wings, seafood/crab, sliders, small-plate/apps. notes_public omitted. No vibe. deal_format image (legal; pdf is not).",
+      "deal_format": "image",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "The Garden Drop",
+              "price": "$10"
+            },
+            {
+              "text": "Old Fashioned",
+              "price": "$12"
+            },
+            {
+              "text": "Sangria",
+              "price": "$10"
+            },
+            {
+              "text": "Pink75",
+              "price": "$10"
+            },
+            {
+              "text": "Peach Pleaser",
+              "price": "$10"
+            },
+            {
+              "text": "Cocomania",
+              "price": "$12"
+            },
+            {
+              "text": "Margarita",
+              "price": "$10"
+            },
+            {
+              "text": "Citrus Jerk Wings",
+              "price": "$10"
+            },
+            {
+              "text": "Fried Catfish Bites",
+              "price": "$10"
+            },
+            {
+              "text": "Beef Sliders",
+              "price": "$10"
+            },
+            {
+              "text": "Shrimp Deviled Eggs",
+              "price": "$11"
+            },
+            {
+              "text": "Sweet and Spicy Shrimp",
+              "price": "$10"
+            },
+            {
+              "text": "Veggie Egg Roll",
+              "price": "$10"
+            },
+            {
+              "text": "Mac & Cheese",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": 1200,
+          "time_window": "4pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://thegardenrooftop.com/restaurant/",
+          "proof_quote": "Happy Hour THURSDAY 4–8 THE GARDEN DROP 10 OLD FASHIONED 12 SANGRIA 10 PINK75 10 PEACH PLEASER 10 COCOMANIA 12 MARGARITA 10 CITRUS JERK WINGS 10 FRIED CATFISH BITES 10 BEEF SLIDERS 10 SHRIMP DEVILED EGGS 11 SWEET AND SPICY SHRIMP 10 VEGGIE EGG ROLL 10 MAC & CHEESE 8",
+          "food_categories": [
+            "drink",
+            "wings",
+            "seafood/crab",
+            "sliders",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2943384,
+      "lon": -76.6223979,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

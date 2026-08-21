@@ -2137,8 +2137,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Swallow at the Hollow) → 129 -> 130 / 151 -> 152.
   // 2026-08-21: leftover loadable (Taco Love Grill) → 130 -> 131 / 152 -> 153.
   // 2026-08-21: leftover loadable (The Dara) → 131 -> 132 / 153 -> 154.
-  assert.equal(showable, 132);
-  assert.equal(venues.length, 154);
+  // 2026-08-21: leftover loadable (The Garden Rooftop) → 132 -> 133 / 154 -> 155.
+  assert.equal(showable, 133);
+  assert.equal(venues.length, 155);
 });
 
 
@@ -7265,6 +7266,138 @@ test("The Dara joins 2026-08-21 (Fells Point / fells-point, everyday 4:30–6 HH
     "Fells Point must not fold into /locust-point",
   );
   assert.equal(bySlug["south-clifton-park"], undefined, "do not invent a south-clifton-park view");
+});
+
+test("The Garden Rooftop joins 2026-08-21 (Downtown / inner-harbor, Thursday 4–8 HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const garden = byId["the-garden-rooftop"];
+  assert.ok(garden, "the-garden-rooftop missing");
+  assert.deepEqual(venueShapeErrors(garden), []);
+  assert.equal(garden.name, "The Garden Rooftop");
+  assert.equal(garden.neighborhood, "Downtown");
+  assert.equal(
+    garden.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(garden.status, "verified");
+  assert.equal(garden.address, "411 N Paca Street, Baltimore, MD 21201");
+  assert.equal(garden.phone, "(443) 438-5125");
+  assert.equal(garden.source_url, "https://thegardenrooftop.com/restaurant/");
+  assert.equal(garden.source_type, "venue_website");
+  assert.equal(garden.last_verified, "2026-08-21");
+  assert.equal(garden.notes_public, undefined);
+  assert.equal(garden.deal_format, "image");
+  assert.equal(garden.lat, 39.2943384);
+  assert.equal(garden.lon, -76.6223979);
+  assert.equal(garden.deals.length, 1);
+  assert.match(garden.ops_notes ?? "", /Name=Downtown/);
+  assert.match(garden.ops_notes ?? "", /Already in \/inner-harbor/);
+  assert.match(garden.ops_notes ?? "", /Do not add Downtown to citywideOnly/);
+  assert.match(garden.ops_notes ?? "", /https:\/\/thegardenrooftop\.com\//);
+  assert.match(garden.ops_notes ?? "", /thegaradenlounge/);
+  assert.match(garden.ops_notes ?? "", /Happy Hour Menu/);
+  assert.match(garden.ops_notes ?? "", /Garden_HH_4-25\.png/);
+  assert.match(garden.ops_notes ?? "", /\/happy-hour \/menu \/events 404/);
+  assert.match(garden.ops_notes ?? "", /info@thegardenrooftop\.com/);
+  assert.match(garden.ops_notes ?? "", /\(410\) 244-7068/);
+  assert.match(garden.ops_notes ?? "", /4:00pm–11:00pm/);
+  assert.match(garden.ops_notes ?? "", /12:00pm–4:00pm/);
+  assert.match(garden.ops_notes ?? "", /5:00pm–10:00pm/);
+  assert.match(garden.ops_notes ?? "", /Closed Mon–Wed/);
+  assert.match(garden.ops_notes ?? "", /Bar Happy Hour: 4:00pm-8:00pm/);
+  assert.match(garden.ops_notes ?? "", /HAPPY HOUR — Every Thursday from 4–8 PM!/);
+  assert.match(garden.ops_notes ?? "", /Happy Hour: 5:00pm-8:00pm/);
+  assert.match(garden.ops_notes ?? "", /Live After 5/);
+  assert.match(garden.ops_notes ?? "", /4–7 PM/);
+  assert.match(garden.ops_notes ?? "", /1380/);
+  assert.match(garden.ops_notes ?? "", /1320/);
+  assert.match(garden.ops_notes ?? "", /1020/);
+  assert.match(garden.ops_notes ?? "", /HOOKAH/);
+  assert.match(garden.ops_notes ?? "", /TheGarden_Menu3_25\.pdf/);
+  assert.match(garden.ops_notes ?? "", /TheGarden_BrunchMenu_1-25\.pdf/);
+  assert.match(garden.ops_notes ?? "", /PINK75/);
+  assert.match(garden.ops_notes ?? "", /COCOMANIA/);
+  assert.match(garden.ops_notes ?? "", /MAC & CHEESE 8/);
+  assert.match(garden.ops_notes ?? "", /1d3d07f48a3ad79f9b6d132d4216674c05e9142777e62c0b307030fa49ecd077/);
+  assert.match(garden.ops_notes ?? "", /notes_public omitted/);
+  assert.match(garden.ops_notes ?? "", /deal_format image/);
+  assert.ok(
+    !garden.deals.some((d) => d.start === 1380 || d.end === 1380 || d.start === 1320 || d.end === 1320),
+    "do not copy restaurant close 11pm (1380) or Sunday dinner 10pm (1320) onto a deal clock",
+  );
+  assert.ok(
+    !garden.deals.some((d) => d.start === 1020 || d.end === 1020),
+    "do not copy lounge-footer start 5pm (1020) onto a deal clock",
+  );
+  assert.ok(
+    !garden.deals.some((d) => /5pm-8pm|4pm-7pm|4–7/i.test(d.time_window ?? "")),
+    "do not pick lounge footer 5–8 or Live After 5 4–7 over the HH menu 4–8",
+  );
+  assert.ok(
+    !garden.deals.some((d) => d.items.some((i) => /hookah/i.test(i.text))),
+    "do not invent a hookah row",
+  );
+  assert.ok(
+    garden.phone !== "(410) 244-7068" && garden.phone !== "410-244-7068",
+    "do not use the office phone as the pin",
+  );
+  assert.ok(
+    !/TheGarden_Menu3_25|TheGarden_BrunchMenu_1-25|hookah/i.test(garden.source_url),
+    "dinner/brunch PDFs and hookah stay off source_url",
+  );
+  assert.ok(
+    !garden.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+
+  const hh = garden.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["thu"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1200);
+  assert.equal(hh.time_window, "4pm-8pm");
+  assert.deepEqual(hh.food_categories, ["drink", "wings", "seafood/crab", "sliders", "small-plate/apps"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["The Garden Drop", "$10"],
+      ["Old Fashioned", "$12"],
+      ["Sangria", "$10"],
+      ["Pink75", "$10"],
+      ["Peach Pleaser", "$10"],
+      ["Cocomania", "$12"],
+      ["Margarita", "$10"],
+      ["Citrus Jerk Wings", "$10"],
+      ["Fried Catfish Bites", "$10"],
+      ["Beef Sliders", "$10"],
+      ["Shrimp Deviled Eggs", "$11"],
+      ["Sweet and Spicy Shrimp", "$10"],
+      ["Veggie Egg Roll", "$10"],
+      ["Mac & Cheese", "$8"],
+    ],
+  );
+  assert.match(hh.proof_quote, /Happy Hour/);
+  assert.match(hh.proof_quote, /THURSDAY 4–8/);
+  assert.match(hh.proof_quote, /THE GARDEN DROP 10/);
+  assert.match(hh.proof_quote, /PINK75 10/);
+  assert.match(hh.proof_quote, /COCOMANIA 12/);
+  assert.match(hh.proof_quote, /MAC & CHEESE 8/);
+  assert.doesNotMatch(hh.proof_quote, /HOOKAH/);
+  assert.doesNotMatch(hh.proof_quote, /Live After/);
+  assert.doesNotMatch(hh.proof_quote, /TheGarden_Menu/);
+
+  assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "the-garden-rooftop"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "the-garden-rooftop"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "the-garden-rooftop"),
+    "Downtown must not fold into /fells-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 20, "Fells roster pin stays 20");
+  assert.equal(bySlug.downtown, undefined, "do not invent a downtown view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

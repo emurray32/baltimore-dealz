@@ -2134,8 +2134,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Raffy's on 36th) → 127 -> 128 / 149 -> 150.
   // 2026-08-21: leftover loadable (Southpaw) → 128 -> 129 / 150 -> 151.
   // 2026-08-21: leftover loadable (Swallow at the Hollow) → 129 -> 130 / 151 -> 152.
-  assert.equal(showable, 130);
-  assert.equal(venues.length, 152);
+  // 2026-08-21: leftover loadable (Taco Love Grill) → 130 -> 131 / 152 -> 153.
+  assert.equal(showable, 131);
+  assert.equal(venues.length, 153);
 });
 
 
@@ -7040,6 +7041,115 @@ test("Swallow at the Hollow joins 2026-08-21 (Chinquapin Park citywide, all-day 
     "Chinquapin Park must not fold into /hampden",
   );
   assert.equal(bySlug["chinquapin-park"], undefined, "do not invent a chinquapin-park view");
+});
+
+test("Taco Love Grill joins 2026-08-21 (Locust Point / locust-point, Mon–Fri 3–5 McHenry Row HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const tlg = byId["taco-love-grill"];
+  assert.ok(tlg, "taco-love-grill missing");
+  assert.deepEqual(venueShapeErrors(tlg), []);
+  assert.equal(tlg.name, "Taco Love Grill");
+  assert.equal(tlg.neighborhood, "Locust Point");
+  assert.equal(
+    tlg.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(tlg.status, "verified");
+  assert.equal(tlg.address, "1724 Whetstone Way, Baltimore, MD 21230");
+  assert.equal(tlg.phone, "(443) 548-5032");
+  assert.equal(tlg.source_url, "https://www.tacolovegrill.com/events");
+  assert.equal(tlg.source_type, "venue_website");
+  assert.equal(tlg.last_verified, "2026-08-21");
+  assert.equal(tlg.notes_public, undefined);
+  assert.equal(tlg.deal_format, undefined);
+  assert.equal(tlg.lat, 39.268416);
+  assert.equal(tlg.lon, -76.600295);
+  assert.equal(tlg.deals.length, 1);
+  assert.match(tlg.ops_notes ?? "", /Name=Locust Point/);
+  assert.match(tlg.ops_notes ?? "", /Already in \/locust-point/);
+  assert.match(tlg.ops_notes ?? "", /Do not add Locust Point to citywideOnly/);
+  assert.match(tlg.ops_notes ?? "", /https:\/\/www\.tacolovegrill\.com\//);
+  assert.match(tlg.ops_notes ?? "", /Happy Hour McHenry Row Location/);
+  assert.match(tlg.ops_notes ?? "", /Monday thru Friday 3:00pm - 5:00pm/);
+  assert.match(tlg.ops_notes ?? "", /All House Margaritas \$10/);
+  assert.match(tlg.ops_notes ?? "", /Sangria \$10/);
+  assert.match(tlg.ops_notes ?? "", /All bottle beers \$4\.50/);
+  assert.match(tlg.ops_notes ?? "", /Mon–Thu 11:00–21:00/);
+  assert.match(tlg.ops_notes ?? "", /Fri–Sat 11:00–22:00/);
+  assert.match(tlg.ops_notes ?? "", /Sunday Closed/);
+  assert.match(tlg.ops_notes ?? "", /Mon–Thu 11–9/);
+  assert.match(tlg.ops_notes ?? "", /Fri–Sat 11–10/);
+  assert.match(tlg.ops_notes ?? "", /1260/);
+  assert.match(tlg.ops_notes ?? "", /1320/);
+  assert.match(tlg.ops_notes ?? "", /690\/1020/);
+  assert.match(tlg.ops_notes ?? "", /Happy Hour White Marsh Location/);
+  assert.match(tlg.ops_notes ?? "", /Wednesday Happy Hour ALL DAY/);
+  assert.match(tlg.ops_notes ?? "", /1065 S Charles St Suite 128/);
+  assert.match(tlg.ops_notes ?? "", /443-869-3400/);
+  assert.match(tlg.ops_notes ?? "", /Taco Tuesday/);
+  assert.match(tlg.ops_notes ?? "", /Federal Hill, near Cross Street Market/);
+  assert.match(tlg.ops_notes ?? "", /CHX Premium Kitchen/);
+  assert.match(tlg.ops_notes ?? "", /deal_format omitted/);
+  assert.match(tlg.ops_notes ?? "", /notes_public omitted/);
+  assert.ok(
+    !tlg.deals.some((d) => d.start === 690 || d.end === 690 || d.end === 1260 || d.end === 1320),
+    "do not copy White Marsh 11:30am (690) or restaurant close 9pm (1260) / 10pm (1320) onto a deal clock",
+  );
+  assert.ok(
+    !tlg.deals.some((d) => /taco tuesday|white marsh|all day/i.test(d.time_window ?? "")),
+    "do not copy White Marsh all-day or Taco Tuesday onto this row",
+  );
+  assert.ok(
+    !tlg.deals.some((d) => d.items.some((i) => /taco tuesday|white marsh/i.test(i.text))),
+    "White Marsh HH and Cross Street / Federal Hill Taco Tuesday stay off",
+  );
+  assert.ok(
+    tlg.phone !== "(443) 869-3400" && tlg.phone !== "443-869-3400",
+    "do not copy Cross Street / Federal Hill phone",
+  );
+  assert.ok(
+    !tlg.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+
+  const hh = tlg.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1020);
+  assert.equal(hh.time_window, "3pm-5pm");
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["All House Margaritas", "$10"],
+      ["Sangria", "$10"],
+      ["All bottle beers", "$4.50"],
+    ],
+  );
+  assert.match(hh.proof_quote, /Happy Hour McHenry Row Location/);
+  assert.match(hh.proof_quote, /Monday thru Friday 3:00pm - 5:00pm/);
+  assert.match(hh.proof_quote, /All House Margaritas \$10/);
+  assert.match(hh.proof_quote, /Sangria \$10/);
+  assert.match(hh.proof_quote, /All bottle beers \$4\.50/);
+  assert.doesNotMatch(hh.proof_quote, /White Marsh/);
+  assert.doesNotMatch(hh.proof_quote, /Taco Tuesday/);
+  assert.doesNotMatch(hh.proof_quote, /Cross Street/);
+
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "taco-love-grill"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "taco-love-grill"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "taco-love-grill"),
+    "Locust Point must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["federal-hill"]).some((v) => v.id === "taco-love-grill"),
+    "McHenry Row must not fold into /federal-hill",
+  );
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

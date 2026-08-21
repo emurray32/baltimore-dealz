@@ -13546,6 +13546,57 @@
       "lat": 39.3648514,
       "lon": -76.6097227,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "taco-love-grill",
+      "name": "Taco Love Grill",
+      "neighborhood": "Locust Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "1724 Whetstone Way, Baltimore, MD 21230",
+      "phone": "(443) 548-5032",
+      "source_url": "https://www.tacolovegrill.com/events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live tacolovegrill.com/events HTTP 200; homepage HTTP 200: https://www.tacolovegrill.com/ . Prices from the events block titled Happy Hour McHenry Row Location only. Pin 1724 Whetstone Way, Baltimore, MD 21230 / (443) 548-5032. Census 39.268416,-76.600295. CityView Neighborhoods MapServer/0 query today on that point: Name=Locust Point. Already in /locust-point. Do not add Locust Point to citywideOnly. Do not invent a view. Do not mix White Marsh or Cross Street / Federal Hill doors. Hours today (schema for 1724 Whetstone): Mon–Thu 11:00–21:00 · Fri–Sat 11:00–22:00. Census visible block still Sunday Closed · Mon–Thu 11–9 · Fri–Sat 11–10. Record both in ops. Date night is not this ticket — do not copy restaurant close 9pm (1260) or 10pm (1320) onto a deal clock. Do not copy White Marsh 11:30am-5:00pm (690/1020) or White Marsh Wednesday all-day onto this row. Quotes from the McHenry Row events block today: Happy Hour McHenry Row Location. Monday thru Friday 3:00pm - 5:00pm. All House Margaritas $10. Sangria $10. All bottle beers $4.50. Stay off: White Marsh HH (Happy Hour White Marsh Location · Monday, Tuesday and Thursday from 11:30am - 5:00pm · Wednesday Happy Hour ALL DAY!). Cross Street / Federal Hill (1065 S Charles St Suite 128, phone 443-869-3400). Events-page Taco Tuesday copy names Federal Hill / Cross Street Market — not this license: Taco Love Grill is nestled in the heart of Federal Hill, near Cross Street Market. Regular taco menu. Other-door phones. Nominatim of 1724 Whetstone Way is 39.2684160,-76.6002950 (display_name includes McHenry Row; previous tenant CHX Premium Kitchen) — same point as the row. happy_hour true. days mon, tue, wed, thu, fri. start 900 · end 1020 · time_window 3pm-5pm. cat drink. notes_public omitted. No vibe. deal_format omitted (pdf is illegal; only image is allowed).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "All House Margaritas",
+              "price": "$10"
+            },
+            {
+              "text": "Sangria",
+              "price": "$10"
+            },
+            {
+              "text": "All bottle beers",
+              "price": "$4.50"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.tacolovegrill.com/events",
+          "proof_quote": "Happy Hour McHenry Row Location Monday thru Friday 3:00pm - 5:00pm All House Margaritas $10 Sangria $10 All bottle beers $4.50",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.268416,
+      "lon": -76.600295,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

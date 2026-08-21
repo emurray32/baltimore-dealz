@@ -13770,6 +13770,45 @@
       "lat": 39.2943384,
       "lon": -76.6223979,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "the-hamilton-sports-bar",
+      "name": "The Hamilton Sports Bar & Grill",
+      "neighborhood": "Hamilton Hills",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "5506 Harford Road, Baltimore, MD 21214",
+      "phone": "(667) 239-3196",
+      "source_url": "https://thehamiltonsportsbarandgrill.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Until they run out; one order per person",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live thehamiltonsportsbarandgrill.com/ HTTP 200 in a browser (plain curl is Cloudflare 403). Toast-powered. /menu 404 (Toast Page Not Found | 404, HTTP 200 title). /happy-hour 404 (same). Record that View Happy Hour Menu still points at /menu. Pin 5506 Harford Road, Baltimore, MD 21214 / (667) 239-3196. Do not use 5517. Do not mix Hamilton Tavern at 5517 Harford (https://www.thehamiltontavern.com/ — different door). Census 39.3525939,-76.5614572. CityView Neighborhoods MapServer/0 query today on that point: Name=Hamilton Hills. Nominatim of 5506 Harford Road, Baltimore, MD 21214 is 39.3525939,-76.5614572 (display_name still Los Rancheros / Hamilton Hills / Hamilton) — previous-tenant name stays in ops; city Name=Hamilton Hills wins. Hamilton Hills has no home view — add Hamilton Hills to citywideOnly once. Do not invent a /hamilton-hills view. Do not invent a /hamilton page. Do not fold into /hampden. Do not add Hamilton (that NSA is Hamilton Tavern at 5517 — different door). Hours today (All hours dialog / Toast businessHours): Sunday 12:00PM–2:00AM · Monday–Saturday 4:00PM–2:00AM. Footer at check: Closed · Opens Friday at 4PM. Record hours in ops. Do not copy bar 2am (120), Monday open 4pm (960), or Sunday noon (720) onto a deal clock. Quotes from the homepage today (visible crab block): CRABS ARE BACK!!! Every Monday we got half dozen large and X-large, male and female crabs for $25! Starts at 7:30 and we go until we run out! First come first served. Limited to one order per person. Happy Hour Specials · $10 Top Shelf · $10 Food Specials · $7 Bottom Shelf · View Happy Hour Menu. Toast JSON still contains a Happy Hour card with Monday Through Friday / 4pm-8pm — record that string, do not pick it over the ticket; the visible $10/$7 block has no window and the menu URL 404s. Stay off: HH $10/$7 (prices, no window on that block; menu URL 404). Empty Toast groups Wing Wednesday / Wednesday Espolon Special. Hamilton Tavern 5517. happy_hour omit. days mon. start 1170 · end null · time_window 7:30pm. cat seafood/crab. Keep printed X-large. Do not invent a second row for male vs female. notes_public is required: Until they run out; one order per person. Venue-stated limits on the same homepage block. Window stays 7:30pm / end null. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /baltimore only. bySlug[hamilton-hills] undefined. bySlug.hamilton undefined. Not in /hampden. Not in /fells-point. Fells roster stays 20.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Half dozen large and X-large crabs, male and female",
+              "price": "$25"
+            }
+          ],
+          "start": 1170,
+          "end": null,
+          "time_window": "7:30pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://thehamiltonsportsbarandgrill.com/",
+          "proof_quote": "CRABS ARE BACK!!! Every Monday we got half dozen large and X-large, male and female crabs for $25! Starts at 7:30 and we go until we run out! First come first served. Limited to one order per person.",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.3525939,
+      "lon": -76.5614572,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

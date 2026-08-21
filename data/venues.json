@@ -13273,6 +13273,109 @@
       "lat": 39.2815455,
       "lon": -76.5909807,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "estiatorio-plaka",
+      "name": "Estiatorio Plaka",
+      "neighborhood": "Greektown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "4718 Eastern Ave, Baltimore, MD 21224",
+      "phone": "(443) 833-0330",
+      "source_url": "https://www.estiatorioplaka.com/menu?menu=happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "bar only",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live estiatorioplaka.com/menu?menu=happy-hour HTTP 200; homepage HTTP 200: https://www.estiatorioplaka.com/ ; hours-location HTTP 200: https://www.estiatorioplaka.com/hours-location . Pin 4718 Eastern Ave, Baltimore, MD 21224 / (443) 833-0330. Email info@estiatorioplaka.com stays in ops. License leftover name is Plaka Tavern — site name Estiatorio Plaka is the row. Census 39.28732,-76.555983. CityView Neighborhoods MapServer/0 query today on that point: Name=Greektown. Homepage does not print Greektown — city Name=Greektown wins. Greektown has no home view — add Greektown to citywideOnly once. Do not invent a /greektown view. Do not fold into /canton. Do not fold into /fells-point. Prices from the HH menu page. Window from homepage-embedded Instagram captions (Wix server-renders the caption text into the homepage HTML — venue-published copy on the venue’s own homepage, corroborated by the menu). Not a lone instagram.com caption. HH menu page today still has no clock of its own. Homepage captions today still print: Tuesday–Friday | 3–6 PM · Tuesday–Friday | 3–6 PM (bar only). Most restrictive caption wins: bar only. If the menu page ever prints its own window, that supersedes. Ops: shorter monitor leash on this one. Hours today (hours-location): Restaurant Mon closed · Tue–Thu 11:00 am – 9:00 pm · Fri–Sat 11:00 am – 10:00 pm · Sun 11:00 am – 9:00 pm. Bakery opens 9am, closed Mondays. Record hours in ops. Do not copy 9pm / 10pm onto a deal clock. Stay off: dated daily-specials PDF 81f56d_72feb268f3b145a58efa39ad40584357.pdf (CreationDate 2026-04-17, still live today — April 17–19 one-off, not weekly). Older graphic PDF 81f56d_fffe57ae9b3c4c07b5dfbc96da662968.pdf (CreationDate 2024-02-25). Lunch / dinner / brunch / winelist / beerlist menus. Do not invent a second row from the IG emoji price list — those prices match the HH menu. notes_public is required: bar only. Quote-matched from homepage IG captions. No vibe. This is the whole HH row — unlike Rec Pier, there is no second door that would mislabel.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Dollar Oysters",
+              "price": "$1"
+            },
+            {
+              "text": "Mini Gyros (2) with fries",
+              "price": "$11"
+            },
+            {
+              "text": "Classic Greek Salad",
+              "price": "$10"
+            },
+            {
+              "text": "Plaka Mezze Spreads",
+              "price": "$10"
+            },
+            {
+              "text": "Mini Chicken Skewer (2)",
+              "price": "$8"
+            },
+            {
+              "text": "Mini Pork Skewer (2)",
+              "price": "$8"
+            },
+            {
+              "text": "Wings 6PCS Spicy, Bbq, or Greek Style",
+              "price": "$10"
+            },
+            {
+              "text": "Zucchini Chips",
+              "price": "$10"
+            },
+            {
+              "text": "Mini Spinach & Cheese Pie",
+              "price": "$10"
+            },
+            {
+              "text": "Baked Feta Phyllo",
+              "price": "$10"
+            },
+            {
+              "text": "Fish Tacos",
+              "price": "$12"
+            },
+            {
+              "text": "Espresso Martinis",
+              "price": "$7"
+            },
+            {
+              "text": "All Draft Beers",
+              "price": "$3"
+            },
+            {
+              "text": "Wines by the Glass",
+              "price": "$6"
+            },
+            {
+              "text": "Bottle Beers",
+              "price": "$2"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.estiatorioplaka.com/menu?menu=happy-hour",
+          "proof_quote": "DOLLAR OYSTERS $1 MINI GYROS (2) with fries $11 CLASSIC GREEK SALAD Tomatoes, cucumber. red onions, olives, green peppers, feta, house extra virgin olive oil, and oregano. $10 PLAKA MEZZE SPREADS $10 MINI CHICKEN SKEWER (2) $8 MINI PORK SKEWER (2) $8 WINGS 6PCS Spicy, Bbq, or Greek Style $10 ZUCCHINI CHIPS $10 MINI SPINACH & CHEESE PIE $10 BAKED FETA PHYLLO $10 FISH TACOS $12 $7 ESPRESSO MARTINIS ALL DRAFT BEERS $3 WINES BY THE GLASS $6 BOTTLE BEERS $2",
+          "food_categories": [
+            "seafood/crab",
+            "small-plate/apps",
+            "wings",
+            "tacos",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.28732,
+      "lon": -76.555983,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

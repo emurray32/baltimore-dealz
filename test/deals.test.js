@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2126,8 +2126,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Alexander's Tavern Soha · Rec Pier Chop House) → 122 -> 124 / 144 -> 146.
   // 2026-08-21: leftover loadable (Pink Flamingo) → 124 -> 125 / 146 -> 147.
   // 2026-08-21: leftover loadable (Pitango Bakery) → 125 -> 126 / 147 -> 148.
-  assert.equal(showable, 126);
-  assert.equal(venues.length, 148);
+  // 2026-08-21: leftover loadable (Estiatorio Plaka) → 126 -> 127 / 148 -> 149.
+  assert.equal(showable, 127);
+  assert.equal(venues.length, 149);
 });
 
 
@@ -6614,6 +6615,113 @@ test("Pitango Bakery joins 2026-08-21 (Fells Point / fells-point, Spritz Fridays
 
   assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "pitango-bakery"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "pitango-bakery"));
+});
+
+test("Estiatorio Plaka joins 2026-08-21 (Greektown citywide; do not fold into canton/fells-point)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const plaka = byId["estiatorio-plaka"];
+  assert.ok(plaka, "estiatorio-plaka missing");
+  assert.deepEqual(venueShapeErrors(plaka), []);
+  assert.equal(plaka.name, "Estiatorio Plaka");
+  assert.equal(plaka.neighborhood, "Greektown");
+  assert.equal(
+    plaka.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(plaka.status, "verified");
+  assert.equal(plaka.address, "4718 Eastern Ave, Baltimore, MD 21224");
+  assert.equal(plaka.phone, "(443) 833-0330");
+  assert.equal(plaka.source_url, "https://www.estiatorioplaka.com/menu?menu=happy-hour");
+  assert.equal(plaka.source_type, "venue_website");
+  assert.equal(plaka.last_verified, "2026-08-21");
+  assert.equal(plaka.notes_public, "bar only");
+  assert.equal(plaka.deal_format, undefined);
+  assert.equal(plaka.lat, 39.28732);
+  assert.equal(plaka.lon, -76.555983);
+  assert.equal(plaka.deals.length, 1);
+  assert.match(plaka.ops_notes ?? "", /Name=Greektown/);
+  assert.match(plaka.ops_notes ?? "", /add Greektown to citywideOnly/i);
+  assert.match(plaka.ops_notes ?? "", /Do not invent a \/greektown/);
+  assert.match(plaka.ops_notes ?? "", /Do not fold into \/canton/);
+  assert.match(plaka.ops_notes ?? "", /Do not fold into \/fells-point/);
+  assert.match(plaka.ops_notes ?? "", /Homepage does not print Greektown/);
+  assert.match(plaka.ops_notes ?? "", /info@estiatorioplaka\.com/);
+  assert.match(plaka.ops_notes ?? "", /Plaka Tavern/);
+  assert.match(plaka.ops_notes ?? "", /estiatorioplaka\.com\/hours-location/);
+  assert.match(plaka.ops_notes ?? "", /no clock of its own/);
+  assert.match(plaka.ops_notes ?? "", /Tuesday–Friday \| 3–6 PM \(bar only\)/);
+  assert.match(plaka.ops_notes ?? "", /shorter monitor leash/);
+  assert.match(plaka.ops_notes ?? "", /11:00 am – 9:00 pm/);
+  assert.match(plaka.ops_notes ?? "", /11:00 am – 10:00 pm/);
+  assert.match(plaka.ops_notes ?? "", /Bakery opens 9am/);
+  assert.match(plaka.ops_notes ?? "", /Do not copy 9pm \/ 10pm/);
+  assert.match(plaka.ops_notes ?? "", /81f56d_72feb268f3b145a58efa39ad40584357\.pdf/);
+  assert.match(plaka.ops_notes ?? "", /CreationDate 2026-04-17/);
+  assert.match(plaka.ops_notes ?? "", /81f56d_fffe57ae9b3c4c07b5dfbc96da662968\.pdf/);
+  assert.match(plaka.ops_notes ?? "", /CreationDate 2024-02-25/);
+  assert.match(plaka.ops_notes ?? "", /Do not invent a second row from the IG emoji price list/);
+  assert.match(plaka.ops_notes ?? "", /notes_public is required/);
+  assert.ok(
+    !plaka.deals.some((d) => d.end === 1260 || d.end === 1320),
+    "do not copy restaurant close 9pm / 10pm or bakery 9pm onto a deal clock",
+  );
+  assert.ok(
+    !plaka.deals.some((d) => d.items.some((i) => /lunch|dinner|brunch|winelist|beerlist/i.test(i.text))),
+    "lunch / dinner / brunch / winelist / beerlist stay off",
+  );
+  assert.ok(
+    !/81f56d_72feb268|81f56d_fffe57ae/i.test(JSON.stringify(plaka.deals)),
+    "dated daily-specials PDF and older graphic PDF stay off deal rows",
+  );
+
+  const hh = plaka.deals.find((d) => d.happy_hour === true);
+  assert.ok(hh, "expected one happy_hour row");
+  assert.deepEqual(hh.days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "3pm-6pm");
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Dollar Oysters", "$1"],
+      ["Mini Gyros (2) with fries", "$11"],
+      ["Classic Greek Salad", "$10"],
+      ["Plaka Mezze Spreads", "$10"],
+      ["Mini Chicken Skewer (2)", "$8"],
+      ["Mini Pork Skewer (2)", "$8"],
+      ["Wings 6PCS Spicy, Bbq, or Greek Style", "$10"],
+      ["Zucchini Chips", "$10"],
+      ["Mini Spinach & Cheese Pie", "$10"],
+      ["Baked Feta Phyllo", "$10"],
+      ["Fish Tacos", "$12"],
+      ["Espresso Martinis", "$7"],
+      ["All Draft Beers", "$3"],
+      ["Wines by the Glass", "$6"],
+      ["Bottle Beers", "$2"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, [
+    "seafood/crab",
+    "small-plate/apps",
+    "wings",
+    "tacos",
+    "drink",
+  ]);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "estiatorio-plaka"));
+  assert.ok(
+    !venuesInView(venues, bySlug.canton).some((v) => v.id === "estiatorio-plaka"),
+    "Estiatorio Plaka must not fold into /canton",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "estiatorio-plaka"),
+    "Estiatorio Plaka must not fold into /fells-point",
+  );
+  assert.equal(bySlug.greektown, undefined, "do not invent a greektown view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

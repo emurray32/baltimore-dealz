@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2133,8 +2133,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Estiatorio Plaka) → 126 -> 127 / 148 -> 149.
   // 2026-08-21: leftover loadable (Raffy's on 36th) → 127 -> 128 / 149 -> 150.
   // 2026-08-21: leftover loadable (Southpaw) → 128 -> 129 / 150 -> 151.
-  assert.equal(showable, 129);
-  assert.equal(venues.length, 151);
+  // 2026-08-21: leftover loadable (Swallow at the Hollow) → 129 -> 130 / 151 -> 152.
+  assert.equal(showable, 130);
+  assert.equal(venues.length, 152);
 });
 
 
@@ -6924,6 +6925,121 @@ test("Southpaw joins 2026-08-21 (Fells Point / fells-point, $9 happy hour)", asy
 
   assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "southpaw"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "southpaw"));
+});
+
+test("Swallow at the Hollow joins 2026-08-21 (Chinquapin Park citywide, all-day Tue/Wed/Thu)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const swallow = byId["swallow-at-the-hollow"];
+  assert.ok(swallow, "swallow-at-the-hollow missing");
+  assert.deepEqual(venueShapeErrors(swallow), []);
+  assert.equal(swallow.name, "Swallow at the Hollow");
+  assert.equal(swallow.neighborhood, "Chinquapin Park");
+  assert.equal(
+    swallow.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(swallow.status, "verified");
+  assert.equal(swallow.address, "5921 York Road, Baltimore, MD 21212");
+  assert.equal(swallow.phone, "(410) 532-7542");
+  assert.equal(swallow.source_url, "https://www.thehollowbaltimore.com/");
+  assert.equal(swallow.source_type, "venue_website");
+  assert.equal(swallow.last_verified, "2026-08-21");
+  assert.equal(swallow.notes_public, "Kitchen closes 10pm Tue/Wed, 11pm Thu");
+  assert.equal(swallow.deal_format, undefined);
+  assert.equal(swallow.lat, 39.3648514);
+  assert.equal(swallow.lon, -76.6097227);
+  assert.equal(swallow.deals.length, 3);
+  assert.match(swallow.ops_notes ?? "", /Name=Chinquapin Park/);
+  assert.match(swallow.ops_notes ?? "", /add Chinquapin Park to citywideOnly/i);
+  assert.match(swallow.ops_notes ?? "", /Do not invent a \/chinquapin-park/);
+  assert.match(swallow.ops_notes ?? "", /Do not fold into \/mount-vernon/);
+  assert.match(swallow.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(swallow.ops_notes ?? "", /Homepage does not print Chinquapin Park/);
+  assert.match(swallow.ops_notes ?? "", /https:\/\/www\.thehollowbaltimore\.com\/view-our-menu\//);
+  assert.match(swallow.ops_notes ?? "", /Open 7 days a week 11am–2am|Open 7 days a week 11am – 2am/);
+  assert.match(swallow.ops_notes ?? "", /Sun – Wed: 11am – 10pm|Sun–Wed 11am–10pm/);
+  assert.match(swallow.ops_notes ?? "", /Thurs – Sat: 11am – 11pm|Thurs–Sat 11am–11pm/);
+  assert.match(swallow.ops_notes ?? "", /1320/);
+  assert.match(swallow.ops_notes ?? "", /1380/);
+  assert.match(swallow.ops_notes ?? "", /120/);
+  assert.match(swallow.ops_notes ?? "", /All Day Specials/);
+  assert.match(swallow.ops_notes ?? "", /20 Wings and Pitcher of Boh/);
+  assert.match(swallow.ops_notes ?? "", /Burger Special/);
+  assert.match(swallow.ops_notes ?? "", /Cheesesteaks or Meatball Subs/);
+  assert.match(swallow.ops_notes ?? "", /Swallow-Menu-11\.13\.24-Specials\.pdf/);
+  assert.match(swallow.ops_notes ?? "", /Front\.pdf/);
+  assert.match(swallow.ops_notes ?? "", /deal_format omitted/);
+  assert.match(swallow.ops_notes ?? "", /notes_public is required/);
+  assert.match(swallow.ops_notes ?? "", /Boh, not Natty Boh/);
+  assert.ok(
+    !swallow.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(
+    !swallow.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+  assert.ok(
+    swallow.deals.every((d) => d.start === null && d.end === null && d.time_window === "all day"),
+    "All Day Specials — start/end null, time_window all day",
+  );
+  assert.ok(
+    !swallow.deals.some((d) => d.end === 1320 || d.end === 1380 || d.end === 120 || d.start === 120),
+    "do not copy kitchen 10pm (1320) or 11pm (1380), or bar 2am (120), onto a deal clock",
+  );
+  assert.ok(
+    !swallow.deals.some((d) => d.items.some((i) => /natty/i.test(i.text))),
+    "keep printed names (Boh, not Natty Boh)",
+  );
+  assert.ok(
+    !swallow.deals.some((d) => d.items.some((i) => /^meatball/i.test(i.text))),
+    "do not invent a separate meatball row",
+  );
+  assert.ok(
+    !/Swallow-Menu-11\.13\.24/i.test(JSON.stringify(swallow.deals)),
+    "stale 11.13.24 specials PDF stays off deal rows",
+  );
+
+  const tue = swallow.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = swallow.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const thu = swallow.deals.find((d) => d.days.length === 1 && d.days[0] === "thu");
+  assert.ok(tue && wed && thu, "expected Tue / Wed / Thu all-day rows");
+
+  assert.deepEqual(tue.food_categories, ["wings", "drink"]);
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price ?? null]),
+    [["20 Wings and Pitcher of Boh", "$29.95"]],
+  );
+  assert.match(tue.proof_quote, /Tuesday – \$29\.95 20 Wings and Pitcher of Boh/);
+
+  assert.deepEqual(wed.food_categories, ["burger"]);
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price ?? null]),
+    [["Burger Special", "$9"]],
+  );
+  assert.match(wed.proof_quote, /Wednesday – \$9 Burger Special/);
+
+  assert.deepEqual(thu.food_categories, ["sandwich/cheesesteak"]);
+  assert.deepEqual(
+    thu.items.map((i) => [i.text, i.price ?? null]),
+    [["Cheesesteaks or Meatball Subs", "$9"]],
+  );
+  assert.match(thu.proof_quote, /Thursday – \$9 Cheesesteaks or Meatball Subs/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "swallow-at-the-hollow"));
+  assert.ok(
+    !venuesInView(venues, bySlug["mount-vernon"]).some((v) => v.id === "swallow-at-the-hollow"),
+    "Chinquapin Park must not fold into /mount-vernon",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "swallow-at-the-hollow"),
+    "Chinquapin Park must not fold into /hampden",
+  );
+  assert.equal(bySlug["chinquapin-park"], undefined, "do not invent a chinquapin-park view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

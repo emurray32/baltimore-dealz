@@ -430,7 +430,9 @@ a.venue-link:hover {
   text-transform: uppercase;
   color: var(--muted);
 }
-.board-search {
+.board-search,
+#request-spot-form input[type="text"],
+#request-spot-form textarea {
   font-family: inherit;
   font-size: .95rem;
   padding: .55rem .75rem;
@@ -442,7 +444,9 @@ a.venue-link:hover {
   max-width: 22rem;
   box-sizing: border-box;
 }
-.board-search:focus {
+.board-search:focus,
+#request-spot-form input[type="text"]:focus,
+#request-spot-form textarea:focus {
   outline: 2px solid var(--chip-bg);
   outline-offset: 2px;
 }
@@ -450,7 +454,8 @@ a.venue-link:hover {
   margin: 0 0 1rem;
   font-weight: 600;
 }
-#nearest-btn {
+#nearest-btn,
+#request-spot-form [type="submit"] {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: .7rem;
@@ -465,11 +470,33 @@ a.venue-link:hover {
   box-shadow: var(--shadow);
   transition: box-shadow .08s, transform .08s;
 }
-#nearest-btn:hover:not([disabled]) {
+#nearest-btn:hover:not([disabled]),
+#request-spot-form [type="submit"]:hover:not([disabled]) {
   box-shadow: none;
   transform: translate(4px, 4px);
 }
 #nearest-btn[disabled] { color: var(--muted); cursor: default; box-shadow: none; transform: none; }
+
+/* Request a spot — native Google Form POST at the bottom of every board. */
+#request-spot {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--ink);
+}
+#request-spot-form {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin: 0;
+}
+#request-spot-form textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+#request-spot-form [type="submit"] {
+  align-self: flex-start;
+  margin-top: .45rem;
+}
 
 /* ---- food filter ---- */
 .food-filter h2 { margin-top: 2rem; }

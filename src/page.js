@@ -489,6 +489,17 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
       ${week}
     </section>
   </main>
+  <footer id="request-spot">
+    <h2>Request a spot</h2>
+    <p class="meta">Know a Baltimore place with a weekly special we missed? Name it.</p>
+    <form id="request-spot-form" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdTbRA2t8U-7R5NLf6FgVnNySmdvjb7i-zqDlWclwlF0EdbcA/formResponse">
+      <label class="search-label" for="request-spot-name">Spot name</label>
+      <input id="request-spot-name" name="entry.554747133" type="text" required>
+      <label class="search-label" for="request-spot-note">Note (optional)</label>
+      <textarea id="request-spot-note" name="entry.813817545"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </footer>
   ${NEAREST_FIRST_SCRIPT}
   ${clientBits}
 </body>

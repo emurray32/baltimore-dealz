@@ -14070,6 +14070,46 @@
       "lat": 39.271774,
       "lon": -76.6022229,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "warehouse-cinemas-rotunda",
+      "name": "Warehouse Cinemas Rotunda",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "727 W 40th Street, Suite 104, Baltimore, MD 21211",
+      "phone": "(240) 422-8012",
+      "source_url": "https://rotunda.warehousecinemas.com/home/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "50% off any beverage from our one-of-a-kind self-serve tap wall",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live https://rotunda.warehousecinemas.com/home/ HTTP 200. /food-drink/ HTTP 200. Tap room https://www.warehousetaproom.com/ HTTP 200. Tap FAQ https://www.warehousetaproom.com/faq HTTP 200. /happy-hour /tappy-hour /faqs/ are Kickback Loading... stubs at HTTP 200 — record that, do not treat as a priced page. Pin 727 W 40th Street, Suite 104, Baltimore, MD 21211 / (240) 422-8012. License 711 West 40th stays in ops — do not use the 711 Nominatim (University of Maryland Urgent Care). Census Nominatim 39.3349005,-76.6311208. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Do not add Locust Point, Riverside, or Fells Point. Fells roster pin stays 21. Do not invent a /rotunda view. Hours today (record both, pick none): Tap room site Sun–Sat 11:00 AM - 11:00 PM. Cinema hours are showtime-dependent (not on the Kickback /faqs/ stub today). Do not copy tap-room 11pm (1380) or 11am (660), or cinema “10:30 AM – 11 PM” (630 / 1380), onto a deal clock. Quotes from the Rotunda homepage today: Tappy Hour · tappy / hour · 50% all alcohol - all wednesday. Quotes from the tap-room FAQ today: “Tappy Hour” every Wednesday all day long · 50% off any beverage from our one-of-a-kind self-serve tap wall. Stay off: Crazy 8 Wednesday (Every Wednesday through August 26th — dated summer promo; ticket $ is not food/drink). $7 Tuesdays / VIP Tuesdays (movie tickets). /food-drink/ regular Pour Wall (Perfect for a pre-movie Happy Hour is prose, not a window; Top Shelf Margarita $18 is regular). Other Warehouse Cinema doors (Frederick Towne Mall, Leitersburg). Keep homepage printed 50% all alcohol. Do not invent cocktail rows. happy_hour true. omit recurrence. cat drink. One row: wed start null / end null / time_window all day. notes_public is required: 50% off any beverage from our one-of-a-kind self-serve tap wall (Tap-room FAQ — so the card does not promise half-price bar cocktails). No vibe. Cinema FAQ “one drink per ID” was not on a fetchable page today (/faqs/ is a Loading stub) — record that in ops, do not invent the limit. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /hampden and /baltimore. Not in /fells-point. Not in /locust-point. bySlug.rotunda undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Woodberry Kitchen is not this ticket.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "50% all alcohol",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://rotunda.warehousecinemas.com/home/",
+          "proof_quote": "Tappy Hour tappy hour 50% all alcohol - all wednesday",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3349005,
+      "lon": -76.6311208,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

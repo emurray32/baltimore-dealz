@@ -185,6 +185,11 @@ test("build-static produces every view board + map + root redirects with deal ca
       if (sample) assert.match(board, new RegExp(escapeRegExp(escapeHtml(sample))));
     }
 
+    assert.match(board, /id="request-spot"/, `${view.slug} board missing request-a-spot box`);
+    assert.match(board, /id="request-spot-form"/, `${view.slug} board missing request-a-spot form`);
+    assert.doesNotMatch(map, /id="request-spot"/, `${view.slug} map must not include the board form`);
+    assert.doesNotMatch(map, /id="request-spot-form"/, `${view.slug} map must not include the board form`);
+
     assert.match(map, /BD_MAP_POINTS/);
     assert.match(map, /leaflet/);
     assert.match(map, new RegExp(escapeRegExp(view.label)));

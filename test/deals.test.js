@@ -4653,7 +4653,7 @@ test("La Calle joins 2026-08-21 (Fells Point, daily 4–6 HH, named eats and dri
   const hh = calle.deals[0];
   assert.deepEqual(hh.days, ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]);
   assert.equal(hh.start, 960);
-  assert.equal(hh.end, 1140);
+  assert.equal(hh.end, 1080);
   assert.equal(hh.time_window, "4pm-6pm");
   assert.equal(hh.happy_hour, true);
   assert.deepEqual(

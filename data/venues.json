@@ -13111,6 +13111,110 @@
       "lat": 39.2811103,
       "lon": -76.5919083,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "pink-flamingo",
+      "name": "Pink Flamingo",
+      "neighborhood": "Remington",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "300 W 30th St, Baltimore, MD 21211",
+      "phone": "(443) 449-5854",
+      "source_url": "https://pinkflamingobaltimore.com/menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live pinkflamingobaltimore.com/menu/ HTTP 200 (browser UA; bare curl 403); homepage HTTP 200 (browser UA; bare curl 403). Menu still links both deal PDFs: https://pinkflamingobaltimore.com/wp-content/uploads/2026/07/HappyHour2.pdf (CreationDate 2026-07-23) and https://pinkflamingobaltimore.com/wp-content/uploads/2026/05/M-W.Deals_-2.pdf (CreationDate 2026-05-08). Both PDFs today byte-identical vs 08-19 census copies (.scratch/census-2026-08-18/scans/batch_m27/flamingo_hh.pdf / flamingo_mw.pdf). Prices from the two PDFs, visual read (same flag as Empanada Lady / Marta / Octobar). Pin 300 W 30th St, Baltimore, MD 21211 / (443) 449-5854. Census 39.3231862,-76.623155. CityView Neighborhoods MapServer/0 query today on that point: Name=Remington. Homepage does not print Remington or Hampden — city Name=Remington wins. Remington has no home view — add Remington to citywideOnly once. Do not invent a /remington view. Do not fold into /hampden. Do not mix R.HOUSE (301 29th St, also Remington, no weekly $). Homepage / menu footer hours today: Dinner: 7 days a week 4pm-10pm · Brunch: Sat. & Sun. Only 11am-3pm · Bar: Sun. – Thurs. 10:30pm Last Call · Fri. & Sat. 11:30pm Last Call · Happy Hour: Mon. – Fri. 4-6pm. Record hours in ops. Footer 4–6 restates the HH PDF — the PDF is the source. Do not copy 10pm or last call onto a deal clock. Dinner opens 4pm, so All Day on this door is from open: 4pm-close. Do not write time_window all day. Quotes from the HH PDF today (visual read): Happy Hour / Monday - Friday / 4:00 – 6:00. Featured Cocktail / A revolving cocktail created by our bar team / $8. Happy Daiquiri / A classic daiquiri served up / $8. The Local / Two Maryland Originals: / Old Oriole Park Bohemian Lager / and a shot of Lyon Rum / $8. Beer & Wine Specials / $2 off all draft pints / $2 off all glasses of wine. Card copy for The Local (CoS 2026-08-19, still the printed beer today): The Local (Old Oriole Park Bohemian Lager + Lyon Rum shot). Do not write Natty Boh — Old Oriole Park Bohemian is Peabody Heights, a different beer. Quotes from the Mon/Wed PDF today (visual read): Monday & Wednesday / All Day Deals. Monday / Wing Night $10 / Mai Tai $9. Wednesday / $4 off All Burgers / with Fries. Monday and Wednesday have both the 4–6 HH row and the all-day row — ship both as printed. Stay off: regular dinner PDF PF-Menu-6-10.pdf · brunch PDF Brunch-Menu-6-20-26.pdf · spirits list Spirits-List-6.24.26.pdf. No weekly $ ticketed from those. deal_format omitted (pdf is not a legal value). notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Featured Cocktail",
+              "price": "$8"
+            },
+            {
+              "text": "Happy Daiquiri",
+              "price": "$8"
+            },
+            {
+              "text": "The Local (Old Oriole Park Bohemian Lager + Lyon Rum shot)",
+              "price": "$8"
+            },
+            {
+              "text": "$2 off all draft pints",
+              "price": "$2 off"
+            },
+            {
+              "text": "$2 off all glasses of wine",
+              "price": "$2 off"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://pinkflamingobaltimore.com/wp-content/uploads/2026/07/HappyHour2.pdf",
+          "proof_quote": "Happy Hour Monday - Friday 4:00 – 6:00 Featured Cocktail A revolving cocktail created by our bar team $8 Happy Daiquiri A classic daiquiri served up $8 The Local Two Maryland Originals: Old Oriole Park Bohemian Lager and a shot of Lyon Rum $8 Beer & Wine Specials $2 off all draft pints $2 off all glasses of wine",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Wing Night",
+              "price": "$10"
+            },
+            {
+              "text": "Mai Tai",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm-close",
+          "verified_date": "2026-08-21",
+          "source_url": "https://pinkflamingobaltimore.com/wp-content/uploads/2026/05/M-W.Deals_-2.pdf",
+          "proof_quote": "Monday & Wednesday All Day Deals Monday Wing Night $10 Mai Tai $9",
+          "food_categories": [
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$4 off All Burgers with Fries",
+              "price": "$4 off"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm-close",
+          "verified_date": "2026-08-21",
+          "source_url": "https://pinkflamingobaltimore.com/wp-content/uploads/2026/05/M-W.Deals_-2.pdf",
+          "proof_quote": "Monday & Wednesday All Day Deals Wednesday $4 off All Burgers with Fries",
+          "food_categories": [
+            "burger"
+          ]
+        }
+      ],
+      "lat": 39.3231862,
+      "lon": -76.623155,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

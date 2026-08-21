@@ -12378,6 +12378,264 @@
       "lat": 39.3673874,
       "lon": -76.6525059,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "nepenthe-brewing",
+      "name": "Nepenthe Brewing Co.",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "3626 Falls Road, Baltimore, MD 21211",
+      "phone": "(443) 438-4846",
+      "source_url": "https://www.nepenthebrewingco.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live nepenthebrewingco.com/happy-hour HTTP 200; homepage HTTP 200; events /blank-1 HTTP 200. HH graphic visual read today (WEB_HH MENU.png). Pin 3626 Falls Road, Baltimore, MD 21211 (license 3622-26 Falls) / (443) 438-4846 (homepage schema today; /hours-location and /contact-us still 404). Census 39.3314965,-76.6352889. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Structured hours today: no Monday · Tue/Wed/Thu 17:00–21:00 · Fri 17:00–22:00 · Sat 12:00–22:00 · Sun 12:00–17:00. Record hours in ops. Graphic advertises MON, WED, THURS 5PM-7PM — drop Monday (same shape as Rockwell). If they add Monday hours, the day comes back. Events page clocks today (agree, no extra $): MONDAYS Manic Mondays! All night specials + Happy Hour 5-7pm / TUESDAYS All Night Happy Hour / WEDNESDAYS Happy Hour 5-7 / THURSDAYS Happy Hour 5-7. Friday is not on the graphic — do not invent. D&D (first Tuesday) and Doodle Club (2nd & last Thursdays) stay off. Quotes from the HH graphic today (visual read): HAPPY HOUR / TUES ALL NIGHT! MON, WED, THURS 5PM-7PM. $7 Pint of the Day / House choice!. $9 Rail Drinks / House Mac 'n Cheese. $11 All Wine / Chips & Beer Cheese Queso. $13 Special Fries / Tater Totchos / Single Drive Thru Burger / Buffalo Chicken Sandwich / Crispy Tofu Sandwich. ADD FRIES TO ANY SANDWICH FOR $3!. Each price block applies to the drink and the food on that block. Keep printed names. Dietary v / vg marks stay in ops. Tuesday all night is the printed window: start 1020 · end null (open-to-close; bar opens 5pm). Do not copy Nepenthe's 9pm close onto a deal clock. notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Pint of the Day",
+              "price": "$7"
+            },
+            {
+              "text": "Rail drinks",
+              "price": "$9"
+            },
+            {
+              "text": "House Mac 'n Cheese",
+              "price": "$9"
+            },
+            {
+              "text": "All wine",
+              "price": "$11"
+            },
+            {
+              "text": "Chips & Beer Cheese Queso",
+              "price": "$11"
+            },
+            {
+              "text": "Special fries",
+              "price": "$13"
+            },
+            {
+              "text": "Tater Totchos",
+              "price": "$13"
+            },
+            {
+              "text": "Single Drive Thru Burger",
+              "price": "$13"
+            },
+            {
+              "text": "Buffalo Chicken Sandwich",
+              "price": "$13"
+            },
+            {
+              "text": "Crispy Tofu Sandwich",
+              "price": "$13"
+            },
+            {
+              "text": "Add fries to any sandwich",
+              "price": "$3"
+            }
+          ],
+          "start": 1020,
+          "end": null,
+          "time_window": "all night",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.nepenthebrewingco.com/happy-hour",
+          "proof_quote": "HAPPY HOUR TUES ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day House choice! $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich ADD FRIES TO ANY SANDWICH FOR $3!",
+          "food_categories": [
+            "drink",
+            "burger",
+            "sandwich/cheesesteak",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Pint of the Day",
+              "price": "$7"
+            },
+            {
+              "text": "Rail drinks",
+              "price": "$9"
+            },
+            {
+              "text": "House Mac 'n Cheese",
+              "price": "$9"
+            },
+            {
+              "text": "All wine",
+              "price": "$11"
+            },
+            {
+              "text": "Chips & Beer Cheese Queso",
+              "price": "$11"
+            },
+            {
+              "text": "Special fries",
+              "price": "$13"
+            },
+            {
+              "text": "Tater Totchos",
+              "price": "$13"
+            },
+            {
+              "text": "Single Drive Thru Burger",
+              "price": "$13"
+            },
+            {
+              "text": "Buffalo Chicken Sandwich",
+              "price": "$13"
+            },
+            {
+              "text": "Crispy Tofu Sandwich",
+              "price": "$13"
+            },
+            {
+              "text": "Add fries to any sandwich",
+              "price": "$3"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.nepenthebrewingco.com/happy-hour",
+          "proof_quote": "HAPPY HOUR TUES ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day House choice! $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich ADD FRIES TO ANY SANDWICH FOR $3!",
+          "food_categories": [
+            "drink",
+            "burger",
+            "sandwich/cheesesteak",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3314965,
+      "lon": -76.6352889,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "octobar",
+      "name": "Octobar",
+      "neighborhood": "South Baltimore",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "1400 Light Street, Baltimore, MD 21230",
+      "phone": "443-438-7599",
+      "source_url": "https://octobarbaltimore.com/happy-hour-3/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live octobarbaltimore.com/happy-hour-3/ HTTP 200; homepage HTTP 200. HH graphic visual read today (/wp-content/uploads/2026/04/Happy-Hour-red.png). Pin 1400 Light Street, Baltimore, MD 21230 / 443-438-7599. Census 39.2741273,-76.6121847. CityView Neighborhoods MapServer/0 query today on that point: Name=South Baltimore. Already in /federal-hill (views.json neighborhoods: Federal Hill + South Baltimore; Hair of the Dog / AJ's / Delia's already ship that way). Do not add South Baltimore to citywideOnly. Do not invent a /south-baltimore page. Do not fold into /locust-point. Census batch 26 \"Octobar citywide-only\" is stale — live view map wins. Nominatim still labels the door Row House Grille (previous tenant) — city Name=South Baltimore wins; previous-tenant name stays in ops. Homepage hours today: Monday Closed · Tue 4:00 pm - 10:00 pm · Wed 4:00 pm - 10:00 pm · Thu 4:00 pm - 11:00 pm · Fri 4:00 pm - 2:00 am · Sat 11:00 am - 2:00 am · Sun 11:00 am - 10:00 pm · Sat/Sun brunch 11:00 am - 4:00 pm. Record hours in ops. Do not copy Friday 2am onto the HH clock. Homepage footer still prints Happy Hour Monday through Friday 4:00 pm - 7:00 pm and contradicts it (Closed Mondays in the nav, Monday Closed in the hours block). The HH graphic itself already says 4 to 7 - Tuesday to Friday. Load Tue–Fri from the graphic. Stale homepage Mon–Fri line stays in ops so the monitor rechecks it. Not the Rockwell/Nepenthe shape (those ads named a closed day). Quotes from the HH graphic today (visual read): HAPPY HOUR / 4 to 7 - Tuesday to Friday. COCKTAILS, BEER, & WINE. $5 Sangrias, Wine, Draft and Prosecco. $7 Margarita Bar (all flavors). $7 Crushes (all flavors). $8 Specialty Cocktail of the Day. $22 All Bottles of Wine. TAPAS - 8 · Grilled Chicken Kabab · Smoked Salmon Bruschetta · Mediterranean Meatballs Shakshuka · Grilled Chicken Pita Pizza · Spinach Pies with Feta · Grape Leaves stuffed with rice · Cheese Ravioli · Firecracker Shrimp. TAPAS - 6 · Papas Bravas · 5 Pan con tomate · Grilled Street Corn · Warm Olives · Deviled Eggs of the Day (4 pieces). Extra descriptors after the dashes on the graphic (over Mediterranean couscous, tzatziki, etc.) stay in ops. Stay off: Taco Tuesday graphic (no $) · Pasta Night graphic (\"every Thursday,\" no $) · Game Day Orioles graphic (event-contingent). notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Sangrias, wine, draft and Prosecco",
+              "price": "$5"
+            },
+            {
+              "text": "Margarita Bar (all flavors)",
+              "price": "$7"
+            },
+            {
+              "text": "Crushes (all flavors)",
+              "price": "$7"
+            },
+            {
+              "text": "Specialty Cocktail of the Day",
+              "price": "$8"
+            },
+            {
+              "text": "All bottles of wine",
+              "price": "$22"
+            },
+            {
+              "text": "Grilled Chicken Kabab",
+              "price": "$8"
+            },
+            {
+              "text": "Smoked Salmon Bruschetta",
+              "price": "$8"
+            },
+            {
+              "text": "Mediterranean Meatballs Shakshuka",
+              "price": "$8"
+            },
+            {
+              "text": "Grilled Chicken Pita Pizza",
+              "price": "$8"
+            },
+            {
+              "text": "Spinach Pies with Feta",
+              "price": "$8"
+            },
+            {
+              "text": "Grape Leaves stuffed with rice",
+              "price": "$8"
+            },
+            {
+              "text": "Cheese Ravioli",
+              "price": "$8"
+            },
+            {
+              "text": "Firecracker Shrimp",
+              "price": "$8"
+            },
+            {
+              "text": "Papas Bravas",
+              "price": "$6"
+            },
+            {
+              "text": "5 Pan con tomate",
+              "price": "$6"
+            },
+            {
+              "text": "Grilled Street Corn",
+              "price": "$6"
+            },
+            {
+              "text": "Warm Olives",
+              "price": "$6"
+            },
+            {
+              "text": "Deviled Eggs of the Day (4 pieces)",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://octobarbaltimore.com/happy-hour-3/",
+          "proof_quote": "HAPPY HOUR 4 to 7 - Tuesday to Friday COCKTAILS, BEER, & WINE $5 Sangrias, Wine, Draft and Prosecco $7 Margarita Bar (all flavors) $7 Crushes (all flavors) $8 Specialty Cocktail of the Day $22 All Bottles of Wine TAPAS - 8 Grilled Chicken Kabab Smoked Salmon Bruschetta Mediterranean Meatballs Shakshuka Grilled Chicken Pita Pizza Spinach Pies with Feta Grape Leaves stuffed with rice Cheese Ravioli Firecracker Shrimp TAPAS - 6 Papas Bravas 5 Pan con tomate Grilled Street Corn Warm Olives Deviled Eggs of the Day (4 pieces)",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2741273,
+      "lon": -76.6121847,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

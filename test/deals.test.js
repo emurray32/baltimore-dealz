@@ -2120,8 +2120,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Valentino's · Wet City) → 112 -> 114 / 134 -> 136.
   // 2026-08-21: leftover loadable (Tabor · Marta · Maryland Yards · McCormick & Schmick's) → 114 -> 118 / 136 -> 140.
   // 2026-08-21: leftover loadable (Midlina · Mt. Washington Tavern) → 118 -> 120 / 140 -> 142.
-  assert.equal(showable, 120);
-  assert.equal(venues.length, 142);
+  // 2026-08-21: leftover loadable (Nepenthe Brewing · Octobar) → 120 -> 122 / 142 -> 144.
+  assert.equal(showable, 122);
+  assert.equal(venues.length, 144);
 });
 
 
@@ -5905,6 +5906,202 @@ test("Mt. Washington Tavern joins 2026-08-21 (Mount Washington citywide, 3–6 H
     "Mount Washington must not fold into /hampden",
   );
   assert.equal(bySlug["mount-washington"], undefined, "do not invent a mount-washington view");
+});
+
+test("Nepenthe Brewing joins 2026-08-21 (Hampden / hampden, Tue all-night + Wed/Thu 5–7; Monday dropped)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const nep = byId["nepenthe-brewing"];
+  assert.ok(nep, "nepenthe-brewing missing");
+  assert.deepEqual(venueShapeErrors(nep), []);
+  assert.equal(nep.name, "Nepenthe Brewing Co.");
+  assert.equal(nep.neighborhood, "Hampden");
+  assert.equal(
+    nep.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(nep.status, "verified");
+  assert.equal(nep.address, "3626 Falls Road, Baltimore, MD 21211");
+  assert.equal(nep.phone, "(443) 438-4846");
+  assert.equal(nep.source_url, "https://www.nepenthebrewingco.com/happy-hour");
+  assert.equal(nep.source_type, "venue_website");
+  assert.equal(nep.last_verified, "2026-08-21");
+  assert.equal(nep.notes_public, undefined);
+  assert.equal(nep.lat, 39.3314965);
+  assert.equal(nep.lon, -76.6352889);
+  assert.equal(nep.deals.length, 2);
+  assert.match(nep.ops_notes ?? "", /Name=Hampden/);
+  assert.match(nep.ops_notes ?? "", /Already in \/hampden/);
+  assert.match(nep.ops_notes ?? "", /Do not add Hampden to citywideOnly/);
+  assert.match(nep.ops_notes ?? "", /3622-26 Falls/);
+  assert.match(nep.ops_notes ?? "", /WEB_HH MENU\.png/);
+  assert.match(nep.ops_notes ?? "", /no Monday/);
+  assert.match(nep.ops_notes ?? "", /17:00–21:00/);
+  assert.match(nep.ops_notes ?? "", /17:00–22:00/);
+  assert.match(nep.ops_notes ?? "", /12:00–22:00/);
+  assert.match(nep.ops_notes ?? "", /12:00–17:00/);
+  assert.match(nep.ops_notes ?? "", /drop Monday/);
+  assert.match(nep.ops_notes ?? "", /Manic Mondays! All night specials \+ Happy Hour 5-7pm/);
+  assert.match(nep.ops_notes ?? "", /TUESDAYS All Night Happy Hour/);
+  assert.match(nep.ops_notes ?? "", /Doodle Club/);
+  assert.match(nep.ops_notes ?? "", /D&D/);
+  assert.match(nep.ops_notes ?? "", /Friday is not on the graphic/);
+  assert.match(nep.ops_notes ?? "", /Dietary v \/ vg/);
+  assert.match(nep.ops_notes ?? "", /Do not copy Nepenthe's 9pm close/);
+  assert.match(nep.ops_notes ?? "", /\/hours-location and \/contact-us still 404/);
+  assert.ok(
+    !nep.deals.some((d) => d.days.includes("mon") || d.days.includes("fri") || d.days.includes("sat") || d.days.includes("sun")),
+    "do not invent a Monday Nepenthe row or ship Friday/weekend",
+  );
+  assert.ok(
+    !nep.deals.some((d) => d.end === 1260 || d.end === 1320),
+    "do not copy Nepenthe's 9pm (or 10pm Friday) close onto a deal clock",
+  );
+
+  const items = [
+    ["Pint of the Day", "$7"],
+    ["Rail drinks", "$9"],
+    ["House Mac 'n Cheese", "$9"],
+    ["All wine", "$11"],
+    ["Chips & Beer Cheese Queso", "$11"],
+    ["Special fries", "$13"],
+    ["Tater Totchos", "$13"],
+    ["Single Drive Thru Burger", "$13"],
+    ["Buffalo Chicken Sandwich", "$13"],
+    ["Crispy Tofu Sandwich", "$13"],
+    ["Add fries to any sandwich", "$3"],
+  ];
+  const cats = ["drink", "burger", "sandwich/cheesesteak", "small-plate/apps"];
+
+  const tue = nep.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wedThu = nep.deals.find((d) => d.days.length === 2 && d.days[0] === "wed");
+  assert.ok(tue && wedThu, "expected Tuesday all-night + Wed/Thu 5–7");
+
+  assert.equal(tue.start, 1020);
+  assert.equal(tue.end, null);
+  assert.equal(tue.time_window, "all night");
+  assert.equal(tue.happy_hour, true);
+  assert.deepEqual(tue.items.map((i) => [i.text, i.price ?? null]), items);
+  assert.deepEqual(tue.food_categories, cats);
+
+  assert.deepEqual(wedThu.days, ["wed", "thu"]);
+  assert.equal(wedThu.start, 1020);
+  assert.equal(wedThu.end, 1140);
+  assert.equal(wedThu.time_window, "5pm-7pm");
+  assert.equal(wedThu.happy_hour, true);
+  assert.deepEqual(wedThu.items.map((i) => [i.text, i.price ?? null]), items);
+  assert.deepEqual(wedThu.food_categories, cats);
+
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "nepenthe-brewing"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "nepenthe-brewing"));
+});
+
+test("Octobar joins 2026-08-21 (South Baltimore / federal-hill, Tue–Fri 4–7; Taco/Pasta/Game Day off)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const octo = byId.octobar;
+  assert.ok(octo, "octobar missing");
+  assert.deepEqual(venueShapeErrors(octo), []);
+  assert.equal(octo.name, "Octobar");
+  assert.equal(octo.neighborhood, "South Baltimore");
+  assert.equal(
+    octo.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(octo.status, "verified");
+  assert.equal(octo.address, "1400 Light Street, Baltimore, MD 21230");
+  assert.equal(octo.phone, "443-438-7599");
+  assert.equal(octo.source_url, "https://octobarbaltimore.com/happy-hour-3/");
+  assert.equal(octo.source_type, "venue_website");
+  assert.equal(octo.last_verified, "2026-08-21");
+  assert.equal(octo.notes_public, undefined);
+  assert.equal(octo.lat, 39.2741273);
+  assert.equal(octo.lon, -76.6121847);
+  assert.equal(octo.deals.length, 1);
+  assert.match(octo.ops_notes ?? "", /Name=South Baltimore/);
+  assert.match(octo.ops_notes ?? "", /Already in \/federal-hill/);
+  assert.match(octo.ops_notes ?? "", /Do not add South Baltimore to citywideOnly/);
+  assert.match(octo.ops_notes ?? "", /Do not invent a \/south-baltimore/);
+  assert.match(octo.ops_notes ?? "", /Do not fold into \/locust-point/);
+  assert.match(octo.ops_notes ?? "", /citywide-only/);
+  assert.match(octo.ops_notes ?? "", /Row House Grille/);
+  assert.match(octo.ops_notes ?? "", /Monday Closed/);
+  assert.match(octo.ops_notes ?? "", /4:00 pm - 10:00 pm/);
+  assert.match(octo.ops_notes ?? "", /4:00 pm - 11:00 pm/);
+  assert.match(octo.ops_notes ?? "", /4:00 pm - 2:00 am/);
+  assert.match(octo.ops_notes ?? "", /11:00 am - 2:00 am/);
+  assert.match(octo.ops_notes ?? "", /11:00 am - 10:00 pm/);
+  assert.match(octo.ops_notes ?? "", /11:00 am - 4:00 pm/);
+  assert.match(octo.ops_notes ?? "", /Do not copy Friday 2am/);
+  assert.match(octo.ops_notes ?? "", /Monday through Friday 4:00 pm - 7:00 pm/);
+  assert.match(octo.ops_notes ?? "", /Closed Mondays/);
+  assert.match(octo.ops_notes ?? "", /4 to 7 - Tuesday to Friday/);
+  assert.match(octo.ops_notes ?? "", /Happy-Hour-red\.png/);
+  assert.match(octo.ops_notes ?? "", /TAPAS - 8/);
+  assert.match(octo.ops_notes ?? "", /TAPAS - 6/);
+  assert.match(octo.ops_notes ?? "", /tomate/);
+  assert.match(octo.ops_notes ?? "", /Taco Tuesday/);
+  assert.match(octo.ops_notes ?? "", /Pasta Night/);
+  assert.match(octo.ops_notes ?? "", /Game Day Orioles/);
+  assert.ok(
+    !octo.deals.some((d) => d.days.includes("mon") || d.days.includes("sat") || d.days.includes("sun")),
+    "do not ship Monday or weekend from the stale homepage Mon–Fri line",
+  );
+  assert.ok(
+    !octo.deals.some((d) =>
+      d.items.some((i) => /taco tuesday|pasta night|orioles|game day/i.test(i.text)),
+    ),
+    "Taco Tuesday / Pasta Night / Game Day stay off",
+  );
+  assert.ok(
+    !octo.deals.some((d) => d.end === 1500 || d.end === 1560 || d.end === 120 || d.end === 60),
+    "do not copy Friday 2am onto the HH clock",
+  );
+
+  const hh = octo.deals[0];
+  assert.deepEqual(hh.days, ["tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "4pm-7pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Sangrias, wine, draft and Prosecco", "$5"],
+      ["Margarita Bar (all flavors)", "$7"],
+      ["Crushes (all flavors)", "$7"],
+      ["Specialty Cocktail of the Day", "$8"],
+      ["All bottles of wine", "$22"],
+      ["Grilled Chicken Kabab", "$8"],
+      ["Smoked Salmon Bruschetta", "$8"],
+      ["Mediterranean Meatballs Shakshuka", "$8"],
+      ["Grilled Chicken Pita Pizza", "$8"],
+      ["Spinach Pies with Feta", "$8"],
+      ["Grape Leaves stuffed with rice", "$8"],
+      ["Cheese Ravioli", "$8"],
+      ["Firecracker Shrimp", "$8"],
+      ["Papas Bravas", "$6"],
+      ["5 Pan con tomate", "$6"],
+      ["Grilled Street Corn", "$6"],
+      ["Warm Olives", "$6"],
+      ["Deviled Eggs of the Day (4 pieces)", "$6"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink", "small-plate/apps"]);
+
+  assert.ok(venuesInView(venues, bySlug["federal-hill"]).some((v) => v.id === "octobar"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "octobar"));
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "octobar"),
+    "Octobar must not fold into /locust-point",
+  );
+  assert.equal(bySlug["south-baltimore"], undefined, "do not invent a south-baltimore view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

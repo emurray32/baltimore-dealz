@@ -1697,14 +1697,17 @@ test("seed food_categories: every deal tagged; Claddagh multi-rows still pinned"
     // research; neither is required, so this rule simply does not apply.
     if (deal.prices_published === false && isDealRenderable(deal)) continue;
     // Whole-menu % off / prix-fixe spanning the menu is not one vocab tag
-    // (Don Tigre census remainder; Gertrude's leftover loadable; Indigma thaali).
+    // (Don Tigre census remainder; Gertrude's leftover loadable; Indigma thaali;
+    // Raffy's Thursday date night).
     if (
       (venue.id === "don-tigre" &&
         deal.items.some((i) => i.text === "18% off on the whole menu")) ||
       (venue.id === "gertrudes" &&
         deal.items.some((i) => i.text === "$20 Dinners" || i.text === "$36 3-Course Dinner")) ||
       (venue.id === "indigma" &&
-        deal.items.some((i) => i.text === "Thaali $16.95"))
+        deal.items.some((i) => i.text === "Thaali $16.95")) ||
+      (venue.id === "raffys-on-36th" &&
+        deal.items.some((i) => i.text === "Share a meal, a drink, and conversation for $45 for the two of you"))
     ) {
       assert.equal(deal.food_categories, undefined);
       continue;
@@ -2127,8 +2130,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Pink Flamingo) → 124 -> 125 / 146 -> 147.
   // 2026-08-21: leftover loadable (Pitango Bakery) → 125 -> 126 / 147 -> 148.
   // 2026-08-21: leftover loadable (Estiatorio Plaka) → 126 -> 127 / 148 -> 149.
-  assert.equal(showable, 127);
-  assert.equal(venues.length, 149);
+  // 2026-08-21: leftover loadable (Raffy's on 36th) → 127 -> 128 / 149 -> 150.
+  assert.equal(showable, 128);
+  assert.equal(venues.length, 150);
 });
 
 
@@ -6722,6 +6726,102 @@ test("Estiatorio Plaka joins 2026-08-21 (Greektown citywide; do not fold into ca
     "Estiatorio Plaka must not fold into /fells-point",
   );
   assert.equal(bySlug.greektown, undefined, "do not invent a greektown view");
+});
+
+test("Raffy's on 36th joins 2026-08-21 (Hampden / hampden, Thursday date night)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const raffy = byId["raffys-on-36th"];
+  assert.ok(raffy, "raffys-on-36th missing");
+  assert.deepEqual(venueShapeErrors(raffy), []);
+  assert.equal(raffy.name, "Raffy's on 36th");
+  assert.equal(raffy.neighborhood, "Hampden");
+  assert.equal(
+    raffy.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(raffy.status, "verified");
+  assert.equal(raffy.address, "1115 W. 36th Street, Baltimore, MD 21211");
+  assert.equal(raffy.phone, "(443) 216-9445");
+  assert.equal(raffy.source_url, "https://www.raffyson36th.com/specials-events");
+  assert.equal(raffy.source_type, "venue_website");
+  assert.equal(raffy.last_verified, "2026-08-21");
+  assert.equal(raffy.notes_public, undefined);
+  assert.equal(raffy.deal_format, undefined);
+  assert.equal(raffy.lat, 39.3308259);
+  assert.equal(raffy.lon, -76.6342993);
+  assert.equal(raffy.deals.length, 1);
+  assert.match(raffy.ops_notes ?? "", /Name=Hampden/);
+  assert.match(raffy.ops_notes ?? "", /Already in \/hampden/);
+  assert.match(raffy.ops_notes ?? "", /Do not add Hampden to citywideOnly/);
+  assert.match(raffy.ops_notes ?? "", /events@raffyson36th\.com/);
+  assert.match(raffy.ops_notes ?? "", /License leftover name is Raffy's/);
+  assert.match(raffy.ops_notes ?? "", /https:\/\/www\.raffyson36th\.com\//);
+  assert.match(raffy.ops_notes ?? "", /\/specials 404/);
+  assert.match(raffy.ops_notes ?? "", /4:30PM-9PM/);
+  assert.match(raffy.ops_notes ?? "", /4:30PM-9:30PM/);
+  assert.match(raffy.ops_notes ?? "", /12PM-10PM/);
+  assert.match(raffy.ops_notes ?? "", /4:30PM-10PM vs specials 12PM-10PM/);
+  assert.match(raffy.ops_notes ?? "", /Tuesday-Friday from 4:30pm-6:30pm/);
+  assert.match(raffy.ops_notes ?? "", /times only, no \$/);
+  assert.match(raffy.ops_notes ?? "", /Toast/);
+  assert.match(raffy.ops_notes ?? "", /Instagram/);
+  assert.match(raffy.ops_notes ?? "", /990\/1290/);
+  assert.match(raffy.ops_notes ?? "", /990\/1110/);
+  assert.match(raffy.ops_notes ?? "", /1260/);
+  assert.match(raffy.ops_notes ?? "", /1320/);
+  assert.match(raffy.ops_notes ?? "", /notes_public omitted/);
+  assert.match(raffy.ops_notes ?? "", /omit food_categories/);
+  assert.match(raffy.ops_notes ?? "", /Gertrude's Thursday/);
+  assert.ok(
+    !raffy.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.food_categories !== undefined),
+    "prix-fixe assortment — omit food_categories",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.time_window !== undefined),
+    "no clock of its own — omit time_window (do not write all day or all night)",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.start === 990 || d.end === 1290 || d.end === 1110 || d.end === 1260 || d.end === 1320),
+    "do not copy Thursday hours 4:30PM-9:30PM, HH 4:30-6:30, Tuesday 9PM, or Friday 10PM onto a deal clock",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.items.some((i) => /vibe/i.test(i.text))),
+    "do not copy vibe onto the card",
+  );
+  assert.ok(
+    !raffy.deals.some((d) => d.items.some((i) => /happy hour|4:30pm-6:30pm/i.test(i.text))),
+    "Tuesday–Friday HH 4:30–6:30 stays off",
+  );
+
+  const dateNight = raffy.deals[0];
+  assert.deepEqual(dateNight.days, ["thu"]);
+  assert.equal(dateNight.start, null);
+  assert.equal(dateNight.end, null);
+  assert.equal(dateNight.time_window, undefined);
+  assert.equal(dateNight.happy_hour, undefined);
+  assert.equal(dateNight.food_categories, undefined, "prix-fixe assortment — same class as Gertrude's Thursday / Indigma thaali");
+  assert.equal(dateNight.recurrence, undefined);
+  assert.deepEqual(
+    dateNight.items.map((i) => [i.text, i.price ?? null]),
+    [["Share a meal, a drink, and conversation for $45 for the two of you", "$45"]],
+  );
+  assert.match(dateNight.items[0].text, /for the two of you/);
+  assert.ok(!raffy.deals.some((d) => d.time_window === "all day" || d.time_window === "all night"));
+
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "raffys-on-36th"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "raffys-on-36th"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

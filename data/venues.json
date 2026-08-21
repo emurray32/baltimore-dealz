@@ -13376,6 +13376,40 @@
       "lat": 39.28732,
       "lon": -76.555983,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "raffys-on-36th",
+      "name": "Raffy's on 36th",
+      "neighborhood": "Hampden",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "1115 W. 36th Street, Baltimore, MD 21211",
+      "phone": "(443) 216-9445",
+      "source_url": "https://www.raffyson36th.com/specials-events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live raffyson36th.com/specials-events HTTP 200; homepage HTTP 200: https://www.raffyson36th.com/ . /specials 404. Pin 1115 W. 36th Street, Baltimore, MD 21211 / (443) 216-9445. Email events@raffyson36th.com stays in ops. License leftover name is Raffy's — site name Raffy's on 36th is the row. Census 39.3308259,-76.6342993. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Do not invent a view. Prices and the Thursday claim from the specials-events page, not Toast and not Instagram. Hours today (specials-events): Monday Closed · Tuesday 4:30PM-9PM · Wednesday & Thursday 4:30PM-9:30PM · Friday & Saturday 12PM-10PM · Sunday 12PM-9PM. Homepage Hours of Operation Friday start still differs (4:30PM-10PM vs specials 12PM-10PM); homepage Saturday 11:45AM-10PM / Sunday 11:45AM-9PM. Record both in ops. Date night is Thursday — do not copy the Friday mismatch onto a clock. Do not copy Thursday hours 4:30PM–9:30PM (990/1290) onto a deal clock. Do not copy HH 4:30pm-6:30pm (990/1110). Do not copy Tuesday 9PM (1260) or Friday 10PM (1320). Quotes from specials-events today: Happy Hour at Raffy’s Served Tuesday-Friday from 4:30pm-6:30pm and featuring our delicious wood-fired cooked appetizers, draft beer and wine, and select cocktails. — times only, no $. Stay off. Thursday Date Nights The perfect deal and vibe for a night out with a friend or special someone. Share a meal, a drink, and conversation for your next Thursday evening. All of that for just $45 for the two of you! Stay off: Tuesday–Friday HH 4:30–6:30 (no $). Instagram drink $. Toast order / gift-card / rewards links. Regular dinner menu. Do not invent a second row from “vibe.” happy_hour omit. omit time_window. omit food_categories (prix-fixe assortment — same class as Gertrude's Thursday / Indigma thaali). omit recurrence. notes_public omitted. No vibe on the card. Do not write all day or all night.",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Share a meal, a drink, and conversation for $45 for the two of you",
+              "price": "$45"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.raffyson36th.com/specials-events",
+          "proof_quote": "Share a meal, a drink, and conversation for your next Thursday evening. All of that for just $45 for the two of you!"
+        }
+      ],
+      "lat": 39.3308259,
+      "lon": -76.6342993,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

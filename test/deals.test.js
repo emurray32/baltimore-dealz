@@ -1898,7 +1898,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 17);
+  assert.equal(inView.length, 18);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
@@ -1909,6 +1909,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
       "la-calle",
       "maxs-taphouse",
       "papis-taco-joint-fells",
+      "pitango-bakery",
       "rec-pier-chop-house",
       "rye-of-baltimore",
       "stuggys",
@@ -2124,8 +2125,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Nepenthe Brewing · Octobar) → 120 -> 122 / 142 -> 144.
   // 2026-08-21: leftover loadable (Alexander's Tavern Soha · Rec Pier Chop House) → 122 -> 124 / 144 -> 146.
   // 2026-08-21: leftover loadable (Pink Flamingo) → 124 -> 125 / 146 -> 147.
-  assert.equal(showable, 125);
-  assert.equal(venues.length, 147);
+  // 2026-08-21: leftover loadable (Pitango Bakery) → 125 -> 126 / 147 -> 148.
+  assert.equal(showable, 126);
+  assert.equal(venues.length, 148);
 });
 
 
@@ -6506,6 +6508,112 @@ test("Pink Flamingo joins 2026-08-21 (Remington citywide; do not fold into hampd
     "Pink Flamingo must not fold into /hampden",
   );
   assert.equal(bySlug.remington, undefined, "do not invent a remington view");
+});
+
+test("Pitango Bakery joins 2026-08-21 (Fells Point / fells-point, Spritz Fridays + Bottles & Boards)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const pit = byId["pitango-bakery"];
+  assert.ok(pit, "pitango-bakery missing");
+  assert.deepEqual(venueShapeErrors(pit), []);
+  assert.equal(pit.name, "Pitango Bakery");
+  assert.equal(pit.neighborhood, "Fells Point");
+  assert.equal(
+    pit.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(pit.status, "verified");
+  assert.equal(pit.address, "903 S Ann Street, Baltimore, MD 21231");
+  assert.equal(pit.phone, "(443) 676-6447");
+  assert.equal(pit.source_url, "https://www.pitangogelato.com/events");
+  assert.equal(pit.source_type, "venue_website");
+  assert.equal(pit.last_verified, "2026-08-21");
+  assert.equal(pit.notes_public, undefined);
+  assert.equal(pit.deal_format, undefined);
+  assert.equal(pit.lat, 39.2815455);
+  assert.equal(pit.lon, -76.5909807);
+  assert.equal(pit.deals.length, 2);
+  assert.match(pit.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(pit.ops_notes ?? "", /Already in \/fells-point/);
+  assert.match(pit.ops_notes ?? "", /Do not add Fells Point to citywideOnly/);
+  assert.match(pit.ops_notes ?? "", /pitangogelato\.com\/pitango-bakery/);
+  assert.match(pit.ops_notes ?? "", /7 am - 9 pm/);
+  assert.match(pit.ops_notes ?? "", /7am - 10pm/);
+  assert.match(pit.ops_notes ?? "", /Do not copy 9pm \/ 10pm/);
+  assert.match(pit.ops_notes ?? "", /Every Friday/);
+  assert.match(pit.ops_notes ?? "", /every Wednesday/);
+  assert.match(pit.ops_notes ?? "", /Fri Jul 18, 2025/);
+  assert.match(pit.ops_notes ?? "", /Fri Apr 9, 2027/);
+  assert.match(pit.ops_notes ?? "", /Tue Aug 5, 2025/);
+  assert.match(pit.ops_notes ?? "", /Wed Mar 31, 2027/);
+  assert.match(pit.ops_notes ?? "", /6:00 PM/);
+  assert.match(pit.ops_notes ?? "", /end 1200, not 1080/);
+  assert.match(pit.ops_notes ?? "", /802 S Broadway/);
+  assert.match(pit.ops_notes ?? "", /\(410\) 236-0741/);
+  assert.match(pit.ops_notes ?? "", /fells-point-gelato/);
+  assert.match(pit.ops_notes ?? "", /Adams Morgan/);
+  assert.match(pit.ops_notes ?? "", /Locally Sourced Comedy/);
+  assert.match(pit.ops_notes ?? "", /omit recurrence/);
+  assert.match(pit.ops_notes ?? "", /notes_public omitted/);
+  assert.ok(
+    !pit.deals.some((d) => d.recurrence),
+    "weekly Every Friday / every Wednesday — omit recurrence",
+  );
+  assert.ok(
+    !pit.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(
+    !pit.deals.some((d) => d.end === 1080),
+    "do not copy Squarespace ICS 6:00 PM onto Friday end",
+  );
+  assert.ok(
+    !pit.deals.some((d) => d.end === 1260 || d.end === 1320),
+    "do not copy bakery close 9pm / 10pm onto a deal clock",
+  );
+  assert.ok(
+    !pit.deals.some((d) => d.items.some((i) => /comedy|Locally Sourced/i.test(i.text))),
+    "Locally Sourced Comedy stays off",
+  );
+  assert.ok(
+    !/802 S Broadway|fells-point-gelato/i.test(JSON.stringify(pit.deals)),
+    "do not mix Fells Point Gelato",
+  );
+
+  const fri = pit.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  const wed = pit.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  assert.ok(fri && wed, "expected Friday spritz + Wednesday bottles");
+
+  assert.deepEqual(fri.days, ["fri"]);
+  assert.equal(fri.start, 1020);
+  assert.equal(fri.end, 1200);
+  assert.equal(fri.time_window, "5pm-8pm");
+  assert.deepEqual(
+    fri.items.map((i) => [i.text, i.price ?? null]),
+    [
+      [
+        "$1 off seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style",
+        "$1 off",
+      ],
+    ],
+  );
+  assert.deepEqual(fri.food_categories, ["drink"]);
+
+  assert.deepEqual(wed.days, ["wed"]);
+  assert.equal(wed.start, 1020);
+  assert.equal(wed.end, 1230);
+  assert.equal(wed.time_window, "5pm-8:30pm");
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price ?? null]),
+    [["50% off all wine bottles with a purchase of a charcuterie board", "50% off"]],
+  );
+  assert.deepEqual(wed.food_categories, ["drink"]);
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "pitango-bakery"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "pitango-bakery"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

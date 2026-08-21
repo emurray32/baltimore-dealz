@@ -13215,6 +13215,64 @@
       "lat": 39.3231862,
       "lon": -76.623155,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "pitango-bakery",
+      "name": "Pitango Bakery",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "903 S Ann Street, Baltimore, MD 21231",
+      "phone": "(443) 676-6447",
+      "source_url": "https://www.pitangogelato.com/events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live pitangogelato.com/events HTTP 200; bakery page HTTP 200: https://www.pitangogelato.com/pitango-bakery . Pin 903 S Ann Street, Baltimore, MD 21231 / (443) 676-6447. Census 39.2815455,-76.5909807. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Prices and clocks from the events page body, not the gelato shop and not the Squarespace ICS chrome. Do not mix doors. Fells Point Gelato (https://www.pitangogelato.com/fells-point-gelato, 802 S Broadway, (410) 236-0741) is a different shop — live gelato page today has no spritz/wine $. DC/VA doors (Adams Morgan, Fourteenth Street, Old Town, Penn Quarter, Reston, The Wharf) stay off. Hours today (bakery page): Sunday – Thursday: 7 am - 9 pm · Friday - Saturday: 7am - 10pm. Record hours in ops. Do not copy 9pm / 10pm onto a deal clock. Quotes from the events page today: SPRITZ FRIDAYS | Pitango Bakery, Fells Point. Spritz Fridays! Every Friday from 5-8pm, enjoy $1 off our seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style! Calendar range Fri Jul 18, 2025 → Fri Apr 9, 2027. BOTTLES & BOARDS | Pitango Bakery, Fells Point. In honor of Wine Wednesday, every Wednesday from 5-8:30pm we will be offering 50% off all wine bottles with a purchase of a charcuterie board! Calendar range Tue Aug 5, 2025 → Wed Mar 31, 2027. Weekly, not ordinal — body prints Every Friday / every Wednesday; omit recurrence (that field is for first/second/fourth). Do not copy recurrence: fourth from Locally Sourced Comedy (every 4th Friday, FREE — stay off). Record the 2025–2027 calendar ranges in ops. Squarespace chrome on Spritz Fridays also prints Fri, Apr 9, 2027 6:00 PM — that 6pm is series metadata. The deal window is the body 5-8pm → end 1200, not 1080. Stay off: Locally Sourced Comedy · dated live-music listings · floral / Eventbrite workshops · daily menu · evening menu · gelato shop. happy_hour omit. notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 off seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style",
+              "price": "$1 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1200,
+          "time_window": "5pm-8pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.pitangogelato.com/events",
+          "proof_quote": "Spritz Fridays! Every Friday from 5-8pm, enjoy $1 off our seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style!",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "50% off all wine bottles with a purchase of a charcuterie board",
+              "price": "50% off"
+            }
+          ],
+          "start": 1020,
+          "end": 1230,
+          "time_window": "5pm-8:30pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.pitangogelato.com/events",
+          "proof_quote": "In honor of Wine Wednesday, every Wednesday from 5-8:30pm we will be offering 50% off all wine bottles with a purchase of a charcuterie board!",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2815455,
+      "lon": -76.5909807,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

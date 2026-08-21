@@ -10540,6 +10540,366 @@
       "lat": 39.3286352,
       "lon": -76.6171728,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+    },
+    {
+      "id": "ibar",
+      "name": "iBar",
+      "neighborhood": "Charles North",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "2118 Maryland Avenue, Baltimore, MD 21218",
+      "phone": "443-759-6147",
+      "source_url": "https://www.ibarbaltimore.com/charles-village-happy-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Friday is listed as Ladies' Night.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live ibarbaltimore.com/charles-village-happy-hour/ HTTP 200. Pin 2118 Maryland Avenue / 443-759-6147. Census 39.3137520,-76.6184290. CityView Neighborhoods MapServer/0 query today on that point: Name=Charles North. Site self-describes Charles Village / Station North; City Name wins. Already in /station-north. Hours on that page: Sunday Football Season: 12:00pm – 12:00am / Sunday: 5:00pm – 12:00am / Monday – Thursday: 11:00am – 12:00am / Friday: 11:00am – 2:00am / Saturday: 1:00pm – 2:00am. Record both Sunday lines; do not copy hours onto the deal clock. Tuesday quote keeps Heinekins: 2 Amstel or Heinekins for 5.00 / 2 Rail mixed drinks for 6.00. Wednesday – Wingsday 1/2 Price wings and discounted Long Island Iced Tea 8-10pm. (Eat in only! w/valid College ID) — college-ID gated. Do not ship. Saturday – College Night Dollar Natty Boh’s and Rolling Rocks w/college ID. — college-ID gated. Do not ship.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "2 Amstel or Heineken $5",
+              "price": "$5"
+            },
+            {
+              "text": "2 rail mixed drinks $6",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.ibarbaltimore.com/charles-village-happy-hour/",
+          "proof_quote": "Tuesday – 2 'Fers 2 Amstel or Heinekins for 5.00 2 Rail mixed drinks for 6.00",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$5 burgers",
+              "price": "$5"
+            },
+            {
+              "text": "$2.50 Yuengling pints",
+              "price": "$2.50"
+            }
+          ],
+          "start": 1200,
+          "end": 1320,
+          "time_window": "8pm-10pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.ibarbaltimore.com/charles-village-happy-hour/",
+          "proof_quote": "Thursday – Burger Night 5.00 Burgers and 2.50 Yuengling pints 8-10pm",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 Cosmos",
+              "price": "$5"
+            },
+            {
+              "text": "1/2 price salads",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": 1440,
+          "time_window": "until midnight",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.ibarbaltimore.com/charles-village-happy-hour/",
+          "proof_quote": "Friday – Ladies' Night 5.00 Cosmos and 1/2 price salads until midnight!",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.313752,
+      "lon": -76.618429,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "indigma",
+      "name": "Indigma",
+      "neighborhood": "Mid-Town Belvedere",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "900 Cathedral Street, Baltimore, Maryland 21201",
+      "phone": "(443) 449-6483",
+      "source_url": "https://www.indigmabistro.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live indigmabistro.com HTTP 200. Hours today on indigmamd.com (HTTP 200): Mon: Closed / Tue - Sun: 5:00 PM - 9:00 PM. Record in ops; do not copy onto the deal clock. Pin 900 Cathedral Street / (443) 449-6483. Census 39.2997892,-76.6174262. CityView Neighborhoods MapServer/0 query today on that point: Name=Mid-Town Belvedere. Already in /mount-vernon. indigmabistro.com quotes: Thaali / Saturdays & Sundays / Assortment veg and non-veg Thalis with many items served at your table side. / Sat & Sun: $16.95. Martini / Tuesdays & Thursdays / Specials on signature martinis — no $. Do not ship. Wine / Wednesdays / Specials on selected wine bottles — no $. Do not ship. Restaurant Week is a one-off. Do not ship. Prix-fixe assortment — omit food_categories (same class as Gertrude's Thursday). Do not invent brunch or all day.",
+      "deals": [
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Thaali $16.95",
+              "price": "$16.95"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.indigmabistro.com/",
+          "proof_quote": "Thaali Saturdays & Sundays Assortment veg and non-veg Thalis with many items served at your table side. Sat & Sun: $16.95"
+        }
+      ],
+      "lat": 39.2997892,
+      "lon": -76.6174262,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "johnny-rads",
+      "name": "Johnny Rad's Pizzeria Tavern",
+      "neighborhood": "Upper Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "2108 Eastern Avenue, Baltimore, Maryland 21231",
+      "phone": "443-759-6464",
+      "source_url": "https://johnnyrads.com/daily-stuff",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Monday $14 large pies are dine-in only, with a drink. Friday–Saturday late-night BOGO cans/bottles is dine-in only.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live johnnyrads.com/daily-stuff HTTP 200. Phone 443-759-6464 and 2108 Eastern Avenue, Baltimore, Maryland 21231 from homepage today (HTTP 200). Census 39.2859477,-76.5866822. CityView Neighborhoods MapServer/0 query today on that point: Name=Upper Fells Point. Upper Fells Point has no home view — already in citywideOnly. Do not invent a /upper-fells-point view. Do not fold into /fells-point. Quotes: Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm / $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks. Every Monday, all 16\" Large Pies are $14 w/ purchase of a drink. DINE IN ONLY. Calendar time 4PM - 10PM. Every Friday & Saturday Night from 10pm til 12 Midnight, we do Late Night Happy Hours with BOGO select Cans & Bottles along with a couple fo... — caption still truncates. Do not invent the cut-off food line. DINE IN ONLY. on the Monday pie line; notes_public covers late-night dine-in as ticketed.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$1.50 off all draft beers",
+              "price": "$1.50 off"
+            },
+            {
+              "text": "$5 glasses of wine",
+              "price": "$5"
+            },
+            {
+              "text": "$4 rail drinks",
+              "price": "$4"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://johnnyrads.com/daily-stuff",
+          "proof_quote": "Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1.50 off all draft beers",
+              "price": "$1.50 off"
+            },
+            {
+              "text": "$5 glasses of wine",
+              "price": "$5"
+            },
+            {
+              "text": "$4 rail drinks",
+              "price": "$4"
+            }
+          ],
+          "start": 720,
+          "end": 1140,
+          "time_window": "12pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://johnnyrads.com/daily-stuff",
+          "proof_quote": "Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$14 large 16\" pies with drink purchase",
+              "price": "$14"
+            }
+          ],
+          "start": 960,
+          "end": 1320,
+          "time_window": "4pm-10pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://johnnyrads.com/daily-stuff",
+          "proof_quote": "Every Monday, all 16\" Large Pies are $14 w/ purchase of a drink. DINE IN ONLY.",
+          "food_categories": [
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "BOGO select cans & bottles",
+              "price": "BOGO"
+            }
+          ],
+          "start": 1320,
+          "end": 1440,
+          "time_window": "10pm-12am",
+          "verified_date": "2026-08-21",
+          "source_url": "https://johnnyrads.com/daily-stuff",
+          "proof_quote": "Every Friday & Saturday Night from 10pm til 12 Midnight, we do Late Night Happy Hours with BOGO select Cans & Bottles along with a couple fo...",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2859477,
+      "lon": -76.5866822,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "kechy-pizza",
+      "name": "Kechy Pizza Co",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "207 E Redwood St, Baltimore, MD 21202",
+      "phone": "(443) 977-4244",
+      "source_url": "https://www.kechypizza.com/baltimore",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live kechypizza.com/baltimore HTTP 200. Also live kechypizza.com/specials-events-baltimore HTTP 200: Daily 4-7pm / $5 starters / $6 cocktails / $2 Natty Boh draft. Pin 207 E Redwood St / (443) 977-4244. Census 39.2888132,-76.6144056. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not invent a /downtown page. Westminster is a different door — do not mix. Baltimore page: G.O.A.T. HAPPY HOUR — DAILY 4–7PM / $5 starters / $6 cocktails / Red sangria on tap / $2 Natty Boh draft. Keep G.O.A.T. Site does not put a $ on sangria — do not invent one.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$5 starters",
+              "price": "$5"
+            },
+            {
+              "text": "$6 cocktails",
+              "price": "$6"
+            },
+            {
+              "text": "$2 Natty Boh draft",
+              "price": "$2"
+            },
+            {
+              "text": "red sangria on tap"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.kechypizza.com/baltimore",
+          "proof_quote": "G.O.A.T. HAPPY HOUR — DAILY 4–7PM $5 starters $6 cocktails Red sangria on tap $2 Natty Boh draft",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2888132,
+      "lon": -76.6144056,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "bo-american-brasserie",
+      "name": "B&O American Brasserie",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "2 North Charles Street, Baltimore, Maryland, 21201",
+      "phone": "443-692-6172",
+      "source_url": "https://bandorestaurant.com/events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live bandorestaurant.com/events HTTP 200. Pin 2 North Charles Street, Baltimore, Maryland, 21201 / 443-692-6172. Census 39.2897899,-76.6155584. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Hotel page brands The Morely at the same address with no $ and no clock — do not mix. Live: Stop in Monday - Friday from 4:30 p.m.- 6:30 p.m. / $3 Select Beer / $4 Sparkling and House Wines / $5 Cocktail of the Day / Pair those with our culinary team's signature bar snacks and flatbreads. Same page footer: Happy Hour Daily 4pm - 6pm — no $. Conflict. Record both clocks; do not pick one. Prices attach only to the weekday sentence — ship that row only. Do not add a times-only second row. Stay off: neighbor-gated 10% off lunch (Hey Neighbor!). $20 Power Lunch has no days. Magnum mimosas Sat–Sun have no $.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 select beer",
+              "price": "$3"
+            },
+            {
+              "text": "$4 sparkling and house wines",
+              "price": "$4"
+            },
+            {
+              "text": "$5 cocktail of the day",
+              "price": "$5"
+            },
+            {
+              "text": "bar snacks and flatbreads"
+            }
+          ],
+          "start": 990,
+          "end": 1110,
+          "time_window": "4:30pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://bandorestaurant.com/events",
+          "proof_quote": "Stop in Monday - Friday from 4:30 p.m.- 6:30 p.m. $3 Select Beer $4 Sparkling and House Wines $5 Cocktail of the Day Pair those with our culinary team's signature bar snacks and flatbreads",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2897899,
+      "lon": -76.6155584,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
   ]
 }

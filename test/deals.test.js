@@ -1901,7 +1901,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 20);
+  assert.equal(inView.length, 21);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
@@ -1924,6 +1924,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
       "the-point-in-fells",
       "the-rockwell-fells",
       "todd-conners",
+      "v-no-wine-bar",
       "waterfront-hotel",
     ].sort(),
   );
@@ -2139,8 +2140,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (The Dara) → 131 -> 132 / 153 -> 154.
   // 2026-08-21: leftover loadable (The Garden Rooftop) → 132 -> 133 / 154 -> 155.
   // 2026-08-21: leftover loadable (Hamilton Sports Bar) → 133 -> 134 / 155 -> 156.
-  assert.equal(showable, 134);
-  assert.equal(venues.length, 156);
+  // 2026-08-21: leftover loadable (V-NO Wine Bar) → 134 -> 135 / 156 -> 157.
+  assert.equal(showable, 135);
+  assert.equal(venues.length, 157);
 });
 
 
@@ -7397,7 +7399,7 @@ test("The Garden Rooftop joins 2026-08-21 (Downtown / inner-harbor, Thursday 4�
     !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "the-garden-rooftop"),
     "Downtown must not fold into /fells-point",
   );
-  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 20, "Fells roster pin stays 20");
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug.downtown, undefined, "do not invent a downtown view");
 });
 
@@ -7517,9 +7519,125 @@ test("The Hamilton Sports Bar & Grill joins 2026-08-21 (Hamilton Hills citywide,
     !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "the-hamilton-sports-bar"),
     "Hamilton Hills must not fold into /fells-point",
   );
-  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 20, "Fells roster pin stays 20");
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug["hamilton-hills"], undefined, "do not invent a hamilton-hills view");
   assert.equal(bySlug.hamilton, undefined, "do not invent a hamilton view");
+});
+
+test("V-NO Wine Bar joins 2026-08-21 (Fells Point, Monday $5 off wine flights)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const vno = byId["v-no-wine-bar"];
+  assert.ok(vno, "v-no-wine-bar missing");
+  assert.deepEqual(venueShapeErrors(vno), []);
+  assert.equal(vno.name, "V-NO Wine Bar");
+  assert.equal(vno.neighborhood, "Fells Point");
+  assert.equal(
+    vno.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(vno.status, "verified");
+  assert.equal(vno.address, "905 S Ann Street, Baltimore, MD 21231");
+  assert.equal(vno.phone, "(410) 342-8466");
+  assert.equal(vno.source_url, "https://v-no.com/special-%26-weekly-events");
+  assert.equal(vno.source_type, "venue_website");
+  assert.equal(vno.last_verified, "2026-08-21");
+  assert.equal(vno.notes_public, undefined);
+  assert.equal(vno.deal_format, undefined);
+  assert.equal(vno.lat, 39.2817798);
+  assert.equal(vno.lon, -76.5910108);
+  assert.equal(vno.deals.length, 1);
+  assert.match(vno.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(vno.ops_notes ?? "", /Already in \/fells-point/);
+  assert.match(vno.ops_notes ?? "", /Do not add Fells Point to citywideOnly/);
+  assert.match(vno.ops_notes ?? "", /https:\/\/v-no\.com\//);
+  assert.match(vno.ops_notes ?? "", /https:\/\/v-no\.com\/contact/);
+  assert.match(vno.ops_notes ?? "", /\/happy-hour/);
+  assert.match(vno.ops_notes ?? "", /\/national-harbor/);
+  assert.match(vno.ops_notes ?? "", /404/);
+  assert.match(vno.ops_notes ?? "", /vinofellspoint\.com/);
+  assert.match(vno.ops_notes ?? "", /special-weekly-events/);
+  assert.match(vno.ops_notes ?? "", /Directions to Tenuta/);
+  assert.match(vno.ops_notes ?? "", /Toast order 403/);
+  assert.match(vno.ops_notes ?? "", /04:00 pm – 10:00 pm/);
+  assert.match(vno.ops_notes ?? "", /04:00 am – 10:00 am/);
+  assert.match(vno.ops_notes ?? "", /02:00 am – 11:00 pm/);
+  assert.match(vno.ops_notes ?? "", /MONDAY — NEIGHBORS NIGHT/);
+  assert.match(vno.ops_notes ?? "", /Calling All Fells Point \/ Canton Neighbors/);
+  assert.match(vno.ops_notes ?? "", /\$5 Off Wine Flights/);
+  assert.match(vno.ops_notes ?? "", /TUESDAY — DATE NIGHT/);
+  assert.match(vno.ops_notes ?? "", /5:30pm/);
+  assert.match(vno.ops_notes ?? "", /starting at \$55/);
+  assert.match(vno.ops_notes ?? "", /JAZZ NIGHT/);
+  assert.match(vno.ops_notes ?? "", /VINYL/);
+  assert.match(vno.ops_notes ?? "", /July 24/);
+  assert.match(vno.ops_notes ?? "", /1320/);
+  assert.match(vno.ops_notes ?? "", /240/);
+  assert.match(vno.ops_notes ?? "", /120/);
+  assert.match(vno.ops_notes ?? "", /happy_hour omit/);
+  assert.match(vno.ops_notes ?? "", /notes_public/);
+  assert.match(vno.ops_notes ?? "", /deal_format omitted/);
+  assert.match(vno.ops_notes ?? "", /William Fell is HOLD/);
+  assert.ok(
+    !vno.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(
+    !vno.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+  assert.ok(
+    !vno.deals.some((d) => d.start === 1320 || d.end === 1320 || d.start === 240 || d.end === 240 || d.start === 120 || d.end === 120),
+    "do not copy contact Monday 10pm (1320), Tuesday 04:00 am (240), or Friday 02:00 am (120) onto a deal clock",
+  );
+  assert.ok(
+    !vno.deals.some((d) => d.days.includes("tue")),
+    "do not ship Tuesday Date Night",
+  );
+  assert.ok(
+    !vno.deals.some((d) => d.items.some((i) => /date night|\$55|jazz|vinyl|cruise|tenuta|national harbor/i.test(`${i.text} ${i.price ?? ""}`))),
+    "do not ship Date Night $55, Jazz, Vinyl, July 24 cruise, Tenuta, or National Harbor",
+  );
+  assert.ok(
+    !/national-harbor|tenuta|vinofellspoint|toasttab/i.test(vno.source_url),
+    "National Harbor, Tenuta, old host, and Toast stay off source_url",
+  );
+
+  const neighbors = vno.deals[0];
+  assert.equal(neighbors.happy_hour, undefined);
+  assert.deepEqual(neighbors.days, ["mon"]);
+  assert.equal(neighbors.start, 1020);
+  assert.equal(neighbors.end, 1200);
+  assert.equal(neighbors.time_window, "5pm-8pm");
+  assert.deepEqual(neighbors.food_categories, ["drink"]);
+  assert.deepEqual(
+    neighbors.items.map((i) => [i.text, i.price ?? null]),
+    [["$5 Off Wine Flights", "$5 off"]],
+  );
+  assert.match(neighbors.items[0].text, /\$5 Off/);
+  assert.match(neighbors.proof_quote, /MONDAY — NEIGHBORS NIGHT/);
+  assert.match(neighbors.proof_quote, /Calling All Fells Point \/ Canton Neighbors!/);
+  assert.match(neighbors.proof_quote, /5pm/);
+  assert.match(neighbors.proof_quote, /8pm/);
+  assert.match(neighbors.proof_quote, /\$5 Off Wine Flights/);
+  assert.doesNotMatch(neighbors.proof_quote, /DATE NIGHT/);
+  assert.doesNotMatch(neighbors.proof_quote, /\$55/);
+  assert.doesNotMatch(neighbors.proof_quote, /JAZZ/);
+  assert.doesNotMatch(neighbors.proof_quote, /VINYL/);
+  assert.doesNotMatch(neighbors.proof_quote, /July 24/);
+  assert.equal(neighbors.source_url, "https://v-no.com/special-%26-weekly-events");
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "v-no-wine-bar"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "v-no-wine-bar"));
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "v-no-wine-bar"),
+    "Fells Point must not fold into /locust-point",
+  );
+  assert.equal(bySlug["national-harbor"], undefined, "do not invent a national-harbor view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

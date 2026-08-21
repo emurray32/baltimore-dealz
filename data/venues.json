@@ -12232,6 +12232,152 @@
       "lat": 39.2843797,
       "lon": -76.6056651,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "midlina",
+      "name": "Midlina",
+      "neighborhood": "Canton",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "2206 Boston St, Baltimore, MD 21231",
+      "phone": "(410)-775-4094",
+      "source_url": "https://midlinarestaurant.com/specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live midlinarestaurant.com/specials HTTP 200; homepage HTTP 200. Pin 2206 Boston St, Baltimore, MD 21231 / (410)-775-4094. License zip 21231 — city Name=Canton wins. Census 39.2838396,-76.5852577. CityView Neighborhoods MapServer/0 query today on that point: Name=Canton. Already in /canton. Do not add Canton to citywideOnly. Do not invent a /canton page. Homepage hours today: Tue, Wed, Thur 5:00 PM - 11:00 PM / Fri, Sat 5:00 PM - 1:00 AM / Sun 4:00 PM - 9:30 PM. Monday omitted on the visible hours block; schema has Monday 00:00–00:00. Record both in ops. Do not invent closed on the card. Do not copy Friday 1am onto the Thursday clock. Quotes from /specials today: Thursday / $30 bottles of wine every Thursday on select bottles / 05:00 PM - 11:00 PM. Friday / Happy Hour 5-7 Bar Only / 05:00 PM - 07:00 PM — no $. Sunday / Happy Hour 4-6 / 04:00 PM - 06:00 PM — no $. Tuesday / Happy Hour 7-9 / 07:00 PM - 09:00 PM — no $. Wednesday is not on the official specials page. Do not invent a Wednesday row. Stay off: Tue / Fri / Sun HH clocks have no $. Do not ship times-only rows (same rule as Freddie's). Record them in ops, including Bar Only on Friday. notes_public omitted. No vibe. Friday bar-only stays in ops (that row is not on the card).",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$30 select bottles of wine",
+              "price": "$30"
+            }
+          ],
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://midlinarestaurant.com/specials",
+          "proof_quote": "Thursday $30 bottles of wine every Thursday on select bottles 05:00 PM - 11:00 PM",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2838396,
+      "lon": -76.5852577,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "mt-washington-tavern",
+      "name": "Mt. Washington Tavern",
+      "neighborhood": "Mount Washington",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "5700 Newbury Street, Baltimore, MD 21209",
+      "phone": "(410)-367-6903",
+      "source_url": "https://www.mtwashingtontavern.com/baltimore-mt-washington-mt-washington-tavern-happy-hours-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Thursday complimentary oysters require a food or drink purchase.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live mtwashingtontavern.com specials HTTP 200; homepage HTTP 200. Pin 5700 Newbury Street, Baltimore, MD 21209 / (410)-367-6903. Census 39.3673874,-76.6525059. CityView Neighborhoods MapServer/0 query today on that point: Name=Mount Washington. Mount Washington has no home view — add Mount Washington to citywideOnly once. Do not invent a /mount-washington view. Do not fold into /hampden. Homepage hours today: Monday & Tuesday 12-9pm, bars open until 11pm. Wednesday 12-9pm, bars open until midnight. Thursday 12-10pm, bars open until midnight. Friday & Saturday 11am-10pm, bars open until midnight. Sunday 11am-9pm, bars open until midnight. BRUNCH Saturday & Sunday 11am-3pm. Open 364 days! (Closed on Christmas.). Record hours in ops. Do not copy bars open until or kitchen-close onto a deal clock. Rolling dated board today (this window Friday August 21st → Thursday August 27th). Saturday has no specials block. Do not invent one. Repeats on Mon, Tue, Wed, Thu, Fri (not Sunday): $10 Martinis, Old Fashioneds, Manhattans & Garden Spritzes (NA). $6 House Wines. $4.40 Select Drafts. 03:00 PM - 06:00 PM. Oysters split, do not merge: Mon / Tue / Wed / Fri: $1 oysters + exclusive apps starting at $8 / 03:00 PM - 06:00 PM. Thursday: Complimentary Oysters! With a purchase of a food or drink item. plus Exclusive apps starting at $8 / 03:00 PM - 06:00 PM. HOLD (still one dated slot on this board — recurrence unconfirmed as weekly): Sunday August 23rd GIRL DINNER - Martini, choice of fries, choice of salad for $20. Plus specialty drinks, 1/2 price bottles of Rosé. 04:00 PM - 10:00 PM. Sunday $5 crushes, rail drinks and canned seltzers with Adele, Samantha & Jamar 04:00 PM - 10:00 PM (DJ names ride the $5 row; record in ops, do not ship). Monday August 24th Half-price Tavern Burgers served with house chips (dine-in only) 04:00 PM - 09:00 PM. Tuesday August 25th $18 Fish Market dine-in 04:00 PM - 09:00 PM. Wednesday August 26th $32 Prime Rib 04:00 PM - 09:00 PM. Thursday August 27th Half-price bottles of wine from open to close! 11:00 AM - 10:00 PM. Keep $4.40 as printed. Keep (NA) on Garden Spritzes. notes_public quote-matched: Thursday complimentary oysters require a food or drink purchase. No vibe. Dine-in-only language stays off the card until those dated rows ship.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$10 Martinis, Old Fashioneds, Manhattans & Garden Spritzes (NA)",
+              "price": "$10"
+            },
+            {
+              "text": "House wines",
+              "price": "$6"
+            },
+            {
+              "text": "Select drafts",
+              "price": "$4.40"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mtwashingtontavern.com/baltimore-mt-washington-mt-washington-tavern-happy-hours-specials",
+          "proof_quote": "$10 Martinis, Old Fashioneds, Manhattans & Garden Spritzes (NA) $6 House Wines $4.40 Select Drafts 03:00 PM - 06:00 PM",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 oysters",
+              "price": "$1"
+            },
+            {
+              "text": "Exclusive apps starting at $8",
+              "price": "$8"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mtwashingtontavern.com/baltimore-mt-washington-mt-washington-tavern-happy-hours-specials",
+          "proof_quote": "$1 oysters + exclusive apps starting at $8 03:00 PM - 06:00 PM",
+          "food_categories": [
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Complimentary oysters with a food or drink purchase",
+              "price": "Free"
+            },
+            {
+              "text": "Exclusive apps starting at $8",
+              "price": "$8"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mtwashingtontavern.com/baltimore-mt-washington-mt-washington-tavern-happy-hours-specials",
+          "proof_quote": "Complimentary Oysters! With a purchase of a food or drink item. Exclusive apps starting at $8 03:00 PM - 06:00 PM",
+          "food_categories": [
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3673874,
+      "lon": -76.6525059,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

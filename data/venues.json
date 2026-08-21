@@ -13466,6 +13466,86 @@
       "lat": 39.2846221,
       "lon": -76.5950825,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "swallow-at-the-hollow",
+      "name": "Swallow at the Hollow",
+      "neighborhood": "Chinquapin Park",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "5921 York Road, Baltimore, MD 21212",
+      "phone": "(410) 532-7542",
+      "source_url": "https://www.thehollowbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Kitchen closes 10pm Tue/Wed, 11pm Thu",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live thehollowbaltimore.com/ HTTP 200; menu page HTTP 200: https://www.thehollowbaltimore.com/view-our-menu/ . Same All Day Specials copy on both pages. Prices from that copy, not the linked PDF. Pin 5921 York Road, Baltimore, MD 21212 / (410) 532-7542. Census 39.3648514,-76.6097227. CityView Neighborhoods MapServer/0 query today on that point: Name=Chinquapin Park. Homepage does not print Chinquapin Park — city Name=Chinquapin Park wins. Chinquapin Park has no home view — add Chinquapin Park to citywideOnly once. Do not invent a /chinquapin-park view. Do not fold into /mount-vernon. Do not fold into /hampden. Hours today (homepage + menu): Open 7 days a week 11am – 2am · Kitchen Hours: Sun – Wed: 11am – 10pm | Thurs – Sat: 11am – 11pm. Record hours in ops. Do not copy kitchen-close 10pm (1320) or 11pm (1380), or bar 2am (120), onto a deal clock. Quotes today (homepage and menu page, same copy): All Day Specials: Tuesday – $29.95 20 Wings and Pitcher of Boh. Wednesday – $9 Burger Special. Thursday – $9 Cheesesteaks or Meatball Subs. Stay off: linked PDF Swallow-Menu-11.13.24-Specials.pdf (and Front.pdf). Regular sandwich list, no days — stale-filename, not the weekly all-day lines. happy_hour omit. start null · end null · time_window all day. omit recurrence. Keep printed names (Boh, not Natty Boh). Do not invent a separate meatball row. notes_public is required: Kitchen closes 10pm Tue/Wed, 11pm Thu. Venue-stated kitchen hours on the same page as the all-day food specials. Window stays all-day / end null; the note keeps a midnight card from promising wings after the kitchen stops. No vibe. deal_format omitted (pdf is illegal; only image is allowed).",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "20 Wings and Pitcher of Boh",
+              "price": "$29.95"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.thehollowbaltimore.com/",
+          "proof_quote": "All Day Specials: Tuesday – $29.95 20 Wings and Pitcher of Boh",
+          "food_categories": [
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Burger Special",
+              "price": "$9"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.thehollowbaltimore.com/",
+          "proof_quote": "Wednesday – $9 Burger Special",
+          "food_categories": [
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Cheesesteaks or Meatball Subs",
+              "price": "$9"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.thehollowbaltimore.com/",
+          "proof_quote": "Thursday – $9 Cheesesteaks or Meatball Subs",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ]
+        }
+      ],
+      "lat": 39.3648514,
+      "lon": -76.6097227,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

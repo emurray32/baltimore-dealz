@@ -13809,6 +13809,44 @@
       "lat": 39.3525939,
       "lon": -76.5614572,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "v-no-wine-bar",
+      "name": "V-NO Wine Bar",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "905 S Ann Street, Baltimore, MD 21231",
+      "phone": "(410) 342-8466",
+      "source_url": "https://v-no.com/special-%26-weekly-events",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live v-no.com/special-%26-weekly-events HTTP 200. Homepage https://v-no.com/ HTTP 200. Contact https://v-no.com/contact HTTP 200. /happy-hour 404. /national-harbor 404. Record homepage and contact in ops. vinofellspoint.com still redirects to v-no.com. Old /special-weekly-events on that host 404. Footer still Directions to Tenuta — Italy winery, stay off source_url. Toast order 403 (https://www.toasttab.com/vnofellspoint → pos.toasttab.com/vnofellspoint) — stay off. Pin 905 S Ann Street, Baltimore, MD 21231 / (410) 342-8466. Homepage prints 905 S Ann Street Fells Point, Baltimore, MD +1(410) 342-8466. Census Nominatim 39.2817798,-76.5910108. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Do not mix National Harbor. Hours today (contact, record as printed, do not “fix” AM/PM): Mon 04:00 pm – 10:00 pm · Tue 04:00 am – 10:00 am · Wed 04:00 pm – 10:00 pm · Thu 04:00 pm – 11:00 pm · Fri 02:00 am – 11:00 pm · Sat 12:00 pm – 11:00 pm · Sun 11:00 am – 09:00 pm. Record in ops. Do not copy contact Monday 10pm (1320), Tuesday 04:00 am (240), or Friday 02:00 am (120) onto a deal clock. Quotes from WEEKLY EVENTS today: MONDAY — NEIGHBORS NIGHT · Calling All Fells Point / Canton Neighbors! · 5pm–8pm · $5 Off Wine Flights. TUESDAY — DATE NIGHT · Happy Hour Date Night · 5:30pm–10:00pm · Bottle of wine + shared board (starting at $55). WEDNESDAY — JAZZ NIGHT · 6pm–9pm · curated wine / jazz — no $. THURSDAY — VINYL & VIBES · 6pm–10pm · featured wines + craft cocktails — no $. V-No Sunset Cruise · Friday, July 24 · 6:30pm–9pm — dated one-off. Stay off: Tuesday Date Night (events 5:30pm–10:00pm vs contact Tuesday 04:00 am – 10:00 am — record both, never pick). Jazz. Vinyl. July 24 cruise. National Harbor. Tenuta. happy_hour omit. days mon. start 1020 · end 1200 · time_window 5pm-8pm. cat drink. Keep printed $5 Off. Do not invent a flight-size row. Do not ship the $55 board. notes_public omit. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /fells-point and /baltimore. William Fell is HOLD (Toast Daily Specials group gone). Not this ticket. Heritage HOLD. Freddie's times-only stays off. Wiley Gunter's is not this ticket.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$5 Off Wine Flights",
+              "price": "$5 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1200,
+          "time_window": "5pm-8pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://v-no.com/special-%26-weekly-events",
+          "proof_quote": "MONDAY — NEIGHBORS NIGHT Calling All Fells Point / Canton Neighbors! 5pm-8pm $5 Off Wine Flights",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2817798,
+      "lon": -76.5910108,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

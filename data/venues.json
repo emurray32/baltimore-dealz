@@ -13410,6 +13410,62 @@
       "lat": 39.3308259,
       "lon": -76.6342993,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "southpaw",
+      "name": "Southpaw",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "529 S. Bond Street, Baltimore, MD 21231",
+      "source_url": "https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live southpawcocktails.com/ HTTP 200; current-menu PDF HTTP 200, Last-Modified Thu, 13 Aug 2026 01:06:39 GMT. Homepage article:modified_time 2026-08-13. Record homepage in ops (https://southpawcocktails.com/). Link text still Click Here For Our Current Menu. source_url is the current-menu PDF https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf . Homepage today links only that PDF. A July 2022 menu PDF may still exist on the server — it is not the current-menu link. Do not use it. Pin 529 S. Bond Street, Baltimore, MD 21231. No phone on official pages fetched — omit phone. Census 39.2846221,-76.5950825. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Hours today (homepage): Wednesday through Friday 5:00pm – Midnight · Saturday 3:00pm – Midnight · Sunday 3:00pm – 9:00pm · Closed on Monday and Tuesday. Record hours in ops. Do not copy Midnight (0 / 1440) onto a deal clock. Do not copy kitchen WED-SAT: 5PM - 10:30PM (1350) onto a deal clock. Quotes from the current PDF today (visual read): HAPPY HOUR: MON - FRI, 5-7 PM. JUST $9. OLD FASHIONED · SAZERAC · DAIQUIRI *. DRY MARTINI * · MOSCOW MULE. * apologies, not applicable for dirty martinis. Do not ship Monday or Tuesday. Homepage says those days Closed. Same-site conflict — record both, hold those days (Maryland Yards / Nepenthe Monday pattern). If they add Monday/Tuesday hours, the days come back. Dirty-martini qualifier rides Daiquiri / Dry Martini. Do not invent a separate dirty-martini row. Stay off: wine by the glass $10 ($30 by the bottle) · house shooters all $8 · frozen Lil' Guy 8 oz • 9 / Full Send 16 oz • 18 · kitchen WED-SAT: 5PM - 10:30PM · regular cocktail list $13–$16 · beer list · magazine/Yelp/IG forever happy hour. deal_format omitted (pdf is not a legal value; same visual-read flag as Empanada Lady / Marta / Pink Flamingo / Octobar). Prices from the current-menu PDF, visual read. notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Old Fashioned",
+              "price": "$9"
+            },
+            {
+              "text": "Sazerac",
+              "price": "$9"
+            },
+            {
+              "text": "Daiquiri",
+              "price": "$9"
+            },
+            {
+              "text": "Dry Martini",
+              "price": "$9"
+            },
+            {
+              "text": "Moscow Mule",
+              "price": "$9"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf",
+          "proof_quote": "HAPPY HOUR: MON - FRI, 5-7 PM JUST $9 OLD FASHIONED SAZERAC DAIQUIRI * DRY MARTINI * MOSCOW MULE * apologies, not applicable for dirty martinis",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2846221,
+      "lon": -76.5950825,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

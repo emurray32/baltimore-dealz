@@ -1901,7 +1901,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 18);
+  assert.equal(inView.length, 19);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
@@ -1915,6 +1915,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
       "pitango-bakery",
       "rec-pier-chop-house",
       "rye-of-baltimore",
+      "southpaw",
       "stuggys",
       "thames-street-oyster-house",
       "the-choptank",
@@ -2131,8 +2132,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Pitango Bakery) → 125 -> 126 / 147 -> 148.
   // 2026-08-21: leftover loadable (Estiatorio Plaka) → 126 -> 127 / 148 -> 149.
   // 2026-08-21: leftover loadable (Raffy's on 36th) → 127 -> 128 / 149 -> 150.
-  assert.equal(showable, 128);
-  assert.equal(venues.length, 150);
+  // 2026-08-21: leftover loadable (Southpaw) → 128 -> 129 / 150 -> 151.
+  assert.equal(showable, 129);
+  assert.equal(venues.length, 151);
 });
 
 
@@ -6822,6 +6824,106 @@ test("Raffy's on 36th joins 2026-08-21 (Hampden / hampden, Thursday date night)"
 
   assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "raffys-on-36th"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "raffys-on-36th"));
+});
+
+test("Southpaw joins 2026-08-21 (Fells Point / fells-point, $9 happy hour)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const paw = byId.southpaw;
+  assert.ok(paw, "southpaw missing");
+  assert.deepEqual(venueShapeErrors(paw), []);
+  assert.equal(paw.name, "Southpaw");
+  assert.equal(paw.neighborhood, "Fells Point");
+  assert.equal(
+    paw.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(paw.status, "verified");
+  assert.equal(paw.address, "529 S. Bond Street, Baltimore, MD 21231");
+  assert.equal(paw.phone, undefined);
+  assert.equal(
+    paw.source_url,
+    "https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf",
+  );
+  assert.equal(paw.source_type, "venue_website");
+  assert.equal(paw.last_verified, "2026-08-21");
+  assert.equal(paw.notes_public, undefined);
+  assert.equal(paw.deal_format, undefined);
+  assert.equal(paw.lat, 39.2846221);
+  assert.equal(paw.lon, -76.5950825);
+  assert.equal(paw.deals.length, 1);
+  assert.match(paw.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(paw.ops_notes ?? "", /Already in \/fells-point/);
+  assert.match(paw.ops_notes ?? "", /Do not add Fells Point to citywideOnly/);
+  assert.match(paw.ops_notes ?? "", /https:\/\/southpawcocktails\.com\//);
+  assert.match(paw.ops_notes ?? "", /Click Here For Our Current Menu/);
+  assert.match(paw.ops_notes ?? "", /Last-Modified Thu, 13 Aug 2026 01:06:39 GMT/);
+  assert.match(paw.ops_notes ?? "", /article:modified_time 2026-08-13/);
+  assert.match(paw.ops_notes ?? "", /July 2022/);
+  assert.match(paw.ops_notes ?? "", /omit phone/);
+  assert.match(paw.ops_notes ?? "", /Closed on Monday and Tuesday/);
+  assert.match(paw.ops_notes ?? "", /5:00pm – Midnight/);
+  assert.match(paw.ops_notes ?? "", /3:00pm – Midnight/);
+  assert.match(paw.ops_notes ?? "", /3:00pm – 9:00pm/);
+  assert.match(paw.ops_notes ?? "", /0 \/ 1440/);
+  assert.match(paw.ops_notes ?? "", /1350/);
+  assert.match(paw.ops_notes ?? "", /HAPPY HOUR: MON - FRI, 5-7 PM/);
+  assert.match(paw.ops_notes ?? "", /JUST \$9/);
+  assert.match(paw.ops_notes ?? "", /Maryland Yards \/ Nepenthe Monday pattern/);
+  assert.match(paw.ops_notes ?? "", /Dirty-martini qualifier rides Daiquiri \/ Dry Martini/);
+  assert.match(paw.ops_notes ?? "", /wine by the glass \$10/);
+  assert.match(paw.ops_notes ?? "", /house shooters all \$8/);
+  assert.match(paw.ops_notes ?? "", /Lil' Guy/);
+  assert.match(paw.ops_notes ?? "", /forever happy hour/);
+  assert.match(paw.ops_notes ?? "", /deal_format omitted/);
+  assert.match(paw.ops_notes ?? "", /notes_public omitted/);
+  assert.ok(
+    !paw.deals.some((d) => d.days.includes("mon") || d.days.includes("tue")),
+    "do not ship Monday or Tuesday (homepage Closed)",
+  );
+  assert.ok(
+    !paw.deals.some((d) => d.start === 0 || d.end === 0 || d.end === 1440 || d.end === 1350),
+    "do not copy Midnight (0 / 1440) or kitchen 10:30PM (1350) onto a deal clock",
+  );
+  assert.ok(
+    !paw.deals.some((d) => d.items.some((i) => /dirty martini/i.test(i.text))),
+    "do not invent a separate dirty-martini row",
+  );
+  assert.ok(
+    !paw.deals.some((d) => d.items.some((i) => /wine by the glass|shooter|Lil'|Full Send|forever happy hour/i.test(i.text))),
+    "wine $10 / shooters $8 / frozen / forever HH stay off",
+  );
+  assert.ok(
+    !paw.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+
+  const hh = paw.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["wed", "thu", "fri"]);
+  assert.equal(hh.start, 1020);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "5pm-7pm");
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Old Fashioned", "$9"],
+      ["Sazerac", "$9"],
+      ["Daiquiri", "$9"],
+      ["Dry Martini", "$9"],
+      ["Moscow Mule", "$9"],
+    ],
+  );
+  assert.match(hh.proof_quote, /not applicable for dirty martinis/);
+  assert.match(hh.proof_quote, /DAIQUIRI \*/);
+  assert.match(hh.proof_quote, /DRY MARTINI \*/);
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "southpaw"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "southpaw"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

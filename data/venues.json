@@ -11555,6 +11555,202 @@
       "lat": 39.3268179,
       "lon": -76.6369016,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "valentinos",
+      "name": "Valentino's Restaurant",
+      "neighborhood": "Westfield",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "6627 Harford Rd, Baltimore, MD 21214",
+      "phone": "(410) 254-4700",
+      "source_url": "https://www.valentinosbaltimore.com/happyhour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "In-House only / Excluding Holidays.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live valentinosbaltimore.com/happyhour/ HTTP 200. Pin 6627 Harford Rd, Baltimore, MD 21214 / (410) 254-4700. Census 39.3629187,-76.5519198. CityView Neighborhoods MapServer/0 query today on that point: Name=Westfield. Westfield has no home view — add Westfield to citywideOnly once. Do not invent a /westfield view. Hours on the homepage today: Sun-Thur: 7am- 5am / Fri & Sat: 24 hours. Record in ops as printed (including the space in 7am- 5am). Do not copy onto the deal clock. Quotes today: In-House only / Excluding Holidays. Not valid with other offers, promotions or discounts. Monday - Friday / 3 pm - 7 pm. Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails / $7.00. Pub Wings / $8.00 / 5 Buffalo Wings (choose your flavor) & dip! Ravioli Tostati / $7.00. Bacon Cheddar Cups / $7.00. Thai Chili Shrimp / $7.00. Oyster in 1/2 Shell / $10.00 / 6 raw oysters. Clams in 1/2 Shell / $8.00 / 6 raw cherrystone clams. Cozze Bowl / $10.00 / 1lb PEI mussels sauteed (choose your sauce). 18% Gratuity Added To Each In-House Check. Keep printed names (Ravioli Tostati, Oyster in 1/2 Shell, Cozze Bowl). Do not ship sauce names (Providence / Voodoo / Fra Diavolo) as extra items. Record in ops: Not valid with other offers, promotions or discounts. and 18% Gratuity Added To Each In-House Check. Do not fold those into notes_public.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Select wine, slushes, crushes, margaritas, martinis, cocktails",
+              "price": "$7"
+            },
+            {
+              "text": "Pub Wings",
+              "price": "$8"
+            },
+            {
+              "text": "Ravioli Tostati",
+              "price": "$7"
+            },
+            {
+              "text": "Bacon Cheddar Cups",
+              "price": "$7"
+            },
+            {
+              "text": "Thai Chili Shrimp",
+              "price": "$7"
+            },
+            {
+              "text": "Oyster in 1/2 Shell",
+              "price": "$10"
+            },
+            {
+              "text": "Clams in 1/2 Shell",
+              "price": "$8"
+            },
+            {
+              "text": "Cozze Bowl",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.valentinosbaltimore.com/happyhour/",
+          "proof_quote": "Monday - Friday 3 pm - 7 pm Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails $7.00 Pub Wings $8.00 Ravioli Tostati $7.00 Bacon Cheddar Cups $7.00 Thai Chili Shrimp $7.00 Oyster in 1/2 Shell $10.00 Clams in 1/2 Shell $8.00 Cozze Bowl $10.00",
+          "food_categories": [
+            "drink",
+            "wings",
+            "small-plate/apps",
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.3629187,
+      "lon": -76.5519198,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "wet-city",
+      "name": "Wet City Brewing",
+      "neighborhood": "Mid-Town Belvedere",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "223 W. Chase St. Baltimore, MD 21201",
+      "phone": "443-873-6699",
+      "source_url": "https://wetcitybrewing.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live wetcitybrewing.com/ HTTP 200. Pin 223 W. Chase St. Baltimore, MD 21201 / 443-873-6699. Census 39.3016191,-76.6189682. CityView Neighborhoods MapServer/0 query today on that point: Name=Mid-Town Belvedere. Already in /mount-vernon. Do not add Mid-Town Belvedere to citywideOnly. Site self-describes Mount Vernon — record in ops as neighborhood_self_described. Card neighborhood = NSA. Bar hours on that page today: Monday – Wednesday: 5pm – 10pm (Kitchen Closes @ 10pm) · Thursday: 5pm – 11pm (Kitchen Closes @ 10pm) · Friday: 5pm – 12am (Kitchen Closes @ 11pm) · Saturday: 12pm – 11pm (Kitchen Closes @ 10pm). Sunday omitted — Do not invent closed. Record hours in ops. Do not copy kitchen-close onto a deal clock. Quotes today: ALL NIGHT HAPPY HOUR. MONDAY: Burger Night - $3 off burgers, $1 off -ish pours. TUESDAY: Taco Tuesday - $3 off tacos & taco salad, $10 Purple Margs. WEDNESDAY: Whiskey Wednesday - $10 Old Fashioned & Manhattans, 20% select whiskey pours, $3 off chix sandos,. THURSDAY: Wing Night - Special Wing Menu, $3 off wings. All night is the label, not a time_window string. Attach each day's special to that day's published bar hours. Do not write time_window: all night. No Fri/Sat daily special published — do not invent one. Regular beer/cocktail menu $ are everyday prices — not these weekly rows. Stay off: Thursday Special Wing Menu has no $. Do not invent wing prices. Ship $3 off wings only. Record the named menu in ops. Keep printed -ish pours and chix sandos. notes_public omitted. Do not write Mount Vernon into notes_public.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$3 off burgers",
+              "price": "$3 off"
+            },
+            {
+              "text": "$1 off -ish pours",
+              "price": "$1 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1320,
+          "time_window": "5pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://wetcitybrewing.com/",
+          "proof_quote": "MONDAY: Burger Night - $3 off burgers, $1 off -ish pours",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$3 off tacos & taco salad",
+              "price": "$3 off"
+            },
+            {
+              "text": "$10 Purple Margs",
+              "price": "$10"
+            }
+          ],
+          "start": 1020,
+          "end": 1320,
+          "time_window": "5pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://wetcitybrewing.com/",
+          "proof_quote": "TUESDAY: Taco Tuesday - $3 off tacos & taco salad, $10 Purple Margs",
+          "food_categories": [
+            "tacos",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$10 Old Fashioned & Manhattans",
+              "price": "$10"
+            },
+            {
+              "text": "20% select whiskey pours",
+              "price": "20% off"
+            },
+            {
+              "text": "$3 off chix sandos",
+              "price": "$3 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1320,
+          "time_window": "5pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://wetcitybrewing.com/",
+          "proof_quote": "WEDNESDAY: Whiskey Wednesday - $10 Old Fashioned & Manhattans, 20% select whiskey pours, $3 off chix sandos,",
+          "food_categories": [
+            "drink",
+            "sandwich/cheesesteak"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$3 off wings",
+              "price": "$3 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://wetcitybrewing.com/",
+          "proof_quote": "THURSDAY: Wing Night - Special Wing Menu, $3 off wings",
+          "food_categories": [
+            "wings"
+          ]
+        }
+      ],
+      "lat": 39.3016191,
+      "lon": -76.6189682,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

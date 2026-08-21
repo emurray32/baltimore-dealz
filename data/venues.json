@@ -11072,6 +11072,490 @@
       "lat": 39.3308911,
       "lon": -76.6424639,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "sally-os",
+      "name": "Sally O's",
+      "neighborhood": "Highlandtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "3531 Gough Street, Baltimore, MD 21224",
+      "phone": "410-624-5631",
+      "source_url": "https://sallyos.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live sallyos.com/ HTTP 200. Pin 3531 Gough Street, Baltimore, MD 21224 / 410-624-5631. Census 39.2883975,-76.5674018. CityView Neighborhoods MapServer/0 query today on that point: Name=Highlandtown. Highlandtown has no home view — add Highlandtown to citywideOnly once. Do not invent a /highlandtown view. Do not fold into /canton. Quotes today: Happy Hour Mon-Thurs 5-7 Taco Tuesday Fiesta every Tuesday, & Wine Cult Wednesdays w/50% off all bottles of wine. Also Happy Hour Monday-Thursday 5-7pm. Stay off: Mon–Thu 5–7 HH is times only (prices_published: false). Do not ship a 5–7 row. Taco Tuesday is named with no $. Do not ship. Natty Wine Cult (/natty-wine-cult/) is a paid club — do not mix club perks into this row.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "50% off all bottles of wine",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://sallyos.com/",
+          "proof_quote": "Happy Hour Mon-Thurs 5-7 Taco Tuesday Fiesta every Tuesday, & Wine Cult Wednesdays w/50% off all bottles of wine",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2883975,
+      "lon": -76.5674018,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "shottis-point",
+      "name": "Shotti's Point Charm City",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "701 E Fort Ave, Baltimore, MD 21230",
+      "phone": "443-835-2968",
+      "source_url": "https://shottispointcharmcity.com/specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live shottispointcharmcity.com/specials HTTP 200. Pin 701 E Fort Ave, Baltimore, MD 21230 / 443-835-2968. Census 39.2723858,-76.6040458. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Already in /locust-point. Hours on that page: Open everyday from 11:30 am to 2:00 am. Record in ops. Do not copy onto a deal clock. Quotes today: MONDAY Pizza & Wine Night / $15 Bottles of House Wines / $3 Off All Pizzas. TUESDAY Burgers & Beer / $15 Domestic Buckets / $6 Craft Beers / $10 Build Ya Own Burger. WEDNESDAY Wings & Whiskey / $2 Off Wings / $7 Select Bourbons / $8 Old Fashioned. THURSDAY Fiesta Night / $3 off Tacos / $8 Margarita / $7 Sangrias / $4 South of the Border Beers. No clock on the weeknight block. Do not write time_window: all day. Stay off: sitemap HH jpeg hh.jpeg (Squarespace id 1643765265207 = Feb 2022) captioned Happy Hour - MONDAY-FRIDAY / 2pm-6pm. Stale graphic. /happy-hour 404 today. Do not ship.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$15 bottles of house wines",
+              "price": "$15"
+            },
+            {
+              "text": "$3 off all pizzas",
+              "price": "$3 off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://shottispointcharmcity.com/specials",
+          "proof_quote": "MONDAY Pizza & Wine Night $15 Bottles of House Wines $3 Off All Pizzas",
+          "food_categories": [
+            "pizza",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$15 domestic buckets",
+              "price": "$15"
+            },
+            {
+              "text": "$6 craft beers",
+              "price": "$6"
+            },
+            {
+              "text": "$10 build ya own burger",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://shottispointcharmcity.com/specials",
+          "proof_quote": "TUESDAY Burgers & Beer $15 Domestic Buckets $6 Craft Beers $10 Build Ya Own Burger",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$2 off wings",
+              "price": "$2 off"
+            },
+            {
+              "text": "$7 select bourbons",
+              "price": "$7"
+            },
+            {
+              "text": "$8 Old Fashioned",
+              "price": "$8"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://shottispointcharmcity.com/specials",
+          "proof_quote": "WEDNESDAY Wings & Whiskey $2 Off Wings $7 Select Bourbons $8 Old Fashioned",
+          "food_categories": [
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$3 off tacos",
+              "price": "$3 off"
+            },
+            {
+              "text": "$8 Margarita",
+              "price": "$8"
+            },
+            {
+              "text": "$7 sangrias",
+              "price": "$7"
+            },
+            {
+              "text": "$4 South of the Border beers",
+              "price": "$4"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://shottispointcharmcity.com/specials",
+          "proof_quote": "THURSDAY Fiesta Night $3 off Tacos $8 Margarita $7 sangrias $4 South of the Border Beers",
+          "food_categories": [
+            "tacos",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2723858,
+      "lon": -76.6040458,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "silver-queen-cafe",
+      "name": "Silver Queen Cafe",
+      "neighborhood": "Waltherson",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "5429 Harford Road, Baltimore, MD 21214",
+      "phone": "443-345-2020",
+      "source_url": "https://www.silverqueencafe.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live silverqueencafe.com/ HTTP 200. Pin 5429 Harford Road, Baltimore, MD 21214 / 443-345-2020. Census 39.3517932,-76.5617112. CityView Neighborhoods MapServer/0 query today on that point: Name=Waltherson. Waltherson has no home view — already in citywideOnly. Do not duplicate the string. Do not invent a /waltherson view. Hours: Wednesday & Thursday Dinner: 5pm–9pm. Record in ops. Do not copy onto the deal clock. Whole-line quote today (do not clean up): Wine & Whiskey Wednesdays: all bottles of wine are discounted 20%, and sangria is only $10 per glass. Whiskeys are $2 off Thirsty Thursdays, Get a Burger is and your first beer is on the house, plus all cans of beer are only $4. Do not invent a burger price from Get a Burger is. Record that clause in ops. Stay off: this week, it's happy hour at the bar all night long! — this week is a one-off. Booze & BBQ / Market at Hamilton are other doors — do not mix.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "20% off all bottles of wine",
+              "price": "20% off"
+            },
+            {
+              "text": "sangria $10 per glass",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.silverqueencafe.com/",
+          "proof_quote": "Wine & Whiskey Wednesdays: all bottles of wine are discounted 20%, and sangria is only $10 per glass.",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Whiskeys are $2 off",
+              "price": "$2 off"
+            },
+            {
+              "text": "first beer is on the house",
+              "price": "free"
+            },
+            {
+              "text": "all cans of beer are only $4",
+              "price": "$4"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.silverqueencafe.com/",
+          "proof_quote": "Whiskeys are $2 off Thirsty Thursdays, Get a Burger is and your first beer is on the house, plus all cans of beer are only $4.",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3517932,
+      "lon": -76.5617112,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "the-empanada-lady",
+      "name": "The Empanada Lady",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "10 S Street STE 100, Baltimore, MD 21202",
+      "phone": "(443) 377-1133",
+      "source_url": "https://www.theempanadalady.shop/happyhour",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "We add a 15% love (gratuity) to all experiences.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live theempanadalady.shop/happyhour HTTP 200. HH graphic visual read today (wix media 086c5e_3ab29bd9edf04f1ba57f4fb0a8cb8c13). Pin 10 S Street STE 100, Baltimore, MD 21202 / (443) 377-1133. Census 39.2892322,-76.6112179. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not invent a /downtown page. Domain theempanadalady.shop is this door. Hours on the about block today omit Mon/Tue: Wednesday & Thursday 11-8pm / Friday & Saturday 12-11pm / Sunday 12-6pm. Do not invent closed. Graphic still says weekdays — record both facts in ops. Do not drop Mon/Tue from the graphic. Quotes from the graphic today: AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM. COCKTAILS - $8.99. SHOOTERS - $7.99. WELL SHOTS - $6.99. $5 BEER · $7 WINE · $10 DON JULIO BLANCO · $10 HENNESSEY. (6) WINGS (1 FLAVOR) - $10.99 · NACHOS (CHICKEN OR BEEF) - $10.99 · SALMON BITES - $10.99 · SIDES - $5.99 · PAPAS - $5.99 · QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99. Keep graphic spellings (HENNESSEY, PAPAS). notes_public quote-matched: We add a 15% love (gratuity) to all experiences.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "cocktails $8.99",
+              "price": "$8.99"
+            },
+            {
+              "text": "shooters $7.99",
+              "price": "$7.99"
+            },
+            {
+              "text": "well shots $6.99",
+              "price": "$6.99"
+            },
+            {
+              "text": "$5 beer",
+              "price": "$5"
+            },
+            {
+              "text": "$7 wine",
+              "price": "$7"
+            },
+            {
+              "text": "$10 Don Julio Blanco",
+              "price": "$10"
+            },
+            {
+              "text": "$10 HENNESSEY",
+              "price": "$10"
+            },
+            {
+              "text": "(6) wings $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "nachos $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "salmon bites $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "sides $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "PAPAS $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "quesadillas $10.99",
+              "price": "$10.99"
+            }
+          ],
+          "start": 960,
+          "end": 1200,
+          "time_window": "4pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.theempanadalady.shop/happyhour",
+          "proof_quote": "AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM COCKTAILS - $8.99 SHOOTERS - $7.99 WELL SHOTS - $6.99 $5 BEER $7 WINE $10 DON JULIO BLANCO $10 HENNESSEY (6) WINGS (1 FLAVOR) - $10.99 NACHOS (CHICKEN OR BEEF) - $10.99 SALMON BITES - $10.99 SIDES - $5.99 PAPAS - $5.99 QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99 WE ADD A 15% LOVE (GRATUITY) TO ALL EXPERIENCES",
+          "food_categories": [
+            "drink",
+            "wings",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "cocktails $8.99",
+              "price": "$8.99"
+            },
+            {
+              "text": "shooters $7.99",
+              "price": "$7.99"
+            },
+            {
+              "text": "well shots $6.99",
+              "price": "$6.99"
+            },
+            {
+              "text": "$5 beer",
+              "price": "$5"
+            },
+            {
+              "text": "$7 wine",
+              "price": "$7"
+            },
+            {
+              "text": "$10 Don Julio Blanco",
+              "price": "$10"
+            },
+            {
+              "text": "$10 HENNESSEY",
+              "price": "$10"
+            },
+            {
+              "text": "(6) wings $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "nachos $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "salmon bites $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "sides $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "PAPAS $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "quesadillas $10.99",
+              "price": "$10.99"
+            }
+          ],
+          "start": 1080,
+          "end": 1200,
+          "time_window": "6pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.theempanadalady.shop/happyhour",
+          "proof_quote": "AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM COCKTAILS - $8.99 SHOOTERS - $7.99 WELL SHOTS - $6.99 $5 BEER $7 WINE $10 DON JULIO BLANCO $10 HENNESSEY (6) WINGS (1 FLAVOR) - $10.99 NACHOS (CHICKEN OR BEEF) - $10.99 SALMON BITES - $10.99 SIDES - $5.99 PAPAS - $5.99 QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99 WE ADD A 15% LOVE (GRATUITY) TO ALL EXPERIENCES",
+          "food_categories": [
+            "drink",
+            "wings",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.2892322,
+      "lon": -76.6112179,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "true-chesapeake",
+      "name": "True Chesapeake Oyster Co.",
+      "neighborhood": "Jones Falls Area",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "3300 Clipper Mill Road, Baltimore, MD 21211",
+      "phone": "410-913-6374",
+      "source_url": "https://truechesapeake.com/pages/menus",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "only at the bar & high tops.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live truechesapeake.com/pages/menus HTTP 200. BEV PDF https://cdn.shopify.com/s/files/1/1730/4049/files/TC_BEV_MENU_4.15.26.pdf still linked today (HTTP 200; CreationDate 2026-04-28). Pin 3300 Clipper Mill Road, Baltimore, MD 21211 / 410-913-6374. Census 39.3268179,-76.6369016. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Jones Falls Area has no home view — already in citywideOnly. Do not invent a /jones-falls-area view. Do not fold into /hampden. Nominatim display says Hampden — city Name wins. Hours on the menus page: Monday: Closed · Tues, Wed, Thurs, Fri, Sat : 5 - 11 PM · Sunday Brunch: 11AM - 3 PM · Sunday Dinner: 5 - 9 PM. Kitchen closes at 9pm Tuesday through Thursday and at 10pm on Friday & Saturday. Record in ops. Do not copy onto the deal clock. Homepage today: Join us for Happy Hour every day but Monday from 5 - 7 pm. PDF page 1 today: TUESDAY-sundAY | 5PM-7PM / only at the bar & high tops / $6 DAIQUIRIS, MARTINIS, MARGARITAS & OLD FASHIONEDS / $5 SELECT DRAFTS / $6 SELECT WINES / $2 RAW OYSTERS / $2 ROASTED OYSTERS / auto-gratuity of 20% will be applied to happy hour checks / HALF-PRICE WINE WEDNESDAYS / 50% off select bottles of wine. Stay off: HH graphic $4 spicy chicken meatball / $4 classic coddie — newer linked PDF omits them. Do not ship. Tropical Tuesdays named cocktails have no $. Do not ship. Wednesday 50% off select bottles of wine is a separate row — do not hang it on the six-day row. Record the 20% auto-grat in ops.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$6 daiquiris, martinis, margaritas & old fashioneds",
+              "price": "$6"
+            },
+            {
+              "text": "$5 select drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$6 select wines",
+              "price": "$6"
+            },
+            {
+              "text": "$2 raw oysters",
+              "price": "$2"
+            },
+            {
+              "text": "$2 roasted oysters",
+              "price": "$2"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://truechesapeake.com/pages/menus",
+          "proof_quote": "TUESDAY-sundAY | 5PM-7PM only at the bar & high tops $6 DAIQUIRIS, MARTINIS, MARGARITAS & OLD FASHIONEDS $5 SELECT DRAFTS $6 SELECT WINES $2 RAW OYSTERS $2 ROASTED OYSTERS",
+          "food_categories": [
+            "drink",
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "50% off select bottles of wine",
+              "price": "50% off"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://truechesapeake.com/pages/menus",
+          "proof_quote": "HALF-PRICE WINE WEDNESDAYS 50% off select bottles of wine.",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3268179,
+      "lon": -76.6369016,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
+
   ]
 }

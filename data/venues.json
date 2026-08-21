@@ -11751,6 +11751,487 @@
       "lat": 39.3016191,
       "lon": -76.6189682,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "tabor-ethiopian",
+      "name": "Tabor Ethiopian Restaurant",
+      "neighborhood": "Downtown",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "328 Park Ave, Baltimore, MD 21201",
+      "phone": "(410) 528-7234",
+      "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live taborethiopian.com/ HTTP 200; HH PDF https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf HTTP 200, 6 pages, linked from homepage today. Pin 328 Park Ave, Baltimore, MD 21201 / (410) 528-7234. Census 39.293806,-76.6183705. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not add Downtown to citywideOnly. Do not invent a /downtown page. Site self-describes Mount Vernon — record in ops as neighborhood_self_described. Card neighborhood = NSA. Homepage today: Authentic Ethiopian Cuisine in the Heart of Mount Vernon Baltimore. Do not copy onto notes_public. Quotes from the HH block on the PDF today: HAPPY HOUR | MON-FRI 4-7. 2:00 OFF COCKTAILS. DOMESTIC BEER 3.50. IMPORTED BEER 4.50. ETHIOPIAN BEER 4.75. SELECT WINES 8.00. TEJ/HONEY WINE 8.00. VEGGIE SAMBUSA 2.50. BEEF SAMBUSA 3.00. Keep PDF spelling 2:00 OFF (two dollars off) in the quote. Structured item text is $2 off cocktails. Regular menu sambusa $2.99 / $3.99 on the same PDF are not the HH row. notes_public omitted. Do not write Mount Vernon into notes_public.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 off cocktails",
+              "price": "$2 off"
+            },
+            {
+              "text": "Domestic beer",
+              "price": "$3.50"
+            },
+            {
+              "text": "Imported beer",
+              "price": "$4.50"
+            },
+            {
+              "text": "Ethiopian beer",
+              "price": "$4.75"
+            },
+            {
+              "text": "Select wines",
+              "price": "$8"
+            },
+            {
+              "text": "Tej/honey wine",
+              "price": "$8"
+            },
+            {
+              "text": "Veggie sambusa",
+              "price": "$2.50"
+            },
+            {
+              "text": "Beef sambusa",
+              "price": "$3"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
+          "proof_quote": "HAPPY HOUR | MON-FRI 4-7 2:00 OFF COCKTAILS DOMESTIC BEER 3.50 IMPORTED BEER 4.50 ETHIOPIAN BEER 4.75 SELECT WINES 8.00 TEJ/HONEY WINE 8.00 VEGGIE SAMBUSA 2.50 BEEF SAMBUSA 3.00",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.293806,
+      "lon": -76.6183705,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "marta",
+      "name": "Marta Fine Food & Spirits",
+      "neighborhood": "Upper Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "2127 East Pratt St, Baltimore, MD 21231",
+      "phone": "443-708-5962",
+      "source_url": "https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Available at the bar and patio.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + HH PDF https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf HTTP 200 (2 pages). Prices from the PDF (visual + text), same flag as Empanada Lady. martabaltimore.com/ and /menu HTML are Cloudflare 403 today — record in ops. Do not call closed. Pin 2127 East Pratt St, Baltimore, MD 21231 / 443-708-5962. Census 39.2893675,-76.5862345. CityView Neighborhoods MapServer/0 query today on that point: Name=Upper Fells Point. Upper Fells Point has no home view — already in citywideOnly. Do not duplicate the string. Do not invent a /upper-fells-point view. Do not fold into /fells-point. Quotes from the HH PDF today: Happy Hour / Tuesday-Friday: 4pm-6pm / Available at the bar and patio. SPRITZES 9 / all spirits can be made “spirit free”. COCKTAILS 11. HOUSE WINES 8. DRAFT BEER 6. Bread & Butter 8. Tuna Cannoli 10. Yellowtail 10. Oysters Scroppino 8/ two each. Beef Tartare 15. Arancini Milanese 10. Sheep's Milk Ricotta 10. Meatballs Arrabbiata 10. Ziti alla Bolognese 13. Campanelle Zafferano 17. Risotto Milanese 14. Keep printed names. Do not ship recipe lines as extra items. Cocktail of the week is unnamed rotating — covered by the $11 cocktails item; do not invent a name. all spirits can be made “spirit free” in ops only. notes_public quote-matched: Available at the bar and patio.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Spritzes",
+              "price": "$9"
+            },
+            {
+              "text": "Cocktails",
+              "price": "$11"
+            },
+            {
+              "text": "House wines",
+              "price": "$8"
+            },
+            {
+              "text": "Draft beer",
+              "price": "$6"
+            },
+            {
+              "text": "Bread & Butter",
+              "price": "$8"
+            },
+            {
+              "text": "Tuna Cannoli",
+              "price": "$10"
+            },
+            {
+              "text": "Yellowtail",
+              "price": "$10"
+            },
+            {
+              "text": "Oysters Scroppino",
+              "price": "$8"
+            },
+            {
+              "text": "Beef Tartare",
+              "price": "$15"
+            },
+            {
+              "text": "Arancini Milanese",
+              "price": "$10"
+            },
+            {
+              "text": "Sheep's Milk Ricotta",
+              "price": "$10"
+            },
+            {
+              "text": "Meatballs Arrabbiata",
+              "price": "$10"
+            },
+            {
+              "text": "Ziti alla Bolognese",
+              "price": "$13"
+            },
+            {
+              "text": "Campanelle Zafferano",
+              "price": "$17"
+            },
+            {
+              "text": "Risotto Milanese",
+              "price": "$14"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf",
+          "proof_quote": "Happy Hour Tuesday-Friday: 4pm-6pm Available at the bar and patio SPRITZES 9 COCKTAILS 11 HOUSE WINES 8 DRAFT BEER 6 Bread & Butter 8 Tuna Cannoli 10 Yellowtail 10 Oysters Scroppino 8/ two each Beef Tartare 15 Arancini Milanese 10 Sheep's Milk Ricotta 10 Meatballs Arrabbiata 10 Ziti alla Bolognese 13 Campanelle Zafferano 17 Risotto Milanese 14",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.2893675,
+      "lon": -76.5862345,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "maryland-yards",
+      "name": "Maryland Yards",
+      "neighborhood": "Downtown West",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "511 W Pratt Street, Baltimore, Maryland 21201",
+      "phone": "443-835-4781",
+      "source_url": "https://www.mdyards.com/daily-specials",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live mdyards.com/daily-specials HTTP 200. marylandyards.com is not this door. Pin 511 W Pratt Street, Baltimore, Maryland 21201 / 443-835-4781. Census 39.2861328,-76.6226044. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown West. Downtown West has no home view — add Downtown West to citywideOnly once. Do not invent a /downtown-west view. Do not fold into /inner-harbor. Hours in the footer today: Mon: Closed / Tues: Closed / Weds–Sun 11am - 8pm (Sat+Sun brunch pending new menu 11am - 4pm). Extended hours on Orioles Game Days. Record both clocks. Do not copy 8pm onto a deal end. Quotes today: Daily Specials / Weekdays 4pm to Close / All Day Saturday & Sunday. Monday: Industry Night $3 High Noons, 1/2 off Draft Beer ($4 Drafts). Tuesday: Tequila Tuesday BOGO Tequila. Wednesday: Winedown Wednesday Half Off Bottles of Wine. Thursday: Whiskey Me Away BOGO Whiskey. Friday: Flight Night Half Off Flights (Beer, Wine, Tequila). Saturday: Climb the Tower $25 Beer Tower. Sunday: Sunday Funday All Day Happy Hour. /happy-hour-menu 301s to /coming-soon today (We're shaking up the menu). Record in ops. Do not ship that page as prices. Do not ship Monday or Tuesday. Homepage says those days Closed. Same-site conflict — record both, hold those rows. Do not ship Sunday as priced. All Day Happy Hour has no $. Do not write time_window: all day. Game-day extended hours are a one-off overlay — do not merge. notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Half off bottles of wine",
+              "price": "50% off"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm to close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mdyards.com/daily-specials",
+          "proof_quote": "Weekdays 4pm to Close Wednesday: Winedown Wednesday Half Off Bottles of Wine",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "BOGO Whiskey",
+              "price": "BOGO"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm to close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mdyards.com/daily-specials",
+          "proof_quote": "Weekdays 4pm to Close Thursday: Whiskey Me Away BOGO Whiskey",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Half off flights (beer, wine, tequila)",
+              "price": "50% off"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm to close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mdyards.com/daily-specials",
+          "proof_quote": "Weekdays 4pm to Close Friday: Flight Night Half Off Flights (Beer, Wine, Tequila)",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$25 Beer Tower",
+              "price": "$25"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mdyards.com/daily-specials",
+          "proof_quote": "All Day Saturday & Sunday Saturday: Climb the Tower $25 Beer Tower",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2861328,
+      "lon": -76.6226044,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "mccormick-schmicks",
+      "name": "McCormick & Schmick's",
+      "neighborhood": "Inner Harbor",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "711 Eastern Ave, Baltimore, MD 21202",
+      "phone": "(410) 234-1300",
+      "source_url": "https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Not available for carryout. Not valid on holidays. Minimum beverage purchase of $3.4 per person.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/ HTTP 200. Happy Hour tab is #happy-hour-msba on this door. Do not cite https://www.mccormickandschmicks.com/menu/happy-hour-menu-jkcr/ — brand-wide Available Daily 3:00pm to 6:00pm with a different list. Kona Grill rule on that URL only. Pin 711 Eastern Ave, Baltimore, MD 21202 / (410) 234-1300. Census 39.2843797,-76.6056651. CityView Neighborhoods MapServer/0 query today on that point: Name=Inner Harbor. Already in /inner-harbor. Do not add Inner Harbor to citywideOnly. Location hours today: SUN - THU: 11:30 AM - 9:00 PM / FRI - SAT: 11:30 AM - 10:00 PM / Happy Hour: Mon - Fri 3:30PM - 6:30PM. Record hours in ops. Quotes from this door's HH tab today: $8 Cheesy Chowder Fries · Korean Fried Chicken · Wagyu Carpaccio · Blue Cheese Chips. $10 Crispy Asian Calamari · Fish Tacos Al Pastor Style · Spicy Asian Shrimp Tacos · Coconut Shrimp. $12 Cheeseburger · Poke Tuna Chips · Prosciutto di Parma Flatbread. $14 Spice Seared Ahi Tuna · Chilled Shrimp Cocktail · Sweet & Spicy Chicken Wings · P.E.I. Black Mussels. DAILY TWIST / Only available on corresponding days at the bar and lounge area from 3:30pm - close. / Taco Tuesdays your choice of fish or shrimp $3 / Ahi Tuna Poke Wednesdays & Thursdays $10 / Buck Shuck or Shrimp Fridays Cocktail sauce $2. DRAUGHT BEER - Domestic & Specialty $5 · DRAUGHT BEER - Import & Craft $6 · Well Spirits $7 · American Craft Spirits $8.5 · Select Wines $7 · Premium Wines $9. Gold Margarita $9 · M&S Iced Tea $11 · Berry Berry Mojito $10 · Perfect Lemon Drop Martini $10. Disclaimer: not available for carryout • not valid on holidays Available with minimum beverage purchase of $3.4 per person. Keep $3.4 as printed. Daily Twist is at the bar and lounge — record that clause in ops (and in the Twist rows' proof), not as a second public note. Do not merge Daily Twist into the 3:30–6:30 window. notes_public quote-matched: Not available for carryout. Not valid on holidays. Minimum beverage purchase of $3.4 per person.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Cheesy Chowder Fries",
+              "price": "$8"
+            },
+            {
+              "text": "Korean Fried Chicken",
+              "price": "$8"
+            },
+            {
+              "text": "Wagyu Carpaccio",
+              "price": "$8"
+            },
+            {
+              "text": "Blue Cheese Chips",
+              "price": "$8"
+            },
+            {
+              "text": "Crispy Asian Calamari",
+              "price": "$10"
+            },
+            {
+              "text": "Fish Tacos Al Pastor Style",
+              "price": "$10"
+            },
+            {
+              "text": "Spicy Asian Shrimp Tacos",
+              "price": "$10"
+            },
+            {
+              "text": "Coconut Shrimp",
+              "price": "$10"
+            },
+            {
+              "text": "Cheeseburger",
+              "price": "$12"
+            },
+            {
+              "text": "Poke Tuna Chips",
+              "price": "$12"
+            },
+            {
+              "text": "Prosciutto di Parma Flatbread",
+              "price": "$12"
+            },
+            {
+              "text": "Spice Seared Ahi Tuna",
+              "price": "$14"
+            },
+            {
+              "text": "Chilled Shrimp Cocktail",
+              "price": "$14"
+            },
+            {
+              "text": "Sweet & Spicy Chicken Wings",
+              "price": "$14"
+            },
+            {
+              "text": "P.E.I. Black Mussels",
+              "price": "$14"
+            },
+            {
+              "text": "Draught beer — domestic & specialty",
+              "price": "$5"
+            },
+            {
+              "text": "Draught beer — import & craft",
+              "price": "$6"
+            },
+            {
+              "text": "Well spirits",
+              "price": "$7"
+            },
+            {
+              "text": "American craft spirits",
+              "price": "$8.5"
+            },
+            {
+              "text": "Select wines",
+              "price": "$7"
+            },
+            {
+              "text": "Premium wines",
+              "price": "$9"
+            },
+            {
+              "text": "Gold Margarita",
+              "price": "$9"
+            },
+            {
+              "text": "M&S Iced Tea",
+              "price": "$11"
+            },
+            {
+              "text": "Berry Berry Mojito",
+              "price": "$10"
+            },
+            {
+              "text": "Perfect Lemon Drop Martini",
+              "price": "$10"
+            }
+          ],
+          "start": 930,
+          "end": 1110,
+          "time_window": "3:30pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/",
+          "proof_quote": "Happy Hour: Mon - Fri 3:30PM - 6:30PM $8 Cheesy Chowder Fries Korean Fried Chicken Wagyu Carpaccio Blue Cheese Chips $10 Crispy Asian Calamari Fish Tacos Al Pastor Style Spicy Asian Shrimp Tacos Coconut Shrimp $12 Cheeseburger Poke Tuna Chips Prosciutto di Parma Flatbread $14 Spice Seared Ahi Tuna Chilled Shrimp Cocktail Sweet & Spicy Chicken Wings P.E.I. Black Mussels DRAUGHT BEER - Domestic & Specialty $5 DRAUGHT BEER - Import & Craft $6 Well Spirits $7 American Craft Spirits $8.5 Select Wines $7 Premium Wines $9 Gold Margarita $9 M&S Iced Tea $11 Berry Berry Mojito $10 Perfect Lemon Drop Martini $10",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab",
+            "burger"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$3 fish or shrimp tacos",
+              "price": "$3"
+            }
+          ],
+          "start": 930,
+          "end": null,
+          "time_window": "3:30pm-close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/",
+          "proof_quote": "DAILY TWIST Only available on corresponding days at the bar and lounge area from 3:30pm - close. Taco Tuesdays your choice of fish or shrimp $3",
+          "food_categories": [
+            "tacos"
+          ]
+        },
+        {
+          "days": [
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$10 Ahi Tuna Poke",
+              "price": "$10"
+            }
+          ],
+          "start": 930,
+          "end": null,
+          "time_window": "3:30pm-close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/",
+          "proof_quote": "DAILY TWIST Only available on corresponding days at the bar and lounge area from 3:30pm - close. Ahi Tuna Poke Wednesdays & Thursdays $10",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 Buck Shuck or Shrimp",
+              "price": "$2"
+            }
+          ],
+          "start": 930,
+          "end": null,
+          "time_window": "3:30pm-close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltimore-md/",
+          "proof_quote": "DAILY TWIST Only available on corresponding days at the bar and lounge area from 3:30pm - close. Buck Shuck or Shrimp Fridays Cocktail sauce $2",
+          "food_categories": [
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.2843797,
+      "lon": -76.6056651,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

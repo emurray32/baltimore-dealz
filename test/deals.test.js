@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park / Hamilton Hills have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2138,8 +2138,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Taco Love Grill) → 130 -> 131 / 152 -> 153.
   // 2026-08-21: leftover loadable (The Dara) → 131 -> 132 / 153 -> 154.
   // 2026-08-21: leftover loadable (The Garden Rooftop) → 132 -> 133 / 154 -> 155.
-  assert.equal(showable, 133);
-  assert.equal(venues.length, 155);
+  // 2026-08-21: leftover loadable (Hamilton Sports Bar) → 133 -> 134 / 155 -> 156.
+  assert.equal(showable, 134);
+  assert.equal(venues.length, 156);
 });
 
 
@@ -7398,6 +7399,127 @@ test("The Garden Rooftop joins 2026-08-21 (Downtown / inner-harbor, Thursday 4�
   );
   assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 20, "Fells roster pin stays 20");
   assert.equal(bySlug.downtown, undefined, "do not invent a downtown view");
+});
+
+test("The Hamilton Sports Bar & Grill joins 2026-08-21 (Hamilton Hills citywide, Monday $25 crabs)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const ham = byId["the-hamilton-sports-bar"];
+  assert.ok(ham, "the-hamilton-sports-bar missing");
+  assert.deepEqual(venueShapeErrors(ham), []);
+  assert.equal(ham.name, "The Hamilton Sports Bar & Grill");
+  assert.equal(ham.neighborhood, "Hamilton Hills");
+  assert.equal(
+    ham.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(ham.status, "verified");
+  assert.equal(ham.address, "5506 Harford Road, Baltimore, MD 21214");
+  assert.equal(ham.phone, "(667) 239-3196");
+  assert.equal(ham.source_url, "https://thehamiltonsportsbarandgrill.com/");
+  assert.equal(ham.source_type, "venue_website");
+  assert.equal(ham.last_verified, "2026-08-21");
+  assert.equal(ham.notes_public, "Until they run out; one order per person");
+  assert.equal(ham.deal_format, undefined);
+  assert.equal(ham.lat, 39.3525939);
+  assert.equal(ham.lon, -76.5614572);
+  assert.equal(ham.deals.length, 1);
+  assert.match(ham.ops_notes ?? "", /Name=Hamilton Hills/);
+  assert.match(ham.ops_notes ?? "", /add Hamilton Hills to citywideOnly/i);
+  assert.match(ham.ops_notes ?? "", /Do not invent a \/hamilton-hills/);
+  assert.match(ham.ops_notes ?? "", /Do not invent a \/hamilton page/);
+  assert.match(ham.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(ham.ops_notes ?? "", /Do not add Hamilton \(that NSA is Hamilton Tavern/);
+  assert.match(ham.ops_notes ?? "", /Los Rancheros/);
+  assert.match(ham.ops_notes ?? "", /5517/);
+  assert.match(ham.ops_notes ?? "", /Hamilton Tavern/);
+  assert.match(ham.ops_notes ?? "", /12:00PM–2:00AM/);
+  assert.match(ham.ops_notes ?? "", /4:00PM–2:00AM/);
+  assert.match(ham.ops_notes ?? "", /View Happy Hour Menu/);
+  assert.match(ham.ops_notes ?? "", /\/menu/);
+  assert.match(ham.ops_notes ?? "", /\/happy-hour/);
+  assert.match(ham.ops_notes ?? "", /404/);
+  assert.match(ham.ops_notes ?? "", /Toast-powered/);
+  assert.match(ham.ops_notes ?? "", /CRABS ARE BACK/);
+  assert.match(ham.ops_notes ?? "", /half dozen large and X-large/);
+  assert.match(ham.ops_notes ?? "", /Starts at 7:30/);
+  assert.match(ham.ops_notes ?? "", /until we run out/);
+  assert.match(ham.ops_notes ?? "", /First come first served/);
+  assert.match(ham.ops_notes ?? "", /one order per person/);
+  assert.match(ham.ops_notes ?? "", /\$10 Top Shelf/);
+  assert.match(ham.ops_notes ?? "", /\$7 Bottom Shelf/);
+  assert.match(ham.ops_notes ?? "", /Wing Wednesday/);
+  assert.match(ham.ops_notes ?? "", /Espolon/);
+  assert.match(ham.ops_notes ?? "", /Monday Through Friday/);
+  assert.match(ham.ops_notes ?? "", /4pm-8pm/);
+  assert.match(ham.ops_notes ?? "", /Opens Friday at 4PM/);
+  assert.match(ham.ops_notes ?? "", /120/);
+  assert.match(ham.ops_notes ?? "", /960/);
+  assert.match(ham.ops_notes ?? "", /720/);
+  assert.match(ham.ops_notes ?? "", /happy_hour omit/);
+  assert.match(ham.ops_notes ?? "", /notes_public is required/);
+  assert.match(ham.ops_notes ?? "", /deal_format omitted/);
+  assert.ok(
+    !ham.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(
+    !ham.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+  assert.ok(
+    !ham.deals.some((d) => d.start === 120 || d.end === 120 || d.start === 960 || d.end === 960 || d.start === 720 || d.end === 720),
+    "do not copy bar 2am (120), Monday open 4pm (960), or Sunday noon (720) onto a deal clock",
+  );
+  assert.ok(
+    !ham.deals.some((d) => d.items.some((i) => /top shelf|bottom shelf|food specials|wing wednesday|espolon/i.test(`${i.text} ${i.price ?? ""}`))),
+    "do not ship HH $10/$7 or empty Toast Wing Wednesday / Espolon",
+  );
+  assert.ok(
+    !/5517/.test(ham.address) && ham.phone !== "(443) 438-5869",
+    "do not mix Hamilton Tavern at 5517 Harford",
+  );
+  assert.ok(
+    !/hamilton-tavern|thehamiltontavern/i.test(ham.source_url),
+    "Hamilton Tavern stays off source_url",
+  );
+
+  const crabs = ham.deals[0];
+  assert.equal(crabs.happy_hour, undefined);
+  assert.deepEqual(crabs.days, ["mon"]);
+  assert.equal(crabs.start, 1170);
+  assert.equal(crabs.end, null);
+  assert.equal(crabs.time_window, "7:30pm");
+  assert.deepEqual(crabs.food_categories, ["seafood/crab"]);
+  assert.deepEqual(
+    crabs.items.map((i) => [i.text, i.price ?? null]),
+    [["Half dozen large and X-large crabs, male and female", "$25"]],
+  );
+  assert.match(crabs.proof_quote, /CRABS ARE BACK!!!/);
+  assert.match(crabs.proof_quote, /Every Monday we got half dozen large and X-large, male and female crabs for \$25!/);
+  assert.match(crabs.proof_quote, /Starts at 7:30 and we go until we run out!/);
+  assert.match(crabs.proof_quote, /First come first served/);
+  assert.match(crabs.proof_quote, /Limited to one order per person/);
+  assert.doesNotMatch(crabs.proof_quote, /Top Shelf/);
+  assert.doesNotMatch(crabs.proof_quote, /Bottom Shelf/);
+  assert.doesNotMatch(crabs.proof_quote, /Wing Wednesday/);
+  assert.match(crabs.items[0].text, /X-large/);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "the-hamilton-sports-bar"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "the-hamilton-sports-bar"),
+    "Hamilton Hills must not fold into /hampden",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "the-hamilton-sports-bar"),
+    "Hamilton Hills must not fold into /fells-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 20, "Fells roster pin stays 20");
+  assert.equal(bySlug["hamilton-hills"], undefined, "do not invent a hamilton-hills view");
+  assert.equal(bySlug.hamilton, undefined, "do not invent a hamilton view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

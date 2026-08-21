@@ -13847,6 +13847,229 @@
       "lat": 39.2817798,
       "lon": -76.5910108,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "wiley-gunters",
+      "name": "Wiley Gunter's",
+      "neighborhood": "Riverside",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "823 East Fort Avenue, Baltimore, MD 21230",
+      "phone": "(410) 637-3699",
+      "source_url": "https://www.wileygunters.com/food-menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live https://www.wileygunters.com/food-menu HTTP 200. Homepage https://www.wileygunters.com/ HTTP 200. About https://www.wileygunters.com/about HTTP 200. Events https://www.wileygunters.com/events HTTP 200. /happy-hour /drinks /drink-menu /specials 404. Record homepage in ops. HH is HTML text on /food-menu, not image-only. Pin 823 East Fort Avenue, Baltimore, MD 21230 / (410) 637-3699. License 821–23 Fort Avenue East stays in ops. Emails info@wileygunters.com / jen@wileygunters.com stay in ops. Census Nominatim 39.2717740,-76.6022229. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Already in /locust-point (same as L.P. Steamers / Hersh's / Don Tigre). Do not add Riverside to citywideOnly. Do not add Locust Point. Do not invent a /riverside page. Fells roster pin stays 21. Do not invent a view. Hours today (homepage): Monday–Wednesday 4 pm to 12 midnight · Thursday 12 noon to 12 midnight · Friday 12 noon to 12 midnight (or later) · Saturday 11 am to 12 midnight (or later) · Sunday 11 am to 12 midnight. Record in ops. Do not copy midnight (0 / 1440), noon (720), Saturday/Sunday 11am (660), or “or later” onto a deal clock. Quotes from the Food Menu HAPPY HOUR block today: HAPPY HOUR · Monday and Wednesday 4 pm to 6 pm · Tuesday open to close · Thursday 2 pm to 6 pm · regular menu is also available · *HH GRUB* · $10 Quesadillas · $6 Queso & Chips · $9 Buffalo Chicken Dip · $8 Pretzel Sticks · $8 Jumbo Wings (7) · *HH DRINKS* · $6 Deep Eddy Drinks · $7 Fresh Squeezed Crushes · $7 House Margaritas spicy or original · $7 Maine Lunch IPA Drafts · $2.5 Natty Light Cans · $5 N/A Beers · $6 All Cans. Stay off: brunch slide (regular brunch list + Commanders-game exclusion). /events dated pint nights (New Trail Brewing Pint Night Wednesday, March 25, 2026). Regular-menu Quesadillas $14. Keep printed names (Jumbo Wings (7), Natty Light, N/A Beers, Maine Lunch IPA Drafts, $2.5). Do not write Natty Boh. Do not invent a 7-piece second row. happy_hour true. omit recurrence. cats wings, pretzel, small-plate/apps, drink. Three rows: mon,wed 960/1080 4pm-6pm; tue 960/null open to close; thu 840/1080 2pm-6pm. notes_public omit. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /locust-point and /baltimore. Not in /fells-point. bySlug.riverside undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Warehouse Cinemas is not this ticket.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Quesadillas",
+              "price": "$10"
+            },
+            {
+              "text": "Queso & Chips",
+              "price": "$6"
+            },
+            {
+              "text": "Buffalo Chicken Dip",
+              "price": "$9"
+            },
+            {
+              "text": "Pretzel Sticks",
+              "price": "$8"
+            },
+            {
+              "text": "Jumbo Wings (7)",
+              "price": "$8"
+            },
+            {
+              "text": "Deep Eddy Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "Fresh Squeezed Crushes",
+              "price": "$7"
+            },
+            {
+              "text": "House Margaritas spicy or original",
+              "price": "$7"
+            },
+            {
+              "text": "Maine Lunch IPA Drafts",
+              "price": "$7"
+            },
+            {
+              "text": "Natty Light Cans",
+              "price": "$2.5"
+            },
+            {
+              "text": "N/A Beers",
+              "price": "$5"
+            },
+            {
+              "text": "All Cans",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.wileygunters.com/food-menu",
+          "proof_quote": "HAPPY HOUR Monday and Wednesday 4 pm to 6 pm regular menu is also available *HH GRUB* $10 Quesadillas $6 Queso & Chips $9 Buffalo Chicken Dip $8 Pretzel Sticks $8 Jumbo Wings (7) *HH DRINKS* $6 Deep Eddy Drinks $7 Fresh Squeezed Crushes $7 House Margaritas spicy or original $7 Maine Lunch IPA Drafts $2.5 Natty Light Cans $5 N/A Beers $6 All Cans",
+          "food_categories": [
+            "wings",
+            "pretzel",
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Quesadillas",
+              "price": "$10"
+            },
+            {
+              "text": "Queso & Chips",
+              "price": "$6"
+            },
+            {
+              "text": "Buffalo Chicken Dip",
+              "price": "$9"
+            },
+            {
+              "text": "Pretzel Sticks",
+              "price": "$8"
+            },
+            {
+              "text": "Jumbo Wings (7)",
+              "price": "$8"
+            },
+            {
+              "text": "Deep Eddy Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "Fresh Squeezed Crushes",
+              "price": "$7"
+            },
+            {
+              "text": "House Margaritas spicy or original",
+              "price": "$7"
+            },
+            {
+              "text": "Maine Lunch IPA Drafts",
+              "price": "$7"
+            },
+            {
+              "text": "Natty Light Cans",
+              "price": "$2.5"
+            },
+            {
+              "text": "N/A Beers",
+              "price": "$5"
+            },
+            {
+              "text": "All Cans",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "open to close",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.wileygunters.com/food-menu",
+          "proof_quote": "HAPPY HOUR Tuesday open to close regular menu is also available *HH GRUB* $10 Quesadillas $6 Queso & Chips $9 Buffalo Chicken Dip $8 Pretzel Sticks $8 Jumbo Wings (7) *HH DRINKS* $6 Deep Eddy Drinks $7 Fresh Squeezed Crushes $7 House Margaritas spicy or original $7 Maine Lunch IPA Drafts $2.5 Natty Light Cans $5 N/A Beers $6 All Cans",
+          "food_categories": [
+            "wings",
+            "pretzel",
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Quesadillas",
+              "price": "$10"
+            },
+            {
+              "text": "Queso & Chips",
+              "price": "$6"
+            },
+            {
+              "text": "Buffalo Chicken Dip",
+              "price": "$9"
+            },
+            {
+              "text": "Pretzel Sticks",
+              "price": "$8"
+            },
+            {
+              "text": "Jumbo Wings (7)",
+              "price": "$8"
+            },
+            {
+              "text": "Deep Eddy Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "Fresh Squeezed Crushes",
+              "price": "$7"
+            },
+            {
+              "text": "House Margaritas spicy or original",
+              "price": "$7"
+            },
+            {
+              "text": "Maine Lunch IPA Drafts",
+              "price": "$7"
+            },
+            {
+              "text": "Natty Light Cans",
+              "price": "$2.5"
+            },
+            {
+              "text": "N/A Beers",
+              "price": "$5"
+            },
+            {
+              "text": "All Cans",
+              "price": "$6"
+            }
+          ],
+          "start": 840,
+          "end": 1080,
+          "time_window": "2pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.wileygunters.com/food-menu",
+          "proof_quote": "HAPPY HOUR Thursday 2 pm to 6 pm regular menu is also available *HH GRUB* $10 Quesadillas $6 Queso & Chips $9 Buffalo Chicken Dip $8 Pretzel Sticks $8 Jumbo Wings (7) *HH DRINKS* $6 Deep Eddy Drinks $7 Fresh Squeezed Crushes $7 House Margaritas spicy or original $7 Maine Lunch IPA Drafts $2.5 Natty Light Cans $5 N/A Beers $6 All Cans",
+          "food_categories": [
+            "wings",
+            "pretzel",
+            "small-plate/apps",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.271774,
+      "lon": -76.6022229,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

@@ -12636,6 +12636,481 @@
       "lat": 39.2741273,
       "lon": -76.6121847,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "alexanders-tavern-soha",
+      "name": "Alexander's Tavern Soha",
+      "neighborhood": "Waltherson",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "4801 Harford Rd, Baltimore, MD 21214",
+      "phone": "443-835-2071",
+      "source_url": "https://www.alexanderstavern.com/sohaunion",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live alexanderstavern.com/sohaunion HTTP 200; Fells Alexander /fellspoint HTTP 200 for mix-door check only; papistacojoint.com/soha-union HTTP 404. Pin 4801 Harford Rd, Baltimore, MD 21214 (license leftover Papi's Taco Lauraville, Suite H1) / 443-835-2071. Email AlexandersTavernSoHa@gmail.com stays in ops. Same building as Animal Boy (Suite S2) — different door. Census 39.3447319,-76.5673653. CityView Neighborhoods MapServer/0 query today on that point: Name=Waltherson. Nominatim display also says Lauraville / Hamilton — city Name=Waltherson wins; record in ops. Yelp reserve href still says soho — ops only, not the source. Waltherson has no home view — already in citywideOnly. Do not add it again. Do not invent a /waltherson page. Do not fold into /hampden. Do not fold into /fells-point. Do not mix doors. alexanders-tavern-fells (710 S. Broadway) stays untouched. Do not copy Fells HH windows (Tue–Thu 3–6 + Fri all-day) or Fells items ($3 Bud Light, $9 Prosecco, chips/salsa, cheese curds, $11 burgers, brunch until 3pm) onto this page. Hampden Papi's on papistacojoint.com/hampden is not this license. Homepage hours today: Mon–Wed 3pm- 10pm · Thu–Sun 11:30am - 10pm. Record hours in ops. Do not copy Soha's 10pm close onto a deal clock. Friday all day until 6pm is the printed window: start null · end 1080 (same shape as alexanders-tavern-fells Friday). Quotes from the Soha page today: SOHA UNION HAPPY HOUR / MON-WED • 3-6PM / THU • 2-6PM / FRI • ALL DAY UNTIL 6PM. Drink specials and food specials as printed. MONDAY • BURGERS & CANS / TUESDAY • TOTS & ‘TINIS / WEDNESDAY • WINGS & BREWS / THURSDAY • WINE & CHEESE / FRIDAY • FLATBREAD FRIDAY / WEEKENDS • RISE & SHINE! Stay off: weekend RISE & SHINE ($5 Mimosas & Bloody Marys · $7 / $10 Fresh Fruit Crushes — no clock on this door; do not copy Fells until 3pm) · Thursday Build-Your-Own Mac & Cheese / Build-Your-Own Grilled Cheese (no $). Do not invent. Wednesday Natty Light is on both the HH window and the daily row — ship both as printed. Keep printed names (sauce list on Brussels, with your choice of sauce on fries, BIG Cans). notes_public omitted. No vibe.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$1 Off All Bottles and Cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$3 Off Glasses of Wine",
+              "price": "$3 off"
+            },
+            {
+              "text": "$2 Natty Light Drafts ($3 Big Drafts)",
+              "price": "$2"
+            },
+            {
+              "text": "$5 All Other Drafts ($8 Big Drafts)",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Mixed House Drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Deep Eddy Vodka Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Select Flavored Bombs",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Texas Mules",
+              "price": "$7"
+            },
+            {
+              "text": "$4 Boardwalk Fries or Tater Tots with your choice of sauce",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Cheesy Tots with Ranch",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Brussels Sprouts (Maple-Bacon, Honey-Sriracha, or Buffalo-Bleu)",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Alexander's Mac n' Cheese",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Soft Pretzels & Queso",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Quesadilla",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Chicken Tenders and Fries",
+              "price": "$8"
+            },
+            {
+              "text": "$8 French Onion Soup",
+              "price": "$8"
+            },
+            {
+              "text": "$9 Cream of Crab Soup",
+              "price": "$9"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "proof_quote": "SOHA UNION HAPPY HOUR MON-WED • 3-6PM THU • 2-6PM FRI • ALL DAY UNTIL 6PM",
+          "food_categories": [
+            "small-plate/apps",
+            "pretzel",
+            "pasta/comfort",
+            "drink",
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$1 Off All Bottles and Cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$3 Off Glasses of Wine",
+              "price": "$3 off"
+            },
+            {
+              "text": "$2 Natty Light Drafts ($3 Big Drafts)",
+              "price": "$2"
+            },
+            {
+              "text": "$5 All Other Drafts ($8 Big Drafts)",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Mixed House Drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Deep Eddy Vodka Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Select Flavored Bombs",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Texas Mules",
+              "price": "$7"
+            },
+            {
+              "text": "$4 Boardwalk Fries or Tater Tots with your choice of sauce",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Cheesy Tots with Ranch",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Brussels Sprouts (Maple-Bacon, Honey-Sriracha, or Buffalo-Bleu)",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Alexander's Mac n' Cheese",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Soft Pretzels & Queso",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Quesadilla",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Chicken Tenders and Fries",
+              "price": "$8"
+            },
+            {
+              "text": "$8 French Onion Soup",
+              "price": "$8"
+            },
+            {
+              "text": "$9 Cream of Crab Soup",
+              "price": "$9"
+            }
+          ],
+          "start": 840,
+          "end": 1080,
+          "time_window": "2pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "proof_quote": "SOHA UNION HAPPY HOUR MON-WED • 3-6PM THU • 2-6PM FRI • ALL DAY UNTIL 6PM",
+          "food_categories": [
+            "small-plate/apps",
+            "pretzel",
+            "pasta/comfort",
+            "drink",
+            "seafood/crab"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$1 Off All Bottles and Cans",
+              "price": "$1 off"
+            },
+            {
+              "text": "$3 Off Glasses of Wine",
+              "price": "$3 off"
+            },
+            {
+              "text": "$2 Natty Light Drafts ($3 Big Drafts)",
+              "price": "$2"
+            },
+            {
+              "text": "$5 All Other Drafts ($8 Big Drafts)",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Mixed House Drinks",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Deep Eddy Vodka Drinks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Select Flavored Bombs",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Texas Mules",
+              "price": "$7"
+            },
+            {
+              "text": "$4 Boardwalk Fries or Tater Tots with your choice of sauce",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Cheesy Tots with Ranch",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Brussels Sprouts (Maple-Bacon, Honey-Sriracha, or Buffalo-Bleu)",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Alexander's Mac n' Cheese",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Soft Pretzels & Queso",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Cheese Quesadilla",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Chicken Tenders and Fries",
+              "price": "$8"
+            },
+            {
+              "text": "$8 French Onion Soup",
+              "price": "$8"
+            },
+            {
+              "text": "$9 Cream of Crab Soup",
+              "price": "$9"
+            },
+            {
+              "text": "$4 Off all Flatbreads",
+              "price": "$4 off"
+            }
+          ],
+          "start": null,
+          "end": 1080,
+          "time_window": "all day until 6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "proof_quote": "FRIDAY • FLATBREAD FRIDAY • $4 Off all Flatbreads • All Day Happy Hour Until 6pm",
+          "food_categories": [
+            "small-plate/apps",
+            "pretzel",
+            "pasta/comfort",
+            "drink",
+            "seafood/crab",
+            "pizza"
+          ]
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$10 Alexander's Cheeseburgers",
+              "price": "$10"
+            },
+            {
+              "text": "$5 Microbrew Bottles & Cans",
+              "price": "$5"
+            },
+            {
+              "text": "Kids Eat Free After 4pm (With Adult Meal Purchase)",
+              "price": "Free"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Half Price Tater Tots Dishes",
+              "price": "1/2 price"
+            },
+            {
+              "text": "$10 Martini Menu",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$10 Charm City Wings",
+              "price": "$10"
+            },
+            {
+              "text": "$2 Natty Light Drafts",
+              "price": "$2"
+            },
+            {
+              "text": "$3 Natty Boh BIG Cans",
+              "price": "$3"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "food_categories": [
+            "wings",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "B.O.G.O. Glasses of Wine",
+              "price": "BOGO"
+            },
+            {
+              "text": "1/2 Price Bottles of Wine",
+              "price": "1/2 price"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.alexanderstavern.com/sohaunion",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3447319,
+      "lon": -76.5673653,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "rec-pier-chop-house",
+      "name": "Rec Pier Chop House",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "1715 Thames Street, Baltimore, MD 21231",
+      "phone": "(443) 552-1300",
+      "source_url": "https://www.pendry.com/baltimore/menus/martini-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live pendry.com/baltimore/menus/martini-hour/ HTTP 200 (browser UA; bare curl 403); dining page HTTP 200: https://www.pendry.com/baltimore/dining/rec-pier-chop-house/ ; seasonal-happenings HTTP 200: https://www.recpierchophouse.com/seasonal-happenings/ . Pin 1715 Thames Street, Baltimore, MD 21231 / (443) 552-1300. Hotel switchboard (443) 552-1400 is not the restaurant — ops only. Census 39.2811103,-76.5919083. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Prices from this door's martini-hour menu page, not a brand-wide menu. Hours today (dining page): Breakfast Mon–Sun 7:00am – 10:30am · Brunch Sat–Sun 11:00am – 3:00pm · Lunch Mon–Fri 11:00am – 3:00pm · Dinner daily 5:00pm – 10:00pm · Bar & Lounge Sun–Thu 11:00am – 10:00pm / Fri–Sat 11:00am – 11:00pm. Record hours in ops. Do not copy dinner-close or lounge 11pm onto a deal clock. Quotes from the martini-hour menu today: Martini Hour Available Monday - Friday | 5:00pm - 7:00pm | At the Bar at Rec Pier Chop House. Tiny Tini's 2.5 oz. Dirty Vodka Martini Wheatley Vodka, Dry Vermouth, Olives $8. Classic Gin Martini Shot Tower Gin, Vermouth, Orange Bitters, Lemon Twist $8. Vesper Shot Tower Gin, Wheatley Vodka, Cocchi Americano, Lemon Twist $8. Negroni Shot Tower Gin, Campari, Cocchi di Tornio, Orange Coin $8. Girl Dinner Half Sweet Gem Caesar, French Fries, Choice of Full Sized Martini $28. Keep printed Cocchi di Tornio spelling. Keep Tiny Tini's / 2.5 oz on the card. Dining-page copy today (ops + restriction): Available at the bar only. Walk-ins welcome. Do not put that on notes_public — it is Martini Hour only. Tasting Tuesdays also runs Rec Pier / Cannon Room / the bar. Venue-level notes_public would mislabel Tuesday bottles. Seasonal-happenings today: Tasting Tuesdays / Tuesdays only, taste our curated collection of sommelier-approved specially priced wines. Join us for dinner and drinks at Rec Pier Chop House, in The Cannon Room or at the bar for half-priced bottles from 5:00pm – 10:00pm. Stay off: Power Lunch (courses named, no $) · Soulful Brunch (no $) · Live in the Lounge (no $) · Whiskey Workshop (ticketed class, not a weekly row). notes_public omitted. No vibe. Martini Hour bar-only stays in ops.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Tiny Tini's 2.5 oz. Dirty Vodka Martini",
+              "price": "$8"
+            },
+            {
+              "text": "Classic Gin Martini",
+              "price": "$8"
+            },
+            {
+              "text": "Vesper",
+              "price": "$8"
+            },
+            {
+              "text": "Negroni",
+              "price": "$8"
+            },
+            {
+              "text": "Girl Dinner — Half Sweet Gem Caesar, French Fries, Choice of Full Sized Martini",
+              "price": "$28"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.pendry.com/baltimore/menus/martini-hour/",
+          "proof_quote": "Martini Hour Available Monday - Friday | 5:00pm - 7:00pm | At the Bar at Rec Pier Chop House",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "half-priced bottles",
+              "price": "1/2 price"
+            }
+          ],
+          "start": 1020,
+          "end": 1320,
+          "time_window": "5pm-10pm",
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.recpierchophouse.com/seasonal-happenings/",
+          "proof_quote": "Tuesdays only, taste our curated collection of sommelier-approved specially priced wines. Join us for dinner and drinks at Rec Pier Chop House, in The Cannon Room or at the bar for half-priced bottles from 5:00pm – 10:00pm.",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2811103,
+      "lon": -76.5919083,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

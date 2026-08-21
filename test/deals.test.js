@@ -2141,8 +2141,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (The Garden Rooftop) → 132 -> 133 / 154 -> 155.
   // 2026-08-21: leftover loadable (Hamilton Sports Bar) → 133 -> 134 / 155 -> 156.
   // 2026-08-21: leftover loadable (V-NO Wine Bar) → 134 -> 135 / 156 -> 157.
-  assert.equal(showable, 135);
-  assert.equal(venues.length, 157);
+  // 2026-08-21: leftover loadable (Wiley Gunter's) → 135 -> 136 / 157 -> 158.
+  assert.equal(showable, 136);
+  assert.equal(venues.length, 158);
 });
 
 
@@ -7638,6 +7639,178 @@ test("V-NO Wine Bar joins 2026-08-21 (Fells Point, Monday $5 off wine flights)",
     "Fells Point must not fold into /locust-point",
   );
   assert.equal(bySlug["national-harbor"], undefined, "do not invent a national-harbor view");
+});
+
+test("Wiley Gunter's joins 2026-08-21 (Riverside / locust-point, priced HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const wiley = byId["wiley-gunters"];
+  assert.ok(wiley, "wiley-gunters missing");
+  assert.deepEqual(venueShapeErrors(wiley), []);
+  assert.equal(wiley.name, "Wiley Gunter's");
+  assert.equal(wiley.neighborhood, "Riverside");
+  assert.equal(
+    wiley.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(wiley.status, "verified");
+  assert.equal(wiley.address, "823 East Fort Avenue, Baltimore, MD 21230");
+  assert.equal(wiley.phone, "(410) 637-3699");
+  assert.equal(wiley.source_url, "https://www.wileygunters.com/food-menu");
+  assert.equal(wiley.source_type, "venue_website");
+  assert.equal(wiley.last_verified, "2026-08-21");
+  assert.equal(wiley.notes_public, undefined);
+  assert.equal(wiley.deal_format, undefined);
+  assert.equal(wiley.lat, 39.271774);
+  assert.equal(wiley.lon, -76.6022229);
+  assert.equal(wiley.deals.length, 3);
+  assert.match(wiley.ops_notes ?? "", /Name=Riverside/);
+  assert.match(wiley.ops_notes ?? "", /Already in \/locust-point/);
+  assert.match(wiley.ops_notes ?? "", /Do not add Riverside to citywideOnly/);
+  assert.match(wiley.ops_notes ?? "", /Do not add Locust Point/);
+  assert.match(wiley.ops_notes ?? "", /Do not invent a \/riverside/);
+  assert.match(wiley.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(wiley.ops_notes ?? "", /https:\/\/www\.wileygunters\.com\//);
+  assert.match(wiley.ops_notes ?? "", /https:\/\/www\.wileygunters\.com\/food-menu/);
+  assert.match(wiley.ops_notes ?? "", /\/happy-hour/);
+  assert.match(wiley.ops_notes ?? "", /\/drinks/);
+  assert.match(wiley.ops_notes ?? "", /\/drink-menu/);
+  assert.match(wiley.ops_notes ?? "", /\/specials/);
+  assert.match(wiley.ops_notes ?? "", /404/);
+  assert.match(wiley.ops_notes ?? "", /821–23|821-23/);
+  assert.match(wiley.ops_notes ?? "", /info@wileygunters\.com/);
+  assert.match(wiley.ops_notes ?? "", /jen@wileygunters\.com/);
+  assert.match(wiley.ops_notes ?? "", /4 pm to 12 midnight/);
+  assert.match(wiley.ops_notes ?? "", /12 noon to 12 midnight/);
+  assert.match(wiley.ops_notes ?? "", /or later/);
+  assert.match(wiley.ops_notes ?? "", /11 am to 12 midnight/);
+  assert.match(wiley.ops_notes ?? "", /HAPPY HOUR/);
+  assert.match(wiley.ops_notes ?? "", /Monday and Wednesday 4 pm to 6 pm/);
+  assert.match(wiley.ops_notes ?? "", /Tuesday open to close/);
+  assert.match(wiley.ops_notes ?? "", /Thursday 2 pm to 6 pm/);
+  assert.match(wiley.ops_notes ?? "", /regular menu is also available/);
+  assert.match(wiley.ops_notes ?? "", /\*HH GRUB\*/);
+  assert.match(wiley.ops_notes ?? "", /\*HH DRINKS\*/);
+  assert.match(wiley.ops_notes ?? "", /Jumbo Wings \(7\)/);
+  assert.match(wiley.ops_notes ?? "", /Natty Light/);
+  assert.match(wiley.ops_notes ?? "", /N\/A Beers/);
+  assert.match(wiley.ops_notes ?? "", /Maine Lunch IPA Drafts/);
+  assert.match(wiley.ops_notes ?? "", /\$2\.5/);
+  assert.match(wiley.ops_notes ?? "", /spicy or original/);
+  assert.match(wiley.ops_notes ?? "", /Quesadillas \$14|regular-menu Quesadillas/);
+  assert.match(wiley.ops_notes ?? "", /Commanders/);
+  assert.match(wiley.ops_notes ?? "", /Pint Night|pint nights/);
+  assert.match(wiley.ops_notes ?? "", /HTML text/);
+  assert.match(wiley.ops_notes ?? "", /notes_public/);
+  assert.match(wiley.ops_notes ?? "", /deal_format omitted/);
+  assert.match(wiley.ops_notes ?? "", /William Fell is HOLD/);
+  assert.match(wiley.ops_notes ?? "", /Warehouse Cinemas is not this ticket/);
+  assert.ok(
+    !wiley.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+  assert.ok(
+    wiley.deals.every((d) => d.happy_hour === true),
+    "happy_hour true",
+  );
+  assert.ok(
+    !wiley.deals.some((d) => d.start === 0 || d.end === 0 || d.start === 1440 || d.end === 1440 || d.start === 720 || d.end === 720 || d.start === 660 || d.end === 660),
+    "do not copy midnight (0 / 1440), noon (720), or Saturday/Sunday 11am (660) onto a deal clock",
+  );
+  assert.ok(
+    !wiley.deals.some((d) => d.items.some((i) => /natty boh|brunch|commanders|pint night/i.test(`${i.text} ${i.price ?? ""}`))),
+    "do not ship Natty Boh, brunch, Commanders, or pint nights",
+  );
+  assert.ok(
+    !wiley.deals.some((d) => d.items.some((i) => i.text === "Quesadillas" && i.price === "$14")),
+    "do not ship regular-menu Quesadillas $14",
+  );
+  assert.ok(
+    !wiley.deals.some((d) => /brunch/i.test(d.time_window ?? "") || /brunch/i.test(d.proof_quote ?? "")),
+    "brunch slide stays off the deal rows",
+  );
+  assert.ok(
+    !/brunch|events\/new-trail|commanders-game/i.test(wiley.source_url),
+    "brunch slide and /events stay off source_url",
+  );
+
+  const hhItems = [
+    ["Quesadillas", "$10"],
+    ["Queso & Chips", "$6"],
+    ["Buffalo Chicken Dip", "$9"],
+    ["Pretzel Sticks", "$8"],
+    ["Jumbo Wings (7)", "$8"],
+    ["Deep Eddy Drinks", "$6"],
+    ["Fresh Squeezed Crushes", "$7"],
+    ["House Margaritas spicy or original", "$7"],
+    ["Maine Lunch IPA Drafts", "$7"],
+    ["Natty Light Cans", "$2.5"],
+    ["N/A Beers", "$5"],
+    ["All Cans", "$6"],
+  ];
+  const cats = ["wings", "pretzel", "small-plate/apps", "drink"];
+
+  const monWed = wiley.deals[0];
+  const tue = wiley.deals[1];
+  const thu = wiley.deals[2];
+
+  assert.equal(monWed.happy_hour, true);
+  assert.deepEqual(monWed.days, ["mon", "wed"]);
+  assert.equal(monWed.start, 960);
+  assert.equal(monWed.end, 1080);
+  assert.equal(monWed.time_window, "4pm-6pm");
+  assert.deepEqual(monWed.food_categories, cats);
+  assert.deepEqual(monWed.items.map((i) => [i.text, i.price ?? null]), hhItems);
+  assert.match(monWed.proof_quote, /HAPPY HOUR/);
+  assert.match(monWed.proof_quote, /Monday and Wednesday 4 pm to 6 pm/);
+  assert.match(monWed.proof_quote, /\$10/);
+  assert.match(monWed.proof_quote, /Quesadillas/);
+  assert.match(monWed.proof_quote, /Jumbo Wings \(7\)/);
+  assert.match(monWed.proof_quote, /Natty Light Cans/);
+  assert.match(monWed.proof_quote, /\$2\.5/);
+  assert.match(monWed.proof_quote, /House Margaritas spicy or original/);
+  assert.doesNotMatch(monWed.proof_quote, /brunch/i);
+  assert.doesNotMatch(monWed.proof_quote, /Commanders/);
+  assert.doesNotMatch(monWed.proof_quote, /Pint Night/);
+  assert.equal(monWed.source_url, "https://www.wileygunters.com/food-menu");
+
+  assert.equal(tue.happy_hour, true);
+  assert.deepEqual(tue.days, ["tue"]);
+  assert.equal(tue.start, 960);
+  assert.equal(tue.end, null);
+  assert.equal(tue.time_window, "open to close");
+  assert.deepEqual(tue.food_categories, cats);
+  assert.deepEqual(tue.items.map((i) => [i.text, i.price ?? null]), hhItems);
+  assert.match(tue.proof_quote, /HAPPY HOUR/);
+  assert.match(tue.proof_quote, /Tuesday open to close/);
+  assert.match(tue.items.find((i) => i.text.startsWith("Jumbo Wings")).text, /Jumbo Wings \(7\)/);
+  assert.equal(tue.items.find((i) => i.text === "Natty Light Cans").price, "$2.5");
+  assert.doesNotMatch(tue.proof_quote, /brunch/i);
+  assert.equal(tue.source_url, "https://www.wileygunters.com/food-menu");
+
+  assert.equal(thu.happy_hour, true);
+  assert.deepEqual(thu.days, ["thu"]);
+  assert.equal(thu.start, 840);
+  assert.equal(thu.end, 1080);
+  assert.equal(thu.time_window, "2pm-6pm");
+  assert.deepEqual(thu.food_categories, cats);
+  assert.deepEqual(thu.items.map((i) => [i.text, i.price ?? null]), hhItems);
+  assert.match(thu.proof_quote, /HAPPY HOUR/);
+  assert.match(thu.proof_quote, /Thursday 2 pm to 6 pm/);
+  assert.doesNotMatch(thu.proof_quote, /brunch/i);
+  assert.equal(thu.source_url, "https://www.wileygunters.com/food-menu");
+
+  assert.ok(venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "wiley-gunters"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "wiley-gunters"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "wiley-gunters"),
+    "Riverside must not fold into /fells-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
+  assert.equal(bySlug.riverside, undefined, "do not invent a riverside view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

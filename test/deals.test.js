@@ -1901,7 +1901,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 19);
+  assert.equal(inView.length, 20);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
@@ -1919,6 +1919,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
       "stuggys",
       "thames-street-oyster-house",
       "the-choptank",
+      "the-dara",
       "the-horse-you-came-in-on",
       "the-point-in-fells",
       "the-rockwell-fells",
@@ -2135,8 +2136,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Southpaw) → 128 -> 129 / 150 -> 151.
   // 2026-08-21: leftover loadable (Swallow at the Hollow) → 129 -> 130 / 151 -> 152.
   // 2026-08-21: leftover loadable (Taco Love Grill) → 130 -> 131 / 152 -> 153.
-  assert.equal(showable, 131);
-  assert.equal(venues.length, 153);
+  // 2026-08-21: leftover loadable (The Dara) → 131 -> 132 / 153 -> 154.
+  assert.equal(showable, 132);
+  assert.equal(venues.length, 154);
 });
 
 
@@ -7150,6 +7152,119 @@ test("Taco Love Grill joins 2026-08-21 (Locust Point / locust-point, Mon–Fri 3
     !venuesInView(venues, bySlug["federal-hill"]).some((v) => v.id === "taco-love-grill"),
     "McHenry Row must not fold into /federal-hill",
   );
+});
+
+test("The Dara joins 2026-08-21 (Fells Point / fells-point, everyday 4:30–6 HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const dara = byId["the-dara"];
+  assert.ok(dara, "the-dara missing");
+  assert.deepEqual(venueShapeErrors(dara), []);
+  assert.equal(dara.name, "The Dara");
+  assert.equal(dara.neighborhood, "Fells Point");
+  assert.equal(
+    dara.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(dara.status, "verified");
+  assert.equal(dara.address, "906 South Wolfe Street, Baltimore, MD 21231");
+  assert.equal(dara.phone, "(443) 438-6311");
+  assert.equal(dara.source_url, "https://www.thedarakitchen.com/menu");
+  assert.equal(dara.source_type, "venue_website");
+  assert.equal(dara.last_verified, "2026-08-21");
+  assert.equal(dara.notes_public, undefined);
+  assert.equal(dara.deal_format, "image");
+  assert.equal(dara.lat, 39.281662);
+  assert.equal(dara.lon, -76.5899386);
+  assert.equal(dara.deals.length, 1);
+  assert.match(dara.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(dara.ops_notes ?? "", /Already in \/fells-point/);
+  assert.match(dara.ops_notes ?? "", /Do not add Fells Point to citywideOnly/);
+  assert.match(dara.ops_notes ?? "", /https:\/\/www\.thedarakitchen\.com\//);
+  assert.match(dara.ops_notes ?? "", /Happy Hour Menu/);
+  assert.match(dara.ops_notes ?? "", /Happy\+Hour\.png/);
+  assert.match(dara.ops_notes ?? "", /\/happy-hour 404/);
+  assert.match(dara.ops_notes ?? "", /contact@thedarakitchen\.com/);
+  assert.match(dara.ops_notes ?? "", /Open Daily/);
+  assert.match(dara.ops_notes ?? "", /Lunch 11am - 3pm/);
+  assert.match(dara.ops_notes ?? "", /Dinner 4:30pm - 10pm/);
+  assert.match(dara.ops_notes ?? "", /Saturday & Sunday 11am - 10pm/);
+  assert.match(dara.ops_notes ?? "", /11:00-22:00/);
+  assert.match(dara.ops_notes ?? "", /1320/);
+  assert.match(dara.ops_notes ?? "", /North Wolfe/);
+  assert.match(dara.ops_notes ?? "", /South Clifton Park/);
+  assert.match(dara.ops_notes ?? "", /Middle East/);
+  assert.match(dara.ops_notes ?? "", /ORIOLE PARK/);
+  assert.match(dara.ops_notes ?? "", /Do not write Natty Boh/);
+  assert.match(dara.ops_notes ?? "", /Do not invent a separate Oriole Park row/);
+  assert.match(dara.ops_notes ?? "", /Business-Lunch-Updated-02242026\.pdf/);
+  assert.match(dara.ops_notes ?? "", /The-Dara-Menu-Legal-QR-12092025-Vertical\.pdf/);
+  assert.match(dara.ops_notes ?? "", /Drink Menu 1\.png/);
+  assert.match(dara.ops_notes ?? "", /Drink Menu 2\.png/);
+  assert.match(dara.ops_notes ?? "", /4:30–6 PM EVERYDAY/);
+  assert.match(dara.ops_notes ?? "", /notes_public omitted/);
+  assert.match(dara.ops_notes ?? "", /deal_format image/);
+  assert.ok(
+    !dara.deals.some((d) => d.start === 1320 || d.end === 1320),
+    "do not copy dinner close 10pm (1320) onto a deal clock",
+  );
+  assert.ok(
+    !dara.deals.some((d) => d.items.some((i) => /natty|boh/i.test(i.text))),
+    "keep printed beer name Oriole Park — do not write Natty Boh",
+  );
+  assert.ok(
+    !dara.deals.some((d) => d.items.some((i) => i.text === "Oriole Park")),
+    "do not invent a separate Oriole Park row",
+  );
+  assert.ok(
+    !/The-Dara-Menu-Legal-QR|Business-Lunch-Updated|Drink\+Menu/i.test(dara.source_url),
+    "lunch/dinner PDFs and Drink Menu PNGs stay off source_url",
+  );
+  assert.ok(
+    !dara.deals.some((d) => d.recurrence),
+    "omit recurrence",
+  );
+
+  const hh = dara.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(hh.start, 990);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "4:30pm-6pm");
+  assert.deepEqual(hh.food_categories, ["drink", "small-plate/apps", "wings", "seafood/crab"]);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Beer (Oriole Park / Asahi / Sapporo)", "$5"],
+      ["Wine (House Red / House White / House Sparkling)", "$7"],
+      ["Cocktails (Red Sangria / White Sangria / Aperol Spritz)", "$9"],
+      ["Lotus Root (V)", "$5"],
+      ["Giaow Pak (V)", "$6"],
+      ["Papaya Salad (GF)(V)", "$7"],
+      ["Boneless Fried Chicken Wing", "$8"],
+      ["Shrimp Tempura", "$9"],
+    ],
+  );
+  assert.match(hh.proof_quote, /HAPPY HOUR/);
+  assert.match(hh.proof_quote, /ORIOLE PARK/);
+  assert.match(hh.proof_quote, /LOTUS ROOT \(V\) \$5/);
+  assert.match(hh.proof_quote, /GIAOW PAK \(V\) \$6/);
+  assert.match(hh.proof_quote, /PAPAYA SALAD \(GF\)\(V\) \$7/);
+  assert.match(hh.proof_quote, /4:30–6 PM EVERYDAY/);
+  assert.doesNotMatch(hh.proof_quote, /Natty/);
+  assert.doesNotMatch(hh.proof_quote, /Business-Lunch/);
+  assert.doesNotMatch(hh.proof_quote, /Drink Menu/);
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "the-dara"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "the-dara"));
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "the-dara"),
+    "Fells Point must not fold into /locust-point",
+  );
+  assert.equal(bySlug["south-clifton-park"], undefined, "do not invent a south-clifton-park view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

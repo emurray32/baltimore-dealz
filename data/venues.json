@@ -13597,6 +13597,83 @@
       "lat": 39.268416,
       "lon": -76.600295,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "the-dara",
+      "name": "The Dara",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "906 South Wolfe Street, Baltimore, MD 21231",
+      "phone": "(443) 438-6311",
+      "source_url": "https://www.thedarakitchen.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live thedarakitchen.com/menu HTTP 200; homepage HTTP 200: https://www.thedarakitchen.com/ ; /happy-hour 404. Prices from the Happy Hour PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw). Heading still Happy Hour Menu. Graphic still Happy+Hour.png (https://images.squarespace-cdn.com/content/v1/645b20ee9525ba3d2fefe486/d4d4e50f-efb2-4e3a-adbb-1b9026e47a57/Happy+Hour.png). Live PNG today byte-identical vs 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m33/dara_hh.png; sha256 8b32a86e773ded7f075499a67b54228e6360acc5bd2e05ea857acbd383a93e1c). Pin 906 South Wolfe Street, Baltimore, MD 21231 / (443) 438-6311. Email contact@thedarakitchen.com stays in ops. Census 39.2816620,-76.5899386. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Do not use a street-only North Wolfe pin (that lands South Clifton Park). Nominatim of 906 South Wolfe Street, Baltimore, MD 21231 is 39.2816620,-76.5899386 (display_name includes Fell's Point) — same point as the row. Nominatim of 906 North Wolfe Street today is 39.3013644,-76.5911926, MapServer/0 Name=Middle East — still not Fells Point. Hours today (homepage): Open Daily · Monday–Friday Lunch 11am - 3pm / Dinner 4:30pm - 10pm · Saturday & Sunday 11am - 10pm. Schema/JSON-LD openingHours Mo–Su 11:00-22:00; businessHours 11am - 10pm daily. Record both. Do not copy dinner close 10pm (1320) onto a deal clock. Weekday dinner opens 4:30pm — HH starts at kitchen-dinner open; do not invent a later start. Quotes from the HH PNG today (visual read): HAPPY HOUR. BEER $5 · ORIOLE PARK · ASAHI · SAPPORO. WINE $7 · HOUSE RED · HOUSE WHITE · HOUSE SPARKLING. COCKTAILS $9 · RED SANGRIA · WHITE SANGRIA · APEROL SPRITZ. LOTUS ROOT (V) $5. GIAOW PAK (V) $6. PAPAYA SALAD (GF)(V) $7. BONELESS FRIED CHICKEN WING $8. SHRIMP TEMPURA $9. HAPPY HOUR 4:30–6 PM EVERYDAY. Keep printed beer name Oriole Park. Do not write Natty Boh. Do not invent a separate Oriole Park row. Graphic prints a chili next to Giaow Pak and Papaya Salad — printed names stay (V) / (GF)(V); chili stays in ops. Extra descriptors after the apps stay in ops (may ride): LOTUS ROOT — GOLDEN CRISPY FRIED, SWEET CHILI SAUCE. GIAOW PAK — CABBAGE, CARROT, MUSHROOM, BELL PEPPER, LEEK, GLASS NOODLE, WRAPPED IN WONTON SKIN, HOUSE SWEET SOY SAUCE, CHILI OIL. PAPAYA SALAD — GREEN PAPAYA, CARROT, TOMATO, GREEN BEAN, PEANUT, LIME DRESSING. BONELESS FRIED CHICKEN WING — MARINATED THAI STYLE, GOLDEN CRISPY FRIED, JAEW SAUCE. SHRIMP TEMPURA — LIGHTLY BATTERED AND DEEP FRIED, SWEET SOY SAUCE, SRIRACHA AIOLI. Stay off: lunch PDF Business-Lunch-Updated-02242026.pdf (live /s/ HTTP 200) · dinner/QR menu PDF The-Dara-Menu-Legal-QR-12092025-Vertical.pdf (live /s/ HTTP 200) · Drink Menu 1.png / Drink Menu 2.png · regular dinner screenshots (Screenshot 2026-02-17 / 2026-02-24). happy_hour true. days sun, mon, tue, wed, thu, fri, sat. start 990 · end 1080 · time_window 4:30pm-6pm. cats drink, small-plate/apps, wings, seafood/crab. notes_public omitted. No vibe. deal_format image (legal; pdf is not).",
+      "deal_format": "image",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Beer (Oriole Park / Asahi / Sapporo)",
+              "price": "$5"
+            },
+            {
+              "text": "Wine (House Red / House White / House Sparkling)",
+              "price": "$7"
+            },
+            {
+              "text": "Cocktails (Red Sangria / White Sangria / Aperol Spritz)",
+              "price": "$9"
+            },
+            {
+              "text": "Lotus Root (V)",
+              "price": "$5"
+            },
+            {
+              "text": "Giaow Pak (V)",
+              "price": "$6"
+            },
+            {
+              "text": "Papaya Salad (GF)(V)",
+              "price": "$7"
+            },
+            {
+              "text": "Boneless Fried Chicken Wing",
+              "price": "$8"
+            },
+            {
+              "text": "Shrimp Tempura",
+              "price": "$9"
+            }
+          ],
+          "start": 990,
+          "end": 1080,
+          "time_window": "4:30pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.thedarakitchen.com/menu",
+          "proof_quote": "HAPPY HOUR BEER $5 ORIOLE PARK ASAHI SAPPORO WINE $7 HOUSE RED HOUSE WHITE HOUSE SPARKLING COCKTAILS $9 RED SANGRIA WHITE SANGRIA APEROL SPRITZ LOTUS ROOT (V) $5 GIAOW PAK (V) $6 PAPAYA SALAD (GF)(V) $7 BONELESS FRIED CHICKEN WING $8 SHRIMP TEMPURA $9 HAPPY HOUR 4:30–6 PM EVERYDAY",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "wings",
+            "seafood/crab"
+          ]
+        }
+      ],
+      "lat": 39.281662,
+      "lon": -76.5899386,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
 
   ]

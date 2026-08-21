@@ -10900,6 +10900,178 @@
       "lat": 39.2897899,
       "lon": -76.6155584,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "la-calle",
+      "name": "La Calle",
+      "neighborhood": "Fells Point",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "623 S Broadway Baltimore MD 21231",
+      "phone": "+1 (443) 835-2215",
+      "source_url": "https://www.lacallerestaurant.com/contact-2/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live lacallerestaurant.com/contact-2/ HTTP 200. HH PDF https://www.lacallerestaurant.com/wp-content/uploads/2026/01/happyhour-022026.pdf still the live file linked from /menu-2/ today (HTTP 200). Pin 623 S Broadway Baltimore MD 21231 / +1 (443) 835-2215. Census 39.2842935,-76.5931531. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Contact hours: Brunch Sat–Sun 11:00am–2:30 pm · Dinner Mon–Thu 5:00 pm–10:00 pm / Fri–Sat 4:00 pm–10:30pm / Sun 4:00 pm–9:00 pm · Bar Mon–Thu 5:00 pm–11:00 pm / Fri–Sat 4:00 pm–12:00 pm / Sun 4:00 pm–10:00 pm. Record the Fri–Sat bar line as printed (12:00 pm). Do not “correct” it to midnight. Do not copy hours onto the deal clock. Contact: Happy Hour Monday – Sunday 4 pm – 6 pm. HH PDF page 2 (visual read today; pdftotext empty): Happy hour / Monday - Sunday / 4 pm - 6 pm. FOOD: Flautas de Pollo 7 · Empanadas Favoritas 7 · Pellizcadas de Pollo 7 · Bruselas Tacos 7 · Bar Nachitos 7 · Tacos de Pollo 7 · Tacos al Pastor 7. DRINKS: Margarita Clasica 8 · Paloma 8 · Sangria Blanco 8 · Vino Rojo 7 · Vino blanco 7 · White claw tequila 6 · Tecate 4. AGAVES PREMIUM 1 oz pour: Tequila 8 Corralejo blanco · Mezcal 8 Fidencio espadin · Raicilla 8 La venenosa tavernas. Keep PDF spellings (Pellizcadas, White claw tequila, Vino blanco, Tecate). Filename happyhour-022026.pdf is the live HH download today — do not drop it as stale from the name alone. Stay off: PDF page 1 is DESSERTS / COFFE at regular $ — not the HH row. Do not ship Tres Leches / Churros / Flan / ice cream / coffee. Separate /wp-content/uploads/2025/04/Desserts-HH_compressed.pdf is not this row — do not mix.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Flautas de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Empanadas Favoritas $7",
+              "price": "$7"
+            },
+            {
+              "text": "Pellizcadas de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Bruselas Tacos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Bar Nachitos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Tacos de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Tacos al Pastor $7",
+              "price": "$7"
+            },
+            {
+              "text": "Margarita Clasica $8",
+              "price": "$8"
+            },
+            {
+              "text": "Paloma $8",
+              "price": "$8"
+            },
+            {
+              "text": "Sangria Blanco $8",
+              "price": "$8"
+            },
+            {
+              "text": "Vino Rojo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Vino blanco $7",
+              "price": "$7"
+            },
+            {
+              "text": "White claw tequila $6",
+              "price": "$6"
+            },
+            {
+              "text": "Tecate $4",
+              "price": "$4"
+            },
+            {
+              "text": "Tequila 1 oz Corralejo blanco $8",
+              "price": "$8"
+            },
+            {
+              "text": "Mezcal 1 oz Fidencio espadin $8",
+              "price": "$8"
+            },
+            {
+              "text": "Raicilla 1 oz La venenosa tavernas $8",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.lacallerestaurant.com/contact-2/",
+          "proof_quote": "Happy hour Monday - Sunday 4 pm - 6 pm Flautas de Pollo 7 Empanadas Favoritas 7 Pellizcadas de Pollo 7 Bruselas Tacos 7 Bar Nachitos 7 Tacos de Pollo 7 Tacos al Pastor 7 Margarita Clasica 8 Paloma 8 Sangria Blanco 8 Vino Rojo 7 Vino blanco 7 White claw tequila 6 Tecate 4 Tequila 8 Corralejo blanco Mezcal 8 Fidencio espadin Raicilla 8 La venenosa tavernas",
+          "food_categories": [
+            "tacos",
+            "small-plate/apps",
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.2842935,
+      "lon": -76.5931531,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "la-cuchara",
+      "name": "La Cuchara",
+      "neighborhood": "Jones Falls Area",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "status": "verified",
+      "address": "3600 Clipper Mill Rd. | Baltimore Md. 21211",
+      "phone": "(443) 708-3838",
+      "source_url": "https://www.lacucharabaltimore.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-21",
+      "notes_public": "Bar happy hour.",
+      "ops_notes": "Builder 2026-08-21 leftover loadable + live lacucharabaltimore.com/menu HTTP 200. HH PDF https://www.lacucharabaltimore.com/_files/ugd/7c36e5_40c343b38f2f4e92b28982a0a53cc420.pdf still the live file linked from /menu today (HTTP 200). Pin 3600 Clipper Mill Rd. | Baltimore Md. 21211 / (443) 708-3838. Census 39.3308911,-76.6424639. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Jones Falls Area has no home view — already in citywideOnly. Do not invent a /jones-falls-area view. Do not fold into /hampden. Hours on the homepage: Sunday through Thursday 5 pm - 9 pm / Friday and Saturday 5 pm - 10 pm. Record in ops. Do not copy onto the deal clock. Quotes from HH PDF today (text extract): Bar Happy Hour / M-F 5-7 pm / Half Price Pintxos and Raciones / Gin & Tonic du Jour $6 / Beer & Seltzer $6 / Wine / Glass $6 / Bottle $22. Keep PDF spelling Fouders Oktoberfest in ops. Beer/seltzer $6 set on the PDF: Czech M8 · Old Oriole Park · Optimal Wit · Estrella Galicia · Fouders Oktoberfest · Peabody Heights Seltzer rotating · NA beer rotating. Wine list: sparkling Penedés Cava Segura Viudas · white Vinho Verde Osvaldo Amado “Casal Amado” · red Almansa Familia Gil “Laya”. Do not invent pintxos names from the regular menu PDFs. Other /menu PDFs are dinner/regular — do not mix.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "half price pintxos and raciones",
+              "price": "50% off"
+            },
+            {
+              "text": "$6 gin & tonic du jour",
+              "price": "$6"
+            },
+            {
+              "text": "$6 beer & seltzer",
+              "price": "$6"
+            },
+            {
+              "text": "wine glass $6",
+              "price": "$6"
+            },
+            {
+              "text": "wine bottle $22",
+              "price": "$22"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-21",
+          "source_url": "https://www.lacucharabaltimore.com/menu",
+          "proof_quote": "Bar Happy Hour M-F 5-7 pm Half Price Pintxos and Raciones Gin & Tonic du Jour $6 Beer & Seltzer $6 Wine Glass $6 / Bottle $22",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3308911,
+      "lon": -76.6424639,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     }
   ]
 }

@@ -1898,7 +1898,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
   }
 
   const inView = venuesInView(venues, fells);
-  assert.equal(inView.length, 15);
+  assert.equal(inView.length, 16);
   assert.deepEqual(
     inView.map((v) => v.id).sort(),
     [
@@ -1906,6 +1906,7 @@ test("Fells Point view: eight verified priced + quiet stubs", async () => {
       "alexanders-tavern-fells",
       "bunnys-buckets",
       "harbor-tandoor",
+      "la-calle",
       "maxs-taphouse",
       "papis-taco-joint-fells",
       "rye-of-baltimore",
@@ -2113,8 +2114,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // HomeSlyce JHU) → 96 -> 100 / 118 -> 122.
   // 2026-08-21: leftover loadable (iBar · Indigma · Johnny Rad's · Kechy Pizza ·
   // B&O American Brasserie) → 100 -> 105 / 122 -> 127.
-  assert.equal(showable, 105);
-  assert.equal(venues.length, 127);
+  // 2026-08-21: leftover loadable (La Calle · La Cuchara) → 105 -> 107 / 127 -> 129.
+  assert.equal(showable, 107);
+  assert.equal(venues.length, 129);
 });
 
 
@@ -4604,6 +4606,147 @@ test("B&O American Brasserie joins 2026-08-21 (Downtown / inner-harbor, weekday 
 
   assert.ok(venuesInView(venues, bySlug["inner-harbor"]).some((v) => v.id === "bo-american-brasserie"));
   assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "bo-american-brasserie"));
+});
+
+test("La Calle joins 2026-08-21 (Fells Point, daily 4–6 HH, named eats and drinks)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const calle = byId["la-calle"];
+  assert.ok(calle, "la-calle missing");
+  assert.deepEqual(venueShapeErrors(calle), []);
+  assert.equal(calle.name, "La Calle");
+  assert.equal(calle.neighborhood, "Fells Point");
+  assert.equal(
+    calle.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(calle.status, "verified");
+  assert.equal(calle.address, "623 S Broadway Baltimore MD 21231");
+  assert.equal(calle.phone, "+1 (443) 835-2215");
+  assert.equal(calle.source_url, "https://www.lacallerestaurant.com/contact-2/");
+  assert.equal(calle.source_type, "venue_website");
+  assert.equal(calle.last_verified, "2026-08-21");
+  assert.equal(calle.notes_public, undefined);
+  assert.equal(calle.lat, 39.2842935);
+  assert.equal(calle.lon, -76.5931531);
+  assert.equal(calle.deals.length, 1);
+  assert.match(calle.ops_notes ?? "", /Name=Fells Point/);
+  assert.match(calle.ops_notes ?? "", /Already in \/fells-point/);
+  assert.match(calle.ops_notes ?? "", /12:00 pm/);
+  assert.match(calle.ops_notes ?? "", /do not “correct” it to midnight|do not "correct" it to midnight/i);
+  assert.match(calle.ops_notes ?? "", /happyhour-022026\.pdf/);
+  assert.match(calle.ops_notes ?? "", /Pellizcadas/);
+  assert.match(calle.ops_notes ?? "", /White claw tequila/);
+  assert.match(calle.ops_notes ?? "", /DESSERTS/);
+  assert.match(calle.ops_notes ?? "", /COFFE/);
+  assert.match(calle.ops_notes ?? "", /Desserts-HH_compressed/);
+  assert.ok(
+    !calle.deals.some((d) =>
+      d.items.some((i) => /tres leches|churros|flan|ice cream|coffee/i.test(i.text)),
+    ),
+    "DESSERTS / COFFE page and Desserts-HH PDF stay off this row",
+  );
+
+  const hh = calle.deals[0];
+  assert.deepEqual(hh.days, ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "4pm-6pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Flautas de Pollo $7", "$7"],
+      ["Empanadas Favoritas $7", "$7"],
+      ["Pellizcadas de Pollo $7", "$7"],
+      ["Bruselas Tacos $7", "$7"],
+      ["Bar Nachitos $7", "$7"],
+      ["Tacos de Pollo $7", "$7"],
+      ["Tacos al Pastor $7", "$7"],
+      ["Margarita Clasica $8", "$8"],
+      ["Paloma $8", "$8"],
+      ["Sangria Blanco $8", "$8"],
+      ["Vino Rojo $7", "$7"],
+      ["Vino blanco $7", "$7"],
+      ["White claw tequila $6", "$6"],
+      ["Tecate $4", "$4"],
+      ["Tequila 1 oz Corralejo blanco $8", "$8"],
+      ["Mezcal 1 oz Fidencio espadin $8", "$8"],
+      ["Raicilla 1 oz La venenosa tavernas $8", "$8"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["tacos", "small-plate/apps", "drink"]);
+
+  assert.ok(venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "la-calle"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "la-calle"));
+});
+
+test("La Cuchara joins 2026-08-21 (Jones Falls Area citywide, weekday bar HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const cuchara = byId["la-cuchara"];
+  assert.ok(cuchara, "la-cuchara missing");
+  assert.deepEqual(venueShapeErrors(cuchara), []);
+  assert.equal(cuchara.name, "La Cuchara");
+  assert.equal(cuchara.neighborhood, "Jones Falls Area");
+  assert.equal(
+    cuchara.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(cuchara.status, "verified");
+  assert.equal(cuchara.address, "3600 Clipper Mill Rd. | Baltimore Md. 21211");
+  assert.equal(cuchara.phone, "(443) 708-3838");
+  assert.equal(cuchara.source_url, "https://www.lacucharabaltimore.com/menu");
+  assert.equal(cuchara.source_type, "venue_website");
+  assert.equal(cuchara.last_verified, "2026-08-21");
+  assert.equal(cuchara.notes_public, "Bar happy hour.");
+  assert.equal(cuchara.lat, 39.3308911);
+  assert.equal(cuchara.lon, -76.6424639);
+  assert.equal(cuchara.deals.length, 1);
+  assert.match(cuchara.ops_notes ?? "", /Name=Jones Falls Area/);
+  assert.match(cuchara.ops_notes ?? "", /already in citywideOnly/i);
+  assert.match(cuchara.ops_notes ?? "", /Do not invent a \/jones-falls-area/);
+  assert.match(cuchara.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(cuchara.ops_notes ?? "", /Sunday through Thursday 5 pm - 9 pm/);
+  assert.match(cuchara.ops_notes ?? "", /Friday and Saturday 5 pm - 10 pm/);
+  assert.match(cuchara.ops_notes ?? "", /Fouders Oktoberfest/);
+  assert.match(cuchara.ops_notes ?? "", /do not copy onto the deal clock/i);
+  assert.match(cuchara.ops_notes ?? "", /Do not invent pintxos names/);
+
+  const hh = cuchara.deals[0];
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 1020);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "5pm-7pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["half price pintxos and raciones", "50% off"],
+      ["$6 gin & tonic du jour", "$6"],
+      ["$6 beer & seltzer", "$6"],
+      ["wine glass $6", "$6"],
+      ["wine bottle $22", "$22"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink", "small-plate/apps"]);
+  assert.ok(
+    !hh.items.some((i) => /gilda|jamon|tortilla|croqueta/i.test(i.text)),
+    "do not invent pintxos names from the regular menu PDFs",
+  );
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "la-cuchara"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "la-cuchara"),
+    "Jones Falls Area must not fold into /hampden",
+  );
+  assert.equal(bySlug["jones-falls-area"], undefined, "do not invent a jones-falls-area view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

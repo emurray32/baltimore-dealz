@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2117,8 +2117,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (La Calle · La Cuchara) → 105 -> 107 / 127 -> 129.
   // 2026-08-21: leftover loadable (Sally O's · Shotti's · Silver Queen ·
   // Empanada Lady · True Chesapeake) → 107 -> 112 / 129 -> 134.
-  assert.equal(showable, 112);
-  assert.equal(venues.length, 134);
+  // 2026-08-21: leftover loadable (Valentino's · Wet City) → 112 -> 114 / 134 -> 136.
+  assert.equal(showable, 114);
+  assert.equal(venues.length, 136);
 });
 
 
@@ -5129,6 +5130,186 @@ test("True Chesapeake Oyster Co. joins 2026-08-21 (Jones Falls Area citywide, Tu
     "Jones Falls Area must not fold into /hampden",
   );
   assert.equal(bySlug["jones-falls-area"], undefined, "do not invent a jones-falls-area view");
+});
+
+test("Valentino's Restaurant joins 2026-08-21 (Westfield citywide, Mon–Fri 3–7 HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const val = byId.valentinos;
+  assert.ok(val, "valentinos missing");
+  assert.deepEqual(venueShapeErrors(val), []);
+  assert.equal(val.name, "Valentino's Restaurant");
+  assert.equal(val.neighborhood, "Westfield");
+  assert.equal(
+    val.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(val.status, "verified");
+  assert.equal(val.address, "6627 Harford Rd, Baltimore, MD 21214");
+  assert.equal(val.phone, "(410) 254-4700");
+  assert.equal(val.source_url, "https://www.valentinosbaltimore.com/happyhour/");
+  assert.equal(val.source_type, "venue_website");
+  assert.equal(val.last_verified, "2026-08-21");
+  assert.equal(val.notes_public, "In-House only / Excluding Holidays.");
+  assert.equal(val.lat, 39.3629187);
+  assert.equal(val.lon, -76.5519198);
+  assert.equal(val.deals.length, 1);
+  assert.match(val.ops_notes ?? "", /Name=Westfield/);
+  assert.match(val.ops_notes ?? "", /citywideOnly/);
+  assert.match(val.ops_notes ?? "", /Do not invent a \/westfield/);
+  assert.match(val.ops_notes ?? "", /Sun-Thur: 7am- 5am/);
+  assert.match(val.ops_notes ?? "", /Fri & Sat: 24 hours/);
+  assert.match(val.ops_notes ?? "", /do not copy onto the deal clock/i);
+  assert.match(val.ops_notes ?? "", /Not valid with other offers, promotions or discounts\./);
+  assert.match(val.ops_notes ?? "", /18% Gratuity Added To Each In-House Check/);
+  assert.ok(
+    !/Not valid with other offers/.test(val.notes_public),
+    "stacking disclaimer stays in ops, not notes_public",
+  );
+  assert.ok(
+    !/18% Gratuity/.test(val.notes_public),
+    "18% grat stays in ops, not notes_public",
+  );
+  assert.ok(
+    !val.deals.some((d) => d.items.some((i) => /Providence|Voodoo|Fra Diavolo/i.test(i.text))),
+    "do not ship sauce names as extra items",
+  );
+
+  const hh = val.deals[0];
+  assert.deepEqual(hh.days, ["mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "3pm-7pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(
+    hh.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["Select wine, slushes, crushes, margaritas, martinis, cocktails", "$7"],
+      ["Pub Wings", "$8"],
+      ["Ravioli Tostati", "$7"],
+      ["Bacon Cheddar Cups", "$7"],
+      ["Thai Chili Shrimp", "$7"],
+      ["Oyster in 1/2 Shell", "$10"],
+      ["Clams in 1/2 Shell", "$8"],
+      ["Cozze Bowl", "$10"],
+    ],
+  );
+  assert.deepEqual(hh.food_categories, ["drink", "wings", "small-plate/apps", "seafood/crab"]);
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "valentinos"));
+  assert.equal(bySlug.westfield, undefined, "do not invent a westfield view");
+});
+
+test("Wet City Brewing joins 2026-08-21 (Mid-Town Belvedere / mount-vernon, Mon–Thu all-night HH on bar hours)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const wet = byId["wet-city"];
+  assert.ok(wet, "wet-city missing");
+  assert.deepEqual(venueShapeErrors(wet), []);
+  assert.equal(wet.name, "Wet City Brewing");
+  assert.equal(wet.neighborhood, "Mid-Town Belvedere");
+  assert.equal(
+    wet.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(wet.status, "verified");
+  assert.equal(wet.address, "223 W. Chase St. Baltimore, MD 21201");
+  assert.equal(wet.phone, "443-873-6699");
+  assert.equal(wet.source_url, "https://wetcitybrewing.com/");
+  assert.equal(wet.source_type, "venue_website");
+  assert.equal(wet.last_verified, "2026-08-21");
+  assert.equal(wet.notes_public, undefined);
+  assert.equal(wet.lat, 39.3016191);
+  assert.equal(wet.lon, -76.6189682);
+  assert.equal(wet.deals.length, 4);
+  assert.match(wet.ops_notes ?? "", /Name=Mid-Town Belvedere/);
+  assert.match(wet.ops_notes ?? "", /Already in \/mount-vernon/);
+  assert.match(wet.ops_notes ?? "", /neighborhood_self_described/);
+  assert.match(wet.ops_notes ?? "", /Monday – Wednesday: 5pm – 10pm \(Kitchen Closes @ 10pm\)/);
+  assert.match(wet.ops_notes ?? "", /Thursday: 5pm – 11pm \(Kitchen Closes @ 10pm\)/);
+  assert.match(wet.ops_notes ?? "", /Friday: 5pm – 12am \(Kitchen Closes @ 11pm\)/);
+  assert.match(wet.ops_notes ?? "", /Saturday: 12pm – 11pm \(Kitchen Closes @ 10pm\)/);
+  assert.match(wet.ops_notes ?? "", /Sunday omitted/);
+  assert.match(wet.ops_notes ?? "", /Do not invent closed/);
+  assert.match(wet.ops_notes ?? "", /do not copy kitchen-close onto a deal clock/i);
+  assert.match(wet.ops_notes ?? "", /Special Wing Menu/);
+  assert.ok(
+    !/Mount Vernon/.test(wet.notes_public ?? ""),
+    "do not write Mount Vernon into notes_public",
+  );
+  assert.ok(
+    !wet.deals.some((d) => d.time_window === "all night" || d.time_window === "all day"),
+    '"all night" is the label, not a time_window string',
+  );
+  assert.ok(
+    !wet.deals.some((d) => d.days.some((day) => day === "fri" || day === "sat")),
+    "no Fri/Sat daily special published",
+  );
+  assert.ok(
+    !wet.deals.some((d) => d.items.some((i) => /Special Wing Menu/i.test(i.text) && i.price)),
+    "do not invent wing prices from Special Wing Menu",
+  );
+
+  const mon = wet.deals.find((d) => d.days.length === 1 && d.days[0] === "mon");
+  const tue = wet.deals.find((d) => d.days.length === 1 && d.days[0] === "tue");
+  const wed = wet.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const thu = wet.deals.find((d) => d.days.length === 1 && d.days[0] === "thu");
+  assert.ok(mon && tue && wed && thu, "expected Mon / Tue / Wed / Thu rows");
+
+  for (const d of [mon, tue, wed, thu]) {
+    assert.equal(d.happy_hour, true);
+    assert.equal(d.start, 1020);
+  }
+  assert.equal(mon.end, 1320);
+  assert.equal(mon.time_window, "5pm-10pm");
+  assert.deepEqual(
+    mon.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$3 off burgers", "$3 off"],
+      ["$1 off -ish pours", "$1 off"],
+    ],
+  );
+  assert.deepEqual(mon.food_categories, ["burger", "drink"]);
+
+  assert.equal(tue.end, 1320);
+  assert.equal(tue.time_window, "5pm-10pm");
+  assert.deepEqual(
+    tue.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$3 off tacos & taco salad", "$3 off"],
+      ["$10 Purple Margs", "$10"],
+    ],
+  );
+  assert.deepEqual(tue.food_categories, ["tacos", "drink"]);
+
+  assert.equal(wed.end, 1320);
+  assert.equal(wed.time_window, "5pm-10pm");
+  assert.deepEqual(
+    wed.items.map((i) => [i.text, i.price ?? null]),
+    [
+      ["$10 Old Fashioned & Manhattans", "$10"],
+      ["20% select whiskey pours", "20% off"],
+      ["$3 off chix sandos", "$3 off"],
+    ],
+  );
+  assert.deepEqual(wed.food_categories, ["drink", "sandwich/cheesesteak"]);
+
+  assert.equal(thu.end, 1380);
+  assert.equal(thu.time_window, "5pm-11pm");
+  assert.deepEqual(
+    thu.items.map((i) => [i.text, i.price ?? null]),
+    [["$3 off wings", "$3 off"]],
+  );
+  assert.deepEqual(thu.food_categories, ["wings"]);
+
+  assert.ok(venuesInView(venues, bySlug["mount-vernon"]).some((v) => v.id === "wet-city"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "wet-city"));
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park / Hamilton Hills have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park / Hamilton Hills / Woodberry have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills", "Woodberry"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2143,8 +2143,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (V-NO Wine Bar) → 134 -> 135 / 156 -> 157.
   // 2026-08-21: leftover loadable (Wiley Gunter's) → 135 -> 136 / 157 -> 158.
   // 2026-08-21: leftover loadable (Warehouse Cinemas Rotunda) → 136 -> 137 / 158 -> 159.
-  assert.equal(showable, 137);
-  assert.equal(venues.length, 159);
+  // 2026-08-23: leftover loadable (Woodberry Kitchen) → 137 -> 138 / 159 -> 160.
+  assert.equal(showable, 138);
+  assert.equal(venues.length, 160);
 });
 
 
@@ -7948,6 +7949,181 @@ test("Warehouse Cinemas Rotunda joins 2026-08-21 (Hampden / hampden, Wednesday t
   );
   assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug.rotunda, undefined, "do not invent a rotunda view");
+});
+
+test("Woodberry Kitchen joins 2026-08-23 (Woodberry citywide, tavern daily specials)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const wk = byId["woodberry-kitchen"];
+  assert.ok(wk, "woodberry-kitchen missing");
+  assert.deepEqual(venueShapeErrors(wk), []);
+  assert.equal(wk.name, "Woodberry Kitchen");
+  assert.equal(wk.neighborhood, "Woodberry");
+  assert.equal(
+    wk.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
+  );
+  assert.equal(wk.status, "verified");
+  assert.equal(wk.address, "2010 Clipper Park Rd, Baltimore, MD 21211");
+  assert.equal(wk.phone, "(443) 524-5097");
+  assert.equal(wk.source_url, "https://www.woodberrykitchen.com/tavern");
+  assert.equal(wk.source_type, "venue_website");
+  assert.equal(wk.last_verified, "2026-08-23");
+  assert.equal(wk.notes_public, "Dinner Wednesday–Saturday 5:00–9:30 p.m.");
+  assert.equal(wk.deal_format, undefined);
+  assert.equal(wk.lat, 39.3319522);
+  assert.equal(wk.lon, -76.6457295);
+  assert.equal(wk.deals.length, 4);
+  assert.match(wk.ops_notes ?? "", /Name=Woodberry/);
+  assert.match(wk.ops_notes ?? "", /add Woodberry to citywideOnly/i);
+  assert.match(wk.ops_notes ?? "", /Do not invent a \/woodberry/);
+  assert.match(wk.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(wk.ops_notes ?? "", /Do not add Hampden/);
+  assert.match(wk.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(wk.ops_notes ?? "", /2010 Clipper Park/);
+  assert.match(wk.ops_notes ?? "", /ste-126/);
+  assert.match(wk.ops_notes ?? "", /Park Heights/);
+  assert.match(wk.ops_notes ?? "", /\(443\) 524-5097/);
+  assert.match(wk.ops_notes ?? "", /https:\/\/www\.woodberrykitchen\.com\/tavern/);
+  assert.match(wk.ops_notes ?? "", /\/happy-hour/);
+  assert.match(wk.ops_notes ?? "", /\/menu/);
+  assert.match(wk.ops_notes ?? "", /\/hours/);
+  assert.match(wk.ops_notes ?? "", /\/visit/);
+  assert.match(wk.ops_notes ?? "", /\/contact/);
+  assert.match(wk.ops_notes ?? "", /404/);
+  assert.match(wk.ops_notes ?? "", /5:00 – 9:30 p\.m\./);
+  assert.match(wk.ops_notes ?? "", /10:00 a\.m\. – 2:00 p\.m\./);
+  assert.match(wk.ops_notes ?? "", /1020/);
+  assert.match(wk.ops_notes ?? "", /1290/);
+  assert.match(wk.ops_notes ?? "", /\$10 Tavern classics/);
+  assert.match(wk.ops_notes ?? "", /\$20 Burger & Pint Night/);
+  assert.match(wk.ops_notes ?? "", /Fish Fry Friday/);
+  assert.match(wk.ops_notes ?? "", /\$20 Fish & Chips & Pint/);
+  assert.match(wk.ops_notes ?? "", /rotating \$10 fish and shellfish snacks/);
+  assert.match(wk.ops_notes ?? "", /chalkboard specials on Saturdays/);
+  assert.match(wk.ops_notes ?? "", /cocktails are half price/);
+  assert.match(wk.ops_notes ?? "", /BYOB/);
+  assert.match(wk.ops_notes ?? "", /\$20 Burger & a Pint/);
+  assert.match(wk.ops_notes ?? "", /That’s Thursday’s Tavern special/);
+  assert.match(wk.ops_notes ?? "", /Tavern-Menu-Refresh-6_28_26\.pdf/);
+  assert.match(wk.ops_notes ?? "", /FULL-Tavern-dessert-11-5-25\.pdf/);
+  assert.match(wk.ops_notes ?? "", /NEW-Tavern-cocktail-5626\.pdf/);
+  assert.match(wk.ops_notes ?? "", /72-Tavern-Wine-List\.pdf/);
+  assert.match(wk.ops_notes ?? "", /Tavern-Brunch-Menu-2026\.pdf/);
+  assert.match(wk.ops_notes ?? "", /20% service charge/);
+  assert.match(wk.ops_notes ?? "", /Origins/);
+  assert.match(wk.ops_notes ?? "", /Bar Dalí/);
+  assert.match(wk.ops_notes ?? "", /happy_hour omit/);
+  assert.match(wk.ops_notes ?? "", /notes_public is required/);
+  assert.match(wk.ops_notes ?? "", /deal_format omitted/);
+  assert.match(wk.ops_notes ?? "", /William Fell is HOLD/);
+  assert.match(wk.ops_notes ?? "", /Yeiboh Kitchen is not this ticket/);
+  assert.ok(
+    !wk.deals.some((d) => d.happy_hour !== undefined),
+    "happy_hour omit",
+  );
+  assert.ok(!wk.deals.some((d) => d.recurrence), "omit recurrence");
+  assert.ok(
+    !wk.deals.some(
+      (d) =>
+        d.start === 1020 ||
+        d.end === 1020 ||
+        d.start === 1290 ||
+        d.end === 1290,
+    ),
+    "do not copy dinner 5:00 (1020) / 9:30 (1290) onto a deal clock",
+  );
+  assert.ok(
+    !wk.deals.some((d) =>
+      d.items.some((i) =>
+        /chalkboard|origins|gift card|gatherings|service charge|dalí|terracotta|jetee|ecco|ste-126/i.test(
+          `${i.text} ${i.price ?? ""}`,
+        ),
+      ),
+    ),
+    "do not ship Saturday chalkboard, PDFs, Origins, gift cards, or sister brands",
+  );
+  assert.ok(
+    !/ste-126/.test(wk.address),
+    "do not pin Toast ste-126",
+  );
+  assert.equal(wk.deals.filter((d) => d.days.includes("sat")).length, 0, "Saturday chalkboard stays off");
+
+  const wed = wk.deals.find((d) => d.days.length === 1 && d.days[0] === "wed");
+  const thu = wk.deals.find((d) => d.days.length === 1 && d.days[0] === "thu");
+  const fri = wk.deals.find((d) => d.days.length === 1 && d.days[0] === "fri");
+  const sun = wk.deals.find((d) => d.days.length === 1 && d.days[0] === "sun");
+  assert.ok(wed && thu && fri && sun, "expected Wed / Thu / Fri / Sun rows");
+
+  assert.equal(wed.start, null);
+  assert.equal(wed.end, null);
+  assert.equal(wed.time_window, "all day");
+  assert.deepEqual(wed.food_categories, ["seafood/crab", "small-plate/apps"]);
+  assert.deepEqual(wed.items.map((i) => [i.text, i.price ?? null]), [
+    ["Tavern classics: crab pot, rarebit, carpaccio, brothy beans", "$10"],
+  ]);
+  assert.equal(
+    wed.proof_quote,
+    "$10 Tavern classics: crab pot, rarebit, carpaccio, brothy beans",
+  );
+
+  assert.equal(thu.start, null);
+  assert.equal(thu.end, null);
+  assert.equal(thu.time_window, "all day");
+  assert.deepEqual(thu.food_categories, ["burger", "drink"]);
+  assert.deepEqual(thu.items.map((i) => [i.text, i.price ?? null]), [
+    ["Burger & Pint Night: Tavern burger on sweet potato bun with fries", "$20"],
+  ]);
+  assert.equal(thu.items.length, 1, "do not split burger and pint into two prices");
+  assert.equal(
+    thu.proof_quote,
+    "$20 Burger & Pint Night: Tavern burger on sweet potato bun with fries",
+  );
+
+  assert.equal(fri.start, null);
+  assert.equal(fri.end, null);
+  assert.equal(fri.time_window, "all day");
+  assert.deepEqual(fri.food_categories, ["seafood/crab", "drink"]);
+  assert.deepEqual(fri.items.map((i) => [i.text, i.price ?? null]), [
+    ["Fish & Chips & Pint", "$20"],
+    ["rotating fish and shellfish snacks", "$10"],
+  ]);
+  assert.equal(
+    fri.proof_quote,
+    "$20 Fish & Chips & Pint, plus rotating $10 fish and shellfish snacks",
+  );
+
+  assert.equal(sun.start, 600);
+  assert.equal(sun.end, 840);
+  assert.equal(sun.time_window, "10am-2pm");
+  assert.deepEqual(sun.food_categories, ["drink"]);
+  assert.deepEqual(sun.items.map((i) => [i.text, i.price ?? null]), [
+    ["cocktails are half price", "50% off"],
+  ]);
+  assert.equal(
+    sun.proof_quote,
+    "During Sunday brunch, cocktails are half price & you can also BYOB!",
+  );
+  assert.equal(sun.notes_public, undefined, "BYOB lives in proof_quote, not deal notes_public");
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "woodberry-kitchen"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "woodberry-kitchen"),
+    "Woodberry must not fold into /hampden",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "woodberry-kitchen"),
+    "Woodberry must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "woodberry-kitchen"),
+    "Woodberry must not fold into /locust-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
+  assert.equal(bySlug.woodberry, undefined, "do not invent a woodberry view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

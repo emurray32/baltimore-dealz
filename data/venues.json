@@ -14216,6 +14216,93 @@
       "lat": 39.3319522,
       "lon": -76.6457295,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-23"
+    },
+    {
+      "id": "yeiboh-kitchen",
+      "name": "Yeiboh Kitchen",
+      "neighborhood": "Old Goucher",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
+      "status": "verified",
+      "address": "2219 Maryland Ave, Baltimore, MD 21218",
+      "phone": "(443) 900-4891",
+      "source_url": "https://www.yeibohkitchen.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-23",
+      "notes_public": "Happy hour menu only available at the bar & back patio",
+      "ops_notes": "Builder 2026-08-23 leftover loadable + live https://www.yeibohkitchen.com/menu HTTP 200. Homepage https://www.yeibohkitchen.com/ HTTP 200. /happy-hour /specials /contact /hours 404. Prices from the live-linked HH PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw / The Dara / Garden Rooftop — Reviewer checks the graphic). Pin 2219 Maryland Ave, Baltimore, MD 21218 / (443) 900-4891 (site print 443-900-4891). Email info@YeibohKitchen.com stays in ops. License Yebo Kitchen stays in ops. Pin the census Nominatim 39.3148904,-76.6178082. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Old Goucher. Old Goucher has no home view — already in citywideOnly (dutch-courage). Do not add Old Goucher again. Do not invent a /old-goucher view. Do not fold into Charles Village / Greenmount West / Johns Hopkins Homewood. Do not fold into /hampden. Do not add Hampden, Fells Point, Locust Point, Riverside, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (homepage): Monday 5PM - 10PM · Closed Tuesday & Wednesday · Thursday 5PM - 10PM · Friday 5PM -11PM · Saturday 11AM - 3PM then 5PM - 11PM · Sunday 11AM - 5PM. Our Kitchen Closes Everyday 45 minutes prior to our closing hours. last guest an hour before the closing time. last guests one hour before closing. Record hours in ops. Do not copy Mon/Thu close 10pm (1320) or Fri close 11pm (1380). Do not copy kitchen-close 45 minutes prior or last-seating 1 hour prior. 5pm-7pm → 1020/1140. Quotes today: Homepage Happy Hour / 5PM - 7PM / Monday ,Thursday & Friday. Menu page HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM. HH PNG filename still HH Menu - Cinco 5_4_26.png. Live PNG today byte-identical vs the 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m37/yebo_hh_menu.png; sha256 368c30f9b24054873f0779b2c08541ea5e5a5861450824aa53d194b923476866). Filename is a May 4 upload name; content matches the standing site text — live menu, not a holiday one-off. Quotes from the HH PNG today (visual read): Happy Hour Menu. TAPAS: Island Wings 11 · Zulu Brussels Sprouts 7 · Salmon Nachos 13 · Dynamite Shrimp Tacos 10 · Fried Shiitake Rice 6. DRINKS: Cosmo / Peach Bourbon Smash / Margarita / Peach Martini 10 · Select Wines 6 · Select Beers 6. Footer: Monday, Thursday & Friday / 5pm - 7pm. Extra descriptors after the tapas may ride: Island Wings — jerk spice | peppers | wasabi ranch. Zulu Brussels Sprouts — garlic soy | brown sugar | chili flakes. Salmon Nachos — chili crunch | tomatoes | capers aioli. Dynamite Shrimp Tacos — asian coleslaw | thai chili. Fried Shiitake Rice — mushrooms | carrots | peas. Stay off: bar/brunch/dinner PNG menus (Bar - August 26.png, Brunch - August 26.png, Dinner - August 13. 26 .png / live Dinner - August 13_ 26 .png). Regular dinner/brunch prices. Private-patio rental $650. Father's Day / holiday reservations. 18% auto-gratuity. Yelp widget. Closed Tue/Wed as a deal row. Keep printed names. Do not invent a brunch or dinner row from the other PNGs. Do not collapse the four $10 cocktails into one unlabeled cocktails item. happy_hour true. omit recurrence. One row. deal_format image (legal; pdf is not). notes_public is required: Happy hour menu only available at the bar & back patio. Location lock so the card does not promise HH at every table. Days/window stay on the deal row. No vibe. Load pin: in /baltimore only. Not in /hampden. Not in /fells-point. Not in /locust-point. bySlug[\"old-goucher\"] undefined. Woodberry Kitchen is not this ticket. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off.",
+      "deal_format": "image",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Island Wings",
+              "price": "$11"
+            },
+            {
+              "text": "Zulu Brussels Sprouts",
+              "price": "$7"
+            },
+            {
+              "text": "Salmon Nachos",
+              "price": "$13"
+            },
+            {
+              "text": "Dynamite Shrimp Tacos",
+              "price": "$10"
+            },
+            {
+              "text": "Fried Shiitake Rice",
+              "price": "$6"
+            },
+            {
+              "text": "Cosmo",
+              "price": "$10"
+            },
+            {
+              "text": "Peach Bourbon Smash",
+              "price": "$10"
+            },
+            {
+              "text": "Margarita",
+              "price": "$10"
+            },
+            {
+              "text": "Peach Martini",
+              "price": "$10"
+            },
+            {
+              "text": "Select Wines",
+              "price": "$6"
+            },
+            {
+              "text": "Select Beers",
+              "price": "$6"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-23",
+          "source_url": "https://www.yeibohkitchen.com/menu",
+          "proof_quote": "HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM",
+          "food_categories": [
+            "drink",
+            "wings",
+            "seafood/crab",
+            "tacos",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3148904,
+      "lon": -76.6178082,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-23"
     }
 
   ]

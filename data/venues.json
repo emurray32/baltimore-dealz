@@ -14110,6 +14110,112 @@
       "lat": 39.3349005,
       "lon": -76.6311208,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+    },
+    {
+      "id": "woodberry-kitchen",
+      "name": "Woodberry Kitchen",
+      "neighborhood": "Woodberry",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
+      "status": "verified",
+      "address": "2010 Clipper Park Rd, Baltimore, MD 21211",
+      "phone": "(443) 524-5097",
+      "source_url": "https://www.woodberrykitchen.com/tavern",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-23",
+      "notes_public": "Dinner Wednesday–Saturday 5:00–9:30 p.m.",
+      "ops_notes": "Builder 2026-08-23 leftover loadable + live https://www.woodberrykitchen.com/tavern HTTP 200. Homepage https://www.woodberrykitchen.com/ HTTP 200. /faqs HTTP 200. /contact-us HTTP 200. /happy-hour /menu /hours /visit /contact 404. Prices from the live tavern Daily Specials HTML, not the linked PDFs. Pin 2010 Clipper Park Rd, Baltimore, MD 21211 / (443) 524-5097 (site print 443-524-5097). Email askus@woodberrykitchen.com stays in ops. Do not pin Toast gift-card ste-126 (toasttab.com/woodberry-kitchen-2010-clipper-park-rd-ste-126/giftcards). Named restaurant node 39.3317650,-76.6454720 is the same building — pin the street-address Nominatim 39.3319522,-76.6457295. Nominatim display includes Park Heights — city Name=Woodberry wins. Do not use Park Heights. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Woodberry. Woodberry has no home view — add Woodberry to citywideOnly once. Do not invent a /woodberry view. Do not fold into /hampden. Do not add Hampden, Fells Point, Locust Point, Riverside, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (tavern page, same block as the specials): Dinner Wednesday – Saturday 5:00 – 9:30 p.m. · Brunch Sunday 10:00 a.m. – 2:00 p.m. Mon–Tue are absent from the hours block — do not invent closed. Record hours in ops. Do not copy dinner 5:00 (1020) / 9:30 (1290) onto a Wed/Thu/Fri deal clock. Sunday brunch is clocked: start 600 · end 840 · time_window 10am-2pm. Quotes from the tavern Daily Specials HTML today (whole lines): Wednesday / $10 Tavern classics: crab pot, rarebit, carpaccio, brothy beans. Thursday / $20 Burger & Pint Night: Tavern burger on sweet potato bun with fries. Fish Fry Friday / $20 Fish & Chips & Pint, plus rotating $10 fish and shellfish snacks. Plus, we offer rotating chalkboard specials on Saturdays. During Sunday brunch, cocktails are half price & you can also BYOB! Homepage teaser matches Thursday: $20 Burger & a Pint / That’s Thursday’s Tavern special. Stay off: Saturday chalkboard (unpriced and rotating). Regular dinner / dessert / cocktail / wine / brunch PDFs (Tavern-Menu-Refresh-6_28_26.pdf, FULL-Tavern-dessert-11-5-25.pdf, NEW-Tavern-cocktail-5626.pdf, 72-Tavern-Wine-List.pdf, Tavern-Brunch-Menu-2026.pdf). 20% service charge. Origins speaker series, gift cards, Gatherings. Sister-brand logos (Bar Dalí, Terracotta, La Jetee, Ecco). Keep printed names. Do not split Thursday burger and pint into two prices. Do not drop Friday rotating snacks. Do not invent cocktail rows from the brunch PDF. happy_hour omit. omit recurrence. Four rows. notes_public is required: Dinner Wednesday–Saturday 5:00–9:30 p.m. Locked-door note so unclocked Wed/Thu/Fri cards do not promise dinner after 9:30. Window stays unclocked / end null. BYOB lives in the Sunday proof_quote (whole sentence), not on a deal notes_public. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /baltimore only. Not in /hampden. Not in /fells-point. Not in /locust-point. bySlug.woodberry undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Yeiboh Kitchen is not this ticket.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Tavern classics: crab pot, rarebit, carpaccio, brothy beans",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-23",
+          "source_url": "https://www.woodberrykitchen.com/tavern",
+          "proof_quote": "$10 Tavern classics: crab pot, rarebit, carpaccio, brothy beans",
+          "food_categories": [
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Burger & Pint Night: Tavern burger on sweet potato bun with fries",
+              "price": "$20"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-23",
+          "source_url": "https://www.woodberrykitchen.com/tavern",
+          "proof_quote": "$20 Burger & Pint Night: Tavern burger on sweet potato bun with fries",
+          "food_categories": [
+            "burger",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Fish & Chips & Pint",
+              "price": "$20"
+            },
+            {
+              "text": "rotating fish and shellfish snacks",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-08-23",
+          "source_url": "https://www.woodberrykitchen.com/tavern",
+          "proof_quote": "$20 Fish & Chips & Pint, plus rotating $10 fish and shellfish snacks",
+          "food_categories": [
+            "seafood/crab",
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "cocktails are half price",
+              "price": "50% off"
+            }
+          ],
+          "start": 600,
+          "end": 840,
+          "time_window": "10am-2pm",
+          "verified_date": "2026-08-23",
+          "source_url": "https://www.woodberrykitchen.com/tavern",
+          "proof_quote": "During Sunday brunch, cocktails are half price & you can also BYOB!",
+          "food_categories": [
+            "drink"
+          ]
+        }
+      ],
+      "lat": 39.3319522,
+      "lon": -76.6457295,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-23"
     }
 
   ]

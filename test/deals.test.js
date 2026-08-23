@@ -2144,8 +2144,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Wiley Gunter's) → 135 -> 136 / 157 -> 158.
   // 2026-08-21: leftover loadable (Warehouse Cinemas Rotunda) → 136 -> 137 / 158 -> 159.
   // 2026-08-23: leftover loadable (Woodberry Kitchen) → 137 -> 138 / 159 -> 160.
-  assert.equal(showable, 138);
-  assert.equal(venues.length, 160);
+  // 2026-08-23: leftover loadable (Yeiboh Kitchen) → 138 -> 139 / 160 -> 161.
+  assert.equal(showable, 139);
+  assert.equal(venues.length, 161);
 });
 
 
@@ -8124,6 +8125,160 @@ test("Woodberry Kitchen joins 2026-08-23 (Woodberry citywide, tavern daily speci
   );
   assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug.woodberry, undefined, "do not invent a woodberry view");
+});
+
+test("Yeiboh Kitchen joins 2026-08-23 (Old Goucher citywide, Mon/Thu/Fri 5–7 HH)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const yk = byId["yeiboh-kitchen"];
+  assert.ok(yk, "yeiboh-kitchen missing");
+  assert.deepEqual(venueShapeErrors(yk), []);
+  assert.equal(yk.name, "Yeiboh Kitchen");
+  assert.equal(yk.neighborhood, "Old Goucher");
+  assert.equal(
+    yk.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
+  );
+  assert.equal(yk.status, "verified");
+  assert.equal(yk.address, "2219 Maryland Ave, Baltimore, MD 21218");
+  assert.equal(yk.phone, "(443) 900-4891");
+  assert.equal(yk.source_url, "https://www.yeibohkitchen.com/menu");
+  assert.equal(yk.source_type, "venue_website");
+  assert.equal(yk.last_verified, "2026-08-23");
+  assert.equal(yk.notes_public, "Happy hour menu only available at the bar & back patio");
+  assert.equal(yk.deal_format, "image");
+  assert.equal(yk.lat, 39.3148904);
+  assert.equal(yk.lon, -76.6178082);
+  assert.equal(yk.deals.length, 1);
+  assert.match(yk.ops_notes ?? "", /Name=Old Goucher/);
+  assert.match(yk.ops_notes ?? "", /already in citywideOnly/i);
+  assert.match(yk.ops_notes ?? "", /Do not add Old Goucher again/);
+  assert.match(yk.ops_notes ?? "", /Do not invent a \/old-goucher/);
+  assert.match(yk.ops_notes ?? "", /Do not fold into Charles Village/);
+  assert.match(yk.ops_notes ?? "", /Greenmount West/);
+  assert.match(yk.ops_notes ?? "", /Johns Hopkins Homewood/);
+  assert.match(yk.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(yk.ops_notes ?? "", /Do not add Hampden/);
+  assert.match(yk.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(yk.ops_notes ?? "", /2219 Maryland Ave/);
+  assert.match(yk.ops_notes ?? "", /\(443\) 900-4891/);
+  assert.match(yk.ops_notes ?? "", /443-900-4891/);
+  assert.match(yk.ops_notes ?? "", /info@YeibohKitchen\.com/);
+  assert.match(yk.ops_notes ?? "", /Yebo Kitchen/);
+  assert.match(yk.ops_notes ?? "", /https:\/\/www\.yeibohkitchen\.com\/menu/);
+  assert.match(yk.ops_notes ?? "", /\/happy-hour \/specials \/contact \/hours 404/);
+  assert.match(yk.ops_notes ?? "", /Monday 5PM - 10PM/);
+  assert.match(yk.ops_notes ?? "", /Closed Tuesday & Wednesday/);
+  assert.match(yk.ops_notes ?? "", /Friday 5PM -11PM/);
+  assert.match(yk.ops_notes ?? "", /Kitchen Closes Everyday 45 minutes prior/);
+  assert.match(yk.ops_notes ?? "", /last guest an hour before/);
+  assert.match(yk.ops_notes ?? "", /1320/);
+  assert.match(yk.ops_notes ?? "", /1380/);
+  assert.match(yk.ops_notes ?? "", /Monday ,Thursday & Friday/);
+  assert.match(yk.ops_notes ?? "", /HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO/);
+  assert.match(yk.ops_notes ?? "", /HH Menu - Cinco 5_4_26\.png/);
+  assert.match(yk.ops_notes ?? "", /368c30f9b24054873f0779b2c08541ea5e5a5861450824aa53d194b923476866/);
+  assert.match(yk.ops_notes ?? "", /Island Wings 11/);
+  assert.match(yk.ops_notes ?? "", /Zulu Brussels Sprouts 7/);
+  assert.match(yk.ops_notes ?? "", /Salmon Nachos 13/);
+  assert.match(yk.ops_notes ?? "", /Dynamite Shrimp Tacos 10/);
+  assert.match(yk.ops_notes ?? "", /Fried Shiitake Rice 6/);
+  assert.match(yk.ops_notes ?? "", /Peach Bourbon Smash/);
+  assert.match(yk.ops_notes ?? "", /Peach Martini/);
+  assert.match(yk.ops_notes ?? "", /Select Wines 6/);
+  assert.match(yk.ops_notes ?? "", /Select Beers 6/);
+  assert.match(yk.ops_notes ?? "", /jerk spice/);
+  assert.match(yk.ops_notes ?? "", /Bar - August 26\.png/);
+  assert.match(yk.ops_notes ?? "", /Brunch - August 26\.png/);
+  assert.match(yk.ops_notes ?? "", /Dinner - August 13/);
+  assert.match(yk.ops_notes ?? "", /\$650/);
+  assert.match(yk.ops_notes ?? "", /Father's Day/);
+  assert.match(yk.ops_notes ?? "", /18% auto-gratuity/);
+  assert.match(yk.ops_notes ?? "", /Yelp widget/);
+  assert.match(yk.ops_notes ?? "", /happy_hour true/);
+  assert.match(yk.ops_notes ?? "", /notes_public is required/);
+  assert.match(yk.ops_notes ?? "", /deal_format image/);
+  assert.match(yk.ops_notes ?? "", /William Fell is HOLD/);
+  assert.match(yk.ops_notes ?? "", /Woodberry Kitchen is not this ticket/);
+  assert.ok(!yk.deals.some((d) => d.recurrence), "omit recurrence");
+  assert.ok(
+    !yk.deals.some(
+      (d) =>
+        d.start === 1320 ||
+        d.end === 1320 ||
+        d.start === 1380 ||
+        d.end === 1380 ||
+        d.start === 1260 ||
+        d.end === 1260,
+    ),
+    "do not copy Mon/Thu close 10pm (1320), Fri close 11pm (1380), kitchen-close, or last-seating onto a deal clock",
+  );
+  assert.ok(
+    !yk.deals.some((d) => d.days.includes("tue") || d.days.includes("wed") || d.days.includes("sat") || d.days.includes("sun")),
+    "Closed Tue/Wed is not a deal row; do not invent brunch/dinner days",
+  );
+  assert.ok(
+    !yk.deals.some((d) =>
+      d.items.some((i) =>
+        /brunch|dinner|bar menu|patio rental|gratuity|father|yelp|yebo kitchen/i.test(
+          `${i.text} ${i.price ?? ""}`,
+        ),
+      ),
+    ),
+    "do not ship bar/brunch/dinner PNG menus, patio rental, or holiday rows",
+  );
+  assert.ok(
+    yk.deals[0].items.filter((i) => i.price === "$10" && /cosmo|peach bourbon smash|margarita|peach martini/i.test(i.text)).length === 4,
+    "do not collapse the four $10 cocktails into one unlabeled cocktails item",
+  );
+
+  const hh = yk.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["mon", "thu", "fri"]);
+  assert.equal(hh.start, 1020);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "5pm-7pm");
+  assert.deepEqual(hh.food_categories, ["drink", "wings", "seafood/crab", "tacos", "small-plate/apps"]);
+  assert.deepEqual(hh.items.map((i) => [i.text, i.price ?? null]), [
+    ["Island Wings", "$11"],
+    ["Zulu Brussels Sprouts", "$7"],
+    ["Salmon Nachos", "$13"],
+    ["Dynamite Shrimp Tacos", "$10"],
+    ["Fried Shiitake Rice", "$6"],
+    ["Cosmo", "$10"],
+    ["Peach Bourbon Smash", "$10"],
+    ["Margarita", "$10"],
+    ["Peach Martini", "$10"],
+    ["Select Wines", "$6"],
+    ["Select Beers", "$6"],
+  ]);
+  assert.equal(
+    hh.proof_quote,
+    "HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM",
+  );
+  assert.equal(hh.notes_public, undefined, "notes_public is venue-level only");
+  assert.equal(hh.source_url, "https://www.yeibohkitchen.com/menu");
+  assert.equal(hh.verified_date, "2026-08-23");
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "yeiboh-kitchen"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "yeiboh-kitchen"),
+    "Old Goucher must not fold into /hampden",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "yeiboh-kitchen"),
+    "Old Goucher must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "yeiboh-kitchen"),
+    "Old Goucher must not fold into /locust-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
+  assert.equal(bySlug["old-goucher"], undefined, "do not invent an old-goucher view");
+  assert.equal(bySlug["charles-village"], undefined, "do not invent a charles-village view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

@@ -2142,8 +2142,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Hamilton Sports Bar) → 133 -> 134 / 155 -> 156.
   // 2026-08-21: leftover loadable (V-NO Wine Bar) → 134 -> 135 / 156 -> 157.
   // 2026-08-21: leftover loadable (Wiley Gunter's) → 135 -> 136 / 157 -> 158.
-  assert.equal(showable, 136);
-  assert.equal(venues.length, 158);
+  // 2026-08-21: leftover loadable (Warehouse Cinemas Rotunda) → 136 -> 137 / 158 -> 159.
+  assert.equal(showable, 137);
+  assert.equal(venues.length, 159);
 });
 
 
@@ -7811,6 +7812,142 @@ test("Wiley Gunter's joins 2026-08-21 (Riverside / locust-point, priced HH)", as
   );
   assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug.riverside, undefined, "do not invent a riverside view");
+});
+
+test("Warehouse Cinemas Rotunda joins 2026-08-21 (Hampden / hampden, Wednesday tappy hour)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const wh = byId["warehouse-cinemas-rotunda"];
+  assert.ok(wh, "warehouse-cinemas-rotunda missing");
+  assert.deepEqual(venueShapeErrors(wh), []);
+  assert.equal(wh.name, "Warehouse Cinemas Rotunda");
+  assert.equal(wh.neighborhood, "Hampden");
+  assert.equal(
+    wh.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+  );
+  assert.equal(wh.status, "verified");
+  assert.equal(wh.address, "727 W 40th Street, Suite 104, Baltimore, MD 21211");
+  assert.equal(wh.phone, "(240) 422-8012");
+  assert.equal(wh.source_url, "https://rotunda.warehousecinemas.com/home/");
+  assert.equal(wh.source_type, "venue_website");
+  assert.equal(wh.last_verified, "2026-08-21");
+  assert.equal(
+    wh.notes_public,
+    "50% off any beverage from our one-of-a-kind self-serve tap wall",
+  );
+  assert.equal(wh.deal_format, undefined);
+  assert.equal(wh.lat, 39.3349005);
+  assert.equal(wh.lon, -76.6311208);
+  assert.equal(wh.deals.length, 1);
+  assert.match(wh.ops_notes ?? "", /Name=Hampden/);
+  assert.match(wh.ops_notes ?? "", /Already in \/hampden/);
+  assert.match(wh.ops_notes ?? "", /Do not add Hampden to citywideOnly/);
+  assert.match(wh.ops_notes ?? "", /Do not add Locust Point/);
+  assert.match(wh.ops_notes ?? "", /Do not invent a \/rotunda/);
+  assert.match(wh.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(wh.ops_notes ?? "", /727 W 40th/);
+  assert.match(wh.ops_notes ?? "", /Suite 104/);
+  assert.match(wh.ops_notes ?? "", /711 West 40th/);
+  assert.match(wh.ops_notes ?? "", /Urgent Care/);
+  assert.match(wh.ops_notes ?? "", /\(240\) 422-8012/);
+  assert.match(wh.ops_notes ?? "", /https:\/\/rotunda\.warehousecinemas\.com\/home\//);
+  assert.match(wh.ops_notes ?? "", /\/food-drink\//);
+  assert.match(wh.ops_notes ?? "", /https:\/\/www\.warehousetaproom\.com\//);
+  assert.match(wh.ops_notes ?? "", /https:\/\/www\.warehousetaproom\.com\/faq/);
+  assert.match(wh.ops_notes ?? "", /\/happy-hour/);
+  assert.match(wh.ops_notes ?? "", /\/tappy-hour/);
+  assert.match(wh.ops_notes ?? "", /\/faqs\//);
+  assert.match(wh.ops_notes ?? "", /Kickback/);
+  assert.match(wh.ops_notes ?? "", /Loading/);
+  assert.match(wh.ops_notes ?? "", /11:00 AM - 11:00 PM/);
+  assert.match(wh.ops_notes ?? "", /showtime-dependent/);
+  assert.match(wh.ops_notes ?? "", /Tappy Hour/);
+  assert.match(wh.ops_notes ?? "", /50% all alcohol/);
+  assert.match(wh.ops_notes ?? "", /all wednesday/);
+  assert.match(wh.ops_notes ?? "", /every Wednesday all day long/);
+  assert.match(wh.ops_notes ?? "", /50% off any beverage/);
+  assert.match(wh.ops_notes ?? "", /self-serve tap wall/);
+  assert.match(wh.ops_notes ?? "", /Crazy 8/);
+  assert.match(wh.ops_notes ?? "", /August 26/);
+  assert.match(wh.ops_notes ?? "", /\$7 Tuesdays/);
+  assert.match(wh.ops_notes ?? "", /VIP Tuesdays/);
+  assert.match(wh.ops_notes ?? "", /Pour Wall/);
+  assert.match(wh.ops_notes ?? "", /Top Shelf Margarita/);
+  assert.match(wh.ops_notes ?? "", /\$18/);
+  assert.match(wh.ops_notes ?? "", /Frederick/);
+  assert.match(wh.ops_notes ?? "", /Leitersburg/);
+  assert.match(wh.ops_notes ?? "", /one drink per ID/);
+  assert.match(wh.ops_notes ?? "", /notes_public is required/);
+  assert.match(wh.ops_notes ?? "", /deal_format omitted/);
+  assert.match(wh.ops_notes ?? "", /William Fell is HOLD/);
+  assert.match(wh.ops_notes ?? "", /Woodberry Kitchen is not this ticket/);
+  assert.ok(!wh.deals.some((d) => d.recurrence), "omit recurrence");
+  assert.ok(
+    wh.deals.every((d) => d.happy_hour === true),
+    "happy_hour true",
+  );
+  assert.ok(
+    !wh.deals.some(
+      (d) =>
+        d.start === 660 ||
+        d.end === 660 ||
+        d.start === 1380 ||
+        d.end === 1380 ||
+        d.start === 630 ||
+        d.end === 630,
+    ),
+    "do not copy tap-room 11am (660) / 11pm (1380) or cinema 10:30 AM (630) onto a deal clock",
+  );
+  assert.ok(
+    !wh.deals.some((d) =>
+      d.items.some((i) =>
+        /crazy 8|vip tuesday|\$7 tuesday|pour wall|top shelf|frederick|leitersburg|margarita/i.test(
+          `${i.text} ${i.price ?? ""}`,
+        ),
+      ),
+    ),
+    "do not ship Crazy 8, $7/VIP Tuesdays, Pour Wall, or other doors",
+  );
+
+  const tappy = wh.deals[0];
+  assert.equal(tappy.happy_hour, true);
+  assert.deepEqual(tappy.days, ["wed"]);
+  assert.equal(tappy.start, null);
+  assert.equal(tappy.end, null);
+  assert.equal(tappy.time_window, "all day");
+  assert.deepEqual(tappy.food_categories, ["drink"]);
+  assert.deepEqual(tappy.items.map((i) => [i.text, i.price ?? null]), [
+    ["50% all alcohol", "50% off"],
+  ]);
+  assert.match(tappy.proof_quote, /Tappy Hour/);
+  assert.match(tappy.proof_quote, /tappy/);
+  assert.match(tappy.proof_quote, /hour/);
+  assert.match(tappy.proof_quote, /50% all alcohol - all wednesday/);
+  assert.doesNotMatch(tappy.proof_quote, /Crazy 8/);
+  assert.doesNotMatch(tappy.proof_quote, /\$7 Tuesday/);
+  assert.doesNotMatch(tappy.proof_quote, /VIP Tuesday/);
+  assert.doesNotMatch(tappy.proof_quote, /Pour Wall/);
+  assert.doesNotMatch(tappy.proof_quote, /Top Shelf/);
+  assert.doesNotMatch(tappy.proof_quote, /Frederick/);
+  assert.doesNotMatch(tappy.proof_quote, /Leitersburg/);
+  assert.equal(tappy.source_url, "https://rotunda.warehousecinemas.com/home/");
+
+  assert.ok(venuesInView(venues, bySlug.hampden).some((v) => v.id === "warehouse-cinemas-rotunda"));
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "warehouse-cinemas-rotunda"));
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "warehouse-cinemas-rotunda"),
+    "Hampden must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "warehouse-cinemas-rotunda"),
+    "Hampden must not fold into /locust-point",
+  );
+  assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
+  assert.equal(bySlug.rotunda, undefined, "do not invent a rotunda view");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

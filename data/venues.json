@@ -14382,6 +14382,166 @@
       "lat": 39.3278546,
       "lon": -76.6171084,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
+    },
+    {
+      "id": "nine-tailed-fox",
+      "name": "Nine Tailed Fox",
+      "neighborhood": "Cross Keys",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
+      "status": "verified",
+      "address": "3 Village Square, Baltimore, MD 21210",
+      "phone": "(443) 688-9511",
+      "source_url": "https://ninetailedfoxbalt.com/menu/happy-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-24",
+      "notes_public": "Happy hour is bar only.",
+      "ops_notes": "Builder 2026-08-24 walk-50 packet 2 + live https://ninetailedfoxbalt.com/menu/happy-hour/ 301 → https://ninetailedfoxbalt.com/wp-content/uploads/2026/07/NTF_HappyHour_070726-copy.pdf HTTP 200. Homepage https://ninetailedfoxbalt.com/ HTTP 200. /our-menus/ HTTP 200. Live HH PDF 1,542,754 bytes, sha256 c9da681d534d2d54b41084648db623e4e05e0d135fe8fff3d94cb9545ff40f67, Last-Modified Fri, 31 Jul 2026 15:31:42 GMT (source_document_date 2026-07-31 stays in ops — HTTP Last-Modified — not a schema field). Filename NTF_HappyHour_070726-copy.pdf is a designer label — do not date from it. Visual read of pdftoppm page 1 matches pdftotext. /happy-hour and /happy-hour/ also 301 to the same PDF today. /happyhour /specials /weekly-specials /promotions /menu /hours /location 301 → /not-found/ HTTP 200 (not-found shell). Pin 3 Village Square, Baltimore, MD 21210 / (443) 688-9511 (site print 443-688-9511). Email info@ninetailedfoxbalt.com stays in ops. Nominatim 39.3549658,-76.6453407. Nominatim display Greater Roland Park; city Name=Cross Keys wins. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Cross Keys. Cross Keys has no home view — add Cross Keys to citywideOnly once. Do not add Roland Park. Do not invent a /cross-keys view. Do not invent a /roland-park view. Do not fold into /hampden. Do not add Hampden. Do not add Locust Point, Riverside, Fells Point, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (homepage): Sunday – Thursday: 11:30am – 11pm (Kitchen Closes at 10pm). Friday – Saturday: 11:30am – 1am (Kitchen Closes at 11pm). Happy Hour Sunday – Friday 4pm – 6pm (Bar Only). Record hours in ops. Do not copy Sun–Thu 11pm (1380), Fri/Sat 1am (1500), kitchen-close 10pm (1320) / 11pm (1380) onto the clock. Saturday is open and is not in the HH window. 4pm-6pm → 960/1080. Quotes today: Homepage Happy Hour Sunday – Friday 4pm – 6pm (Bar Only). PDF footer SUNDAY - FRIDAY | 4 - 6 PM | BAR ONLY. PDF: $5 BEER Domestic Beer / Michelob Ultra · $6 WINE SPARKLING | ROSÉ · WHITE | RED · $8 SPIRITS OPTIONAL CHOICE OF MIXER Birdie & Buck Vodka / BSC Shot Tower Gin / Wild Roan Bourbon / Papelito Blanco Tequila / Planteray Rum · $3 UPCHARGE FOR COCKTAILS · $10 COCKTAILS Hugo Spritz / Aperol Spritz / Lychee Spritz / Old Fashioned / Margarita / Gin or Vodka Martini / Lemon Drop Martini / Seasonal Cocktail ASK YOUR BARTENDER · $5 Hot & Sour Soup wood ear mushroom, tofu, bamboo shoot / Chicken Wonton Soup bok choy, scallion · $9 Chicken Wings (3pc) fried garlic, honey tobanjan / Jade Chicken Salad napa cabbage, crispy wonton, mint, avocado, soy vinaigrette / Crab Rangoon (3pc) lump blue crab, cream cheese, sweet chili sauce / Chili Wonton (3pc) stuffed with chicken, chili oil, sesame seed / Mushroom Spring Roll (2pc) mixed mushrooms, cabbage, carrot / Crispy Shrimp Spring Roll (2pc) asparagus, sweet chili sauce · $11 General Tso Chicken broccoli, sesame seed, scallion / Mongolian Beef bell pepper, red onion, cilantro / Szechuan Chicken dry-fried chicken, red chili, szechuan peppercorn / Chow Mein Noodles mixed mushrooms, scallion, bean sprout / Vegetable Fried Rice scrambled eggs, scallion, fried onion · please no food additions or substitutions. Stay off: regular lunch/dinner/cocktail/dessert PDFs. Atlas Rewards. 20% auto-gratuity for 6+. 3% facility fee. Lunar New Year dated party. Toast catering. Yelp. $3 upcharge for cocktails is a spirits qualifier in ops — do not invent a second cocktail price. Dish names only — descriptors ride in ops. Keep printed cocktail names. Do not collapse the $10 cocktails. happy_hour true. omit recurrence. One row. notes_public is required: Happy hour is bar only. Location lock so the card does not promise HH at every table. Days/window stay on the deal row. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /baltimore only. Not in /hampden. Not in /fells-point. Not in /locust-point. bySlug[\"cross-keys\"] undefined. bySlug[\"roland-park\"] undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Zen West HOLD. Duchess conflict HOLD.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Domestic Beer",
+              "price": "$5"
+            },
+            {
+              "text": "Michelob Ultra",
+              "price": "$5"
+            },
+            {
+              "text": "Sparkling / Rosé / White / Red wine",
+              "price": "$6"
+            },
+            {
+              "text": "Birdie & Buck Vodka",
+              "price": "$8"
+            },
+            {
+              "text": "BSC Shot Tower Gin",
+              "price": "$8"
+            },
+            {
+              "text": "Wild Roan Bourbon",
+              "price": "$8"
+            },
+            {
+              "text": "Papelito Blanco Tequila",
+              "price": "$8"
+            },
+            {
+              "text": "Planteray Rum",
+              "price": "$8"
+            },
+            {
+              "text": "Hugo Spritz",
+              "price": "$10"
+            },
+            {
+              "text": "Aperol Spritz",
+              "price": "$10"
+            },
+            {
+              "text": "Lychee Spritz",
+              "price": "$10"
+            },
+            {
+              "text": "Old Fashioned",
+              "price": "$10"
+            },
+            {
+              "text": "Margarita",
+              "price": "$10"
+            },
+            {
+              "text": "Gin or Vodka Martini",
+              "price": "$10"
+            },
+            {
+              "text": "Lemon Drop Martini",
+              "price": "$10"
+            },
+            {
+              "text": "Seasonal Cocktail",
+              "price": "$10"
+            },
+            {
+              "text": "Hot & Sour Soup",
+              "price": "$5"
+            },
+            {
+              "text": "Chicken Wonton Soup",
+              "price": "$5"
+            },
+            {
+              "text": "Chicken Wings (3pc)",
+              "price": "$9"
+            },
+            {
+              "text": "Jade Chicken Salad",
+              "price": "$9"
+            },
+            {
+              "text": "Crab Rangoon (3pc)",
+              "price": "$9"
+            },
+            {
+              "text": "Chili Wonton (3pc)",
+              "price": "$9"
+            },
+            {
+              "text": "Mushroom Spring Roll (2pc)",
+              "price": "$9"
+            },
+            {
+              "text": "Crispy Shrimp Spring Roll (2pc)",
+              "price": "$9"
+            },
+            {
+              "text": "General Tso Chicken",
+              "price": "$11"
+            },
+            {
+              "text": "Mongolian Beef",
+              "price": "$11"
+            },
+            {
+              "text": "Szechuan Chicken",
+              "price": "$11"
+            },
+            {
+              "text": "Chow Mein Noodles",
+              "price": "$11"
+            },
+            {
+              "text": "Vegetable Fried Rice",
+              "price": "$11"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-24",
+          "source_url": "https://ninetailedfoxbalt.com/menu/happy-hour/",
+          "proof_quote": "SUNDAY - FRIDAY | 4 - 6 PM | BAR ONLY",
+          "food_categories": [
+            "drink",
+            "wings",
+            "seafood/crab",
+            "small-plate/apps"
+          ]
+        }
+      ],
+      "lat": 39.3549658,
+      "lon": -76.6453407,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
     }
 
   ]

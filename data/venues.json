@@ -14303,6 +14303,85 @@
       "lat": 39.3148904,
       "lon": -76.6178082,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-23"
+    },
+    {
+      "id": "dear-charles",
+      "name": "Dear Charles",
+      "neighborhood": "Charles Village",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
+      "status": "verified",
+      "address": "3215 N Charles Street, Baltimore, MD 21218",
+      "phone": "(410) 424-7788",
+      "source_url": "https://www.dearcharles.com/menus/",
+      "source_type": "venue_website",
+      "last_verified": "2026-08-24",
+      "notes_public": "Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street.",
+      "ops_notes": "Builder 2026-08-24 walk-50 packet 1 + live https://www.dearcharles.com/menus/ HTTP 200. Homepage https://www.dearcharles.com/ HTTP 200. /events/ HTTP 200. /location/dear-charles/ HTTP 200. /happy-hour /hours /location 404. Leftover batch 34 checked the hotel (thestudyatjohnshopkins.com/dining 404) and called this door empty — that was the wrong site. Restaurant site is live today. Pin 3215 N Charles Street, Baltimore, MD 21218 / (410) 424-7788 (site print). Hotel line 410.243.0030 stays off this card. Nominatim 39.3278546,-76.6171084. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Charles Village. Charles Village has no home view — already in citywideOnly (Charles Village Pub, HomeSlyce JHU). Do not add Charles Village again. Do not invent a /charles-village view. Do not fold into /station-north or /mount-vernon. Do not add Locust Point, Riverside, Fells Point, Hampden, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (location page): Monday - Friday: Breakfast: 7:00 AM – 11:00 AM Lunch: 11:00 AM – 3:00 PM Dinner: 3:30 PM – 10:00 PM. Saturday & Sunday: Brunch: 7:00 AM - 3:00 PM Dinner: 3:30 PM – 10:00 PM. Live location page prints Brunch: : 7:00 AM - 3:00 PM (extra colon in the HTML). Record hours in ops. Do not copy dinner 3:30 (930) / 10pm (1320), breakfast 7am, or lunch 3pm onto either clock. 3pm-7pm → 900/1140. Quotes today: Location Happy Hour drink specials offered daily 3pm - 7pm! Location Dear Charles is located in the lower level of The Study at Johns Hopkins. There is a street level entrance located at the corner of 33rd Street and N Lovegrove Street. Happenings Join us everyday from 3pm - 7pm for drink specials including $2 off draft beers, $8 select house wines, $9 craft cocktails, and $12 signature cocktails. Happenings Wednesdays: Burger Night Our Charles Burger is a must-try with Angus chuck, brisket, and a short-rib blend topped with our savory bacon jam. Served with fries for $17. Menus HH block Beverage 3pm - 7pm Draft Beers $2 Off House Wines $8 Craft & Well Cocktails $9 Signature Cocktails $12. Regular dinner Charles Burger prints $22 on the same menus page — that is not the Wednesday deal. Stay off: regular $22 Charles Burger. Hotel phone 410.243.0030. Study dining 404s. Full-price cocktail list (Irish Bloom $14, Aviation $12, etc.). Breakfast / lunch / dinner / brunch / dessert prices. The Perch. Keep printed names (Craft & Well, plus Signature $12). Happenings $9 craft cocktails is the overlapping $9, not a second cocktail row. happy_hour true on the daily drink row. happy_hour false on Wednesday burger night. omit recurrence. Two rows. notes_public is required: Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street. Location lock so the card does not send people to the hotel lobby. Days/window stay on the deal row. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Burger night is unclocked (Woodberry shape): start null · end null · time_window all day. Load pin: in /baltimore only. Not in /station-north. Not in /mount-vernon. Not in /fells-point. Not in /hampden. bySlug[\"charles-village\"] undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Zen West HOLD. Duchess conflict HOLD.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Draft Beers",
+              "price": "$2 off"
+            },
+            {
+              "text": "House Wines",
+              "price": "$8"
+            },
+            {
+              "text": "Craft & Well Cocktails",
+              "price": "$9"
+            },
+            {
+              "text": "Signature Cocktails",
+              "price": "$12"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-08-24",
+          "source_url": "https://www.dearcharles.com/menus/",
+          "proof_quote": "Join us everyday from 3pm - 7pm for drink specials including $2 off draft beers, $8 select house wines, $9 craft cocktails, and $12 signature cocktails.",
+          "food_categories": [
+            "drink"
+          ]
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Charles Burger with fries",
+              "price": "$17"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-08-24",
+          "source_url": "https://www.dearcharles.com/menus/",
+          "proof_quote": "Wednesdays: Burger Night Our Charles Burger is a must-try with Angus chuck, brisket, and a short-rib blend topped with our savory bacon jam. Served with fries for $17.",
+          "food_categories": [
+            "burger"
+          ]
+        }
+      ],
+      "lat": 39.3278546,
+      "lon": -76.6171084,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
     }
 
   ]

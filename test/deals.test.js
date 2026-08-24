@@ -2145,8 +2145,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-21: leftover loadable (Warehouse Cinemas Rotunda) → 136 -> 137 / 158 -> 159.
   // 2026-08-23: leftover loadable (Woodberry Kitchen) → 137 -> 138 / 159 -> 160.
   // 2026-08-23: leftover loadable (Yeiboh Kitchen) → 138 -> 139 / 160 -> 161.
-  assert.equal(showable, 139);
-  assert.equal(venues.length, 161);
+  // 2026-08-24: walk-50 packet 1 (Dear Charles) → 139 -> 140 / 161 -> 162.
+  assert.equal(showable, 140);
+  assert.equal(venues.length, 162);
 });
 
 
@@ -8279,6 +8280,175 @@ test("Yeiboh Kitchen joins 2026-08-23 (Old Goucher citywide, Mon/Thu/Fri 5–7 H
   assert.equal(venuesInView(venues, bySlug["fells-point"]).length, 21, "Fells roster pin is 21");
   assert.equal(bySlug["old-goucher"], undefined, "do not invent an old-goucher view");
   assert.equal(bySlug["charles-village"], undefined, "do not invent a charles-village view");
+});
+
+test("Dear Charles joins 2026-08-24 (Charles Village citywide, daily 3–7 HH + Wed burger)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const dc = byId["dear-charles"];
+  assert.ok(dc, "dear-charles missing");
+  assert.deepEqual(venueShapeErrors(dc), []);
+  assert.equal(dc.name, "Dear Charles");
+  assert.equal(dc.neighborhood, "Charles Village");
+  assert.equal(
+    dc.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
+  );
+  assert.equal(dc.status, "verified");
+  assert.equal(dc.address, "3215 N Charles Street, Baltimore, MD 21218");
+  assert.equal(dc.phone, "(410) 424-7788");
+  assert.equal(dc.source_url, "https://www.dearcharles.com/menus/");
+  assert.equal(dc.source_type, "venue_website");
+  assert.equal(dc.last_verified, "2026-08-24");
+  assert.equal(
+    dc.notes_public,
+    "Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street.",
+  );
+  assert.equal(dc.deal_format, undefined);
+  assert.equal(dc.lat, 39.3278546);
+  assert.equal(dc.lon, -76.6171084);
+  assert.equal(dc.deals.length, 2);
+  assert.match(dc.ops_notes ?? "", /Name=Charles Village/);
+  assert.match(dc.ops_notes ?? "", /already in citywideOnly/i);
+  assert.match(dc.ops_notes ?? "", /Do not add Charles Village again/);
+  assert.match(dc.ops_notes ?? "", /Do not invent a \/charles-village/);
+  assert.match(dc.ops_notes ?? "", /Do not fold into \/station-north/);
+  assert.match(dc.ops_notes ?? "", /\/mount-vernon/);
+  assert.match(dc.ops_notes ?? "", /Do not add Locust Point/);
+  assert.match(dc.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(dc.ops_notes ?? "", /3215 N Charles Street/);
+  assert.match(dc.ops_notes ?? "", /\(410\) 424-7788/);
+  assert.match(dc.ops_notes ?? "", /410\.243\.0030/);
+  assert.match(dc.ops_notes ?? "", /thestudyatjohnshopkins\.com\/dining 404/);
+  assert.match(dc.ops_notes ?? "", /https:\/\/www\.dearcharles\.com\/menus\//);
+  assert.match(dc.ops_notes ?? "", /\/happy-hour \/hours \/location 404/);
+  assert.match(dc.ops_notes ?? "", /Breakfast: 7:00 AM/);
+  assert.match(dc.ops_notes ?? "", /Dinner: 3:30 PM – 10:00 PM/);
+  assert.match(dc.ops_notes ?? "", /930/);
+  assert.match(dc.ops_notes ?? "", /1320/);
+  assert.match(dc.ops_notes ?? "", /Happy Hour drink specials offered daily 3pm - 7pm!/);
+  assert.match(dc.ops_notes ?? "", /lower level of The Study at Johns Hopkins/);
+  assert.match(dc.ops_notes ?? "", /33rd Street and N Lovegrove Street/);
+  assert.match(dc.ops_notes ?? "", /\$2 off draft beers/);
+  assert.match(dc.ops_notes ?? "", /Craft & Well Cocktails \$9/);
+  assert.match(dc.ops_notes ?? "", /Signature Cocktails \$12/);
+  assert.match(dc.ops_notes ?? "", /Wednesdays: Burger Night/);
+  assert.match(dc.ops_notes ?? "", /Served with fries for \$17/);
+  assert.match(dc.ops_notes ?? "", /\$22 Charles Burger/);
+  assert.match(dc.ops_notes ?? "", /Irish Bloom \$14/);
+  assert.match(dc.ops_notes ?? "", /The Perch/);
+  assert.match(dc.ops_notes ?? "", /happy_hour true/);
+  assert.match(dc.ops_notes ?? "", /happy_hour false/);
+  assert.match(dc.ops_notes ?? "", /notes_public is required/);
+  assert.match(dc.ops_notes ?? "", /deal_format omitted/);
+  assert.match(dc.ops_notes ?? "", /Woodberry shape/);
+  assert.match(dc.ops_notes ?? "", /William Fell is HOLD/);
+  assert.ok(!dc.deals.some((d) => d.recurrence), "omit recurrence");
+  assert.ok(
+    !dc.deals.some(
+      (d) =>
+        d.start === 930 ||
+        d.end === 930 ||
+        d.start === 1320 ||
+        d.end === 1320 ||
+        d.start === 420 ||
+        d.end === 420,
+    ),
+    "do not copy dinner 3:30 (930) / 10pm (1320), breakfast 7am, or lunch 3pm onto a deal clock",
+  );
+  assert.ok(
+    !dc.deals.some((d) =>
+      d.items.some((i) =>
+        /\$22|irish bloom|aviation|perch|breakfast|dessert/i.test(
+          `${i.text} ${i.price ?? ""}`,
+        ),
+      ),
+    ),
+    "do not ship regular $22 Charles Burger, full-price cocktails, or meal-menu prices",
+  );
+
+  const hh = dc.deals.find((d) => d.happy_hour === true);
+  const burger = dc.deals.find((d) => d.days.length === 1 && d.days[0] === "wed" && d.happy_hour === false);
+  assert.ok(hh && burger, "expected daily drink HH + Wednesday burger night");
+
+  assert.deepEqual(hh.days, ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]);
+  assert.equal(hh.start, 900);
+  assert.equal(hh.end, 1140);
+  assert.equal(hh.time_window, "3pm-7pm");
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.food_categories, ["drink"]);
+  assert.deepEqual(hh.items.map((i) => [i.text, i.price ?? null]), [
+    ["Draft Beers", "$2 off"],
+    ["House Wines", "$8"],
+    ["Craft & Well Cocktails", "$9"],
+    ["Signature Cocktails", "$12"],
+  ]);
+  assert.equal(
+    hh.proof_quote,
+    "Join us everyday from 3pm - 7pm for drink specials including $2 off draft beers, $8 select house wines, $9 craft cocktails, and $12 signature cocktails.",
+  );
+  assert.equal(hh.notes_public, undefined, "notes_public is venue-level only");
+  assert.equal(hh.source_url, "https://www.dearcharles.com/menus/");
+  assert.equal(hh.verified_date, "2026-08-24");
+
+  assert.deepEqual(burger.days, ["wed"]);
+  assert.equal(burger.start, null);
+  assert.equal(burger.end, null);
+  assert.equal(burger.time_window, "all day");
+  assert.equal(burger.happy_hour, false);
+  assert.deepEqual(burger.food_categories, ["burger"]);
+  assert.deepEqual(burger.items.map((i) => [i.text, i.price ?? null]), [
+    ["Charles Burger with fries", "$17"],
+  ]);
+  assert.equal(burger.items.length, 1, "do not copy $22 onto the burger-night row");
+  assert.equal(
+    burger.proof_quote,
+    "Wednesdays: Burger Night Our Charles Burger is a must-try with Angus chuck, brisket, and a short-rib blend topped with our savory bacon jam. Served with fries for $17.",
+  );
+  assert.equal(burger.notes_public, undefined, "notes_public is venue-level only");
+  assert.equal(burger.source_url, "https://www.dearcharles.com/menus/");
+  assert.equal(burger.verified_date, "2026-08-24");
+
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills", "Woodberry"]);
+  assert.equal(citywideOnly.size, 22, "citywideOnly stays 22 — do not duplicate Charles Village");
+  assert.equal([...citywideOnly].filter((n) => n === "Charles Village").length, 1);
+  assert.equal([...citywideOnly].filter((n) => n === "Woodberry").length, 1);
+  assert.equal([...citywideOnly].filter((n) => n === "Old Goucher").length, 1);
+  assert.ok(!citywideOnly.has("Fells Point"));
+  assert.ok(!citywideOnly.has("Hampden"));
+  assert.ok(!citywideOnly.has("Station North"));
+  assert.ok(!citywideOnly.has("Mount Vernon"));
+  assert.ok(!citywideOnly.has("Locust Point"));
+  assert.ok(!citywideOnly.has("Riverside"));
+  assert.ok(!citywideOnly.has("Hamilton"));
+  assert.ok(!citywideOnly.has("Downtown"));
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "dear-charles"));
+  assert.ok(
+    !venuesInView(venues, bySlug["station-north"]).some((v) => v.id === "dear-charles"),
+    "Charles Village must not fold into /station-north",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["mount-vernon"]).some((v) => v.id === "dear-charles"),
+    "Charles Village must not fold into /mount-vernon",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "dear-charles"),
+    "Charles Village must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "dear-charles"),
+    "Charles Village must not fold into /hampden",
+  );
+  const fellsIds = venuesInView(venues, bySlug["fells-point"]).map((v) => v.id);
+  assert.equal(fellsIds.length, 21, "Fells roster pin is 21");
+  assert.ok(fellsIds.includes("v-no-wine-bar"), "Fells IDs still include v-no-wine-bar");
+  assert.ok(!fellsIds.includes("dear-charles"), "dear-charles is not a Fells ID");
+  assert.equal(bySlug["charles-village"], undefined, "do not invent a charles-village view");
+  assert.equal(views.length, 9, "views still 9 — no /charles-village");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

@@ -522,8 +522,8 @@ test("city-wide view includes every venue once (not a neighbourhood list)", asyn
 
 test("every venue's neighborhood belongs to some view", async () => {
   // Only neighbourhood lists count — "*" is not a neighbourhood name.
-  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park / Hamilton Hills / Woodberry have no home page; those venues are citywide-only.
-  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills", "Woodberry"]);
+  // Tuscany-Canterbury / Little Italy / Upper Fells Point / Waltherson / Belair-Edison / Charles Village / Morrell Park / Bolton Hill / Jones Falls Area / Old Goucher / Otterbein / Johns Hopkins Homewood / Greenmount West / Highlandtown / Westfield / Downtown West / Mount Washington / Remington / Greektown / Chinquapin Park / Hamilton Hills / Woodberry / Cross Keys have no home page; those venues are citywide-only.
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills", "Woodberry", "Cross Keys"]);
   const covered = new Set(
     (await loadViews())
       .filter((view) => Array.isArray(view.neighborhoods))
@@ -2146,8 +2146,9 @@ test("2026-08-07 CoS-cleared seven: Tandoor Todd Choptank Joyce Azumi Watershed 
   // 2026-08-23: leftover loadable (Woodberry Kitchen) → 137 -> 138 / 159 -> 160.
   // 2026-08-23: leftover loadable (Yeiboh Kitchen) → 138 -> 139 / 160 -> 161.
   // 2026-08-24: walk-50 packet 1 (Dear Charles) → 139 -> 140 / 161 -> 162.
-  assert.equal(showable, 140);
-  assert.equal(venues.length, 162);
+  // 2026-08-24: walk-50 packet 2 (Nine Tailed Fox) → 140 -> 141 / 162 -> 163.
+  assert.equal(showable, 141);
+  assert.equal(venues.length, 163);
 });
 
 
@@ -8449,6 +8450,203 @@ test("Dear Charles joins 2026-08-24 (Charles Village citywide, daily 3–7 HH + 
   assert.ok(!fellsIds.includes("dear-charles"), "dear-charles is not a Fells ID");
   assert.equal(bySlug["charles-village"], undefined, "do not invent a charles-village view");
   assert.equal(views.length, 9, "views still 9 — no /charles-village");
+});
+
+test("Nine Tailed Fox joins 2026-08-24 (Cross Keys citywide, Sun–Fri 4–6 HH bar only)", async () => {
+  const venues = await loadVenues();
+  const views = await loadViews();
+  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
+  const bySlug = Object.fromEntries(views.map((v) => [v.slug, v]));
+
+  const ntf = byId["nine-tailed-fox"];
+  assert.ok(ntf, "nine-tailed-fox missing");
+  assert.deepEqual(venueShapeErrors(ntf), []);
+  assert.equal(ntf.name, "Nine Tailed Fox");
+  assert.equal(ntf.neighborhood, "Cross Keys");
+  assert.equal(
+    ntf.neighborhood_source,
+    "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
+  );
+  assert.equal(ntf.status, "verified");
+  assert.equal(ntf.address, "3 Village Square, Baltimore, MD 21210");
+  assert.equal(ntf.phone, "(443) 688-9511");
+  assert.equal(ntf.source_url, "https://ninetailedfoxbalt.com/menu/happy-hour/");
+  assert.equal(ntf.source_type, "venue_website");
+  assert.equal(ntf.last_verified, "2026-08-24");
+  assert.equal(ntf.notes_public, "Happy hour is bar only.");
+  assert.equal(ntf.deal_format, undefined);
+  assert.equal(ntf.lat, 39.3549658);
+  assert.equal(ntf.lon, -76.6453407);
+  assert.equal(ntf.deals.length, 1);
+  assert.match(ntf.ops_notes ?? "", /Name=Cross Keys/);
+  assert.match(ntf.ops_notes ?? "", /add Cross Keys to citywideOnly/i);
+  assert.match(ntf.ops_notes ?? "", /Do not add Roland Park/);
+  assert.match(ntf.ops_notes ?? "", /Do not invent a \/cross-keys/);
+  assert.match(ntf.ops_notes ?? "", /Do not invent a \/roland-park/);
+  assert.match(ntf.ops_notes ?? "", /Do not fold into \/hampden/);
+  assert.match(ntf.ops_notes ?? "", /Do not add Hampden/);
+  assert.match(ntf.ops_notes ?? "", /Do not add Locust Point/);
+  assert.match(ntf.ops_notes ?? "", /Fells roster pin stays 21/);
+  assert.match(ntf.ops_notes ?? "", /3 Village Square/);
+  assert.match(ntf.ops_notes ?? "", /\(443\) 688-9511/);
+  assert.match(ntf.ops_notes ?? "", /443-688-9511/);
+  assert.match(ntf.ops_notes ?? "", /info@ninetailedfoxbalt\.com/);
+  assert.match(ntf.ops_notes ?? "", /Greater Roland Park/);
+  assert.match(ntf.ops_notes ?? "", /https:\/\/ninetailedfoxbalt\.com\/menu\/happy-hour\//);
+  assert.match(ntf.ops_notes ?? "", /NTF_HappyHour_070726-copy\.pdf/);
+  assert.match(ntf.ops_notes ?? "", /c9da681d534d2d54b41084648db623e4e05e0d135fe8fff3d94cb9545ff40f67/);
+  assert.match(ntf.ops_notes ?? "", /Fri, 31 Jul 2026 15:31:42 GMT/);
+  assert.match(ntf.ops_notes ?? "", /source_document_date 2026-07-31/);
+  assert.match(ntf.ops_notes ?? "", /designer label/);
+  assert.match(ntf.ops_notes ?? "", /\/not-found\//);
+  assert.match(ntf.ops_notes ?? "", /Sunday – Thursday: 11:30am – 11pm/);
+  assert.match(ntf.ops_notes ?? "", /Friday – Saturday: 11:30am – 1am/);
+  assert.match(ntf.ops_notes ?? "", /Kitchen Closes at 10pm/);
+  assert.match(ntf.ops_notes ?? "", /Kitchen Closes at 11pm/);
+  assert.match(ntf.ops_notes ?? "", /1380/);
+  assert.match(ntf.ops_notes ?? "", /1500/);
+  assert.match(ntf.ops_notes ?? "", /1320/);
+  assert.match(ntf.ops_notes ?? "", /Saturday is open and is not in the HH window/);
+  assert.match(ntf.ops_notes ?? "", /960\/1080/);
+  assert.match(ntf.ops_notes ?? "", /Happy Hour Sunday – Friday 4pm – 6pm \(Bar Only\)/);
+  assert.match(ntf.ops_notes ?? "", /SUNDAY - FRIDAY \| 4 - 6 PM \| BAR ONLY/);
+  assert.match(ntf.ops_notes ?? "", /\$5 BEER/);
+  assert.match(ntf.ops_notes ?? "", /\$10 COCKTAILS/);
+  assert.match(ntf.ops_notes ?? "", /\$3 UPCHARGE FOR COCKTAILS/);
+  assert.match(ntf.ops_notes ?? "", /Birdie & Buck Vodka/);
+  assert.match(ntf.ops_notes ?? "", /Planteray Rum/);
+  assert.match(ntf.ops_notes ?? "", /Hugo Spritz/);
+  assert.match(ntf.ops_notes ?? "", /Lemon Drop Martini/);
+  assert.match(ntf.ops_notes ?? "", /Seasonal Cocktail/);
+  assert.match(ntf.ops_notes ?? "", /Hot & Sour Soup wood ear mushroom/);
+  assert.match(ntf.ops_notes ?? "", /Crab Rangoon \(3pc\) lump blue crab/);
+  assert.match(ntf.ops_notes ?? "", /please no food additions or substitutions/);
+  assert.match(ntf.ops_notes ?? "", /Atlas Rewards/);
+  assert.match(ntf.ops_notes ?? "", /20% auto-gratuity/);
+  assert.match(ntf.ops_notes ?? "", /3% facility fee/);
+  assert.match(ntf.ops_notes ?? "", /Lunar New Year/);
+  assert.match(ntf.ops_notes ?? "", /Toast catering/);
+  assert.match(ntf.ops_notes ?? "", /do not invent a second cocktail price/);
+  assert.match(ntf.ops_notes ?? "", /Do not collapse the \$10 cocktails/);
+  assert.match(ntf.ops_notes ?? "", /happy_hour true/);
+  assert.match(ntf.ops_notes ?? "", /notes_public is required/);
+  assert.match(ntf.ops_notes ?? "", /deal_format omitted/);
+  assert.match(ntf.ops_notes ?? "", /William Fell is HOLD/);
+  assert.ok(!ntf.deals.some((d) => d.recurrence), "omit recurrence");
+  assert.ok(
+    !ntf.deals.some(
+      (d) =>
+        d.start === 1380 ||
+        d.end === 1380 ||
+        d.start === 1500 ||
+        d.end === 1500 ||
+        d.start === 1320 ||
+        d.end === 1320,
+    ),
+    "do not copy Sun–Thu 11pm (1380), Fri/Sat 1am (1500), or kitchen-close onto the deal clock",
+  );
+  assert.ok(
+    !ntf.deals.some((d) => d.days.includes("sat")),
+    "Saturday is open and is not in the HH window",
+  );
+  assert.ok(
+    !ntf.deals.some((d) =>
+      d.items.some((i) =>
+        /upcharge|atlas|lunar|gratuity|facility fee|yelp|toast/i.test(
+          `${i.text} ${i.price ?? ""}`,
+        ),
+      ),
+    ),
+    "do not ship $3 cocktail upcharge, Atlas Rewards, Lunar New Year, or fee lines",
+  );
+
+  const hh = ntf.deals[0];
+  assert.equal(hh.happy_hour, true);
+  assert.deepEqual(hh.days, ["sun", "mon", "tue", "wed", "thu", "fri"]);
+  assert.equal(hh.start, 960);
+  assert.equal(hh.end, 1080);
+  assert.equal(hh.time_window, "4pm-6pm");
+  assert.deepEqual(hh.food_categories, ["drink", "wings", "seafood/crab", "small-plate/apps"]);
+  assert.deepEqual(hh.items.map((i) => [i.text, i.price ?? null]), [
+    ["Domestic Beer", "$5"],
+    ["Michelob Ultra", "$5"],
+    ["Sparkling / Rosé / White / Red wine", "$6"],
+    ["Birdie & Buck Vodka", "$8"],
+    ["BSC Shot Tower Gin", "$8"],
+    ["Wild Roan Bourbon", "$8"],
+    ["Papelito Blanco Tequila", "$8"],
+    ["Planteray Rum", "$8"],
+    ["Hugo Spritz", "$10"],
+    ["Aperol Spritz", "$10"],
+    ["Lychee Spritz", "$10"],
+    ["Old Fashioned", "$10"],
+    ["Margarita", "$10"],
+    ["Gin or Vodka Martini", "$10"],
+    ["Lemon Drop Martini", "$10"],
+    ["Seasonal Cocktail", "$10"],
+    ["Hot & Sour Soup", "$5"],
+    ["Chicken Wonton Soup", "$5"],
+    ["Chicken Wings (3pc)", "$9"],
+    ["Jade Chicken Salad", "$9"],
+    ["Crab Rangoon (3pc)", "$9"],
+    ["Chili Wonton (3pc)", "$9"],
+    ["Mushroom Spring Roll (2pc)", "$9"],
+    ["Crispy Shrimp Spring Roll (2pc)", "$9"],
+    ["General Tso Chicken", "$11"],
+    ["Mongolian Beef", "$11"],
+    ["Szechuan Chicken", "$11"],
+    ["Chow Mein Noodles", "$11"],
+    ["Vegetable Fried Rice", "$11"],
+  ]);
+  assert.equal(
+    hh.items.filter((i) => i.price === "$10").length,
+    8,
+    "do not collapse the $10 cocktails",
+  );
+  assert.equal(
+    hh.proof_quote,
+    "SUNDAY - FRIDAY | 4 - 6 PM | BAR ONLY",
+  );
+  assert.equal(hh.notes_public, undefined, "notes_public is venue-level only");
+  assert.equal(hh.source_url, "https://ninetailedfoxbalt.com/menu/happy-hour/");
+  assert.equal(hh.verified_date, "2026-08-24");
+
+  const citywideOnly = new Set(["Tuscany-Canterbury", "Little Italy", "Upper Fells Point", "Waltherson", "Belair-Edison", "Charles Village", "Morrell Park", "Bolton Hill", "Jones Falls Area", "Old Goucher", "Otterbein", "Johns Hopkins Homewood", "Greenmount West", "Highlandtown", "Westfield", "Downtown West", "Mount Washington", "Remington", "Greektown", "Chinquapin Park", "Hamilton Hills", "Woodberry", "Cross Keys"]);
+  assert.equal(citywideOnly.size, 23, "citywideOnly is 23 — Cross Keys added once");
+  assert.equal([...citywideOnly].filter((n) => n === "Cross Keys").length, 1);
+  assert.equal([...citywideOnly].filter((n) => n === "Charles Village").length, 1);
+  assert.equal([...citywideOnly].filter((n) => n === "Woodberry").length, 1);
+  assert.equal([...citywideOnly].filter((n) => n === "Old Goucher").length, 1);
+  assert.ok(!citywideOnly.has("Roland Park"));
+  assert.ok(!citywideOnly.has("Fells Point"));
+  assert.ok(!citywideOnly.has("Hampden"));
+  assert.ok(!citywideOnly.has("Station North"));
+  assert.ok(!citywideOnly.has("Mount Vernon"));
+  assert.ok(!citywideOnly.has("Locust Point"));
+  assert.ok(!citywideOnly.has("Riverside"));
+  assert.ok(!citywideOnly.has("Hamilton"));
+  assert.ok(!citywideOnly.has("Downtown"));
+
+  assert.ok(venuesInView(venues, bySlug.baltimore).some((v) => v.id === "nine-tailed-fox"));
+  assert.ok(
+    !venuesInView(venues, bySlug.hampden).some((v) => v.id === "nine-tailed-fox"),
+    "Cross Keys must not fold into /hampden",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["fells-point"]).some((v) => v.id === "nine-tailed-fox"),
+    "Cross Keys must not fold into /fells-point",
+  );
+  assert.ok(
+    !venuesInView(venues, bySlug["locust-point"]).some((v) => v.id === "nine-tailed-fox"),
+    "Cross Keys must not fold into /locust-point",
+  );
+  const fellsIds = venuesInView(venues, bySlug["fells-point"]).map((v) => v.id);
+  assert.equal(fellsIds.length, 21, "Fells roster pin is 21");
+  assert.ok(fellsIds.includes("v-no-wine-bar"), "Fells IDs still include v-no-wine-bar");
+  assert.ok(!fellsIds.includes("nine-tailed-fox"), "nine-tailed-fox is not a Fells ID");
+  assert.equal(bySlug["cross-keys"], undefined, "do not invent a cross-keys view");
+  assert.equal(bySlug["roland-park"], undefined, "do not invent a roland-park view");
+  assert.equal(views.length, 9, "views still 9 — no /cross-keys, no /roland-park");
 });
 
 test("Of Love & Regret and L.P. Steamers join 2026-08-18", async () => {

@@ -1401,12 +1401,15 @@
       "id": "claddagh-pub",
       "name": "Claddagh Pub",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2918 O'Donnell St, Baltimore, MD 21224",
+      "phone": "(410) 522-4220",
+      "source_url": "https://claddaghbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-05",
-      "ops_notes": "Weekly specials page is /weekly-specials/ (not /menus/weekly-specials/). Happy hour also on /menus/happy-hour/ (bar only). Domain previously served an unrelated portfolio; real pub site verified 2026-08-05. Brunch menu is a menu, not a deal. Do not ship Stackhouse 2019 prices — unrelated.",
+      "last_verified": "2026-09-05",
+      "bar_hours": "Mon–Fri 10:45am–2am · Sat & Sun 9am–2am",
+      "notes_public": "All prices are subject to change without notice.",
+      "ops_notes": "Deal Scout 2026-09-05 curl of /weekly-specials/. HH drink list expanded (NÜTRL/Surfside/Sour Bombs/shrimp). Crushes&Sangria $8 on weekly page vs $7 on /menus/happy-hour/ — shipped weekly-specials. Thu 7pm-close Michelob Ultra $1. Fri late Crushes $8. Sat Open-9pm.",
       "deals": [
         {
           "days": [
@@ -1424,7 +1427,7 @@
           "food_categories": [
             "steak"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1439,20 +1442,28 @@
               "price": "1/2 off"
             },
             {
-              "text": "Bud Light Bottles $3",
+              "text": "Bud or Bud Light Bottles $3",
               "price": "$3"
             },
             {
-              "text": "Sangria $7",
-              "price": "$7"
+              "text": "NÜTRL $5",
+              "price": "$5"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
             },
             {
-              "text": "20 Wings & Bucket of Bud Light $35",
-              "price": "$35"
+              "text": "Sour Bombs $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
             },
             {
               "text": "30 Wings $28",
@@ -1463,10 +1474,12 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "verified_date": "2026-09-05",
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
-            "wings"
+            "wings",
+            "seafood/crab",
+            "drink"
           ]
         },
         {
@@ -1485,7 +1498,7 @@
           "food_categories": [
             "steak"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1500,24 +1513,40 @@
               "price": "1/2 off"
             },
             {
-              "text": "Bud Light Bottles $3",
+              "text": "Bud or Bud Light Bottles $3",
               "price": "$3"
             },
             {
-              "text": "Sangria $7",
-              "price": "$7"
+              "text": "NÜTRL $5",
+              "price": "$5"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
+            },
+            {
+              "text": "Sour Bombs $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
+            },
+            {
+              "text": "30 Wings $28",
+              "price": "$28"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "verified_date": "2026-09-05",
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
             "drink"
           ]
@@ -1543,7 +1572,7 @@
             "burger",
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1558,24 +1587,40 @@
               "price": "1/2 off"
             },
             {
-              "text": "Bud Light Bottles $3",
+              "text": "Bud or Bud Light Bottles $3",
               "price": "$3"
             },
             {
-              "text": "Sangria $7",
-              "price": "$7"
+              "text": "NÜTRL $5",
+              "price": "$5"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
+            },
+            {
+              "text": "Sour Bombs $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
+            },
+            {
+              "text": "30 Wings $28",
+              "price": "$28"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "verified_date": "2026-09-05",
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
             "drink"
           ]
@@ -1596,7 +1641,7 @@
           "food_categories": [
             "seafood/crab"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1611,24 +1656,40 @@
               "price": "1/2 off"
             },
             {
-              "text": "Bud Light Bottles $3",
+              "text": "Bud or Bud Light Bottles $3",
               "price": "$3"
             },
             {
-              "text": "Sangria $7",
-              "price": "$7"
+              "text": "NÜTRL $5",
+              "price": "$5"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
+            },
+            {
+              "text": "Sour Bombs $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
+            },
+            {
+              "text": "30 Wings $28",
+              "price": "$28"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "verified_date": "2026-09-05",
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
             "drink"
           ]
@@ -1639,7 +1700,7 @@
           ],
           "items": [
             {
-              "text": "Bud Light Bottles $1",
+              "text": "Michelob Ultra $1",
               "price": "$1"
             },
             {
@@ -1654,7 +1715,8 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05",
+          "proof_quote": "7pm–close Michelob Ultra $1 Sour Bombs $6"
         },
         {
           "days": [
@@ -1673,7 +1735,7 @@
           "food_categories": [
             "seafood/crab"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1688,24 +1750,40 @@
               "price": "1/2 off"
             },
             {
-              "text": "Bud Light Bottles $3",
+              "text": "Bud or Bud Light Bottles $3",
               "price": "$3"
             },
             {
-              "text": "Sangria $7",
-              "price": "$7"
+              "text": "NÜTRL $5",
+              "price": "$5"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
+            },
+            {
+              "text": "Sour Bombs $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
+            },
+            {
+              "text": "30 Wings $28",
+              "price": "$28"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-05",
-          "source_url": "https://claddaghbaltimore.com/menus/happy-hour/",
+          "verified_date": "2026-09-05",
+          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
             "drink"
           ]
@@ -1716,12 +1794,12 @@
           ],
           "items": [
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Crushes $8",
+              "price": "$8"
             },
             {
-              "text": "NÜTRL's $5",
-              "price": "$5"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
             }
           ],
           "start": 1290,
@@ -1731,7 +1809,7 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -1743,7 +1821,7 @@
               "price": "$8"
             },
             {
-              "text": "Bud Light $3",
+              "text": "Michelob Ultra $3",
               "price": "$3"
             },
             {
@@ -1764,59 +1842,15 @@
             }
           ],
           "start": null,
-          "end": 1020,
-          "time_window": "open-5pm",
+          "end": 1260,
+          "time_window": "open-9pm",
           "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
             "wings",
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-05"
-        },
-        {
-          "days": [
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Sunday Specials"
-            },
-            {
-              "text": "20 Wings & Bucket of Bud Light $35",
-              "price": "$35"
-            },
-            {
-              "text": "30 Wings $28",
-              "price": "$28"
-            },
-            {
-              "text": "Bucket of Bud Light $15",
-              "price": "$15"
-            },
-            {
-              "text": "Crushes $7",
-              "price": "$7"
-            },
-            {
-              "text": "Sour Bombs $6",
-              "price": "$6"
-            },
-            {
-              "text": "Bud Light Bottles $3",
-              "price": "$3"
-            },
-            {
-              "text": "Natty Light Cans $1",
-              "price": "$1"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "source_url": "https://claddaghbaltimore.com/weekly-specials/",
-          "food_categories": [
-            "wings"
-          ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05",
+          "proof_quote": "Saturday Open–9pm"
         },
         {
           "days": [
@@ -1827,40 +1861,40 @@
               "text": "Sunday Sports Specials"
             },
             {
-              "text": "20 Wings & Bucket of Bud Light $35",
-              "price": "$35"
+              "text": "1 lb of Steamed Shrimp $23",
+              "price": "$23"
             },
             {
               "text": "30 Wings $28",
               "price": "$28"
             },
             {
-              "text": "Nattys $1",
-              "price": "$1"
+              "text": "Natty Light $2",
+              "price": "$2"
             },
             {
-              "text": "Bud Lights $3",
+              "text": "Michelob Ultra $3",
               "price": "$3"
             },
             {
-              "text": "NÜTRL's $5",
+              "text": "NÜTRLs $5",
               "price": "$5"
             },
             {
-              "text": "Sangrias $7",
-              "price": "$7"
-            },
-            {
-              "text": "Espresso Martini $8",
-              "price": "$8"
+              "text": "Surfside & Super Lyte $6",
+              "price": "$6"
             },
             {
               "text": "Sour Bombs $6",
               "price": "$6"
             },
             {
-              "text": "Crushes $7",
-              "price": "$7"
+              "text": "Crushes & Sangria $8",
+              "price": "$8"
+            },
+            {
+              "text": "Espresso Martinis $8",
+              "price": "$8"
             }
           ],
           "start": null,
@@ -1868,18 +1902,15 @@
           "time_window": "open-close",
           "source_url": "https://claddaghbaltimore.com/weekly-specials/",
           "food_categories": [
-            "wings"
+            "wings",
+            "seafood/crab"
           ],
-          "verified_date": "2026-08-05"
+          "verified_date": "2026-09-05"
         }
       ],
       "lat": 39.280555,
       "lon": -76.574829,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
-      "phone": "(410) 522-4220",
-      "source_url": "https://claddaghbaltimore.com/",
-      "bar_hours": "Mon–Fri 10:45am–2am · Sat & Sun 9am–2am",
-      "notes_public": "All prices are subject to change without notice."
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "walts-inn",

@@ -2,5 +2,10 @@
   "buildCommand": "node scripts/build-static.mjs",
   "outputDirectory": "dist",
   "framework": null,
-  "installCommand": null
+  "git": {
+    "deploymentEnabled": false
+  },
+  "github": {
+    "silent": true
+  }
 }

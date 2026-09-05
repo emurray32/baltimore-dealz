@@ -1073,15 +1073,14 @@
       "id": "silks",
       "name": "Silks",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2641 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 708-0317",
       "source_url": "https://www.instagram.com/silkscanton/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-08-03",
+      "last_verified": "2026-09-05",
       "notes_public": "Soccer matchday pricing: $15 buckets, $3 Ultra drafts, $4 Stella, $5 NUTRLs.",
-      "ops_notes": "Matchday pricing is tied to match days, not a fixed weekday, so it is never a deal row. The second published hours set is carryout/delivery, not bar hours.",
+      "ops_notes": "Deal Scout 2026-09-05: IG meta description \"#SilksHappyHour M-F 4-7 $2 domestics, $3 House Wines & Rail drinks & $2 off all craft draft\". Matchday pricing still not a weekday deal row. Script path: curl profile → name=description.",
       "deals": [
         {
           "days": [
@@ -1101,23 +1100,29 @@
               "price": "$3"
             },
             {
-              "text": "$3 Rail",
+              "text": "$3 Rail drinks",
               "price": "$3"
+            },
+            {
+              "text": "$2 off all craft draft",
+              "price": "$2 off"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
+          "verified_date": "2026-09-05",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "#SilksHappyHour M-F 4-7 $2 domestics, $3 House Wines & Rail drinks & $2 off all craft draft",
+          "source_url": "https://www.instagram.com/silkscanton/"
         }
       ],
       "lat": 39.281928,
       "lon": -76.578509,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "the-dive",

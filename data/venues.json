@@ -921,14 +921,13 @@
       "id": "good-vibes-cantina",
       "name": "Good Vibes Cantina",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2903 O'Donnell St, Baltimore, MD 21224",
       "phone": "(443) 449-5410",
       "source_url": "https://www.instagram.com/goodvibescantina/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Happy hour held: bio says 3-7pm, posts say 4-8pm; days agree Sun-Fri. Occupies the former Tavern on the Square address.",
+      "last_verified": "2026-09-05",
+      "ops_notes": "Deal Scout 2026-09-05 script: IG meta description Happy Hour Sunday - Friday 3-7pm. Prior held priced HH drinks and Thu/Fri food specials not in bio — dropped pending post captions. Occupies former Tavern on the Square.",
       "deals": [
         {
           "days": [
@@ -941,74 +940,25 @@
           ],
           "items": [
             {
-              "text": "$7 Margaritas",
-              "price": "$7"
-            },
-            {
-              "text": "$7 Sangria",
-              "price": "$7"
-            },
-            {
-              "text": "$7 Orange Crush",
-              "price": "$7"
-            },
-            {
-              "text": "$5 Sour Bombs",
-              "price": "$5"
+              "text": "Happy Hour"
             }
           ],
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "status": "held",
+          "prices_published": false,
+          "verified_date": "2026-09-05",
           "food_categories": [
             "drink"
-          ]
-        },
-        {
-          "days": [
-            "thu"
           ],
-          "items": [
-            {
-              "text": "Fajitas Crazy Hour — $16 chicken or steak",
-              "price": "$16"
-            },
-            {
-              "text": "$5 Espolon/Milagro shots",
-              "price": "$5"
-            }
-          ],
-          "start": 1260,
-          "end": 1320,
-          "time_window": "9pm-10pm",
-          "food_categories": [
-            "fajitas"
-          ],
-          "verified_date": "2026-08-03"
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Cantina Pizza Birria with 8oz consomé — $15",
-              "price": "$15"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "food_categories": [
-            "pizza"
-          ],
-          "verified_date": "2026-08-03"
+          "proof_quote": "Happy Hour Sunday - Friday 3-7pm",
+          "source_url": "https://www.instagram.com/goodvibescantina/"
         }
       ],
       "lat": 39.279871,
       "lon": -76.575167,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "union-hill-kitchen",

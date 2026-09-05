@@ -2951,15 +2951,14 @@
       "id": "the-point-in-fells",
       "name": "The Point in Fells",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1738 Thames St, Baltimore, MD 21231",
       "phone": "(410) 327-7264",
       "source_url": "https://www.thepointfells.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-11",
+      "last_verified": "2026-09-05",
       "notes_public": "Happy hour days and times are published by the venue; their prices appear only in images we do not read.",
-      "ops_notes": "CoS 2026-08-06 hold: official HH page text has zero $ amounts (hours only). Flyer PNG prices not shipable as readable text. 'Friday all-day happy hour' is Instagram caption alt text for a one-off DJ promo (TGIFF), not a standing weekly schedule. Real domain is thepointfells.com (no 'in') — thepointinfells.com is cert-invalid. Quiet group until prices appear in page text. Closed Tue per bar hours. | 2026-08-11 (CoS): unheld under Eric's decision to show times-only happy hours. Days/times re-read from thepointfells.com/happy-hour: \"MON | WED | THUR 4-7PM\" and \"FRIDAY | ALL DAY HAPPY HOUR!\". **The 2026-08-06 note above says the Friday line is Instagram caption ALT TEXT for a one-off DJ promo. I checked that specifically and it no longer holds:** in today's raw HTML the Friday line is a Squarespace text block — literally <p style=\"white-space:pre-wrap;\">FRIDAY |  ALL DAY HAPPY HOUR! </p> — on the venue's own happy-hour page, sitting in the same block sequence as the MON|WED|THUR line. Tag-stripped extraction cannot surface alt text, so this is page copy. Friday therefore ships with NO clock (start/end null): the venue states only \"all day\", and its 11am open is NOT used to invent one. NO TUESDAY — they are closed. Prices still exist only inside flyer images, so none are recorded.",
+      "ops_notes": "Deal Scout 2026-09-05 curl: MON|WED|THUR 4-7PM and FRIDAY ALL DAY HAPPY HOUR still page text. No prices. Hours snippet Mon&Fri 11AM-1:45AM; Wed&Thur 4PM-1:45AM (closed Tue).",
       "deal_format": "image",
       "deals": [
         {
@@ -2978,7 +2977,8 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-11"
+          "verified_date": "2026-09-05",
+          "proof_quote": "MON | WED | THUR 4-7PM"
         },
         {
           "days": [
@@ -2994,12 +2994,13 @@
           "time_window": "all day",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-11"
+          "verified_date": "2026-09-05",
+          "proof_quote": "FRIDAY | ALL DAY HAPPY HOUR!"
         }
       ],
       "lat": 39.2821,
       "lon": -76.591346,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "thames-street-oyster-house",

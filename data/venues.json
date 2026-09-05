@@ -1211,65 +1211,17 @@
       "id": "pig-and-rooster-smokehouse",
       "name": "Pig & Rooster Smokehouse",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "3242 Foster Ave, Baltimore, MD 21224",
       "source_url": "https://www.instagram.com/pigandroosterbaltimore/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-08-03",
-      "ops_notes": "No phone published anywhere official — a real, verified absence. The burger row is held: its source line reads \"$5 BURGER OF THE DAY! $7! ...\", carrying two prices with no way to tell which a customer pays, and stating no days. One-off dated events and a Wednesday chair-massage offer are not recorded.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "$3 Dos Equis Drafts",
-              "price": "$3"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all day",
-          "food_categories": [
-            "drink"
-          ],
-          "verified_date": "2026-08-03"
-        },
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "$5 Burger of the Day (rotating)",
-              "price": "$5"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "status": "held",
-          "food_categories": [
-            "burger"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-05",
+      "notes_public": "No specials we can verify with prices from an official source this pass.",
+      "ops_notes": "Deal Scout 2026-09-05: IG meta description \"neighborhood corner bar known for Detroit-style pizza, cold Dos Equis on draft…\" — no dollar amounts. Prior $3 Dos Equis / held burger removed. No phone on profile.",
+      "deals": [],
       "lat": 39.284657,
       "lon": -76.569996,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "lees-pint-and-shell",

@@ -6,15 +6,14 @@
       "id": "hucks-american-craft",
       "name": "Huck's American Craft",
       "neighborhood": "Brewers Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "3728 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 438-3380",
       "source_url": "https://www.hucksamericancraft.com/#dailyspecials-section",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
+      "last_verified": "2026-09-05",
       "notes_public": "UGA game-day specials — ask at the bar.",
-      "ops_notes": "UGA game-day specials confirmed on site at /#ugagameday-section (Deal Scout 2026-08-05) — prices not yet on the board. Site typo: Spin the Wheel reads \"1opm-Close\" with a letter o, meaning 10pm. Publishes kitchen hours only, never bar hours. Deep-link source is #dailyspecials-section, not the homepage.",
+      "ops_notes": "Deal Scout 2026-09-05 curl re-verify of homepage DAILY SPECIALS. Unchanged. Site typo Spin the Wheel \"1opm-Close\" = 10pm. Kitchen hours only. UGA Game Day block priced on site ($5 Terrapin / $6 Georgia Mules / $7 Bulldog Bombs / $10 Wings / $9 Potato Skins / $8 Buffalo Chicken Dip) but matchday-only — not weekly deal rows. Deep-link #dailyspecials-section.",
       "deals": [
         {
           "days": [
@@ -36,7 +35,8 @@
           "food_categories": [
             "pretzel"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "MONDAY $10 Pretzel Pies $5 Glasses of Wine"
         },
         {
           "days": [
@@ -53,7 +53,8 @@
           "food_categories": [
             "event"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "Industry Night 7- Close"
         },
         {
           "days": [
@@ -75,7 +76,8 @@
           "food_categories": [
             "burger"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "TUESDAY $10 Burger and Fries $5 Draft Beers"
         },
         {
           "days": [
@@ -92,7 +94,8 @@
           "food_categories": [
             "event"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "WEDNESDAY Quizamajig Trivia at 7pm"
         },
         {
           "days": [
@@ -114,7 +117,8 @@
           "food_categories": [
             "wings"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "$10 Wings $5 Whiskey (Bartender's Choice)"
         },
         {
           "days": [
@@ -140,7 +144,8 @@
           "food_categories": [
             "pasta/comfort"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "THURSDAY $8 Build-Your-Own Mac n' Cheese $7 Craft Cocktails $3 Seltzers & Domestics"
         },
         {
           "days": [
@@ -158,7 +163,8 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "FRIDAY Free Beer When You Buy Lunch 11am-3pm"
         },
         {
           "days": [
@@ -177,7 +183,8 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "$7 Nightcaps 11pm-Close"
         },
         {
           "days": [
@@ -199,7 +206,8 @@
           "food_categories": [
             "brunch"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "Brunch from 10am-2pm • $6 Brunch Drinks"
         },
         {
           "days": [
@@ -216,7 +224,8 @@
           "food_categories": [
             "event"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "Spin the Wheel 1opm-Close"
         },
         {
           "days": [
@@ -234,7 +243,8 @@
           "food_categories": [
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "$10 Cheesesteaks 2pm-10pm"
         },
         {
           "days": [
@@ -252,12 +262,13 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "$5 Deep Eddys 2pm-Close"
         }
       ],
       "lat": 39.282825,
       "lon": -76.565134,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "smaltimore",

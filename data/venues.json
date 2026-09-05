@@ -263,14 +263,13 @@
       "id": "smaltimore",
       "name": "Smaltimore",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2522 Fait Ave, Baltimore, MD 21224",
       "phone": "(410) 522-1421",
       "source_url": "http://www.smaltimoremd.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Invalid TLS cert — a crawler must skip the cert check for this domain.",
+      "last_verified": "2026-09-05",
+      "ops_notes": "Invalid TLS on https — use http or skip cert. Deal Scout 2026-09-05: WEEKLY SPECIALS unchanged. Mon ALL NIGHT HAPPY HOUR + Sat/Sun Bottomless Brunch 10am-1pm still no $. Site typo Maragaritas.",
       "deals": [
         {
           "days": [
@@ -302,10 +301,11 @@
           "end": 1140,
           "time_window": "until 7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
+          "verified_date": "2026-09-05",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy Hour Monday- Friday until 7pm / $6 House Wine $6 Select drafts $6 Four Walls $6 Jameson"
         },
         {
           "days": [
@@ -335,7 +335,8 @@
           "food_categories": [
             "tacos"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05",
+          "proof_quote": "TUESDAY -Tequila & Taco Night -$11 Chicken & Beef Tacos -$13 Steak Tacos -$6 Modelo & $7 Maragaritas"
         },
         {
           "days": [
@@ -361,7 +362,8 @@
           "food_categories": [
             "sushi"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05",
+          "proof_quote": "WEDNESDAY Sushi Night -BOGO Sushi Rolls (equal or lesser value) -$10 Sushi bowls and sushi burritos -$6 Sapporo Drafts"
         },
         {
           "days": [
@@ -387,7 +389,8 @@
           "food_categories": [
             "burger"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05",
+          "proof_quote": "THURSDAY Burger Night -$2 Off Signature Burgers -$1/2 Off Bottles of Wine -$7 Mules"
         },
         {
           "days": [
@@ -404,8 +407,8 @@
           "prices_published": false,
           "time_window": "all night",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "proof_quote": "MONDAY — ALL NIGHT HAPPY HOUR",
+          "verified_date": "2026-09-05",
+          "proof_quote": "MONDAY -ALL NIGHT HAPPY HOUR",
           "food_categories": [
             "drink"
           ]
@@ -425,8 +428,8 @@
           "status": "held",
           "prices_published": false,
           "time_window": "10am-1pm",
-          "verified_date": "2026-08-06",
-          "proof_quote": "Bottomless Brunch 10am-1pm",
+          "verified_date": "2026-09-05",
+          "proof_quote": "SATURDAY & SUNDAY Bottomless Brunch 10am-1pm",
           "food_categories": [
             "brunch"
           ]
@@ -434,7 +437,7 @@
       ],
       "lat": 39.283232,
       "lon": -76.58045,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "el-bufalo",
@@ -8594,7 +8597,7 @@
         }
       ],
       "lat": 39.331849,
-      "lon": -76.640820,
+      "lon": -76.64082,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
     },
     {
@@ -14543,6 +14546,5 @@
       "lon": -76.6453407,
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
     }
-
   ]
 }

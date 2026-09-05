@@ -2621,14 +2621,13 @@
       "id": "alexanders-tavern-fells",
       "name": "Alexander's Tavern (Fells Point)",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "710 S. Broadway, Baltimore, MD 21231",
       "phone": "(410) 522-0000",
       "source_url": "https://www.alexanderstavern.com/fellspoint",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Website-text specials page. Happy hour Tue–Thu 3–6; Friday is published as all-day HH until 6pm — shipped as a separate Fri row so we do not invent a 3pm Friday start. Brunch drinks are weekends until 3pm. Hours: Sun–Thu 11–10, Fri–Sat 11–12.",
+      "last_verified": "2026-09-05",
+      "ops_notes": "Deal Scout 2026-09-05 curl of fellspoint page. Daily specials unchanged. HH header TUE-FRI 3PM-6PM; Fri also ALL DAY until 6pm.",
       "deals": [
         {
           "days": [
@@ -2714,14 +2713,15 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-05",
           "source_url": "https://www.alexanderstavern.com/fellspoint",
           "food_categories": [
             "small-plate/apps",
             "pretzel",
             "pasta/comfort",
             "drink"
-          ]
+          ],
+          "proof_quote": "HAPPY HOUR TUE-FRI 3PM-6PM"
         },
         {
           "days": [
@@ -2805,14 +2805,15 @@
           "end": 1080,
           "time_window": "all day until 6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-05",
           "source_url": "https://www.alexanderstavern.com/fellspoint",
           "food_categories": [
             "small-plate/apps",
             "pretzel",
             "pasta/comfort",
             "drink"
-          ]
+          ],
+          "proof_quote": "FRIDAY • ALL DAY HAPPY HOUR • Happy Hour Food & Drink Specials Until 6pm"
         },
         {
           "days": [
@@ -2838,7 +2839,7 @@
           "food_categories": [
             "burger"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -2864,7 +2865,7 @@
           "food_categories": [
             "small-plate/apps"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -2890,7 +2891,7 @@
           "food_categories": [
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -2916,7 +2917,7 @@
           "food_categories": [
             "pizza"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05"
         },
         {
           "days": [
@@ -2939,12 +2940,12 @@
           "food_categories": [
             "brunch"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-05"
         }
       ],
       "lat": 39.283163,
       "lon": -76.593746,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "the-point-in-fells",

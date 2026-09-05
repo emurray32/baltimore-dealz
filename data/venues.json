@@ -525,15 +525,14 @@
       "id": "mamas-on-the-half-shell",
       "name": "Mama's on the Half Shell",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2901 O'Donnell St, Baltimore, MD 21224",
       "phone": "410.276.3160",
       "source_url": "https://www.mamasonthehalfshell.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
+      "last_verified": "2026-09-05",
       "notes_public": "Happy hour is 1st floor, indoors only.",
-      "ops_notes": "Website/Instagram Monday conflict. mamasmd.com is the wrong domain; the official site is mamasonthehalfshell.com.",
+      "ops_notes": "Deal Scout 2026-09-05 curl: homepage shows Mondays ALL DAY HAPPY HOUR & Crab Cake Special $30. Bottomless Brunch + HH 3-6 times on page without drink $. Prior Wed mussels/$6 crushes not on homepage this pass — removed until re-sourced. Prior $18 bottomless from IG not on homepage — brunch held without $.",
       "deals": [
         {
           "days": [
@@ -542,40 +541,19 @@
           "items": [
             {
               "text": "Happy Hour ALL DAY"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all day",
-          "happy_hour": true,
-          "prices_published": false,
-          "status": "held",
-          "source_url": "https://www.instagram.com/mamasonthehalfshell/",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "1/2 Off Mussels",
-              "price": "1/2 off"
             },
             {
-              "text": "$6 Classic Crushes",
-              "price": "$6"
+              "text": "Crab Cake Special: Crab Cake, Side, & Dessert $30",
+              "price": "$30"
             }
           ],
           "start": null,
           "end": null,
           "time_window": "all day",
           "happy_hour": true,
-          "verified_date": "2026-08-10",
+          "verified_date": "2026-09-05",
           "source_url": "https://www.mamasonthehalfshell.com/",
-          "proof_quote": "Wednesdays: 1/2 OFF Mussels & $6 Classic Crushes",
+          "proof_quote": "Mondays: ALL DAY HAPPY HOUR & Crab Cake Special: Crab Cake, Side, & Dessert, all for $30!",
           "food_categories": [
             "seafood/crab",
             "drink"
@@ -589,25 +567,24 @@
           "items": [
             {
               "text": "Bottomless Brunch"
-            },
-            {
-              "text": "$18 Bottomless Mimosas & Bloodys",
-              "price": "$18"
             }
           ],
           "start": 540,
           "end": 900,
           "time_window": "9am-3pm",
-          "source_url": "https://www.instagram.com/mamasonthehalfshell/",
+          "prices_published": false,
+          "status": "held",
+          "verified_date": "2026-09-05",
+          "source_url": "https://www.mamasonthehalfshell.com/",
+          "proof_quote": "Bottomless Brunch: 9am – 3pm",
           "food_categories": [
             "brunch"
-          ],
-          "verified_date": "2026-08-03"
+          ]
         }
       ],
       "lat": 39.279868,
       "lon": -76.575259,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "hudson-street-stackhouse",

@@ -881,14 +881,13 @@
       "id": "cowboy-row",
       "name": "Cowboy Row Saloon & Chophouse",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2908 O'Donnell St, Baltimore, MD 21224",
       "phone": "443-602-7450",
       "source_url": "https://www.cowboyrowbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Happy hour NOT VERIFIED from official source — aggregators claim one, their own site does not publish it.",
+      "last_verified": "2026-09-05",
+      "ops_notes": "Deal Scout 2026-09-05: karaoke Wed-Sat 9pm-close + $20 bottomless brunch Sat-Sun 11-3 on site. Wings 1/2 not on site — dropped pending IG. Happy hour still not on official site.",
       "deals": [
         {
           "days": [
@@ -909,25 +908,8 @@
           "food_categories": [
             "event"
           ],
-          "verified_date": "2026-08-03"
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "1/2 price smoked wings",
-              "price": "1/2 price"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "source_url": "https://www.instagram.com/cowboyrow/",
-          "food_categories": [
-            "wings"
-          ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "Wednesday - Saturday: 9pm - Close"
         },
         {
           "days": [
@@ -950,12 +932,13 @@
           "food_categories": [
             "brunch"
           ],
-          "verified_date": "2026-08-03"
+          "verified_date": "2026-09-05",
+          "proof_quote": "$20 Bottomless Mimosas, Bloody Mary's and Cowboy Juice Saturday: 11:00am - 3:00pm Sunday: 11:00am - 3:00pm"
         }
       ],
       "lat": 39.28055,
       "lon": -76.575099,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "good-vibes-cantina",

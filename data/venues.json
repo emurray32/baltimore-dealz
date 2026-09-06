@@ -590,14 +590,16 @@
       "id": "hudson-street-stackhouse",
       "name": "Hudson Street Stackhouse",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2626 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 342-0592",
+      "lat": 39.282206,
+      "lon": -76.578918,
       "source_url": "https://hudsonstreetstackhouse.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-11",
-      "ops_notes": "Happy hour times come from the homepage (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5) — not /weekly-food-specials/. That specials page is the wrong source for happy hour (it does not publish the HH windows) and is dated April 21, 2019 — seven years stale. Do not ship those prices as current (Wing Night $10, Burger Night $8, Seafood Night $15.99). Do not re-point source_url at /weekly-food-specials/. Re-verify before any prices ship (Deal Scout 2026-08-05; Lead 2026-08-06). 2026-08-11 (CoS): happy-hour windows re-read live from the homepage and unchanged (Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5). Unheld under Eric's 2026-08-11 decision to show times-only happy hours. Still NO prices: the only priced page remains dated April 2019 — do not ship it.",
+      "last_verified": "2026-09-06",
+      "notes_public": "Happy hour times are published by the venue, but no prices are currently listed by the venue.",
+      "ops_notes": "Deal Scout 2026-09-06 curl homepage: HH Mon-Thu 3-7, Fri 2-7, Sat-Sun 11-5 unchanged. No prices. Do not use /weekly-food-specials/.",
       "bar_hours": "To 2am (published by the venue as \"Bar Hours\")",
       "deals": [
         {
@@ -617,8 +619,8 @@
           "prices_published": false,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-11",
-          "proof_quote": "Monday - Thursday → 3pm - 7pm",
+          "verified_date": "2026-09-06",
+          "proof_quote": "Monday - Thursday 3pm - 7pm",
           "food_categories": [
             "drink"
           ]
@@ -637,8 +639,8 @@
           "prices_published": false,
           "time_window": "2pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-11",
-          "proof_quote": "Friday → 2pm - 7pm",
+          "verified_date": "2026-09-06",
+          "proof_quote": "Friday 2pm - 7pm",
           "food_categories": [
             "drink"
           ]
@@ -658,17 +660,14 @@
           "prices_published": false,
           "time_window": "11am-5pm",
           "happy_hour": true,
-          "verified_date": "2026-08-11",
-          "proof_quote": "Saturday / Sunday → 11am - 5pm",
+          "verified_date": "2026-09-06",
+          "proof_quote": "Saturday / Sunday 11am - 5pm",
           "food_categories": [
             "drink"
           ]
         }
       ],
-      "lat": 39.282206,
-      "lon": -76.578918,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
-      "notes_public": "Happy hour times are published by the venue, but no prices are currently listed by the venue."
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "ellies-tavern",
@@ -710,14 +709,15 @@
       "id": "mahaffeys-pub",
       "name": "Mahaffey's Pub",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2706 Dillon St, Baltimore, MD 21224",
       "phone": "410-276-9899",
       "source_url": "https://media-cdn.getbento.com/accounts/bdbbb522f0c1eb593db882304d803882/media/CmU9z2mjTBi0Eht6gKaY_Weekly%20Specials.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Manual entry only, permanently — the two-column PDF flyer misaligns days and offers on text extraction. mahaffeyspub.com is a 2-hop redirect chain. Deep-link source is the GetBento flyer PDF (Deal Scout 2026-08-05). Flyer also mentions \"Ask About 3fers\" and \"Late Night Happy Hour\" with no times or prices, so neither is recorded.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06: Weekly Specials PDF re-fetched. Unchanged. Manual entry only. Sunday Sliders/Industry Night held.",
+      "lat": 39.281303,
+      "lon": -76.578022,
       "deals": [
         {
           "days": [
@@ -742,7 +742,7 @@
           "food_categories": [
             "small-plate/apps"
           ],
-          "verified_date": "2026-08-07"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -766,7 +766,7 @@
           "food_categories": [
             "tacos"
           ],
-          "verified_date": "2026-08-07"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -787,7 +787,7 @@
           "food_categories": [
             "wings"
           ],
-          "verified_date": "2026-08-07"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -807,7 +807,7 @@
           "food_categories": [
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-07"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -825,7 +825,7 @@
           "food_categories": [
             "sandwich/cheesesteak"
           ],
-          "verified_date": "2026-08-07"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -843,16 +843,14 @@
           "end": null,
           "status": "held",
           "prices_published": false,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-06",
           "proof_quote": "Sliders — Industry Night",
           "food_categories": [
             "sliders"
           ]
         }
       ],
-      "lat": 39.281303,
-      "lon": -76.578022,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "cowboy-row",
@@ -964,14 +962,15 @@
       "id": "union-hill-kitchen",
       "name": "Union Hill Kitchen & Craft Bar",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "938 S Conkling St, Baltimore, MD 21224",
       "phone": "(667) 260-2151",
       "source_url": "https://www.unionhillbal.com/page/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Self-describes \"Where Brewers Hill gathers\"; the city polygon says Canton. Site 403s plain requests but serves browsers. Happy hour ships Block A from /page/happy-hour (under HAPPY HOUR heading): wines by the glass, includes seltzers, 1/2 OFF oysters. Block B condensed wording on the same page is secondary only. Mon–Fri on the board is our ordinary reading of the venue's published \"Weekdays\" — the happy-hour page does not name specific days.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06 curl /page/happy-hour. Unchanged Weekdays 3–6:30pm.",
+      "lat": 39.281708,
+      "lon": -76.567137,
       "deals": [
         {
           "days": [
@@ -1007,17 +1006,15 @@
           "end": 1110,
           "time_window": "3pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.unionhillbal.com/page/happy-hour",
-          "proof_quote": "Weekdays from 3:00pm - 6:30pm. $2 OFF small plates and flatbreads. $2 OFF all cocktails. $2 OFF all wines by the glass. $2 OFF draft and bottled beers, seltzers and ciders. 1/2 OFF raw oysters",
+          "proof_quote": "Weekdays 3–6:30pm $2 off all cocktails, wine, draft and bottled beers and ciders $2 off all Small plates and flatbreads 1/2 priced raw oysters",
           "food_categories": [
             "small-plate/apps"
           ]
         }
       ],
-      "lat": 39.281708,
-      "lon": -76.567137,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "silks",
@@ -1078,106 +1075,17 @@
       "id": "the-dive",
       "name": "The Dive",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "3123 Elliott Street, Baltimore, MD 21224",
       "phone": "(667) 309-7499",
-      "source_url": "https://thedivebaltimore.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-08-03",
-      "notes_public": "Kitchen open until midnight every night. Closed Sundays — their site says Sunday hours may begin September 13.",
-      "ops_notes": "Flyer content dated Oct 2024; early re-check flag. The Monday burger is in their newer site text but not on the flyer.",
-      "bar_hours": "Mon-Sat 4pm-1am (kitchen until 12am)",
+      "source_url": "https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/",
+      "source_type": "instagram",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06: IG @thedivebaltimore “that 70’s hour” graphic (post Dc4CvyJJXK5). Website has no priced weekly list. Cleared stale day-of-week specials from Past Specials highlight.",
+      "notes_public": "Happy hour (“that 70’s hour”) published on Instagram; Friday daytime window is new.",
+      "lat": 39.27912,
+      "lon": -76.571671,
       "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "$5.25 Drafts",
-              "price": "$5.25"
-            },
-            {
-              "text": "$10.50 Wings",
-              "price": "$10.50"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "food_categories": [
-            "wings"
-          ],
-          "verified_date": "2026-08-06"
-        },
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "Single patty burger w/ fries $11.99 (toppings change weekly, Monday only)",
-              "price": "$11.99"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "food_categories": [
-            "burger"
-          ],
-          "verified_date": "2026-08-06"
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Bmore Trivia — win a $50 gift card"
-            }
-          ],
-          "start": 1170,
-          "end": 1290,
-          "time_window": "7:30pm-9:30pm",
-          "food_categories": [
-            "event"
-          ],
-          "verified_date": "2026-08-06"
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "$10.50 Wings & extra flavors",
-              "price": "$10.50"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "food_categories": [
-            "wings"
-          ],
-          "verified_date": "2026-08-06"
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "$8.40 Espresso Martinis",
-              "price": "$8.40"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "food_categories": [
-            "drink"
-          ],
-          "verified_date": "2026-08-06"
-        },
         {
           "days": [
             "mon",
@@ -1187,25 +1095,96 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "$7.97 pinball wizard",
+              "price": "$7.97"
+            },
+            {
+              "text": "$5.51 Coors Banquet 24 oz cans",
+              "price": "$5.51"
+            },
+            {
+              "text": "$5.25 Victory Prima Pils",
+              "price": "$5.25"
+            },
+            {
+              "text": "$6.26 sportsman",
+              "price": "$6.26"
+            },
+            {
+              "text": "$7.99 royale w/cheese, ketchup & mustard (w/ fries)",
+              "price": "$7.99"
+            },
+            {
+              "text": "$7.99 miss chicken w/mayo & lettuce (w/ fries)",
+              "price": "$7.99"
+            },
+            {
+              "text": "$9.99 cheese pizza",
+              "price": "$9.99"
             }
           ],
           "start": 960,
           "end": 1080,
-          "status": "held",
-          "prices_published": false,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-03",
-          "proof_quote": "HH mon-thurs 4-6pm",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/",
           "food_categories": [
-            "drink"
-          ]
+            "drink",
+            "burger",
+            "pizza"
+          ],
+          "proof_quote": "that 70’s hour — Mon–Thu 4–6pm, Friday 11am–4pm; caption: New happy hour specials, also on Friday day time now too!"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$7.97 pinball wizard",
+              "price": "$7.97"
+            },
+            {
+              "text": "$5.51 Coors Banquet 24 oz cans",
+              "price": "$5.51"
+            },
+            {
+              "text": "$5.25 Victory Prima Pils",
+              "price": "$5.25"
+            },
+            {
+              "text": "$6.26 sportsman",
+              "price": "$6.26"
+            },
+            {
+              "text": "$7.99 royale w/cheese, ketchup & mustard (w/ fries)",
+              "price": "$7.99"
+            },
+            {
+              "text": "$7.99 miss chicken w/mayo & lettuce (w/ fries)",
+              "price": "$7.99"
+            },
+            {
+              "text": "$9.99 cheese pizza",
+              "price": "$9.99"
+            }
+          ],
+          "start": 660,
+          "end": 960,
+          "time_window": "11am-4pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/",
+          "food_categories": [
+            "drink",
+            "burger",
+            "pizza"
+          ],
+          "proof_quote": "that 70’s hour — Mon–Thu 4–6pm, Friday 11am–4pm; caption: New happy hour specials, also on Friday day time now too!"
         }
       ],
-      "lat": 39.27912,
-      "lon": -76.571671,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "pig-and-rooster-smokehouse",
@@ -3275,14 +3254,15 @@
       "id": "homeslyce-canton",
       "name": "HomeSlyce Canton",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "900 S Kenwood Ave, Baltimore, MD 21224",
       "phone": "(443) 501-4000",
       "source_url": "https://homeslyce.com/specials/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Specials page is chain-wide; Canton listed open on locations page. HH Mon-Fri 3-6 from homeslyce.com/specials. Weekly pizza specials also on specials page. CCE trivia Thu 7:30 not in this load (trivia package separate). Deal Scout TWENTY_FIVE 2026-08-06.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06 curl homeslyce.com/specials. Unchanged. Chain-wide; Canton open.",
+      "lat": 39.282029,
+      "lon": -76.577198,
       "deals": [
         {
           "days": [
@@ -3306,12 +3286,13 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-06",
           "source_url": "https://homeslyce.com/specials/",
           "food_categories": [
             "drink",
             "wings"
-          ]
+          ],
+          "proof_quote": "$3 OFF Wings, Tenders & Chicken Quesadillas – $5 Wines & Craft Beers – Monday through Friday 3pm to 6pm"
         },
         {
           "days": [
@@ -3330,7 +3311,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -3349,7 +3330,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -3368,7 +3349,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-06"
         },
         {
           "days": [
@@ -3388,12 +3369,11 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-06",
+          "proof_quote": "12” Premium Pizza & 6 Wings – $25 / 16″ Premium Pizza & 6 Wings – $35"
         }
       ],
-      "lat": 39.282029,
-      "lon": -76.577198,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "maxs-taphouse",
@@ -4254,17 +4234,19 @@
       "id": "papis-taco-joint-fells",
       "name": "Papi's Taco Joint (Fells Point)",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1703 Aliceanna Street, Baltimore, MD 21231",
       "phone": "(443) 438-9144",
       "source_url": "https://papistacojoint.com/fellspoint",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "CoS re-verified /fellspoint 2026-08-07 (root is brand shell only). HH Tue–Fri 3–6 tiers + daily specials. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06 curl fellspoint page. Lunazul labels → Tradicional. Added Power Hour 3–4pm weekdays.",
+      "lat": 39.283417,
+      "lon": -76.592883,
       "deals": [
         {
           "days": [
+            "mon",
             "tue",
             "wed",
             "thu",
@@ -4272,15 +4254,40 @@
           ],
           "items": [
             {
-              "text": "$5 Lunazul Blanco Shots · All Draft Beers",
+              "text": "2-for-1 rail drinks, drafts, bombs, and Deep Eddy & sodas",
+              "price": "2 for 1"
+            }
+          ],
+          "start": 900,
+          "end": 960,
+          "time_window": "3pm-4pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-06",
+          "source_url": "https://papistacojoint.com/fellspoint",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "POWER HOUR WEEKDAYS 3PM-4PM 2-FOR-1 RAIL DRINKS, DRAFTS, BOMBS, AND DEEP EDDY & SODAS"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 Tradicional Blanco Shots · All Draft Beers",
               "price": "$5"
             },
             {
-              "text": "$6 Lunazul Reposado · Yuca Frita",
+              "text": "$6 Tradicional Reposado Shots",
               "price": "$6"
             },
             {
-              "text": "$7 Lunazul Añejo · wine · house sangria · queso fundido · platanos",
+              "text": "$7 Tradicional Añejo · wine · house sangria · queso fundido · platanos",
               "price": "$7"
             },
             {
@@ -4296,14 +4303,15 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-06",
           "source_url": "https://papistacojoint.com/fellspoint",
           "food_categories": [
             "drink",
             "wings",
             "tacos",
             "small-plate/apps"
-          ]
+          ],
+          "proof_quote": "FIESTA HOUR WEEKDAYS 3PM-6PM"
         },
         {
           "days": [
@@ -4325,10 +4333,8 @@
           "start": null,
           "end": null,
           "time_window": "all day (enchiladas until 5pm)",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "verified_date": "2026-09-06",
           "food_categories": [
-            "tacos",
             "drink"
           ]
         },
@@ -4348,8 +4354,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "verified_date": "2026-09-06",
           "food_categories": [
             "tacos",
             "drink"
@@ -4365,23 +4370,20 @@
               "price": "$10"
             },
             {
-              "text": "$10 wings after 5",
+              "text": "$10 Papi's Wings after 5",
               "price": "$10"
             },
             {
-              "text": "$7 wine",
+              "text": "$7 glasses of wine",
               "price": "$7"
             }
           ],
           "start": null,
           "end": null,
           "time_window": "all day (burritos until 5pm; wings after 5pm)",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "verified_date": "2026-09-06",
           "food_categories": [
-            "tacos",
-            "wings",
-            "drink"
+            "wings"
           ]
         },
         {
@@ -4401,10 +4403,8 @@
           "start": null,
           "end": null,
           "time_window": "all day (quesadillas until 5pm)",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "verified_date": "2026-09-06",
           "food_categories": [
-            "tacos",
             "drink"
           ]
         },
@@ -4424,8 +4424,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "verified_date": "2026-09-06",
           "food_categories": [
             "fajitas",
             "drink"
@@ -4442,18 +4441,15 @@
             }
           ],
           "start": null,
-          "end": 1020,
-          "time_window": "until 5pm",
-          "verified_date": "2026-08-07",
-          "source_url": "https://papistacojoint.com/fellspoint",
+          "end": null,
+          "time_window": "all day (chimichangas until 5pm)",
+          "verified_date": "2026-09-06",
           "food_categories": [
             "tacos"
           ]
         }
       ],
-      "lat": 39.283417,
-      "lon": -76.592883,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "papis-taco-joint-hampden",
@@ -4714,14 +4710,15 @@
       "id": "todd-conners",
       "name": "Todd Conner's",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "700 S. Broadway, Baltimore, MD 21231",
       "phone": "(410) 537-5005",
-      "source_url": "https://www.toddconners.com/",
+      "source_url": "https://www.toddconners.com/#happyhourspecials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout + CoS 2026-08-07 (raw HTML Daily Specials in Beaver Builder hide-row). Ship Mon–Thu daily specials + brunch $4 drinks Sat/Sun/Mon 10am–2pm. Oriole game-day block NOT shipped (game-day contingent). Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06: toddconners.com Daily Specials + Brunch blocks re-verified. Prices unchanged.",
+      "lat": 39.283394,
+      "lon": -76.593719,
       "deals": [
         {
           "days": [
@@ -4736,11 +4733,12 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.toddconners.com/",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
           "food_categories": [
             "burger"
-          ]
+          ],
+          "proof_quote": "Monday $7 Build Your Own Burger"
         },
         {
           "days": [
@@ -4755,11 +4753,12 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.toddconners.com/",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Tuesday $16 lb 1 lb. of Shrimp"
         },
         {
           "days": [
@@ -4774,11 +4773,12 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.toddconners.com/",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
           "food_categories": [
-            "pasta/comfort"
-          ]
+            "small-plate/apps"
+          ],
+          "proof_quote": "Wednesday $6 Build Your Own Mac & Cheese"
         },
         {
           "days": [
@@ -4793,11 +4793,12 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.toddconners.com/",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Thursday 1/2 off Half Off Select Wine Bottles"
         },
         {
           "days": [
@@ -4822,17 +4823,54 @@
           "start": 600,
           "end": 840,
           "time_window": "10am-2pm",
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.toddconners.com/",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
           "food_categories": [
-            "brunch",
             "drink"
-          ]
+          ],
+          "proof_quote": "Sat/Sun/Mon Brunch 10 am - 2 pm $4 Mimosas, $4 Bloody Mary’s, and $4 Screwdrivers"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Natty Boh Draft $2 (Orioles games only)",
+              "price": "$2"
+            },
+            {
+              "text": "Devil’s Backbone Lager $4 (Orioles games only)",
+              "price": "$4"
+            },
+            {
+              "text": "Wings $8 btl (Orioles games only)",
+              "price": "$8"
+            },
+            {
+              "text": "(2) All Beef Hot Dogs w/Chips $6 (Orioles games only)",
+              "price": "$6"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "during Orioles games only",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.toddconners.com/#happyhourspecials",
+          "food_categories": [
+            "drink",
+            "wings"
+          ],
+          "proof_quote": "Oriole Game Specials … During O's games only!"
         }
       ],
-      "lat": 39.283394,
-      "lon": -76.593719,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "the-choptank",
@@ -8178,15 +8216,15 @@
       "id": "captain-james-landing",
       "name": "Captain James Landing",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "2127 Boston St, Baltimore, MD 21231",
       "phone": "(410) 327-8600",
       "source_url": "https://www.captainjameslanding.com/happenings/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
-      "notes_public": "Happy Hour at the Crab House is dine-in only, Monday–Friday 4–7pm.",
-      "ops_notes": "Builder 2026-08-19 off census + live event pages HTTP 200. Pin restaurant 2127 Boston St / (410) 327-8600 — not the crab house at 2121 Aliceanna / (410) 675-1819. Do not pin the crab house. Nominatim amenity 39.2840331,-76.5862367 neighbourhood=Canton. CityView Neighborhoods MapServer/0 query today on that point: Name=Canton. Weekday plates have no clock — start/end null, do not invent all day. Crab House HH 4PM-7PM Mon-Fri (Dine In only), no $ — prices_published false; do not invent IG $3 Natty / $4 Corona. All You Can Eat Crabs $48 two windows (12PM-4PM restaurant / 4PM-9PM crab house), no days — not shipped. Already in /canton. Do not fold the crab house into a new view.",
+      "last_verified": "2026-09-06",
+      "ops_notes": "Deal Scout 2026-09-06: event pages for Mon–Thu specials + HH + AYCE. Prices unchanged vs 2026-08-19. HH still no drink $ list.",
+      "lat": 39.2840331,
+      "lon": -76.5862367,
       "deals": [
         {
           "days": [
@@ -8200,12 +8238,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.captainjameslanding.com/event/monday-double-crab-cake-platter/",
-          "proof_quote": "Monday: Double Crab Cake Platter / Served with two sides $39.99",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Served with two sides $39.99"
         },
         {
           "days": [
@@ -8219,12 +8257,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.captainjameslanding.com/event/tuesday-poboys/",
-          "proof_quote": "Tuesday: POBOYS / Your choice of (Shrimp, Steak, or Fried Oysters) served with fries $12",
           "food_categories": [
             "sandwich/cheesesteak"
-          ]
+          ],
+          "proof_quote": "Your choice of (Shrimp, Steak, or Fried Oysters) served with fries $12"
         },
         {
           "days": [
@@ -8238,12 +8276,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.captainjameslanding.com/event/wednesday-lobster-roll/",
-          "proof_quote": "Wednesday: Lobster Roll / Served with homemade chips $25.00",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Served with homemade chips $25.00"
         },
         {
           "days": [
@@ -8257,12 +8295,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.captainjameslanding.com/event/thursday-whole-fish/",
-          "proof_quote": "Thursday: Whole Fish / Served with rice $32.00",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Served with rice $32.00"
         },
         {
           "days": [
@@ -8282,17 +8320,41 @@
           "time_window": "4pm-7pm",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-06",
           "source_url": "https://www.captainjameslanding.com/event/happy-hour-at-the-crab-house/",
-          "proof_quote": "Happy Hour at the Crab House / 4PM -7PM Monday - Friday (Dine In only)",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "4PM -7PM Monday - Friday"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "All You Can Eat Crabs $48/person (2 hours; location windows vary)",
+              "price": "$48"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "see venue (Restaurant 12–4 / Crab House 4–9)",
+          "verified_date": "2026-09-06",
+          "source_url": "https://www.captainjameslanding.com/event/all-you-can-eat-crabs/",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "Restaurant Location: 2 hours 12PM-4PM $48 per person … Crab House Location: 2 hours 4PM-9PM $48 per person"
         }
       ],
-      "lat": 39.2840331,
-      "lon": -76.5862367,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "berthas-soul-food",

@@ -670,14 +670,15 @@
       "id": "ellies-tavern",
       "name": "Ellie's Tavern",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "901 S Clinton St, Baltimore, MD 21224",
       "phone": "(443) 708-3774",
       "source_url": "https://www.instagram.com/elliestaverncanton/",
-      "source_type": "instagram_profile",
-      "last_verified": "2026-08-03",
-      "ops_notes": "Website is elliestavernbmore.com and publishes no specials; the trivia deal comes from the Instagram profile, which is why that is the source URL.",
+      "source_type": "instagram",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: IG bio empty via script; trivia held as event-only.",
+      "lat": 39.282334,
+      "lon": -76.56954,
       "deals": [
         {
           "days": [
@@ -691,16 +692,16 @@
           "start": 1200,
           "end": null,
           "time_window": "8pm",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.instagram.com/elliestaverncanton/",
           "food_categories": [
             "event"
           ],
-          "verified_date": "2026-08-03"
+          "prices_published": false,
+          "proof_quote": "Trivia Night (prior listing; no priced specials verified 2026-09-07)"
         }
       ],
-      "lat": 39.282334,
-      "lon": -76.56954,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "mahaffeys-pub",
@@ -3873,14 +3874,15 @@
       "id": "bark-social-canton",
       "name": "Bark Social Canton",
       "neighborhood": "Brewers Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "3822 Boston St, Baltimore, MD 21224",
+      "phone": null,
       "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
-      "notes_public": "Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass — club $45/month or $385/year; weekday day pass $12, weekend $15. Register the dog before you arrive. No Saturday or Sunday specials on the happy hour menu.",
-      "ops_notes": "Deal Scout 2026-08-19. Official Baltimore HH page HTTP 200: https://barksocial.com/pages/baltimore-happy-hour — Unleashed Mondays / Twofer Tuesdays / Wine Wednesdays / Thirsty Thursdays / Frozen Fridays, each 3–7pm. No Sat/Sun row. Prior 2026-08-06 note (HH only on IG) is superseded. Canton already well covered; this is an empty-venue fill, not a Canton flood. Deal Scout 2026-08-19 review fix: stored point 39.278045,-76.562874 → City NSA MapServer/0 Name=Brewers Hill (id kept bark-social-canton; canton view already includes Brewers Hill). notes_public quotes FAQ + membership, not a generic paid-club warning. FAQ https://barksocial.com/pages/faq: “No! Humans are free to enter (except during special ticketed events). Dogs need a membership or a guest pass to enter.” Membership https://barksocial.com/pages/membership: “Join the Bark Social Club at $385/year or $45/month!” Pricing table First Dog Weekday Pass $12 / Weekend Pass $15. “Be sure to register before you come to the park for easy check-in!” Day passes in person only. HH menu itself does not say a pass is required.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: barksocial.com baltimore-happy-hour.",
+      "lat": 39.278045,
+      "lon": -76.562874,
       "deals": [
         {
           "days": [
@@ -3904,7 +3906,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "proof_quote": "UNLEASHED MONDAYS / 3-7PM EVERY MONDAY / $2 Off Draft Beer + Cocktails $6 Appetizers $10 Flatbreads",
           "food_categories": [
@@ -3931,7 +3933,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "proof_quote": "TWOFER TUESDAYS / 3-7PM EVERY TUESDAY / 2 Cocktails for $12 Any 2 Flatbreads for $20",
           "food_categories": [
@@ -3957,7 +3959,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "proof_quote": "WINE WEDNESDAYS / 3-7PM EVERY WEDNESDAY / $7 Frosé $7 Wine Glasses + Cans",
           "food_categories": [
@@ -3986,7 +3988,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "proof_quote": "THIRSTY THURSDAYS / 3-7PM EVERY THURSDAY / $5 Seltzers $6 Drafts $7 Menu Cocktails",
           "food_categories": [
@@ -4007,7 +4009,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "proof_quote": "FROZEN FRIDAYS / 3-7PM EVERY FRIDAY / $7 All Frozen Drinks",
           "food_categories": [
@@ -4015,9 +4017,7 @@
           ]
         }
       ],
-      "lat": 39.278045,
-      "lon": -76.562874,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "market-ale-house",
@@ -6778,68 +6778,32 @@
       "id": "waterfront-hotel",
       "name": "Waterfront Hotel",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "1710 Thames Street, Baltimore MD 21231",
       "phone": "(410) 537-5055",
       "source_url": "http://www.waterfronthotelfellspoint.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Fells Point (MapServer/0 query Name=Fells Point, 2026-08-18; Nominatim 39.2820520,-76.5921975). HH PDF /uploads/1/3/3/1/133152380/wfh_happyhour_web.pdf still linked from homepage 2026-08-18: TUESDAY – FRIDAY | 4 – 7 PM · ESPRESSO MARTINI • 10 · SPICY PINEAPPLE MARG • 8 · $5 DRAFTS · $6 WINE. Fuzzies Burgers footer has no weekly $. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "deal_format": "image",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$10 Espresso Martini",
-              "price": "$10"
-            },
-            {
-              "text": "$8 Spicy Pineapple Marg",
-              "price": "$8"
-            },
-            {
-              "text": "$5 Drafts",
-              "price": "$5"
-            },
-            {
-              "text": "$6 Wine",
-              "price": "$6"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-18",
-          "proof_quote": "TUESDAY – FRIDAY | 4 – 7 PM",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: waterfront HH menu 404; cleared prices.",
       "lat": 39.282052,
       "lon": -76.5921975,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "notes_public": "Happy hour menu page not loading; priced specials removed until re-verified.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "the-chasseur",
       "name": "The Chasseur",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "3328 Foster Avenue, Baltimore, MD 21224",
       "phone": "(410) 327-6984",
       "source_url": "https://www.chasseurbaltimore.com/drink",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2847069,-76.5690260). /drink 2026-08-18: HAPPY HOUR 4-8, Monday- Friday, $2 off Wine, Draft Beer, Cocktails, Crushes, and Whistle Pig Old Fashioned. Do not ship /eat-2 food list (no days; page says check Facebook and Instagram for daily deals). Bar hours omit Wednesday — not invented. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: chasseurbaltimore.com/drink.",
+      "lat": 39.2847069,
+      "lon": -76.569026,
       "deals": [
         {
           "days": [
@@ -6859,16 +6823,15 @@
           "end": 1200,
           "time_window": "4pm-8pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
-          "proof_quote": "HAPPY HOUR 4-8, Monday- Friday, $2 off Wine, Draft Beer, Cocktails, Crushes, and Whistle Pig Old Fashioned.",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.chasseurbaltimore.com/drink",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "HAPPY HOUR 4-8, Monday- Friday, $2 off Wine, Draft Beer, Cocktails, Crushes, and Whistle Pig Old Fashioned."
         }
       ],
-      "lat": 39.2847069,
-      "lon": -76.569026,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "raw-and-refined",
@@ -6994,15 +6957,15 @@
       "id": "the-happyjack-tavern",
       "name": "The HappyJack Tavern",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "2822 Hudson St, Baltimore, MD 21224",
       "phone": "(443) 835-2843",
       "source_url": "https://www.happyjacktavern.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2823496,-76.5763606). /happy-hour 2026-08-18: HH food Mon–Thu 4–6 dine-in all $8 smash/veggie/grilled chicken/grilled cheese; HH drinks Mon–Fri 4–6 and Sun 12–11 $1 off marked beer/wine/cocktails + $5 rails; daily 4pm–close Mon $8 mango margs, Tue $15 lb wings + natty/rail dine-in, Wed $5 smash or grilled cheese dine-in, Thu $8 boh'tails (venue spells THURDSDAY). No Fri/Sat daily published. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "notes_public": "Happy hour food and Tuesday/Wednesday daily specials are dine-in only",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: happyjacktavern.com/happy-hour.",
+      "lat": 39.2823496,
+      "lon": -76.5763606,
       "deals": [
         {
           "days": [
@@ -7033,12 +6996,13 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "MON-THURS 4-6PM | DINE-IN ONLY",
           "food_categories": [
             "burger",
             "small-plate/apps"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7062,11 +7026,12 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "MON-FRI 4-6PM",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7086,11 +7051,12 @@
           "end": 1380,
           "time_window": "12pm-11pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "SUN 12PM-11PM",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7104,11 +7070,12 @@
           ],
           "start": 960,
           "end": null,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "DAILY SPECIALS 4PM-CLOSE",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7122,12 +7089,13 @@
           ],
           "start": 960,
           "end": null,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "TUESDAY – DINE-IN ONLY",
           "food_categories": [
             "small-plate/apps",
             "drink"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7141,11 +7109,12 @@
           ],
           "start": 960,
           "end": null,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "WEDNESDAY – DINE-IN ONLY",
           "food_categories": [
             "burger"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         },
         {
           "days": [
@@ -7159,16 +7128,15 @@
           ],
           "start": 960,
           "end": null,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "THURDSDAY",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "source_url": "https://www.happyjacktavern.com/happy-hour"
         }
       ],
-      "lat": 39.2823496,
-      "lon": -76.5763606,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "pussers-landing",
@@ -7232,14 +7200,15 @@
       "id": "tutti-gusti",
       "name": "Tutti Gusti",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "3102 Fait Ave, Baltimore, MD 21224",
       "phone": "(410) 534-4040",
       "source_url": "https://www.tuttigusti.net/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim of 3102 Fait 39.2835159,-76.5725785 and of 3100 Fait 39.2835374,-76.5726334). Pin site address 3102 Fait, not license 3100 Fait. Homepage 2026-08-18 Monday Night Special: buy any pizza at regular menu price, same-size cheese pizza $3. No clock — start/end null, no time_window. Do not ship customer-review 10% discount for cash. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: tuttigusti.net Monday Night Special.",
+      "lat": 39.2835159,
+      "lon": -76.5725785,
       "deals": [
         {
           "days": [
@@ -7253,16 +7222,16 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "Buy Any Pizza at Regular menu Price, Get Same Size Cheese Pizza for Only $3.00.",
+          "time_window": "all day",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.tuttigusti.net/",
           "food_categories": [
             "pizza"
-          ]
+          ],
+          "proof_quote": "Monday Night Special \"Buy Any Pizza at Regular menu Price, Get Same Size Cheese Pizza for Only $3.00.\""
         }
       ],
-      "lat": 39.2835159,
-      "lon": -76.5725785,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "ambassador-dining-room",
@@ -7646,111 +7615,18 @@
       "id": "baltimore-seafood",
       "name": "Baltimore Seafood",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "2324 Boston St, Baltimore, MD 21224",
       "phone": "(410) 624-5166",
       "source_url": "https://www.bmoreseafood.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim building 2324 Boston St 39.2827389,-76.5834654 and house 39.2829566,-76.5840318 also Canton). /menu 2026-08-18 still hosts DAILY SPECIALS (2022).png (Wix media Last-Modified 2022-08-13; filename recorded — graphic is the live official menu image today). No clock on the graphic — start/end null, no time_window. Happy Hour tab on /menu is a heading only — no days/window/$ extracted. Do not invent 3–7 from IG. Phone on the menu page today is 410-624-5166. Pin site address 2324 Boston St, not the license range 2324-32. Daily specials, not happy hour — do not set happy_hour true. Already in /canton. Do not invent a neighborhood view.",
-      "deal_format": "image",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "1LB black mussels + 0.5LB shrimp head-on",
-              "price": "$24"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "MUSSEL MONDAY / 1LB BLACK MUSSELS / 0.5LB SHRIMP HEAD-ON / $24",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "1LB crawfish + 0.5LB shrimp head-on",
-              "price": "$24"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "CRAWFISH TUESDAY / 1LB CRAWFISH / 0.5LB SHRIMP HEAD-ON / $24",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "1LB head-off shrimp + 0.5LB snow crab legs",
-              "price": "$35"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "SHRIMP WEDNESDAY / 1LB HEAD-OFF SHRIMP / 0.5LB SNOW CRAB LEGS / $35",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "1LB snow crab legs + 0.5LB shrimp head-off",
-              "price": "$39"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "CRAB LEG THURSDAY / 1LB SNOW CRAB LEGS / 0.5LB SHRIMP HEAD-OFF / $39",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "1LB head-off shrimp + 1LB crawfish + 0.5LB snow crab legs",
-              "price": "$49"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "WEEKEND ROYALE / 1LB HEAD-OFF SHRIMP / 1LB CRAWFISH / 0.5LB SNOW CRAB LEGS / $49",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: bmoreseafood.com menu JS-heavy; cleared unverified combos.",
       "lat": 39.2827389,
       "lon": -76.5834654,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "notes_public": "Daily specials not currently extractable from the website; prior prices removed.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "barn-and-lodge",
@@ -10937,14 +10813,16 @@
       "id": "la-calle",
       "name": "La Calle",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "623 S Broadway Baltimore MD 21231",
       "phone": "+1 (443) 835-2215",
       "source_url": "https://www.lacallerestaurant.com/contact-2/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live lacallerestaurant.com/contact-2/ HTTP 200. HH PDF https://www.lacallerestaurant.com/wp-content/uploads/2026/01/happyhour-022026.pdf still the live file linked from /menu-2/ today (HTTP 200). Pin 623 S Broadway Baltimore MD 21231 / +1 (443) 835-2215. Census 39.2842935,-76.5931531. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Contact hours: Brunch Sat–Sun 11:00am–2:30 pm · Dinner Mon–Thu 5:00 pm–10:00 pm / Fri–Sat 4:00 pm–10:30pm / Sun 4:00 pm–9:00 pm · Bar Mon–Thu 5:00 pm–11:00 pm / Fri–Sat 4:00 pm–12:00 pm / Sun 4:00 pm–10:00 pm. Record the Fri–Sat bar line as printed (12:00 pm). Do not “correct” it to midnight. Do not copy hours onto the deal clock. Contact: Happy Hour Monday – Sunday 4 pm – 6 pm. HH PDF page 2 (visual read today; pdftotext empty): Happy hour / Monday - Sunday / 4 pm - 6 pm. FOOD: Flautas de Pollo 7 · Empanadas Favoritas 7 · Pellizcadas de Pollo 7 · Bruselas Tacos 7 · Bar Nachitos 7 · Tacos de Pollo 7 · Tacos al Pastor 7. DRINKS: Margarita Clasica 8 · Paloma 8 · Sangria Blanco 8 · Vino Rojo 7 · Vino blanco 7 · White claw tequila 6 · Tecate 4. AGAVES PREMIUM 1 oz pour: Tequila 8 Corralejo blanco · Mezcal 8 Fidencio espadin · Raicilla 8 La venenosa tavernas. Keep PDF spellings (Pellizcadas, White claw tequila, Vino blanco, Tecate). Filename happyhour-022026.pdf is the live HH download today — do not drop it as stale from the name alone. Stay off: PDF page 1 is DESSERTS / COFFE at regular $ — not the HH row. Do not ship Tres Leches / Churros / Flan / ice cream / coffee. Separate /wp-content/uploads/2025/04/Desserts-HH_compressed.pdf is not this row — do not mix.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: lacallerestaurant.com contact — HH times only.",
+      "lat": 39.2842935,
+      "lon": -76.5931531,
+      "notes_public": "Happy hour times published; item prices not currently listed on the checked page.",
       "deals": [
         {
           "days": [
@@ -10958,91 +10836,23 @@
           ],
           "items": [
             {
-              "text": "Flautas de Pollo $7",
-              "price": "$7"
-            },
-            {
-              "text": "Empanadas Favoritas $7",
-              "price": "$7"
-            },
-            {
-              "text": "Pellizcadas de Pollo $7",
-              "price": "$7"
-            },
-            {
-              "text": "Bruselas Tacos $7",
-              "price": "$7"
-            },
-            {
-              "text": "Bar Nachitos $7",
-              "price": "$7"
-            },
-            {
-              "text": "Tacos de Pollo $7",
-              "price": "$7"
-            },
-            {
-              "text": "Tacos al Pastor $7",
-              "price": "$7"
-            },
-            {
-              "text": "Margarita Clasica $8",
-              "price": "$8"
-            },
-            {
-              "text": "Paloma $8",
-              "price": "$8"
-            },
-            {
-              "text": "Sangria Blanco $8",
-              "price": "$8"
-            },
-            {
-              "text": "Vino Rojo $7",
-              "price": "$7"
-            },
-            {
-              "text": "Vino blanco $7",
-              "price": "$7"
-            },
-            {
-              "text": "White claw tequila $6",
-              "price": "$6"
-            },
-            {
-              "text": "Tecate $4",
-              "price": "$4"
-            },
-            {
-              "text": "Tequila 1 oz Corralejo blanco $8",
-              "price": "$8"
-            },
-            {
-              "text": "Mezcal 1 oz Fidencio espadin $8",
-              "price": "$8"
-            },
-            {
-              "text": "Raicilla 1 oz La venenosa tavernas $8",
-              "price": "$8"
+              "text": "Happy Hour"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "prices_published": false,
+          "verified_date": "2026-09-07",
           "source_url": "https://www.lacallerestaurant.com/contact-2/",
-          "proof_quote": "Happy hour Monday - Sunday 4 pm - 6 pm Flautas de Pollo 7 Empanadas Favoritas 7 Pellizcadas de Pollo 7 Bruselas Tacos 7 Bar Nachitos 7 Tacos de Pollo 7 Tacos al Pastor 7 Margarita Clasica 8 Paloma 8 Sangria Blanco 8 Vino Rojo 7 Vino blanco 7 White claw tequila 6 Tecate 4 Tequila 8 Corralejo blanco Mezcal 8 Fidencio espadin Raicilla 8 La venenosa tavernas",
           "food_categories": [
-            "tacos",
-            "small-plate/apps",
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy Hour Monday – Sunday 4 pm – 6 pm"
         }
       ],
-      "lat": 39.2842935,
-      "lon": -76.5931531,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "la-cuchara",
@@ -11860,15 +11670,15 @@
       "id": "marta",
       "name": "Marta Fine Food & Spirits",
       "neighborhood": "Upper Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "2127 East Pratt St, Baltimore, MD 21231",
       "phone": "443-708-5962",
       "source_url": "https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "notes_public": "Available at the bar and patio.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + HH PDF https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf HTTP 200 (2 pages). Prices from the PDF (visual + text), same flag as Empanada Lady. martabaltimore.com/ and /menu HTML are Cloudflare 403 today — record in ops. Do not call closed. Pin 2127 East Pratt St, Baltimore, MD 21231 / 443-708-5962. Census 39.2893675,-76.5862345. CityView Neighborhoods MapServer/0 query today on that point: Name=Upper Fells Point. Upper Fells Point has no home view — already in citywideOnly. Do not duplicate the string. Do not invent a /upper-fells-point view. Do not fold into /fells-point. Quotes from the HH PDF today: Happy Hour / Tuesday-Friday: 4pm-6pm / Available at the bar and patio. SPRITZES 9 / all spirits can be made “spirit free”. COCKTAILS 11. HOUSE WINES 8. DRAFT BEER 6. Bread & Butter 8. Tuna Cannoli 10. Yellowtail 10. Oysters Scroppino 8/ two each. Beef Tartare 15. Arancini Milanese 10. Sheep's Milk Ricotta 10. Meatballs Arrabbiata 10. Ziti alla Bolognese 13. Campanelle Zafferano 17. Risotto Milanese 14. Keep printed names. Do not ship recipe lines as extra items. Cocktail of the week is unnamed rotating — covered by the $11 cocktails item; do not invent a name. all spirits can be made “spirit free” in ops only. notes_public quote-matched: Available at the bar and patio.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: marta-happyhour-spring26 PDF.",
+      "lat": 39.2893675,
+      "lon": -76.5862345,
       "deals": [
         {
           "days": [
@@ -11943,7 +11753,7 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.martabaltimore.com/files/marta-happyhour-spring26-v06-pdf-17bede27.pdf",
           "proof_quote": "Happy Hour Tuesday-Friday: 4pm-6pm Available at the bar and patio SPRITZES 9 COCKTAILS 11 HOUSE WINES 8 DRAFT BEER 6 Bread & Butter 8 Tuna Cannoli 10 Yellowtail 10 Oysters Scroppino 8/ two each Beef Tartare 15 Arancini Milanese 10 Sheep's Milk Ricotta 10 Meatballs Arrabbiata 10 Ziti alla Bolognese 13 Campanelle Zafferano 17 Risotto Milanese 14",
           "food_categories": [
@@ -11953,9 +11763,7 @@
           ]
         }
       ],
-      "lat": 39.2893675,
-      "lon": -76.5862345,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "maryland-yards",

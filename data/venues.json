@@ -6837,21 +6837,18 @@
       "id": "raw-and-refined",
       "name": "Raw & Refined",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "2723 Lighthouse Pt. E, Baltimore, MD 21224",
       "phone": "(443) 282-3640",
       "source_url": "http://www.rawandrefinedbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2774398,-76.5777849). Contact address 2723 Lighthouse Pt. E (not license 2701 Boston). July 2026 HH graphic still linked 2026-08-18: MONDAY-FRIDAY / 3-6PM. Do not ship older homepage-feed prices (Wed–Fri / $5 drafts / $10 crush buckets). Hours disagree — homepage: Mon-Fri 6am–10pm, Sat 10am–7pm, Sun 2pm–7pm; /contact-us: Wed+Thu 4:00pm-10:00pm, Fri 4:00pm-12:00am, Sat 11:00am-12:00am, Sun 11:00am-9:00pm (omits Mon/Tue). Did not pick one. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "notes_public": "Happy hour is only available on the restaurant side- not the pool deck",
-      "deal_format": "image",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: rawandrefinedbaltimore.com feed HH post.",
+      "lat": 39.2774398,
+      "lon": -76.5777849,
       "deals": [
         {
           "days": [
-            "mon",
-            "tue",
             "wed",
             "thu",
             "fri"
@@ -6862,96 +6859,49 @@
               "price": "1/2 off"
             },
             {
-              "text": "$6 Seltzers",
+              "text": "$5 drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$10 crush buckets",
+              "price": "$10"
+            },
+            {
+              "text": "$6 seltzers",
               "price": "$6"
-            },
-            {
-              "text": "$6 Orange & Grapefruit Crushes",
-              "price": "$6"
-            },
-            {
-              "text": "$15 32oz Crush Buckets",
-              "price": "$15"
-            },
-            {
-              "text": "$8 Classic Mojitos",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Aperol Spritz",
-              "price": "$8"
             }
           ],
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
-          "proof_quote": "MONDAY-FRIDAY / 3-6PM",
+          "verified_date": "2026-09-07",
+          "source_url": "http://www.rawandrefinedbaltimore.com/",
           "food_categories": [
-            "small-plate/apps",
-            "drink"
-          ]
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "Stop in Wednesday through Friday from 3-6pm for half off apps, $5 drafts, $10 crush buckets and $6 seltzers!"
         }
       ],
-      "lat": 39.2774398,
-      "lon": -76.5777849,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "verde",
       "name": "Verde",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "641 S Montford Ave., Baltimore, MD 21224",
       "phone": "(410) 522-1000",
       "source_url": "https://www.instagram.com/verdepizza/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2841064,-76.5825193). verdepizza.com has no weekly $. Official IG @verdepizza: Mon post 2026-08-17 https://www.instagram.com/verdepizza/p/DcJ5FW9x50Q/ every Monday 25% off all pizza (no clock); Tue post 2026-08-04 https://www.instagram.com/verdepizza/p/Dbov91iRQlZ/ Tuesdays half-priced bottle night (no clock). Do not ship Maryland Vegan Restaurant Week (ended Aug 16). Hours conflict — did not pick one: IG bio Mon-Th 5-9p / Fri 5-10p vs Linktree Monday - Friday: 5:00 pm - 9:00 pm, & Saturday and Sunday: noon - 9:00 pm. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "deal_format": "image",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "25% off all pizzas",
-              "price": "25% off"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "every Monday at @verdepizza is 25% off all pizza",
-          "food_categories": [
-            "pizza"
-          ]
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "50% off bottles of wine",
-              "price": "1/2 off"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "Tuesdays are half-priced bottle night",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
       "lat": 39.2841064,
       "lon": -76.5825193,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "ops_notes": "Deal Scout 2026-09-07: IG bio blocked; site no $ — cleared stale weekly specials.",
+      "notes_public": "No current priced weekly specials verified on the official website.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "the-happyjack-tavern",
@@ -8509,15 +8459,15 @@
       "id": "bunnys-buckets",
       "name": "Bunny's Buckets & Bubbles",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "801 S Ann St, Baltimore, MD 21231",
       "phone": "(443) 708-3861",
       "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "Happy hour is bar seating and downstairs bar only.",
-      "ops_notes": "Builder 2026-08-20 off census + live /menu HTTP 200 + Hoppy Hour PDF HTTP 200 Last-Modified 2024-11-20. PDF is image-only (pdftotext empty). Pin 801 S Ann St / (443) 708-3861. Nominatim 39.282584,-76.590993. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not invent a view. Two Hoppy Hour rows: Mon–Thu 5pm-6pm + Fri 4pm-6pm. Do not invent Saturday/Sunday hoppy hour. Site restaurant hours (homepage, not the deal window): Mon–Thu 5:00pm–11:30pm · Fri 11:00am–12:00am · Sat–Sun 10:00am–12:00am.",
+      "last_verified": "2026-09-07",
+      "lat": 39.282584,
+      "lon": -76.590993,
+      "ops_notes": "Deal Scout 2026-09-07: bunnys_hoppy_hour_menu.pdf OCR.",
       "deals": [
         {
           "days": [
@@ -8552,39 +8502,30 @@
               "price": "$8"
             },
             {
-              "text": "Wine $6 (glass of red, white, or bubbles)",
+              "text": "$6 Wine (red, white, or bubbles)",
               "price": "$6"
             },
             {
-              "text": "Jessica Rabbit or Ramona Flowers $8",
+              "text": "$8 Cocktails (Jessica Rabbit or Ramona Flowers)",
               "price": "$8"
             },
             {
-              "text": "Miller High Life bottles $3",
+              "text": "$3 Miller High Life bottles",
               "price": "$3"
-            },
-            {
-              "text": "Veuve Clicquot $60 bottle",
-              "price": "$60"
-            },
-            {
-              "text": "Veuve Clicquot $20 glass",
-              "price": "$20"
             }
           ],
           "start": 1020,
           "end": 1080,
           "time_window": "5pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
-          "proof_quote": "BUNNY'S HOPPY HOUR / Happy hour available at all bar seating and downstairs bar area / Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm / $8 FOOD SPECIALS FRIED CHICKEN SANDWICH / SHRIMP & GRITS / CHICKEN POUTINE / BABY CRAB RICE / CHICKEN NUGGIES / CAVIAR & CHIPS / $6 WINE Choose between a glass of Red, White or Bubbles / $8 COCKTAILS Our 2 most popular: Jessica Rabbit or Ramona Flowers / $3 BEER Miller High Life Bottles / VEUVE CLICQUOT $60 bottle $20 Glass",
           "food_categories": [
-            "sandwich/cheesesteak",
-            "seafood/crab",
-            "small-plate/apps",
+            "sandwich",
+            "seafood",
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy hour available at all bar seating and downstairs bar area Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm $8 FOOD SPECIALS … $6 WINE … $8 COCKTAILS … $3 BEER Miller High Life Bottles"
         },
         {
           "days": [
@@ -8616,44 +8557,33 @@
               "price": "$8"
             },
             {
-              "text": "Wine $6 (glass of red, white, or bubbles)",
+              "text": "$6 Wine (red, white, or bubbles)",
               "price": "$6"
             },
             {
-              "text": "Jessica Rabbit or Ramona Flowers $8",
+              "text": "$8 Cocktails (Jessica Rabbit or Ramona Flowers)",
               "price": "$8"
             },
             {
-              "text": "Miller High Life bottles $3",
+              "text": "$3 Miller High Life bottles",
               "price": "$3"
-            },
-            {
-              "text": "Veuve Clicquot $60 bottle",
-              "price": "$60"
-            },
-            {
-              "text": "Veuve Clicquot $20 glass",
-              "price": "$20"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_menu.pdf",
-          "proof_quote": "BUNNY'S HOPPY HOUR / Happy hour available at all bar seating and downstairs bar area / Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm / $8 FOOD SPECIALS FRIED CHICKEN SANDWICH / SHRIMP & GRITS / CHICKEN POUTINE / BABY CRAB RICE / CHICKEN NUGGIES / CAVIAR & CHIPS / $6 WINE Choose between a glass of Red, White or Bubbles / $8 COCKTAILS Our 2 most popular: Jessica Rabbit or Ramona Flowers / $3 BEER Miller High Life Bottles / VEUVE CLICQUOT $60 bottle $20 Glass",
           "food_categories": [
-            "sandwich/cheesesteak",
-            "seafood/crab",
-            "small-plate/apps",
+            "sandwich",
+            "seafood",
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy hour available at all bar seating and downstairs bar area Monday - Thursday 5pm - 6pm, Friday from 4pm to 6pm $8 FOOD SPECIALS … $6 WINE … $8 COCKTAILS … $3 BEER Miller High Life Bottles"
         }
       ],
-      "lat": 39.282584,
-      "lon": -76.590993,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "brewers-cask",
@@ -12876,14 +12806,15 @@
       "id": "rec-pier-chop-house",
       "name": "Rec Pier Chop House",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "1715 Thames Street, Baltimore, MD 21231",
       "phone": "(443) 552-1300",
       "source_url": "https://www.pendry.com/baltimore/menus/martini-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live pendry.com/baltimore/menus/martini-hour/ HTTP 200 (browser UA; bare curl 403); dining page HTTP 200: https://www.pendry.com/baltimore/dining/rec-pier-chop-house/ ; seasonal-happenings HTTP 200: https://www.recpierchophouse.com/seasonal-happenings/ . Pin 1715 Thames Street, Baltimore, MD 21231 / (443) 552-1300. Hotel switchboard (443) 552-1400 is not the restaurant — ops only. Census 39.2811103,-76.5919083. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Prices from this door's martini-hour menu page, not a brand-wide menu. Hours today (dining page): Breakfast Mon–Sun 7:00am – 10:30am · Brunch Sat–Sun 11:00am – 3:00pm · Lunch Mon–Fri 11:00am – 3:00pm · Dinner daily 5:00pm – 10:00pm · Bar & Lounge Sun–Thu 11:00am – 10:00pm / Fri–Sat 11:00am – 11:00pm. Record hours in ops. Do not copy dinner-close or lounge 11pm onto a deal clock. Quotes from the martini-hour menu today: Martini Hour Available Monday - Friday | 5:00pm - 7:00pm | At the Bar at Rec Pier Chop House. Tiny Tini's 2.5 oz. Dirty Vodka Martini Wheatley Vodka, Dry Vermouth, Olives $8. Classic Gin Martini Shot Tower Gin, Vermouth, Orange Bitters, Lemon Twist $8. Vesper Shot Tower Gin, Wheatley Vodka, Cocchi Americano, Lemon Twist $8. Negroni Shot Tower Gin, Campari, Cocchi di Tornio, Orange Coin $8. Girl Dinner Half Sweet Gem Caesar, French Fries, Choice of Full Sized Martini $28. Keep printed Cocchi di Tornio spelling. Keep Tiny Tini's / 2.5 oz on the card. Dining-page copy today (ops + restriction): Available at the bar only. Walk-ins welcome. Do not put that on notes_public — it is Martini Hour only. Tasting Tuesdays also runs Rec Pier / Cannon Room / the bar. Venue-level notes_public would mislabel Tuesday bottles. Seasonal-happenings today: Tasting Tuesdays / Tuesdays only, taste our curated collection of sommelier-approved specially priced wines. Join us for dinner and drinks at Rec Pier Chop House, in The Cannon Room or at the bar for half-priced bottles from 5:00pm – 10:00pm. Stay off: Power Lunch (courses named, no $) · Soulful Brunch (no $) · Live in the Lounge (no $) · Whiskey Workshop (ticketed class, not a weekly row). notes_public omitted. No vibe. Martini Hour bar-only stays in ops.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: pendry martini-hour page.",
+      "lat": 39.2811103,
+      "lon": -76.5919083,
       "deals": [
         {
           "days": [
@@ -12919,38 +12850,15 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.pendry.com/baltimore/menus/martini-hour/",
-          "proof_quote": "Martini Hour Available Monday - Friday | 5:00pm - 7:00pm | At the Bar at Rec Pier Chop House",
-          "food_categories": [
-            "drink",
-            "small-plate/apps"
-          ]
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "half-priced bottles",
-              "price": "1/2 price"
-            }
-          ],
-          "start": 1020,
-          "end": 1320,
-          "time_window": "5pm-10pm",
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.recpierchophouse.com/seasonal-happenings/",
-          "proof_quote": "Tuesdays only, taste our curated collection of sommelier-approved specially priced wines. Join us for dinner and drinks at Rec Pier Chop House, in The Cannon Room or at the bar for half-priced bottles from 5:00pm – 10:00pm.",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Martini Hour Available Monday - Friday | 5:00pm - 7:00pm | Tiny Tini's … $8 … Girl Dinner … $28"
         }
       ],
-      "lat": 39.2811103,
-      "lon": -76.5919083,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "pink-flamingo",
@@ -13255,16 +13163,20 @@
       "id": "southpaw",
       "name": "Southpaw",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "529 S. Bond Street, Baltimore, MD 21231",
+      "phone": null,
       "source_url": "https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live southpawcocktails.com/ HTTP 200; current-menu PDF HTTP 200, Last-Modified Thu, 13 Aug 2026 01:06:39 GMT. Homepage article:modified_time 2026-08-13. Record homepage in ops (https://southpawcocktails.com/). Link text still Click Here For Our Current Menu. source_url is the current-menu PDF https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf . Homepage today links only that PDF. A July 2022 menu PDF may still exist on the server — it is not the current-menu link. Do not use it. Pin 529 S. Bond Street, Baltimore, MD 21231. No phone on official pages fetched — omit phone. Census 39.2846221,-76.5950825. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Hours today (homepage): Wednesday through Friday 5:00pm – Midnight · Saturday 3:00pm – Midnight · Sunday 3:00pm – 9:00pm · Closed on Monday and Tuesday. Record hours in ops. Do not copy Midnight (0 / 1440) onto a deal clock. Do not copy kitchen WED-SAT: 5PM - 10:30PM (1350) onto a deal clock. Quotes from the current PDF today (visual read): HAPPY HOUR: MON - FRI, 5-7 PM. JUST $9. OLD FASHIONED · SAZERAC · DAIQUIRI *. DRY MARTINI * · MOSCOW MULE. * apologies, not applicable for dirty martinis. Do not ship Monday or Tuesday. Homepage says those days Closed. Same-site conflict — record both, hold those days (Maryland Yards / Nepenthe Monday pattern). If they add Monday/Tuesday hours, the days come back. Dirty-martini qualifier rides Daiquiri / Dry Martini. Do not invent a separate dirty-martini row. Stay off: wine by the glass $10 ($30 by the bottle) · house shooters all $8 · frozen Lil' Guy 8 oz • 9 / Full Send 16 oz • 18 · kitchen WED-SAT: 5PM - 10:30PM · regular cocktail list $13–$16 · beer list · magazine/Yelp/IG forever happy hour. deal_format omitted (pdf is not a legal value; same visual-read flag as Empanada Lady / Marta / Pink Flamingo / Octobar). Prices from the current-menu PDF, visual read. notes_public omitted. No vibe.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: southpaw early-august-2026.pdf.",
+      "lat": 39.2846221,
+      "lon": -76.5950825,
       "deals": [
         {
           "days": [
+            "mon",
+            "tue",
             "wed",
             "thu",
             "fri"
@@ -13295,17 +13207,15 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf",
-          "proof_quote": "HAPPY HOUR: MON - FRI, 5-7 PM JUST $9 OLD FASHIONED SAZERAC DAIQUIRI * DRY MARTINI * MOSCOW MULE * apologies, not applicable for dirty martinis",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "JUST $9 happy hour: Mon - Fri, 5-7 PM old fashioned • sazerac • daiquiri * Dry martini * • MOSCOW MULE"
         }
       ],
-      "lat": 39.2846221,
-      "lon": -76.5950825,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "swallow-at-the-hollow",
@@ -13442,15 +13352,15 @@
       "id": "the-dara",
       "name": "The Dara",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "906 South Wolfe Street, Baltimore, MD 21231",
       "phone": "(443) 438-6311",
       "source_url": "https://www.thedarakitchen.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live thedarakitchen.com/menu HTTP 200; homepage HTTP 200: https://www.thedarakitchen.com/ ; /happy-hour 404. Prices from the Happy Hour PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw). Heading still Happy Hour Menu. Graphic still Happy+Hour.png (https://images.squarespace-cdn.com/content/v1/645b20ee9525ba3d2fefe486/d4d4e50f-efb2-4e3a-adbb-1b9026e47a57/Happy+Hour.png). Live PNG today byte-identical vs 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m33/dara_hh.png; sha256 8b32a86e773ded7f075499a67b54228e6360acc5bd2e05ea857acbd383a93e1c). Pin 906 South Wolfe Street, Baltimore, MD 21231 / (443) 438-6311. Email contact@thedarakitchen.com stays in ops. Census 39.2816620,-76.5899386. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Do not use a street-only North Wolfe pin (that lands South Clifton Park). Nominatim of 906 South Wolfe Street, Baltimore, MD 21231 is 39.2816620,-76.5899386 (display_name includes Fell's Point) — same point as the row. Nominatim of 906 North Wolfe Street today is 39.3013644,-76.5911926, MapServer/0 Name=Middle East — still not Fells Point. Hours today (homepage): Open Daily · Monday–Friday Lunch 11am - 3pm / Dinner 4:30pm - 10pm · Saturday & Sunday 11am - 10pm. Schema/JSON-LD openingHours Mo–Su 11:00-22:00; businessHours 11am - 10pm daily. Record both. Do not copy dinner close 10pm (1320) onto a deal clock. Weekday dinner opens 4:30pm — HH starts at kitchen-dinner open; do not invent a later start. Quotes from the HH PNG today (visual read): HAPPY HOUR. BEER $5 · ORIOLE PARK · ASAHI · SAPPORO. WINE $7 · HOUSE RED · HOUSE WHITE · HOUSE SPARKLING. COCKTAILS $9 · RED SANGRIA · WHITE SANGRIA · APEROL SPRITZ. LOTUS ROOT (V) $5. GIAOW PAK (V) $6. PAPAYA SALAD (GF)(V) $7. BONELESS FRIED CHICKEN WING $8. SHRIMP TEMPURA $9. HAPPY HOUR 4:30–6 PM EVERYDAY. Keep printed beer name Oriole Park. Do not write Natty Boh. Do not invent a separate Oriole Park row. Graphic prints a chili next to Giaow Pak and Papaya Salad — printed names stay (V) / (GF)(V); chili stays in ops. Extra descriptors after the apps stay in ops (may ride): LOTUS ROOT — GOLDEN CRISPY FRIED, SWEET CHILI SAUCE. GIAOW PAK — CABBAGE, CARROT, MUSHROOM, BELL PEPPER, LEEK, GLASS NOODLE, WRAPPED IN WONTON SKIN, HOUSE SWEET SOY SAUCE, CHILI OIL. PAPAYA SALAD — GREEN PAPAYA, CARROT, TOMATO, GREEN BEAN, PEANUT, LIME DRESSING. BONELESS FRIED CHICKEN WING — MARINATED THAI STYLE, GOLDEN CRISPY FRIED, JAEW SAUCE. SHRIMP TEMPURA — LIGHTLY BATTERED AND DEEP FRIED, SWEET SOY SAUCE, SRIRACHA AIOLI. Stay off: lunch PDF Business-Lunch-Updated-02242026.pdf (live /s/ HTTP 200) · dinner/QR menu PDF The-Dara-Menu-Legal-QR-12092025-Vertical.pdf (live /s/ HTTP 200) · Drink Menu 1.png / Drink Menu 2.png · regular dinner screenshots (Screenshot 2026-02-17 / 2026-02-24). happy_hour true. days sun, mon, tue, wed, thu, fri, sat. start 990 · end 1080 · time_window 4:30pm-6pm. cats drink, small-plate/apps, wings, seafood/crab. notes_public omitted. No vibe. deal_format image (legal; pdf is not).",
-      "deal_format": "image",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Dara Happy Hour.png OCR.",
+      "lat": 39.281662,
+      "lon": -76.5899386,
       "deals": [
         {
           "days": [
@@ -13500,7 +13410,7 @@
           "end": 1080,
           "time_window": "4:30pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thedarakitchen.com/menu",
           "proof_quote": "HAPPY HOUR BEER $5 ORIOLE PARK ASAHI SAPPORO WINE $7 HOUSE RED HOUSE WHITE HOUSE SPARKLING COCKTAILS $9 RED SANGRIA WHITE SANGRIA APEROL SPRITZ LOTUS ROOT (V) $5 GIAOW PAK (V) $6 PAPAYA SALAD (GF)(V) $7 BONELESS FRIED CHICKEN WING $8 SHRIMP TEMPURA $9 HAPPY HOUR 4:30–6 PM EVERYDAY",
           "food_categories": [
@@ -13511,9 +13421,7 @@
           ]
         }
       ],
-      "lat": 39.281662,
-      "lon": -76.5899386,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "the-garden-rooftop",

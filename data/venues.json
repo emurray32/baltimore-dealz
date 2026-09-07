@@ -8662,14 +8662,15 @@
       "id": "cookhouse",
       "name": "CookHouse",
       "neighborhood": "Bolton Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1501 Bolton St, Baltimore, MD 21217",
       "phone": "(410) 225-9964",
       "source_url": "https://cookhousecafebar.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live cookhousecafebar.com HTTP 200 Last-Modified Thu, 20 Aug 2026 09:20:51 GMT; /menu/ HTTP 200 Last-Modified Thu, 20 Aug 2026 09:36:17 GMT. Pin 1501 Bolton St / (410) 225-9964 (site tel:410-225-9964). Census 39.3071688,-76.6258809. CityView Neighborhoods MapServer/0 query today on that point: Name=Bolton Hill. Citywide only. Do not invent a bolton-hill view. Quote both 50% of (homepage: $34 Steak Frites & 50% of all Wine Bottles) and 50% off (menu: 50% off All Wine Bottles & $34 Steak Frites). Keep menu wording 50% off All Wine Bottles on the item text. Saturday After Hour Cocktails / Saturdays 10:00pm – 1:00am — no $. Site says check Instagram or call to see if the bar is open. Do not load Saturday after-hours. Open WED – SAT 6pm – 10pm / menu WEDNESDAY – SATURDAY 6:00pm – 10:00pm. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "lat": 39.3071688,
+      "lon": -76.6258809,
+      "ops_notes": "Deal Scout 2026-09-07: cookhousecafebar.com curl. Wed Steak & Wine Night unchanged. Sat after-hours still no $.",
       "deals": [
         {
           "days": [
@@ -8688,31 +8689,30 @@
           "start": 1080,
           "end": 1320,
           "time_window": "6pm-10pm",
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://cookhousecafebar.com/",
-          "proof_quote": "Wednesdays: Steak & Wine Night | 50% off All Wine Bottles & $34 Steak Frites",
+          "proof_quote": "Wednesdays Steak & Wine Night $34 Steak Frites & 50% of all Wine Bottles / Wednesday Steak & Wine Night 50% off All Wine Bottles & $34 Steak Frites",
           "food_categories": [
             "steak",
             "drink"
           ]
         }
       ],
-      "lat": 39.3071688,
-      "lon": -76.6258809,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "cosima",
       "name": "Cosima",
       "neighborhood": "Jones Falls Area",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "3000 Falls Road, Mill No. 1, Baltimore, MD 21211",
       "phone": "(443) 708-7352",
       "source_url": "https://www.cosimamill1.com/s/NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf 302 → Squarespace PDF HTTP 200. Title NEW VERSION Happy Hour Menu (Book Format) 4.28.26.pdf. CreationDate 2026-04-29. 2 pages. pdftotext works. Homepage nav still links it today. Pin 3000 Falls Road, Mill No. 1 / (443) 708-7352. Census 39.3230125,-76.6305904. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Nominatim display says Hampden; city Name wins. Citywide only. Do not invent a jones-falls-area view. Do not fold into /hampden. Homepage footnote (record, do not pick over the PDF): *From 4-5 Tuesday-Saturday only our Happy Hour menu will be available. Hours line: Closed Monday, Tuesday-Thursday, 4-9*, Friday & Saturday, 4-10, Sunday 5-9. Do not invent a 4–5-only row. Stay off Summer Restaurant Week 2026 PDF and stale 2020 HH PDF Happy-Hour-Menu-Online-Format-121020.pdf. Keep PDF wording including 9*. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "lat": 39.3230125,
+      "lon": -76.6305904,
+      "ops_notes": "Deal Scout 2026-09-07: NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf pdftotext. Unchanged.",
       "deals": [
         {
           "days": [
@@ -8776,9 +8776,9 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.cosimamill1.com/s/NEW-VERSION-Happy-Hour-Menu-Book-Format-42826.pdf",
-          "proof_quote": "HAPPY HOUR Tues-Sat 4pm-7pm NEGRONIS & SPRITZES $5 COSIMA CLASSICS ARANCINA 9* VENTICELLO 8 WINE $7 BEER $5 WARM BAGUETTE $6 GARLIC BREAD $10 FORMAGGIO 14 OLIVE FRITTE 8 RIPIENI DI TONNO 10 FRITTO MISTO 18 PINSA ROMANA 12",
+          "proof_quote": "HAPPY HOUR Tues-Sat 4pm-7pm NEGRONIS & SPRITZES $5 ARANCINA 9* VENTICELLO 8 WINE $7 BEER $5 WARM BAGUETTE $6 GARLIC BREAD $10 FORMAGGIO 14 OLIVE FRITTE 8 RIPIENI DI TONNO 10 FRITTO MISTO 18 PINSA ROMANA 12",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -8786,9 +8786,7 @@
           ]
         }
       ],
-      "lat": 39.3230125,
-      "lon": -76.6305904,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "cypriana",
@@ -8958,14 +8956,15 @@
       "id": "dutch-courage",
       "name": "Dutch Courage",
       "neighborhood": "Old Goucher",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "2229 N. Charles Street, Baltimore, MD 21218",
       "phone": "(667) 309-7167",
       "source_url": "https://dutchcouragebar.com/wp-content/uploads/2026/04/HH2Menu.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live HH2Menu.pdf HTTP 200 Last-Modified Wed, 22 Apr 2026 00:55:53 GMT. CreationDate 2026-04-21. 1 page. pdftotext empty — PDF is image-only; still the live /menus/ HH file (Happy Hour button links HH2Menu.pdf today). Pin 2229 N. Charles Street / (667) 309-7167. Census 39.3151574,-76.6164641. CityView Neighborhoods MapServer/0 query today on that point: Name=Old Goucher. Citywide only. Do not invent an old-goucher view. Do not fold into /station-north or /mount-vernon. Homepage HTTP 200: Sun–Thu 4pm–11pm · Fri–Sat 4pm–1am · HAPPY HOUR Monday – Friday 4 – 6pm — no $ on that footer. The PDF is the priced source. Visual quotes: Happy Hour / M-F 4-6pm / COCKTAILS / Daily Featured Cocktail / House G&T / both cocktails $8 / BEER & WINE / $2 off all our beer and wine / FOOD / Snacks / $2 off our snacks: marinated olives, cheddar snacks, house pickles, spiced corn nuts / Kale Salad (gf, v+) / $14 / MD Crab Dip (contains shellfish) / $20 / Patatas Bravas (v) / $13. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "lat": 39.3151574,
+      "lon": -76.6164641,
+      "ops_notes": "Deal Scout 2026-09-07: HH2Menu.pdf image-only; tesseract OCR confirms prior visual prices. Unchanged.",
       "deals": [
         {
           "days": [
@@ -9005,9 +9004,9 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://dutchcouragebar.com/wp-content/uploads/2026/04/HH2Menu.pdf",
-          "proof_quote": "Happy Hour M-F 4-6pm COCKTAILS Daily Featured Cocktail House G&T both cocktails $8 BEER & WINE $2 off all our beer and wine FOOD Snacks $2 off our snacks: marinated olives, cheddar snacks, house pickles, spiced corn nuts Kale Salad (gf, v+) $14 MD Crab Dip (contains shellfish) $20 Patatas Bravas (v) $13",
+          "proof_quote": "Happy Hour M-F 4-6pm COCKTAILS Daily Featured Cocktail House G&T both cocktails $8 BEER & WINE $2 off all our beer and wine FOOD Snacks $2 off our snacks Kale Salad $14 MD Crab Dip $20 Patatas Bravas $13",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -9015,9 +9014,7 @@
           ]
         }
       ],
-      "lat": 39.3151574,
-      "lon": -76.6164641,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "dylans-oyster-cellar",
@@ -9099,15 +9096,16 @@
       "id": "facci",
       "name": "Facci Ristorante",
       "neighborhood": "Otterbein",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "414 Light Street, Baltimore, MD 21202",
       "phone": "(443) 835-2789",
       "source_url": "https://faccirestaurant.com/happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
+      "last_verified": "2026-09-07",
+      "lat": 39.283737,
+      "lon": -76.6137484,
       "notes_public": "Happy hour is at the bar only, 3–6pm daily.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live faccirestaurant.com/happy-hour/ HTTP 200 Last-Modified Thu, 20 Aug 2026; /baltimore/ same (HAPPY HOUR STARTS EARLY HERE EVERY DAY FROM 3 – 6P); /contact/ Phone: (443) 835 2789. Carry-out (443) 835 2765 is ops only — do not swap the public phone. Pin 414 Light Street / (443) 835-2789. Census 39.283737,-76.6137484. CityView Neighborhoods MapServer/0 query today on that point: Name=Otterbein. Site self-describes Inner Harbor; city Name wins. Citywide only. Do not invent an otterbein view. Do not fold into /inner-harbor. HH graphics still published Last-Modified Wed, 08 Oct 2025: HAPPY-HOUR-1-2-scaled.jpg + Small-plates-2-scaled.jpg. Visual-read: HAPPY HOUR MENU / AT THE BAR ONLY / 3-6PM DAILY. Keep site wording BRUSSEL and 3 – 6P. Contact hours 11A – 10P (no day split). notes_public is the bar-only GET-the-deal restriction.",
+      "ops_notes": "Deal Scout 2026-09-07: faccirestaurant.com/happy-hour/ images HAPPY-HOUR-1-2-scaled.jpg + Small-plates-2-scaled.jpg tesseract OCR. Prices unchanged.",
       "deals": [
         {
           "days": [
@@ -9185,9 +9183,9 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://faccirestaurant.com/happy-hour/",
-          "proof_quote": "HAPPY HOUR STARTS EARLY HERE EVERY DAY FROM 3 – 6P / HAPPY HOUR MENU AT THE BAR ONLY 3-6PM DAILY FACCI MARTINI 11 FACCI MARGARITA 11 FIGGIN PEACHY 12 BADA BING 12 SANGRIA 10 LEMON DROP MARTINI 12 WINE BY THE GLASS $1 OFF $2 OFF DRAFT & BOTTLE BEERS PARMESAN BRUSSEL SPROUTS 13 MOZZARELLA CAPRESE 12 FACCI BRUSCHETTA 8 SHRIMP & BACON 15 POLPETTE DELLA CASA 12 SMASH BURGER SLIDER 15 POMODORI & QUATTRO FORMAGGI FLAT BREAD 10",
+          "proof_quote": "AT THE BAR ONLY 3-6PM DAILY FACCI MARTINI 11 FACCI MARGARITA 11 FIGGIN PEACHY 12 BADA BING 12 SANGRIA 10 LEMON DROP MARTINI 12 WINE BY THE GLASS $1 OFF $2 OFF DRAFT & BOTTLE BEERS PARMESAN BRUSSEL SPROUTS 13 MOZZARELLA CAPRESE 12 FACCI BRUSCHETTA 8 SHRIMP & BACON 15 POLPETTE DELLA CASA 12 SMASH BURGER SLIDER 15 POMODORI & QUATTRO FORMAGGI FLAT BREAD 10",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -9198,9 +9196,7 @@
           ]
         }
       ],
-      "lat": 39.283737,
-      "lon": -76.6137484,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "fogo-de-chao",
@@ -9285,15 +9281,16 @@
       "id": "the-food-market",
       "name": "The Food Market",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1017 W 36th St, Baltimore, MD 21211",
       "phone": "(410) 366-0606",
       "source_url": "https://www.the-food-market.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
+      "last_verified": "2026-09-07",
+      "lat": 39.3308684,
+      "lon": -76.6332423,
       "notes_public": "Happy hour is bar only, Monday–Friday 4–6pm.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live the-food-market.com/happy-hour HTTP 200. Pin 1017 W 36th St / (410) 366-0606 (HH/about footer 410.366.0606). Census 39.3308684,-76.6332423. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. HH page: HAPPY HOUR Monday - Friday, 4-6pm, Bar only, menu varies per location. Keep 2.75 a pop. Hampden about page: pm happy hour Mon - Fri 3pm - 6pm and am happy hour Mon - Sun 10am - 2:30 pm (no $ on those two lines). About also: Amish Soft Pretzels are available by the each for $3 during happy hour! Conflict: about prints PM start 3pm; priced HH page prints 4-6pm. Overlap is 4–6pm. Ship the overlap from the priced page. AM window has no $ — not shipped. Do not invent the about-page $3 pretzel as a separate row. Do not invent a 3–4pm-only row. notes_public is the bar-only GET-the-deal restriction.",
+      "ops_notes": "Deal Scout 2026-09-07: the-food-market.com/happy-hour curl. Priced menu unchanged.",
       "deals": [
         {
           "days": [
@@ -9385,9 +9382,9 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.the-food-market.com/happy-hour",
-          "proof_quote": "HAPPY HOUR Monday - Friday, 4-6pm, Bar only, menu varies per location draft beer 5 white marble wit 7 wine by the glass 6 house bubbles 4 specialty cocktails 6 shot and a beer 6 edamame 4 cracker smack deluxe 7 truffle parmesan fries 5 amish soft pretzels 5 pan roasted mussels 12 buffalo pickles 6 garlicky shrimp torn bread 12 2.75 a pop braised pork taco crab ball steam bun 8 crazy corn wings 10 pat lafrieda burger 10 1/2 cooked blondie 5 heathbar bread pudding 5",
+          "proof_quote": "HAPPY HOUR Monday - Friday, 4-6pm, Bar only draft beer 5 white marble wit 7 wine by the glass 6 house bubbles 4 specialty cocktails 6 shot and a beer 6 edamame 4 cracker smack deluxe 7 truffle parmesan fries 5 amish soft pretzels 5 pan roasted mussels 12 buffalo pickles 6 garlicky shrimp torn bread 12 2.75 a pop braised pork taco crab ball steam bun 8 crazy corn wings 10 pat lafrieda burger 10 1/2 cooked blondie 5 heathbar bread pudding 5",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -9399,9 +9396,7 @@
           ]
         }
       ],
-      "lat": 39.3308684,
-      "lon": -76.6332423,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "gertrudes",
@@ -9625,14 +9620,15 @@
       "id": "hard-rock-cafe",
       "name": "Hard Rock Cafe",
       "neighborhood": "Inner Harbor",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "601 E Pratt St, Baltimore, MD 21202",
       "phone": "410-347-7625",
-      "source_url": "https://cafe.hardrock.com/baltimore/",
+      "source_url": "https://cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen_Menu_Update_Happy_Hour_No_Bleeds_1.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live cafe.hardrock.com/baltimore/ HTTP 200. Pin 601 E Pratt St / 410-347-7625 (JSON-LD telephone). Census 39.2860594,-76.6071214. CityView Neighborhoods MapServer/0 query today on that point: Name=Inner Harbor. Already in /inner-harbor. JSON-LD openingHours 11AM - 8PM — record in ops; do not copy it onto the deal clock. HH PDF still live Last-Modified Thu, 10 Apr 2025: cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen_Menu_Update_Happy_Hour_No_Bleeds_1.pdf. Location page: Work Hard, Party Harder / Join Us for Happy Hour! / Available Monday - Friday: 3pm - 6pm / $8 - $10 Eats / $5 - $7 Drinks. Stay off Orioles 15% off with a game ticket (event-contingent) and holiday 10% off booking by September 1, 2026 (one-off). Do not ship.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2860594,
+      "lon": -76.6071214,
+      "ops_notes": "Deal Scout 2026-09-07: cafe.hardrock.com/baltimore/ + HAPPY HOUR MENU PDF 25-HRC-01564 pdftotext. Item $ unchanged. Stay off Orioles 15% / Port Discovery / holiday booking promos.",
       "deals": [
         {
           "days": [
@@ -9696,9 +9692,9 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
-          "source_url": "https://cafe.hardrock.com/baltimore/",
-          "proof_quote": "Join Us for Happy Hour! Available Monday - Friday: 3pm - 6pm $8 - $10 Eats $5 - $7 Drinks. PDF: WORK HARD, HAPPY HOUR HARDER $8 EATS Nachos Jumbo Pretzel Tupelo Dippers Loaded Cheese Fries $10 EATS Chicken Sliders Wings Pepperoni Flatbread $5 DRINKS Domestic drafts $6 DRINKS Import/craft drafts Single liquor well drinks $7 DRINKS Select wines (6oz) / cocktails",
+          "verified_date": "2026-09-07",
+          "source_url": "https://cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen_Menu_Update_Happy_Hour_No_Bleeds_1.pdf",
+          "proof_quote": "Join Us for Happy Hour! Available Monday - Friday: 3pm - 6pm $8 - $10 Eats $5 - $7 Drinks. PDF: WORK HARD, HAPPY HOUR HARDER $8 EATS Nachos Jumbo Pretzel Tupelo Dippers Loaded Cheese Fries $10 EATS Chicken Sliders Wings Pepperoni Flatbread $5 Domestic drafts $6 Import/craft drafts Single liquor well drinks $7 Select wines (6oz) Cocktails",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -9709,9 +9705,7 @@
           ]
         }
       ],
-      "lat": 39.2860594,
-      "lon": -76.6071214,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "hershs",
@@ -10158,14 +10152,15 @@
       "id": "indigma",
       "name": "Indigma",
       "neighborhood": "Mid-Town Belvedere",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "900 Cathedral Street, Baltimore, Maryland 21201",
       "phone": "(443) 449-6483",
       "source_url": "https://www.indigmabistro.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live indigmabistro.com HTTP 200. Hours today on indigmamd.com (HTTP 200): Mon: Closed / Tue - Sun: 5:00 PM - 9:00 PM. Record in ops; do not copy onto the deal clock. Pin 900 Cathedral Street / (443) 449-6483. Census 39.2997892,-76.6174262. CityView Neighborhoods MapServer/0 query today on that point: Name=Mid-Town Belvedere. Already in /mount-vernon. indigmabistro.com quotes: Thaali / Saturdays & Sundays / Assortment veg and non-veg Thalis with many items served at your table side. / Sat & Sun: $16.95. Martini / Tuesdays & Thursdays / Specials on signature martinis — no $. Do not ship. Wine / Wednesdays / Specials on selected wine bottles — no $. Do not ship. Restaurant Week is a one-off. Do not ship. Prix-fixe assortment — omit food_categories (same class as Gertrude's Thursday). Do not invent brunch or all day.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2997892,
+      "lon": -76.6174262,
+      "ops_notes": "Deal Scout 2026-09-07: indigmabistro.com curl. Thaali $16.95 Sat/Sun only priced special. Martini/Wine specials no $. deals refreshed.",
       "deals": [
         {
           "days": [
@@ -10180,14 +10175,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.indigmabistro.com/",
           "proof_quote": "Thaali Saturdays & Sundays Assortment veg and non-veg Thalis with many items served at your table side. Sat & Sun: $16.95"
         }
       ],
-      "lat": 39.2997892,
-      "lon": -76.6174262,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "johnny-rads",
@@ -10314,14 +10307,15 @@
       "id": "kechy-pizza",
       "name": "Kechy Pizza Co",
       "neighborhood": "Downtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "207 E Redwood St, Baltimore, MD 21202",
       "phone": "(443) 977-4244",
       "source_url": "https://www.kechypizza.com/baltimore",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live kechypizza.com/baltimore HTTP 200. Also live kechypizza.com/specials-events-baltimore HTTP 200: Daily 4-7pm / $5 starters / $6 cocktails / $2 Natty Boh draft. Pin 207 E Redwood St / (443) 977-4244. Census 39.2888132,-76.6144056. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not invent a /downtown page. Westminster is a different door — do not mix. Baltimore page: G.O.A.T. HAPPY HOUR — DAILY 4–7PM / $5 starters / $6 cocktails / Red sangria on tap / $2 Natty Boh draft. Keep G.O.A.T. Site does not put a $ on sangria — do not invent one.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2888132,
+      "lon": -76.6144056,
+      "ops_notes": "Deal Scout 2026-09-07: kechypizza.com/baltimore curl. G.O.A.T. HH unchanged. Sangria still no $. Westminster not mixed. deals refreshed.",
       "deals": [
         {
           "days": [
@@ -10354,7 +10348,7 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.kechypizza.com/baltimore",
           "proof_quote": "G.O.A.T. HAPPY HOUR — DAILY 4–7PM $5 starters $6 cocktails Red sangria on tap $2 Natty Boh draft",
           "food_categories": [
@@ -10363,22 +10357,21 @@
           ]
         }
       ],
-      "lat": 39.2888132,
-      "lon": -76.6144056,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "bo-american-brasserie",
       "name": "B&O American Brasserie",
       "neighborhood": "Downtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "2 North Charles Street, Baltimore, Maryland, 21201",
       "phone": "443-692-6172",
       "source_url": "https://bandorestaurant.com/events",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live bandorestaurant.com/events HTTP 200. Pin 2 North Charles Street, Baltimore, Maryland, 21201 / 443-692-6172. Census 39.2897899,-76.6155584. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Hotel page brands The Morely at the same address with no $ and no clock — do not mix. Live: Stop in Monday - Friday from 4:30 p.m.- 6:30 p.m. / $3 Select Beer / $4 Sparkling and House Wines / $5 Cocktail of the Day / Pair those with our culinary team's signature bar snacks and flatbreads. Same page footer: Happy Hour Daily 4pm - 6pm — no $. Conflict. Record both clocks; do not pick one. Prices attach only to the weekday sentence — ship that row only. Do not add a times-only second row. Stay off: neighbor-gated 10% off lunch (Hey Neighbor!). $20 Power Lunch has no days. Magnum mimosas Sat–Sun have no $.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2897899,
+      "lon": -76.6155584,
+      "ops_notes": "Deal Scout 2026-09-07: bandorestaurant.com/events curl. Priced weekday HH 4:30–6:30 only. Footer Daily 4–6 no $. deals refreshed.",
       "deals": [
         {
           "days": [
@@ -10409,7 +10402,7 @@
           "end": 1110,
           "time_window": "4:30pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://bandorestaurant.com/events",
           "proof_quote": "Stop in Monday - Friday from 4:30 p.m.- 6:30 p.m. $3 Select Beer $4 Sparkling and House Wines $5 Cocktail of the Day Pair those with our culinary team's signature bar snacks and flatbreads",
           "food_categories": [
@@ -10418,9 +10411,7 @@
           ]
         }
       ],
-      "lat": 39.2897899,
-      "lon": -76.6155584,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "la-calle",
@@ -10471,15 +10462,16 @@
       "id": "la-cuchara",
       "name": "La Cuchara",
       "neighborhood": "Jones Falls Area",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "3600 Clipper Mill Rd. | Baltimore Md. 21211",
       "phone": "(443) 708-3838",
       "source_url": "https://www.lacucharabaltimore.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
+      "last_verified": "2026-09-07",
+      "lat": 39.3308911,
+      "lon": -76.6424639,
+      "ops_notes": "Deal Scout 2026-09-07: lacucharabaltimore.com/menu + HH PDF 7c36e5_40c343b38f2f4e92b28982a0a53cc420.pdf pdftotext. Fouders Oktoberfest spelling on PDF. deals refreshed.",
       "notes_public": "Bar happy hour.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live lacucharabaltimore.com/menu HTTP 200. HH PDF https://www.lacucharabaltimore.com/_files/ugd/7c36e5_40c343b38f2f4e92b28982a0a53cc420.pdf still the live file linked from /menu today (HTTP 200). Pin 3600 Clipper Mill Rd. | Baltimore Md. 21211 / (443) 708-3838. Census 39.3308911,-76.6424639. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Jones Falls Area has no home view — already in citywideOnly. Do not invent a /jones-falls-area view. Do not fold into /hampden. Hours on the homepage: Sunday through Thursday 5 pm - 9 pm / Friday and Saturday 5 pm - 10 pm. Record in ops. Do not copy onto the deal clock. Quotes from HH PDF today (text extract): Bar Happy Hour / M-F 5-7 pm / Half Price Pintxos and Raciones / Gin & Tonic du Jour $6 / Beer & Seltzer $6 / Wine / Glass $6 / Bottle $22. Keep PDF spelling Fouders Oktoberfest in ops. Beer/seltzer $6 set on the PDF: Czech M8 · Old Oriole Park · Optimal Wit · Estrella Galicia · Fouders Oktoberfest · Peabody Heights Seltzer rotating · NA beer rotating. Wine list: sparkling Penedés Cava Segura Viudas · white Vinho Verde Osvaldo Amado “Casal Amado” · red Almansa Familia Gil “Laya”. Do not invent pintxos names from the regular menu PDFs. Other /menu PDFs are dinner/regular — do not mix.",
       "deals": [
         {
           "days": [
@@ -10515,7 +10507,7 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.lacucharabaltimore.com/menu",
           "proof_quote": "Bar Happy Hour M-F 5-7 pm Half Price Pintxos and Raciones Gin & Tonic du Jour $6 Beer & Seltzer $6 Wine Glass $6 / Bottle $22",
           "food_categories": [
@@ -10524,22 +10516,21 @@
           ]
         }
       ],
-      "lat": 39.3308911,
-      "lon": -76.6424639,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "sally-os",
       "name": "Sally O's",
       "neighborhood": "Highlandtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "3531 Gough Street, Baltimore, MD 21224",
       "phone": "410-624-5631",
       "source_url": "https://sallyos.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live sallyos.com/ HTTP 200. Pin 3531 Gough Street, Baltimore, MD 21224 / 410-624-5631. Census 39.2883975,-76.5674018. CityView Neighborhoods MapServer/0 query today on that point: Name=Highlandtown. Highlandtown has no home view — add Highlandtown to citywideOnly once. Do not invent a /highlandtown view. Do not fold into /canton. Quotes today: Happy Hour Mon-Thurs 5-7 Taco Tuesday Fiesta every Tuesday, & Wine Cult Wednesdays w/50% off all bottles of wine. Also Happy Hour Monday-Thursday 5-7pm. Stay off: Mon–Thu 5–7 HH is times only (prices_published: false). Do not ship a 5–7 row. Taco Tuesday is named with no $. Do not ship. Natty Wine Cult (/natty-wine-cult/) is a paid club — do not mix club perks into this row.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2883975,
+      "lon": -76.5674018,
+      "ops_notes": "Deal Scout 2026-09-07: sallyos.com curl. Only priced weekly deal is Wine Cult Wed 50% bottles. HH Mon–Thu 5–7 no $. Taco Tue no $. deals refreshed.",
       "deals": [
         {
           "days": [
@@ -10553,7 +10544,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://sallyos.com/",
           "proof_quote": "Happy Hour Mon-Thurs 5-7 Taco Tuesday Fiesta every Tuesday, & Wine Cult Wednesdays w/50% off all bottles of wine",
           "food_categories": [
@@ -10561,9 +10552,7 @@
           ]
         }
       ],
-      "lat": 39.2883975,
-      "lon": -76.5674018,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "shottis-point",
@@ -10799,15 +10788,16 @@
       "id": "valentinos",
       "name": "Valentino's Restaurant",
       "neighborhood": "Westfield",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "6627 Harford Rd, Baltimore, MD 21214",
       "phone": "(410) 254-4700",
       "source_url": "https://www.valentinosbaltimore.com/happyhour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
+      "last_verified": "2026-09-07",
+      "lat": 39.3629187,
+      "lon": -76.5519198,
+      "ops_notes": "Deal Scout 2026-09-07: valentinosbaltimore.com/happyhour/ curl. Full HH $ list unchanged. In-House only / Excluding Holidays. deals refreshed.",
       "notes_public": "In-House only / Excluding Holidays.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live valentinosbaltimore.com/happyhour/ HTTP 200. Pin 6627 Harford Rd, Baltimore, MD 21214 / (410) 254-4700. Census 39.3629187,-76.5519198. CityView Neighborhoods MapServer/0 query today on that point: Name=Westfield. Westfield has no home view — add Westfield to citywideOnly once. Do not invent a /westfield view. Hours on the homepage today: Sun-Thur: 7am- 5am / Fri & Sat: 24 hours. Record in ops as printed (including the space in 7am- 5am). Do not copy onto the deal clock. Quotes today: In-House only / Excluding Holidays. Not valid with other offers, promotions or discounts. Monday - Friday / 3 pm - 7 pm. Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails / $7.00. Pub Wings / $8.00 / 5 Buffalo Wings (choose your flavor) & dip! Ravioli Tostati / $7.00. Bacon Cheddar Cups / $7.00. Thai Chili Shrimp / $7.00. Oyster in 1/2 Shell / $10.00 / 6 raw oysters. Clams in 1/2 Shell / $8.00 / 6 raw cherrystone clams. Cozze Bowl / $10.00 / 1lb PEI mussels sauteed (choose your sauce). 18% Gratuity Added To Each In-House Check. Keep printed names (Ravioli Tostati, Oyster in 1/2 Shell, Cozze Bowl). Do not ship sauce names (Providence / Voodoo / Fra Diavolo) as extra items. Record in ops: Not valid with other offers, promotions or discounts. and 18% Gratuity Added To Each In-House Check. Do not fold those into notes_public.",
       "deals": [
         {
           "days": [
@@ -10855,7 +10845,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.valentinosbaltimore.com/happyhour/",
           "proof_quote": "Monday - Friday 3 pm - 7 pm Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails $7.00 Pub Wings $8.00 Ravioli Tostati $7.00 Bacon Cheddar Cups $7.00 Thai Chili Shrimp $7.00 Oyster in 1/2 Shell $10.00 Clams in 1/2 Shell $8.00 Cozze Bowl $10.00",
           "food_categories": [
@@ -10866,9 +10856,7 @@
           ]
         }
       ],
-      "lat": 39.3629187,
-      "lon": -76.5519198,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "wet-city",

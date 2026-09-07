@@ -3290,15 +3290,16 @@
       "id": "blackwall-hitch",
       "name": "Blackwall Hitch",
       "neighborhood": "Inner Harbor",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "700 E Pratt St, Baltimore, MD 21202",
       "phone": "(443) 759-7176",
       "source_url": "https://www.blackwallhitchbaltimoremd.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-11",
-      "notes_public": "Advertises happy hour Monday to Friday 3-6pm; prices are not published on their menus page.",
-      "ops_notes": "Times only on site; menus page has regular prices not HH $. Deal Scout INNER_HARBOR 2026-08-06. | 2026-08-11 (CoS): unheld under Eric's times-only decision. Homepage states \"Happy Hour | Mon - Fri | 3PM-6PM\" twice (one instance prefixed \"All Day\", but both carry the explicit 3PM-6PM clock, so the clock is used). Still no dollar amount anywhere on the site.",
+      "last_verified": "2026-09-07",
+      "lat": 39.287043,
+      "lon": -76.606434,
+      "ops_notes": "Deal Scout 2026-09-07: blackwallhitchbaltimoremd.com raw — Happy Hour Mon–Fri 3PM-6PM twice; no $ anywhere. times-only.",
+      "notes_public": "Advertises happy hour Monday to Friday 3-6pm; prices are not published on their website.",
       "deals": [
         {
           "days": [
@@ -3318,12 +3319,12 @@
           "time_window": "3pm-6pm",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-11"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.blackwallhitchbaltimoremd.com/",
+          "proof_quote": "All Day Happy Hour | Mon – Fri | 3PM-6PM / Beverages Happy Hour | Mon – Fri | 3PM-6PM"
         }
       ],
-      "lat": 39.287043,
-      "lon": -76.606434,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "barracudas-locust-point",
@@ -5650,14 +5651,15 @@
       "id": "brass-tap-baltimore",
       "name": "Brass Tap Baltimore",
       "neighborhood": "Mid-Town Belvedere",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1205 W Mt Royal Ave, Baltimore, MD 21217",
       "phone": "(888) 901-2337",
       "source_url": "https://www.brasstapbeerbar.com/menus/happyhour/71.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. HH prices from PDF; window NOT on PDF (says ASK SERVER FOR TIMES) — window from location page https://www.brasstapbeerbar.com/baltimore text: Happy Hour 2pm-7pm Monday-Saturday. source_document_date=2026-05-30 (HTTP Last-Modified); footer 5/26-B. PDF layout re-check CoS 2026-08-07: Coconut Key Lime Pie is in the $4.50 SHOTS group (y above $5 label), not $5 with Golden Truth/Select Pints/House Wine. Regular $6 → HH $4.50. Drink of the Week $7 — do not pin rotating cocktail name. Late Night HH is a separate unread menu (menus/latehappyhour/71.pdf) — not loaded. Deleted $6 Shots row 2026-08-07 (CoS): that is regular shot price. Phone is national toll-free as published. Archive RESEARCH/ig-evidence-2026-08-05/BrassTap_HH.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: brass-tap HH PDF pdftotext (pdfs/brass-tap.pdf; raw .txt was binary). Prices unchanged vs 2026-08-07. Window not on PDF.",
+      "lat": 39.3067858,
+      "lon": -76.6196397,
       "deals": [
         {
           "days": [
@@ -5674,6 +5676,10 @@
               "price": "$4.50"
             },
             {
+              "text": "Coconut Key Lime Pie $4.50",
+              "price": "$4.50"
+            },
+            {
               "text": "Golden Truth $5",
               "price": "$5"
             },
@@ -5684,10 +5690,6 @@
             {
               "text": "House Wine $5",
               "price": "$5"
-            },
-            {
-              "text": "Coconut Key Lime Pie $4.50",
-              "price": "$4.50"
             },
             {
               "text": "Premium Wells $6",
@@ -5738,7 +5740,7 @@
           "end": 1140,
           "time_window": "2pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.brasstapbeerbar.com/menus/happyhour/71.pdf",
           "food_categories": [
             "drink",
@@ -5748,25 +5750,25 @@
             "burger",
             "tacos",
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Drink Specials $4.50 FIREBALL GREEN TEA SKREWBALL … COCONUT KEY LIME PIE $5 GOLDEN TRUTH SELECT PINTS HOUSE WINE $6 PREMIUM WELLS SANGRIA $7 DRINK OF THE WEEK Food Specials $7 ONION RINGS MAC 'N CHEESE BITES $8 PRETZEL … PEPPERONI PIZZA $9 CHICKEN QUESADILLA CHEESEBURGER* & FRIES 6 BOOM BOOM SHRIMP 2 GRILLED POBLANO CHICKEN TACOS ASK SERVER FOR TIMES"
         }
       ],
-      "lat": 39.3067858,
-      "lon": -76.6196397,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "coral-wig",
       "name": "The Coral Wig",
       "neighborhood": "Mount Vernon",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "2 E. Read St., Historic Mount Vernon, Baltimore, MD 21202",
       "source_url": "https://www.thecoralwig.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: thecoralwig.com raw — HH prices/times unchanged. No invent $ for Mon mojitos/margs/mai tais.",
       "notes_public": "Mondays: industry specials and happy hour prices all night.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Mon–Fri HH 5–7 (opens 5). No phone — site +852 1234 5678 is Squarespace placeholder. Monday all-night HH in notes_public only; do not invent prices for named mojitos/margs. NSA Mount Vernon. Archive RESEARCH/ig-evidence-2026-08-05/CoralWig_site_extract_2026-08-07.txt. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "lat": 39.299818,
+      "lon": -76.6154716,
       "deals": [
         {
           "days": [
@@ -5794,30 +5796,30 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thecoralwig.com/",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy Hour: Monday - Friday: 5:00 - 7:00 pm $10 Painkillers $2 off beer, wine, Estate Martinis 1/2 price bottles of Sparkling wine"
         }
       ],
-      "lat": 39.299818,
-      "lon": -76.6154716,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "magdalena",
       "name": "Magdalena",
       "neighborhood": "Mid-Town Belvedere",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "205 E Biddle St, Baltimore, MD 21202",
       "phone": "(410) 514-0303",
       "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Magdalena menu raw #happy-hour — prices/times unchanged. Do not pin rotating cocktail name.",
       "notes_public": "At The Ivy Hotel. Happy hour drinks Tue–Fri 4:30–6:30.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Window Tue–Fri 4:30–6:30 as menu states — footer 5pm is dining-room reservation schedule, not door time (same ruling as Owl Bar). Rotating cocktail = tier text only, do not pin this week's name. Address 205 E Biddle St (Ivy footer). NSA Mid-Town Belvedere under mount-vernon view. Archive RESEARCH/ig-evidence-2026-08-05/Magdalena_menu_extract_2026-08-07.txt. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "lat": 39.3033608,
+      "lon": -76.613036,
       "deals": [
         {
           "days": [
@@ -5864,29 +5866,29 @@
           "end": 1110,
           "time_window": "4:30pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy Hour drinks available Tuesday - Friday from 4:30pm - 6:30pm … La Fiera … 7 … Barnard Griffin … 7 … Valle Reale … 7 … Vermu Spritz 7 … Weekly Rotating Cocktail Special 7 … Peabody Heights … 5 … Good Time Pilsner … 5"
         }
       ],
-      "lat": 39.3033608,
-      "lon": -76.613036,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "bar-dali",
       "name": "Bar Dalí",
       "neighborhood": "Mount Vernon",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "909 N. Charles St., Baltimore, MD 21201",
       "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: happy-hour-june-2026-bar-dali.pdf image (no text layer) — visual confirm prices unchanged. PDF ModDate 2026-07-01.",
       "notes_public": "Vermouth hour Mon–Thu 4–6.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Image PDF (no text layer) — items from visual/OCR read, not pdftotext. source_document_date=2026-06-30 (PDF metadata). Window LA HORA DE VERMUT Mon–Thu 4–6. Ship \"20% off Care Bottles $28\" as one line (states saving + price). Address 909 N Charles from Deal Scout — CoS did not confirm on PDF. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/BarDali_HH_june_2026.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md. notes_public: cut unsourced room description (CoS 2026-08-08).",
+      "lat": 39.3000388,
+      "lon": -76.6155273,
       "deals": [
         {
           "days": [
@@ -5921,16 +5923,15 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "LA HORA DE VERMUT Mondays – Thursdays 4:00 PM – 6:00 PM Mahou & Natty Boh Drafts (17oz) $5 Draft Vermouth $6 Care Wines By The Glass $7 Care Bottles $28 (20% off) Dawn & Stormy $10"
         }
       ],
-      "lat": 39.3000388,
-      "lon": -76.6155273,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "monarque",
@@ -6091,15 +6092,16 @@
       "id": "wicked-sisters",
       "name": "Wicked Sisters",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "3845 Falls Rd, Baltimore, MD 21211",
       "phone": "(410) 878-0884",
       "source_url": "https://www.wickedsistershampden.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: wickedsistershampden.com raw — HH refresh + added priced DAILY SPECIALS block from same page.",
       "notes_public": "Happy hour weekdays 3–6 at the bar and on the patio.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. WEEKDAYS = Mon–Fri 3–6. Regular-price proof on same page: Zadies Lager $5→$3 HH; Old Fashioned $13→$10; House Martini $14/$13→$11 — record for future summary line. Daily specials on site not loaded (HH block only). Archive RESEARCH/ig-evidence-2026-08-05/WickedSisters_HH_extract_2026-08-07.txt. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "lat": 39.3350174,
+      "lon": -76.6359819,
       "deals": [
         {
           "days": [
@@ -6163,32 +6165,160 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.wickedsistershampden.com/",
           "food_categories": [
             "drink",
             "wings",
             "pasta/comfort",
             "small-plate/apps"
-          ]
+          ],
+          "proof_quote": "HAPPY HOUR WEEKDAYS 3-6PM At THE BAR AND ON THE PATIO $2 off SELECT drafts $3 Zadies LAGER $4 OMG 16 oz. CANS $6 Wines $8 House Liquor $9 SpritzES $10 Old Fashioned $10 Margarita $10 Whiskey Sour $11 Martini $10 mac n' cheese $10 wings $10 FRIED PICKLES $10 BRUSSELs Sprouts"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$10 Baked Meatballs (lunch until 3pm)",
+              "price": "$10"
+            },
+            {
+              "text": "$4 off Mussels and Brussels Appetizers",
+              "price": "$4 off"
+            },
+            {
+              "text": "$10 House Manhattans",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (meatballs lunch until 3pm)",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ],
+          "proof_quote": "MONDAY LUNch - MEATBALL MONDAY (Until 3PM) $10 Baked Meatballs DINNER … $4 off Mussels and Brussels Appetizers $10 House Manhattans"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "50% off all Appetizers (lunch until 3pm)",
+              "price": "50% off"
+            },
+            {
+              "text": "$10 Martinis (Tito's / Ford's / Cosmo / Espressotini)",
+              "price": "$10"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (apps lunch until 3pm)",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ],
+          "proof_quote": "TUESDAY LUNCH - 'TIZER TUESDAY (Until 3PM) 50% off all Appetizers DINNER - 'TINI TUESDAY $10 Martinis"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$12 Wraps (lunch until 3pm; changes weekly)",
+              "price": "$12"
+            },
+            {
+              "text": "$14 Double Patty Smash Burgers",
+              "price": "$14"
+            },
+            {
+              "text": "50% Off Wine by the Bottle",
+              "price": "50% off"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (wraps lunch until 3pm)",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "burger",
+            "drink"
+          ],
+          "proof_quote": "WEDNESDAY … $12 Wraps … $14 Double Patty Smash Burgers 50% Off Wine by the Bottle"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$12 Paninis (lunch until 3pm; changes weekly)",
+              "price": "$12"
+            },
+            {
+              "text": "$12-$14 Classic Cocktails",
+              "price": "$12"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day (paninis lunch until 3pm)",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "sandwich/cheesesteak",
+            "drink"
+          ],
+          "proof_quote": "THURSDAY … $12 Paninis … Throwback Entrées (Changes Weekly) $12-$14 Classic Cocktails"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 off all Flatbreads (lunch until 3pm)",
+              "price": "$3 off"
+            }
+          ],
+          "start": null,
+          "end": 900,
+          "time_window": "lunch until 3pm",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.wickedsistershampden.com/",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "FRIDAY LUNCH - FLATBREAD FRIDAY (UNTIL 3PM) $3 off all Flatbreads"
         }
       ],
-      "lat": 39.3350174,
-      "lon": -76.6359819,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "the-bluebird",
       "name": "The Bluebird",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "3600 Hickory Avenue, Baltimore, MD 21211",
       "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: thebluebirdbaltimore.com/happy-hour raw — prices/times unchanged; classic cocktails listed by name.",
       "notes_public": "Cocktail Room happy hour Mon–Fri 5:00–6:30.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. Select classic cocktails $10 tier expands on page to Champagne Cocktail, Lemon Drop, Aviation — names for monitor match, not separate card rows. Address from HH page: 3600 Hickory Avenue. No phone on site. Archive RESEARCH/ig-evidence-2026-08-05/Bluebird_HH_extract_2026-08-07.txt. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "lat": 39.3312305,
+      "lon": -76.6339767,
       "deals": [
         {
           "days": [
@@ -6200,15 +6330,23 @@
           ],
           "items": [
             {
-              "text": "Select classic cocktails $10",
+              "text": "Champagne Cocktail $10",
               "price": "$10"
             },
             {
-              "text": "House wines $10",
+              "text": "Lemon Drop $10",
               "price": "$10"
             },
             {
-              "text": "Rotating draft $5/$7",
+              "text": "Aviation $10",
+              "price": "$10"
+            },
+            {
+              "text": "House Wines (red or white) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Rotating Draft $5/$7",
               "price": "$5"
             },
             {
@@ -6228,18 +6366,17 @@
           "end": 1110,
           "time_window": "5pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
           "food_categories": [
             "drink",
             "burger",
             "small-plate/apps"
-          ]
+          ],
+          "proof_quote": "Join us in the Cocktail Room, Monday through Friday from 5:00pm-6:30pm Champagne Cocktail $10 Lemon Drop $10 Aviation $10 House Wines (red or white) $10 Rotating Draft $5/$7 BIRDSEED … $3 FRITES … $9 THE BLUEBIRD CHEESEBURGER … $13"
         }
       ],
-      "lat": 39.3312305,
-      "lon": -76.6339767,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "of-love-and-regret",
@@ -7529,15 +7666,16 @@
       "id": "phillips-seafood-inner-harbor",
       "name": "Phillips Seafood",
       "neighborhood": "Inner Harbor",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "601 E. Pratt Street, Baltimore, MD 21202",
       "phone": "(410) 685-6600",
       "source_url": "https://phillipsseafood.com/promotion/happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
+      "last_verified": "2026-09-07",
+      "lat": 39.2860594,
+      "lon": -76.6071214,
+      "ops_notes": "Deal Scout 2026-09-07: phillipsseafood.com/promotion/happy-hour/ raw — $5 drinks + food favorites unchanged; bar/lounge Mon–Fri 3–6pm.",
       "notes_public": "Happy hour is bar and lounge only, Monday–Friday 3–6pm.",
-      "ops_notes": "Deal Scout 2026-08-19. Official promotion page HTTP 200: $5 beer, wine, sangria & specialty drinks; $8 Orange Crush; $6 Classic Bellini; Hush Puppies $9. Quote: 'Available from 3pm – 6pm Monday – Friday in the bar and lounge only.' Homepage/location page also: '$5 Drinks Happy Hour Weekdays 3-6 pm'. Nominatim 39.2860594,-76.6071214 neighbourhood=Inner Harbor (Power Plant). NSA MapServer unreachable; label matches inner-harbor view. Deal Scout 2026-08-19 review fix: same-page HAPPY HOUR FOOD FAVORITES now shipped with hush puppies — steamed mussels $14, steamed shrimp $16, crabby pretzel sticks $19, crab & shrimp quesadilla $19, crab hot dog $16. Source: https://phillipsseafood.com/promotion/happy-hour/",
       "deals": [
         {
           "days": [
@@ -7589,9 +7727,9 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://phillipsseafood.com/promotion/happy-hour/",
-          "proof_quote": "$5 Drinks Happy Hour / Join us for $5 beer, wine, sangria & specialty drinks in the bar & lounge! Weekdays 3-6 pm / Available from 3pm – 6pm Monday – Friday in the bar and lounge only. / HAPPY HOUR FOOD FAVORITES / Hush Puppies $9 / Steamed Mussels $14 / Steamed Shrimp $16 / Crabby Pretzel Sticks $19 / Crab & Shrimp Quesadilla $19 / Crab Hot Dog $16",
+          "proof_quote": "Join us for $5 beer, wine, sangria & specialty drinks in the bar & lounge! Weekdays 3-6 pm / $5 Beer, Wine & Cocktails / $8 Orange Crush / $6 Classic Bellini / Hush Puppies $9 / Steamed Mussels $14 / Steamed Shrimp $16 / Crabby Pretzel Sticks $19 / Crab & Shrimp Quesadilla $19 / Crab Hot Dog $16 / Available from 3pm – 6pm Monday – Friday in the bar and lounge only.",
           "food_categories": [
             "drink",
             "small-plate/apps",
@@ -7599,53 +7737,24 @@
           ]
         }
       ],
-      "lat": 39.2860594,
-      "lon": -76.6071214,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "holy-frijoles",
       "name": "Holy Frijoles",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "908 W 36th Street, Baltimore, MD 21211",
       "phone": "(410) 235-2326",
       "source_url": "https://www.holyfrijoles.net/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
-      "notes_public": "Happy hour Monday–Friday 5–7pm. The official site does not publish prices.",
-      "ops_notes": "Deal Scout 2026-08-19. Official homepage HTTP 200: 'Happy Hour Monday – Friday 5-7pm' with no dollar prices. Shipped times-only (prices_published false), same shape as The Outpost / Blackwall Hitch. Aggregator $3 draft / $5 margarita figures are leads only — not used. Nominatim 39.3312501,-76.6314458 neighbourhood=Hampden. NSA MapServer unreachable; label matches hampden view.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Happy Hour"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-08-19",
-          "source_url": "https://www.holyfrijoles.net/",
-          "proof_quote": "Happy Hour / Monday – Friday 5-7pm",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
       "lat": 39.3312501,
       "lon": -76.6314458,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+      "ops_notes": "Deal Scout 2026-09-07: holyfrijoles.net curl captcha; WebFetch shows 'Happy Hour Monday – Friday 5-7pm' with no $. deals=[] clear.",
+      "notes_public": "Site lists happy hour Monday–Friday 5–7pm; no prices published this pass.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "captain-james-landing",
@@ -7945,14 +8054,15 @@
       "id": "blue-pit-bbq",
       "name": "Blue Pit BBQ",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "1601 Union Ave, Baltimore, MD 21211",
       "phone": "(443) 948-5590",
       "source_url": "https://bluepitbbq.com/menu/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
-      "ops_notes": "Builder 2026-08-19 off census + live /menu/ HTTP 200. Pin 1601 Union Ave / (443) 948-5590. Nominatim 39.331849,-76.640820. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. Do not invent IG 3–7. One Happy Hour row only: Every Wednesday – Friday from 3 pm to 6 pm. Skip Flights & Bites in the same accordion (Heaven Hill Private Barrel Flight with 3 Sliders $29, Buffalo Trace Single Barrel Fight with 3 Sliders $27). notes_public omitted — no dine-in / bar-only on the happy-hour block today.",
+      "last_verified": "2026-09-07",
+      "lat": 39.331849,
+      "lon": -76.64082,
+      "ops_notes": "Deal Scout 2026-09-07: bluepitbbq.com/menu/ curl captcha; WebFetch HH block with $. Skip Flights & Bites. deals refreshed.",
       "deals": [
         {
           "days": [
@@ -7994,7 +8104,7 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://bluepitbbq.com/menu/",
           "proof_quote": "Happy Hour / Every Wednesday – Friday from 3 pm to 6 pm / 1 Slider 5 Pulled Pork, Pulled Chicken or Chopped Brisket with Slaw / 3 Sliders 12 / Select Draft Beers 5 / Non-Alcoholic Beer 5 / Glasses of Wine 5 / House Old Fashioned 7 with Benchmark / Signature Mule 7",
           "food_categories": [
@@ -8003,9 +8113,7 @@
           ]
         }
       ],
-      "lat": 39.331849,
-      "lon": -76.64082,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "bunnys-buckets",
@@ -8406,14 +8514,15 @@
       "id": "chucks-trading-post",
       "name": "Chuck's Trading Post",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1506 W 36th St, Baltimore, MD 21211",
       "phone": "(410) 366-0178",
       "source_url": "https://www.chuckstradingpost.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live chuckstradingpost.com HTTP 200. Pin 1506 W 36th St / (410) 366-0178. Census 39.3301604,-76.6394985. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. One row: Wednesday burger night 5pm-8pm (Burger, Fries, and 1 beer) $15. Stay off Thirsty Thursday 4pm-8pm — no $. Stay off SPECIALS WEEK OF August 11, 2026 brunch cocktails — dated week, not a standing weekly row (still that header today). Site hours: Mon closed · Tue 8am–3pm · Wed 8am–3pm + burger night 5–8 · Thu 8am–3pm · Fri 8am–3pm · Sat 9am–3pm · Sun 9am–3pm. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "lat": 39.3301604,
+      "lon": -76.6394985,
+      "ops_notes": "Deal Scout 2026-09-07: chuckstradingpost.com raw — Wed Burger Night 5-8 PM $15 unchanged.",
       "deals": [
         {
           "days": [
@@ -8428,7 +8537,7 @@
           "start": 1020,
           "end": 1200,
           "time_window": "5pm-8pm",
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.chuckstradingpost.com/",
           "proof_quote": "Wednesday: BURGER NIGHT 5-8 PM (Burger, Fries, and 1 beer) $15",
           "food_categories": [
@@ -8437,23 +8546,22 @@
           ]
         }
       ],
-      "lat": 39.3301604,
-      "lon": -76.6394985,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "cinghiale",
       "name": "Cinghiale",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "822 Lancaster St, Baltimore, MD 21202",
       "phone": "(410) 547-8282",
       "source_url": "https://www.cgeno.com/specials-and-events",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
+      "last_verified": "2026-09-07",
+      "lat": 39.2824892,
+      "lon": -76.6008354,
+      "ops_notes": "Deal Scout 2026-09-07: cgeno.com/specials-and-events raw — Cellar Raid Tue 50% off bottles unchanged. Daily HH 4–6pm no $; not invented.",
       "notes_public": "Cellar Raid is Enoteca or bar during lunch and dinner.",
-      "ops_notes": "Builder 2026-08-20 off census + live /specials-and-events HTTP 200. Pin 822 Lancaster St / (410) 547-8282. Census 39.2824892,-76.6008354. CityView Neighborhoods MapServer/0 query today on that point: Name=Harbor East. Already in /inner-harbor. Do not invent a Harbor East-only view. Cellar Raid Tuesdays only. Keep site wording all of bottles. Daily HH DAILY, MON-SUN | 4-6 PM / BAR + PATIO — no $ on that page; do not invent aperitivo prices from the specials copy. Linked HH PDF CG_HH.pdf HTTP 200 Last-Modified 2026-07-22 does extract snack/$7 drink prices today. Not this ticket. Do not load it. Dated events: Paitin wine dinner Sep 1 / Spritz & Salumi Aug 23 / Opera Salon Sep 13. Pin no Mon–Sun 4–6 HH row.",
       "deals": [
         {
           "days": [
@@ -8468,7 +8576,7 @@
           "start": null,
           "end": null,
           "time_window": "Lunch and Dinner",
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.cgeno.com/specials-and-events",
           "proof_quote": "EVERY TUESDAY | ENOTECA + BAR Receive 50% off all of bottles of wine when you dine with us in our Enoteca or bar during Lunch and Dinner.",
           "food_categories": [
@@ -8476,9 +8584,7 @@
           ]
         }
       ],
-      "lat": 39.2824892,
-      "lon": -76.6008354,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "clase-lounge",

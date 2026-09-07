@@ -2945,14 +2945,15 @@
       "id": "tagliata",
       "name": "Tagliata",
       "neighborhood": "Inner Harbor",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "1012 Fleet Street, Baltimore, MD 21202",
       "phone": "(410) 244-5830",
       "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "HH from venue PDF Tagliata_HappyHour_2.19.26-WEB.pdf (Deal Scout visual read 2026-08-06). Bar only. Nominatim places address Inner Harbor; appears on Inner Harbor view with Harbor East. Little Italy edge — polygon honesty over marketing.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Tagliata_HappyHour_2.19.26-WEB.pdf pdftotext — Sun–Fri 4–6 bar-only confirmed.",
+      "lat": 39.284349,
+      "lon": -76.600124,
       "deals": [
         {
           "days": [
@@ -3017,8 +3018,9 @@
           "end": 1080,
           "time_window": "4pm-6pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
+          "proof_quote": "HAPPY HOUR Sunday through Friday 4:00pm –6:00pm *At the bar only* WINE $6 BEER $5 SPIRITS $8 Oysters $8 ... Charcuterie & Cheese $10",
           "food_categories": [
             "drink",
             "seafood/crab",
@@ -3027,9 +3029,7 @@
           ]
         }
       ],
-      "lat": 39.284349,
-      "lon": -76.600124,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "homeslyce-canton",
@@ -4267,14 +4267,15 @@
       "id": "papis-taco-joint-hampden",
       "name": "Papi's Taco Joint (Hampden)",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "3820 Falls Road, Baltimore, MD 21211",
       "phone": "(443) 449-5796",
       "source_url": "https://papistacojoint.com/hampden",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout deal-first hit #1 Hampden 2026-08-07. Use /hampden path only. City-wide * board picks up Hampden automatically; no Hampden switcher view yet. Restaurant Week banner seasonal — not loaded. Source: RESEARCH/HAMPDEN_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: papistacojoint.com/hampden.",
+      "lat": 39.334278,
+      "lon": -76.636191,
       "deals": [
         {
           "days": [
@@ -4286,20 +4287,33 @@
           ],
           "items": [
             {
-              "text": "$5 Lunazul Blanco Shots · All Draft Beers",
+              "text": "2-for-1 rail drinks, drafts, bombs, and Deep Eddy & sodas",
+              "price": "2 for 1"
+            }
+          ],
+          "start": 900,
+          "end": 960,
+          "time_window": "3pm-4pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-07",
+          "source_url": "https://papistacojoint.com/hampden",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "POWER HOUR WEEKDAYS 3PM-4PM 2-FOR-1 RAIL DRINKS, DRAFTS, BOMBS, AND DEEP EDDY & SODAS"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 drinks (Fiesta Hour)",
               "price": "$5"
-            },
-            {
-              "text": "$6 Lunazul Reposado · Yuca Frita",
-              "price": "$6"
-            },
-            {
-              "text": "$7 Lunazul Añejo · wine · house sangria · queso fundido · platanos",
-              "price": "$7"
-            },
-            {
-              "text": "$8 House Margaritas · Elote · 3 Gringo Style Tacos",
-              "price": "$8"
             },
             {
               "text": "$10 Happy Hour Wings",
@@ -4310,14 +4324,13 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
             "drink",
-            "wings",
-            "tacos",
-            "small-plate/apps"
-          ]
+            "wings"
+          ],
+          "proof_quote": "FIESTA HOUR WEEKDAYS 3PM-6PM $10 HAPPY HOUR WINGS $5 DRINKS"
         },
         {
           "days": [
@@ -4339,10 +4352,9 @@
           "start": null,
           "end": null,
           "time_window": "all day (enchiladas until 5pm)",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
-            "tacos",
             "drink"
           ]
         },
@@ -4362,7 +4374,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
             "tacos",
@@ -4379,23 +4391,21 @@
               "price": "$10"
             },
             {
-              "text": "$10 wings after 5",
+              "text": "$10 Papi's Wings after 5",
               "price": "$10"
             },
             {
-              "text": "$7 wine",
+              "text": "$7 glasses of wine",
               "price": "$7"
             }
           ],
           "start": null,
           "end": null,
           "time_window": "all day (burritos until 5pm; wings after 5pm)",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
-            "tacos",
-            "wings",
-            "drink"
+            "wings"
           ]
         },
         {
@@ -4415,10 +4425,9 @@
           "start": null,
           "end": null,
           "time_window": "all day (quesadillas until 5pm)",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
-            "tacos",
             "drink"
           ]
         },
@@ -4438,7 +4447,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://papistacojoint.com/hampden",
           "food_categories": [
             "fajitas",
@@ -4446,9 +4455,7 @@
           ]
         }
       ],
-      "lat": 39.334278,
-      "lon": -76.636191,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "harbor-tandoor",
@@ -4844,15 +4851,15 @@
       "id": "james-joyce-irish-pub",
       "name": "James Joyce Irish Pub & Restaurant",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "616 President Street, Baltimore, MD 21202",
       "phone": "(410) 801-6596",
       "source_url": "https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy hour is bar only.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07 from venue HH PDF HH-03.12.26.pdf. Mon–Fri 4–7pm bar only. Weekly specials page 2 labels without $ — not shipped. source_document_date=2026-04-27 (HTTP Last-Modified); filename revision label 03.12.26 ops only. Source: RESEARCH/INNER_HARBOR_DEALS.md; archive RESEARCH/ig-evidence-2026-08-05/JJ_HH_03.12.26.pdf.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: HH PDF re-read Mon–Fri 4–7 bar only. Beer/wine/spirits/cocktail + pub fare unchanged.",
+      "lat": 39.2839634,
+      "lon": -76.6027527,
       "deals": [
         {
           "days": [
@@ -4908,7 +4915,7 @@
           "end": 1140,
           "time_window": "4pm-7pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.pdf",
           "food_categories": [
             "drink",
@@ -4918,23 +4925,21 @@
           ]
         }
       ],
-      "lat": 39.2839634,
-      "lon": -76.6027527,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "azumi",
       "name": "Azumi",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "725 Aliceanna St, Baltimore, MD 21202",
       "phone": "(443) 220-0477",
       "source_url": "https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/05/Azumi_HH_5.5.26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy hour is inside bar only.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07 from Azumi_HH_5.5.26.pdf (Mon–Fri 3–6 inside bar). Landing https://azumirestaurant.com/baltimore. source_document_date=2026-05-05 (HTTP Last-Modified; matches filename). Source: RESEARCH/INNER_HARBOR_DEALS.md; archive RESEARCH/ig-evidence-2026-08-05/Azumi_HH_5.5.26.pdf.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Azumi_HH_5.5.26.pdf pdftotext — Mon–Fri 3–6 inside bar confirmed.",
+      "lat": 39.282876,
+      "lon": -76.60286,
       "deals": [
         {
           "days": [
@@ -5014,8 +5019,9 @@
           "end": 1080,
           "time_window": "3pm-6pm (inside bar)",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/05/Azumi_HH_5.5.26.pdf",
+          "proof_quote": "Monday – friday | 3-6 pm at inside bar $10 COCKTAILS $9 WINE & SPIRITS $5 SHOCHU SMALL BITES ... $7 HANDROLLS",
           "food_categories": [
             "drink",
             "sushi",
@@ -5024,25 +5030,26 @@
           ]
         }
       ],
-      "lat": 39.282876,
-      "lon": -76.60286,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "notes_public": "Happy hour is inside bar only.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "order-of-the-ace",
       "name": "Order of the Ace",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "720 Aliceanna Street, Baltimore, MD 21202",
+      "phone": null,
       "source_url": "https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Live music venue; 21+. Happy hour Tue–Fri 5–7.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. Ship Tue–Fri 5–7pm (site hours; closed Sun–Mon — PDF “weekdays” does not invent Monday). Both salads $7 (chopped + Caesar). Phone blank (site contact has address + Email Us only). source_document_date=2025-09-12 from HTTP Last-Modified (not filename 5.6.25). Source: RESEARCH/INNER_HARBOR_DEALS.md; archive RESEARCH/ig-evidence-2026-08-05/OOTA_HH_5.6.25.pdf.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: OOTA HH PDF weekdays.",
+      "lat": 39.283446,
+      "lon": -76.602183,
       "deals": [
         {
           "days": [
+            "mon",
             "tue",
             "wed",
             "thu",
@@ -5102,7 +5109,7 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf",
           "food_categories": [
             "drink",
@@ -5110,12 +5117,11 @@
             "small-plate/apps",
             "burger",
             "pasta/comfort"
-          ]
+          ],
+          "proof_quote": "HAPPY HOUR WEEKDAYS | 5-7PM"
         }
       ],
-      "lat": 39.283446,
-      "lon": -76.602183,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "ajs-on-hanover",
@@ -5138,15 +5144,15 @@
       "id": "nicks-fish-house",
       "name": "Nick's Fish House",
       "neighborhood": "Port Covington",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "2600 Insulator Drive, Baltimore, MD 21230",
       "phone": "(410) 347-4123",
       "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy hour is bar area only.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. PDF Mon–Thu 3–6 bar area only; every line matches CoS pdftotext. source_document_date=2026-04-02 (HTTP Last-Modified). Menus landing https://nicksfishhouse.com/baltimore-seafood-menus/. Honest Port Covington label — not Locust Point; locust-point view extended with Port Covington. Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/Nicks-Happy-Hour-8.pdf. Source: RESEARCH/LOCUST_POINT_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Nick's HH PDF re-read. Core drink HH unchanged.",
+      "lat": 39.2606119,
+      "lon": -76.6135738,
       "deals": [
         {
           "days": [
@@ -5205,7 +5211,7 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
           "food_categories": [
             "drink",
@@ -5216,9 +5222,7 @@
           ]
         }
       ],
-      "lat": 39.2606119,
-      "lon": -76.6135738,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "rusty-scupper",
@@ -5654,15 +5658,15 @@
       "id": "minato-sushi-bar",
       "name": "Minato Sushi Bar",
       "neighborhood": "Mid-Town Belvedere",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1013 N Charles St, Baltimore, MD 21201",
       "phone": "(410) 332-0332",
       "source_url": "https://www.minatosushibar.com/happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Dine-in only. Parties of 6 or more: 20% gratuity added.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. Mon–Sat 4–7 (no Sunday HH; open daily 11:30–9). source_url is the HTML happy-hour page — PDF returns 403 to plain fetch (browser UA only); HTML carries same prices. Board loads 8 price tiers (not full menu rows) per CoS 2026-08-07 after Eric card-length feedback. PDF archive RESEARCH/ig-evidence-2026-08-05/Minato_Happy-Hour-2025.pdf; source_document_date=2025-07-12 when readable. Site self-describes Mt Vernon Cultural District; NSA Mid-Town Belvedere. Host has injected Kalshi affiliate spam in footer — prices unaffected. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: HH page reconfirmed Mon–Sat 4–7 dine-in apps/maki + cocktail prices.",
+      "lat": 39.3016059,
+      "lon": -76.6156059,
       "deals": [
         {
           "days": [
@@ -5711,7 +5715,7 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.minatosushibar.com/happy-hour/",
           "food_categories": [
             "sushi",
@@ -5721,9 +5725,7 @@
           ]
         }
       ],
-      "lat": 39.3016059,
-      "lon": -76.6156059,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "brass-tap-baltimore",
@@ -6015,15 +6017,15 @@
       "id": "monarque",
       "name": "Monarque",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1010 Fleet Street, Baltimore, MD 21202",
       "phone": "(443) 384-1480",
       "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-08",
-      "notes_public": "Happy hour Tue–Sat 5–7.",
-      "ops_notes": "Deal Scout + CoS 2026-08-08. HH PDF multi-column — CoS read via word bounding boxes, not pdftotext -layout. source_document_date=2026-03-13 (Last-Modified Fri 13 Mar 2026). Window Tue–Sat 5–7. Food includes Oysters Rockefeller (3) $10 and Spinach & Artichoke Dip $10 (missing from initial hand-off; left column at $10). Oysters (3) $6 is raw with mignonette — different dish. Spirits $8 line carries *$3 upcharge for cocktails* as qualifier, not a separate row. Archive RESEARCH/ig-evidence-2026-08-05/Monarque_HH_03132026.pdf. Source: RESEARCH/INNER_HARBOR_DEALS.md. notes_public: cut unsourced room description (CoS 2026-08-08).",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Monarque HH PDF re-read. Martini/spirits/wine/beer pricing unchanged.",
+      "lat": 39.2844291,
+      "lon": -76.5996797,
       "deals": [
         {
           "days": [
@@ -6091,7 +6093,7 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-08",
+          "verified_date": "2026-09-07",
           "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
           "food_categories": [
             "drink",
@@ -6102,9 +6104,7 @@
           ]
         }
       ],
-      "lat": 39.2844291,
-      "lon": -76.5996797,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "alma-cocina-latina",
@@ -8253,15 +8253,63 @@
       "id": "brewers-cask",
       "name": "Brewer's Cask",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1236 Light St, Baltimore, MD 21230",
       "phone": "(410) 273-9377",
       "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live happy-hours-specials HTTP 200. Pin 1236 Light St / (410) 273-9377. Census 39.2751037,-76.6123063. CityView Neighborhoods MapServer/0 query today on that point: Name=Federal Hill. Already in /federal-hill. Do not invent a view. Dated weekly cards today Thu Aug 20 through Wed Aug 26; priced HH lines repeat. Sat Happy Hour 2–7 no $. 7pm/8pm clocks are Live Music / Open Mic / Trivia / Karaoke — not HH, except Trivia $5 Off Burgers. Skip Side Car Sides. Do not invent one window. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: brewers-cask.com happy-hours-specials.",
+      "lat": 39.2751037,
+      "lon": -76.6123063,
       "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$5 Drafts",
+              "price": "$5"
+            },
+            {
+              "text": "$3 of Appetizers",
+              "price": "$3"
+            }
+          ],
+          "verified_date": "2026-09-07",
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "happy_hour": true,
+          "proof_quote": "Happy Hour! $5 Drafts, $3 of Appetizers / 05:00 PM - 11:00 PM",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$10 beer & wings",
+              "price": "$10"
+            }
+          ],
+          "verified_date": "2026-09-07",
+          "start": 1020,
+          "end": 1380,
+          "time_window": "5pm-11pm",
+          "proof_quote": "Industry Night! $10 beer & wings / 05:00 PM - 11:00 PM",
+          "food_categories": [
+            "drink",
+            "wings"
+          ],
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials"
+        },
         {
           "days": [
             "tue",
@@ -8279,43 +8327,17 @@
               "price": "$3"
             }
           ],
+          "verified_date": "2026-09-07",
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
-          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
           "proof_quote": "Happy Hour! $5 Drafts, $3 of Appetizers / 03:00 PM - 06:00 PM",
           "food_categories": [
             "drink",
             "small-plate/apps"
-          ]
-        },
-        {
-          "days": [
-            "mon"
           ],
-          "items": [
-            {
-              "text": "$5 Drafts",
-              "price": "$5"
-            },
-            {
-              "text": "$3 of Appetizers",
-              "price": "$3"
-            }
-          ],
-          "start": 1020,
-          "end": 1380,
-          "time_window": "5pm-11pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-20",
-          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
-          "proof_quote": "Happy Hour! $5 Drafts, $3 of Appetizers / 05:00 PM - 11:00 PM",
-          "food_categories": [
-            "drink",
-            "small-plate/apps"
-          ]
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials"
         },
         {
           "days": [
@@ -8327,41 +8349,17 @@
               "price": "$5 off"
             }
           ],
+          "verified_date": "2026-09-07",
           "start": 1140,
-          "end": null,
           "time_window": "7pm-1am",
-          "verified_date": "2026-08-20",
-          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
           "proof_quote": "Trivia! $5 Off Burgers! / 07:00 PM - 01:00 AM",
           "food_categories": [
             "burger"
-          ]
-        },
-        {
-          "days": [
-            "mon"
           ],
-          "items": [
-            {
-              "text": "$10 beer & wings",
-              "price": "$10"
-            }
-          ],
-          "start": 1020,
-          "end": 1380,
-          "time_window": "5pm-11pm",
-          "verified_date": "2026-08-20",
-          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials",
-          "proof_quote": "Industry Night! $10 beer & wings / 05:00 PM - 11:00 PM",
-          "food_categories": [
-            "drink",
-            "wings"
-          ]
+          "source_url": "https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials"
         }
       ],
-      "lat": 39.2751037,
-      "lon": -76.6123063,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "charles-village-pub",
@@ -8911,14 +8909,15 @@
       "id": "don-tigre",
       "name": "Don Tigre Mexican Grill",
       "neighborhood": "Riverside",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "900 E Fort Ave Suite 105, Baltimore, MD 21230",
       "phone": "(301) 701-5464",
       "source_url": "https://www.dontigremexicancuisine.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live dontigremexicancuisine.com HTTP 200. Pin 900 E Fort Ave Suite 105 / (301) 701-5464 (Slice header on the official order page today). JSON-LD on the same page is +14434384450 — record that mismatch here; do not swap the public phone. Census 39.271781,-76.6008455. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Site says Locust Point; city Name wins. Already in /locust-point. Do not invent a Riverside-only view. Availabilities in the page JSON: Taco Tuesday Special $11.00 3 tacos arbacoa, or captus Tuesday 12:00–21:30; Wednesday - Sunday Specials 18% off on the whole menu Sun+Wed–Sat 17:00–19:00. Keep site typo arbacoa / captus. Stay off 10% OFF Online only — not a weekly door deal. Stay off Buy 2 stuffed crispy rolled tacos, third half price — no day. dontigremexican.com mixed Locust Point / Owings Mills. Do not invent Owings Mills HH for this door. Hours JSON-LD: Tue–Sun 12:00–21:30 (no Monday). notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: dontigremexicancuisine.com specials JSON.",
+      "lat": 39.271781,
+      "lon": -76.6008455,
       "deals": [
         {
           "days": [
@@ -8926,19 +8925,19 @@
           ],
           "items": [
             {
-              "text": "Taco Tuesday Special",
+              "text": "Taco Tuesday Special — 3 tacos $11",
               "price": "$11"
             }
           ],
+          "verified_date": "2026-09-07",
           "start": 720,
           "end": 1290,
           "time_window": "12pm-9:30pm",
-          "verified_date": "2026-08-20",
-          "source_url": "https://www.dontigremexicancuisine.com/",
-          "proof_quote": "Taco Tuesday Special Get 3 freshly made tortilla tacos. Choice of tortillas: Flour, corn, or hard shell. Al pastor, chicken, steak, veggies, ground beef, carnitas, chorizo, arbacoa, or captus. $11.00 Tuesday 12:00–21:30",
+          "proof_quote": "Taco Tuesday Special Get 3 freshly made tortilla tacos ... $11.00 Tuesday 12:00–21:30",
           "food_categories": [
             "tacos"
-          ]
+          ],
+          "source_url": "https://www.dontigremexicancuisine.com/"
         },
         {
           "days": [
@@ -8954,17 +8953,15 @@
               "price": "18% off"
             }
           ],
+          "verified_date": "2026-09-07",
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
-          "verified_date": "2026-08-20",
-          "source_url": "https://www.dontigremexicancuisine.com/",
-          "proof_quote": "Wednesday - Sunday Specials 17:00 - 19:00 18% off on the whole menu"
+          "proof_quote": "Wednesday - Sunday Specials 17:00 - 19:00 18% off on the whole menu",
+          "source_url": "https://www.dontigremexicancuisine.com/"
         }
       ],
-      "lat": 39.271781,
-      "lon": -76.6008455,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "dutch-courage",
@@ -9531,15 +9528,15 @@
       "id": "hair-of-the-dog",
       "name": "Hair of the Dog",
       "neighborhood": "South Baltimore",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1649 South Hanover Street, Baltimore, MD 21230",
       "phone": "410.814.0342",
       "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "Friday drink BOGO is 7–10pm. Thursday $6 burgers: extra toppings extra.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live hairofthedogbaltimore.com/weekly-specials HTTP 200; homepage HTTP 200. Pin 1649 South Hanover Street, Baltimore, MD 21230 (site omits zip; license is 21230) / 410.814.0342. Census 39.2705710,-76.6149790. CityView Neighborhoods MapServer/0 query today on that point: Name=South Baltimore. Already in /federal-hill. Homepage hours: Mon 04:30 pm – 02:00 am through Fri same · Sat 11:00 am – 02:00 am · Sun 11:00 am – 02:00 am · also We are open at 10 am for Sunday 1pm Ravens Games — record both Sunday lines; do not pick one. Keep site wording TUESDAYs / WEDNESDAYs in these quotes. Stay off Greg's Shitty Trivia / 8pm — no $. Do not ship trivia as a food/drink row. Pin no Saturday deal.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: hairofthedogbaltimore.com/weekly-specials (WebFetch; curl TLS fail).",
+      "lat": 39.270571,
+      "lon": -76.614979,
       "deals": [
         {
           "days": [
@@ -9551,14 +9548,12 @@
               "price": "BOGO"
             }
           ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-20",
-          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "verified_date": "2026-09-07",
           "proof_quote": "MONDAYS BOGO APPETIZERS Buy any appetizers and get a second appetizer of equal or lesser value for free",
           "food_categories": [
             "small-plate/apps"
-          ]
+          ],
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials"
         },
         {
           "days": [
@@ -9574,15 +9569,13 @@
               "price": "$6"
             }
           ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-20",
-          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "verified_date": "2026-09-07",
           "proof_quote": "TUESDAYs TACO and TEQUILA NIGHT Two chicken or ground beef tacos just $6 and $6 select tequilas",
           "food_categories": [
             "tacos",
             "drink"
-          ]
+          ],
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials"
         },
         {
           "days": [
@@ -9594,14 +9587,12 @@
               "price": "$6"
             }
           ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-20",
-          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "verified_date": "2026-09-07",
           "proof_quote": "WEDNESDAYs CHEESESTEAK NIGHT $6 cheesesteaks",
           "food_categories": [
             "sandwich/cheesesteak"
-          ]
+          ],
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials"
         },
         {
           "days": [
@@ -9609,18 +9600,16 @@
           ],
           "items": [
             {
-              "text": "$6 Burgers",
+              "text": "$6 Burgers (extra toppings additional)",
               "price": "$6"
             }
           ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-20",
-          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
+          "verified_date": "2026-09-07",
           "proof_quote": "THURSDAYS BURGER NIGHT $6 Burgers, extra TOPPINGS additional charge",
           "food_categories": [
             "burger"
-          ]
+          ],
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials"
         },
         {
           "days": [
@@ -9628,24 +9617,22 @@
           ],
           "items": [
             {
-              "text": "BOGO domestic drafts, domestic cans, Nutrl cans, Surfside cans, rail cocktails, and house wine",
+              "text": "BOGO domestic drafts/cans, Nutrl, Surfside, rail cocktails, house wine",
               "price": "BOGO"
             }
           ],
+          "verified_date": "2026-09-07",
           "start": 1140,
           "end": 1320,
           "time_window": "7pm-10pm",
-          "verified_date": "2026-08-20",
-          "source_url": "https://hairofthedogbaltimore.com/weekly-specials",
           "proof_quote": "FRIDAYS BOGO NIGHT From 7pm to 10 pm BOGO domestic drafts, domestic cans, Nutrl cans, Surfside cans, rail cocktails, and house wine",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "source_url": "https://hairofthedogbaltimore.com/weekly-specials"
         }
       ],
-      "lat": 39.270571,
-      "lon": -76.614979,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "hard-rock-cafe",
@@ -10174,15 +10161,15 @@
       "id": "johnny-rads",
       "name": "Johnny Rad's Pizzeria Tavern",
       "neighborhood": "Upper Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "2108 Eastern Avenue, Baltimore, Maryland 21231",
       "phone": "443-759-6464",
       "source_url": "https://johnnyrads.com/daily-stuff",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "notes_public": "Monday $14 large pies are dine-in only, with a drink. Friday–Saturday late-night BOGO cans/bottles is dine-in only.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live johnnyrads.com/daily-stuff HTTP 200. Phone 443-759-6464 and 2108 Eastern Avenue, Baltimore, Maryland 21231 from homepage today (HTTP 200). Census 39.2859477,-76.5866822. CityView Neighborhoods MapServer/0 query today on that point: Name=Upper Fells Point. Upper Fells Point has no home view — already in citywideOnly. Do not invent a /upper-fells-point view. Do not fold into /fells-point. Quotes: Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm / $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks. Every Monday, all 16\" Large Pies are $14 w/ purchase of a drink. DINE IN ONLY. Calendar time 4PM - 10PM. Every Friday & Saturday Night from 10pm til 12 Midnight, we do Late Night Happy Hours with BOGO select Cans & Bottles along with a couple fo... — caption still truncates. Do not invent the cut-off food line. DINE IN ONLY. on the Monday pie line; notes_public covers late-night dine-in as ticketed.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: johnnyrads.com/daily-stuff confirms HH + Mon pies + Fri/Sat late-night BOGO (prices where published).",
+      "lat": 39.2859477,
+      "lon": -76.5866822,
       "deals": [
         {
           "days": [
@@ -10209,7 +10196,7 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://johnnyrads.com/daily-stuff",
           "proof_quote": "Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks",
           "food_categories": [
@@ -10238,7 +10225,7 @@
           "end": 1140,
           "time_window": "12pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://johnnyrads.com/daily-stuff",
           "proof_quote": "Happy Hour(s) Weekdays Mon - Thur 4pm - 7pm + Fri 12 Noon - 7pm $1.50 Off all Draft beers, $5 Glasses of Wine & $4 Rail Drinks",
           "food_categories": [
@@ -10258,7 +10245,7 @@
           "start": 960,
           "end": 1320,
           "time_window": "4pm-10pm",
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://johnnyrads.com/daily-stuff",
           "proof_quote": "Every Monday, all 16\" Large Pies are $14 w/ purchase of a drink. DINE IN ONLY.",
           "food_categories": [
@@ -10279,17 +10266,17 @@
           "start": 1320,
           "end": 1440,
           "time_window": "10pm-12am",
-          "verified_date": "2026-08-21",
+          "happy_hour": true,
+          "verified_date": "2026-09-07",
           "source_url": "https://johnnyrads.com/daily-stuff",
-          "proof_quote": "Every Friday & Saturday Night from 10pm til 12 Midnight, we do Late Night Happy Hours with BOGO select Cans & Bottles along with a couple fo...",
+          "proof_quote": "Every Friday & Saturday Night from 10pm til 12 Midnight, we do Late Night Happy Hours with BOGO select Cans & Bottles",
           "food_categories": [
             "drink"
           ]
         }
       ],
-      "lat": 39.2859477,
-      "lon": -76.5866822,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "notes_public": "Monday $14 large pies are dine-in only, with a drink. Friday–Saturday late-night BOGO cans/bottles is dine-in only.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "kechy-pizza",
@@ -11671,40 +11658,18 @@
       "id": "midlina",
       "name": "Midlina",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "2206 Boston St, Baltimore, MD 21231",
       "phone": "(410)-775-4094",
       "source_url": "https://midlinarestaurant.com/specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live midlinarestaurant.com/specials HTTP 200; homepage HTTP 200. Pin 2206 Boston St, Baltimore, MD 21231 / (410)-775-4094. License zip 21231 — city Name=Canton wins. Census 39.2838396,-76.5852577. CityView Neighborhoods MapServer/0 query today on that point: Name=Canton. Already in /canton. Do not add Canton to citywideOnly. Do not invent a /canton page. Homepage hours today: Tue, Wed, Thur 5:00 PM - 11:00 PM / Fri, Sat 5:00 PM - 1:00 AM / Sun 4:00 PM - 9:30 PM. Monday omitted on the visible hours block; schema has Monday 00:00–00:00. Record both in ops. Do not invent closed on the card. Do not copy Friday 1am onto the Thursday clock. Quotes from /specials today: Thursday / $30 bottles of wine every Thursday on select bottles / 05:00 PM - 11:00 PM. Friday / Happy Hour 5-7 Bar Only / 05:00 PM - 07:00 PM — no $. Sunday / Happy Hour 4-6 / 04:00 PM - 06:00 PM — no $. Tuesday / Happy Hour 7-9 / 07:00 PM - 09:00 PM — no $. Wednesday is not on the official specials page. Do not invent a Wednesday row. Stay off: Tue / Fri / Sun HH clocks have no $. Do not ship times-only rows (same rule as Freddie's). Record them in ops, including Bar Only on Friday. notes_public omitted. No vibe. Friday bar-only stays in ops (that row is not on the card).",
-      "deals": [
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "$30 select bottles of wine",
-              "price": "$30"
-            }
-          ],
-          "start": 1020,
-          "end": 1380,
-          "time_window": "5pm-11pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://midlinarestaurant.com/specials",
-          "proof_quote": "Thursday $30 bottles of wine every Thursday on select bottles 05:00 PM - 11:00 PM",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: midlinarestaurant.com/specials returns Page not found; cleared prior $30 Thursday wine (unverified).",
       "lat": 39.2838396,
       "lon": -76.5852577,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "deals": [],
+      "notes_public": "Specials page not loading; priced specials removed until re-verified.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "mt-washington-tavern",
@@ -13185,14 +13150,15 @@
       "id": "v-no-wine-bar",
       "name": "V-NO Wine Bar",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "905 S Ann Street, Baltimore, MD 21231",
       "phone": "(410) 342-8466",
       "source_url": "https://v-no.com/special-%26-weekly-events",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live v-no.com/special-%26-weekly-events HTTP 200. Homepage https://v-no.com/ HTTP 200. Contact https://v-no.com/contact HTTP 200. /happy-hour 404. /national-harbor 404. Record homepage and contact in ops. vinofellspoint.com still redirects to v-no.com. Old /special-weekly-events on that host 404. Footer still Directions to Tenuta — Italy winery, stay off source_url. Toast order 403 (https://www.toasttab.com/vnofellspoint → pos.toasttab.com/vnofellspoint) — stay off. Pin 905 S Ann Street, Baltimore, MD 21231 / (410) 342-8466. Homepage prints 905 S Ann Street Fells Point, Baltimore, MD +1(410) 342-8466. Census Nominatim 39.2817798,-76.5910108. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Do not mix National Harbor. Hours today (contact, record as printed, do not “fix” AM/PM): Mon 04:00 pm – 10:00 pm · Tue 04:00 am – 10:00 am · Wed 04:00 pm – 10:00 pm · Thu 04:00 pm – 11:00 pm · Fri 02:00 am – 11:00 pm · Sat 12:00 pm – 11:00 pm · Sun 11:00 am – 09:00 pm. Record in ops. Do not copy contact Monday 10pm (1320), Tuesday 04:00 am (240), or Friday 02:00 am (120) onto a deal clock. Quotes from WEEKLY EVENTS today: MONDAY — NEIGHBORS NIGHT · Calling All Fells Point / Canton Neighbors! · 5pm–8pm · $5 Off Wine Flights. TUESDAY — DATE NIGHT · Happy Hour Date Night · 5:30pm–10:00pm · Bottle of wine + shared board (starting at $55). WEDNESDAY — JAZZ NIGHT · 6pm–9pm · curated wine / jazz — no $. THURSDAY — VINYL & VIBES · 6pm–10pm · featured wines + craft cocktails — no $. V-No Sunset Cruise · Friday, July 24 · 6:30pm–9pm — dated one-off. Stay off: Tuesday Date Night (events 5:30pm–10:00pm vs contact Tuesday 04:00 am – 10:00 am — record both, never pick). Jazz. Vinyl. July 24 cruise. National Harbor. Tenuta. happy_hour omit. days mon. start 1020 · end 1200 · time_window 5pm-8pm. cat drink. Keep printed $5 Off. Do not invent a flight-size row. Do not ship the $55 board. notes_public omit. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /fells-point and /baltimore. William Fell is HOLD (Toast Daily Specials group gone). Not this ticket. Heritage HOLD. Freddie's times-only stays off. Wiley Gunter's is not this ticket.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: v-no.com specials — Monday Neighbors Night $5 Off Wine Flights confirmed; other nights times/themes without $ kept as notes only where priced.",
+      "lat": 39.2817798,
+      "lon": -76.5910108,
       "deals": [
         {
           "days": [
@@ -13207,7 +13173,7 @@
           "start": 1020,
           "end": 1200,
           "time_window": "5pm-8pm",
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://v-no.com/special-%26-weekly-events",
           "proof_quote": "MONDAY — NEIGHBORS NIGHT Calling All Fells Point / Canton Neighbors! 5pm-8pm $5 Off Wine Flights",
           "food_categories": [
@@ -13215,9 +13181,7 @@
           ]
         }
       ],
-      "lat": 39.2817798,
-      "lon": -76.5910108,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "wiley-gunters",

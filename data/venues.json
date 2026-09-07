@@ -1771,16 +1771,16 @@
       "id": "sports-balls",
       "name": "Sports Balls @ The Canton Local",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "open_unverifiable",
       "address": "801 S Decker Ave, Baltimore, MD 21224",
-      "source_type": "none",
-      "last_verified": "2026-08-19",
-      "notes_public": "No specials or happy hour published on their site.",
-      "ops_notes": "Deal Scout 2026-08-19 re-check: http://www.sbcanton.com/ still fails TLS from this fetcher. No alternate official specials URL found. Left empty.",
-      "deals": [],
       "phone": "667-212-5888",
-      "source_url": "http://www.sbcanton.com/"
+      "source_url": "http://www.sbcanton.com/",
+      "source_type": "none",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: fetch_venue.py http://www.sbcanton.com/ → 0 bytes; https://sbcanton.com/ TLS/connect fail. Still unreachable. deals=[] last_verified bump.",
+      "notes_public": "No specials or happy hour published on their site.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "baltimore-tap-house",
@@ -1835,19 +1835,18 @@
       "id": "honeypot",
       "name": "Honeypot Cocktail Lounge",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "open_unverifiable",
       "address": "800 S Kenwood Ave, Baltimore, MD 21224",
-      "source_type": "none",
-      "last_verified": "2026-08-19",
-      "notes_public": "No specials published on their site.",
-      "ops_notes": "Deal Scout 2026-08-19 re-check: honeypotbar.com TLS EOF from this fetcher. No alternate official specials URL. Left empty.",
-      "deals": [],
       "phone": "(410) 276-1200",
       "source_url": "https://honeypotbar.com/",
+      "source_type": "none",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: fetch_venue.py https://honeypotbar.com/ → 0 bytes; curl TLS/connect fail. Still unreachable. deals=[] last_verified bump.",
+      "notes_public": "No specials published on their site.",
       "lat": 39.283052,
       "lon": -76.577261,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "nobles-bar-and-grill",
@@ -10982,14 +10981,15 @@
       "id": "tabor-ethiopian",
       "name": "Tabor Ethiopian Restaurant",
       "neighborhood": "Downtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "328 Park Ave, Baltimore, MD 21201",
       "phone": "(410) 528-7234",
       "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live taborethiopian.com/ HTTP 200; HH PDF https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf HTTP 200, 6 pages, linked from homepage today. Pin 328 Park Ave, Baltimore, MD 21201 / (410) 528-7234. Census 39.293806,-76.6183705. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not add Downtown to citywideOnly. Do not invent a /downtown page. Site self-describes Mount Vernon — record in ops as neighborhood_self_described. Card neighborhood = NSA. Homepage today: Authentic Ethiopian Cuisine in the Heart of Mount Vernon Baltimore. Do not copy onto notes_public. Quotes from the HH block on the PDF today: HAPPY HOUR | MON-FRI 4-7. 2:00 OFF COCKTAILS. DOMESTIC BEER 3.50. IMPORTED BEER 4.50. ETHIOPIAN BEER 4.75. SELECT WINES 8.00. TEJ/HONEY WINE 8.00. VEGGIE SAMBUSA 2.50. BEEF SAMBUSA 3.00. Keep PDF spelling 2:00 OFF (two dollars off) in the quote. Structured item text is $2 off cocktails. Regular menu sambusa $2.99 / $3.99 on the same PDF are not the HH row. notes_public omitted. Do not write Mount Vernon into notes_public.",
+      "last_verified": "2026-09-07",
+      "lat": 39.293806,
+      "lon": -76.6183705,
+      "ops_notes": "Deal Scout 2026-09-07: TaborMenu_4_26.pdf pdftotext HH MON-FRI 4-7 unchanged.",
       "deals": [
         {
           "days": [
@@ -11037,7 +11037,7 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
           "proof_quote": "HAPPY HOUR | MON-FRI 4-7 2:00 OFF COCKTAILS DOMESTIC BEER 3.50 IMPORTED BEER 4.50 ETHIOPIAN BEER 4.75 SELECT WINES 8.00 TEJ/HONEY WINE 8.00 VEGGIE SAMBUSA 2.50 BEEF SAMBUSA 3.00",
           "food_categories": [
@@ -11046,8 +11046,7 @@
           ]
         }
       ],
-      "lat": 39.293806,
-      "lon": -76.6183705,
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
@@ -11726,14 +11725,15 @@
       "id": "octobar",
       "name": "Octobar",
       "neighborhood": "South Baltimore",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "1400 Light Street, Baltimore, MD 21230",
       "phone": "443-438-7599",
       "source_url": "https://octobarbaltimore.com/happy-hour-3/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live octobarbaltimore.com/happy-hour-3/ HTTP 200; homepage HTTP 200. HH graphic visual read today (/wp-content/uploads/2026/04/Happy-Hour-red.png). Pin 1400 Light Street, Baltimore, MD 21230 / 443-438-7599. Census 39.2741273,-76.6121847. CityView Neighborhoods MapServer/0 query today on that point: Name=South Baltimore. Already in /federal-hill (views.json neighborhoods: Federal Hill + South Baltimore; Hair of the Dog / AJ's / Delia's already ship that way). Do not add South Baltimore to citywideOnly. Do not invent a /south-baltimore page. Do not fold into /locust-point. Census batch 26 \"Octobar citywide-only\" is stale — live view map wins. Nominatim still labels the door Row House Grille (previous tenant) — city Name=South Baltimore wins; previous-tenant name stays in ops. Homepage hours today: Monday Closed · Tue 4:00 pm - 10:00 pm · Wed 4:00 pm - 10:00 pm · Thu 4:00 pm - 11:00 pm · Fri 4:00 pm - 2:00 am · Sat 11:00 am - 2:00 am · Sun 11:00 am - 10:00 pm · Sat/Sun brunch 11:00 am - 4:00 pm. Record hours in ops. Do not copy Friday 2am onto the HH clock. Homepage footer still prints Happy Hour Monday through Friday 4:00 pm - 7:00 pm and contradicts it (Closed Mondays in the nav, Monday Closed in the hours block). The HH graphic itself already says 4 to 7 - Tuesday to Friday. Load Tue–Fri from the graphic. Stale homepage Mon–Fri line stays in ops so the monitor rechecks it. Not the Rockwell/Nepenthe shape (those ads named a closed day). Quotes from the HH graphic today (visual read): HAPPY HOUR / 4 to 7 - Tuesday to Friday. COCKTAILS, BEER, & WINE. $5 Sangrias, Wine, Draft and Prosecco. $7 Margarita Bar (all flavors). $7 Crushes (all flavors). $8 Specialty Cocktail of the Day. $22 All Bottles of Wine. TAPAS - 8 · Grilled Chicken Kabab · Smoked Salmon Bruschetta · Mediterranean Meatballs Shakshuka · Grilled Chicken Pita Pizza · Spinach Pies with Feta · Grape Leaves stuffed with rice · Cheese Ravioli · Firecracker Shrimp. TAPAS - 6 · Papas Bravas · 5 Pan con tomate · Grilled Street Corn · Warm Olives · Deviled Eggs of the Day (4 pieces). Extra descriptors after the dashes on the graphic (over Mediterranean couscous, tzatziki, etc.) stay in ops. Stay off: Taco Tuesday graphic (no $) · Pasta Night graphic (\"every Thursday,\" no $) · Game Day Orioles graphic (event-contingent). notes_public omitted. No vibe.",
+      "last_verified": "2026-09-07",
+      "lat": 39.2741273,
+      "lon": -76.6121847,
+      "ops_notes": "Deal Scout 2026-09-07: Happy-Hour-red.png tesseract OCR; Tue–Fri 4–7 priced HH unchanged.",
       "deals": [
         {
           "days": [
@@ -11820,7 +11820,7 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://octobarbaltimore.com/happy-hour-3/",
           "proof_quote": "HAPPY HOUR 4 to 7 - Tuesday to Friday COCKTAILS, BEER, & WINE $5 Sangrias, Wine, Draft and Prosecco $7 Margarita Bar (all flavors) $7 Crushes (all flavors) $8 Specialty Cocktail of the Day $22 All Bottles of Wine TAPAS - 8 Grilled Chicken Kabab Smoked Salmon Bruschetta Mediterranean Meatballs Shakshuka Grilled Chicken Pita Pizza Spinach Pies with Feta Grape Leaves stuffed with rice Cheese Ravioli Firecracker Shrimp TAPAS - 6 Papas Bravas 5 Pan con tomate Grilled Street Corn Warm Olives Deviled Eggs of the Day (4 pieces)",
           "food_categories": [
@@ -11829,8 +11829,8 @@
           ]
         }
       ],
-      "lat": 39.2741273,
-      "lon": -76.6121847,
+      "deal_format": "image",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
@@ -12403,15 +12403,15 @@
       "id": "estiatorio-plaka",
       "name": "Estiatorio Plaka",
       "neighborhood": "Greektown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "4718 Eastern Ave, Baltimore, MD 21224",
       "phone": "(443) 833-0330",
       "source_url": "https://www.estiatorioplaka.com/menu?menu=happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "notes_public": "bar only",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live estiatorioplaka.com/menu?menu=happy-hour HTTP 200; homepage HTTP 200: https://www.estiatorioplaka.com/ ; hours-location HTTP 200: https://www.estiatorioplaka.com/hours-location . Pin 4718 Eastern Ave, Baltimore, MD 21224 / (443) 833-0330. Email info@estiatorioplaka.com stays in ops. License leftover name is Plaka Tavern — site name Estiatorio Plaka is the row. Census 39.28732,-76.555983. CityView Neighborhoods MapServer/0 query today on that point: Name=Greektown. Homepage does not print Greektown — city Name=Greektown wins. Greektown has no home view — add Greektown to citywideOnly once. Do not invent a /greektown view. Do not fold into /canton. Do not fold into /fells-point. Prices from the HH menu page. Window from homepage-embedded Instagram captions (Wix server-renders the caption text into the homepage HTML — venue-published copy on the venue’s own homepage, corroborated by the menu). Not a lone instagram.com caption. HH menu page today still has no clock of its own. Homepage captions today still print: Tuesday–Friday | 3–6 PM · Tuesday–Friday | 3–6 PM (bar only). Most restrictive caption wins: bar only. If the menu page ever prints its own window, that supersedes. Ops: shorter monitor leash on this one. Hours today (hours-location): Restaurant Mon closed · Tue–Thu 11:00 am – 9:00 pm · Fri–Sat 11:00 am – 10:00 pm · Sun 11:00 am – 9:00 pm. Bakery opens 9am, closed Mondays. Record hours in ops. Do not copy 9pm / 10pm onto a deal clock. Stay off: dated daily-specials PDF 81f56d_72feb268f3b145a58efa39ad40584357.pdf (CreationDate 2026-04-17, still live today — April 17–19 one-off, not weekly). Older graphic PDF 81f56d_fffe57ae9b3c4c07b5dfbc96da662968.pdf (CreationDate 2024-02-25). Lunch / dinner / brunch / winelist / beerlist menus. Do not invent a second row from the IG emoji price list — those prices match the HH menu. notes_public is required: bar only. Quote-matched from homepage IG captions. No vibe. This is the whole HH row — unlike Rec Pier, there is no second door that would mislabel.",
+      "last_verified": "2026-09-07",
+      "lat": 39.28732,
+      "lon": -76.555983,
+      "ops_notes": "Deal Scout 2026-09-07: estiatorioplaka.com/menu?menu=happy-hour curl; priced HH menu unchanged. Window still Tue–Fri 3–6pm bar only from prior homepage captions (menu page still has no clock).",
       "deals": [
         {
           "days": [
@@ -12486,7 +12486,7 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.estiatorioplaka.com/menu?menu=happy-hour",
           "proof_quote": "DOLLAR OYSTERS $1 MINI GYROS (2) with fries $11 CLASSIC GREEK SALAD Tomatoes, cucumber. red onions, olives, green peppers, feta, house extra virgin olive oil, and oregano. $10 PLAKA MEZZE SPREADS $10 MINI CHICKEN SKEWER (2) $8 MINI PORK SKEWER (2) $8 WINGS 6PCS Spicy, Bbq, or Greek Style $10 ZUCCHINI CHIPS $10 MINI SPINACH & CHEESE PIE $10 BAKED FETA PHYLLO $10 FISH TACOS $12 $7 ESPRESSO MARTINIS ALL DRAFT BEERS $3 WINES BY THE GLASS $6 BOTTLE BEERS $2",
           "food_categories": [
@@ -12498,22 +12498,23 @@
           ]
         }
       ],
-      "lat": 39.28732,
-      "lon": -76.555983,
+      "notes_public": "bar only",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
       "id": "raffys-on-36th",
       "name": "Raffy's on 36th",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "1115 W. 36th Street, Baltimore, MD 21211",
       "phone": "(443) 216-9445",
-      "source_url": "https://www.raffyson36th.com/specials-events",
+      "source_url": "https://www.raffyson36th.com/weekly-specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live raffyson36th.com/specials-events HTTP 200; homepage HTTP 200: https://www.raffyson36th.com/ . /specials 404. Pin 1115 W. 36th Street, Baltimore, MD 21211 / (443) 216-9445. Email events@raffyson36th.com stays in ops. License leftover name is Raffy's — site name Raffy's on 36th is the row. Census 39.3308259,-76.6342993. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Do not invent a view. Prices and the Thursday claim from the specials-events page, not Toast and not Instagram. Hours today (specials-events): Monday Closed · Tuesday 4:30PM-9PM · Wednesday & Thursday 4:30PM-9:30PM · Friday & Saturday 12PM-10PM · Sunday 12PM-9PM. Homepage Hours of Operation Friday start still differs (4:30PM-10PM vs specials 12PM-10PM); homepage Saturday 11:45AM-10PM / Sunday 11:45AM-9PM. Record both in ops. Date night is Thursday — do not copy the Friday mismatch onto a clock. Do not copy Thursday hours 4:30PM–9:30PM (990/1290) onto a deal clock. Do not copy HH 4:30pm-6:30pm (990/1110). Do not copy Tuesday 9PM (1260) or Friday 10PM (1320). Quotes from specials-events today: Happy Hour at Raffy’s Served Tuesday-Friday from 4:30pm-6:30pm and featuring our delicious wood-fired cooked appetizers, draft beer and wine, and select cocktails. — times only, no $. Stay off. Thursday Date Nights The perfect deal and vibe for a night out with a friend or special someone. Share a meal, a drink, and conversation for your next Thursday evening. All of that for just $45 for the two of you! Stay off: Tuesday–Friday HH 4:30–6:30 (no $). Instagram drink $. Toast order / gift-card / rewards links. Regular dinner menu. Do not invent a second row from “vibe.” happy_hour omit. omit time_window. omit food_categories (prix-fixe assortment — same class as Gertrude's Thursday / Indigma thaali). omit recurrence. notes_public omitted. No vibe on the card. Do not write all day or all night.",
+      "last_verified": "2026-09-07",
+      "lat": 39.3308259,
+      "lon": -76.6342993,
+      "ops_notes": "Deal Scout 2026-09-07: specials-events 404; weekly-specials live with Thursday Date Night $45. HH Tue–Fri 4:30–6:30 still times-only (no $) — stay off.",
       "deals": [
         {
           "days": [
@@ -12527,13 +12528,12 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.raffyson36th.com/specials-events",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.raffyson36th.com/weekly-specials",
           "proof_quote": "Share a meal, a drink, and conversation for your next Thursday evening. All of that for just $45 for the two of you!"
         }
       ],
-      "lat": 39.3308259,
-      "lon": -76.6342993,
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
@@ -12677,51 +12677,18 @@
       "id": "taco-love-grill",
       "name": "Taco Love Grill",
       "neighborhood": "Locust Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "1724 Whetstone Way, Baltimore, MD 21230",
       "phone": "(443) 548-5032",
       "source_url": "https://www.tacolovegrill.com/events",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live tacolovegrill.com/events HTTP 200; homepage HTTP 200: https://www.tacolovegrill.com/ . Prices from the events block titled Happy Hour McHenry Row Location only. Pin 1724 Whetstone Way, Baltimore, MD 21230 / (443) 548-5032. Census 39.268416,-76.600295. CityView Neighborhoods MapServer/0 query today on that point: Name=Locust Point. Already in /locust-point. Do not add Locust Point to citywideOnly. Do not invent a view. Do not mix White Marsh or Cross Street / Federal Hill doors. Hours today (schema for 1724 Whetstone): Mon–Thu 11:00–21:00 · Fri–Sat 11:00–22:00. Census visible block still Sunday Closed · Mon–Thu 11–9 · Fri–Sat 11–10. Record both in ops. Date night is not this ticket — do not copy restaurant close 9pm (1260) or 10pm (1320) onto a deal clock. Do not copy White Marsh 11:30am-5:00pm (690/1020) or White Marsh Wednesday all-day onto this row. Quotes from the McHenry Row events block today: Happy Hour McHenry Row Location. Monday thru Friday 3:00pm - 5:00pm. All House Margaritas $10. Sangria $10. All bottle beers $4.50. Stay off: White Marsh HH (Happy Hour White Marsh Location · Monday, Tuesday and Thursday from 11:30am - 5:00pm · Wednesday Happy Hour ALL DAY!). Cross Street / Federal Hill (1065 S Charles St Suite 128, phone 443-869-3400). Events-page Taco Tuesday copy names Federal Hill / Cross Street Market — not this license: Taco Love Grill is nestled in the heart of Federal Hill, near Cross Street Market. Regular taco menu. Other-door phones. Nominatim of 1724 Whetstone Way is 39.2684160,-76.6002950 (display_name includes McHenry Row; previous tenant CHX Premium Kitchen) — same point as the row. happy_hour true. days mon, tue, wed, thu, fri. start 900 · end 1020 · time_window 3pm-5pm. cat drink. notes_public omitted. No vibe. deal_format omitted (pdf is illegal; only image is allowed).",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "All House Margaritas",
-              "price": "$10"
-            },
-            {
-              "text": "Sangria",
-              "price": "$10"
-            },
-            {
-              "text": "All bottle beers",
-              "price": "$4.50"
-            }
-          ],
-          "start": 900,
-          "end": 1020,
-          "time_window": "3pm-5pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.tacolovegrill.com/events",
-          "proof_quote": "Happy Hour McHenry Row Location Monday thru Friday 3:00pm - 5:00pm All House Margaritas $10 Sangria $10 All bottle beers $4.50",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
       "lat": 39.268416,
       "lon": -76.600295,
+      "ops_notes": "Deal Scout 2026-09-07: tacolovegrill.com/events live but McHenry Row priced HH block gone (image cards only). /event/happy-hour/ shows White Marsh Mon/Tue/Thu 11:30–5 + Wed all-day + All House Margaritas without $ — not Locust Point McHenry. Cleared prior $10/$10/$4.50 until Locust Point prices republished.",
+      "deals": [],
+      "notes_public": "No Locust Point / McHenry Row happy hour prices published on the site this pass.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
@@ -12803,15 +12770,15 @@
       "id": "the-garden-rooftop",
       "name": "The Garden Rooftop",
       "neighborhood": "Downtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "411 N Paca Street, Baltimore, MD 21201",
       "phone": "(443) 438-5125",
       "source_url": "https://thegardenrooftop.com/restaurant/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live thegardenrooftop.com/restaurant/ HTTP 200; homepage HTTP 200: https://thegardenrooftop.com/ ; lounge HTTP 200: https://thegardenrooftop.com/thegaradenlounge/ (site typo, keep as official); /happy-hour /menu /events 404. Prices from the live-linked HH PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw / The Dara). Button still Happy Hour Menu → https://thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.png. Filename 4-25 is April 2025; it is still the live HH Menu button today. Live PNG today byte-identical vs 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m34/garden_hh.png; sha256 1d3d07f48a3ad79f9b6d132d4216674c05e9142777e62c0b307030fa49ecd077). Pin 411 N Paca Street, Baltimore, MD 21201 / restaurant (443) 438-5125. Office (410) 244-7068 and email info@thegardenrooftop.com stay in ops. Do not use the office phone as the pin. Census 39.2943384,-76.6223979. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not add Downtown to citywideOnly. Do not invent a /downtown page. Do not invent a view. Fells roster stays 20. Nominatim of 411 N Paca Street, Baltimore, MD 21201 is 39.2943384,-76.6223979 (display_name includes Downtown / Chinatown) — same point as the row. Hours today (restaurant): dinner Thu–Sat 4:00pm–11:00pm / Sun brunch 12:00pm–4:00pm + dinner 5:00pm–10:00pm. Closed Mon–Wed for restaurant service. Record hours in ops. Do not copy restaurant close 11pm (1380) or Sunday dinner 10pm (1320) onto a deal clock. Do not copy lounge-footer start 5pm (1020) or Live After 5 4–7 PM. Restaurant-page Bar Happy Hour: 4:00pm-8:00pm Thursday, lounge prose HAPPY HOUR — Every Thursday from 4–8 PM!, and the PNG header THURSDAY 4–8 all agree. Homepage THE GARDEN LOUNGE footer still prints Thursday / Happy Hour: 5:00pm-8:00pm — record that footer, do not pick it over the menu. Homepage also prints Live After 5 / Happy Hour vibes from 4–7 PM with no $ — stay off. Kitchen: 5:00pm-11:00pm — stay off. Quotes from the HH PNG today (visual read): Happy Hour · THURSDAY 4–8. THE GARDEN DROP 10. OLD FASHIONED 12. SANGRIA 10. PINK75 10. PEACH PLEASER 10. COCOMANIA 12. MARGARITA 10. CITRUS JERK WINGS 10. FRIED CATFISH BITES 10. BEEF SLIDERS 10. SHRIMP DEVILED EGGS 11. SWEET AND SPICY SHRIMP 10. VEGGIE EGG ROLL 10. MAC & CHEESE 8. HOOKAH / $40 REFILLS / $15. Keep printed names Pink75, Cocomania, Mac & Cheese. Extra descriptors after the drinks/apps stay in ops (may ride): THE GARDEN DROP — vodka Lemon Drop with a sugared rim. Crafted to your flavor choice strawberry/peach/mango/blueberry/lavender. OLD FASHIONED — whiskey, bitters, orange zest and a cherry. SANGRIA — Cabernet Sauvignon, Peach Schnapps, lemon and pineapple juice. PINK75 — a mix of gin, lemon juice, simple syrup, and Prosecco Rose', finished with a touch of pink. PEACH PLEASER — Peach Crown Royal, Orange Curaçao, peach purée ginger crystals splash of Sprite. COCOMANIA — Casamigos Blanco, Cream of Coconut pineapple juice orange bitters, mint leaves. MARGARITA — tequila, lime juice, simple syrup and triple sec. CITRUS JERK WINGS — 6 grilled wings marinated in a special blend of citrus juices and mild jerk spices. FRIED CATFISH BITES — cornmeal fried catfish bites with house made remoulade sauce. BEEF SLIDERS — 2 Juicy mini beef patties, cheddar cheese, lettuce & tomato, and our signature sauce. SHRIMP DEVILED EGGS — creamy deviled egg topped with shrimp. SWEET AND SPICY SHRIMP — crispy shrimp and sweet and spicy sauce. VEGGIE EGG ROLL — a blend of vegetables wrapped in a golden shell. MAC & CHEESE — our delicious homemade mac & cheese. Do not invent a hookah row. Stay off: hookah · dinner PDF TheGarden_Menu3_25.pdf · brunch PDF TheGarden_BrunchMenu_1-25.pdf · lounge footer 5–8 · kitchen 5–11 · Live After 5 4–7 · office phone as the pin. happy_hour true. days thu. start 960 · end 1200 · time_window 4pm-8pm. cats drink, wings, seafood/crab, sliders, small-plate/apps. notes_public omitted. No vibe. deal_format image (legal; pdf is not).",
-      "deal_format": "image",
+      "last_verified": "2026-09-07",
+      "lat": 39.2943384,
+      "lon": -76.6223979,
+      "ops_notes": "Deal Scout 2026-09-07: restaurant/ live (Bar Happy Hour Thu 4–8); Garden_HH_4-25.png tesseract OCR — Thursday 4–8 priced list unchanged.",
       "deals": [
         {
           "days": [
@@ -12879,8 +12846,8 @@
           "end": 1200,
           "time_window": "4pm-8pm",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://thegardenrooftop.com/restaurant/",
+          "verified_date": "2026-09-07",
+          "source_url": "https://thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.png",
           "proof_quote": "Happy Hour THURSDAY 4–8 THE GARDEN DROP 10 OLD FASHIONED 12 SANGRIA 10 PINK75 10 PEACH PLEASER 10 COCOMANIA 12 MARGARITA 10 CITRUS JERK WINGS 10 FRIED CATFISH BITES 10 BEEF SLIDERS 10 SHRIMP DEVILED EGGS 11 SWEET AND SPICY SHRIMP 10 VEGGIE EGG ROLL 10 MAC & CHEESE 8",
           "food_categories": [
             "drink",
@@ -12891,23 +12858,24 @@
           ]
         }
       ],
-      "lat": 39.2943384,
-      "lon": -76.6223979,
+      "deal_format": "image",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },
     {
       "id": "the-hamilton-sports-bar",
       "name": "The Hamilton Sports Bar & Grill",
       "neighborhood": "Hamilton Hills",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "5506 Harford Road, Baltimore, MD 21214",
       "phone": "(667) 239-3196",
       "source_url": "https://thehamiltonsportsbarandgrill.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: thehamiltonsportsbarandgrill.com fetch — CRABS ARE BACK Mon $25 unchanged. Happy Hour Specials $10/$7 listed without window; View Happy Hour Menu still 404 — stayed off.",
       "notes_public": "Until they run out; one order per person",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live thehamiltonsportsbarandgrill.com/ HTTP 200 in a browser (plain curl is Cloudflare 403). Toast-powered. /menu 404 (Toast Page Not Found | 404, HTTP 200 title). /happy-hour 404 (same). Record that View Happy Hour Menu still points at /menu. Pin 5506 Harford Road, Baltimore, MD 21214 / (667) 239-3196. Do not use 5517. Do not mix Hamilton Tavern at 5517 Harford (https://www.thehamiltontavern.com/ — different door). Census 39.3525939,-76.5614572. CityView Neighborhoods MapServer/0 query today on that point: Name=Hamilton Hills. Nominatim of 5506 Harford Road, Baltimore, MD 21214 is 39.3525939,-76.5614572 (display_name still Los Rancheros / Hamilton Hills / Hamilton) — previous-tenant name stays in ops; city Name=Hamilton Hills wins. Hamilton Hills has no home view — add Hamilton Hills to citywideOnly once. Do not invent a /hamilton-hills view. Do not invent a /hamilton page. Do not fold into /hampden. Do not add Hamilton (that NSA is Hamilton Tavern at 5517 — different door). Hours today (All hours dialog / Toast businessHours): Sunday 12:00PM–2:00AM · Monday–Saturday 4:00PM–2:00AM. Footer at check: Closed · Opens Friday at 4PM. Record hours in ops. Do not copy bar 2am (120), Monday open 4pm (960), or Sunday noon (720) onto a deal clock. Quotes from the homepage today (visible crab block): CRABS ARE BACK!!! Every Monday we got half dozen large and X-large, male and female crabs for $25! Starts at 7:30 and we go until we run out! First come first served. Limited to one order per person. Happy Hour Specials · $10 Top Shelf · $10 Food Specials · $7 Bottom Shelf · View Happy Hour Menu. Toast JSON still contains a Happy Hour card with Monday Through Friday / 4pm-8pm — record that string, do not pick it over the ticket; the visible $10/$7 block has no window and the menu URL 404s. Stay off: HH $10/$7 (prices, no window on that block; menu URL 404). Empty Toast groups Wing Wednesday / Wednesday Espolon Special. Hamilton Tavern 5517. happy_hour omit. days mon. start 1170 · end null · time_window 7:30pm. cat seafood/crab. Keep printed X-large. Do not invent a second row for male vs female. notes_public is required: Until they run out; one order per person. Venue-stated limits on the same homepage block. Window stays 7:30pm / end null. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /baltimore only. bySlug[hamilton-hills] undefined. bySlug.hamilton undefined. Not in /hampden. Not in /fells-point. Fells roster stays 20.",
+      "lat": 39.3525939,
+      "lon": -76.5614572,
       "deals": [
         {
           "days": [
@@ -12922,7 +12890,7 @@
           "start": 1170,
           "end": null,
           "time_window": "7:30pm",
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://thehamiltonsportsbarandgrill.com/",
           "proof_quote": "CRABS ARE BACK!!! Every Monday we got half dozen large and X-large, male and female crabs for $25! Starts at 7:30 and we go until we run out! First come first served. Limited to one order per person.",
           "food_categories": [
@@ -12930,9 +12898,7 @@
           ]
         }
       ],
-      "lat": 39.3525939,
-      "lon": -76.5614572,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "v-no-wine-bar",
@@ -13197,15 +13163,16 @@
       "id": "warehouse-cinemas-rotunda",
       "name": "Warehouse Cinemas Rotunda",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "727 W 40th Street, Suite 104, Baltimore, MD 21211",
       "phone": "(240) 422-8012",
       "source_url": "https://rotunda.warehousecinemas.com/home/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: rotunda.warehousecinemas.com/home Tappy Hour 50% all alcohol - all wednesday confirmed. Stay off $7 Tuesdays / Crazy 8 Wednesday ticket promos.",
       "notes_public": "50% off any beverage from our one-of-a-kind self-serve tap wall",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live https://rotunda.warehousecinemas.com/home/ HTTP 200. /food-drink/ HTTP 200. Tap room https://www.warehousetaproom.com/ HTTP 200. Tap FAQ https://www.warehousetaproom.com/faq HTTP 200. /happy-hour /tappy-hour /faqs/ are Kickback Loading... stubs at HTTP 200 — record that, do not treat as a priced page. Pin 727 W 40th Street, Suite 104, Baltimore, MD 21211 / (240) 422-8012. License 711 West 40th stays in ops — do not use the 711 Nominatim (University of Maryland Urgent Care). Census Nominatim 39.3349005,-76.6311208. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Do not add Locust Point, Riverside, or Fells Point. Fells roster pin stays 21. Do not invent a /rotunda view. Hours today (record both, pick none): Tap room site Sun–Sat 11:00 AM - 11:00 PM. Cinema hours are showtime-dependent (not on the Kickback /faqs/ stub today). Do not copy tap-room 11pm (1380) or 11am (660), or cinema “10:30 AM – 11 PM” (630 / 1380), onto a deal clock. Quotes from the Rotunda homepage today: Tappy Hour · tappy / hour · 50% all alcohol - all wednesday. Quotes from the tap-room FAQ today: “Tappy Hour” every Wednesday all day long · 50% off any beverage from our one-of-a-kind self-serve tap wall. Stay off: Crazy 8 Wednesday (Every Wednesday through August 26th — dated summer promo; ticket $ is not food/drink). $7 Tuesdays / VIP Tuesdays (movie tickets). /food-drink/ regular Pour Wall (Perfect for a pre-movie Happy Hour is prose, not a window; Top Shelf Margarita $18 is regular). Other Warehouse Cinema doors (Frederick Towne Mall, Leitersburg). Keep homepage printed 50% all alcohol. Do not invent cocktail rows. happy_hour true. omit recurrence. cat drink. One row: wed start null / end null / time_window all day. notes_public is required: 50% off any beverage from our one-of-a-kind self-serve tap wall (Tap-room FAQ — so the card does not promise half-price bar cocktails). No vibe. Cinema FAQ “one drink per ID” was not on a fetchable page today (/faqs/ is a Loading stub) — record that in ops, do not invent the limit. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /hampden and /baltimore. Not in /fells-point. Not in /locust-point. bySlug.rotunda undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Woodberry Kitchen is not this ticket.",
+      "lat": 39.3349005,
+      "lon": -76.6311208,
       "deals": [
         {
           "days": [
@@ -13221,7 +13188,7 @@
           "end": null,
           "time_window": "all day",
           "happy_hour": true,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://rotunda.warehousecinemas.com/home/",
           "proof_quote": "Tappy Hour tappy hour 50% all alcohol - all wednesday",
           "food_categories": [
@@ -13229,9 +13196,7 @@
           ]
         }
       ],
-      "lat": 39.3349005,
-      "lon": -76.6311208,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "woodberry-kitchen",
@@ -13342,16 +13307,16 @@
       "id": "yeiboh-kitchen",
       "name": "Yeiboh Kitchen",
       "neighborhood": "Old Goucher",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
       "status": "verified",
       "address": "2219 Maryland Ave, Baltimore, MD 21218",
       "phone": "(443) 900-4891",
       "source_url": "https://www.yeibohkitchen.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-08-23",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: yeibohkitchen.com/menu — HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM. No item $ in plaintext; cleared prior priced list (no invent).",
       "notes_public": "Happy hour menu only available at the bar & back patio",
-      "ops_notes": "Builder 2026-08-23 leftover loadable + live https://www.yeibohkitchen.com/menu HTTP 200. Homepage https://www.yeibohkitchen.com/ HTTP 200. /happy-hour /specials /contact /hours 404. Prices from the live-linked HH PNG, visual read (same flag as Empanada Lady / Marta / Pink Flamingo / Octobar / Southpaw / The Dara / Garden Rooftop — Reviewer checks the graphic). Pin 2219 Maryland Ave, Baltimore, MD 21218 / (443) 900-4891 (site print 443-900-4891). Email info@YeibohKitchen.com stays in ops. License Yebo Kitchen stays in ops. Pin the census Nominatim 39.3148904,-76.6178082. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Old Goucher. Old Goucher has no home view — already in citywideOnly (dutch-courage). Do not add Old Goucher again. Do not invent a /old-goucher view. Do not fold into Charles Village / Greenmount West / Johns Hopkins Homewood. Do not fold into /hampden. Do not add Hampden, Fells Point, Locust Point, Riverside, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (homepage): Monday 5PM - 10PM · Closed Tuesday & Wednesday · Thursday 5PM - 10PM · Friday 5PM -11PM · Saturday 11AM - 3PM then 5PM - 11PM · Sunday 11AM - 5PM. Our Kitchen Closes Everyday 45 minutes prior to our closing hours. last guest an hour before the closing time. last guests one hour before closing. Record hours in ops. Do not copy Mon/Thu close 10pm (1320) or Fri close 11pm (1380). Do not copy kitchen-close 45 minutes prior or last-seating 1 hour prior. 5pm-7pm → 1020/1140. Quotes today: Homepage Happy Hour / 5PM - 7PM / Monday ,Thursday & Friday. Menu page HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM. HH PNG filename still HH Menu - Cinco 5_4_26.png. Live PNG today byte-identical vs the 08-19 census copy (.scratch/census-2026-08-18/scans/batch_m37/yebo_hh_menu.png; sha256 368c30f9b24054873f0779b2c08541ea5e5a5861450824aa53d194b923476866). Filename is a May 4 upload name; content matches the standing site text — live menu, not a holiday one-off. Quotes from the HH PNG today (visual read): Happy Hour Menu. TAPAS: Island Wings 11 · Zulu Brussels Sprouts 7 · Salmon Nachos 13 · Dynamite Shrimp Tacos 10 · Fried Shiitake Rice 6. DRINKS: Cosmo / Peach Bourbon Smash / Margarita / Peach Martini 10 · Select Wines 6 · Select Beers 6. Footer: Monday, Thursday & Friday / 5pm - 7pm. Extra descriptors after the tapas may ride: Island Wings — jerk spice | peppers | wasabi ranch. Zulu Brussels Sprouts — garlic soy | brown sugar | chili flakes. Salmon Nachos — chili crunch | tomatoes | capers aioli. Dynamite Shrimp Tacos — asian coleslaw | thai chili. Fried Shiitake Rice — mushrooms | carrots | peas. Stay off: bar/brunch/dinner PNG menus (Bar - August 26.png, Brunch - August 26.png, Dinner - August 13. 26 .png / live Dinner - August 13_ 26 .png). Regular dinner/brunch prices. Private-patio rental $650. Father's Day / holiday reservations. 18% auto-gratuity. Yelp widget. Closed Tue/Wed as a deal row. Keep printed names. Do not invent a brunch or dinner row from the other PNGs. Do not collapse the four $10 cocktails into one unlabeled cocktails item. happy_hour true. omit recurrence. One row. deal_format image (legal; pdf is not). notes_public is required: Happy hour menu only available at the bar & back patio. Location lock so the card does not promise HH at every table. Days/window stay on the deal row. No vibe. Load pin: in /baltimore only. Not in /hampden. Not in /fells-point. Not in /locust-point. bySlug[\"old-goucher\"] undefined. Woodberry Kitchen is not this ticket. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off.",
-      "deal_format": "image",
+      "lat": 39.3148904,
+      "lon": -76.6178082,
       "deals": [
         {
           "days": [
@@ -13361,69 +13326,23 @@
           ],
           "items": [
             {
-              "text": "Island Wings",
-              "price": "$11"
-            },
-            {
-              "text": "Zulu Brussels Sprouts",
-              "price": "$7"
-            },
-            {
-              "text": "Salmon Nachos",
-              "price": "$13"
-            },
-            {
-              "text": "Dynamite Shrimp Tacos",
-              "price": "$10"
-            },
-            {
-              "text": "Fried Shiitake Rice",
-              "price": "$6"
-            },
-            {
-              "text": "Cosmo",
-              "price": "$10"
-            },
-            {
-              "text": "Peach Bourbon Smash",
-              "price": "$10"
-            },
-            {
-              "text": "Margarita",
-              "price": "$10"
-            },
-            {
-              "text": "Peach Martini",
-              "price": "$10"
-            },
-            {
-              "text": "Select Wines",
-              "price": "$6"
-            },
-            {
-              "text": "Select Beers",
-              "price": "$6"
+              "text": "Happy Hour"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-23",
+          "prices_published": false,
+          "verified_date": "2026-09-07",
           "source_url": "https://www.yeibohkitchen.com/menu",
           "proof_quote": "HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM",
           "food_categories": [
-            "drink",
-            "wings",
-            "seafood/crab",
-            "tacos",
-            "small-plate/apps"
+            "drink"
           ]
         }
       ],
-      "lat": 39.3148904,
-      "lon": -76.6178082,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-23"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23"
     },
     {
       "id": "dear-charles",
@@ -13446,15 +13365,16 @@
       "id": "nine-tailed-fox",
       "name": "Nine Tailed Fox",
       "neighborhood": "Cross Keys",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
       "status": "verified",
       "address": "3 Village Square, Baltimore, MD 21210",
       "phone": "(443) 688-9511",
       "source_url": "https://ninetailedfoxbalt.com/menu/happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-24",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: NTF_HappyHour_070726-copy.pdf pdftotext (HTTP 200). Unchanged vs baseline. $3 cocktail upcharge is spirits qualifier — not a separate row.",
       "notes_public": "Happy hour is bar only.",
-      "ops_notes": "Builder 2026-08-24 walk-50 packet 2 + live https://ninetailedfoxbalt.com/menu/happy-hour/ 301 → https://ninetailedfoxbalt.com/wp-content/uploads/2026/07/NTF_HappyHour_070726-copy.pdf HTTP 200. Homepage https://ninetailedfoxbalt.com/ HTTP 200. /our-menus/ HTTP 200. Live HH PDF 1,542,754 bytes, sha256 c9da681d534d2d54b41084648db623e4e05e0d135fe8fff3d94cb9545ff40f67, Last-Modified Fri, 31 Jul 2026 15:31:42 GMT (source_document_date 2026-07-31 stays in ops — HTTP Last-Modified — not a schema field). Filename NTF_HappyHour_070726-copy.pdf is a designer label — do not date from it. Visual read of pdftoppm page 1 matches pdftotext. /happy-hour and /happy-hour/ also 301 to the same PDF today. /happyhour /specials /weekly-specials /promotions /menu /hours /location 301 → /not-found/ HTTP 200 (not-found shell). Pin 3 Village Square, Baltimore, MD 21210 / (443) 688-9511 (site print 443-688-9511). Email info@ninetailedfoxbalt.com stays in ops. Nominatim 39.3549658,-76.6453407. Nominatim display Greater Roland Park; city Name=Cross Keys wins. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Cross Keys. Cross Keys has no home view — add Cross Keys to citywideOnly once. Do not add Roland Park. Do not invent a /cross-keys view. Do not invent a /roland-park view. Do not fold into /hampden. Do not add Hampden. Do not add Locust Point, Riverside, Fells Point, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (homepage): Sunday – Thursday: 11:30am – 11pm (Kitchen Closes at 10pm). Friday – Saturday: 11:30am – 1am (Kitchen Closes at 11pm). Happy Hour Sunday – Friday 4pm – 6pm (Bar Only). Record hours in ops. Do not copy Sun–Thu 11pm (1380), Fri/Sat 1am (1500), kitchen-close 10pm (1320) / 11pm (1380) onto the clock. Saturday is open and is not in the HH window. 4pm-6pm → 960/1080. Quotes today: Homepage Happy Hour Sunday – Friday 4pm – 6pm (Bar Only). PDF footer SUNDAY - FRIDAY | 4 - 6 PM | BAR ONLY. PDF: $5 BEER Domestic Beer / Michelob Ultra · $6 WINE SPARKLING | ROSÉ · WHITE | RED · $8 SPIRITS OPTIONAL CHOICE OF MIXER Birdie & Buck Vodka / BSC Shot Tower Gin / Wild Roan Bourbon / Papelito Blanco Tequila / Planteray Rum · $3 UPCHARGE FOR COCKTAILS · $10 COCKTAILS Hugo Spritz / Aperol Spritz / Lychee Spritz / Old Fashioned / Margarita / Gin or Vodka Martini / Lemon Drop Martini / Seasonal Cocktail ASK YOUR BARTENDER · $5 Hot & Sour Soup wood ear mushroom, tofu, bamboo shoot / Chicken Wonton Soup bok choy, scallion · $9 Chicken Wings (3pc) fried garlic, honey tobanjan / Jade Chicken Salad napa cabbage, crispy wonton, mint, avocado, soy vinaigrette / Crab Rangoon (3pc) lump blue crab, cream cheese, sweet chili sauce / Chili Wonton (3pc) stuffed with chicken, chili oil, sesame seed / Mushroom Spring Roll (2pc) mixed mushrooms, cabbage, carrot / Crispy Shrimp Spring Roll (2pc) asparagus, sweet chili sauce · $11 General Tso Chicken broccoli, sesame seed, scallion / Mongolian Beef bell pepper, red onion, cilantro / Szechuan Chicken dry-fried chicken, red chili, szechuan peppercorn / Chow Mein Noodles mixed mushrooms, scallion, bean sprout / Vegetable Fried Rice scrambled eggs, scallion, fried onion · please no food additions or substitutions. Stay off: regular lunch/dinner/cocktail/dessert PDFs. Atlas Rewards. 20% auto-gratuity for 6+. 3% facility fee. Lunar New Year dated party. Toast catering. Yelp. $3 upcharge for cocktails is a spirits qualifier in ops — do not invent a second cocktail price. Dish names only — descriptors ride in ops. Keep printed cocktail names. Do not collapse the $10 cocktails. happy_hour true. omit recurrence. One row. notes_public is required: Happy hour is bar only. Location lock so the card does not promise HH at every table. Days/window stay on the deal row. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Load pin: in /baltimore only. Not in /hampden. Not in /fells-point. Not in /locust-point. bySlug[\"cross-keys\"] undefined. bySlug[\"roland-park\"] undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Zen West HOLD. Duchess conflict HOLD.",
+      "lat": 39.3549658,
+      "lon": -76.6453407,
       "deals": [
         {
           "days": [
@@ -13587,8 +13507,8 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-24",
-          "source_url": "https://ninetailedfoxbalt.com/menu/happy-hour/",
+          "verified_date": "2026-09-07",
+          "source_url": "https://ninetailedfoxbalt.com/wp-content/uploads/2026/07/NTF_HappyHour_070726-copy.pdf",
           "proof_quote": "SUNDAY - FRIDAY | 4 - 6 PM | BAR ONLY",
           "food_categories": [
             "drink",
@@ -13598,9 +13518,7 @@
           ]
         }
       ],
-      "lat": 39.3549658,
-      "lon": -76.6453407,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24"
     }
   ]
 }

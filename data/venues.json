@@ -5560,95 +5560,18 @@
       "id": "unity-bar-restaurant",
       "name": "Unity Bar & Restaurant",
       "neighborhood": "Mount Vernon",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "111 W. Centre St, Baltimore, MD 21201",
-      "phone": "(443) 759-4082",
       "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "18% gratuity added to checks. Daily specials Mon–Thu 4–7pm — see menu.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. Ship HH drinks+food Mon–Fri 4–7 only. Daily specials (steak $22, catfish $19, burger $19, taco ladder) and half-price wine/prosecco do NOT ship as deal rows — menu prices under specials with no discount stated (same class as Rusty Surf & Turf upcharge); note only. source_document_date=2025-12-17 (HTTP Last-Modified). Host unitybarrestaurant.com has injected SEO spam — treat as unstable for monitor. Archive RESEARCH/ig-evidence-2026-08-05/Unity_HH_12_5.pdf. Source: RESEARCH/MOUNT_VERNON_DEALS.md.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Domestic Beer $3.50",
-              "price": "$3.50"
-            },
-            {
-              "text": "Import Beer $4.50",
-              "price": "$4.50"
-            },
-            {
-              "text": "Red Sangria $5",
-              "price": "$5"
-            },
-            {
-              "text": "Wine $5",
-              "price": "$5"
-            },
-            {
-              "text": "Rail $6",
-              "price": "$6"
-            },
-            {
-              "text": "Lemon Drop $7",
-              "price": "$7"
-            },
-            {
-              "text": "Margarita $7",
-              "price": "$7"
-            },
-            {
-              "text": "Luna Azul $8",
-              "price": "$8"
-            },
-            {
-              "text": "Hennessy $8",
-              "price": "$8"
-            },
-            {
-              "text": "Casamigos Blanco $9",
-              "price": "$9"
-            },
-            {
-              "text": "Wings (6) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Sweet & Spicy Shrimp (4) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Cheeseburger Sliders (2) $10",
-              "price": "$10"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-07",
-          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
-          "food_categories": [
-            "drink",
-            "wings",
-            "seafood/crab",
-            "sliders"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: raw unity file corrupt; no priced deals from raw. deals=[] clear.",
+      "deals": [],
+      "notes_public": "Priced specials removed until re-verified from a readable official source.",
+      "phone": "(443) 759-4082",
       "lat": 39.296086,
       "lon": -76.6179506,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "minato-sushi-bar",
@@ -8561,14 +8484,14 @@
       "id": "clase-lounge",
       "name": "Clasé Lounge",
       "neighborhood": "Morrell Park",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "2709 Washington Blvd, Baltimore, MD 21230",
-      "phone": "(443) 835-2421",
       "source_url": "https://claselounge.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live claselounge.com HTTP 200 (Wednesday priced lines also on /events today). Pin 2709 Washington Blvd / (443) 835-2421. Census 39.2644395,-76.654678. CityView Neighborhoods MapServer/0 query today on that point: Name=Morrell Park. Citywide only. Do not invent a morrell-park view. Do not fold into /federal-hill or /locust-point. Find Us today (quote both; do not pick): lounge Tue–Thu 6pm - 12am; liquor Satuday typo. Lounge open 6pm vs Rush Hour 5–9pm — overlap recorded here; do not drop Wednesday 5pm. Keep 2-for-1. Throwback Thursdays 6pm–12am / Food & drink specials all night long — no $. Grown & Sexy Saturdays ladies-free until 11 — cover, not a food/drink $. Jump Off Sundays 2-for-1 shots/wings/crabs — HOLD. Homepage HTML still puts With Moe the Bartender after Jump Off Sundays. /events still puts the same Moe line before that heading. Do not pick a day. Pin no sun deal. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: claselounge.com curl — Wed Rush Hour 5–9pm + Wild Out 9pm–12am unchanged. Throwback Thu / Jump Off Sun still no $.",
+      "lat": 39.2644395,
+      "lon": -76.654678,
       "deals": [
         {
           "days": [
@@ -8592,7 +8515,7 @@
           "end": 1260,
           "time_window": "5pm-9pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://claselounge.com/",
           "proof_quote": "Rush Hour Wednesdays · 5pm–9pm Happy hour the way it should be. 2-for-1 drinks. $7 shots. $1 wings.",
           "food_categories": [
@@ -8617,7 +8540,7 @@
           "start": 1260,
           "end": 1440,
           "time_window": "9pm-12am",
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://claselounge.com/",
           "proof_quote": "Wild Out Wednesdays · 9pm–12am Sounds by DJ King Freeman. $5 shots. $1 wings.",
           "food_categories": [
@@ -8626,9 +8549,8 @@
           ]
         }
       ],
-      "lat": 39.2644395,
-      "lon": -76.654678,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "(443) 835-2421",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "cookhouse",
@@ -8995,14 +8917,14 @@
       "id": "dylans-oyster-cellar",
       "name": "Dylan's Oyster Cellar",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "3601 Chestnut Avenue, Baltimore, MD 21211",
-      "phone": "(443) 759-6595",
       "source_url": "https://dylansoyster.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "ops_notes": "Builder 2026-08-20 off census + live dylansoyster.com HTTP 200. Pin 3601 Chestnut Avenue / (443) 759-6595. Census 39.3313518,-76.6291481. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not invent a view. Homepage still says Closed for Summer Break August 9th-17th. Re-opening August 18th! — that break ended Aug 18. Do not hold the weekly rows. Regular sample-menu $ (Last Updated 7/30/2026) are not weekly specials. Hours: Tuesday through Saturday 5pm-10pm / Closed Sundays & Mondays. Happy Hour Drinks weekdays 5pm to 7pm (excludes Saturday). Oyster Happy Hour Daily 5pm to 7pm (except Friday & Saturday). Keep site wording the a half dozen and $8 High & Mellow(High Life PONY & a SHOT). Pin no Saturday drink HH and no Fri/Sat oyster HH. notes_public omitted.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: dylansoyster.com curl — Happy Hour Drinks + Oyster Happy Hour unchanged. Sample-menu $ not weekly deals. Summer break note stale (ended Aug 18).",
+      "lat": 39.3313518,
+      "lon": -76.6291481,
       "deals": [
         {
           "days": [
@@ -9033,7 +8955,7 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://dylansoyster.com/",
           "proof_quote": "Happy Hour Drinks Weekdays: 5pm to 7pm //  (excludes Saturday) $1 off Drafts, *$8 select Sparkling / Rosé/ White $8 High & Mellow(High Life PONY & a SHOT) $5 Pickle Back",
           "food_categories": [
@@ -9056,7 +8978,7 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://dylansoyster.com/",
           "proof_quote": "$5 off the a half dozen of the “Oyster of the Day” Daily 5pm to 7pm (except Friday & Saturday)",
           "food_categories": [
@@ -9064,9 +8986,8 @@
           ]
         }
       ],
-      "lat": 39.3313518,
-      "lon": -76.6291481,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "(443) 759-6595",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "facci",
@@ -9179,15 +9100,14 @@
       "id": "fogo-de-chao",
       "name": "Fogo de Chao",
       "neighborhood": "Inner Harbor",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "600 E. Pratt St. #102, Baltimore, MD 21202",
-      "phone": "(410) 528-9292",
       "source_url": "https://fogodechao.com/location/baltimore/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "All-day drink happy hour is at Bar Fogo. Half-price South American wine bottles under $130 are in the dining room and bar.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live fogodechao.com/location/baltimore/ HTTP 200. Pin 600 E. Pratt St. #102 / (410) 528-9292. Census 39.2872129,-76.6073897. CityView Neighborhoods MapServer/0 query today on that point: Name=Inner Harbor. Already in /inner-harbor. Hours (not the deal clock): Lunch MON-FRI 11:30 AM - 3:00 PM · Dinner Mon - Thu 3:00 PM - 9:00 PM / Fri 3:00 PM - 10:00 PM / Sat 2:00 PM - 10:00 PM / Sun 2:00 PM - 9:00 PM · Brunch SAT - SUN 11:30 AM - 2:00 PM. A second hours strip also prints FRI - SAT 11:15 AM - 9:45 PM / SUN 11:15 AM - 8:45 PM — record both; do not pick one for kitchen vs bar. Happy Hour SUN - SAT - All Day. Stay off National Caipirinha Day Thursday September 10 — one-off. Do not ship.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: fogodechao.com/location/baltimore/ curl — All Day Happy Hour + half-price bottles unchanged. Skip one-off Caipirinha Day / Labor Day promo.",
+      "lat": 39.2872129,
+      "lon": -76.6073897,
       "deals": [
         {
           "days": [
@@ -9217,7 +9137,7 @@
           "end": null,
           "time_window": "all day",
           "happy_hour": true,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://fogodechao.com/location/baltimore/",
           "proof_quote": "ALL DAY HAPPY HOUR Join us for All Day Happy Hour at Bar Fogo, featuring $6 Beers, $8 South American Wines and $10 Brazilian-Inspired Cocktails. Happy Hour SUN - SAT - All Day",
           "food_categories": [
@@ -9243,7 +9163,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://fogodechao.com/location/baltimore/",
           "proof_quote": "We're offering Happy Hour Specials and Half-Price South American bottles of wine under $130. All Day Every Day. In the dining room and bar.",
           "food_categories": [
@@ -9251,9 +9171,9 @@
           ]
         }
       ],
-      "lat": 39.2872129,
-      "lon": -76.6073897,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "(410) 528-9292",
+      "notes_public": "All-day drink happy hour is at Bar Fogo. Half-price South American wine bottles under $130 are in the dining room and bar.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "the-food-market",
@@ -9381,15 +9301,14 @@
       "id": "gertrudes",
       "name": "Gertrude's Restaurant",
       "neighborhood": "Johns Hopkins Homewood",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "10 Art Museum Drive, Baltimore, MD 21218",
-      "phone": "410-889-3399",
       "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "Thursday $20 dinners. Boardwalk Crab Cake is a $5 upcharge. No discounts or substitutions.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live gertrudesbaltimore.com/thursdays-with-gertie HTTP 200; homepage HTTP 200. Pin 10 Art Museum Drive / 410-889-3399. Census 39.3262199,-76.6190802. CityView Neighborhoods MapServer/0 query today on that point: Name=Johns Hopkins Homewood. Site self-describes Baltimore Museum of Art; city Name wins. Citywide only. Do not invent a johns-hopkins-homewood view. Do not fold into /hampden or /inner-harbor. Homepage hours: Monday - Tuesday Closed · Wednesday - Friday Lunch 11:00 am - 3:00 pm Lite Fare 3:00 pm - 4:30pm Dinner 4:30 pm - 8:00 pm. Lite Fare 3–4:30 is hours, not a deal. Do not invent all day. Stay off Events archive Wine Wednesday / Tuesdays with Gertie — 2020, stale; do not ship. Boardwalk Crab Cake ($5-Upcharge) is notes_public, not a separate row. Prix-fixe spans the menu — omit food_categories on both Thursday rows.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: gertrudesbaltimore.com/thursdays-with-gertie curl — $20 dinners + $36 3-course unchanged. Boardwalk Crab Cake $5 upcharge stays notes_public.",
+      "lat": 39.3262199,
+      "lon": -76.6190802,
       "deals": [
         {
           "days": [
@@ -9403,7 +9322,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
           "proof_quote": "$20 Dinners Maryland Pan-Fried Chicken Only offered on Thursday nights! Boardwalk Crab Cake ($5-Upcharge) Sorry, no discounts or substitutions are available with this menu."
         },
@@ -9419,28 +9338,27 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.gertrudesbaltimore.com/thursdays-with-gertie",
           "proof_quote": "$36 3-Course Dinner Includes coffee and tea Soup or Salad from our regular menu Excludes Seafood Salad Main Course Dinner from above $20 selections Dessert from our seasonal menu!"
         }
       ],
-      "lat": 39.3262199,
-      "lon": -76.6190802,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "410-889-3399",
+      "notes_public": "Thursday $20 dinners. Boardwalk Crab Cake is a $5 upcharge. No discounts or substitutions.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "guilford-hall",
       "name": "Guilford Hall Brewery",
       "neighborhood": "Greenmount West",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1611 Guilford Ave, Baltimore, MD 21202",
-      "phone": "(410) 305-9953",
       "source_url": "https://www.guilfordhall.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "Kitchen hours conclude 1 hour before close.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live guilfordhall.com/happy-hour HTTP 200. Pin 1611 Guilford Ave / (410) 305-9953. Census 39.3084005,-76.6120480. CityView Neighborhoods MapServer/0 query today on that point: Name=Greenmount West. Homepage self-describes Station North Arts District; city Name wins. Citywide only. Do not invent a greenmount-west view. Do not fold into /station-north (that view is Charles North only). Hours: Monday: Closed · Tuesday - Friday: 4pm-10pm · Saturday: 11am-10pm · Sunday: 11am-9pm · Kitchen hours conclude 1 hour before the business closes. TUESDAY – INDUSTRY NIGHT is industry-gated. Do not ship as a public row. THURSDAY – CHEFS CHOICE / SUNDAY – CHEF'S CHOICE — no $. Do not ship. Keep site spelling BURGUER. Linked PDF 985cc1_f52a7a49a62947ca8e3310cdd7e93cb1.pdf is still the regular drinks/beer list, not the weekly specials. Do not invent a 4–6 half-off pint row from Instagram. Cashless is on that PDF — ops_notes only, not notes_public. No clock on the specials; do not copy venue hours onto the deal.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: guilfordhall.com/happy-hour curl — Wed $15 / Fri $16 unchanged. Tue Industry Night gated; Thu/Sun Chef Choice no $. Keep BURGUER spelling.",
+      "lat": 39.3084005,
+      "lon": -76.612048,
       "deals": [
         {
           "days": [
@@ -9454,7 +9372,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.guilfordhall.com/happy-hour",
           "proof_quote": "WEDNESDAY – WINGS & BEER… 15 1LB of Bone-IN Wings your WAY Half Liter of CHOICE: GUILFORD LAGER OR BALTIMORE PILSNER",
           "food_categories": [
@@ -9474,7 +9392,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.guilfordhall.com/happy-hour",
           "proof_quote": "FRIDAY – BURGUER & BREW … 16 Signature brisket, short rib, chuck blend ½ pound burger, LTO, choice of cheese on a brioche bun. Half liter of choice: Guilford Lager or Baltimore Pilsner",
           "food_categories": [
@@ -9483,9 +9401,9 @@
           ]
         }
       ],
-      "lat": 39.3084005,
-      "lon": -76.612048,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "(410) 305-9953",
+      "notes_public": "Kitchen hours conclude 1 hour before close.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "hair-of-the-dog",
@@ -9693,15 +9611,14 @@
       "id": "hershs",
       "name": "Hersh's Pizza & Drinks",
       "neighborhood": "Riverside",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
       "status": "verified",
       "address": "1843-45 Light Street, Baltimore MD 21230",
-      "phone": "443-438-4948",
       "source_url": "https://hershs.com/events/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-20",
-      "notes_public": "Wine Wednesday half-off bottles is with dinner.",
-      "ops_notes": "Builder 2026-08-20 leftover loadable + live hershs.com/events/ HTTP 200; homepage banner also half off bottles of vino on Wine Wednesday. Pin 1843-45 Light Street, Baltimore MD 21230 / 443-438-4948. Census 39.2686609,-76.6116428. CityView Neighborhoods MapServer/0 query today on that point: Name=Riverside. Site/OpenTable color is Federal Hill; city Name wins. Already in /locust-point. Do not fold into /federal-hill. Hours footer: Tuesday thru Saturday 5:00-9:30 pm / Sunday 5:00-8:30 pm / Closed Monday. Events: Wine Wednesdays! Every Wednesday, join us for half-off bottles of wine with dinner. Happy Hour Cheap and easy drinking Wednesday-Friday 5-7pm, beer, wine and cocktail specials (no $ — times-only, same class as The Point in Fells). Stay off Frickin’ Tuesdays / Fried Chicken Tuesdays (no $), Burger Thursdays (no $), Easter Brunch 2026, Mother’s Day 2026, NYE, dated wine dinners.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: hershs.com/events/ curl — Wine Wednesdays half-off + HH Wed–Fri 5–7pm no $ unchanged. Skip Frickin’ Tuesdays / Burger Thursdays (no $) and dated events.",
+      "lat": 39.2686609,
+      "lon": -76.6116428,
       "deals": [
         {
           "days": [
@@ -9715,7 +9632,7 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://hershs.com/events/",
           "proof_quote": "Wine Wednesdays! Every Wednesday, join us for half-off bottles of wine with dinner.",
           "food_categories": [
@@ -9738,14 +9655,14 @@
           "time_window": "5pm-7pm",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-20",
+          "verified_date": "2026-09-07",
           "source_url": "https://hershs.com/events/",
           "proof_quote": "Happy Hour Cheap and easy drinking Wednesday-Friday 5-7pm, beer, wine and cocktail specials."
         }
       ],
-      "lat": 39.2686609,
-      "lon": -76.6116428,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-20"
+      "phone": "443-438-4948",
+      "notes_public": "Wine Wednesday half-off bottles is with dinner.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
     },
     {
       "id": "homeslyce-mt-vernon",
@@ -10675,14 +10592,15 @@
       "id": "silver-queen-cafe",
       "name": "Silver Queen Cafe",
       "neighborhood": "Waltherson",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "5429 Harford Road, Baltimore, MD 21214",
       "phone": "443-345-2020",
       "source_url": "https://www.silverqueencafe.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live silverqueencafe.com/ HTTP 200. Pin 5429 Harford Road, Baltimore, MD 21214 / 443-345-2020. Census 39.3517932,-76.5617112. CityView Neighborhoods MapServer/0 query today on that point: Name=Waltherson. Waltherson has no home view — already in citywideOnly. Do not duplicate the string. Do not invent a /waltherson view. Hours: Wednesday & Thursday Dinner: 5pm–9pm. Record in ops. Do not copy onto the deal clock. Whole-line quote today (do not clean up): Wine & Whiskey Wednesdays: all bottles of wine are discounted 20%, and sangria is only $10 per glass. Whiskeys are $2 off Thirsty Thursdays, Get a Burger is and your first beer is on the house, plus all cans of beer are only $4. Do not invent a burger price from Get a Burger is. Record that clause in ops. Stay off: this week, it's happy hour at the bar all night long! — this week is a one-off. Booze & BBQ / Market at Hamilton are other doors — do not mix.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: silverqueencafe.com curl. Wed Wine & Whiskey + Thu Thirsty confirmed. Whiskeys $2 off on Wed line. No burger $. Stay off one-off bar HH.",
+      "lat": 39.3517932,
+      "lon": -76.5617112,
       "deals": [
         {
           "days": [
@@ -10696,13 +10614,17 @@
             {
               "text": "sangria $10 per glass",
               "price": "$10"
+            },
+            {
+              "text": "Whiskeys $2 off",
+              "price": "$2 off"
             }
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.silverqueencafe.com/",
-          "proof_quote": "Wine & Whiskey Wednesdays: all bottles of wine are discounted 20%, and sangria is only $10 per glass.",
+          "proof_quote": "Wine & Whiskey Wednesdays: all bottles of wine are discounted 20%, and sangria is only $10 per glass. Whiskeys are $2 off",
           "food_categories": [
             "drink"
           ]
@@ -10712,10 +10634,6 @@
             "thu"
           ],
           "items": [
-            {
-              "text": "Whiskeys are $2 off",
-              "price": "$2 off"
-            },
             {
               "text": "first beer is on the house",
               "price": "free"
@@ -10727,265 +10645,49 @@
           ],
           "start": null,
           "end": null,
-          "verified_date": "2026-08-21",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.silverqueencafe.com/",
-          "proof_quote": "Whiskeys are $2 off Thirsty Thursdays, Get a Burger is and your first beer is on the house, plus all cans of beer are only $4.",
+          "proof_quote": "Thirsty Thursdays, Get a Burger is and your first beer is on the house, plus all cans of beer are only $4.",
           "food_categories": [
             "drink"
           ]
         }
       ],
-      "lat": 39.3517932,
-      "lon": -76.5617112,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "the-empanada-lady",
       "name": "The Empanada Lady",
       "neighborhood": "Downtown",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "10 S Street STE 100, Baltimore, MD 21202",
-      "phone": "(443) 377-1133",
       "source_url": "https://www.theempanadalady.shop/happyhour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "notes_public": "We add a 15% love (gratuity) to all experiences.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live theempanadalady.shop/happyhour HTTP 200. HH graphic visual read today (wix media 086c5e_3ab29bd9edf04f1ba57f4fb0a8cb8c13). Pin 10 S Street STE 100, Baltimore, MD 21202 / (443) 377-1133. Census 39.2892322,-76.6112179. CityView Neighborhoods MapServer/0 query today on that point: Name=Downtown. Already in /inner-harbor. Do not invent a /downtown page. Domain theempanadalady.shop is this door. Hours on the about block today omit Mon/Tue: Wednesday & Thursday 11-8pm / Friday & Saturday 12-11pm / Sunday 12-6pm. Do not invent closed. Graphic still says weekdays — record both facts in ops. Do not drop Mon/Tue from the graphic. Quotes from the graphic today: AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM. COCKTAILS - $8.99. SHOOTERS - $7.99. WELL SHOTS - $6.99. $5 BEER · $7 WINE · $10 DON JULIO BLANCO · $10 HENNESSEY. (6) WINGS (1 FLAVOR) - $10.99 · NACHOS (CHICKEN OR BEEF) - $10.99 · SALMON BITES - $10.99 · SIDES - $5.99 · PAPAS - $5.99 · QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99. Keep graphic spellings (HENNESSEY, PAPAS). notes_public quote-matched: We add a 15% love (gratuity) to all experiences.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "cocktails $8.99",
-              "price": "$8.99"
-            },
-            {
-              "text": "shooters $7.99",
-              "price": "$7.99"
-            },
-            {
-              "text": "well shots $6.99",
-              "price": "$6.99"
-            },
-            {
-              "text": "$5 beer",
-              "price": "$5"
-            },
-            {
-              "text": "$7 wine",
-              "price": "$7"
-            },
-            {
-              "text": "$10 Don Julio Blanco",
-              "price": "$10"
-            },
-            {
-              "text": "$10 HENNESSEY",
-              "price": "$10"
-            },
-            {
-              "text": "(6) wings $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "nachos $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "salmon bites $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "sides $5.99",
-              "price": "$5.99"
-            },
-            {
-              "text": "PAPAS $5.99",
-              "price": "$5.99"
-            },
-            {
-              "text": "quesadillas $10.99",
-              "price": "$10.99"
-            }
-          ],
-          "start": 960,
-          "end": 1200,
-          "time_window": "4pm-8pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.theempanadalady.shop/happyhour",
-          "proof_quote": "AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM COCKTAILS - $8.99 SHOOTERS - $7.99 WELL SHOTS - $6.99 $5 BEER $7 WINE $10 DON JULIO BLANCO $10 HENNESSEY (6) WINGS (1 FLAVOR) - $10.99 NACHOS (CHICKEN OR BEEF) - $10.99 SALMON BITES - $10.99 SIDES - $5.99 PAPAS - $5.99 QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99 WE ADD A 15% LOVE (GRATUITY) TO ALL EXPERIENCES",
-          "food_categories": [
-            "drink",
-            "wings",
-            "small-plate/apps"
-          ]
-        },
-        {
-          "days": [
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "cocktails $8.99",
-              "price": "$8.99"
-            },
-            {
-              "text": "shooters $7.99",
-              "price": "$7.99"
-            },
-            {
-              "text": "well shots $6.99",
-              "price": "$6.99"
-            },
-            {
-              "text": "$5 beer",
-              "price": "$5"
-            },
-            {
-              "text": "$7 wine",
-              "price": "$7"
-            },
-            {
-              "text": "$10 Don Julio Blanco",
-              "price": "$10"
-            },
-            {
-              "text": "$10 HENNESSEY",
-              "price": "$10"
-            },
-            {
-              "text": "(6) wings $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "nachos $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "salmon bites $10.99",
-              "price": "$10.99"
-            },
-            {
-              "text": "sides $5.99",
-              "price": "$5.99"
-            },
-            {
-              "text": "PAPAS $5.99",
-              "price": "$5.99"
-            },
-            {
-              "text": "quesadillas $10.99",
-              "price": "$10.99"
-            }
-          ],
-          "start": 1080,
-          "end": 1200,
-          "time_window": "6pm-8pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.theempanadalady.shop/happyhour",
-          "proof_quote": "AVAILABLE WEEKDAYS 4-8PM | SATURDAYS 6-8PM COCKTAILS - $8.99 SHOOTERS - $7.99 WELL SHOTS - $6.99 $5 BEER $7 WINE $10 DON JULIO BLANCO $10 HENNESSEY (6) WINGS (1 FLAVOR) - $10.99 NACHOS (CHICKEN OR BEEF) - $10.99 SALMON BITES - $10.99 SIDES - $5.99 PAPAS - $5.99 QUESADILLAS (BEEF | CHICKEN | VEGGIE | CHEESE) - $10.99 WE ADD A 15% LOVE (GRATUITY) TO ALL EXPERIENCES",
-          "food_categories": [
-            "drink",
-            "wings",
-            "small-plate/apps"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: theempanadalady.shop/happyhour text scrape — no priced HH in raw. deals=[] clear.",
+      "deals": [],
+      "notes_public": "No priced happy hour specials verified from site text this pass.",
+      "phone": "(443) 377-1133",
       "lat": 39.2892322,
       "lon": -76.6112179,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "true-chesapeake",
       "name": "True Chesapeake Oyster Co.",
       "neighborhood": "Jones Falls Area",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "3300 Clipper Mill Road, Baltimore, MD 21211",
-      "phone": "410-913-6374",
       "source_url": "https://truechesapeake.com/pages/menus",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "notes_public": "only at the bar & high tops.",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live truechesapeake.com/pages/menus HTTP 200. BEV PDF https://cdn.shopify.com/s/files/1/1730/4049/files/TC_BEV_MENU_4.15.26.pdf still linked today (HTTP 200; CreationDate 2026-04-28). Pin 3300 Clipper Mill Road, Baltimore, MD 21211 / 410-913-6374. Census 39.3268179,-76.6369016. CityView Neighborhoods MapServer/0 query today on that point: Name=Jones Falls Area. Jones Falls Area has no home view — already in citywideOnly. Do not invent a /jones-falls-area view. Do not fold into /hampden. Nominatim display says Hampden — city Name wins. Hours on the menus page: Monday: Closed · Tues, Wed, Thurs, Fri, Sat : 5 - 11 PM · Sunday Brunch: 11AM - 3 PM · Sunday Dinner: 5 - 9 PM. Kitchen closes at 9pm Tuesday through Thursday and at 10pm on Friday & Saturday. Record in ops. Do not copy onto the deal clock. Homepage today: Join us for Happy Hour every day but Monday from 5 - 7 pm. PDF page 1 today: TUESDAY-sundAY | 5PM-7PM / only at the bar & high tops / $6 DAIQUIRIS, MARTINIS, MARGARITAS & OLD FASHIONEDS / $5 SELECT DRAFTS / $6 SELECT WINES / $2 RAW OYSTERS / $2 ROASTED OYSTERS / auto-gratuity of 20% will be applied to happy hour checks / HALF-PRICE WINE WEDNESDAYS / 50% off select bottles of wine. Stay off: HH graphic $4 spicy chicken meatball / $4 classic coddie — newer linked PDF omits them. Do not ship. Tropical Tuesdays named cocktails have no $. Do not ship. Wednesday 50% off select bottles of wine is a separate row — do not hang it on the six-day row. Record the 20% auto-grat in ops.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "$6 daiquiris, martinis, margaritas & old fashioneds",
-              "price": "$6"
-            },
-            {
-              "text": "$5 select drafts",
-              "price": "$5"
-            },
-            {
-              "text": "$6 select wines",
-              "price": "$6"
-            },
-            {
-              "text": "$2 raw oysters",
-              "price": "$2"
-            },
-            {
-              "text": "$2 roasted oysters",
-              "price": "$2"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://truechesapeake.com/pages/menus",
-          "proof_quote": "TUESDAY-sundAY | 5PM-7PM only at the bar & high tops $6 DAIQUIRIS, MARTINIS, MARGARITAS & OLD FASHIONEDS $5 SELECT DRAFTS $6 SELECT WINES $2 RAW OYSTERS $2 ROASTED OYSTERS",
-          "food_categories": [
-            "drink",
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "50% off select bottles of wine",
-              "price": "50% off"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://truechesapeake.com/pages/menus",
-          "proof_quote": "HALF-PRICE WINE WEDNESDAYS 50% off select bottles of wine.",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: truechesapeake.com/pages/menus raw — Happy Hour link present, no dollar amounts in text. deals=[] clear.",
+      "deals": [],
+      "notes_public": "No priced happy hour specials published in menus page text this pass.",
+      "phone": "410-913-6374",
       "lat": 39.3268179,
       "lon": -76.6369016,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "valentinos",
@@ -11913,148 +11615,18 @@
       "id": "nepenthe-brewing",
       "name": "Nepenthe Brewing Co.",
       "neighborhood": "Hampden",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "3626 Falls Road, Baltimore, MD 21211",
-      "phone": "(443) 438-4846",
       "source_url": "https://www.nepenthebrewingco.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live nepenthebrewingco.com/happy-hour HTTP 200; homepage HTTP 200; events /blank-1 HTTP 200. HH graphic visual read today (WEB_HH MENU.png). Pin 3626 Falls Road, Baltimore, MD 21211 (license 3622-26 Falls) / (443) 438-4846 (homepage schema today; /hours-location and /contact-us still 404). Census 39.3314965,-76.6352889. CityView Neighborhoods MapServer/0 query today on that point: Name=Hampden. Already in /hampden. Do not add Hampden to citywideOnly. Structured hours today: no Monday · Tue/Wed/Thu 17:00–21:00 · Fri 17:00–22:00 · Sat 12:00–22:00 · Sun 12:00–17:00. Record hours in ops. Graphic advertises MON, WED, THURS 5PM-7PM — drop Monday (same shape as Rockwell). If they add Monday hours, the day comes back. Events page clocks today (agree, no extra $): MONDAYS Manic Mondays! All night specials + Happy Hour 5-7pm / TUESDAYS All Night Happy Hour / WEDNESDAYS Happy Hour 5-7 / THURSDAYS Happy Hour 5-7. Friday is not on the graphic — do not invent. D&D (first Tuesday) and Doodle Club (2nd & last Thursdays) stay off. Quotes from the HH graphic today (visual read): HAPPY HOUR / TUES ALL NIGHT! MON, WED, THURS 5PM-7PM. $7 Pint of the Day / House choice!. $9 Rail Drinks / House Mac 'n Cheese. $11 All Wine / Chips & Beer Cheese Queso. $13 Special Fries / Tater Totchos / Single Drive Thru Burger / Buffalo Chicken Sandwich / Crispy Tofu Sandwich. ADD FRIES TO ANY SANDWICH FOR $3!. Each price block applies to the drink and the food on that block. Keep printed names. Dietary v / vg marks stay in ops. Tuesday all night is the printed window: start 1020 · end null (open-to-close; bar opens 5pm). Do not copy Nepenthe's 9pm close onto a deal clock. notes_public omitted. No vibe.",
-      "deals": [
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Pint of the Day",
-              "price": "$7"
-            },
-            {
-              "text": "Rail drinks",
-              "price": "$9"
-            },
-            {
-              "text": "House Mac 'n Cheese",
-              "price": "$9"
-            },
-            {
-              "text": "All wine",
-              "price": "$11"
-            },
-            {
-              "text": "Chips & Beer Cheese Queso",
-              "price": "$11"
-            },
-            {
-              "text": "Special fries",
-              "price": "$13"
-            },
-            {
-              "text": "Tater Totchos",
-              "price": "$13"
-            },
-            {
-              "text": "Single Drive Thru Burger",
-              "price": "$13"
-            },
-            {
-              "text": "Buffalo Chicken Sandwich",
-              "price": "$13"
-            },
-            {
-              "text": "Crispy Tofu Sandwich",
-              "price": "$13"
-            },
-            {
-              "text": "Add fries to any sandwich",
-              "price": "$3"
-            }
-          ],
-          "start": 1020,
-          "end": null,
-          "time_window": "all night",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.nepenthebrewingco.com/happy-hour",
-          "proof_quote": "HAPPY HOUR TUES ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day House choice! $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich ADD FRIES TO ANY SANDWICH FOR $3!",
-          "food_categories": [
-            "drink",
-            "burger",
-            "sandwich/cheesesteak",
-            "small-plate/apps"
-          ]
-        },
-        {
-          "days": [
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Pint of the Day",
-              "price": "$7"
-            },
-            {
-              "text": "Rail drinks",
-              "price": "$9"
-            },
-            {
-              "text": "House Mac 'n Cheese",
-              "price": "$9"
-            },
-            {
-              "text": "All wine",
-              "price": "$11"
-            },
-            {
-              "text": "Chips & Beer Cheese Queso",
-              "price": "$11"
-            },
-            {
-              "text": "Special fries",
-              "price": "$13"
-            },
-            {
-              "text": "Tater Totchos",
-              "price": "$13"
-            },
-            {
-              "text": "Single Drive Thru Burger",
-              "price": "$13"
-            },
-            {
-              "text": "Buffalo Chicken Sandwich",
-              "price": "$13"
-            },
-            {
-              "text": "Crispy Tofu Sandwich",
-              "price": "$13"
-            },
-            {
-              "text": "Add fries to any sandwich",
-              "price": "$3"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.nepenthebrewingco.com/happy-hour",
-          "proof_quote": "HAPPY HOUR TUES ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day House choice! $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich ADD FRIES TO ANY SANDWICH FOR $3!",
-          "food_categories": [
-            "drink",
-            "burger",
-            "sandwich/cheesesteak",
-            "small-plate/apps"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: nepenthebrewingco.com/happy-hour raw — Wix shell, no $. deals=[] clear.",
+      "deals": [],
+      "notes_public": "No priced happy hour specials published on the happy hour page this pass.",
+      "phone": "(443) 438-4846",
       "lat": 39.3314965,
       "lon": -76.6352889,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "octobar",
@@ -13763,80 +13335,18 @@
       "id": "dear-charles",
       "name": "Dear Charles",
       "neighborhood": "Charles Village",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
       "status": "verified",
       "address": "3215 N Charles Street, Baltimore, MD 21218",
-      "phone": "(410) 424-7788",
       "source_url": "https://www.dearcharles.com/menus/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-24",
-      "notes_public": "Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street.",
-      "ops_notes": "Builder 2026-08-24 walk-50 packet 1 + live https://www.dearcharles.com/menus/ HTTP 200. Homepage https://www.dearcharles.com/ HTTP 200. /events/ HTTP 200. /location/dear-charles/ HTTP 200. /happy-hour /hours /location 404. Leftover batch 34 checked the hotel (thestudyatjohnshopkins.com/dining 404) and called this door empty — that was the wrong site. Restaurant site is live today. Pin 3215 N Charles Street, Baltimore, MD 21218 / (410) 424-7788 (site print). Hotel line 410.243.0030 stays off this card. Nominatim 39.3278546,-76.6171084. CityView Neighborhoods MapServer/0 query today on that point (GET and POST, JSON point geometry, outFields=Name): Name=Charles Village. Charles Village has no home view — already in citywideOnly (Charles Village Pub, HomeSlyce JHU). Do not add Charles Village again. Do not invent a /charles-village view. Do not fold into /station-north or /mount-vernon. Do not add Locust Point, Riverside, Fells Point, Hampden, Hamilton, or Downtown. Fells roster pin stays 21. Hours today (location page): Monday - Friday: Breakfast: 7:00 AM – 11:00 AM Lunch: 11:00 AM – 3:00 PM Dinner: 3:30 PM – 10:00 PM. Saturday & Sunday: Brunch: 7:00 AM - 3:00 PM Dinner: 3:30 PM – 10:00 PM. Live location page prints Brunch: : 7:00 AM - 3:00 PM (extra colon in the HTML). Record hours in ops. Do not copy dinner 3:30 (930) / 10pm (1320), breakfast 7am, or lunch 3pm onto either clock. 3pm-7pm → 900/1140. Quotes today: Location Happy Hour drink specials offered daily 3pm - 7pm! Location Dear Charles is located in the lower level of The Study at Johns Hopkins. There is a street level entrance located at the corner of 33rd Street and N Lovegrove Street. Happenings Join us everyday from 3pm - 7pm for drink specials including $2 off draft beers, $8 select house wines, $9 craft cocktails, and $12 signature cocktails. Happenings Wednesdays: Burger Night Our Charles Burger is a must-try with Angus chuck, brisket, and a short-rib blend topped with our savory bacon jam. Served with fries for $17. Menus HH block Beverage 3pm - 7pm Draft Beers $2 Off House Wines $8 Craft & Well Cocktails $9 Signature Cocktails $12. Regular dinner Charles Burger prints $22 on the same menus page — that is not the Wednesday deal. Stay off: regular $22 Charles Burger. Hotel phone 410.243.0030. Study dining 404s. Full-price cocktail list (Irish Bloom $14, Aviation $12, etc.). Breakfast / lunch / dinner / brunch / dessert prices. The Perch. Keep printed names (Craft & Well, plus Signature $12). Happenings $9 craft cocktails is the overlapping $9, not a second cocktail row. happy_hour true on the daily drink row. happy_hour false on Wednesday burger night. omit recurrence. Two rows. notes_public is required: Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street. Location lock so the card does not send people to the hotel lobby. Days/window stay on the deal row. No vibe. deal_format omitted (pdf is illegal; only image is allowed). Burger night is unclocked (Woodberry shape): start null · end null · time_window all day. Load pin: in /baltimore only. Not in /station-north. Not in /mount-vernon. Not in /fells-point. Not in /hampden. bySlug[\"charles-village\"] undefined. William Fell is HOLD. Heritage HOLD. Freddie's times-only stays off. Zen West HOLD. Duchess conflict HOLD.",
-      "deals": [
-        {
-          "days": [
-            "sun",
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Draft Beers",
-              "price": "$2 off"
-            },
-            {
-              "text": "House Wines",
-              "price": "$8"
-            },
-            {
-              "text": "Craft & Well Cocktails",
-              "price": "$9"
-            },
-            {
-              "text": "Signature Cocktails",
-              "price": "$12"
-            }
-          ],
-          "start": 900,
-          "end": 1140,
-          "time_window": "3pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-24",
-          "source_url": "https://www.dearcharles.com/menus/",
-          "proof_quote": "Join us everyday from 3pm - 7pm for drink specials including $2 off draft beers, $8 select house wines, $9 craft cocktails, and $12 signature cocktails.",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "Charles Burger with fries",
-              "price": "$17"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all day",
-          "happy_hour": false,
-          "verified_date": "2026-08-24",
-          "source_url": "https://www.dearcharles.com/menus/",
-          "proof_quote": "Wednesdays: Burger Night Our Charles Burger is a must-try with Angus chuck, brisket, and a short-rib blend topped with our savory bacon jam. Served with fries for $17.",
-          "food_categories": [
-            "burger"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: dearcharles.com/menus raw — full-price menu only; no HH block in scrape. deals=[] clear.",
+      "deals": [],
+      "notes_public": "Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street. No priced happy hour verified from menus scrape this pass.",
+      "phone": "(410) 424-7788",
       "lat": 39.3278546,
       "lon": -76.6171084,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-24"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24"
     },
     {
       "id": "nine-tailed-fox",

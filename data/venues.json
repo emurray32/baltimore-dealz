@@ -454,14 +454,15 @@
       "id": "el-bufalo",
       "name": "El Bufalo Tequila Bar + Kitchen",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2921 O'Donnell St, Baltimore, MD 21224",
       "phone": "410-814-0594",
       "source_url": "https://www.elbufalobaltimore.net/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-11",
-      "ops_notes": "Happy hour DAYS and WINDOW come from the venue's own Instagram (@el_bufalo), not the site. The homepage still says \"Happy Hour ALL Day!!\" with no days — treated as STALE: three IG posts state 3-6pm, two of them within the last fortnight. Dating (CoS 2026-08-11): \"Introducing our new happy hour #InTheBuf Monday - Friday from 3-6pm!\" posted ~5 months ago; \"Wednesday pick me up | Happy hour 3-6pm\" 13 days ago (a Wednesday); \"Let's go girls- it's the weekend! Open at 11:30am | Happy hour 3-6pm\" 11 days ago (a FRIDAY, so it does not contradict Mon-Fri). Post ages are internally consistent with their own captions' weekdays. Prices are re-verified from the homepage. A 2-year-old Taco Tuesday post ($3 tacos, $2 Coronitas, $22 marg buckets) is NOT recorded: too old, and its $2 Coronita contradicts the site's $3.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: elbufalobaltimore.net curl. HH ALL DAY.",
+      "lat": 39.27989,
+      "lon": -76.574579,
       "deals": [
         {
           "days": [
@@ -469,7 +470,9 @@
             "tue",
             "wed",
             "thu",
-            "fri"
+            "fri",
+            "sat",
+            "sun"
           ],
           "items": [
             {
@@ -485,11 +488,7 @@
               "price": "$3"
             },
             {
-              "text": "Tecate $3",
-              "price": "$3"
-            },
-            {
-              "text": "Tecate Light $3",
+              "text": "Tecate / Tecate Light $3",
               "price": "$3"
             },
             {
@@ -501,25 +500,23 @@
               "price": "$7"
             },
             {
-              "text": "\"Beer & A Shot\" (Modelo Especial + Olmeca Altos Blanco) $9",
+              "text": "Beer & A Shot: Modelo Especial + Olmeca Altos Blanco $9",
               "price": "$9"
             }
           ],
-          "start": 900,
-          "end": 1080,
-          "time_window": "3pm-6pm",
+          "start": null,
+          "end": null,
+          "time_window": "all day",
           "happy_hour": true,
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.elbufalobaltimore.net/",
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-11",
-          "source_url": "https://www.instagram.com/el_bufalo/"
+          "proof_quote": "Happy Hour ALL Day!! 16OZ model special / 16OZ Natty Boh … Tecate Light / 7OZ Coronita $3 / Olmeca Altos Blanco $7 Beer & A Shot Modelo Especial + Olmeca Altos Blanco 9"
         }
       ],
-      "lat": 39.27989,
-      "lon": -76.574579,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03",
-      "notes_public": "Happy hour times are posted on their Instagram; their website still advertises it as all day."
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "mamas-on-the-half-shell",
@@ -1206,42 +1203,18 @@
       "id": "lees-pint-and-shell",
       "name": "Lee's Pint & Shell",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "2844 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 327-2883",
       "source_url": "https://www.leespintandshell.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-10",
-      "notes_public": "Runs one monthly special, advertised on its own homepage.",
-      "ops_notes": "Promo is published as an image on the homepage, but \"1st Wednesday of the month\" is also present as text in the page HTML. Price read from the image (63f3cdc4b3f89908ed55bef7_Build-your-own-burger.jpg) and confirmed by Chief Of Staff 2026-08-10. /specials and /special-event both 404.",
-      "deal_format": "image",
-      "deals": [
-        {
-          "days": [
-            "wed"
-          ],
-          "recurrence": "first",
-          "items": [
-            {
-              "text": "Build Your Own 11 oz. Double Cheeseburger",
-              "price": "$5.99"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "1st Wednesday of the month",
-          "verified_date": "2026-08-10",
-          "source_url": "https://www.leespintandshell.com/",
-          "proof_quote": "1st Wednesday of the month",
-          "food_categories": [
-            "burger"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: leespintandshell.com — 1st Wed specials teaser, no $.",
       "lat": 39.282417,
       "lon": -76.575695,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-03"
+      "notes_public": "No current priced specials published on the website.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "claddagh-pub",
@@ -2852,14 +2825,15 @@
       "id": "thames-street-oyster-house",
       "name": "Thames Street Oyster House",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1728 Thames Street, Baltimore, MD 21231",
       "phone": "(443) 449-7726",
       "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Website-text HH page. $2 oysters are the only priced claim; bar side is only 'seasonal bar offerings' with no dollars — do not invent cocktail prices. Page title is bare 'Untitled Document' but venue-hosted.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: happy-hour.htm curl.",
+      "lat": 39.282161,
+      "lon": -76.59161,
       "deals": [
         {
           "days": [
@@ -2878,11 +2852,12 @@
           "end": 1080,
           "time_window": "4:30pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Seasonal Happy Hour … $2 local, mid-atlantic, and northeastern oysters … monday - thursday 4:30-6pm … friday - sunday 3-5pm"
         },
         {
           "days": [
@@ -2900,16 +2875,15 @@
           "end": 1020,
           "time_window": "3pm-5pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thamesstreetoysterhouse.com/happy-hour.htm",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "proof_quote": "Seasonal Happy Hour … $2 local, mid-atlantic, and northeastern oysters … monday - thursday 4:30-6pm … friday - sunday 3-5pm"
         }
       ],
-      "lat": 39.282161,
-      "lon": -76.59161,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "loch-bar",
@@ -4066,14 +4040,15 @@
       "id": "the-horse-you-came-in-on",
       "name": "The Horse You Came In On Saloon",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1626 Thames Street, Baltimore, MD 21231",
       "phone": "(410) 327-8111",
       "source_url": "https://www.thehorsebaltimore.com/specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. Mon–Thu 4–8 HH + Wed/Thu late + weekend buckets. Monday Industry Night 25% for hospitality workers NOT shipped (worker-contingent). Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: thehorsebaltimore.com/specials curl.",
+      "lat": 39.281515,
+      "lon": -76.594131,
       "deals": [
         {
           "days": [
@@ -4104,11 +4079,12 @@
           "end": 1200,
           "time_window": "4pm-8pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "HAPPY HOUR: MONDAY-THURSDAY $3 … $4 Seltzers $5 Green Tea | Lemon Drops $6 Well Cocktails"
         },
         {
           "days": [
@@ -4131,11 +4107,12 @@
           "start": 1200,
           "end": null,
           "time_window": "8pm-close",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "$5 Green Tea Shots $6 Sagamore Rye $7 Vegas Bombs"
         },
         {
           "days": [
@@ -4158,11 +4135,12 @@
           "start": 1200,
           "end": null,
           "time_window": "8pm-close",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "$5 Dog $6 Margaritas $7 Mules"
         },
         {
           "days": [
@@ -4178,28 +4156,29 @@
           "start": 720,
           "end": 1320,
           "time_window": "12pm-10pm",
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "$25 Buckets of Domestic Beer | Seltzer"
         }
       ],
-      "lat": 39.281515,
-      "lon": -76.594131,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "the-rockwell-fells",
       "name": "The Rockwell",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "702 S. Broadway, Baltimore, MD 21231",
+      "phone": null,
       "source_url": "http://www.therockwellbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "CoS 2026-08-07: ship Tuesday only ($4 beer & claws, $6 bombs & tequila). Do NOT ship 'every night until 10' or Sun all-night HH — no $ on site; same page says Mon CLOSED. No clock window published for Tuesday — that is ops-only, not customer time_window copy. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: therockwellbaltimore.com curl.",
+      "lat": 39.283313,
+      "lon": -76.593775,
       "deals": [
         {
           "days": [
@@ -4219,16 +4198,41 @@
           "end": null,
           "time_window": "karaoke night",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "http://www.therockwellbaltimore.com/",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "TUESDAY - KARAOKE … $4 BEER & CLAWS, $6 BOMBS & TEQUILA"
+        },
+        {
+          "days": [
+            "sun",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Happy Hour every night until 10pm"
+            }
+          ],
+          "start": null,
+          "end": 1320,
+          "time_window": "until 10pm",
+          "happy_hour": true,
+          "prices_published": false,
+          "verified_date": "2026-09-07",
+          "source_url": "http://www.therockwellbaltimore.com/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR - Every Night until 10pm"
         }
       ],
-      "lat": 39.283313,
-      "lon": -76.593775,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "papis-taco-joint-fells",
@@ -4642,14 +4646,15 @@
       "id": "harbor-tandoor",
       "name": "Harbor Tandoor",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "803 S Caroline St, Baltimore, MD 21231",
       "phone": "(410) 624-7925",
       "source_url": "https://www.harbortandoor.com/lunch-happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. HH Mon–Fri 3–6 from /lunch-happy-hour/. Lunch bowls 11–3 are regular lunch pricing — not shipped as HH. Source: RESEARCH/FELLS_POINT_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: harbortandoor.com/lunch-happy-hour curl.",
+      "lat": 39.281752,
+      "lon": -76.596268,
       "deals": [
         {
           "days": [
@@ -4677,7 +4682,7 @@
               "price": "$10"
             },
             {
-              "text": "$4 Local Draft Beer (Zadie's Lager, Guinness Baltimore Blonde, Duckpin, Nanticoke)",
+              "text": "$4 Local Draft Beer",
               "price": "$4"
             },
             {
@@ -4685,7 +4690,7 @@
               "price": "$4"
             },
             {
-              "text": "$6 Cocktail of the Day (ask server)",
+              "text": "$6 Cocktail of the Day",
               "price": "$6"
             }
           ],
@@ -4693,18 +4698,76 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.harbortandoor.com/lunch-happy-hour/",
           "food_categories": [
-            "small-plate/apps",
-            "seafood/crab",
-            "drink"
-          ]
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "HAPPY HOUR SPECIAL MON – FRI (3 PM – 6 PM)"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Egg Paratha Roll $12",
+              "price": "$12"
+            },
+            {
+              "text": "Aloo Gobi Bowl $12",
+              "price": "$12"
+            },
+            {
+              "text": "Chicken Tikka Burrito $13",
+              "price": "$13"
+            },
+            {
+              "text": "Butter Chicken Bowl $13",
+              "price": "$13"
+            },
+            {
+              "text": "Chicken Curry Bowl $12",
+              "price": "$12"
+            },
+            {
+              "text": "Shahi Paneer Bowl $13",
+              "price": "$13"
+            },
+            {
+              "text": "Veg Jhol Momo $14",
+              "price": "$14"
+            },
+            {
+              "text": "Chicken Tikka Masala Bowl $13",
+              "price": "$13"
+            },
+            {
+              "text": "Lamb Curry Bowl $14",
+              "price": "$14"
+            },
+            {
+              "text": "Chicken Jhol Momo $14",
+              "price": "$14"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.harbortandoor.com/lunch-happy-hour/",
+          "food_categories": [
+            "lunch"
+          ],
+          "proof_quote": "LUNCH SPECIAL (MON – FRI (11 AM – 3 PM))"
         }
       ],
-      "lat": 39.281752,
-      "lon": -76.596268,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "todd-conners",
@@ -4876,15 +4939,15 @@
       "id": "the-choptank",
       "name": "The Choptank",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1641 Aliceanna Street, Baltimore, MD 21231",
       "phone": "(443) 707-3364",
       "source_url": "https://thechoptankrestaurant.com/baltimore/wp-content/uploads/sites/3/2025/06/Choptank_HH_040725_01.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy hour is bar only.",
-      "ops_notes": "Deal Scout visual PDF + CoS full ship 2026-08-07. Landing https://thechoptankrestaurant.com/baltimore — thechoptank.com is empty lander (do not use). source_document_date=2025-06-09 from HTTP Last-Modified (not filename 040725). Filename revision label 040725 in notes only. Source: RESEARCH/FELLS_POINT_DEALS.md; archive RESEARCH/ig-evidence-2026-08-05/Choptank_HH_040725_01.pdf.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Choptank_HH PDF pdftotext.",
+      "lat": 39.283441,
+      "lon": -76.594067,
       "deals": [
         {
           "days": [
@@ -4956,7 +5019,7 @@
           "end": 1140,
           "time_window": "4pm-7pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://thechoptankrestaurant.com/baltimore/wp-content/uploads/sites/3/2025/06/Choptank_HH_040725_01.pdf",
           "food_categories": [
             "drink",
@@ -4967,9 +5030,7 @@
           ]
         }
       ],
-      "lat": 39.283441,
-      "lon": -76.594067,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "james-joyce-irish-pub",
@@ -6616,15 +6677,16 @@
       "id": "of-love-and-regret",
       "name": "Of Love & Regret",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "1028 S. Conkling St., Baltimore, MD 21224",
       "phone": "(410) 327-0760",
       "source_url": "https://www.olarbmore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim 39.2807481,-76.5669866). Homepage graphic /wp-content/uploads/2026/02/5-819x1024.jpeg still live 2026-08-18: HAPPY HOUR! BURGERS $5 / OYSTERS $2 / Tuesday to Friday | 4 PM - 6:30 PM. Brunch has no price. Aug 2026/08/11 graphic is a one-day 8.8.26 private-event closure, not a specials board. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "deal_format": "image",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: olarbmore.com — times only, no $ on HH.",
+      "lat": 39.2807481,
+      "lon": -76.5669866,
+      "notes_public": "Happy hour times published; food/drink prices not currently listed on the website.",
       "deals": [
         {
           "days": [
@@ -6635,29 +6697,23 @@
           ],
           "items": [
             {
-              "text": "$5 Burgers",
-              "price": "$5"
-            },
-            {
-              "text": "$2 Oysters",
-              "price": "$2"
+              "text": "Happy Hour"
             }
           ],
           "start": 960,
           "end": 1110,
           "time_window": "4pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
-          "proof_quote": "Tuesday to Friday | 4 PM - 6:30 PM",
+          "prices_published": false,
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.olarbmore.com/",
           "food_categories": [
-            "burger",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR: Tuesday – Friday 4:00 – 6:30"
         }
       ],
-      "lat": 39.2807481,
-      "lon": -76.5669866,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "lp-steamers",
@@ -7118,14 +7174,15 @@
       "id": "pussers-landing",
       "name": "Pusser's Landing",
       "neighborhood": "Canton",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "2780 Lighthouse Point E, Baltimore, MD 21224",
       "phone": "(443) 869-2067",
       "source_url": "https://pusserslanding.com/specials/happy-hour/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Canton (MapServer/0 query Name=Canton, 2026-08-18; Nominatim of official pin 39.2772322,-76.5789485; Nominatim display name is Bo Brooks building at same address). Pin 2780 Lighthouse Point E, not license 2711 Boston. /specials/happy-hour/ 2026-08-18: Monday–Thursday 3–6pm half off Painkillers, draft beer, house wine, wings, nachos. No Friday HH published. Tuesday trivia 7–9pm has no $. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: pusserslanding.com specials/happy-hour.",
+      "lat": 39.2772322,
+      "lon": -76.5789485,
       "deals": [
         {
           "days": [
@@ -7160,17 +7217,16 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "Join us Monday - Thursday for half off Pusser's Rum Painkillers, Draft Beer, House Wine, Wings & Nachos.",
           "food_categories": [
             "drink",
             "small-plate/apps"
-          ]
+          ],
+          "source_url": "https://pusserslanding.com/specials/happy-hour/"
         }
       ],
-      "lat": 39.2772322,
-      "lon": -76.5789485,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "tutti-gusti",
@@ -7401,14 +7457,15 @@
       "id": "angies-seafood",
       "name": "Angie's Seafood",
       "neighborhood": "Upper Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "1727 E Pratt St, Baltimore, MD 21231",
       "phone": "(410) 342-0917",
       "source_url": "https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Upper Fells Point (MapServer/0 query Name=Upper Fells Point, 2026-08-18; Nominatim of 1727 E Pratt St 39.2893554,-76.5933716). Happy Hour PDF Last-Modified 2025-12-16 (response header, not the filename). /menu still links https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf today. Phone on homepage today is 410-342-0917. Site HTML does not publish opening hours — do not invent clocks. Lunch PDF on /menu has no days — not loaded. Upper Fells Point has no neighborhood view — citywide board only. Do not fold into /fells-point.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Angie Happy-Hour.pdf pdftotext.",
+      "lat": 39.2893554,
+      "lon": -76.5933716,
       "deals": [
         {
           "days": [
@@ -7499,16 +7556,15 @@
           "end": null,
           "time_window": "all day",
           "happy_hour": true,
-          "verified_date": "2026-08-18",
+          "verified_date": "2026-09-07",
           "proof_quote": "Happy Hour Menu / MONDAY - THURSDAY / ALL DAY",
           "food_categories": [
             "seafood/crab"
-          ]
+          ],
+          "source_url": "https://angiesseafood.com/wp-content/uploads/2025/12/Happy-Hour.pdf"
         }
       ],
-      "lat": 39.2893554,
-      "lon": -76.5933716,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "animal-boy",

@@ -1855,14 +1855,15 @@
       "id": "nobles-bar-and-grill",
       "name": "Nobles Bar and Grill",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1024 South Charles Street, Baltimore, MD 21230",
       "phone": "(410) 727-1355",
       "source_url": "https://noblesbarandgrill.com/specials/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Home page hours: Mon closed; Tue–Fri 4pm–2am; Sat 11am–2am; Sun 12pm–2am. Do not invent Mon specials. Industry Night (worker eligibility) and Ravens/PSU game-day menus left off — not fixed weekly public specials. All-day Boh/craft cans are not tagged happy_hour so they do not collide with the Tue–Fri 4–7pm HH UID. notes_public (board): Dine-in only for daily specials. Closed Mondays.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: noblesbarandgrill.com/specials Tue-Fri HH + weekly drink specials confirmed.",
+      "lat": 39.277278,
+      "lon": -76.614681,
       "deals": [
         {
           "days": [
@@ -1897,8 +1898,9 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://noblesbarandgrill.com/specials/",
+          "proof_quote": "Happy Hour Specials Tuesday through Friday 4pm to 7pm $3 Domestics $4 Seltzers $5 Green Tea Shots $5 Rail Drinks & Craft Cans $6 Crushes & 32oz Domestic Drafts",
           "food_categories": [
             "drink"
           ]
@@ -1925,10 +1927,12 @@
           "start": null,
           "end": null,
           "time_window": "all day",
+          "verified_date": "2026-09-07",
+          "source_url": "https://noblesbarandgrill.com/specials/",
+          "proof_quote": "All Day, Everyday $5 Craft Beer Cans, $3 Natty Boh 16oz Cans",
           "food_categories": [
             "drink"
-          ],
-          "verified_date": "2026-08-06"
+          ]
         },
         {
           "days": [
@@ -1948,10 +1952,12 @@
           "start": 1140,
           "end": null,
           "time_window": "7pm-close",
+          "verified_date": "2026-09-07",
+          "source_url": "https://noblesbarandgrill.com/specials/",
+          "proof_quote": "Wednesdays & Thursdays 2 for 1 Green Tea Shots from 7pm to Close $10 VOLO Pitchers",
           "food_categories": [
             "drink"
-          ],
-          "verified_date": "2026-08-06"
+          ]
         },
         {
           "days": [
@@ -1966,28 +1972,29 @@
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
+          "verified_date": "2026-09-07",
+          "source_url": "https://noblesbarandgrill.com/specials/",
+          "proof_quote": "Sundays Sunday Funday Specials 2 for 1 Crushes from 3pm to 7pm",
           "food_categories": [
             "drink"
-          ],
-          "verified_date": "2026-08-06"
+          ]
         }
       ],
-      "lat": 39.277278,
-      "lon": -76.614681,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "livs-tavern",
       "name": "Liv's Tavern",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1113 S Charles St, Baltimore, MD 21230",
       "phone": "(443) 869-2418",
       "source_url": "https://www.livstavern.com/specials",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Specials page is preferred over home page for HH scope (Mon–Sun* with game-day and Sat–Sun drink-only rules). Home page also states Mon–Fri 3–6 — narrower. Do not drop the game-day / Sat–Sun drink-only constraints from time_window. Public card note held in ops until multi-view notes_public pin: Purple patio / dog-friendly. Former Mother's Federal Hill Grille space (Mother's closed Jan 2025). BD-HONESTY 2026-08-06: split HH into Mon–Fri (food+drinks+cocktails) and Sat–Sun (drinks only) per venue asterisk \"*Drinks HH Only Sat-Sun\" — single Mon–Sun row overstated food on weekends.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: livstavern.com/specials.",
+      "lat": 39.27634,
+      "lon": -76.614194,
       "deals": [
         {
           "days": [
@@ -2027,7 +2034,7 @@
           "end": 1080,
           "time_window": "3pm-6pm (excludes game days)",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.livstavern.com/specials",
           "food_categories": [
             "wings",
@@ -2062,7 +2069,7 @@
           "end": 1080,
           "time_window": "3pm-6pm (excludes game days; drinks only)",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.livstavern.com/specials",
           "food_categories": [
             "drink"
@@ -2090,7 +2097,8 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.livstavern.com/specials"
         },
         {
           "days": [
@@ -2115,7 +2123,8 @@
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.livstavern.com/specials"
         },
         {
           "days": [
@@ -2144,7 +2153,8 @@
           "food_categories": [
             "burger"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.livstavern.com/specials"
         },
         {
           "days": [
@@ -2173,269 +2183,62 @@
           "food_categories": [
             "wings"
           ],
-          "verified_date": "2026-08-06"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.livstavern.com/specials"
         }
       ],
-      "lat": 39.27634,
-      "lon": -76.614194,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "magerks-federal-hill",
       "name": "MaGerk's Pub & Grill (Federal Hill)",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1061 S. Charles Street, Baltimore, MD 21230",
       "phone": "(410) 576-9230",
       "source_url": "https://www.magerks.com/federal-hill",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Prices from on-page HH image + 2026 Federal Hill Weekly Specials PDF (website-image). Candidate list had 20 E Cross — wrong; official is 1061 S Charles (20 E Cross is Pub Dog). Industry Night half-off is worker-eligibility — not on board. Beat the Clock (Fri 10pm) left off — sliding price is hard to state honestly as a single row. Trivia/Karaoke nights not priced specials. Public card note held in ops until multi-view notes_public pin: Kitchen hours published separately on the venue site (bar until 2am). Mon–Fri on the board is our ordinary reading of the venue's published \"Weekdays\" — the happy-hour image names no specific days. \"32 OZ\" on $7 drafts is on both the on-page HH image and the 2026 Federal Hill Weekly Specials PDF (OCR 2026-08-06), not an inference from the PDF alone.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$7 32 OZ Drafts",
-              "price": "$7"
-            },
-            {
-              "text": "$3 Claws",
-              "price": "$3"
-            },
-            {
-              "text": "$5 White Tea Shots",
-              "price": "$5"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-06",
-          "source_url": "https://www.magerks.com/federal-hill",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Cheesesteaks half off (dine-in only)",
-              "price": "1/2 off"
-            }
-          ],
-          "start": 1140,
-          "end": 1320,
-          "time_window": "7pm-10pm",
-          "food_categories": [
-            "sandwich/cheesesteak"
-          ],
-          "verified_date": "2026-08-06"
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: No priced weekly/HH list on site — cleared prior $.",
       "lat": 39.276919,
       "lon": -76.614237,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "notes_public": "Priced specials removed until re-verified from a published menu.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "cross-street-public-house",
       "name": "Cross Street Public House",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "26 E Cross Street, Baltimore, MD 21230",
       "phone": "(410) 244-6722",
       "source_url": "https://www.crossstreetpublichouse.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "Prices from happy-hour flyer PNG on venue site (website-image). Candidate list address 1209 S Charles was wrong — official is 26 E Cross. Site hours: Tue–Fri 5pm–2am; Sat–Sun 11am–2am. notes_public (board): Happy hour subject to change during festivals, events, and at management discretion.",
-      "deals": [
-        {
-          "days": [
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$2 Off All Glizzys",
-              "price": "$2 off"
-            },
-            {
-              "text": "$3 Bud Lights",
-              "price": "$3"
-            },
-            {
-              "text": "$4 White Claws",
-              "price": "$4"
-            },
-            {
-              "text": "$5 Surfsides",
-              "price": "$5"
-            },
-            {
-              "text": "$6 Drafts",
-              "price": "$6"
-            },
-            {
-              "text": "$7 Crushes",
-              "price": "$7"
-            },
-            {
-              "text": "$12 Pizzas",
-              "price": "$12"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-06",
-          "source_url": "https://www.crossstreetpublichouse.com/happy-hour",
-          "food_categories": [
-            "pizza",
-            "small-plate/apps",
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
       "lat": 39.277096,
       "lon": -76.613387,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "notes_public": "Priced specials removed until re-verified from a published menu.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "delia-foleys",
       "name": "Delia Foley's Pub",
       "neighborhood": "South Baltimore",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
       "status": "verified",
       "address": "1439 S Charles Street, Baltimore, MD 21230",
       "phone": "(443) 682-9141",
       "source_url": "https://www.deliafoleysmd.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "NSA polygon = South Baltimore (not Federal Hill). Shipped on federal-hill view via views.json neighborhoods [Federal Hill, South Baltimore] — same pattern as Huck's/Brewers Hill. Do not relabel neighborhood to Federal Hill. Source must be deliafoleysmd.com only (deliafoleys.pub expired). Prices from flyer image (website-image risk). Candidate list address 1117 was wrong — official 1439. Public card note held in ops until multi-view notes_public pin: Markets itself as Federal Hill; city map says South Baltimore. Flyer specials subject to change during festivals/events.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "$3 Miller Lites",
-              "price": "$3"
-            },
-            {
-              "text": "$3 Mystery Bottles",
-              "price": "$3"
-            },
-            {
-              "text": "$4 Guinness Blonde Draft",
-              "price": "$4"
-            },
-            {
-              "text": "$5 Jameson",
-              "price": "$5"
-            },
-            {
-              "text": "$5 Guinness Drafts",
-              "price": "$5"
-            },
-            {
-              "text": "$7 Pretzel Nuggets",
-              "price": "$7"
-            },
-            {
-              "text": "$8 Fried Pickles",
-              "price": "$8"
-            },
-            {
-              "text": "$10 Boneless Wings",
-              "price": "$10"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-06",
-          "source_url": "https://www.deliafoleysmd.com/happy-hour",
-          "food_categories": [
-            "wings",
-            "pretzel",
-            "small-plate/apps",
-            "drink"
-          ]
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$3 Miller Lites",
-              "price": "$3"
-            },
-            {
-              "text": "$3 Mystery Bottles",
-              "price": "$3"
-            },
-            {
-              "text": "$4 Guinness Blonde Draft",
-              "price": "$4"
-            },
-            {
-              "text": "$5 Jameson",
-              "price": "$5"
-            },
-            {
-              "text": "$5 Guinness Drafts",
-              "price": "$5"
-            },
-            {
-              "text": "$7 Pretzel Nuggets",
-              "price": "$7"
-            },
-            {
-              "text": "$8 Fried Pickles",
-              "price": "$8"
-            },
-            {
-              "text": "$10 Boneless Wings",
-              "price": "$10"
-            }
-          ],
-          "start": 960,
-          "end": 1080,
-          "time_window": "4pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-06",
-          "source_url": "https://www.deliafoleysmd.com/happy-hour",
-          "food_categories": [
-            "wings",
-            "pretzel",
-            "small-plate/apps",
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
       "lat": 39.272757,
       "lon": -76.613817,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "notes_public": "Priced specials removed until re-verified from a published menu.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
       "id": "alexanders-tavern-fells",
@@ -2890,14 +2693,15 @@
       "id": "loch-bar",
       "name": "Loch Bar",
       "neighborhood": "Harbor East",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "240 International Drive, Baltimore, MD 21202",
       "phone": "(443) 961-8949",
       "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "HH re-keyed from pdftotext of live PDF LochBar_HH_8.30.25.pdf (2026-08-06 Reviewer). Available at main bar and indoor high tops only. Mon-Fri 3-6. Neighborhood Harbor East; appears on Inner Harbor view. Prior research sample had wrong prices — do not re-copy INNER_HARBOR_DEALS bullets without the PDF.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: LochBar_HH_8.30.25.pdf pdftotext — Mon–Fri 3–6pm main bar + indoor high tops.",
+      "lat": 39.282325,
+      "lon": -76.602299,
       "deals": [
         {
           "days": [
@@ -2985,31 +2789,31 @@
           "end": 1080,
           "time_window": "3pm-6pm (main bar + indoor high tops only)",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
+          "proof_quote": "happy hour AVAILABLE AT THE MAIN BAR AND INDOOR HIGH TOPS / Monday–Friday 3 pm–6 pm / Local Oysters each 2.5 / wine | $7 / cocktails | $8 / crushes | $8 / draft beer | $6",
           "food_categories": [
-            "drink",
             "seafood/crab",
-            "small-plate/apps"
+            "small-plate/apps",
+            "drink"
           ]
         }
       ],
-      "lat": 39.282325,
-      "lon": -76.602299,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "copper-shark",
       "name": "Copper Shark",
       "neighborhood": "Riverside",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "921 E Fort Ave, Baltimore, MD 21230",
       "phone": "(410) 202-2268",
       "source_url": "https://www.thecoppershark.com/happy-hour-1",
       "source_type": "venue_website",
-      "last_verified": "2026-08-06",
-      "ops_notes": "NSA Riverside; markets Locust Point. Locust Point view includes Riverside (Delia pattern). Food two-tier prices on page — board stores lower HH tier where listed. Menu notes prices subject to change. Deal Scout LOCUST_POINT_DEALS 2026-08-06.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: thecoppershark.com/happy-hour-1 drinks + two-tier food HH prices confirmed.",
+      "lat": 39.271207,
+      "lon": -76.600684,
       "deals": [
         {
           "days": [
@@ -3061,12 +2865,14 @@
           "end": 1320,
           "time_window": "3pm-10pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thecoppershark.com/happy-hour-1",
+          "proof_quote": "Mondays 3pm-10pm and Tuesday-Friday 3pm-7pm $8 Cocktails $7 Wine $6 Draft Beer crostini 10/12 fries 8/10",
           "food_categories": [
             "drink",
             "small-plate/apps",
-            "burger"
+            "burger",
+            "seafood/crab"
           ]
         },
         {
@@ -3122,18 +2928,18 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-08-06",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.thecoppershark.com/happy-hour-1",
+          "proof_quote": "Mondays 3pm-10pm and Tuesday-Friday 3pm-7pm $8 Cocktails $7 Wine $6 Draft Beer crostini 10/12 fries 8/10",
           "food_categories": [
             "drink",
             "small-plate/apps",
-            "burger"
+            "burger",
+            "seafood/crab"
           ]
         }
       ],
-      "lat": 39.271207,
-      "lon": -76.600684,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "tagliata",
@@ -3582,15 +3388,16 @@
       "id": "the-outpost",
       "name": "The Outpost",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
       "status": "verified",
       "address": "1032 Riverside Ave, Baltimore, MD 21230",
       "phone": "(443) 388-9113",
       "source_url": "https://www.theoutpostbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-11",
-      "notes_public": "Happy hour Monday to Friday 4-6pm; the venue does not publish prices.",
-      "ops_notes": "NSA Federal Hill (not Locust Point). Times only. Deal Scout 2026-08-06. | 2026-08-11 (CoS): unheld under Eric's times-only decision. Homepage states \"happy hour / mon-friday 4pm-6pm\". Still no prices published anywhere on the site.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: theoutpostbaltimore.com times-only.",
+      "lat": 39.277439,
+      "lon": -76.609268,
+      "notes_public": "Happy hour times published; prices not listed.",
       "deals": [
         {
           "days": [
@@ -3610,12 +3417,15 @@
           "time_window": "4pm-6pm",
           "happy_hour": true,
           "prices_published": false,
-          "verified_date": "2026-08-11"
+          "verified_date": "2026-09-07",
+          "source_url": "https://www.theoutpostbaltimore.com/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "happy hour mon-friday 4pm-6pm"
         }
       ],
-      "lat": 39.277439,
-      "lon": -76.609268,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
     },
     {
       "id": "kislings-tavern",
@@ -3655,15 +3465,15 @@
       "id": "watershed",
       "name": "Watershed",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1065 S Charles St, Baltimore, MD 21230",
       "phone": "(410) 888-3878",
       "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Inside Cross Street Market (Federal Hill). Late-night window is Fri–Sat only. Happy hour menu dated March 2025 — prices may have changed since.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07 from Watershed_HH_031825.pdf. Dual window: Mon–Fri 3–6 + Fri–Sat 10pm–1am (food until midnight); same priced list. source_document_date=2025-03-20 (HTTP Last-Modified); filename 031825 ops only. Peer menus on same site newer (Cocktail 2026-03-17, Dinner 2026-06-23) — flag early re-check. watershedtavern.com is wrong host. Source: RESEARCH/FED_HILL_DEALS.md; archive RESEARCH/ig-evidence-2026-08-05/Watershed_HH_031825.pdf.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Watershed_HH PDF.",
+      "lat": 39.276809,
+      "lon": -76.61333,
       "deals": [
         {
           "days": [
@@ -3747,7 +3557,7 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
           "food_categories": [
             "drink",
@@ -3837,7 +3647,7 @@
           "end": null,
           "time_window": "10pm-1am (food until midnight)",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
           "food_categories": [
             "drink",
@@ -3849,9 +3659,7 @@
           ]
         }
       ],
-      "lat": 39.276809,
-      "lon": -76.61333,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "peters-pour-house",
@@ -5313,116 +5121,18 @@
       "id": "ajs-on-hanover",
       "name": "AJ's on Hanover",
       "neighborhood": "South Baltimore",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "1500 South Hanover Street, Baltimore, MD 21230",
       "phone": "(410) 800-2657",
       "source_url": "https://www.ajsonhanover.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy Hour is subject to change during festivals, stadium events and at management's discretion.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. Ship Mon–Fri 5–7pm + Sat 2–5pm (CoS reopened Monday after kitchen hours + /drinks HTML + flyer all affirm Mon; footer omits Mon and is the stale block). Secondary price/window source (readable HTML, no OCR): https://www.ajsonhanover.com/drinks — HAPPY HOUR COCKTAILS $8 during happy hour (Monday-Friday 5-7pm & Saturday 2-5pm). Flyer seven offers verify exactly. NSA = South Baltimore; federal-hill view already includes South Baltimore. Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/AJs_HH_Happy_Hour_5x7.png (machine-local). Source: RESEARCH/FED_HILL_DEALS.md.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$5 House Wines",
-              "price": "$5"
-            },
-            {
-              "text": "$6 Drafts",
-              "price": "$6"
-            },
-            {
-              "text": "$8 Select Cocktails",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Select Crushes",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Snack Wraps (2)",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Sliders (2)",
-              "price": "$8"
-            },
-            {
-              "text": "$9 Brussels",
-              "price": "$9"
-            }
-          ],
-          "start": 1020,
-          "end": 1140,
-          "time_window": "5pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.ajsonhanover.com/happy-hour",
-          "food_categories": [
-            "drink",
-            "sliders",
-            "small-plate/apps"
-          ]
-        },
-        {
-          "days": [
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "$5 House Wines",
-              "price": "$5"
-            },
-            {
-              "text": "$6 Drafts",
-              "price": "$6"
-            },
-            {
-              "text": "$8 Select Cocktails",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Select Crushes",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Snack Wraps (2)",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Sliders (2)",
-              "price": "$8"
-            },
-            {
-              "text": "$9 Brussels",
-              "price": "$9"
-            }
-          ],
-          "start": 840,
-          "end": 1020,
-          "time_window": "2pm-5pm",
-          "happy_hour": true,
-          "verified_date": "2026-08-07",
-          "source_url": "https://www.ajsonhanover.com/happy-hour",
-          "food_categories": [
-            "drink",
-            "sliders",
-            "small-plate/apps"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
       "lat": 39.2724567,
       "lon": -76.6154704,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "notes_public": "Priced specials removed until re-verified from a published menu.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "nicks-fish-house",
@@ -5514,15 +5224,15 @@
       "id": "rusty-scupper",
       "name": "Rusty Scupper",
       "neighborhood": "Federal Hill",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
       "status": "verified",
       "address": "402 Key Highway, Inner Harbor Marina, Baltimore, MD 21230",
       "phone": "(410) 727-3678",
       "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-08-07",
-      "notes_public": "Happy hour is bar & lounge only, dine-in only. Not available on holidays or for special events; cannot be combined with other offers.",
-      "ops_notes": "Deal Scout + CoS 2026-08-07. PDF prices have no $ sign (MARTINIS - 8) — stored as $8 / $4.50. source_document_date=2026-06-05 (HTTP Last-Modified). Second source: menus page HTML states HAPPY HOUR Monday—Friday 4:00PM—6:00PM. Landing https://www.rusty-scupper.com/menu/. OSM = Federal Hill (ignore Inner Harbor Marina self-description). Archive ~/.buzz/RESEARCH/ig-evidence-2026-08-05/RSC-Happy-Hour.pdf. Source: RESEARCH/FED_HILL_DEALS.md.",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: RSC-Happy-Hour.pdf.",
+      "lat": 39.2807081,
+      "lon": -76.6081434,
       "deals": [
         {
           "days": [
@@ -5610,7 +5320,7 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-08-07",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
           "food_categories": [
             "drink",
@@ -5622,9 +5332,7 @@
           ]
         }
       ],
-      "lat": 39.2807081,
-      "lon": -76.6081434,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
     },
     {
       "id": "owl-bar",
@@ -6719,60 +6427,18 @@
       "id": "lp-steamers",
       "name": "L.P. Steamers",
       "neighborhood": "Riverside",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
       "status": "verified",
       "address": "1100 E Fort Ave, Baltimore, MD 21230",
       "phone": "(410) 576-9294",
       "source_url": "https://www.locustpointsteamers.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-18",
-      "ops_notes": "NSA Riverside (MapServer/0 query Name=Riverside, 2026-08-18; Nominatim 39.2709641,-76.5986062). Homepage 2026-08-18: Tue $1 off raw or steamed oysters (fried hard crabs have no $); Wed 1/2 priced steamed shrimp + $2 Natty Boh Drafts. Site publishes no start/end for daily specials — start/end null, no time_window. Source: RESEARCH/BD_CITYWIDE_CENSUS_2026_08_18.md.",
-      "deals": [
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "$1 off raw or steamed oysters",
-              "price": "$1 off"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "Tuesdays- We offer Fried Hard Crabs (recently featured on Travel Channel's Food Paradise) & $1 off raw or steamed oysters!",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "1/2 priced steamed shrimp",
-              "price": "1/2 off"
-            },
-            {
-              "text": "$2 Natty Boh Drafts",
-              "price": "$2"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "verified_date": "2026-08-18",
-          "proof_quote": "Wednesdays- 1/2 priced Steamed Shrimp & $2 Natty Boh Drafts",
-          "food_categories": [
-            "seafood/crab",
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: Site unreachable this pass — cleared prior $ until re-verified.",
       "lat": 39.2709641,
       "lon": -76.5986062,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-18"
+      "notes_public": "Priced specials removed until re-verified from a published menu.",
+      "deals": [],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
     },
     {
       "id": "waterfront-hotel",
@@ -7699,15 +7365,15 @@
       "id": "hull-street-blues",
       "name": "Hull Street Blues Cafe",
       "neighborhood": "Locust Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
       "status": "verified",
       "address": "1222 Hull Street, Baltimore, MD 21230",
       "phone": "(410) 727-7476",
       "source_url": "https://www.hullstreetblues.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-08-19",
-      "notes_public": "Weekly food specials are published on the homepage. No happy-hour drink prices on the site.",
-      "ops_notes": "Deal Scout 2026-08-19. Official homepage WEEKLY SPECIALS HTTP 200: Mon Smash Burger + Fries $13 all day; Tue Crab Cake Day (single cake / salad / sandwich + fries) $20 all day; Wed Ramen Bowl Night $22 + Trivia Night hosted by BrainTease starts at 7:30; Thu Surf + Turf Night NY Strip + Fried Shrimp $30 / NY Strip + Crab Cake $35. No Fri/Sat/Sun row. No drink HH $. Phone + hours from /reservations. Nominatim 39.2722844,-76.5921086 neighbourhood=Locust Point. NSA MapServer unreachable this session; Nominatim label matches locust-point view NSA. Deal Scout 2026-08-19 review fix: trivia `start` was 1110 (6:30pm); homepage says “starts at 7:30” so `start` is 1170. Source: https://www.hullstreetblues.com/",
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: hullstreetblues.com weekly specials.",
+      "lat": 39.2722844,
+      "lon": -76.5921086,
       "deals": [
         {
           "days": [
@@ -7722,7 +7388,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.hullstreetblues.com/",
           "proof_quote": "Monday / Smash Burger + Fries / $13 all day special",
           "food_categories": [
@@ -7742,7 +7408,7 @@
           "start": null,
           "end": null,
           "time_window": "all day",
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.hullstreetblues.com/",
           "proof_quote": "Tuesday / Crab Cake Day / Single Cake, over Salad, or Sandwich + Fries / $20 all day special",
           "food_categories": [
@@ -7762,7 +7428,7 @@
           "start": null,
           "end": null,
           "time_window": "night",
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.hullstreetblues.com/",
           "proof_quote": "Wednesday / Ramen Bowl Night / $22",
           "food_categories": [
@@ -7781,7 +7447,7 @@
           "start": 1170,
           "end": null,
           "time_window": "7:30pm",
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.hullstreetblues.com/",
           "proof_quote": "Wednesday / Trivia Night hosted by BrainTease! / starts at 7:30",
           "food_categories": [
@@ -7805,7 +7471,7 @@
           "start": null,
           "end": null,
           "time_window": "night",
-          "verified_date": "2026-08-19",
+          "verified_date": "2026-09-07",
           "source_url": "https://www.hullstreetblues.com/",
           "proof_quote": "Thursday / Surf + Turf Night / NY Strip + Fried Shrimp $30 / NY Strip + Crab Cake $35",
           "food_categories": [
@@ -7814,9 +7480,7 @@
           ]
         }
       ],
-      "lat": 39.2722844,
-      "lon": -76.5921086,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
     },
     {
       "id": "rye-street-tavern",
@@ -12968,59 +12632,18 @@
       "id": "pitango-bakery",
       "name": "Pitango Bakery",
       "neighborhood": "Fells Point",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "status": "verified",
       "address": "903 S Ann Street, Baltimore, MD 21231",
       "phone": "(443) 676-6447",
       "source_url": "https://www.pitangogelato.com/events",
       "source_type": "venue_website",
-      "last_verified": "2026-08-21",
-      "ops_notes": "Builder 2026-08-21 leftover loadable + live pitangogelato.com/events HTTP 200; bakery page HTTP 200: https://www.pitangogelato.com/pitango-bakery . Pin 903 S Ann Street, Baltimore, MD 21231 / (443) 676-6447. Census 39.2815455,-76.5909807. CityView Neighborhoods MapServer/0 query today on that point: Name=Fells Point. Already in /fells-point. Do not add Fells Point to citywideOnly. Do not invent a view. Prices and clocks from the events page body, not the gelato shop and not the Squarespace ICS chrome. Do not mix doors. Fells Point Gelato (https://www.pitangogelato.com/fells-point-gelato, 802 S Broadway, (410) 236-0741) is a different shop — live gelato page today has no spritz/wine $. DC/VA doors (Adams Morgan, Fourteenth Street, Old Town, Penn Quarter, Reston, The Wharf) stay off. Hours today (bakery page): Sunday – Thursday: 7 am - 9 pm · Friday - Saturday: 7am - 10pm. Record hours in ops. Do not copy 9pm / 10pm onto a deal clock. Quotes from the events page today: SPRITZ FRIDAYS | Pitango Bakery, Fells Point. Spritz Fridays! Every Friday from 5-8pm, enjoy $1 off our seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style! Calendar range Fri Jul 18, 2025 → Fri Apr 9, 2027. BOTTLES & BOARDS | Pitango Bakery, Fells Point. In honor of Wine Wednesday, every Wednesday from 5-8:30pm we will be offering 50% off all wine bottles with a purchase of a charcuterie board! Calendar range Tue Aug 5, 2025 → Wed Mar 31, 2027. Weekly, not ordinal — body prints Every Friday / every Wednesday; omit recurrence (that field is for first/second/fourth). Do not copy recurrence: fourth from Locally Sourced Comedy (every 4th Friday, FREE — stay off). Record the 2025–2027 calendar ranges in ops. Squarespace chrome on Spritz Fridays also prints Fri, Apr 9, 2027 6:00 PM — that 6pm is series metadata. The deal window is the body 5-8pm → end 1200, not 1080. Stay off: Locally Sourced Comedy · dated live-music listings · floral / Eventbrite workshops · daily menu · evening menu · gelato shop. happy_hour omit. notes_public omitted. No vibe.",
-      "deals": [
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$1 off seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style",
-              "price": "$1 off"
-            }
-          ],
-          "start": 1020,
-          "end": 1200,
-          "time_window": "5pm-8pm",
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.pitangogelato.com/events",
-          "proof_quote": "Spritz Fridays! Every Friday from 5-8pm, enjoy $1 off our seasonal spritzes with a complimentary small bowl of chips— Italian Aperitivo style!",
-          "food_categories": [
-            "drink"
-          ]
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "50% off all wine bottles with a purchase of a charcuterie board",
-              "price": "50% off"
-            }
-          ],
-          "start": 1020,
-          "end": 1230,
-          "time_window": "5pm-8:30pm",
-          "verified_date": "2026-08-21",
-          "source_url": "https://www.pitangogelato.com/events",
-          "proof_quote": "In honor of Wine Wednesday, every Wednesday from 5-8:30pm we will be offering 50% off all wine bottles with a purchase of a charcuterie board!",
-          "food_categories": [
-            "drink"
-          ]
-        }
-      ],
+      "last_verified": "2026-09-07",
+      "ops_notes": "Deal Scout 2026-09-07: pitangogelato.com/events lists live music/comedy only; no Spritz Fridays or Wine Wednesday $ — cleared.",
       "lat": 39.2815455,
       "lon": -76.5909807,
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "deals": [],
+      "notes_public": "No current priced drink specials published on the events page.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
     },
     {
       "id": "estiatorio-plaka",

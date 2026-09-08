@@ -18540,6 +18540,182 @@
           "proof_quote": "Lunch Specials All Lunch Special served w. Can Soda & Fried Rice or White Rice Available: All week days From: 11:00 AM - 3:00 PM L1. Mixed Vegetables $9.90 L23. Vegetable Mei Fun $10.18"
         }
       ]
+    },
+    {
+      "id": "china-express",
+      "name": "China Express",
+      "neighborhood": "Abell",
+      "status": "verified",
+      "address": "419 E. 33rd St., Baltimore, MD 21218",
+      "phone": "(410) 235-1100",
+      "source_url": "https://www.baltimorechinaexpress.com/86e7l32e/china-express-baltimore-21218/menu?menu=LUNCH+MENU",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3282005,
+      "lon": -76.610029,
+      "coords_source": "Nominatim search 419 E. 33rd St., Baltimore, MD 21218 on 2026-09-08 returned OSM node 9924814276 named China Express at 39.3282005,-76.6100290. Display name neighbourhood is Abell, city Baltimore, postcode 21218. Official lunch menu and restaurant schema print 419 E. 33rd St., Baltimore, MD 21218 and (410) 235-1100.",
+      "bar_hours": "Official restaurant schema openingHours: Mon–Thu 11:00 AM–9:30 PM; Fri–Sat 11:00 AM–10:00 PM; Sunday not listed. Lunch special clock printed on the lunch menu is 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 419 E. 33rd St. in Abell, 21218. Not in live venues.json. Official site https://www.baltimorechinaexpress.com/.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $9.75, served with white or fried rice and an egg roll or can soda (L2–L17 and L19–L38, including sauteed mixed vegetable, lo mein, egg foo young, General Tso's, and sesame chicken)",
+              "price": "$9.75"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.baltimorechinaexpress.com/86e7l32e/china-express-baltimore-21218/menu?menu=LUNCH+MENU",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "LUNCH SPECIAL 11:00am-3:00pm. Served with white or fried rice and egg roll or can soda Available: All week days From: 11:00 AM - 3:00 PM L 2. Sauteed Mixed Vegetable (Lunch) $ 9.75"
+        }
+      ]
+    },
+    {
+      "id": "china-fun",
+      "name": "China Fun",
+      "neighborhood": "Fallstaff",
+      "status": "verified",
+      "address": "7002 Reisterstown Rd, Ste C, Baltimore, MD 21215",
+      "phone": "(410) 484-8338",
+      "source_url": "https://order.chinafunmd.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3621647,
+      "lon": -76.7104273,
+      "coords_source": "Nominatim search 7002 Reisterstown Rd, Baltimore, MD 21215 on 2026-09-08 returned OSM way 544825021 at 39.3621647,-76.7104273. Display name neighbourhood is Fallstaff, city Baltimore, postcode 21215. Official homepage and order page print 7002 Reisterstown Rd, Ste C, Baltimore, MD 21215 and (410) 484-8338.",
+      "bar_hours": "Official homepage Open Hours: Monday Closed; Tue–Thu 11:00 AM–9:30 PM; Fri–Sat 11:00 AM–10:30 PM; Sunday 12:00 PM–9:30 PM. Lunch special clock printed on the order menu is Tue–Sat 11:00 AM–2:30 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 7002 Reisterstown Rd, Ste C, in Fallstaff, 21215. Not in live venues.json. Official site https://www.chinafunmd.com/; lunch clock and prices are on the official order menu https://order.chinafunmd.com/menu.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Luncheon special $8.95, with fried rice or steamed rice and a free can soda or egg roll (L1–L4 and L6–L33, including General Tso's chicken, lo mein, chow mein, and broccoli)",
+              "price": "$8.95"
+            },
+            {
+              "text": "Chicken, pork, beef, or shrimp egg foo young and boneless spare ribs luncheon special $9.45, with fried rice or steamed rice and a free can soda or egg roll",
+              "price": "$9.45"
+            }
+          ],
+          "start": 660,
+          "end": 870,
+          "time_window": "11am-2:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://order.chinafunmd.com/menu",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Luncheon Special From Tues. - Sat.: 11:00 am to 2:30 pm with Fried Rice or Steamed Rice & Free Can Soda or Egg Roll L 1. General Tso's Chicken $8.95 L 5. Chicken Egg Foo Young $9.45"
+        }
+      ]
+    },
+    {
+      "id": "new-asian-taste",
+      "name": "New Asian Taste",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "3400 Chestnut Ave, Baltimore, MD 21211",
+      "phone": "(410) 467-0100",
+      "source_url": "https://order.newasiantastetogo.com/order/main/kitchen-lunch-special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3287692,
+      "lon": -76.6295308,
+      "coords_source": "Nominatim search 3400 Chestnut Ave, Baltimore, MD 21211 on 2026-09-08 returned OSM way 336399293 at 39.3287692,-76.6295308. Display name neighbourhood is Hampden, city Baltimore, postcode 21211. Official homepage prints 3400 Chestnut Ave, Baltimore, MD 21211 and (410) 467-0100.",
+      "bar_hours": "Official homepage Open Hours: Monday Closed; Tue–Thu 11:00 AM–3:00 PM and 4:00 PM–10:00 PM; Fri–Sat 11:00 AM–10:30 PM; Sunday 12:00 PM–10:00 PM. Lunch special clock printed on the lunch cards is 11:00 AM–3:30 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Japanese and Chinese carryout at 3400 Chestnut Ave in Hampden, 21211. Not in live venues.json. Official site https://www.newasiantastetogo.com/; priced lunch clock is on the official order menu.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Regular maki lunch special, choice of two, $10.95, with miso soup and salad",
+              "price": "$10.95"
+            },
+            {
+              "text": "Deluxe maki any two rolls lunch special $11.95",
+              "price": "$11.95"
+            },
+            {
+              "text": "Deluxe maki any three rolls lunch special $14.95",
+              "price": "$14.95"
+            },
+            {
+              "text": "Salmon, tuna, chef's-choice sushi, sashimi, or chirashi don lunch special $14.95, served with miso soup and house salad",
+              "price": "$14.95"
+            },
+            {
+              "text": "Una Don lunch special $12.95, 5 pieces cooked on the rice",
+              "price": "$12.95"
+            },
+            {
+              "text": "Sushi and sashimi lunch special $16.95, 3 pieces nigiri, 4 pieces sashimi, and 1 spicy tuna roll",
+              "price": "$16.95"
+            },
+            {
+              "text": "General Tso's tofu or sesame tofu kitchen lunch special $8.95, served with white rice or brown rice",
+              "price": "$8.95"
+            },
+            {
+              "text": "General Tso's chicken or sesame chicken kitchen lunch special $9.95, served with white rice or brown rice",
+              "price": "$9.95"
+            },
+            {
+              "text": "Teriyaki chicken, deep fried chicken, or pork chashu kitchen lunch special $11.95, served with white rice or brown rice",
+              "price": "$11.95"
+            },
+            {
+              "text": "Teriyaki shrimp or smoked eel and shrimp kitchen lunch special $12.95, served with white rice or brown rice",
+              "price": "$12.95"
+            },
+            {
+              "text": "Teriyaki beef or teriyaki salmon kitchen lunch special $13.95, served with white rice or brown rice",
+              "price": "$13.95"
+            }
+          ],
+          "start": 660,
+          "end": 930,
+          "time_window": "11am-3:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://order.newasiantastetogo.com/order/main/kitchen-lunch-special",
+          "food_categories": [
+            "sushi",
+            "pasta/comfort"
+          ],
+          "proof_quote": "Lunch Special 11:00 am - 3:30 pm w. Miso Soup & Salad (L). Regular Maki Choice of two $10.95 Sushi Lunch Special 11:00 am - 3:30 pm Served w. Miso Soup & House Salad (L). Salmon Lunch $14.95 Kitchen Lunch Special 11:00 am - 3:30 pm Served w. White Rice or Brown Rice (L). General Tso's Chicken $9.95"
+        }
+      ]
     }
   ]
 }

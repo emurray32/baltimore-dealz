@@ -1076,11 +1076,11 @@
       "status": "verified",
       "address": "3123 Elliott Street, Baltimore, MD 21224",
       "phone": "(667) 309-7499",
-      "source_url": "https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/",
-      "source_type": "instagram",
-      "last_verified": "2026-09-06",
-      "ops_notes": "Deal Scout 2026-09-06: IG @thedivebaltimore “that 70’s hour” graphic (post Dc4CvyJJXK5). Website has no priced weekly list. Cleared stale day-of-week specials from Past Specials highlight.",
-      "notes_public": "Happy hour (“that 70’s hour”) published on Instagram; Friday daytime window is new.",
+      "source_url": "https://thedivebaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: official weekly specials graphic on thedivebaltimore.com prints Mon/Wed/Thu priced specials missing from live. Prior that 70's hour rows retained unchanged. Tuesday trivia prize not shipped.",
+      "notes_public": "Weekly specials on the official site: Monday $5.25 drafts and $10.50 wings; Wednesday $10.50 wings; Thursday $8.40 espresso martinis. Happy hour times still published separately.",
       "lat": 39.27912,
       "lon": -76.571671,
       "deals": [
@@ -1180,6 +1180,71 @@
             "pizza"
           ],
           "proof_quote": "that 70’s hour — Mon–Thu 4–6pm, Friday 11am–4pm; caption: New happy hour specials, also on Friday day time now too!"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$5.25 drafts",
+              "price": "$5.25"
+            },
+            {
+              "text": "$10.50 wings",
+              "price": "$10.50"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thedivebaltimore.com/wp-content/uploads/2025/07/Dive-Weekly-Specials-10142024.png",
+          "food_categories": [
+            "drink",
+            "wings"
+          ],
+          "proof_quote": "MON $5.25 DRAFTS $10.50 WINGS",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$10.50 wings and extra flavors",
+              "price": "$10.50"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thedivebaltimore.com/wp-content/uploads/2025/07/Dive-Weekly-Specials-10142024.png",
+          "food_categories": [
+            "wings"
+          ],
+          "proof_quote": "WED $10.50 WINGS & EXTRA FLAVORS",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8.40 espresso martinis",
+              "price": "$8.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thedivebaltimore.com/wp-content/uploads/2025/07/Dive-Weekly-Specials-10142024.png",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "THU $8.40 ESPRESSO MARTINIS",
+          "start": null,
+          "end": null
         }
       ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"

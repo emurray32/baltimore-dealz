@@ -1207,15 +1207,39 @@
       "status": "verified",
       "address": "2844 Hudson Street, Baltimore, MD 21224",
       "phone": "(410) 327-2883",
-      "source_url": "https://www.leespintandshell.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: leespintandshell.com — 1st Wed specials teaser, no $.",
       "lat": 39.282417,
       "lon": -76.575695,
-      "notes_public": "No current priced specials published on the website.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "source_url": "https://www.leespintandshell.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: leespintandshell.com Specials block text '1st Wednesday of the month' + graphic https://cdn.prod.website-files.com/62f8d56a32da79285fd44242/63f3cdc4b3f89908ed55bef7_Build-your-own-burger.jpg visual confirm $5.99 Build Your Own 11 oz. Double Cheeseburger. /events has no upcoming events. No clock window published.",
+      "notes_public": "First Wednesday of the month: $5.99 build-your-own 11 oz. double cheeseburger.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "recurrence": "first",
+          "items": [
+            {
+              "text": "$5.99 Build Your Own 11 oz. Double Cheeseburger",
+              "price": "$5.99"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "1st Wednesday of the month",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://cdn.prod.website-files.com/62f8d56a32da79285fd44242/63f3cdc4b3f89908ed55bef7_Build-your-own-burger.jpg",
+          "food_categories": [
+            "burger"
+          ],
+          "proof_quote": "Specials / 1st Wednesday of the month — graphic: $5.99 Build Your Own 11 oz. Double Cheeseburger / 1st Wednesday of the month"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     },
     {
       "id": "claddagh-pub",
@@ -1768,15 +1792,77 @@
       "id": "sports-balls",
       "name": "Sports Balls @ The Canton Local",
       "neighborhood": "Canton",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "801 S Decker Ave, Baltimore, MD 21224",
       "phone": "667-212-5888",
-      "source_url": "http://www.sbcanton.com/",
-      "source_type": "none",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: fetch_venue.py http://www.sbcanton.com/ → 0 bytes; https://sbcanton.com/ TLS/connect fail. Still unreachable. deals=[] last_verified bump.",
-      "notes_public": "No specials or happy hour published on their site.",
-      "deals": [],
+      "source_url": "https://www.sbcanton.com/qr-menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: https://www.sbcanton.com/qr-menu WEEKLY SPECIALS. PriceMajor widgets: Monday 16 'Burger w/ fries and a draft'; Wednesday price empty, desc '$.99 Wing Night!'; Thursday 16 'Reuben and draft'; Friday 16 'Burger w/ fries and a draft'. Site price fields omit a $ glyph except the Wednesday $.99 string. No happy-hour hours published on this list.",
+      "notes_public": "Weekly specials on the official QR menu: $16 burger+draft Mon/Fri, $.99 wing night Wednesday, $16 Reuben and draft Thursday.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$16 Burger with fries and a draft",
+              "price": "$16"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sbcanton.com/qr-menu",
+          "food_categories": [
+            "burger"
+          ],
+          "proof_quote": "WEEKLY SPECIALS Monday 16 Burger w/ fries and a draft; Friday 16 Burger w/ fries and a draft"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$.99 Wing Night",
+              "price": "$.99"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sbcanton.com/qr-menu",
+          "food_categories": [
+            "wings"
+          ],
+          "proof_quote": "WEEKLY SPECIALS Wednesday $.99 Wing Night!"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$16 Reuben and draft",
+              "price": "$16"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sbcanton.com/qr-menu",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "WEEKLY SPECIALS Thursday 16 Reuben and draft"
+        }
+      ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
     },
     {
@@ -1818,15 +1904,38 @@
       "neighborhood": "Canton",
       "status": "verified",
       "address": "3000 O'Donnell St, Baltimore, MD 21224",
-      "source_url": "https://www.sopro-baltimore.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: sopro-baltimore.com live with hours (Canton Square); no HH/specials published. deals=[] bump.",
+      "phone": "(410) 675-4029",
       "lat": 39.280572,
       "lon": -76.573849,
-      "deals": [],
-      "notes_public": "No published happy hour specials on the venue website.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "source_url": "https://www.sopro-baltimore.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: sopro-baltimore.com/menu image Sopro Happy Hour (2).png visual+OCR. WEEKLY SPECIALS: MONDAY-FRIDAY HAPPY HOUR FROM 4-7PM (no item prices); MYSTERY MONDAY no $; TACO TUESDAY no $; WEDNESDAY CHEESESTEAK FLIGHT NIGHT PICK 3 SPECIALTY CHEESESTEAKS FOR $15; THURSDAY BOGO RAILS & DOMESTICS 9-11PM; brunch/DJ lines not priced. Only $15 written as a priced deal.",
+      "notes_public": "Wednesday: pick 3 specialty cheesesteaks for $15. Happy hour is advertised Mon–Fri 4–7pm but drink prices are not listed on the graphic.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$15 Pick 3 specialty cheesesteaks",
+              "price": "$15"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/67215b5a5564b6675010be57/cc2f0da6-17fa-4da9-9ac8-ac355dab357d/Sopro+Happy+Hour+%282%29.png",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "WEDNESDAY CHEESESTEAK FLIGHT NIGHT PICK 3 SPECIALTY CHEESESTEAKS FOR $15"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     },
     {
       "id": "honeypot",
@@ -7222,15 +7331,460 @@
       "status": "verified",
       "address": "2324 Boston St, Baltimore, MD 21224",
       "phone": "(410) 624-5166",
-      "source_url": "https://www.bmoreseafood.com/menu",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: bmoreseafood.com menu JS-heavy; cleared unverified combos.",
       "lat": 39.2827389,
       "lon": -76.5834654,
-      "notes_public": "Daily specials not currently extractable from the website; prior prices removed.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
+      "source_url": "https://www.bmoreseafood.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: bmoreseafood.com/menu happy hour + daily specials tabs. Visual read of DAILY SPECIALS graphic (61f75e_e3fd3e9618324ccfb566c99efcddb2d8) $24/$24/$35/$39/$49. Visual read of HAPPY HOUR graphic (61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa): Mon–Wed 3pm-6pm, Thu 12pm-6pm, Fri 3pm-6pm, Sun 12pm-4pm. Graphic: NO HAPPY HOUR ON HOLIDAYS. No Saturday HH published.",
+      "notes_public": "Daily boil specials plus happy hour (no Saturday; none on holidays).",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$24 1LB black mussels + 0.5LB shrimp head-on",
+              "price": "$24"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_e3fd3e9618324ccfb566c99efcddb2d8~mv2.png",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "MUSSEL MONDAY / 1LB BLACK MUSSELS / 0.5LB SHRIMP HEAD-ON / $24"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$24 1LB crawfish + 0.5LB shrimp head-on",
+              "price": "$24"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_e3fd3e9618324ccfb566c99efcddb2d8~mv2.png",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "CRAWFISH TUESDAY / 1LB CRAWFISH / 0.5LB SHRIMP HEAD-ON / $24"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$35 1LB head-off shrimp + 0.5LB snow crab legs",
+              "price": "$35"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_e3fd3e9618324ccfb566c99efcddb2d8~mv2.png",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "SHRIMP WEDNESDAY / 1LB HEAD-OFF SHRIMP / 0.5LB SNOW CRAB LEGS / $35"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$39 1LB snow crab legs + 0.5LB shrimp head-off",
+              "price": "$39"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_e3fd3e9618324ccfb566c99efcddb2d8~mv2.png",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "CRAB LEG THURSDAY / 1LB SNOW CRAB LEGS / 0.5LB SHRIMP HEAD-OFF / $39"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$49 1LB head-off shrimp + 1LB crawfish + 0.5LB snow crab legs",
+              "price": "$49"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_e3fd3e9618324ccfb566c99efcddb2d8~mv2.png",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "WEEKEND ROYALE / 1LB HEAD-OFF SHRIMP / 1LB CRAWFISH / 0.5LB SNOW CRAB LEGS / $49"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$8 Bombs (Western Sun Vodka mixed with Redbull)",
+              "price": "$8"
+            },
+            {
+              "text": "$5 Rail Shots (tequila, rum, gin, vodka, or whiskey)",
+              "price": "$5"
+            },
+            {
+              "text": "$28 Shooter Flight",
+              "price": "$28"
+            },
+            {
+              "text": "$9 Sunset Twist (Corona Citrus Beer, Recipe 21 Tequila, grenadine)",
+              "price": "$9"
+            },
+            {
+              "text": "$2 Domestic Beer",
+              "price": "$2"
+            },
+            {
+              "text": "$4 Imported Beer",
+              "price": "$4"
+            },
+            {
+              "text": "$6 Wine (red, white, or sparkling)",
+              "price": "$6"
+            },
+            {
+              "text": "$4 Topo Chico",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Nutrl",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Jumex",
+              "price": "$5"
+            },
+            {
+              "text": "$10 Soju",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Classic Margarita (add a flavor +$1)",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Crush",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Mango Long Island",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Rum Punch",
+              "price": "$7"
+            },
+            {
+              "text": "$9 Netflix & Chill",
+              "price": "$9"
+            },
+            {
+              "text": "$6 Wings",
+              "price": "$6"
+            },
+            {
+              "text": "$9 Coconut Shrimp",
+              "price": "$9"
+            },
+            {
+              "text": "$10 Crab Bites",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Cajun Fries",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Fried Calamari",
+              "price": "$8"
+            },
+            {
+              "text": "$6 Mozzarella Sticks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Mac & Cheese Bites",
+              "price": "$6"
+            },
+            {
+              "text": "$10 Tacos (fried shrimp or chicken)",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Monday-Wednesday 3pm-6pm / Friday 3pm-6pm; Domestic Beer $2; Imported Beer $4; Wings $6; Tacos (Fried Shrimp or Chicken) $10"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8 Bombs (Western Sun Vodka mixed with Redbull)",
+              "price": "$8"
+            },
+            {
+              "text": "$5 Rail Shots (tequila, rum, gin, vodka, or whiskey)",
+              "price": "$5"
+            },
+            {
+              "text": "$28 Shooter Flight",
+              "price": "$28"
+            },
+            {
+              "text": "$9 Sunset Twist (Corona Citrus Beer, Recipe 21 Tequila, grenadine)",
+              "price": "$9"
+            },
+            {
+              "text": "$2 Domestic Beer",
+              "price": "$2"
+            },
+            {
+              "text": "$4 Imported Beer",
+              "price": "$4"
+            },
+            {
+              "text": "$6 Wine (red, white, or sparkling)",
+              "price": "$6"
+            },
+            {
+              "text": "$4 Topo Chico",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Nutrl",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Jumex",
+              "price": "$5"
+            },
+            {
+              "text": "$10 Soju",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Classic Margarita (add a flavor +$1)",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Crush",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Mango Long Island",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Rum Punch",
+              "price": "$7"
+            },
+            {
+              "text": "$9 Netflix & Chill",
+              "price": "$9"
+            },
+            {
+              "text": "$6 Wings",
+              "price": "$6"
+            },
+            {
+              "text": "$9 Coconut Shrimp",
+              "price": "$9"
+            },
+            {
+              "text": "$10 Crab Bites",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Cajun Fries",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Fried Calamari",
+              "price": "$8"
+            },
+            {
+              "text": "$6 Mozzarella Sticks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Mac & Cheese Bites",
+              "price": "$6"
+            },
+            {
+              "text": "$10 Tacos (fried shrimp or chicken)",
+              "price": "$10"
+            }
+          ],
+          "start": 720,
+          "end": 1080,
+          "time_window": "12pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Thursday 12pm-6pm; Domestic Beer $2; Wings $6; Tacos $10"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$8 Bombs (Western Sun Vodka mixed with Redbull)",
+              "price": "$8"
+            },
+            {
+              "text": "$5 Rail Shots (tequila, rum, gin, vodka, or whiskey)",
+              "price": "$5"
+            },
+            {
+              "text": "$28 Shooter Flight",
+              "price": "$28"
+            },
+            {
+              "text": "$9 Sunset Twist (Corona Citrus Beer, Recipe 21 Tequila, grenadine)",
+              "price": "$9"
+            },
+            {
+              "text": "$2 Domestic Beer",
+              "price": "$2"
+            },
+            {
+              "text": "$4 Imported Beer",
+              "price": "$4"
+            },
+            {
+              "text": "$6 Wine (red, white, or sparkling)",
+              "price": "$6"
+            },
+            {
+              "text": "$4 Topo Chico",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Nutrl",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Jumex",
+              "price": "$5"
+            },
+            {
+              "text": "$10 Soju",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Classic Margarita (add a flavor +$1)",
+              "price": "$6"
+            },
+            {
+              "text": "$7 Crush",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Mango Long Island",
+              "price": "$7"
+            },
+            {
+              "text": "$7 Rum Punch",
+              "price": "$7"
+            },
+            {
+              "text": "$9 Netflix & Chill",
+              "price": "$9"
+            },
+            {
+              "text": "$6 Wings",
+              "price": "$6"
+            },
+            {
+              "text": "$9 Coconut Shrimp",
+              "price": "$9"
+            },
+            {
+              "text": "$10 Crab Bites",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Cajun Fries",
+              "price": "$6"
+            },
+            {
+              "text": "$8 Fried Calamari",
+              "price": "$8"
+            },
+            {
+              "text": "$6 Mozzarella Sticks",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Mac & Cheese Bites",
+              "price": "$6"
+            },
+            {
+              "text": "$10 Tacos (fried shrimp or chicken)",
+              "price": "$10"
+            }
+          ],
+          "start": 720,
+          "end": 960,
+          "time_window": "12pm-4pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Sunday 12pm-4pm; Domestic Beer $2; Wings $6; Tacos $10"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     },
     {
       "id": "barn-and-lodge",
@@ -13890,6 +14444,433 @@
         }
       ],
       "notes_public": "Happy hour is bar only, Monday–Friday 4–6pm.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "koopers-tavern",
+      "name": "Kooper's Tavern",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1702 Thames Street, Baltimore, MD 21231",
+      "phone": "(410) 563-5423",
+      "source_url": "https://www.kooperstavern.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2820245,
+      "lon": -76.5924758,
+      "ops_notes": "Deal Scout 2026-09-08: kooperstavern.com home + kfp_dinner.3-26.pdf. No priced specials. Replaces nothing; original candidate.",
+      "notes_public": "No priced happy hour or daily specials on the official site. Hours posted: Mon–Thu 11am–12am, Fri 11am–2am, Sat 10am–2am, Sun 10am–12am. Brunch Sat & Sun 10am–3pm is regular service, not a special.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "cats-eye-pub",
+      "name": "Cat's Eye Pub",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1730 Thames Street, Baltimore, MD 21231",
+      "phone": "410-276-9866",
+      "source_url": "https://www.catseyepub.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2820811,
+      "lon": -76.5915456,
+      "ops_notes": "Deal Scout 2026-09-08: catseyepub.com. Live music stated (2 bands Fri, 3 Sat & Sun). No $ specials. One dated 2026-09-08 band listing not shipped as a recurring deal.",
+      "notes_public": "Open 7 days. Site says live music with 2 bands on Friday and 3 bands on Saturday and Sunday, 365 days a year. No priced drink or food specials published.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "slainte",
+      "name": "Sláinte Irish Pub",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1700 Thames Street, Baltimore, MD 21231",
+      "phone": "(410) 563-6600",
+      "source_url": "http://www.slaintepub.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2820026,
+      "lon": -76.5925536,
+      "ops_notes": "Deal Scout 2026-09-08: slaintepub.com home + slaintemenu-3-3-22.pdf. No happy hour prices.",
+      "notes_public": "No priced specials on the official site. Hours posted: Sun–Thu 7am–12am, Fri & Sat 7am–12am. Breakfast served daily 7am–2pm.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "barcocina",
+      "name": "Barcocina",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1629 Thames Street, Baltimore, MD 21231",
+      "phone": "(410) 563-1500",
+      "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2811123,
+      "lon": -76.5944704,
+      "ops_notes": "Deal Scout 2026-09-08: barcocina.com/eat links HH PDF 4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf (pdftoppm). Hours from same site. Neighborhood Fells Point (site header); candidate said Harbor East.",
+      "notes_public": "Happy hour Mon–Fri 3–6pm on the official flyer. Weekly $8 tequila shot is listed all day, every day (shots only).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$4 Draft beer pints (any draft beer selection)",
+              "price": "$4"
+            },
+            {
+              "text": "$5 Wine by the glass: Chardonnay — Proverb, CA",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Wine by the glass: White Blend — Honoro Vera, Portugal",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Wine by the glass: Red Blend — Silk & Spice, Portugal",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Wine by the glass: Tempranillo — Protocolo, Spain",
+              "price": "$5"
+            },
+            {
+              "text": "$5 Wine by the glass: Still — Bieler Pere et Fili, France",
+              "price": "$5"
+            },
+            {
+              "text": "$6 Featured cocktail: Olmeca Altos House Margarita",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Featured cocktail: Blackberry Sangria",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Featured cocktail: Seasonal White Sangria",
+              "price": "$6"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour MONDAY TO FRIDAY 3PM - 6PM $4 Draft Beer Pints Choose from any of our draft beer selections $5 Wines by the Glass Chardonnay - Proverb, CA White Blend - Honoro Vera, Portugal Red Blend - Silk & Spice, Portugal Tempranillo - Protocolo, Spain Still - Bieler Pere et Fili, France $6 Featured Cocktails - Olmeca Altos House Margarita - Blackberry Sangria - Seasonal White Sangria"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$8 Weekly featured tequila shot (shots only)",
+              "price": "$8"
+            }
+          ],
+          "start": 660,
+          "end": 1320,
+          "time_window": "11am-10pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Weekly $8 Tequila Shot Ask your server about this weeks featured $8 Tequila shot. Available all day, every day. Shots only Monday - Thursday: 11AM - 10PM"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$8 Weekly featured tequila shot (shots only)",
+              "price": "$8"
+            }
+          ],
+          "start": 660,
+          "end": 1440,
+          "time_window": "11am-2am",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Weekly $8 Tequila Shot Ask your server about this weeks featured $8 Tequila shot. Available all day, every day. Shots only Friday: 11AM - 2AM"
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "$8 Weekly featured tequila shot (shots only)",
+              "price": "$8"
+            }
+          ],
+          "start": 600,
+          "end": 1440,
+          "time_window": "10am-2am",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Weekly $8 Tequila Shot Ask your server about this weeks featured $8 Tequila shot. Available all day, every day. Shots only Saturday: 10AM - 2AM"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "$8 Weekly featured tequila shot (shots only)",
+              "price": "$8"
+            }
+          ],
+          "start": 600,
+          "end": 1320,
+          "time_window": "10am-10pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Weekly $8 Tequila Shot Ask your server about this weeks featured $8 Tequila shot. Available all day, every day. Shots only Sunday: 10AM - 10PM"
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "annabel-lee-tavern",
+      "name": "Annabel Lee Tavern",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "601 S. Clinton St., Baltimore, MD 21224",
+      "phone": "(443) 869-2370",
+      "source_url": "https://www.theannabelleetavern.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2853826,
+      "lon": -76.5696252,
+      "ops_notes": "Deal Scout 2026-09-08: theannabelleetavern.com and /menu. No happy hour prices. Neighborhood set from verified address (Canton), not candidate Highlandtown.",
+      "notes_public": "No priced specials on the official site. Hours posted: Mon–Wed 4pm–10pm, Thu–Sat 4pm–11pm, Sun noon–9pm.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "mick-osheas",
+      "name": "Mick O'Shea's",
+      "neighborhood": "Downtown",
+      "status": "verified",
+      "address": "328 N Charles St, Baltimore, MD 21201",
+      "phone": "(410) 539-7504",
+      "source_url": "https://mickosheas.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2934384,
+      "lon": -76.6155225,
+      "ops_notes": "Deal Scout 2026-09-08: mickosheas.com. No specials document with prices. Widget 'closes at 2AM' not stored as hours.",
+      "notes_public": "No priced specials published on the official site.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "pratt-street-ale-house",
+      "name": "Pratt Street Ale House",
+      "neighborhood": "Downtown",
+      "status": "verified",
+      "address": "206 W. Pratt St., Baltimore, MD 21201",
+      "phone": "410-244-8900",
+      "source_url": "https://www.prattstreetalehouse.com/cfg-arena-bounce-back",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2865906,
+      "lon": -76.6181544,
+      "ops_notes": "Deal Scout 2026-09-08: prattstreetalehouse.com CFG Arena Bounce Back page. No day/time window beyond 'during kitchen hours', so not encoded as a deal.",
+      "notes_public": "Site posts a CFG Arena Bounce Back: one free Oliver Brewing Co. pint with purchase of an app or entree, or BOGO Oliver Brewing Co. pint. App promotion only available during kitchen hours. No days or clock times published.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "pickles-pub",
+      "name": "Pickles Pub",
+      "neighborhood": "Stadium Area",
+      "status": "verified",
+      "address": "520 Washington Blvd, Baltimore, MD 21230",
+      "source_url": "https://www.picklespub.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.285488,
+      "lon": -76.6229271,
+      "ops_notes": "Deal Scout 2026-09-08: picklespub.com and /menu. No phone on those pages. 'informal office happy hours' is private-event copy, not a public special.",
+      "notes_public": "No priced specials on the official site. Open 7 days from 11am to close. Kitchen 11am–10pm Mon–Thu, 11am–11pm Fri–Sat, 10am–10pm Sun (9am–10pm Sun game days).",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "blue-agave",
+      "name": "Blue Agave Mexican Food",
+      "neighborhood": "Federal Hill",
+      "status": "verified",
+      "address": "1032 Light Street, Baltimore, MD 21230",
+      "phone": "(410) 576-3938",
+      "source_url": "https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_03-12-2025.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2774064,
+      "lon": -76.6126949,
+      "ops_notes": "Deal Scout 2026-09-08: blueagavemexicanfood.com home + HH PDF 5_25x12_125-BAMF_HH_Menu_PRINT_03-12-2025.pdf. Late-night bar menu page not shipped (regular bar menu, not labeled a special).",
+      "notes_public": "Happy hour Mon–Fri 4–7pm, bar and patio only; bar and dining room on Tuesdays. Margarita prices are listed as three serving sizes (1/4/6).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$6/$24/$36 Margarita (blanco tequila, triple sec, house-made sour); serving sizes 1/4/6",
+              "price": "$6/$24/$36"
+            },
+            {
+              "text": "$7/$28/$42 Strawberry or mango margarita; serving sizes 1/4/6",
+              "price": "$7/$28/$42"
+            },
+            {
+              "text": "$7/$28/$42 Sangria, red or white; serving sizes 1/4/6",
+              "price": "$7/$28/$42"
+            },
+            {
+              "text": "$8/$32/$48 Spicy Guavarita; serving sizes 1/4/6",
+              "price": "$8/$32/$48"
+            },
+            {
+              "text": "$4 Mexican draft beers: Modelo Especial, Negra Modelo, Dos Equis Ambar, Pacifico, Corona Premier",
+              "price": "$4"
+            },
+            {
+              "text": "$4 Mexican bottled beers: Sol, Pacifico, Negra Modelo, Dos Equis Lager, Corona, Corona Light, Corona NA, Victoria",
+              "price": "$4"
+            },
+            {
+              "text": "$2.50 Taco (pulled chicken, blackened tilapia, black bean, mushroom & corn, or ground beef)",
+              "price": "$2.50"
+            },
+            {
+              "text": "$3.50 Taco (carne asada, blackened shrimp, or grilled chicken)",
+              "price": "$3.50"
+            },
+            {
+              "text": "$6 Mini cheese dillas",
+              "price": "$6"
+            },
+            {
+              "text": "$6 Flautitas",
+              "price": "$6"
+            },
+            {
+              "text": "$3 Elote bites",
+              "price": "$3"
+            },
+            {
+              "text": "$6 Nachos",
+              "price": "$6"
+            },
+            {
+              "text": "+$3 Nachos add chicken, chorizo, or ground beef",
+              "price": "+$3"
+            },
+            {
+              "text": "+$4 Nachos add carne asada or shrimp",
+              "price": "+$4"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_03-12-2025.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "HAPPY HOUR MENU MON- FRI 4-7PM • BAR AND PATIO ONLY BAR AND DINING ROOM ON TUESDAYS"
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "abbey-burger-fells",
+      "name": "Abbey Burger Fells Point",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "811 S Broadway, Baltimore, MD 21231",
+      "phone": "(410) 522-1428",
+      "source_url": "https://www.abbeyburger.com/copy-of-federal-hill-1",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2822747,
+      "lon": -76.5927423,
+      "ops_notes": "Deal Scout 2026-09-08: abbeyburger.com/copy-of-federal-hill-1. Federal Hill location not listed (gift cards page is Fells + Mt. Washington only). Specials images alt specials9.4.26 had no readable prices.",
+      "notes_public": "No priced specials readable on the official Fells Point page. Trivia listed Wednesdays at 7:45pm. Kitchen hours: Mon & Tue 4pm–10pm, Wed 11:30am–10pm, Thu 11:30am–11pm, Fri & Sat 11:30am–11pm, Sun 11:30am–10pm.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "the-urban-oyster",
+      "name": "The Urban Oyster",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "914 W. 36th Street, Baltimore, MD 21211",
+      "phone": "443.835.4503",
+      "source_url": "https://www.theurbanoyster.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3313414,
+      "lon": -76.632259,
+      "ops_notes": "Deal Scout 2026-09-08: theurbanoyster.com. Hours block used; fake Brooklyn/Queens template hours ignored.",
+      "notes_public": "No priced specials on the official site. Hours listed: Wed–Thu 4pm–10pm, Fri–Sat 4pm–11pm, Sun 1pm–9pm.",
+      "deals": [],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "little-donnas",
+      "name": "Little Donna's",
+      "neighborhood": "Upper Fells Point",
+      "status": "verified",
+      "address": "1812 Bank Street, Baltimore, MD 21231",
+      "phone": "(443) 438-3956",
+      "source_url": "https://www.littledonnas.com/reservations",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2868999,
+      "lon": -76.5908645,
+      "ops_notes": "Deal Scout 2026-09-08: littledonnas.com/reservations. No priced happy hour on fetched official pages.",
+      "notes_public": "No priced specials on the official pages fetched. Hours: Tue–Thu 5pm–9:30pm, Fri–Sat 5pm–10:30pm. Closed Sundays and Mondays. Site says specials are announced on Instagram.",
+      "deals": [],
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     }
   ]

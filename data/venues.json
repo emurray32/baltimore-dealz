@@ -17320,6 +17320,171 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "ash-bar",
+      "name": "Ash—Bar",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "2 E Read St, Baltimore, MD 21202",
+      "source_url": "https://ash.world/dining/ash-bar-baltimore/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.299818,
+      "lon": -76.6154716,
+      "coords_source": "Nominatim search 2 E Read Street, Baltimore, MD on 2026-09-08 returned OSM way 1047585042 named Ulysses at 39.2998180,-76.6154716. Display name neighbourhood is Mount Vernon and postcode is 21202. Official Ash—Bar page prints 2 E Read St, Baltimore, MD, within Hotel Ulysses, and Mount Vernon. Zip is from that Nominatim match; official page does not print a zip or a phone.",
+      "bar_hours": "Official hours: Breakfast Monday-Friday 6am-12pm; Breakfast Du Weekend Saturday-Sunday 7am-2pm; Aperitivo The Happy Hour daily 3pm-5pm; Food & Bar Sunday-Thursday 5pm-9pm, Friday & Saturday 5pm-10pm. Official copy says Ash—Bar is open daily.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Mount Vernon cafe and bar inside Hotel Ulysses. Not in live venues.json. Official site https://ash.world/dining/ash-bar-baltimore/ and menus page. Distinct from Bar Dalí, also at Hotel Ulysses and already live.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Cocktail specials $10: Manhattan, Rum Daiquiri, Check-in Martini, French 75, Negroni, Death in the Afternoon",
+              "price": "$10"
+            },
+            {
+              "text": "Wine specials $7: red, white, rose, and sparkling",
+              "price": "$7"
+            },
+            {
+              "text": "Beer $5: High Life and Pilsner Urquell",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ash.world/dining/ash-bar-baltimore/menus/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "APERITIVO—'THE HAPPY HOUR' Daily 3PM - 5PM. Cocktail Specials $10 Manhattan, Rum Daiquiri, Check-in Martini, French 75, Negroni, Death in the Afternoon. Wine Specials $7 Red, White, Rose, & Sparkling. Beer $5 High Life & Pilsner Urquell."
+        },
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Marinated olives $6, olive oil, lemon rind, herbs",
+              "price": "$6"
+            },
+            {
+              "text": "Roasted almonds $6, with paprika",
+              "price": "$6"
+            },
+            {
+              "text": "Sweet & savory nut mix $6, peanuts, almonds, cashews",
+              "price": "$6"
+            },
+            {
+              "text": "Bread of the day $5, served with herb butter",
+              "price": "$5"
+            },
+            {
+              "text": "Dolmas & hummus $13, roasted peppers, gigantes beans, seeded toast",
+              "price": "$13"
+            },
+            {
+              "text": "Shrimp cocktail $12, cocktail sauce and lemon",
+              "price": "$12"
+            },
+            {
+              "text": "Crab dip $12, lump crab, sherry vinegar, toast",
+              "price": "$12"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ash.world/dining/ash-bar-baltimore/menus/",
+          "food_categories": [
+            "small-plate/apps",
+            "seafood/crab"
+          ],
+          "proof_quote": "APERITIVO—'THE HAPPY HOUR' Daily 3PM - 5PM. Marinated Olives $6 Olive oil, lemon rind, herbs. Roasted Almonds $6 With paprika. Sweet & Savory Nut Mix $6 Peanuts, almonds, cashews. Bread of the Day $5 Served with herb butter. Dolmas & Hummus $13 Roasted peppers, gigantes beans, seeded toast. Shrimp Cocktail $12 Cocktail sauce & lemon. Crab Dip $12 Lump crab, sherry vinegar, toast."
+        }
+      ]
+    },
+    {
+      "id": "seppia",
+      "name": "Seppia",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "901 W. 36th St, Baltimore, MD 21211",
+      "phone": "(443) 835-2122",
+      "source_url": "https://www.seppiabaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3308444,
+      "lon": -76.6313654,
+      "coords_source": "Nominatim search 901 W 36th Street, Baltimore, MD 21211 on 2026-09-08 returned OSM way 336406024 at 39.3308444,-76.6313654. Display name neighbourhood is Hampden. Official homepage and menus page print 901 W. 36th St., Baltimore, MD 21211 and (443) 835-2122. Official homepage says Seppia opened April 2026 in the former G.C. Murphy Five and Dime.",
+      "bar_hours": "Official hours: Sunday-Thursday 5pm-9pm; Friday-Saturday 5pm-10pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Hampden restaurant. Not in live venues.json. Official site https://www.seppiabaltimore.com/ menus page. Sister restaurant La Cuchara is already live and was not rewritten.",
+      "deals": [
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "50% off bottles of wine $100+",
+              "price": "50% off"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.seppiabaltimore.com/menus",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Every Sunday bottles of wine $100+ are 50% off",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "25% off select featured bottles of wine",
+              "price": "25% off"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.seppiabaltimore.com/menus",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Monday - Thursday select featured bottles of wine are 25% off",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

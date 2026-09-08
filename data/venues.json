@@ -17997,6 +17997,45 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "land-of-kush",
+      "name": "The Land of Kush",
+      "neighborhood": "Seton Hill",
+      "status": "verified",
+      "address": "840 N Eutaw St, Baltimore, MD 21201",
+      "phone": "(410) 225-5874",
+      "source_url": "https://landofkush.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3001586,
+      "lon": -76.6216985,
+      "coords_source": "Nominatim search 840 N Eutaw St, Baltimore, MD 21201 on 2026-09-08 returned OSM node 8939454153 named The Land of Kush at 39.3001586,-76.6216985. Display name neighbourhood is Seton Hill, suburb Sowebo, postcode 21201. Official homepage prints 840 N Eutaw St, Baltimore, MD 21201 and (410) 225-5874.",
+      "bar_hours": "Official homepage hours: Sunday 10:00 AM–8:00 PM; Monday–Saturday 11:00 AM–9:00 PM. Sunday brunch clock printed on the menu is 10 AM–2 PM, which is not the same as full Sunday service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore vegan soul food restaurant at 840 N Eutaw Street, Seton Hill / Sowebo, 21201. Not in live venues.json. Official site https://landofkush.com/. West of downtown, adjacent to Upton and the Hippodrome corridor. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street.",
+      "deals": [
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Pancakes $15.99: two gluten-free pancakes",
+              "price": "$15.99"
+            }
+          ],
+          "start": 600,
+          "end": 840,
+          "time_window": "10am-2pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://landofkush.com/menu",
+          "food_categories": [
+            "brunch"
+          ],
+          "proof_quote": "Sunday Brunch (10a-2p Sundays ONLY). Sun 10 AM - 2 PM. Pancakes $15.99. Two gluten-free pancakes."
+        }
+      ]
     }
   ]
 }

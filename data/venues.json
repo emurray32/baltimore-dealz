@@ -16130,6 +16130,189 @@
           "proof_quote": "Kids Eat Free. Every Wednesday, Thursday, Friday, Saturday, Sunday 12:00 PM-11:30 PM Leinie Lodge & Beer Garden. Spend the day at Port Discovery and eat at Leinie's Lodge to get a free kids meal with a purchase of an adult entree! Offer valid during open times and only the day you are visiting Port Discovery. Blackout dates are subject to change per other events. Must show Port Discovery ticket/receipt. One free kids' meal per one adult entree ordered."
         }
       ]
+    },
+    {
+      "id": "italian-disco",
+      "name": "Italian Disco",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "1006 Fleet Street, Baltimore, MD 21202",
+      "phone": "(410) 605-0444",
+      "source_url": "https://theitaliandisco.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.284423,
+      "lon": -76.599857,
+      "coords_source": "Nominatim search 1006 Fleet Street, Baltimore, MD 21202 on 2026-09-08 returned OSM node Bagby Pizza Co. (former tenant name) at 39.2844230,-76.5998570. Official site address is that street number.",
+      "bar_hours": "Official homepage: Monday–Wednesday 11:30am–12am; Thursday–Friday 11:30am–2am; Saturday 12pm–2am; Sunday 12pm–12am. Happy Hour 7 days/nights a week 4pm–7pm at the bar.",
+      "ops_notes": "Deal Scout 2026-09-08: Atlas property https://atlasrestaurantgroup.com/property/italian-disco-baltimore/ Visit Site is https://theitaliandisco.com/ (1006 Fleet Street, Baltimore, MD 21202; 410.605.0444). Header Happy Hour PDF https://theitaliandisco.com/wp-content/uploads/2025/10/WEB_10_17_25.pdf (created 2025-10-17). Homepage body still links https://theitaliandisco.com/wp-content/uploads/2025/07/ItalianDisco_HH_07.24.25.pdf. Oct PDF replaces zucchini chips with crispy brussels and changes the mussels description. Weekday is the published 7-days-a-week window, not inferred from the Atlas article's Monday–Friday wording.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Venetian Velvet $9",
+              "price": "$9"
+            },
+            {
+              "text": "Miura Spritz $9",
+              "price": "$9"
+            },
+            {
+              "text": "Dim the Lights $9",
+              "price": "$9"
+            },
+            {
+              "text": "$4 Pints (Bud Light, Miller Lite, Coors Light, Corona)",
+              "price": "$4"
+            },
+            {
+              "text": "$8 Wine (Prosecco, Ercole Bianco, Ercole Barbera)",
+              "price": "$8"
+            },
+            {
+              "text": "Margherita 12\" handtossed pizza $10",
+              "price": "$10"
+            },
+            {
+              "text": "Pepperoni 12\" handtossed pizza $10",
+              "price": "$10"
+            },
+            {
+              "text": "Rosso Bianco 12\" handtossed pizza $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fried Calamari $9",
+              "price": "$9"
+            },
+            {
+              "text": "Classic Italian Meatballs $9",
+              "price": "$9"
+            },
+            {
+              "text": "Chicken Wings $9",
+              "price": "$9"
+            },
+            {
+              "text": "Shrimp Spiedini $9",
+              "price": "$9"
+            },
+            {
+              "text": "Mussels $9",
+              "price": "$9"
+            },
+            {
+              "text": "House Salad $9",
+              "price": "$9"
+            },
+            {
+              "text": "Crispy Brussels $9",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://theitaliandisco.com/wp-content/uploads/2025/10/WEB_10_17_25.pdf",
+          "food_categories": [
+            "drink",
+            "pizza",
+            "small-plate/apps",
+            "wings",
+            "seafood/crab"
+          ],
+          "proof_quote": "7 DAYS A WEEK | 4–7 pm AT THE BAR $9 COCKTAILS Venetian Velvet miura spritz Dim the lights $4 Pints Bud Light • Miller lite Coors Light • corona $8 Wine Prosecco Ercole Bianco Ercole Barbera $10 HANDTOSSED PIZZAS AVAILABLE IN 12” Margherita Pepperoni Rosso Bianco $9 Appetizers Fried Calamari Classic Italian Meatballs Chicken Wings Shrimp Spiedini Mussels House Salad crispy brussels"
+        }
+      ]
+    },
+    {
+      "id": "the-elk-room",
+      "name": "The Elk Room",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "1010 Fleet Street, Baltimore, MD 21202",
+      "phone": "(410) 244-5830",
+      "source_url": "https://www.theelkroom.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2844291,
+      "lon": -76.5996797,
+      "coords_source": "Nominatim search 1010 Fleet Street, Baltimore, MD 21202 on 2026-09-08 returned OSM way Fleet Street Kitchen at 39.2844291,-76.5996797. Same point as live Monarque, which also lists 1010 Fleet Street. Atlas lists The Elk Room at that address (speakeasy at The Atlas Quarter / behind Tagliata).",
+      "bar_hours": "Atlas property page: open every night from 5pm–2am; local jazz Thursday–Saturday. Happy Hour PDF: Tuesday–Saturday 5:30pm–7pm.",
+      "ops_notes": "Deal Scout 2026-09-08: followed Atlas Baltimore properties from the happy-hour article to https://atlasrestaurantgroup.com/property/the-elk-room-baltimore/ (1010 Fleet Street, Baltimore, MD 21202; (410) 244-5830; Visit Site https://www.theelkroom.com/). Current Happy Hour menu is https://www.theelkroom.com/wp-content/uploads/2026/02/Happy-Hour_02.12.pdf (PDF created 2026-02-13). Homepage is a JS app and did not print the menu inline. Not in live venues.json. Do not merge with Tagliata (1012 Fleet) or Monarque (same 1010 pin).",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Oysters (3) $6",
+              "price": "$6"
+            },
+            {
+              "text": "Truffle French Fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Salad Lyonnaise $8",
+              "price": "$8"
+            },
+            {
+              "text": "Truffle Grilled Cheese $8",
+              "price": "$8"
+            },
+            {
+              "text": "Sliders (2) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Black Truffle Mouillette $10",
+              "price": "$10"
+            },
+            {
+              "text": "Moules Marinière $10",
+              "price": "$10"
+            },
+            {
+              "text": "Oysters Rockefeller (3) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Spinach & Artichoke Dip $10",
+              "price": "$10"
+            }
+          ],
+          "start": 1050,
+          "end": 1140,
+          "time_window": "5:30pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.theelkroom.com/wp-content/uploads/2026/02/Happy-Hour_02.12.pdf",
+          "food_categories": [
+            "seafood/crab",
+            "small-plate/apps",
+            "sliders",
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "HAPPY HOUR $6 OYSTERS (3) mignonette, housemade cocktail sauce TRUFFLE FRENCH FRIES remoulade $8 SALAD LYONNAISE soft boiled egg, bacon lardons, endive & friseé, radishes TRUFFLE GRILLED CHEESE white cheddar, white $10 SLIDERS (2) wild mushroom, eggplant, harissa, vadouvan spice or angus beef burger, dijonnaise BLACK TRUFFLE MOUILLETTE brioche, prosciutto, red watercress MOULES MARINIÈRE aromatics, vermouth, maitre d’ butter, grilled sourdough OYSTERS ROCKEFELLER (3) spinach, parmigiano, lemon SPINACH & ARTICHOKE DIP warm baguette TUESDAY - SATURDAY | 5:30PM- 7:00PM"
+        }
+      ]
     }
   ]
 }

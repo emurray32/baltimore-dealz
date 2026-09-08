@@ -189,6 +189,28 @@ export function venueCard({ venue, deals }, now = new Date(), options = {}) {
   const startAttr = allHaveStart ? String(Math.min(...deals.map((d) => d.start))) : "";
   const endAttr = allHaveEnd ? String(Math.max(...deals.map((d) => d.end))) : "";
 
+  const itemTexts = [];
+  for (const deal of deals) {
+    if (!Array.isArray(deal.items)) continue;
+    for (const item of deal.items) {
+      if (item && item.text) itemTexts.push(String(item.text));
+    }
+  }
+  const leadText = itemTexts[0] ? escapeHtml(itemTexts[0]) : "";
+  const moreCount = itemTexts.length > 1 ? itemTexts.length - 1 : 0;
+  const windowRaw = String(deals[0]?.time_window ?? "").trim();
+  const windowQuiet = !windowRaw || /^all\s*day$/i.test(windowRaw);
+  const scanWindow = `<span class="window${windowQuiet ? " window-quiet" : ""}">${escapeHtml(windowRaw)}</span>`;
+  const hood = venue.neighborhood
+    ? `<span class="hood">${escapeHtml(venue.neighborhood)}</span>`
+    : "";
+  const more = moreCount > 0 ? ` <span class="more">+${moreCount}</span>` : "";
+  let leadInner = "";
+  if (hood && leadText) leadInner = `${hood} · ${leadText}${more}`;
+  else if (hood) leadInner = hood;
+  else if (leadText) leadInner = `${leadText}${more}`;
+  const scanLead = leadInner ? `<p class="lead">${leadInner}</p>` : "";
+
   const dealRows = deals
     .map((deal) => {
       const window = deal.time_window
@@ -228,8 +250,12 @@ export function venueCard({ venue, deals }, now = new Date(), options = {}) {
   const cardMeta = [place, provenance].filter(Boolean).join("<br>");
 
   return `
-      <article class="card"${coords}${food} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
-        <h3>${nameHtml}</h3>
+      <article class="card scan"${coords}${food} data-start="${escapeHtml(startAttr)}" data-end="${escapeHtml(endAttr)}">
+        <div class="scan-head">
+          <h3>${nameHtml}</h3>
+          ${scanWindow}
+        </div>
+        ${scanLead}
         ${dealRows}
         <p class="meta">${cardMeta}</p>
       </article>`;
@@ -403,6 +429,7 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
       : (id) => `/venue/${id}`;
   const cardOpts = { venueHref };
   const today = cardsHtmlForDay(venues, todayKey, now, cardOpts);
+  const tonightCount = dealsGroupedForDay(venues, todayKey, now).length;
   const staticClient = options.staticClient === true;
 
   const card = (row) => venueCard(row, now, cardOpts);
@@ -477,13 +504,13 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   </header>
   ${hoodsNote}
   <main>
+    ${foodFilterBar(venues)}
     <section id="tonight-board">
-      <h2>On tonight</h2>
+      <h2>On tonight · ${tonightCount}</h2>
       <p class="nearest-row"><button type="button" id="nearest-btn" hidden>Closest to me</button></p>
       ${today}
     </section>
     ${notesSection(venues)}
-    ${foodFilterBar(venues)}
     <section>
       <h2>Browse the week</h2>
       ${week}

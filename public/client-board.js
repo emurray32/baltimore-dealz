@@ -115,6 +115,12 @@
 
   // Lets a static check (or a human inspecting the DOM) see which day the
   // client selected without re-deriving day semantics.
+  var heading = board.querySelector("h2");
+  if (heading) {
+    var listed = board.querySelectorAll("article.card").length;
+    heading.textContent = "On tonight · " + listed;
+  }
+
   board.setAttribute("data-tonight-key", todayKey);
   board.setAttribute("data-minutes-now", String(minutesNow));
 })();

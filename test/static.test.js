@@ -161,7 +161,7 @@ test("build-static produces every view board + map + root redirects with deal ca
     const map = await readFile(join(outDir, view.slug, "map", "index.html"), "utf8");
 
     assert.match(board, /On tonight/);
-    assert.match(board, /class="card"/, `${view.slug} board has no deal cards`);
+    assert.match(board, /class="card scan"/, `${view.slug} board has no deal cards`);
     // No raw venues embed — that leaked ops_notes + held deal prices (blocker).
     assert.doesNotMatch(board, /id="bd-venues"/);
     assert.doesNotMatch(board, /ops_notes/);

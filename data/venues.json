@@ -18273,6 +18273,108 @@
           "proof_quote": "LUNCH SPECIAL. MON—FRI 11:00 AM-3:00 PM Use Pure 100% Corn Oil (All Entrée serve w/ Steamed Rice except Pad Thai and Fried Rice) (NO Substitution). LS.1 Pad Thai w/ Spring Roll 12.95 LS.2 Pad Thai w/ Veggie Curry Puff 12.95 LS.3 Pad Thai w/ Tom-Yum Chicken 12.95 LS.4 Ginger* w/ Spring Roll 12.95 LS.5 Ginger* w/ Veggie Curry Puff 12.95 LS.6 Ginger* w/ Tom-Yum Chicken 12.95 LS.7 Basil* w/ Spring Roll 12.95 LS.8 Basil* w/ Veggie Curry Puff 12.95 LS.9 Basil* w/ Tom-Yum Chicken 12.95 LS.10 Mix Vegetable w/ Spring Roll 12.95 LS.11 Mix Vegetable w/ Veggie Curry Puff 12.95 LS.12 Mix Vegetable w/ Tom-Yum Chicken 12.95 LS.13 Black Fried Rice w/ Spring Roll 12.95 LS.14 Black Fried Rice w/ Veggie Curry Puff 12.95 LS.15 Black Fried Rice w/ Tom Yum Chicken 12.95."
         }
       ]
+    },
+    {
+      "id": "one-star-country-club",
+      "name": "One Star Country Club",
+      "neighborhood": "Federal Hill",
+      "status": "verified",
+      "address": "38 E Cross Street, Baltimore MD 21230",
+      "phone": "(410) 727-5102",
+      "source_url": "https://www.onestarcountryclub.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2771506,
+      "lon": -76.6130876,
+      "coords_source": "Nominatim search 38 E Cross Street, Baltimore MD 21230 on 2026-09-08 returned OSM way 336362710 named No Way Jose Cafe at 39.2771506,-76.6130876. Display name is 38, East Cross Street, Federal Hill, Baltimore, Maryland, 21230. OSM still names the former occupant. Official contact page prints 38 E Cross Street, Baltimore MD 21230 and (410) 727-5102. Official homepage says Federal Hill.",
+      "bar_hours": "Official contact hours: Mon–Fri 5 PM–2 AM; Sat–Sun 11 AM–2 AM. Monday–Thursday happy hour clock printed on the weekly specials flyer is 6–8PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Federal Hill neighborhood bar at 38 E Cross Street, 21230. Not in live venues.json. Official site https://www.onestarcountryclub.com/. Former No Way Jose Cafe space. Distinct from live Pickles Pub and already patched Little Havana.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Bohs and Busch Light $3",
+              "price": "$3"
+            },
+            {
+              "text": "Rails $4",
+              "price": "$4"
+            },
+            {
+              "text": "Crush's $5",
+              "price": "$5"
+            },
+            {
+              "text": "Orange Bombs and Nutrls $6",
+              "price": "$6"
+            }
+          ],
+          "start": 1080,
+          "end": 1200,
+          "time_window": "6pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.onestarcountryclub.com/menu",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Monday-Thursday. HAPPY HOUR 6-8PM. $3 Bohs & Busch Light | $4 Rails | $5 Crush's. $6 Orange Bombs & Nutrls"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Busch Light $3",
+              "price": "$3"
+            },
+            {
+              "text": "Rails $4",
+              "price": "$4"
+            },
+            {
+              "text": "Nutrl and Surfside $6",
+              "price": "$6"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.onestarcountryclub.com/menu",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Tuesday. KARAOKE AT 9PM. $3 BUSCH LIGHT | $4 RAILS. $6 NUTRL & SURFSIDE",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Natty Light and Busch Light $3",
+              "price": "$3"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.onestarcountryclub.com/menu",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Saturday & Sunday. SUN: $3 NATTY LIGHT & BUSCH LIGHT",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

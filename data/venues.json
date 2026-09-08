@@ -16989,6 +16989,107 @@
           "proof_quote": "Almost Pregame. Fridays | 9:00 PM – 11:00 PM. There is no better way to end your week but with an open bar, and for $20!?!"
         }
       ]
+    },
+    {
+      "id": "costiera",
+      "name": "Costiera",
+      "neighborhood": "Little Italy",
+      "status": "verified",
+      "address": "415 South Central Avenue, Baltimore, MD 21202",
+      "phone": "(443) 438-4363",
+      "source_url": "https://costierabaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.285582,
+      "lon": -76.5988951,
+      "coords_source": "Nominatim search 415 South Central Avenue, Baltimore, MD 21202 on 2026-09-08 returned OSM way 337284073 at 39.2855820,-76.5988951. Display name neighbourhood is Little Italy. Official homepage prints 415 South Central Avenue, Baltimore, MD 21202 and (443) 438-4363 and does not print a neighborhood. OSM building name Fallsway Spring Co. is not printed on the official site.",
+      "bar_hours": "Toast businessHours on the official site: Monday-Saturday 4:00pm-10:00pm; Sunday closed. Happy Hour PDF: Monday-Friday 4pm-7pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Little Italy restaurant. Not in live venues.json. Official site https://costierabaltimore.com/ Happy Hour PDF is linked from https://costierabaltimore.com/pdf-page-3.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Marinated Olives & Anchovies $8",
+              "price": "$8"
+            },
+            {
+              "text": "Cheese of the day $10, grilled bread & vanilla-date jam",
+              "price": "$10"
+            },
+            {
+              "text": "Ovenbird sourdough bruschetta $9, local mushroom escabeche & ricotta",
+              "price": "$9"
+            },
+            {
+              "text": "Bolo fries $12, hand cut fries, bolognese & pickled onions",
+              "price": "$12"
+            },
+            {
+              "text": "Rigatoni pasta $15, spicy tomato sauce & straciatella cheese",
+              "price": "$15"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/5a553be3-942e-48c0-83f6-22c891c8eef2/HappyHourWebsite417.pdf",
+          "food_categories": [
+            "small-plate/apps",
+            "pasta/comfort"
+          ],
+          "proof_quote": "Happy Hour Monday-Friday 4pm-7pm. Marinated Olives & Anchovies…8. cheese of the day...10 grilled bread & vanilla-date jam. Ovenbird sourdough bruschetta...9 local mushroom escabeche & ricotta. bolo fries... 12 hand cut fries, bolognese & pickled onions. rigatoni pasta..15 Spicy tomato sauce & straciatella cheese."
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Spritzes $7: PrickleSpritz (Arancia, prickly pear purée, prosecco, soda); Cellospritz (limoncello, Cocchi Americano, prosecco, soda); LEAFEON SPRITZ (Skeleton gin, cucumber, lime, elderflower liqueur, tonic, mint)",
+              "price": "$7"
+            },
+            {
+              "text": "Wine $6 per glass or $16 for half liter carafe (Blanco Sobre Lias, Tinto Sobre Lias, Solidarity Rosé)",
+              "price": "$6"
+            },
+            {
+              "text": "Wine half liter carafe $16",
+              "price": "$16"
+            },
+            {
+              "text": "Prosecco $7",
+              "price": "$7"
+            },
+            {
+              "text": "Dollar off all beers",
+              "price": "dollar off"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/5a553be3-942e-48c0-83f6-22c891c8eef2/HappyHourWebsite417.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Monday-Friday 4pm-7pm. SPritzeses... 7. Wine 6 per glass or 16 for half liter carafe. Prosecco... 7. Dollar off all beers."
+        }
+      ]
     }
   ]
 }

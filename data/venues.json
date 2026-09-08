@@ -15621,6 +15621,48 @@
         }
       ],
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "the-bygone",
+      "name": "The Bygone",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "Four Seasons Hotel, 29th floor, 200 International Drive, Baltimore, MD 21202",
+      "source_url": "https://www.thebygonerestaurant.com/weekend-brunch/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.28274,
+      "lon": -76.6024709,
+      "coords_source": "OpenStreetMap Nominatim geocode of Four Seasons Hotel Baltimore (venue brunch page: atop Four Seasons, 29th floor), 2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: weekend-brunch WP content + Bygone_PrivateDining_072425.pdf pdftotext. Phone not printed on fetched brunch page; not copied from directories. Street number is the geocoded Four Seasons hotel, not a number printed on the brunch page.",
+      "deals": [
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Brunch Buffet adults $85",
+              "price": "$85"
+            },
+            {
+              "text": "Brunch Buffet children under 12 $35",
+              "price": "$35"
+            }
+          ],
+          "start": 660,
+          "end": 840,
+          "time_window": "11am-2pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thebygonerestaurant.com/weekend-brunch/",
+          "food_categories": [
+            "brunch"
+          ],
+          "proof_quote": "Offered every Saturday and Sunday from 11am-2:00pm, The Bygone’s Brunch Buffet is an unforgettable dining experience atop Baltimore’s Four Seasons Hotel. Adults: $85 Children under 12 years old: $35"
+        }
+      ]
     }
   ]
 }

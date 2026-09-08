@@ -18375,6 +18375,123 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "himalayan-house",
+      "name": "Himalayan House",
+      "neighborhood": "Locust Point",
+      "status": "verified",
+      "address": "1522 East Fort Ave, Baltimore, MD 21230",
+      "phone": "(410) 528-1271",
+      "source_url": "https://www.thehimalayanhouse.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2688978,
+      "lon": -76.5930725,
+      "coords_source": "Nominatim search 1522 East Fort Ave, Baltimore, MD 21230 on 2026-09-08 returned OSM node 10799617068 named Himalayan House Restaurant at 39.2688978,-76.5930725. Display name neighbourhood is Locust Point, city Baltimore, postcode 21230. Official lunch-special page prints 1522 East Fort Ave, Baltimore, MD 21230 and (410) 528-1271.",
+      "bar_hours": "Official homepage Opening Hours: Mon 10:00 AM–10:00 PM; Wed–Thu 10:00 AM–10:00 PM; Fri–Sat 10:00 AM–10:30 PM; Sun 11:00 AM–10:00 PM; Tue Closed. Lunch special clock printed on the lunch-special page is 10:30AM–3:00PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Locust Point Indian/Nepalese restaurant. Not in live venues.json. Official site https://www.thehimalayanhouse.com/. Distinct from Nepal House at 920 N Charles St, which was written separately.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Vegetarian lunch special combo $11.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
+              "price": "$11.99"
+            },
+            {
+              "text": "Chicken lunch special combo $12.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
+              "price": "$12.99"
+            },
+            {
+              "text": "Lamb lunch special combo $13.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
+              "price": "$13.99"
+            }
+          ],
+          "start": 630,
+          "end": 900,
+          "time_window": "10:30am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thehimalayanhouse.com/lunch-special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Try our Delicious Lunch Special Combo: 10:30AM to 3:00PM (All Curry Served with Basmati Rice, Naan or Samosa & 1 Can Soda or Small Water) Vegetarian.................................. $11.99 Chicken........................................ $12.99 Lamb.............................................. $13.99"
+        }
+      ]
+    },
+    {
+      "id": "nepal-house",
+      "name": "Nepal House",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "920 N Charles St., Baltimore, MD 21201",
+      "phone": "(410) 547-0001",
+      "source_url": "https://www.thenepalhouse.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3002794,
+      "lon": -76.615984,
+      "coords_source": "Nominatim search 920 N Charles St, Baltimore, MD 21201 on 2026-09-08 returned OSM node 5837329150 named Nepal House at 39.3002794,-76.6159840. Display name neighbourhood is Mount Vernon, city Baltimore, postcode 21201. Official homepage prints 920 N Charles St., Baltimore, MD 21201 and (410) 547-0001.",
+      "bar_hours": "Official homepage header prints Mon–Sun 11:00 AM–01:00 AM. Opening Hours block prints Open 7 days a week, Mon–Sun 11:30 AM–01:00 AM. Buffet clock printed beside those hours is Everyday 11:30 AM–3:30 PM.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Mount Vernon Nepali/Indian restaurant at the former Mughal Garden address. Not in live venues.json. Official site https://www.thenepalhouse.com/. Distinct from Himalayan House at 1522 East Fort Ave, which was written separately.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Daily lunch buffet $15.99",
+              "price": "$15.99"
+            }
+          ],
+          "start": 690,
+          "end": 930,
+          "time_window": "11:30am-3:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thenepalhouse.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Buffet Hours: Everyday (11:30 AM – 3:30 PM) Monday -Thursday $15.99 Friday, Saturday and Sunday $16.99 Join us daily and enjoy an authentic Nepali and Himalayan buffet featuring a variety of fresh and delicious dishes."
+        },
+        {
+          "days": [
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Daily lunch buffet $16.99",
+              "price": "$16.99"
+            }
+          ],
+          "start": 690,
+          "end": 930,
+          "time_window": "11:30am-3:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thenepalhouse.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Buffet Hours: Everyday (11:30 AM – 3:30 PM) Monday -Thursday $15.99 Friday, Saturday and Sunday $16.99 Join us daily and enjoy an authentic Nepali and Himalayan buffet featuring a variety of fresh and delicious dishes."
+        }
+      ]
     }
   ]
 }

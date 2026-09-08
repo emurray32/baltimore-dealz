@@ -15983,6 +15983,153 @@
           "proof_quote": "BRUNCH @ THE BEACH only available saturday & sunday 12pm-3pm French Toast $22 Bacon Omelette $22 Sausage, Egg, & Cheese $25 Crab Cake Sandwich $34 Spanikopita Benedict $24 Salmon Benedict $26 Crab Cake Benedict $35 Grilled Chicken & Shrimp Salad $32"
         }
       ]
+    },
+    {
+      "id": "ruths-chris",
+      "name": "Ruth's Chris Steak House",
+      "neighborhood": "Inner Harbor",
+      "status": "verified",
+      "address": "711 Eastern Avenue, Baltimore, MD 21202",
+      "phone": "(410) 230-0033",
+      "source_url": "https://ruthschrisbsm.com/baltimore/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.285086,
+      "lon": -76.60379,
+      "coords_source": "Official Baltimore location JSON on ruthschrisbsm.com/baltimore/ (Pier 5 Hotel), 2026-09-08",
+      "bar_hours": "Baltimore location page: Sun 4pm–9pm; Mon–Thu 4pm–10pm; Fri–Sat 4pm–11pm. Happy Hour listed Sun–Fri 4pm–6:30pm (not listed Saturday).",
+      "ops_notes": "Deal Scout 2026-09-08: https://ruthschrisbsm.com/baltimore/ links Happy Hour PDF https://ruthschrisbsm.com/wp-content/uploads/2026/09/BAR-TEST-MD-HH.pdf. Address and phone from that page (711 Eastern Avenue, Baltimore, MD 21202; (410) 230-0033), inside the Pier 5 Hotel. PDF says ask your server for happy hour days and times; weekday window used is the one printed on the Baltimore page. Bar only. Same street address as McCormick & Schmick's (Pier 5) but a different restaurant: Ruth's phone is (410) 230-0033.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Tenderloin Skewer Salad $13",
+              "price": "$13"
+            },
+            {
+              "text": "Grilled Chicken Caesar Salad $13",
+              "price": "$13"
+            },
+            {
+              "text": "Seared Ahi Tuna $15",
+              "price": "$15"
+            },
+            {
+              "text": "Spicy Shrimp $16",
+              "price": "$16"
+            },
+            {
+              "text": "Beef Carpaccio $18",
+              "price": "$18"
+            },
+            {
+              "text": "Calamari $23",
+              "price": "$23"
+            },
+            {
+              "text": "Grilled Chicken Sandwich with Honey Mustard $14",
+              "price": "$14"
+            },
+            {
+              "text": "R Burger $16",
+              "price": "$16"
+            },
+            {
+              "text": "Steak Sandwich $19",
+              "price": "$19"
+            }
+          ],
+          "start": 960,
+          "end": 1110,
+          "time_window": "4pm-6:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ruthschrisbsm.com/wp-content/uploads/2026/09/BAR-TEST-MD-HH.pdf",
+          "food_categories": [
+            "small-plate/apps",
+            "seafood/crab",
+            "burger",
+            "sandwich/cheesesteak",
+            "steak"
+          ],
+          "proof_quote": "Baltimore page: Happy Hour 4:00 PM – 6:30 PM Sunday through Friday (Saturday lists Dinner only). Linked Happy Hour PDF: Offered in the bar only. Ask your server for happy hour days & times. Happy hour pricing listed in red. TENDERLOIN SKEWER SALAD 13 | 20 GRILLED CHICKEN CAESAR SALAD 13 | 20 SEARED AHI TUNA 15 | 25 SPICY SHRIMP 16 | 28 BEEF CARPACCIO 18 | 26 CALAMARI 23 | 27 GRILLED CHICKEN SANDWICH WITH HONEY MUSTARD 14 | 21 R BURGER 16 | 24 STEAK SANDWICH 19 | 26"
+        }
+      ]
+    },
+    {
+      "id": "leinenkugels",
+      "name": "Leinie Lodge & Beer Garden",
+      "neighborhood": "Power Plant Live",
+      "status": "verified",
+      "address": "10 Market Place, Baltimore, MD 21202",
+      "phone": "410-908-0650",
+      "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2896777,
+      "lon": -76.6072656,
+      "coords_source": "OpenStreetMap Nominatim geocode of official address 10 Market Place, Baltimore, MD 21202, 2026-09-08.",
+      "bar_hours": "Official specials pages: Wed–Thu 12pm–10pm; Fri 12pm–12am; Sat 11am–12am; Sun 11am–9pm. Happy Hour Wed–Fri 4pm–7pm. No Mon–Tue hours published on those pages.",
+      "ops_notes": "Deal Scout 2026-09-08: official operator pages on powerplantlive.com. Candidate name Leinenkugel's Beer Garden; site name is Leinie Lodge & Beer Garden. Phone 410-908-0650 is the Power Plant Live number printed on the venue pages. Kids Eat Free header window is 12:00 PM–11:30 PM; same page says offer valid during open times, so close may be earlier than 11:30pm on some days.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "50% off domestic drafts",
+              "price": "50% off"
+            },
+            {
+              "text": "50% off rail cocktails",
+              "price": "50% off"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/leinies-happy-hour",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour at Leinie's. Every Wednesday, Thursday, Friday 4:00 PM-7:00 PM Leinie Lodge & Beer Garden. Join us for Happy Hour every Wednesday through Friday from 4-7pm and get 50% OFF domestic drafts and rail cocktails!"
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Free kids meal with purchase of an adult entree (Port Discovery ticket/receipt required; one free kids meal per adult entree)",
+              "price": "Free"
+            }
+          ],
+          "start": 720,
+          "end": 1410,
+          "time_window": "12pm-11:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/leinies-kids-eat-free",
+          "proof_quote": "Kids Eat Free. Every Wednesday, Thursday, Friday, Saturday, Sunday 12:00 PM-11:30 PM Leinie Lodge & Beer Garden. Spend the day at Port Discovery and eat at Leinie's Lodge to get a free kids meal with a purchase of an adult entree! Offer valid during open times and only the day you are visiting Port Discovery. Blackout dates are subject to change per other events. Must show Port Discovery ticket/receipt. One free kids' meal per one adult entree ordered."
+        }
+      ]
     }
   ]
 }

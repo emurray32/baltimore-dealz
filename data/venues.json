@@ -16742,6 +16742,192 @@
           "proof_quote": "Wednesday 4pm – 9pm $18.00 Crab Pie Night"
         }
       ]
+    },
+    {
+      "id": "so-baltimore-sports",
+      "name": "So Baltimore Sports Bar & Lounge",
+      "neighborhood": "Brewers Hill",
+      "status": "verified",
+      "address": "3734 Fleet St. Baltimore, MD 21224",
+      "phone": "(443) 552-1143",
+      "source_url": "https://www.sobaltimoresportsbar.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2858543,
+      "lon": -76.565377,
+      "coords_source": "Nominatim search 3734 Fleet Street, Baltimore, MD 21224 on 2026-09-08 returned OSM way 336210648 at 39.2858543,-76.5653770. Display name neighbourhood is Brewers Hill. Official homepage prints 3734 Fleet St. Baltimore, MD 21224 and (443) 552-1143 and does not print a neighborhood.",
+      "bar_hours": "Homepage: Tuesday-Friday 6:00pm-2:00am; Saturday and Sunday 12:00pm-2:00am; CLOSED Mondays. Happy Hour menu: 6-8 pm on weekdays ONLY. Brunch Saturday and Sunday 12pm-5pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore sports bar. Not in live venues.json. Official site https://www.sobaltimoresportsbar.com/ Happy Hour is https://www.sobaltimoresportsbar.com/menus-1 and Taco Tuesday is https://www.sobaltimoresportsbar.com/menus-3.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Triple Double Sliders without fries $12.00 (add bacon $2)",
+              "price": "$12.00"
+            },
+            {
+              "text": "Triple Double Sliders with fries $15.00 (add bacon $2)",
+              "price": "$15.00"
+            },
+            {
+              "text": "Black Salmon Sliders, 2 grilled salmon sliders with slaw and fries $6.50",
+              "price": "$6.50"
+            },
+            {
+              "text": "Steak Sliders, 2 steak sliders with onion rings and BBQ sauce, served with fries $7",
+              "price": "$7"
+            },
+            {
+              "text": "Buffalo Chicken Sliders, 2 buffalo chicken sliders with lettuce, tomato, and house ranch, served with fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Chicken Tenders, 3 crispy tenders with fries, any flavor $8.00",
+              "price": "$8.00"
+            },
+            {
+              "text": "Wings, 4 whole wings any flavor $10.00",
+              "price": "$10.00"
+            },
+            {
+              "text": "Lemon Drop Shot $5.00",
+              "price": "$5.00"
+            },
+            {
+              "text": "Rum Punch $8.00",
+              "price": "$8.00"
+            },
+            {
+              "text": "Tequila Sunrise $8.00",
+              "price": "$8.00"
+            },
+            {
+              "text": "Jack & Coke $7.00",
+              "price": "$7.00"
+            },
+            {
+              "text": "House Sangria $7.00",
+              "price": "$7.00"
+            }
+          ],
+          "start": 1080,
+          "end": 1200,
+          "time_window": "6pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sobaltimoresportsbar.com/menus-1",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "wings",
+            "small-plate/apps"
+          ],
+          "proof_quote": "Happy Hour Menu. Prices are valid from 6-8 pm on weekdays ONLY. Triple Double Sliders without fries $12.00 with fries $15.00. Black Salmon Sliders $6.50. Steak Sliders $7. Buffalo Chicken Sliders $6. Chicken Tenders $8.00. Wings $10.00. Lemon Drop Shot $5.00. Rum Punch $8.00. Tequila Sunrise $8.00. Jack & Coke $7.00. House Sangria $7.00."
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Fleet St. Tacos Chicken $14",
+              "price": "$14"
+            },
+            {
+              "text": "Fleet St. Tacos Steak $16",
+              "price": "$16"
+            },
+            {
+              "text": "Fleet St. Tacos Salmon $16",
+              "price": "$16"
+            },
+            {
+              "text": "Fleet St. Tacos Shrimp $16",
+              "price": "$16"
+            },
+            {
+              "text": "Fleet St. Tacos Surf & Turf $19",
+              "price": "$19"
+            },
+            {
+              "text": "Crab Nachos $20",
+              "price": "$20"
+            },
+            {
+              "text": "Crunchwrap Burger $15",
+              "price": "$15"
+            },
+            {
+              "text": "Chicken Tostadas $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tequila Lime Wings, 1 pound $16",
+              "price": "$16"
+            },
+            {
+              "text": "Black Bean Quesadilla $8",
+              "price": "$8"
+            },
+            {
+              "text": "Nacho Fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Taco Salad $8 (add chicken $4, steak $6, or shrimp $6)",
+              "price": "$8"
+            },
+            {
+              "text": "Churros $9",
+              "price": "$9"
+            },
+            {
+              "text": "1800 $7",
+              "price": "$7"
+            },
+            {
+              "text": "Casamigos $12",
+              "price": "$12"
+            },
+            {
+              "text": "Corona $4",
+              "price": "$4"
+            },
+            {
+              "text": "Margarita $8",
+              "price": "$8"
+            },
+            {
+              "text": "Mexican Mule $8",
+              "price": "$8"
+            },
+            {
+              "text": "Patron $9",
+              "price": "$9"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sobaltimoresportsbar.com/menus-3",
+          "food_categories": [
+            "tacos",
+            "small-plate/apps",
+            "wings",
+            "burger",
+            "seafood/crab",
+            "drink"
+          ],
+          "proof_quote": "Taco Tuesday Menu. Exclusive menu ONLY for Taco Tuesday. Fleet St. Tacos Chicken $14, Steak $16, Salmon $16, Shrimp $16, Surf & Turf $19. Crab Nachos $20. Crunchwrap Burger $15. Chicken Tostadas $8. Tequila Lime Wings $16. Black Bean Quesadilla $8. Nacho Fries $6. Taco Salad $8. Churros $9. 1800 $7. Casamigos $12. Corona $4. Margarita $8. Mexican Mule $8. Patron $9.",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

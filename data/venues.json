@@ -18492,6 +18492,54 @@
           "proof_quote": "Buffet Hours: Everyday (11:30 AM – 3:30 PM) Monday -Thursday $15.99 Friday, Saturday and Sunday $16.99 Join us daily and enjoy an authentic Nepali and Himalayan buffet featuring a variety of fresh and delicious dishes."
         }
       ]
+    },
+    {
+      "id": "sunny-carry-out",
+      "name": "Sunny Carry Out",
+      "neighborhood": "Pigtown",
+      "status": "verified",
+      "address": "758 Washington Blvd, Baltimore, MD 21230",
+      "phone": "(410) 244-8816",
+      "source_url": "https://www.sunnycarryouttogo.com/rfab3e5r/sunny-carry-out-baltimore-21230/menu?menu=Lunch+Menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.283226,
+      "lon": -76.6278294,
+      "coords_source": "Nominatim search 758 Washington Blvd, Baltimore, MD 21230 on 2026-09-08 returned OSM way 239096358 named Sunny Chinese Food at 39.2832260,-76.6278294. Display name neighbourhood is Washington Village/Pigtown, city Baltimore, postcode 21230. Official lunch menu page prints 758 Washington Blvd, Baltimore, MD 21230 and (410) 244-8816.",
+      "bar_hours": "Official restaurant schema openingHours: Mon–Sat 11:00 AM–9:00 PM; Sunday not listed. Lunch special clock printed on the lunch menu is 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Pigtown Chinese carryout at 758 Washington Blvd. Not in live venues.json. Official site https://www.sunnycarryouttogo.com/. Pigtown Main Street lists the room as Sunny Chinese Food; official menu name is Sunny Carry Out.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $9.90, served with a can soda and fried rice or white rice (L1–L22, including mixed vegetables, lo mein, chow mein, broccoli, and General Tso's chicken)",
+              "price": "$9.90"
+            },
+            {
+              "text": "Vegetable mei fun, chicken mei fun, shrimp egg foo young, and triple delight lunch specials $10.18, served with a can soda and fried rice or white rice",
+              "price": "$10.18"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.sunnycarryouttogo.com/rfab3e5r/sunny-carry-out-baltimore-21230/menu?menu=Lunch+Menu",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Lunch Specials All Lunch Special served w. Can Soda & Fried Rice or White Rice Available: All week days From: 11:00 AM - 3:00 PM L1. Mixed Vegetables $9.90 L23. Vegetable Mei Fun $10.18"
+        }
+      ]
     }
   ]
 }

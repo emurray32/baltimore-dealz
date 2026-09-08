@@ -16313,6 +16313,227 @@
           "proof_quote": "HAPPY HOUR $6 OYSTERS (3) mignonette, housemade cocktail sauce TRUFFLE FRENCH FRIES remoulade $8 SALAD LYONNAISE soft boiled egg, bacon lardons, endive & friseé, radishes TRUFFLE GRILLED CHEESE white cheddar, white $10 SLIDERS (2) wild mushroom, eggplant, harissa, vadouvan spice or angus beef burger, dijonnaise BLACK TRUFFLE MOUILLETTE brioche, prosciutto, red watercress MOULES MARINIÈRE aromatics, vermouth, maitre d’ butter, grilled sourdough OYSTERS ROCKEFELLER (3) spinach, parmigiano, lemon SPINACH & ARTICHOKE DIP warm baguette TUESDAY - SATURDAY | 5:30PM- 7:00PM"
         }
       ]
+    },
+    {
+      "id": "the-den",
+      "name": "The Den",
+      "neighborhood": "Hamilton",
+      "status": "verified",
+      "address": "4537 Harford Road, Baltimore, MD 21214",
+      "phone": "(410) 444-2150",
+      "source_url": "https://www.thedenbmore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3416403,
+      "lon": -76.5704736,
+      "coords_source": "Nominatim search 4537 Harford Road, Baltimore, MD 21214 on 2026-09-08 returned OSM way 4537 Harford Road in Hamilton, Baltimore, 21214 at 39.3416403,-76.5704736.",
+      "bar_hours": "Homepage OUR HOURS: Sunday 11am-11pm; Monday 3pm-11pm; Tuesday 3pm-11pm; Wednesday 3pm-11:30pm; Thursday 3pm-11pm; Friday 3pm-12am; Saturday 11am-12am. Homepage also lists brunch Saturday and Sunday 11am-3pm. Happy Hour prices are on the events page, Monday-Thursday 4pm-6pm.",
+      "ops_notes": "Deal Scout 2026-09-08: not in live venues.json. Official site https://www.thedenbmore.com/ (4537 Harford Road, Baltimore, MD 21214; (410) 444-2150). Priced happy hour is on https://www.thedenbmore.com/events-calendar. Daily and weekly food specials are mentioned without prices and were not copied. Events-page bar hours that mark Tuesday closed conflict with homepage hours and were not used.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Domestics $2.75",
+              "price": "$2.75"
+            },
+            {
+              "text": "Imports $3.75",
+              "price": "$3.75"
+            },
+            {
+              "text": "Half-price margaritas and crushes",
+              "price": "Half price"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thedenbmore.com/events-calendar",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR AT Monday - Thursday $2.75 Domestics $3.75 Imports Half Price Margaritas & Crushes 4:00 PM - 6:00 PM"
+        }
+      ]
+    },
+    {
+      "id": "love-pomelo",
+      "name": "Love, Pomelo",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2933 O'Donnell Street, Baltimore, MD 21224",
+      "phone": "(443) 226-6107",
+      "source_url": "https://lovepomelorestaurant.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2798933,
+      "lon": -76.5742128,
+      "coords_source": "Nominatim search 2933 O'Donnell Street, Baltimore, MD 21224 on 2026-09-08 returned OSM way 2933 O'Donnell Street in Canton, Baltimore, 21224 at 39.2798933,-76.5742128.",
+      "bar_hours": "Hours page: Tues-Thurs 4:30pm-9pm; Fri-Sat 4:30pm-10pm; Sun 4:30pm-9pm. Closed Monday. Aperitivo Hour Tuesday-Saturday 4:30pm-6:30pm (no prices on that block).",
+      "ops_notes": "Deal Scout 2026-09-08: Baltimore Magazine Best Restaurants 2026 (Canton). Not in live venues.json. Official site https://lovepomelorestaurant.com/ lists 2933 O'Donnell St., Baltimore, MD 21224. Phone (443) 226-6107 is printed on the official reservations page. Wednesday pasta window follows published Wednesday hours (4:30pm-9pm), matching the specials-page All Day label.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "House-made fresh pasta $20",
+              "price": "$20"
+            }
+          ],
+          "start": 990,
+          "end": 1260,
+          "time_window": "4:30pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://lovepomelorestaurant.com/special-events-promtions/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Love, Pomelo Wednesday: Every Wednesday All Day House-Made Fresh Pasta | $20 A midweek tradition worth keeping. Every Wednesday, enjoy our house-made fresh pasta for $20 all day long."
+        }
+      ]
+    },
+    {
+      "id": "oleum",
+      "name": "Oleum",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "701 S Bond Street, Baltimore, MD 21231",
+      "phone": "(410) 231-3102",
+      "source_url": "https://www.oleumkitchen.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2832976,
+      "lon": -76.5949599,
+      "coords_source": "Nominatim search 701 S Bond Street, Baltimore, MD 21231 on 2026-09-08 returned OSM way at 39.2832976,-76.5949599. Display name still labels the building Bad Decisions. Visible official homepage prints 701 S Bond St, Fell's Point, and phone 410.231.3102.",
+      "bar_hours": "Homepage: Sunday and Monday dinner 4pm-9pm; Tuesday through Thursday dinner 4pm-10pm; Friday and Saturday dinner 4pm-10pm; brunch Saturday and Sunday 11am-3pm. Weekly Specials PDF: Monday-Friday 4pm-6pm at the bar only.",
+      "ops_notes": "Deal Scout 2026-09-08: Baltimore Magazine Best Restaurants 2026 vegan restaurant. Not in live venues.json. Official site https://www.oleumkitchen.com/ prints 701 S Bond St, Fell's Point, 410.231.3102. Weekly Specials button on https://www.oleumkitchen.com/menu opens the PDF used here. Site JSON-LD also contains 301 Light Street; the printed Bond Street address was used.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Small plates from $6-$10",
+              "price": "$6-$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf",
+          "food_categories": [
+            "small-plate/apps"
+          ],
+          "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) Small Plates from $6-$10 Spirited & Spirit Free Drink Specials"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "20% off small plates",
+              "price": "20% off"
+            },
+            {
+              "text": "Classic cocktails $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ],
+          "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) INDUSTRY mondays 20% Off Small Plates $10 Classic Cocktails"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "20% off all pizzas",
+              "price": "20% off"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) PIZZA PARTY 20% Off All Pizzas Every Tuesday!"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "House red and white wine $6",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) Wine Down Wednesdays $6 Glasses of House Red & White Wine"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$10 off pitchers of house sangria",
+              "price": "$10 off"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) Sangria Thursdays $10 off Pitchers of our House Sangria"
+        }
+      ]
     }
   ]
 }

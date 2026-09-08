@@ -15815,6 +15815,174 @@
           "proof_quote": "Taco Tuesday Available all day, Dine In Only All taco dinners $15 mom's turkey soft tacos birria tacos short rib hard tacos Crispy Fish Tacos bbq chicken quesadilla tacos broccoli birria tacos Falafel Smashed Tacos Street Tacosss"
         }
       ]
+    },
+    {
+      "id": "ouzo-beach",
+      "name": "Ouzo Beach",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "1000 Lancaster Street, Baltimore, MD 21202",
+      "phone": "443-708-5818",
+      "source_url": "https://ouzobeach.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.282343471692876,
+      "lon": -76.59938376790349,
+      "coords_source": "Harbor East directory JSON (harboreast.com/wp-json/he-directory/v1/data) Ouzo Beach card lat/lng, 2026-09-08. Nominatim 1000 Lancaster Street is 39.2825507,-76.5995845 and is the shared street number with Ouzo Bay, so the directory point was used.",
+      "bar_hours": "Harbor East Come See Us: Mon–Sat 5pm–12am; Sun 12pm–10pm. Official PDF happy hour Mon–Fri 4pm–6pm; brunch Sat–Sun 12pm–3pm.",
+      "ops_notes": "Deal Scout 2026-09-08: official site https://ouzobeach.com/ links https://ouzobeach.com/wp-content/uploads/2024/07/OuzoBeach_070724.pdf (pdftotext). Address and phone from ouzobeach.com About (1000 Lancaster Street, Baltimore, Maryland 21202; 443.708.5818), across from Ouzo Bay. PDF file date July 2024; still the linked happy-hour/brunch menu on 2026-09-08. HE hours start 5pm Mon–Sat while PDF and HE happy-hour callout both say 4pm–6pm; deal window is the PDF window.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Cocktail of the Week $10",
+              "price": "$10"
+            },
+            {
+              "text": "$7 Spirits (Case 1 Vodka, Bacardi Rum, Shot Tower Gin, Olmeca Altos Tequila, Four Roses Bourbon, Sagamore Spirits Rye)",
+              "price": "$7"
+            },
+            {
+              "text": "$6 Wines (Cricova Brut; Voltes White Blend roditis & moschofilero; Chateau Vartely Rose Blend syrah-malbec; Voltes Red Blend agiorgitiko-mavroudi)",
+              "price": "$6"
+            },
+            {
+              "text": "$5 Greek Spirits (Ouzo #12, Mastixa Tetteris, Rakomelo Kallikuni, Katsaros Tsipouro)",
+              "price": "$5"
+            },
+            {
+              "text": "Blue Moon $6",
+              "price": "$6"
+            },
+            {
+              "text": "Corona Light $5",
+              "price": "$5"
+            },
+            {
+              "text": "National Bohemian $5",
+              "price": "$5"
+            },
+            {
+              "text": "Date & Pistachios Bruschetta $8",
+              "price": "$8"
+            },
+            {
+              "text": "Roasted Tomato & Olives Bruschetta $8",
+              "price": "$8"
+            },
+            {
+              "text": "Lamb Meatballs $8",
+              "price": "$8"
+            },
+            {
+              "text": "Grape Leaves $8",
+              "price": "$8"
+            },
+            {
+              "text": "Goat Cheese Dip $10",
+              "price": "$10"
+            },
+            {
+              "text": "Cocktail Shrimp $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fried Greek Cheese $10",
+              "price": "$10"
+            },
+            {
+              "text": "Chicken Souvlake $10",
+              "price": "$10"
+            },
+            {
+              "text": "Shrimp and Cheese Souvlaki $12",
+              "price": "$12"
+            },
+            {
+              "text": "Charcuterie Plate $12",
+              "price": "$12"
+            },
+            {
+              "text": "Lamb Slider $12",
+              "price": "$12"
+            },
+            {
+              "text": "Ouzo Cured Salmon $12",
+              "price": "$12"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ouzobeach.com/wp-content/uploads/2024/07/OuzoBeach_070724.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab",
+            "sliders"
+          ],
+          "proof_quote": "HAPPY HOUR BEVS only available monday-friday 4pm-6pm $10 COCKTAIL OF THE WEEK Ask About This Week’s Selection $7 SPIRITS Case 1 Vodka Bacardi Rum Shot Tower Gin Olmeca Altos Tequila Four Roses Bourbon Sagamore Spirits Rye $6 WINES Cricova brut Voltes White Blend roditis & moschofilero Chateau Vartely Rose Blend syrah-malbec Voltes Red Blend agiorgitiko-mavroudi $5 GREEK SPIRITS Ouzo #12 Mastixa Tetteris Rakomelo Kallikuni Katsaros Tsipouro Blue Moon $6 Corona Light $5 National Bohemian $5 HAPPY HOUR FOOD only available monday-friday 4pm-6pm Date & Pistachios Bruschetta $8 Roasted Tomato & Olives Bruschetta $8 Lamb Meatballs $8 Grape Leaves $8 Goat Cheese Dip $10 Cocktail Shrimp $10 Fried Greek Cheese $10 Chicken Souvlake $10 Shrimp and Cheese Souvlaki $12 Charcuterie Plate $12 Lamb Slider $12 Ouzo Cured Salmon $12"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "French Toast $22",
+              "price": "$22"
+            },
+            {
+              "text": "Bacon Omelette $22",
+              "price": "$22"
+            },
+            {
+              "text": "Sausage, Egg, & Cheese $25",
+              "price": "$25"
+            },
+            {
+              "text": "Crab Cake Sandwich $34",
+              "price": "$34"
+            },
+            {
+              "text": "Spanikopita Benedict $24",
+              "price": "$24"
+            },
+            {
+              "text": "Salmon Benedict $26",
+              "price": "$26"
+            },
+            {
+              "text": "Crab Cake Benedict $35",
+              "price": "$35"
+            },
+            {
+              "text": "Grilled Chicken & Shrimp Salad $32",
+              "price": "$32"
+            }
+          ],
+          "start": 720,
+          "end": 900,
+          "time_window": "12pm-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ouzobeach.com/wp-content/uploads/2024/07/OuzoBeach_070724.pdf",
+          "food_categories": [
+            "brunch"
+          ],
+          "proof_quote": "BRUNCH @ THE BEACH only available saturday & sunday 12pm-3pm French Toast $22 Bacon Omelette $22 Sausage, Egg, & Cheese $25 Crab Cake Sandwich $34 Spanikopita Benedict $24 Salmon Benedict $26 Crab Cake Benedict $35 Grilled Chicken & Shrimp Salad $32"
+        }
+      ]
     }
   ]
 }

@@ -13504,6 +13504,393 @@
         }
       ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24"
+    },
+    {
+      "id": "union-craft-brewing",
+      "name": "Union Craft Brewing",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "1700 West 41st Street, Baltimore, MD 21211",
+      "phone": "(410) 467-0290",
+      "source_url": "https://www.unioncraftbrewing.com/visit",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: unioncraftbrewing.com/visit + structured address. OSM nominatim of that address lands in Medfield; candidate neighborhood Hampden retained. deals=[].",
+      "lat": 39.3358424,
+      "lon": -76.6443726,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "checkerspot-brewing",
+      "name": "Checkerspot Brewing",
+      "neighborhood": "South Baltimore",
+      "status": "verified",
+      "address": "1421 Ridgely St, Baltimore, MD 21230",
+      "phone": "(443) 388-9198",
+      "source_url": "https://checkerspotbrewing.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: checkerspotbrewing.com. Address and hours verified. deals=[].",
+      "lat": 39.2758372,
+      "lon": -76.6270576,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "clavel",
+      "name": "Clavel",
+      "neighborhood": "Remington",
+      "status": "verified",
+      "address": "225 West 23rd Street, Baltimore, MD 21211",
+      "phone": "(443) 900-8983",
+      "source_url": "https://barclavel.com/menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: barclavel.com/menu/. Hours Mon–Sat 5–11pm, Sun closed. deals=[].",
+      "lat": 39.3149871,
+      "lon": -76.6204196,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "fadensonnen",
+      "name": "Fadensonnen",
+      "neighborhood": "Old Goucher",
+      "status": "verified",
+      "address": "3 West 23rd Street, Baltimore, MD 21218",
+      "phone": "281-217-3150",
+      "source_url": "https://www.fadensonnen.com/info",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3150733,
+      "lon": -76.6177046,
+      "ops_notes": "Deal Scout 2026-09-08: fadensonnen.com/info, /about, /contact. HH window only; no prices on fetched pages. /home returned 404.",
+      "notes_public": "Happy hour Tuesday–Thursday 5–7pm. Site does not list happy hour prices. Winter hours: Tue–Thu 5pm–11pm, Fri 5pm–12am, Sat 1pm–12am, Sun 1pm–11pm.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Happy hour"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fadensonnen.com/info",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour: Tues-Thurs 5-7pm Do you have Happy Hour? Yes, our happy hour is Tuesday-Thursday from 5-7 PM.",
+          "prices_published": false
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "the-helmand",
+      "name": "The Helmand",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "806 North Charles St., Baltimore, MD 21201",
+      "phone": "(410) 752-0311",
+      "source_url": "https://www.thehelmand.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: thehelmand.com. Tue–Sat 5–10pm, Sun 4–9pm. deals=[].",
+      "lat": 39.2989722,
+      "lon": -76.6158985,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "tapas-teatro",
+      "name": "Tapas Teatro",
+      "neighborhood": "Station North",
+      "status": "verified",
+      "address": "1711 N. Charles St., Baltimore, MD 21201",
+      "phone": "(410) 332-0110",
+      "source_url": "http://www.tapasteatro.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: tapasteatro.com. Tue–Sat 5–10pm, Sun 5–9pm. deals=[].",
+      "lat": 39.3093254,
+      "lon": -76.6159938,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "golden-west-cafe",
+      "name": "Golden West Cafe",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "1105 W 36th St, Baltimore, MD 21211",
+      "phone": "(410) 889-8891",
+      "source_url": "https://www.goldenwestcafe.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: goldenwestcafe.com. No current priced specials. deals=[].",
+      "lat": 39.3308686,
+      "lon": -76.6340015,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "rocket-to-venus",
+      "name": "Rocket to Venus",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "3360 Chestnut Ave, Baltimore, MD 21211",
+      "phone": "(410) 235-7887",
+      "source_url": "https://www.rockettovenus.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: rockettovenus.com. deals=[].",
+      "lat": 39.3285598,
+      "lon": -76.6294581,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "diamondback-brewing",
+      "name": "Diamondback Brewing",
+      "neighborhood": "Locust Point",
+      "status": "verified",
+      "address": "1215 East Fort Ave, Baltimore, MD 21230",
+      "phone": "(443) 388-9419",
+      "source_url": "https://www.diamondbackbeer.com/locust-point",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: diamondbackbeer.com/locust-point. Mon closed. deals=[].",
+      "lat": 39.2690828,
+      "lon": -76.5973487,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "ministry-of-brewing",
+      "name": "Ministry of Brewing",
+      "neighborhood": "Upper Fells Point",
+      "status": "verified",
+      "address": "1900 E Lombard St, Baltimore, MD 21231",
+      "phone": "(410) 624-5623",
+      "source_url": "https://ministryofbrewing.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: ministryofbrewing.com + /about. deals=[].",
+      "lat": 39.2909054,
+      "lon": -76.5901596,
+      "deals": [],
+      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "gunther-and-co",
+      "name": "Gunther & Co.",
+      "neighborhood": "Brewers Hill",
+      "status": "verified",
+      "address": "3650 Toone Street, Baltimore, MD 21224",
+      "source_url": "https://eatatgunther.com/menus",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: eatatgunther.com/menus. Happier Hour priced. Split by open time.",
+      "lat": 39.2786456,
+      "lon": -76.5658537,
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$5 Draft Beer",
+              "price": "$5"
+            },
+            {
+              "text": "$8 Wine",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Select Cocktails",
+              "price": "$8"
+            },
+            {
+              "text": "$1 War on Hunger Oysters",
+              "price": "$1"
+            },
+            {
+              "text": "$8 Hummus",
+              "price": "$8"
+            },
+            {
+              "text": "$8 App Specials",
+              "price": "$8"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://eatatgunther.com/menus",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ],
+          "proof_quote": "Every Tuesday through Friday from open til 7:00 pm, join us in the Gunther Bar for $5 Draft Beer, $8 Wine and $8 Select Cocktails as well as $1 War on Hunger Oysters and $8 Hummus and $8 App Specials."
+        },
+        {
+          "days": [
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 Draft Beer",
+              "price": "$5"
+            },
+            {
+              "text": "$8 Wine",
+              "price": "$8"
+            },
+            {
+              "text": "$8 Select Cocktails",
+              "price": "$8"
+            },
+            {
+              "text": "$1 War on Hunger Oysters",
+              "price": "$1"
+            },
+            {
+              "text": "$8 Hummus",
+              "price": "$8"
+            },
+            {
+              "text": "$8 App Specials",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://eatatgunther.com/menus",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ],
+          "proof_quote": "Every Tuesday through Friday from open til 7:00 pm, join us in the Gunther Bar for $5 Draft Beer, $8 Wine and $8 Select Cocktails as well as $1 War on Hunger Oysters and $8 Hummus and $8 App Specials."
+        }
+      ],
+      "notes_public": "Happier Hour Tue–Fri from open until 7pm in the Gunther Bar.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "little-havana",
+      "name": "Little Havana",
+      "neighborhood": "Federal Hill",
+      "status": "verified",
+      "address": "1325 Key Highway, Baltimore, MD 21230",
+      "phone": "(410) 837-9903",
+      "source_url": "https://littlehavanas.com/happy-hour/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: littlehavanas.com/happy-hour/. Bar only Mon–Fri 4–6pm.",
+      "lat": 39.274503,
+      "lon": -76.6032373,
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 Nachos (protein additional charge)",
+              "price": "$3"
+            },
+            {
+              "text": "$5 French Fries",
+              "price": "$5"
+            },
+            {
+              "text": "$9 Cuban Sandwich",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://littlehavanas.com/happy-hour/",
+          "food_categories": [
+            "small-plate/apps"
+          ],
+          "proof_quote": "Happy Hour Food *BAR ONLY* Monday to Friday 4PM-6PM $3 Nachos (Protein Additional Charge) $5 French Fries $9 Cuban Sandwich"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 Dos Equis Ambar or Lager",
+              "price": "$3"
+            },
+            {
+              "text": "$4 Minus 196 Seltzers",
+              "price": "$4"
+            },
+            {
+              "text": "$6 House Red or White Wine",
+              "price": "$6"
+            },
+            {
+              "text": "$9 Regular Mojitos",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://littlehavanas.com/happy-hour/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Drinks *BAR ONLY* Monday to Friday 4PM-6PM $3 Dos Equis Ambar or Lager $4 Minus 196 Seltzers $6 House Red or White Wine $9 Regular Mojitos"
+        }
+      ],
+      "notes_public": "Happy hour is bar only, Monday–Friday 4–6pm.",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     }
   ]
 }

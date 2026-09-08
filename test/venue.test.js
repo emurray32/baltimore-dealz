@@ -193,7 +193,7 @@ test("deal cards keep a single venue-link; phone and source stay real anchors", 
   const cards = cardsHtmlForDay(boardVenues, "fri", FRI_11PM_EDT);
 
   // At least one card with phone + source (Claddagh is verified Canton).
-  assert.match(cards, /class="card"/);
+  assert.match(cards, /class="card scan"/);
   assert.match(cards, /class="venue-link"/);
   assert.match(cards, /href="tel:/);
   assert.match(cards, />source<\/a>/);

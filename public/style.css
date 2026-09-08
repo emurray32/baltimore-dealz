@@ -48,7 +48,7 @@ body {
     linear-gradient(90deg, rgba(0,0,0,.055) 1px, transparent 1px);
   background-size: 32px 32px;
   color: var(--ink);
-  font: 400 14px/1.6 'Space Mono', 'Courier New', monospace;
+  font: 400 14px/1.45 'Space Mono', 'Courier New', monospace;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -58,7 +58,7 @@ header { padding: .5rem 0 1rem; }
 /* "Tonight in Canton" — black strip with accent border, Bebas Neue */
 h1 {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  font-size: 3.6rem;
+  font-size: clamp(2.2rem, 11vw, 3.2rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: .04em;
@@ -122,7 +122,9 @@ a:hover {
 nav.meta {
   margin-top: .75rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   gap: .5rem;
   align-items: center;
 }
@@ -337,6 +339,67 @@ nav.meta strong {
 /* "Good to know" notes */
 section > p.meta strong { color: var(--ink); }
 
+
+/* ---- scan list (board + week details only; venue page stays full cards) ---- */
+#tonight-board .card,
+details .card {
+  margin: 0;
+  padding: .7rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--hair);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  min-height: 72px;
+}
+#tonight-board .card:hover,
+details .card:hover {
+  box-shadow: none;
+  transform: none;
+}
+.scan-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.scan-head h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scan-head .window {
+  margin: 0;
+  flex: none;
+}
+.window-quiet {
+  background: transparent;
+  color: var(--ink);
+}
+.lead {
+  margin: .15rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.lead .hood,
+.lead .more {
+  color: #666;
+}
+.card.scan .deal-row,
+.card.scan .chips,
+.card.scan .proof,
+.card.scan > .meta,
+.card.scan .more-offers {
+  display: none;
+}
+
 /* ---- day accordions (Browse the week) ---- */
 details { margin-bottom: .5rem; }
 summary {
@@ -499,11 +562,14 @@ a.venue-link:hover {
 }
 
 /* ---- food filter ---- */
-.food-filter h2 { margin-top: 2rem; }
+.food-filter { margin: 0 0 .25rem; }
+.food-filter h2 { margin: 0 0 .5rem; }
 .filter-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: .45rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: .4rem;
   margin: 0 0 .4rem;
 }
 .filter-btn {
@@ -531,9 +597,15 @@ a.venue-link:hover {
   color: var(--surface);
 }
 .filter-count {
-  font-weight: 400;
-  font-size: .6rem;
-  opacity: .75;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .filter-status { min-height: 1.1em; }
 .card.filter-hide,

@@ -17917,6 +17917,86 @@
           "proof_quote": "Little Italy Monday Night Special. Every Monday night from 6:00 P.M. to 8:00 P.M. we offer an all you can eat dessert and coffee special for $24.15 a person. All alcohol products excluded. You must be seated by 7:00 pm. This is for our sit-down café in Little Italy. Monday holidays are excluded."
         }
       ]
+    },
+    {
+      "id": "outback-canton",
+      "name": "Outback Steakhouse Canton",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2400 Boston Street, Baltimore, MD 21224",
+      "phone": "(410) 522-7757",
+      "source_url": "https://locations.outback.com/maryland/baltimore/2400-boston-street",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2817479,
+      "lon": -76.5816562,
+      "coords_source": "Nominatim search 2400 Boston Street, Baltimore, MD 21224 on 2026-09-08 returned OSM way 128834397 named The Can Company at 39.2817479,-76.5816562. Display name neighbourhood is Canton, city Baltimore, postcode 21224. Official location page prints 2400 Boston Street, Baltimore, MD 21224 and (410) 522-7757. Outback Steakhouse Canton is in The Can Company at that address; no OSM node named Outback was returned for the street address.",
+      "bar_hours": "Official location hours: Monday–Thursday 4:00 PM–10:00 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 11:00 AM–9:00 PM. Weekday deals do not print their own clock. Happy Hour is listed as a service with no printed window.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Canton steakhouse. Not in live venues.json. Official location page https://locations.outback.com/maryland/baltimore/2400-boston-street. Distinct from Outback Perry Hall at 4215 Ebenezer Road, which is county and was not written.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Tuesday Tails: 6oz center-cut sirloin, lobster tail, and two steakhouse sides, starting at $24.99",
+              "price": "$24.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.outback.com/offers/weekday-value",
+          "food_categories": [
+            "steak",
+            "seafood/crab"
+          ],
+          "proof_quote": "TUESDAY TAILS. Every Tuesday, enjoy our juicy 6oz Center-Cut Sirloin, a buttery Lobster Tail and your choice of two steakhouse sides, starting at just $24.99.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Walkabout Wednesday: 6oz center-cut sirloin or grilled chicken on the barbie, plus Aussie fries and a 16oz domestic draft beer or Coca-Cola product, starting at $13.99",
+              "price": "$13.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.outback.com/offers/weekday-value",
+          "food_categories": [
+            "steak",
+            "drink"
+          ],
+          "proof_quote": "WALKABOUT WEDNESDAY. Choose a 6oz Center-Cut Sirloin or Grilled Chicken on the Barbie, plus Aussie Fries and a 16oz domestic draft beer or ice-cold COCA-COLA product, starting at $13.99 on Wednesdays.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$5 Bevvy Thursday: 22oz domestic draft beer, Wallaby Darned, or Sauza Gold Coast 'Rita (Strawberry, Watermelon, Mango, or Blackberry), each $5",
+              "price": "$5"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.outback.com/offers/weekday-value",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "$5 Bevvy Thursdays. Enjoy a 22oz domestic draft beer or sip on a Wallaby Darned or Sauza Gold Coast 'Rita – available in Strawberry, Watermelon, Mango or Blackberry. Each for just $5 every Thursday, mate.",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

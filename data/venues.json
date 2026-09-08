@@ -16928,6 +16928,67 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "the-charles",
+      "name": "The Charles Bar & Grille",
+      "neighborhood": "Federal Hill",
+      "status": "verified",
+      "address": "1110 S Charles St, Baltimore, MD 21230",
+      "phone": "(410) 727-2333",
+      "source_url": "https://www.thecharlesbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2764246,
+      "lon": -76.6144742,
+      "coords_source": "Nominatim search 1110 South Charles Street, Baltimore, MD 21230 on 2026-09-08 returned OSM node 10795757483 named The Charles at 39.2764246,-76.6144742. Display name neighbourhood is Federal Hill. Official homepage prints 1110 S Charles St, Baltimore, MD 21230 and does not print a neighborhood beyond Federal Hill in the about copy.",
+      "bar_hours": "Homepage: Monday closed; Tuesday closed; Wednesday 4PM-10PM; Thursday 4PM-12AM; Friday 4PM-2AM; Saturday 10AM-2AM; Sunday 10AM-10PM. Kitchen closes at 10PM Wednesday-Sunday. Wingsday Wednesday 4:00PM-10:00PM. Almost Pregame Friday 9:00PM-11:00PM.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Federal Hill bar. Not in live venues.json. Official site https://www.thecharlesbaltimore.com/ Happenings is https://www.thecharlesbaltimore.com/happenings.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Half off wings, variety of flavors, all orders come as served",
+              "price": "half off"
+            }
+          ],
+          "start": 960,
+          "end": 1320,
+          "time_window": "4pm-10pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thecharlesbaltimore.com/happenings",
+          "food_categories": [
+            "wings"
+          ],
+          "proof_quote": "Wingsday. Wednesdays | 4:00 PM – 10:00 PM. Half off wings with a variety of flavors to choose from. (All orders come as served.)"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Almost Pregame open bar $20",
+              "price": "$20"
+            }
+          ],
+          "start": 1260,
+          "end": 1380,
+          "time_window": "9pm-11pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thecharlesbaltimore.com/happenings",
+          "food_categories": [
+            "drink",
+            "event"
+          ],
+          "proof_quote": "Almost Pregame. Fridays | 9:00 PM – 11:00 PM. There is no better way to end your week but with an open bar, and for $20!?!"
+        }
+      ]
     }
   ]
 }

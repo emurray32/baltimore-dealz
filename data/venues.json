@@ -18896,6 +18896,58 @@
           "proof_quote": "Happy Hour is Monday-Friday, 4-6. $5 draft beers and $5 glasses of house red and white wine."
         }
       ]
+    },
+    {
+      "id": "no-1-chinese-kitchen",
+      "name": "No 1 Chinese Kitchen",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "3998 Roland Ave, Baltimore, MD 21211",
+      "phone": "(410) 235-1688",
+      "source_url": "https://www.no1chinesekitchen-md.com/order/main/lunch-special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3370937,
+      "lon": -76.6332599,
+      "coords_source": "Nominatim search 3998 Roland Ave, Baltimore, MD 21211 on 2026-09-08 returned OSM node 9908120904 named No. 1 Chinese Kitchen at 39.3370937,-76.6332599. Display name neighbourhood is Hampden, city Baltimore, postcode 21211. Official lunch page and restaurant schema print 3998 Roland Ave, Baltimore, MD 21211 and (410) 235-1688. A second Nominatim hit at the same house number is Down Under Smoke Shop and was not used.",
+      "bar_hours": "Official restaurant schema openingHoursSpecification: Monday, Wednesday, Thursday, Sunday 10:00-21:30; Friday-Saturday 10:00-22:00. Tuesday is not listed. Lunch special clock printed on the lunch page is 11:00 am - 3:00 pm, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 3998 Roland Ave, 21211. Not in live venues.json. Official site https://www.no1chinesekitchen-md.com/. Lunch price and clock are on https://www.no1chinesekitchen-md.com/order/main/lunch-special.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $8.60, served with pork fried rice or steamed rice or brown rice (L1-L5: chicken with broccoli, chicken with mixed vegetable, shrimp or chicken chow mein, assorted mixed vegetable, moo goo gai pan)",
+              "price": "$8.60"
+            },
+            {
+              "text": "Lunch special $8.95, served with pork fried rice or steamed rice or brown rice (L6-L20, including shrimp, chicken, or pork lo mein, pepper steak with onion, curry, egg foo young, and shrimp with broccoli)",
+              "price": "$8.95"
+            },
+            {
+              "text": "Lunch special $9.25, served with pork fried rice or steamed rice or brown rice (L21-L30, including sesame chicken, General Tso's chicken, orange chicken, honey chicken, and bourbon chicken)",
+              "price": "$9.25"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.no1chinesekitchen-md.com/order/main/lunch-special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "11:00 am - 3:00 pm Each Dish Served with: Pork Fried Rice or Steamed Rice or Brown Rice L 1. Chicken w. Broccoli $8.60"
+        }
+      ]
     }
   ]
 }

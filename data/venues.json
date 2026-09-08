@@ -17839,6 +17839,44 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "avenue-kitchen-bar",
+      "name": "Avenue Kitchen & Bar",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "911 West 36th Street, Baltimore, MD 21211",
+      "phone": "(443) 961-8515",
+      "source_url": "https://avenuekitchenbar.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3310109,
+      "lon": -76.6317248,
+      "coords_source": "Nominatim search 911 West 36th Street, Baltimore, MD 21211 on 2026-09-08 returned OSM node 3447584226 named Avenue Kitchen & Bar at 39.3310109,-76.6317248. Display name neighbourhood is Hampden and postcode is 21211. Official homepage prints 911 West 36th Street, Baltimore, MD 21211 and (443)-961-8515. A separate OSM node at the same street number is named Ekiben and was not used.",
+      "bar_hours": "Official homepage: Monday–Thursday 12:00 pm–12:00 am; Friday 12:00 pm–1:00 am; Saturday 11:00 am–1:00 am; Sunday 11:00 am–12:00 am. Homepage also prints Happy Hours Monday–Friday 3:00pm–6:00pm and Late Night Happy Hour and Karaoke Monday 8:00pm–11pm, with no item prices. The Thursday special does not print its own clock.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Hampden restaurant on The Avenue. Not in live venues.json. Official site https://avenuekitchenbar.com/. Distinct from Ekiben, which Nominatim also lists at 911 West 36th Street as a separate tenant.",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Cup cream of crab soup $10.00",
+              "price": "$10.00"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://avenuekitchen.kwickmenu.com",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "Thursday Special. Cup Cream Of Crab Soup $10.00",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

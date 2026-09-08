@@ -17485,6 +17485,136 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "poets",
+      "name": "Poets Modern Cocktails and Eats",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "24 West Franklin Street, Baltimore, MD 21201",
+      "phone": "(443) 961-3400",
+      "source_url": "https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.29521,
+      "lon": -76.6164496,
+      "coords_source": "Nominatim search 24 West Franklin Street, Baltimore, MD 21201 on 2026-09-08 returned OSM node 3432415476 at 39.2952100,-76.6164496. Display name neighbourhood is Mount Vernon and postcode is 21201. Official Hotel Indigo page prints 24 West Franklin Street, Baltimore, MD 21201 and Mount Vernon. Restaurant phone on the dining page is 1-443-9613400.",
+      "bar_hours": "Official dining hours: Breakfast Monday and Friday 6:30am-11:00am, Saturday 7:00am-11:00am, Sunday 7:00am-12:00pm. Lunch Monday and Saturday 12:00pm-5:00pm, Sunday 1:00pm-5:00pm. Dinner daily 5:00pm-10:00pm. Tuesday, Wednesday, and Thursday breakfast and lunch are not listed on the hours table. Poet's Perfect Pairs specials print dine-in only 12pm-9pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Mount Vernon restaurant on the lobby level of Hotel Indigo Baltimore Downtown. Not in live venues.json. Official dining page https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining. Distinct from closed Talara at 615 President Street.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Smash burgers $11",
+              "price": "$11"
+            },
+            {
+              "text": "Draft beers from $6",
+              "price": "from $6"
+            },
+            {
+              "text": "Local beers from $5",
+              "price": "from $5"
+            }
+          ],
+          "start": 720,
+          "end": 1260,
+          "time_window": "12pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining",
+          "food_categories": [
+            "burger",
+            "drink"
+          ],
+          "proof_quote": "Poet’s Perfect Pairs sets the tone for the week with rotating food and drink specials, available dine-in only from 12pm–9pm. Monday features smash burgers for $11 with draft beers from $6 and local beers from $5."
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Tacos $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tequila shots $5",
+              "price": "$5"
+            },
+            {
+              "text": "Classic margaritas $11",
+              "price": "$11"
+            }
+          ],
+          "start": 720,
+          "end": 1260,
+          "time_window": "12pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining",
+          "food_categories": [
+            "tacos",
+            "drink"
+          ],
+          "proof_quote": "Poet’s Perfect Pairs sets the tone for the week with rotating food and drink specials, available dine-in only from 12pm–9pm. Tuesday adds tacos for $8, tequila shots for $5, and classic margaritas for $11."
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Wings $12",
+              "price": "$12"
+            },
+            {
+              "text": "Rail cocktails $8",
+              "price": "$8"
+            }
+          ],
+          "start": 720,
+          "end": 1260,
+          "time_window": "12pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining",
+          "food_categories": [
+            "wings",
+            "drink"
+          ],
+          "proof_quote": "Poet’s Perfect Pairs sets the tone for the week with rotating food and drink specials, available dine-in only from 12pm–9pm. Wednesday brings wings for $12 with rail cocktails for $8."
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Sip & Slice flatbreads $10",
+              "price": "$10"
+            },
+            {
+              "text": "House wine $7",
+              "price": "$7"
+            }
+          ],
+          "start": 720,
+          "end": 1260,
+          "time_window": "12pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.ihg.com/hotelindigo/hotels/us/en/baltimore/balhn/hoteldetail/dining",
+          "food_categories": [
+            "pizza",
+            "drink"
+          ],
+          "proof_quote": "Poet’s Perfect Pairs sets the tone for the week with rotating food and drink specials, available dine-in only from 12pm–9pm. Thursday rounds out the week with Sip & Slice, featuring $10 flatbreads and $7 house wine."
+        }
+      ]
     }
   ]
 }

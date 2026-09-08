@@ -15663,6 +15663,158 @@
           "proof_quote": "Offered every Saturday and Sunday from 11am-2:00pm, The Bygone’s Brunch Buffet is an unforgettable dining experience atop Baltimore’s Four Seasons Hotel. Adults: $85 Children under 12 years old: $35"
         }
       ]
+    },
+    {
+      "id": "la-food-marka",
+      "name": "La Food Marketa",
+      "neighborhood": "Quarry Lake",
+      "status": "verified",
+      "address": "2620 Quarry Lake Drive, Baltimore, MD 21209",
+      "phone": "(410) 415-0606",
+      "source_url": "https://www.lafoodmarketa.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3846049,
+      "lon": -76.6895875,
+      "coords_source": "OpenStreetMap Nominatim geocode of official 2620 Quarry Lake Drive (node La Foodmarketa), 2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: lafoodmarketa.com homepage menu tabs Happy Hour and Taco Tuesday. Phone and address printed on that page. Candidate file labeled neighborhood Hampden; official page says Quarry Lake at Greenspring. Nominatim places the node in Pikesville/Baltimore County (display ZIP 21208); address field keeps the site ZIP 21209. Did not copy The Food Market Hampden happy hour onto this id.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Street Cauliflower $10",
+              "price": "$10"
+            },
+            {
+              "text": "street corn \"ribs\" $10",
+              "price": "$10"
+            },
+            {
+              "text": "Brazilian shrimp $10",
+              "price": "$10"
+            },
+            {
+              "text": "Loaded yucca fries $10",
+              "price": "$10"
+            },
+            {
+              "text": "crunchy chicken wings $10",
+              "price": "$10"
+            },
+            {
+              "text": "Fried chicken sandwich $15",
+              "price": "$15"
+            },
+            {
+              "text": "mom's turkey tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "bbq chicken quesadilla tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "Traditional Margarita $7",
+              "price": "$7"
+            },
+            {
+              "text": "paloma $7",
+              "price": "$7"
+            },
+            {
+              "text": "Traditional Mojito $7",
+              "price": "$7"
+            },
+            {
+              "text": "Red or White Sangria $6",
+              "price": "$6"
+            },
+            {
+              "text": "House Bubbles $4",
+              "price": "$4"
+            },
+            {
+              "text": "Frozen Margarita $7",
+              "price": "$7"
+            },
+            {
+              "text": "Bottles & cans $4",
+              "price": "$4"
+            }
+          ],
+          "start": 840,
+          "end": 1140,
+          "time_window": "2pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.lafoodmarketa.com/",
+          "food_categories": [
+            "small-plate/apps",
+            "seafood/crab",
+            "wings",
+            "sandwich/cheesesteak",
+            "tacos",
+            "drink"
+          ],
+          "proof_quote": "Available for Bar & counter Seating Only! Monday-Friday - 2:00pm-7:00pm $10 Menu Street Cauliflower... street corn \"ribs\"... Brazilian shrimp... Loaded yucca fries... crunchy chicken wings... $15 Menu Fried chicken sandwich mom's turkey tacos... bbq chicken quesadilla tacos Drinks Traditional Margarita 7 paloma 7 Traditional Mojito 7 Red or White Sangria 6 House Bubbles 4 Frozen Margarita 7 Bottles & cans 4"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "mom's turkey soft tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "birria tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "short rib hard tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "Crispy Fish Tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "bbq chicken quesadilla tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "broccoli birria tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "Falafel Smashed Tacos $15",
+              "price": "$15"
+            },
+            {
+              "text": "Street Tacosss $15",
+              "price": "$15"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.lafoodmarketa.com/",
+          "food_categories": [
+            "tacos"
+          ],
+          "proof_quote": "Taco Tuesday Available all day, Dine In Only All taco dinners $15 mom's turkey soft tacos birria tacos short rib hard tacos Crispy Fish Tacos bbq chicken quesadilla tacos broccoli birria tacos Falafel Smashed Tacos Street Tacosss"
+        }
+      ]
     }
   ]
 }

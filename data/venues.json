@@ -18036,6 +18036,243 @@
           "proof_quote": "Sunday Brunch (10a-2p Sundays ONLY). Sun 10 AM - 2 PM. Pancakes $15.99. Two gluten-free pancakes."
         }
       ]
+    },
+    {
+      "id": "the-kabul-grill",
+      "name": "The Kabul Grill",
+      "neighborhood": "Inner Harbor",
+      "status": "verified",
+      "address": "55 Market Place, Baltimore, MD 21202",
+      "phone": "(667) 212-3303",
+      "source_url": "https://thekabulgrill.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2882176,
+      "lon": -76.6065139,
+      "coords_source": "Nominatim search 55 Market Place, Baltimore, MD 21202 on 2026-09-08 returned OSM node 5982151937 named The Kabul Fresh Grill at 39.2882176,-76.6065139. Display name neighbourhood is Inner Harbor, suburb Downtown, postcode 21202. Official menu footer prints 55 Market place Baltimore MD 21202 and 667-212-3303 / 667-212-3514.",
+      "bar_hours": "Official menu footer hours: Monday to Friday 10:30 AM - 10:00 PM; Saturday to Sunday 11:00 AM - 10:00 PM. Daily specials do not print their own clock.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown / Inner Harbor Afghan restaurant at 55 Market Place. Not in live venues.json. Official site https://thekabulgrill.com/. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street, and from Ziza Kabob Jessup, which is not a city room.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Lamb curry $9.40, available only on Monday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Lamb Curry $9.40. Lamb cutlets in curry seasoning. *Available only on Monday. Daily Specials. All are served with Rice, Bread and Salad. Monday – Lamb Curry.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Chicken curry $9.40, available only on Tuesday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Chicken Curry $9.40. Chicken curry seasonings. *Available only on Tuesday. Daily Specials. All are served with Rice, Bread and Salad. Tuesday – Chicken Curry.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Chicken jalfrezi $9.40, available only on Wednesday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Chicken Jalfrezi $9.40. Tender pieces of chicken breast, bell peppers, red peppers, onion and seasonings. *Available only on Wednesday. Daily Specials. All are served with Rice, Bread and Salad. Wednesday – Chicken Jalfrezi.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Dopyaza $9.40, boneless lamb with onions, tomatoes, vinegar and spices, available only on Thursday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Dopyaza $9.40. Boneless lamb made with onions, tomatoes, vinegar and spices. *Available only on Thursday. Daily Specials. All are served with Rice, Bread and Salad. Thursday – Dopyaza.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Lamb and potato curry $9.40, available only on Friday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Lamb & Potato Curry $9.40. Tender seasoned lamb cooked with potatoes. *Available only on Friday. Daily Specials. All are served with Rice, Bread and Salad. Friday – Lamb Curry & Potato Curry.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Achar chicken $9.40, available only on Saturday",
+              "price": "$9.40"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thekabulgrill.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Curries. Achar Chicken $9.40. Chicken cooked with pickle spices and yogurt. *Available only on Saturday. Daily Specials. All are served with Rice, Bread and Salad. Saturday – Achar Chicken.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "chokchai-thai-food",
+      "name": "Chokchai Thai Food",
+      "neighborhood": "Hamilton",
+      "status": "verified",
+      "address": "6824 Harford Rd, Baltimore, MD 21234",
+      "phone": "(410) 426-3244",
+      "source_url": "https://www.chokchaithaifood.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3651323,
+      "lon": -76.5506196,
+      "coords_source": "Nominatim search 6824 Harford Rd, Baltimore, MD 21234 on 2026-09-08 returned OSM node 7297943468 named Chokchai Thai Food at 39.3651323,-76.5506196. Display name neighbourhood is North Harford Road, suburb Hamilton, city Baltimore, postcode 21234. Official contact page prints 6824 Harford Rd, Baltimore, MD 21234 and +1 410-426-3244.",
+      "bar_hours": "Official contact hours: Monday–Friday 11:00 AM–9:00 PM; Saturday 4:00 PM–9:00 PM. Sunday not printed. Lunch special clock printed on the menu is Monday–Friday 11:00 AM–3:00 PM, which is not the same as full weekday service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Hamilton Thai restaurant. Not in live venues.json. Official site https://www.chokchaithaifood.com/. Distinct from Chat Thai at Quarry Lake, which is county and was not written.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Pad Thai with spring roll $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Pad Thai with veggie curry puff $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Pad Thai with tom-yum chicken $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Ginger with spring roll $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Ginger with veggie curry puff $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Ginger with tom-yum chicken $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Basil with spring roll $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Basil with veggie curry puff $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Basil with tom-yum chicken $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Mix vegetable with spring roll $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Mix vegetable with veggie curry puff $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Mix vegetable with tom-yum chicken $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Black fried rice with spring roll $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Black fried rice with veggie curry puff $12.95",
+              "price": "$12.95"
+            },
+            {
+              "text": "Black fried rice with tom yum chicken $12.95",
+              "price": "$12.95"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.chokchaithaifood.com/menu",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "LUNCH SPECIAL. MON—FRI 11:00 AM-3:00 PM Use Pure 100% Corn Oil (All Entrée serve w/ Steamed Rice except Pad Thai and Fried Rice) (NO Substitution). LS.1 Pad Thai w/ Spring Roll 12.95 LS.2 Pad Thai w/ Veggie Curry Puff 12.95 LS.3 Pad Thai w/ Tom-Yum Chicken 12.95 LS.4 Ginger* w/ Spring Roll 12.95 LS.5 Ginger* w/ Veggie Curry Puff 12.95 LS.6 Ginger* w/ Tom-Yum Chicken 12.95 LS.7 Basil* w/ Spring Roll 12.95 LS.8 Basil* w/ Veggie Curry Puff 12.95 LS.9 Basil* w/ Tom-Yum Chicken 12.95 LS.10 Mix Vegetable w/ Spring Roll 12.95 LS.11 Mix Vegetable w/ Veggie Curry Puff 12.95 LS.12 Mix Vegetable w/ Tom-Yum Chicken 12.95 LS.13 Black Fried Rice w/ Spring Roll 12.95 LS.14 Black Fried Rice w/ Veggie Curry Puff 12.95 LS.15 Black Fried Rice w/ Tom Yum Chicken 12.95."
+        }
+      ]
     }
   ]
 }

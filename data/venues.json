@@ -14872,6 +14872,231 @@
       "notes_public": "No priced specials on the official pages fetched. Hours: Tue–Thu 5pm–9:30pm, Fri–Sat 5pm–10:30pm. Closed Sundays and Mondays. Site says specials are announced on Instagram.",
       "deals": [],
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "the-duchess",
+      "name": "The Duchess",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "1000-1002 W 36th Street, Baltimore, MD 21211",
+      "phone": "(410) 525-7000",
+      "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/The%20Duchess/Menus/Duchess_HappyHour.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3311864,
+      "lon": -76.6328732,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: theduchessbaltimore.com + Duchess_HappyHour.pdf pdftotext. Replacement for closed/no-site new100_4 slots. Address and phone from homepage.",
+      "bar_hours": "Monday–Wednesday 4–10pm; Thursday–Friday 4pm–11:30pm; Saturday 11am–11:30pm; Sunday 11am–10pm",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Sapporo can 22oz $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sake Bomb $6",
+              "price": "$6"
+            },
+            {
+              "text": "Hana Makgeolli sparkling rice wine can 8oz $15",
+              "price": "$15"
+            },
+            {
+              "text": "Kona Big Wave Golden Ale pint $5",
+              "price": "$5"
+            },
+            {
+              "text": "RAR Lite Lager pint $5",
+              "price": "$5"
+            },
+            {
+              "text": "P.O.G. (zero-proof) $6",
+              "price": "$6"
+            },
+            {
+              "text": "P.O.G. with a punch $8",
+              "price": "$8"
+            },
+            {
+              "text": "Prosecco, Zardetto (Italy) NV $6/glass",
+              "price": "$6"
+            },
+            {
+              "text": "Silvaner, Max Müller Franken (Germany) 2023 $10/glass",
+              "price": "$10"
+            },
+            {
+              "text": "Mencia, Matilda Nieves (Spain) 2020 $7/glass",
+              "price": "$7"
+            },
+            {
+              "text": "Suntory -196 vodka seltzers $6",
+              "price": "$6"
+            },
+            {
+              "text": "Blistered Shishitos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Garlic Chili Cucumber Salad 2.0 $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tuna Poke Nachos $21",
+              "price": "$21"
+            },
+            {
+              "text": "Kiko's Loco Fried Rice of the moment $10",
+              "price": "$10"
+            },
+            {
+              "text": "Crispy Tofu Steam Buns $7",
+              "price": "$7"
+            },
+            {
+              "text": "Typhoon Fries $9",
+              "price": "$9"
+            },
+            {
+              "text": "Spam Musubi $9",
+              "price": "$9"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/The%20Duchess/Menus/Duchess_HappyHour.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "AVAILABLE 4PM-6PM | MONDAY - FRIDAY & 10PM-11:30PM | THURSDAY - SATURDAY"
+        },
+        {
+          "days": [
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Sapporo can 22oz $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sake Bomb $6",
+              "price": "$6"
+            },
+            {
+              "text": "Hana Makgeolli sparkling rice wine can 8oz $15",
+              "price": "$15"
+            },
+            {
+              "text": "Kona Big Wave Golden Ale pint $5",
+              "price": "$5"
+            },
+            {
+              "text": "RAR Lite Lager pint $5",
+              "price": "$5"
+            },
+            {
+              "text": "P.O.G. (zero-proof) $6",
+              "price": "$6"
+            },
+            {
+              "text": "P.O.G. with a punch $8",
+              "price": "$8"
+            },
+            {
+              "text": "Prosecco, Zardetto (Italy) NV $6/glass",
+              "price": "$6"
+            },
+            {
+              "text": "Silvaner, Max Müller Franken (Germany) 2023 $10/glass",
+              "price": "$10"
+            },
+            {
+              "text": "Mencia, Matilda Nieves (Spain) 2020 $7/glass",
+              "price": "$7"
+            },
+            {
+              "text": "Suntory -196 vodka seltzers $6",
+              "price": "$6"
+            },
+            {
+              "text": "Blistered Shishitos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Garlic Chili Cucumber Salad 2.0 $8",
+              "price": "$8"
+            },
+            {
+              "text": "Tuna Poke Nachos $21",
+              "price": "$21"
+            },
+            {
+              "text": "Kiko's Loco Fried Rice of the moment $10",
+              "price": "$10"
+            },
+            {
+              "text": "Crispy Tofu Steam Buns $7",
+              "price": "$7"
+            },
+            {
+              "text": "Typhoon Fries $9",
+              "price": "$9"
+            },
+            {
+              "text": "Spam Musubi $9",
+              "price": "$9"
+            }
+          ],
+          "start": 1320,
+          "end": 1410,
+          "time_window": "10pm-11:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/The%20Duchess/Menus/Duchess_HappyHour.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "AVAILABLE 4PM-6PM | MONDAY - FRIDAY & 10PM-11:30PM | THURSDAY - SATURDAY"
+        },
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Brunch Specials"
+            }
+          ],
+          "start": 660,
+          "end": 840,
+          "time_window": "11am-2pm",
+          "prices_published": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.theduchessbaltimore.com/",
+          "food_categories": [
+            "brunch"
+          ],
+          "proof_quote": "Brunch Specials Saturday -Sunday: 11 AM–2 PM"
+        }
+      ]
     }
   ]
 }

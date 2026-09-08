@@ -17090,6 +17090,236 @@
           "proof_quote": "Happy Hour Monday-Friday 4pm-7pm. SPritzeses... 7. Wine 6 per glass or 16 for half liter carafe. Prosecco... 7. Dollar off all beers."
         }
       ]
+    },
+    {
+      "id": "johnnys-roland-park",
+      "name": "Johnny's Roland Park",
+      "neighborhood": "Roland Park",
+      "status": "verified",
+      "address": "4800 Roland Ave, Baltimore, MD 21210",
+      "phone": "(410) 773-0777",
+      "source_url": "https://johnnysdownstairs.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3504319,
+      "lon": -76.635652,
+      "coords_source": "Nominatim search 4800 Roland Avenue, Baltimore, MD 21210 on 2026-09-08 returned OSM way 336419132 at 39.3504319,-76.6356520. Display name neighbourhood is Roland Park. Official homepage prints 4800 Roland Ave, Baltimore, Maryland 21210 and (410) 773-0777 and Roland Park. Nearby OSM amenity name Petit Louis is the same address and is not printed on the Johnny's site.",
+      "bar_hours": "Official hours: Sunday 10am-3pm and 4:30pm-9pm; Monday-Friday 11am-3pm and 4pm-10pm; Saturday 10am-3pm and 4:30pm-10pm. Happy Hours PDF: Monday-Friday 3-5pm, Friday & Saturday 9-10pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Roland Park restaurant. Not in live venues.json. Official site https://johnnysdownstairs.com/ daily specials and menus-page Happy Hours PDF.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Baby Hummus $5, crudite",
+              "price": "$5"
+            },
+            {
+              "text": "Bacalao Croquetas $5, Bayoili aioli",
+              "price": "$5"
+            },
+            {
+              "text": "Tempura Farm Vegetable $5, ask your server for the pick of the day, served with ginger sriracha aioli",
+              "price": "$5"
+            },
+            {
+              "text": "Loaded French Fries $10, bacon, melted cheddar cheese, green onions, Old Bayoli",
+              "price": "$10"
+            },
+            {
+              "text": "BBQ Chicken Quesadilla $10, blackened chicken, roasted red peppers, shaved red onions, pepperjack cheese, chipotle crema",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Johnnys/MENUS/JD%20HH.pdf",
+          "food_categories": [
+            "small-plate/apps"
+          ],
+          "proof_quote": "JOHNNY'S HAPPY HOURS Monday-Friday 3-5pm, Friday & Saturday 9-10pm. Baby Hummus $5 Crudite. Bacalao Croquetas $5 Bayoili Aioli. Tempura Farm Vegetable $5 Ask Your Server For Our Pick Of The Day Served With Ginger Sriracha Aioli. Loaded French Fries $10 Bacon, Melted Cheddar Cheese, Green Onions, Old Bayoli. BBQ Chicken Quesadilla $10 Blackened Chicken, Roasted Red Peppers, Shaved Red Onions, Pepperjack Cheese, Chipotle Crema."
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Cocktail of the Moment $5, ask your server for the daily catch",
+              "price": "$5"
+            },
+            {
+              "text": "Tempranillo, El Cortijillo, Spain 2023 $5",
+              "price": "$5"
+            },
+            {
+              "text": "Pinot Gris, Lone Birch, Yakima Valley, WA 2023 $5",
+              "price": "$5"
+            },
+            {
+              "text": "Beers $5: Athletic Brewing NA Run Wild IPA (USA 0.5%); Lagunitas IPA (California 6.2%); Pacifico Pale Lager (Mexico 4.5%); RaR Stunts! Sour (Cambridge 4.5%); Guinness Stout (Ireland 4.2%); Downeast Guava Passionfruit Cider (Boston 5%); Corona Especial Lager (Mexico 3.9%)",
+              "price": "$5"
+            }
+          ],
+          "start": 900,
+          "end": 1020,
+          "time_window": "3pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Johnnys/MENUS/JD%20HH.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "JOHNNY'S HAPPY HOURS Monday-Friday 3-5pm, Friday & Saturday 9-10pm. COCKTAIL SPECIAL $5 Cocktail of the Moment Ask Your Server For The Daily Catch. WINES $5 Tempranillo, El Cortijillo Spain, 2023. Pinot Gris, Lone Birch Yakima Valley, WA 2023. BEERS $5 Athletic Brewing NA Run Wild IPA USA 0.5%; Lagunitas IPA California 6.2%; Pacifico Pale Lager Mexico 4.5%; RaR Stunts! Sour Cambridge 4.5%; Guinness Stout Ireland 4.2%; Downeast Guava Passionfruit Cider Boston 5%; Corona Especial Lager Mexico 3.9%."
+        },
+        {
+          "days": [
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Baby Hummus $5, crudite",
+              "price": "$5"
+            },
+            {
+              "text": "Bacalao Croquetas $5, Bayoili aioli",
+              "price": "$5"
+            },
+            {
+              "text": "Tempura Farm Vegetable $5, ask your server for the pick of the day, served with ginger sriracha aioli",
+              "price": "$5"
+            },
+            {
+              "text": "Loaded French Fries $10, bacon, melted cheddar cheese, green onions, Old Bayoli",
+              "price": "$10"
+            },
+            {
+              "text": "BBQ Chicken Quesadilla $10, blackened chicken, roasted red peppers, shaved red onions, pepperjack cheese, chipotle crema",
+              "price": "$10"
+            }
+          ],
+          "start": 1260,
+          "end": 1320,
+          "time_window": "9pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Johnnys/MENUS/JD%20HH.pdf",
+          "food_categories": [
+            "small-plate/apps"
+          ],
+          "proof_quote": "JOHNNY'S HAPPY HOURS Monday-Friday 3-5pm, Friday & Saturday 9-10pm. Baby Hummus $5 Crudite. Bacalao Croquetas $5 Bayoili Aioli. Tempura Farm Vegetable $5. Loaded French Fries $10. BBQ Chicken Quesadilla $10."
+        },
+        {
+          "days": [
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Cocktail of the Moment $5, ask your server for the daily catch",
+              "price": "$5"
+            },
+            {
+              "text": "Tempranillo, El Cortijillo, Spain 2023 $5",
+              "price": "$5"
+            },
+            {
+              "text": "Pinot Gris, Lone Birch, Yakima Valley, WA 2023 $5",
+              "price": "$5"
+            },
+            {
+              "text": "Beers $5: Athletic Brewing NA Run Wild IPA (USA 0.5%); Lagunitas IPA (California 6.2%); Pacifico Pale Lager (Mexico 4.5%); RaR Stunts! Sour (Cambridge 4.5%); Guinness Stout (Ireland 4.2%); Downeast Guava Passionfruit Cider (Boston 5%); Corona Especial Lager (Mexico 3.9%)",
+              "price": "$5"
+            }
+          ],
+          "start": 1260,
+          "end": 1320,
+          "time_window": "9pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Johnnys/MENUS/JD%20HH.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "JOHNNY'S HAPPY HOURS Monday-Friday 3-5pm, Friday & Saturday 9-10pm. COCKTAIL SPECIAL $5 Cocktail of the Moment. WINES $5 Tempranillo, El Cortijillo Spain, 2023. Pinot Gris, Lone Birch Yakima Valley, WA 2023. BEERS $5 Athletic Brewing NA Run Wild IPA; Lagunitas IPA; Pacifico Pale Lager; RaR Stunts! Sour; Guinness Stout; Downeast Guava Passionfruit Cider; Corona Especial Lager."
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Johnny's Smashburger $11, two 4oz Angus patties, cheddar, lettuce, tomato, fries and Bayoli on the side, dine-in only",
+              "price": "$11"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://johnnysdownstairs.com/daily-specials/",
+          "food_categories": [
+            "burger"
+          ],
+          "proof_quote": "SMASHBURGER TUESDAY Think double patties, melty cheddar, crisp lettuce, tomato, all on a soft potato bun. $11, dine in only. Main menu PDF linked from the menus page: NEW Burger Tuesday Deal: $11 Johnny's Smashburger Two 4oz Angus Patties, Cheddar, Lettuce, Tomato, Fries & Bayoli on the Side.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Half-off all bottles of wine half off",
+              "price": "half off"
+            }
+          ],
+          "start": 990,
+          "time_window": "after 4:30pm during dinner service",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://johnnysdownstairs.com/daily-specials/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Bottle Shock Sunday Enjoy half-off all bottles of wine after 4:30pm, every Sunday during dinner service.",
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "50% off monthly featured whiskey and cocktail",
+              "price": "50% off"
+            }
+          ],
+          "start": 990,
+          "time_window": "4:30pm to close",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://johnnysdownstairs.com/daily-specials/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Whiskey Wednesday Every Wednesday from 4:30pm to close, get 50% off our monthly featured whiskey and cocktail.",
+          "end": null
+        }
+      ]
     }
   ]
 }

@@ -17615,6 +17615,230 @@
           "proof_quote": "Poet’s Perfect Pairs sets the tone for the week with rotating food and drink specials, available dine-in only from 12pm–9pm. Thursday rounds out the week with Sip & Slice, featuring $10 flatbreads and $7 house wine."
         }
       ]
+    },
+    {
+      "id": "la-jetee",
+      "name": "La Jetée",
+      "neighborhood": "Harbor Point",
+      "status": "verified",
+      "address": "1215 Wills Street, Baltimore, MD 21231",
+      "phone": "(443) 960-8670",
+      "source_url": "https://www.lajeteebaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2793143,
+      "lon": -76.597861,
+      "coords_source": "Nominatim search 1215 Wills Street, Baltimore, MD 21231 on 2026-09-08 returned OSM node 12597008356 named Canopy at 39.2793143,-76.5978610. Display name neighbourhood is Fell's Point and postcode is 21231. Official site prints 1215 Wills st. Baltimore, MD 21231 and (443) 960-8670. The restaurant is the waterfront dining room at Canopy by Hilton Baltimore Harbor Point.",
+      "bar_hours": "Official hours page: Monday–Friday breakfast 7:00–11:00am, lunch 11:00am–2:00pm, dinner 5:00–9:00pm (Friday bar open until 11:00pm). Saturday brunch 8:00am–2:00pm, dinner 5:00–9:00pm (bar open until 11:00pm). Sunday brunch 8:00am–2:00pm, dinner 5:00–8:00pm. Bar area is open for walk-ins from open to close every day, including between meals. Happy Hour Monday–Friday 3:00–6:00 p.m. at the bar.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore restaurant at Canopy by Hilton Baltimore Harbor Point. Not in live venues.json. Official site https://www.lajeteebaltimore.com/. Distinct from Woodberry Kitchen and Bar Dalí, already live Ecco siblings. Replaced the former Cindy Lou's Fish House room at this address.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Draft beer $5: Stella Artois and Diamondback IPA",
+              "price": "$5"
+            },
+            {
+              "text": "Bottled and canned beer $5: Kronenburg Blanc, Natty Boh, Bud Light, Union Zadies Lager, and Burley Oak Sorry Chicky",
+              "price": "$5"
+            },
+            {
+              "text": "Wines by the glass $10: white, rosé, and red",
+              "price": "$10"
+            },
+            {
+              "text": "Cocktail of day $10",
+              "price": "$10"
+            },
+            {
+              "text": "Snacks $10: Panisse crispy chickpea fries with aïoli; Fougasse roasted garlic rosemary bread with aïoli; whipped tonnato with hazelnuts, olives, black pepper honey, and baguette; pissaladière rosemary olive oil flatbread (tradition, tomate, or lardon)",
+              "price": "$10"
+            },
+            {
+              "text": "Raw bar $15: Chesapeake oysters (6), marinated mussels (8), and clams escabeche (8)",
+              "price": "$15"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.lajeteebaltimore.com/s/722-LJ-Happy-Hour-1.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "seafood/crab",
+            "pizza"
+          ],
+          "proof_quote": "le 3 à 6 Happy HOUR Monday-Friday. draft beer ... 5. Stella Artois + Diamondback IPA. bottled and canned beer ... 5. Kronenburg Blanc + Natty Boh + Bud Light. Union Zadies Lager + Burley Oak Sorry Chicky. wines by the glass ... 10. white + rosé + red. cocktail of day ... 10. snacks ... 10. PANISSE, FOUGASSE, WHIPPED TONNATO, PISSALADIÈRE. raw bar ... 15. CHESAPEAKE OYSTERS (6), MARINATED MUSSELS (8), CLAMS ESCABECHE (8)."
+        }
+      ]
+    },
+    {
+      "id": "maiwand-grill",
+      "name": "Maiwand Grill",
+      "neighborhood": "Downtown",
+      "status": "verified",
+      "address": "324 West Baltimore Street, Baltimore, MD 21201",
+      "phone": "(410) 685-0208",
+      "source_url": "https://maiwand-grill.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2894453,
+      "lon": -76.6206641,
+      "coords_source": "Nominatim search 324 West Baltimore Street, Baltimore, MD 21201 on 2026-09-08 returned OSM node 7169879143 named Maiwand Grill at 39.2894453,-76.6206641. Display name neighbourhood is Chinatown, suburb Downtown, postcode 21201. Official homepage prints 324 West Baltimore Street, Baltimore, MD 21201 and 410 685 0208.",
+      "bar_hours": "Official opening hours: Monday–Friday 10:30am–9:30pm; Saturday and Sunday 12:00pm–9:30pm. Daily specials do not print their own clock.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown Afghan restaurant. Not in live venues.json. Official site https://maiwand-grill.com/. Distinct from The Kabul Grill at 55 Market Place, listed on the same page as a separate location and not written.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Lamb curry $12.99, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Lamb curry (Monday). Tender boneless lamb simmered in a rich, aromatic curry sauce infused with traditional spices. $12.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Chicken curry $17.99, served with rice, chutney, and naan",
+              "price": "$17.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Curry (Tuesday). Boneless chicken simmered in a rich, creamy tomato-based curry sauce infusedwith spices. $17.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Chicken jalfarazi $12.99, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Jalfarazi (Wednesday). Tender chicken breast stir-fried with bell peppers, onions, and tomatoes in a flavorful, spiced sauce. $12.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Do Pizza $12.99: lamb slow-cooked with caramelized onions, ripe tomatoes, vinegar, and warming spices, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Do Pizza (Thursday). nder lamb slow-cooked with caramelized onions, ripe tomatoes, vinegar, and a blend of warming spices. $12.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Lamb curry $12.99 with potatoes, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Lamb Curry (Friday). Tender boneless lamb and potatoes simmered in a rich, spiced curry sauce. $12.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Chicken biriyani $12.99, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Biriyani (Saturday). Tender chicken simmered in a rich, creamy tomato-based curry sauce infused with warming spices. $12.99",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Chciken karahi $12.99, bone-in chicken in tomato and ginger curry, served with rice, chutney, and naan",
+              "price": "$12.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://maiwand-grill.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chciken Karahi (Sunday). Bone-in chicken cooked in a rich, thick tomato and ginger-based curry. $12.99",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

@@ -18948,6 +18948,49 @@
           "proof_quote": "11:00 am - 3:00 pm Each Dish Served with: Pork Fried Rice or Steamed Rice or Brown Rice L 1. Chicken w. Broccoli $8.60"
         }
       ]
+    },
+    {
+      "id": "garden-sea",
+      "name": "Garden Sea",
+      "neighborhood": "Frankford",
+      "status": "verified",
+      "address": "5301 Belair Rd Baltimore, MD 21206",
+      "phone": "(410) 483-2000",
+      "source_url": "https://www.gardenseamd.com/order/main/lunch-special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3372634,
+      "lon": -76.552235,
+      "coords_source": "Nominatim search 5301 Belair Rd, Baltimore, MD 21206 on 2026-09-08 returned OSM way 336187821 named Garden Sea Chinese Restauant at 39.3372634,-76.5522350. Display name neighbourhood is Frankford, city Baltimore, postcode 21206. Official lunch page and restaurant schema print 5301 Belair Rd Baltimore, MD 21206 and telephone (410) 483-2000.",
+      "bar_hours": "Official restaurant schema openingHoursSpecification: Tuesday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:30 PM; Sunday 12:00 PM–9:30 PM; Monday not listed. Lunch special clock printed on the lunch page is Tuesday–Saturday 11:00 AM–3:30 PM, except major holidays and Sunday.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese restaurant at 5301 Belair Rd, 21206. Not in live venues.json. Official site https://www.gardenseamd.com/. Priced weekday lunch special is on https://www.gardenseamd.com/order/main/lunch-special.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $8.25, served with fried rice and a choice of wonton soup or can soda (including chicken chow mein, lo mein, broccoli chicken, sesame chicken, and General Tso's chicken)",
+              "price": "$8.25"
+            }
+          ],
+          "start": 660,
+          "end": 930,
+          "time_window": "11am-3:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.gardenseamd.com/order/main/lunch-special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Tuesday - Saturday: 11:00 am - 3:30 pm (Except Major Holiday & Sunday) Served with Fried Rice and Choice of Wonton Soup or Can Soda L 1. Chicken Chow Mein $8.25"
+        }
+      ]
     }
   ]
 }

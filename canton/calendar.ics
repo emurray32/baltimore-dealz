@@ -1,0 +1,593 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Canton Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-baltimore-seafood-frimontuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,FR
+SUMMARY:Baltimore Seafood — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$8 Bombs (Western Sun Vodka mixed with Redbull)\n$5 Ra
+ il Shots (tequila\, rum\, gin\, vodka\, or whiskey)\n$28 Shooter Flight\n$
+ 9 Sunset Twist (Corona Citrus Beer\, Recipe 21 Tequila\, grenadine)\n$2 Do
+ mestic Beer\n$4 Imported Beer\n$6 Wine (red\, white\, or sparkling)\n$4 To
+ po Chico\n$5 Nutrl\n$5 Jumex\n$10 Soju\n$6 Classic Margarita (add a flavor
+  +$1)\n$7 Crush\n$7 Mango Long Island\n$7 Rum Punch\n$9 Netflix & Chill\n$
+ 6 Wings\n$9 Coconut Shrimp\n$10 Crab Bites\n$6 Cajun Fries\n$8 Fried Calam
+ ari\n$6 Mozzarella Sticks\n$6 Mac & Cheese Bites\n$10 Tacos (fried shrimp 
+ or chicken)\n2324 Boston St\, Baltimore\, MD 21224\nCanton\nhttps://static
+ .wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png\nSour
+ ce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2324 Boston St\, Baltimore\, MD 21224
+URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
+ cfa~mv2.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-baltimore-seafood-thu-s720@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260806T120000
+DTEND;TZID=America/New_York:20260806T180000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Baltimore Seafood — Happy Hour (12pm-6pm)
+DESCRIPTION:12pm-6pm\n$8 Bombs (Western Sun Vodka mixed with Redbull)\n$5 R
+ ail Shots (tequila\, rum\, gin\, vodka\, or whiskey)\n$28 Shooter Flight\n
+ $9 Sunset Twist (Corona Citrus Beer\, Recipe 21 Tequila\, grenadine)\n$2 D
+ omestic Beer\n$4 Imported Beer\n$6 Wine (red\, white\, or sparkling)\n$4 T
+ opo Chico\n$5 Nutrl\n$5 Jumex\n$10 Soju\n$6 Classic Margarita (add a flavo
+ r +$1)\n$7 Crush\n$7 Mango Long Island\n$7 Rum Punch\n$9 Netflix & Chill\n
+ $6 Wings\n$9 Coconut Shrimp\n$10 Crab Bites\n$6 Cajun Fries\n$8 Fried Cala
+ mari\n$6 Mozzarella Sticks\n$6 Mac & Cheese Bites\n$10 Tacos (fried shrimp
+  or chicken)\n2324 Boston St\, Baltimore\, MD 21224\nCanton\nhttps://stati
+ c.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2324 Boston St\, Baltimore\, MD 21224
+URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
+ cfa~mv2.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-baltimore-seafood-sun-s720@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260809T120000
+DTEND;TZID=America/New_York:20260809T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Baltimore Seafood — Happy Hour (12pm-4pm)
+DESCRIPTION:12pm-4pm\n$8 Bombs (Western Sun Vodka mixed with Redbull)\n$5 R
+ ail Shots (tequila\, rum\, gin\, vodka\, or whiskey)\n$28 Shooter Flight\n
+ $9 Sunset Twist (Corona Citrus Beer\, Recipe 21 Tequila\, grenadine)\n$2 D
+ omestic Beer\n$4 Imported Beer\n$6 Wine (red\, white\, or sparkling)\n$4 T
+ opo Chico\n$5 Nutrl\n$5 Jumex\n$10 Soju\n$6 Classic Margarita (add a flavo
+ r +$1)\n$7 Crush\n$7 Mango Long Island\n$7 Rum Punch\n$9 Netflix & Chill\n
+ $6 Wings\n$9 Coconut Shrimp\n$10 Crab Bites\n$6 Cajun Fries\n$8 Fried Cala
+ mari\n$6 Mozzarella Sticks\n$6 Mac & Cheese Bites\n$10 Tacos (fried shrimp
+  or chicken)\n2324 Boston St\, Baltimore\, MD 21224\nCanton\nhttps://stati
+ c.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1cfa~mv2.png\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2324 Boston St\, Baltimore\, MD 21224
+URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
+ cfa~mv2.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bark-social-canton-mon-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$2 off draft beer + cocktails\n$6 appetizers\n$10 flat
+ breads\n3822 Boston St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barks
+ ocial.com/pages/baltimore-happy-hour\nSource: Baltimore Dealz — verify a
+ t the bar\; deals change.
+LOCATION:3822 Boston St\, Baltimore\, MD 21224
+URL:https://barksocial.com/pages/baltimore-happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bark-social-canton-tue-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T150000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\n2 cocktails for $12\nAny 2 flatbreads for $20\n3822 Bo
+ ston St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages
+ /baltimore-happy-hour\nSource: Baltimore Dealz — verify at the bar\; dea
+ ls change.
+LOCATION:3822 Boston St\, Baltimore\, MD 21224
+URL:https://barksocial.com/pages/baltimore-happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bark-social-canton-wed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260805T150000
+DTEND;TZID=America/New_York:20260805T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$7 frosé\n$7 wine glasses + cans\n3822 Boston St\, Ba
+ ltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages/baltimore-h
+ appy-hour\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:3822 Boston St\, Baltimore\, MD 21224
+URL:https://barksocial.com/pages/baltimore-happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bark-social-canton-thu-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260806T150000
+DTEND;TZID=America/New_York:20260806T190000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$5 seltzers\n$6 drafts\n$7 menu cocktails\n3822 Boston
+  St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages/bal
+ timore-happy-hour\nSource: Baltimore Dealz — verify at the bar\; deals c
+ hange.
+LOCATION:3822 Boston St\, Baltimore\, MD 21224
+URL:https://barksocial.com/pages/baltimore-happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bark-social-canton-fri-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260807T150000
+DTEND;TZID=America/New_York:20260807T190000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Bark Social Canton — $7 all frozen drinks (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$7 all frozen drinks\n3822 Boston St\, Baltimore\, MD 
+ 21224\nBrewers Hill\nhttps://barksocial.com/pages/baltimore-happy-hour\nSo
+ urce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:3822 Boston St\, Baltimore\, MD 21224
+URL:https://barksocial.com/pages/baltimore-happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-captain-james-landing-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Captain James Landing — Happy Hour at the Crab House (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour at the Crab House\nPrices not published by 
+ the venue.\n2127 Boston St\, Baltimore\, MD 21231\nCanton\nhttps://www.cap
+ tainjameslanding.com/event/happy-hour-at-the-crab-house/\nSource: Baltimor
+ e Dealz — verify at the bar\; deals change.
+LOCATION:2127 Boston St\, Baltimore\, MD 21231
+URL:https://www.captainjameslanding.com/event/happy-hour-at-the-crab-house/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-claddagh-pub-mon-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Claddagh Pub — Happy Hour (bar only) (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour (bar only)\nBottles of Wine 1/2 OFF\nBud or
+  Bud Light Bottles $3\nNÜTRL $5\nSurfside & Super Lyte $6\nSour Bombs $6\
+ nCrushes & Sangria $8\n1 lb of Steamed Shrimp $23\n30 Wings $28\n2918 O'Do
+ nnell St\, Baltimore\, MD 21224\nCanton\nhttps://claddaghbaltimore.com/wee
+ kly-specials/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2918 O'Donnell St\, Baltimore\, MD 21224
+URL:https://claddaghbaltimore.com/weekly-specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-claddagh-pub-tue-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Claddagh Pub — Happy Hour (bar only) (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour (bar only)\nBottles of Wine 1/2 OFF\nBud or
+  Bud Light Bottles $3\nNÜTRL $5\nSurfside & Super Lyte $6\nSour Bombs $6\
+ nCrushes & Sangria $8\n1 lb of Steamed Shrimp $23\n30 Wings $28\n2918 O'Do
+ nnell St\, Baltimore\, MD 21224\nCanton\nhttps://claddaghbaltimore.com/wee
+ kly-specials/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2918 O'Donnell St\, Baltimore\, MD 21224
+URL:https://claddaghbaltimore.com/weekly-specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-claddagh-pub-wed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260805T160000
+DTEND;TZID=America/New_York:20260805T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Claddagh Pub — Happy Hour (bar only) (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour (bar only)\nBottles of Wine 1/2 OFF\nBud or
+  Bud Light Bottles $3\nNÜTRL $5\nSurfside & Super Lyte $6\nSour Bombs $6\
+ nCrushes & Sangria $8\n1 lb of Steamed Shrimp $23\n30 Wings $28\n2918 O'Do
+ nnell St\, Baltimore\, MD 21224\nCanton\nhttps://claddaghbaltimore.com/wee
+ kly-specials/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2918 O'Donnell St\, Baltimore\, MD 21224
+URL:https://claddaghbaltimore.com/weekly-specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-claddagh-pub-thu-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260806T160000
+DTEND;TZID=America/New_York:20260806T190000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Claddagh Pub — Happy Hour (bar only) (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour (bar only)\nBottles of Wine 1/2 OFF\nBud or
+  Bud Light Bottles $3\nNÜTRL $5\nSurfside & Super Lyte $6\nSour Bombs $6\
+ nCrushes & Sangria $8\n1 lb of Steamed Shrimp $23\n30 Wings $28\n2918 O'Do
+ nnell St\, Baltimore\, MD 21224\nCanton\nhttps://claddaghbaltimore.com/wee
+ kly-specials/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2918 O'Donnell St\, Baltimore\, MD 21224
+URL:https://claddaghbaltimore.com/weekly-specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-claddagh-pub-fri-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260807T160000
+DTEND;TZID=America/New_York:20260807T190000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Claddagh Pub — Happy Hour (bar only) (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy Hour (bar only)\nBottles of Wine 1/2 OFF\nBud or
+  Bud Light Bottles $3\nNÜTRL $5\nSurfside & Super Lyte $6\nSour Bombs $6\
+ nCrushes & Sangria $8\n1 lb of Steamed Shrimp $23\n30 Wings $28\n2918 O'Do
+ nnell St\, Baltimore\, MD 21224\nCanton\nhttps://claddaghbaltimore.com/wee
+ kly-specials/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2918 O'Donnell St\, Baltimore\, MD 21224
+URL:https://claddaghbaltimore.com/weekly-specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-el-bufalo-frimonsatsunthutuewed-wallday@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:El Bufalo Tequila Bar + Kitchen — Happy Hour (all day)
+DESCRIPTION:all day\n16oz Modelo Especial $3\n16oz Natty Boh $3\nNatural Li
+ ght $3\nTecate / Tecate Light $3\n7oz Coronita $3\nOlmeca Altos Blanco $7\
+ nBeer & A Shot: Modelo Especial + Olmeca Altos Blanco $9\n2921 O'Donnell S
+ t\, Baltimore\, MD 21224\nCanton\nhttps://www.elbufalobaltimore.net/\nSour
+ ce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2921 O'Donnell St\, Baltimore\, MD 21224
+URL:https://www.elbufalobaltimore.net/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-good-vibes-cantina-frimonsunthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
+SUMMARY:Good Vibes Cantina — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\nHappy Hour\nPrices not published by the venue.\n2903 O
+ 'Donnell St\, Baltimore\, MD 21224\nCanton\nhttps://www.instagram.com/good
+ vibescantina/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:2903 O'Donnell St\, Baltimore\, MD 21224
+URL:https://www.instagram.com/goodvibescantina/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-gunther-and-co-tuewed-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T170000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE
+SUMMARY:Gunther & Co. — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\n$5 Draft Beer\n$8 Wine\n$8 Select Cocktails\n$1 War on
+  Hunger Oysters\n$8 Hummus\n$8 App Specials\n3650 Toone Street\, Baltimore
+ \, MD 21224\nBrewers Hill\nhttps://eatatgunther.com/menus\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
+LOCATION:3650 Toone Street\, Baltimore\, MD 21224
+URL:https://eatatgunther.com/menus
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-gunther-and-co-frithu-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260806T160000
+DTEND;TZID=America/New_York:20260806T190000
+RRULE:FREQ=WEEKLY;BYDAY=TH,FR
+SUMMARY:Gunther & Co. — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\n$5 Draft Beer\n$8 Wine\n$8 Select Cocktails\n$1 War on
+  Hunger Oysters\n$8 Hummus\n$8 App Specials\n3650 Toone Street\, Baltimore
+ \, MD 21224\nBrewers Hill\nhttps://eatatgunther.com/menus\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
+LOCATION:3650 Toone Street\, Baltimore\, MD 21224
+URL:https://eatatgunther.com/menus
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-homeslyce-canton-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:HomeSlyce Canton — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$3 OFF wings\, tenders\, and quesadillas\n$5 wines and
+  craft beers\n900 S Kenwood Ave\, Baltimore\, MD 21224\nCanton\nhttps://ho
+ meslyce.com/specials/\nSource: Baltimore Dealz — verify at the bar\; dea
+ ls change.
+LOCATION:900 S Kenwood Ave\, Baltimore\, MD 21224
+URL:https://homeslyce.com/specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-hudson-street-stackhouse-monthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Hudson Street Stackhouse — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\nHappy Hour\nPrices not published by the venue.\n2626 H
+ udson Street\, Baltimore\, MD 21224\nCanton\nhttps://hudsonstreetstackhous
+ e.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2626 Hudson Street\, Baltimore\, MD 21224
+URL:https://hudsonstreetstackhouse.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-hudson-street-stackhouse-fri-s840@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260807T140000
+DTEND;TZID=America/New_York:20260807T190000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Hudson Street Stackhouse — Happy Hour (2pm-7pm)
+DESCRIPTION:2pm-7pm\nHappy Hour\nPrices not published by the venue.\n2626 H
+ udson Street\, Baltimore\, MD 21224\nCanton\nhttps://hudsonstreetstackhous
+ e.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2626 Hudson Street\, Baltimore\, MD 21224
+URL:https://hudsonstreetstackhouse.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-hudson-street-stackhouse-satsun-s660@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260808T110000
+DTEND;TZID=America/New_York:20260808T170000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU
+SUMMARY:Hudson Street Stackhouse — Happy Hour (11am-5pm)
+DESCRIPTION:11am-5pm\nHappy Hour\nPrices not published by the venue.\n2626 
+ Hudson Street\, Baltimore\, MD 21224\nCanton\nhttps://hudsonstreetstackhou
+ se.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2626 Hudson Street\, Baltimore\, MD 21224
+URL:https://hudsonstreetstackhouse.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-mamas-on-the-half-shell-mon-wallday@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Mama's on the Half Shell — Happy Hour ALL DAY (all day)
+DESCRIPTION:all day\nHappy Hour ALL DAY\nCrab Cake Special: Crab Cake\, Sid
+ e\, & Dessert $30\n2901 O'Donnell St\, Baltimore\, MD 21224\nCanton\nhttps
+ ://www.mamasonthehalfshell.com/\nSource: Baltimore Dealz — verify at the
+  bar\; deals change.
+LOCATION:2901 O'Donnell St\, Baltimore\, MD 21224
+URL:https://www.mamasonthehalfshell.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-of-love-and-regret-frithutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T183000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Of Love & Regret — Happy Hour (4pm-6:30pm)
+DESCRIPTION:4pm-6:30pm\nHappy Hour\nPrices not published by the venue.\n102
+ 8 S. Conkling St.\, Baltimore\, MD 21224\nCanton\nhttps://www.olarbmore.co
+ m/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1028 S. Conkling St.\, Baltimore\, MD 21224
+URL:https://www.olarbmore.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-pussers-landing-monthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Pusser's Landing — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n1/2 off Pusser's Rum Painkillers\n1/2 off Draft Beer\n
+ 1/2 off House Wine\n1/2 off Wings\n1/2 off Nachos\n2780 Lighthouse Point E
+ \, Baltimore\, MD 21224\nCanton\nhttps://pusserslanding.com/specials/happy
+ -hour/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2780 Lighthouse Point E\, Baltimore\, MD 21224
+URL:https://pusserslanding.com/specials/happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-raw-and-refined-frithuwed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260805T150000
+DTEND;TZID=America/New_York:20260805T180000
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
+SUMMARY:Raw & Refined — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n½ off select appetizers\n$5 drafts\n$10 crush buckets
+ \n$6 seltzers\n2723 Lighthouse Pt. E\, Baltimore\, MD 21224\nCanton\nhttp:
+ //www.rawandrefinedbaltimore.com/\nSource: Baltimore Dealz — verify at t
+ he bar\; deals change.
+LOCATION:2723 Lighthouse Pt. E\, Baltimore\, MD 21224
+URL:http://www.rawandrefinedbaltimore.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-silks-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Silks — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\n$2 domestics\n$3 House Wines\n$3 Rail drinks\n$2 off a
+ ll craft draft\n2641 Hudson St\, Baltimore\, MD 21224\nCanton\nhttps://www
+ .instagram.com/silkscanton/\nSource: Baltimore Dealz — verify at the bar
+ \; deals change.
+LOCATION:2641 Hudson St\, Baltimore\, MD 21224
+URL:https://www.instagram.com/silkscanton/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-smaltimore-frimonthutuewed-wuntil7pm@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Smaltimore — Happy Hour (until 7pm)
+DESCRIPTION:until 7pm\n$6 House Wine\n$6 Select Drafts\n$6 Four Walls\n$6 J
+ ameson\n2522 Fait Ave\, Baltimore\, MD 21224\nCanton\nhttp://www.smaltimor
+ emd.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2522 Fait Ave\, Baltimore\, MD 21224
+URL:http://www.smaltimoremd.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-so-baltimore-sports-frithutuewed-s1080@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T180000
+DTEND;TZID=America/New_York:20260804T200000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:So Baltimore Sports Bar & Lounge — Happy Hour (6pm-8pm)
+DESCRIPTION:6pm-8pm\nTriple Double Sliders without fries $12.00 (add bacon 
+ $2)\nTriple Double Sliders with fries $15.00 (add bacon $2)\nBlack Salmon 
+ Sliders\, 2 grilled salmon sliders with slaw and fries $6.50\nSteak Slider
+ s\, 2 steak sliders with onion rings and BBQ sauce\, served with fries $7\
+ nBuffalo Chicken Sliders\, 2 buffalo chicken sliders with lettuce\, tomato
+ \, and house ranch\, served with fries $6\nChicken Tenders\, 3 crispy tend
+ ers with fries\, any flavor $8.00\nWings\, 4 whole wings any flavor $10.00
+ \nLemon Drop Shot $5.00\nRum Punch $8.00\nTequila Sunrise $8.00\nJack & Co
+ ke $7.00\nHouse Sangria $7.00\n3734 Fleet St. Baltimore\, MD 21224\nBrewer
+ s Hill\nhttps://www.sobaltimoresportsbar.com/menus-1\nSource: Baltimore De
+ alz — verify at the bar\; deals change.
+LOCATION:3734 Fleet St. Baltimore\, MD 21224
+URL:https://www.sobaltimoresportsbar.com/menus-1
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-chasseur-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Chasseur — Happy Hour (4pm-8pm)
+DESCRIPTION:4pm-8pm\n$2 off Wine\, Draft Beer\, Cocktails\, Crushes\, and W
+ histle Pig Old Fashioned\n3328 Foster Avenue\, Baltimore\, MD 21224\nCanto
+ n\nhttps://www.chasseurbaltimore.com/drink\nSource: Baltimore Dealz — ve
+ rify at the bar\; deals change.
+LOCATION:3328 Foster Avenue\, Baltimore\, MD 21224
+URL:https://www.chasseurbaltimore.com/drink
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-dive-monthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:The Dive — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$7.97 pinball wizard\n$5.51 Coors Banquet 24 oz cans\n
+ $5.25 Victory Prima Pils\n$6.26 sportsman\n$7.99 royale w/cheese\, ketchup
+  & mustard (w/ fries)\n$7.99 miss chicken w/mayo & lettuce (w/ fries)\n$9.
+ 99 cheese pizza\n3123 Elliott Street\, Baltimore\, MD 21224\nCanton\nhttps
+ ://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/\nSource: Baltimore De
+ alz — verify at the bar\; deals change.
+LOCATION:3123 Elliott Street\, Baltimore\, MD 21224
+URL:https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-dive-fri-s660@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260807T110000
+DTEND;TZID=America/New_York:20260807T160000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:The Dive — Happy Hour (11am-4pm)
+DESCRIPTION:11am-4pm\n$7.97 pinball wizard\n$5.51 Coors Banquet 24 oz cans\
+ n$5.25 Victory Prima Pils\n$6.26 sportsman\n$7.99 royale w/cheese\, ketchu
+ p & mustard (w/ fries)\n$7.99 miss chicken w/mayo & lettuce (w/ fries)\n$9
+ .99 cheese pizza\n3123 Elliott Street\, Baltimore\, MD 21224\nCanton\nhttp
+ s://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/\nSource: Baltimore D
+ ealz — verify at the bar\; deals change.
+LOCATION:3123 Elliott Street\, Baltimore\, MD 21224
+URL:https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-greene-turtle-canton-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Greene Turtle Canton — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nShots $3 (Fireball Cinnamon\, Fireball Apple\, Greene 
+ Tea)\nTall drafts $3 (Miller Lite\, Bud Light\, Yuengling\, Coors Light)\n
+ Hard seltzers $4 (White Claw Mango\, White Claw Black Cherry\, Truly Wild 
+ Berry)\nSignature cocktails $5 (Boozy Cherry Limeade\, Long Island Iced Te
+ a\, The Juicy Peach\, Classic Rita)\nSilver Gate Vineyards wine $5 (Pinot 
+ Grigio\, Chardonnay\, Cabernet Sauvignon\, Pinot Noir)\nCans $5 (High Noon
+  hard seltzer\, NÜTRL hard seltzer)\nTall craft Stella Artois Lager $5\nB
+ ites $7 (onion rings\, chicken quesadilla\, spinach artichoke dip\, mozzar
+ ella sticks)\nBeer buckets $15 (Bud Light\, Coors Light\, Miller Lite\, Yu
+ engling Flight)\nSun Cruiser buckets $25 (Tea\, Pink Lemonade)\n3803 Bosto
+ n Street\, Baltimore\, MD 21224\nCanton\nhttps://images.getbento.com/accou
+ nts/eb3e90803dd3724a5b5a34e887068fd3/media/images/17536TGT_Corp26_HappyHou
+ r_Aug20.jpg\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:3803 Boston Street\, Baltimore\, MD 21224
+URL:https://images.getbento.com/accounts/eb3e90803dd3724a5b5a34e887068fd3/m
+ edia/images/17536TGT_Corp26_HappyHour_Aug20.jpg
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-happyjack-tavern-monthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:The HappyJack Tavern — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$8 Smash Burger\n$8 Veggie Burger\n$8 Grilled Chicken\
+ n$8 Classic Grilled Cheese\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\
+ nhttps://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — v
+ erify at the bar\; deals change.
+LOCATION:2822 Hudson St\, Baltimore\, MD 21224
+URL:https://www.happyjacktavern.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-happyjack-tavern-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The HappyJack Tavern — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$1 off select beer\, wine & cocktails marked w/ an *\n
+ $5 rail liquor drinks\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\nhttp
+ s://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — verify
+  at the bar\; deals change.
+LOCATION:2822 Hudson St\, Baltimore\, MD 21224
+URL:https://www.happyjacktavern.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-happyjack-tavern-sun-s720@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260809T120000
+DTEND;TZID=America/New_York:20260809T230000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:The HappyJack Tavern — Happy Hour (12pm-11pm)
+DESCRIPTION:12pm-11pm\n$1 off select beer\, wine & cocktails marked w/ an *
+ \n$5 rail liquor drinks\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\nht
+ tps://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — veri
+ fy at the bar\; deals change.
+LOCATION:2822 Hudson St\, Baltimore\, MD 21224
+URL:https://www.happyjacktavern.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-union-hill-kitchen-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Union Hill Kitchen & Craft Bar — Happy Hour (3pm-6:30pm)
+DESCRIPTION:3pm-6:30pm\n$2 OFF small plates and flatbreads\n$2 OFF all cock
+ tails\n$2 OFF all wines by the glass\n$2 OFF draft and bottled beers\, sel
+ tzers and ciders\n1/2 OFF raw oysters\n938 S Conkling St\, Baltimore\, MD 
+ 21224\nCanton\nhttps://www.unionhillbal.com/page/happy-hour\nSource: Balti
+ more Dealz — verify at the bar\; deals change.
+LOCATION:938 S Conkling St\, Baltimore\, MD 21224
+URL:https://www.unionhillbal.com/page/happy-hour
+END:VEVENT
+END:VCALENDAR

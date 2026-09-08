@@ -1,0 +1,230 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hampden Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-blue-pit-bbq-frithuwed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260805T150000
+DTEND;TZID=America/New_York:20260805T180000
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
+SUMMARY:Blue Pit BBQ — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n1 slider $5 (pulled pork\, pulled chicken\, or chopped
+  brisket with slaw)\n3 sliders $12\nSelect draft beers $5\nNon-alcoholic b
+ eer $5\nGlasses of wine $5\nHouse Old Fashioned $7 (with Benchmark)\nSigna
+ ture Mule $7\n1601 Union Ave\, Baltimore\, MD 21211\nHampden\nhttps://blue
+ pitbbq.com/menu/\nSource: Baltimore Dealz — verify at the bar\; deals ch
+ ange.
+LOCATION:1601 Union Ave\, Baltimore\, MD 21211
+URL:https://bluepitbbq.com/menu/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-dylans-oyster-cellar-frithutuewed-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T170000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Dylan's Oyster Cellar — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\n$1 off Drafts\n*$8 select Sparkling / Rosé/ White\n$8
+  High & Mellow(High Life PONY & a SHOT)\n$5 Pickle Back\n3601 Chestnut Ave
+ nue\, Baltimore\, MD 21211\nHampden\nhttps://dylansoyster.com/\nSource: Ba
+ ltimore Dealz — verify at the bar\; deals change.
+LOCATION:3601 Chestnut Avenue\, Baltimore\, MD 21211
+URL:https://dylansoyster.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-dylans-oyster-cellar-thutuewed-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T170000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH
+SUMMARY:Dylan's Oyster Cellar — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\n$5 off the a half dozen of the “Oyster of the Day”
+ \n3601 Chestnut Avenue\, Baltimore\, MD 21211\nHampden\nhttps://dylansoyst
+ er.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:3601 Chestnut Avenue\, Baltimore\, MD 21211
+URL:https://dylansoyster.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-fraziers-on-the-avenue-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Frazier's on the Avenue — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$3 Miller Lite\, Yuengling\, Boh\n$1 Off Rail Liquor a
+ nd Wine\n917-919 W. 36th St\, Baltimore\, MD 21211\nHampden\nhttps://www.f
+ raziersbmore.com/new-page\nSource: Baltimore Dealz — verify at the bar\;
+  deals change.
+LOCATION:917-919 W. 36th St\, Baltimore\, MD 21211
+URL:https://www.fraziersbmore.com/new-page
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-papis-taco-joint-hampden-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T160000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Papi's Taco Joint (Hampden) — Happy Hour (3pm-4pm)
+DESCRIPTION:3pm-4pm\n2-for-1 rail drinks\, drafts\, bombs\, and Deep Eddy &
+  sodas\n3820 Falls Road\, Baltimore\, MD 21211\nHampden\nhttps://papistaco
+ joint.com/hampden\nSource: Baltimore Dealz — verify at the bar\; deals c
+ hange.
+LOCATION:3820 Falls Road\, Baltimore\, MD 21211
+URL:https://papistacojoint.com/hampden
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-papis-taco-joint-hampden-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Papi's Taco Joint (Hampden) — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$5 drinks (Fiesta Hour)\n$10 Happy Hour Wings\n3820 Fa
+ lls Road\, Baltimore\, MD 21211\nHampden\nhttps://papistacojoint.com/hampd
+ en\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:3820 Falls Road\, Baltimore\, MD 21211
+URL:https://papistacojoint.com/hampden
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-barn-and-lodge-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Barn & Lodge at The Rotunda — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nHalf price artisan pizzas\n$9 featured cocktails\n$5 w
+ ell drinks\n$5 wines by the glass\n$5 bottled beer\n729 W 40th Street\, Ba
+ ltimore\, MD 21211\nHampden\nhttps://www.barnandlodge.com/rotunda/menu/\nS
+ ource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:729 W 40th Street\, Baltimore\, MD 21211
+URL:https://www.barnandlodge.com/rotunda/menu/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-bluebird-frimonthutuewed-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Bluebird — Happy Hour (5pm-6:30pm)
+DESCRIPTION:5pm-6:30pm\nChampagne Cocktail $10\nLemon Drop $10\nAviation $1
+ 0\nHouse Wines (red or white) $10\nRotating Draft $5/$7\nBirdseed $3\nFrit
+ es $9\nBluebird Cheeseburger $13\n3600 Hickory Avenue\, Baltimore\, MD 212
+ 11\nHampden\nhttps://www.thebluebirdbaltimore.com/happy-hour\nSource: Balt
+ imore Dealz — verify at the bar\; deals change.
+LOCATION:3600 Hickory Avenue\, Baltimore\, MD 21211
+URL:https://www.thebluebirdbaltimore.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-duchess-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Duchess — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nSapporo can 22oz $7\nSake Bomb $6\nHana Makgeolli spar
+ kling rice wine can 8oz $15\nKona Big Wave Golden Ale pint $5\nRAR Lite La
+ ger pint $5\nP.O.G. (zero-proof) $6\nP.O.G. with a punch $8\nProsecco\, Za
+ rdetto (Italy) NV $6/glass\nSilvaner\, Max Müller Franken (Germany) 2023 
+ $10/glass\nMencia\, Matilda Nieves (Spain) 2020 $7/glass\nSuntory -196 vod
+ ka seltzers $6\nBlistered Shishitos $7\nGarlic Chili Cucumber Salad 2.0 $8
+ \nTuna Poke Nachos $21\nKiko's Loco Fried Rice of the moment $10\nCrispy T
+ ofu Steam Buns $7\nTyphoon Fries $9\nSpam Musubi $9\n1000-1002 W 36th Stre
+ et\, Baltimore\, MD 21211\nHampden\nhttps://7087713.fs1.hubspotusercontent
+ -na1.net/hubfs/7087713/The%20Duchess/Menus/Duchess_HappyHour.pdf\nSource: 
+ Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1000-1002 W 36th Street\, Baltimore\, MD 21211
+URL:https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/The%20Duch
+ ess/Menus/Duchess_HappyHour.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-duchess-frisatthu-s1320@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260806T220000
+DTEND;TZID=America/New_York:20260806T233000
+RRULE:FREQ=WEEKLY;BYDAY=TH,FR,SA
+SUMMARY:The Duchess — Happy Hour (10pm-11:30pm)
+DESCRIPTION:10pm-11:30pm\nSapporo can 22oz $7\nSake Bomb $6\nHana Makgeolli
+  sparkling rice wine can 8oz $15\nKona Big Wave Golden Ale pint $5\nRAR Li
+ te Lager pint $5\nP.O.G. (zero-proof) $6\nP.O.G. with a punch $8\nProsecco
+ \, Zardetto (Italy) NV $6/glass\nSilvaner\, Max Müller Franken (Germany) 
+ 2023 $10/glass\nMencia\, Matilda Nieves (Spain) 2020 $7/glass\nSuntory -19
+ 6 vodka seltzers $6\nBlistered Shishitos $7\nGarlic Chili Cucumber Salad 2
+ .0 $8\nTuna Poke Nachos $21\nKiko's Loco Fried Rice of the moment $10\nCri
+ spy Tofu Steam Buns $7\nTyphoon Fries $9\nSpam Musubi $9\n1000-1002 W 36th
+  Street\, Baltimore\, MD 21211\nHampden\nhttps://7087713.fs1.hubspotuserco
+ ntent-na1.net/hubfs/7087713/The%20Duchess/Menus/Duchess_HappyHour.pdf\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1000-1002 W 36th Street\, Baltimore\, MD 21211
+URL:https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/The%20Duch
+ ess/Menus/Duchess_HappyHour.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-food-market-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Food Market — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nDraft beer $5\nWhite marble wit $7\nWine by the glass 
+ $6\nHouse bubbles $4\nSpecialty cocktails $6\nShot and a beer $6\nEdamame 
+ $4\nCracker smack deluxe $7\nTruffle parmesan fries $5\nAmish soft pretzel
+ s $5\nPan roasted mussels $12\nBuffalo pickles $6\nGarlicky shrimp torn br
+ ead $12\nBraised pork taco (2.75 a pop)\nCrab ball steam bun $8\nCrazy cor
+ n wings $10\nPat LaFrieda burger $10\n1/2 cooked blondie $5\nHeathbar brea
+ d pudding $5\n1017 W 36th St\, Baltimore\, MD 21211\nHampden\nhttps://www.
+ the-food-market.com/happy-hour\nSource: Baltimore Dealz — verify at the 
+ bar\; deals change.
+LOCATION:1017 W 36th St\, Baltimore\, MD 21211
+URL:https://www.the-food-market.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-warehouse-cinemas-rotunda-wed-wallday@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Warehouse Cinemas Rotunda — 50% all alcohol (all day)
+DESCRIPTION:all day\n50% all alcohol\n727 W 40th Street\, Suite 104\, Balti
+ more\, MD 21211\nHampden\nhttps://rotunda.warehousecinemas.com/home/\nSour
+ ce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:727 W 40th Street\, Suite 104\, Baltimore\, MD 21211
+URL:https://rotunda.warehousecinemas.com/home/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-wicked-sisters-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Wicked Sisters — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$2 off select drafts\nZadies Lager $3\nOMG 16oz cans $
+ 4\nWines $6\nHouse liquor $8\nSpritzes $9\nOld Fashioned / Margarita / Whi
+ skey Sour $10\nMartini $11\nMac n' cheese $10\nWings $10\nFried pickles $1
+ 0\nBrussels sprouts $10\n3845 Falls Rd\, Baltimore\, MD 21211\nHampden\nht
+ tps://www.wickedsistershampden.com/\nSource: Baltimore Dealz — verify at
+  the bar\; deals change.
+LOCATION:3845 Falls Rd\, Baltimore\, MD 21211
+URL:https://www.wickedsistershampden.com/
+END:VEVENT
+END:VCALENDAR

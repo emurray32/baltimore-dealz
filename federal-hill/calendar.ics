@@ -1,0 +1,265 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Federal Hill Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-blue-agave-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Blue Agave Mexican Food — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\n$6/$24/$36 Margarita (blanco tequila\, triple sec\, ho
+ use-made sour)\; serving sizes 1/4/6\n$7/$28/$42 Strawberry or mango marga
+ rita\; serving sizes 1/4/6\n$7/$28/$42 Sangria\, red or white\; serving si
+ zes 1/4/6\n$8/$32/$48 Spicy Guavarita\; serving sizes 1/4/6\n$4 Mexican dr
+ aft beers: Modelo Especial\, Negra Modelo\, Dos Equis Ambar\, Pacifico\, C
+ orona Premier\n$4 Mexican bottled beers: Sol\, Pacifico\, Negra Modelo\, D
+ os Equis Lager\, Corona\, Corona Light\, Corona NA\, Victoria\n$2.50 Taco 
+ (pulled chicken\, blackened tilapia\, black bean\, mushroom & corn\, or gr
+ ound beef)\n$3.50 Taco (carne asada\, blackened shrimp\, or grilled chicke
+ n)\n$6 Mini cheese dillas\n$6 Flautitas\n$3 Elote bites\n$6 Nachos\n+$3 Na
+ chos add chicken\, chorizo\, or ground beef\n+$4 Nachos add carne asada or
+  shrimp\n1032 Light Street\, Baltimore\, MD 21230\nFederal Hill\nhttps://w
+ ww.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_03-12-2025.pd
+ f\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1032 Light Street\, Baltimore\, MD 21230
+URL:https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_0
+ 3-12-2025.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-brewers-cask-mon-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T230000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Brewer's Cask — Happy Hour (5pm-11pm)
+DESCRIPTION:5pm-11pm\n$5 Drafts\n$3 of Appetizers\n1236 Light St\, Baltimor
+ e\, MD 21230\nFederal Hill\nhttps://brewers-cask.com/baltimore-brewer-s-ca
+ sk-happy-hours-specials\nSource: Baltimore Dealz — verify at the bar\; d
+ eals change.
+LOCATION:1236 Light St\, Baltimore\, MD 21230
+URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-brewers-cask-frithutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T150000
+DTEND;TZID=America/New_York:20260804T180000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Brewer's Cask — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$5 Drafts\n$3 of Appetizers\n1236 Light St\, Baltimore
+ \, MD 21230\nFederal Hill\nhttps://brewers-cask.com/baltimore-brewer-s-cas
+ k-happy-hours-specials\nSource: Baltimore Dealz — verify at the bar\; de
+ als change.
+LOCATION:1236 Light St\, Baltimore\, MD 21230
+URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Little Havana — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$3 Nachos (protein additional charge)\n$5 French Fries
+ \n$9 Cuban Sandwich\n1325 Key Highway\, Baltimore\, MD 21230\nFederal Hill
+ \nhttps://littlehavanas.com/happy-hour/\nSource: Baltimore Dealz — verif
+ y at the bar\; deals change.
+LOCATION:1325 Key Highway\, Baltimore\, MD 21230
+URL:https://littlehavanas.com/happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Little Havana — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$3 Dos Equis Ambar or Lager\n$4 Minus 196 Seltzers\n$6
+  House Red or White Wine\n$9 Regular Mojitos\n1325 Key Highway\, Baltimore
+ \, MD 21230\nFederal Hill\nhttps://littlehavanas.com/happy-hour/\nSource: 
+ Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1325 Key Highway\, Baltimore\, MD 21230
+URL:https://littlehavanas.com/happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-livs-tavern-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Liv's Tavern — Happy Hour (3pm-6pm (excludes game days))
+DESCRIPTION:3pm-6pm (excludes game days)\nAll HH Food $7: Boneless Wings (1
+ 0)\, Arancini\, Bruschetta\, Deviled Eggs\, Chicken Parm Bao Buns\n$4 Draf
+ ts\n$5 Rumple/Chambongs\n$6 Crushes\n$8 Bubbles\n$10 Cocktails\n1113 S Cha
+ rles St\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.livstavern.com/s
+ pecials\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1113 S Charles St\, Baltimore\, MD 21230
+URL:https://www.livstavern.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-livs-tavern-satsun-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260808T150000
+DTEND;TZID=America/New_York:20260808T180000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU
+SUMMARY:Liv's Tavern — Happy Hour (3pm-6pm (excludes game days\; drinks o
+ nly))
+DESCRIPTION:3pm-6pm (excludes game days\; drinks only)\n$4 Drafts\n$5 Rumpl
+ e/Chambongs\n$6 Crushes\n$8 Bubbles\n1113 S Charles St\, Baltimore\, MD 21
+ 230\nFederal Hill\nhttps://www.livstavern.com/specials\nSource: Baltimore 
+ Dealz — verify at the bar\; deals change.
+LOCATION:1113 S Charles St\, Baltimore\, MD 21230
+URL:https://www.livstavern.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-nobles-bar-and-grill-frithutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Nobles Bar and Grill — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\n$3 Domestics\n$4 Seltzers\n$5 Green Tea Shots\n$5 Rail
+  Drinks & Craft Cans\n$6 Crushes & 32oz Domestic Drafts\n1024 South Charle
+ s Street\, Baltimore\, MD 21230\nFederal Hill\nhttps://noblesbarandgrill.c
+ om/specials/\nSource: Baltimore Dealz — verify at the bar\; deals change
+ .
+LOCATION:1024 South Charles Street\, Baltimore\, MD 21230
+URL:https://noblesbarandgrill.com/specials/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-octobar-frithutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Octobar — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\nSangrias\, wine\, draft and Prosecco\nMargarita Bar (a
+ ll flavors)\nCrushes (all flavors)\nSpecialty Cocktail of the Day\nAll bot
+ tles of wine\nGrilled Chicken Kabab\nSmoked Salmon Bruschetta\nMediterrane
+ an Meatballs Shakshuka\nGrilled Chicken Pita Pizza\nSpinach Pies with Feta
+ \nGrape Leaves stuffed with rice\nCheese Ravioli\nFirecracker Shrimp\nPapa
+ s Bravas\n5 Pan con tomate\nGrilled Street Corn\nWarm Olives\nDeviled Eggs
+  of the Day (4 pieces)\n1400 Light Street\, Baltimore\, MD 21230\nSouth Ba
+ ltimore\nhttps://octobarbaltimore.com/happy-hour-3/\nSource: Baltimore Dea
+ lz — verify at the bar\; deals change.
+LOCATION:1400 Light Street\, Baltimore\, MD 21230
+URL:https://octobarbaltimore.com/happy-hour-3/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-one-star-country-club-monthutuewed-s1080@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T180000
+DTEND;TZID=America/New_York:20260803T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:One Star Country Club — Happy Hour (6pm-8pm)
+DESCRIPTION:6pm-8pm\nBohs and Busch Light $3\nRails $4\nCrush's $5\nOrange 
+ Bombs and Nutrls $6\n38 E Cross Street\, Baltimore MD 21230\nFederal Hill\
+ nhttps://www.onestarcountryclub.com/menu\nSource: Baltimore Dealz — veri
+ fy at the bar\; deals change.
+LOCATION:38 E Cross Street\, Baltimore MD 21230
+URL:https://www.onestarcountryclub.com/menu
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-rusty-scupper-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Rusty Scupper — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nMartinis $8 (Bombay Sapphire or Absolut — Apple\, Le
+ mon Drop\, or Regular)\n1783 Old Fashioned $9\nScupper Sunset $8\nHomemade
+  Red Sangria $9\nPassion Breeze $8\nDraft $5 (Yuengling\, Rusty Scupper Pa
+ le Ale)\nDomestic $4.50 (Budweiser\, Bud Light\, Coors Light\, Miller Lite
+ \, Natty Boh 22 oz\, Michelob Ultra)\nRed Wine $8 (Merlot\, Cabernet Sauvi
+ gnon\, Pinot Noir — Jacob's Creek house)\nWhite Wine $8 (Pinot Grigio\, 
+ Chardonnay\, Moscato — Jacob's Creek house)\nCrab Fried Brussels Sprouts
+  $18\n6 oz. Lobster Tempura $29\nShrimp Basket $15\nP.E.I. Mussels $13\nLo
+ cal Oysters $2.50\nCrab Cake Sandwich $20\nAll American Burger $16\nCrab H
+ ush Puppies (5) $12\nNashville Hot Wings $13\n402 Key Highway\, Inner Harb
+ or Marina\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.rusty-scupper.
+ com/wp-content/uploads/RSC-Happy-Hour.pdf\nSource: Baltimore Dealz — ver
+ ify at the bar\; deals change.
+LOCATION:402 Key Highway\, Inner Harbor Marina\, Baltimore\, MD 21230
+URL:https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-outpost-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Outpost — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nHappy Hour\nPrices not published by the venue.\n1032 R
+ iverside Ave\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.theoutpostb
+ altimore.com/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:1032 Riverside Ave\, Baltimore\, MD 21230
+URL:https://www.theoutpostbaltimore.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-watershed-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Watershed — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$3 / 16oz Beer (Coors Light\, Miller Lite\, Guinness B
+ londe\, Natty Boh\, Michelob Ultra)\n$6 / 32oz Beer\n$7 Wine (Prosecco\, P
+ inot Noir\, Pinot Grigio)\n$8 / 16oz Crushes (orange\, lime\, grapefruit\,
+  pineapple\, lemon)\n$14 / 32oz Crushes\n$6 Bombs (Oriole\, Sour\, Raven\,
+  'Shed)\nBuck-a-Shuck Oysters $1 each\nMussels $8\nLoaded Fries $6\nLoaded
+  Fries + Crab $9\nBurger Sliders $3 each\nWatershed Wings $9\nFried Chicke
+ n Sliders $3 each\nBeer-Battered Onion Rings $7\nCrispy Fried Blue Crab Wo
+ ntons $10\nDrunken Sailor Noodles $10\nSteamed Peel & Eat Shrimp $10\n1065
+  S Charles St\, Baltimore\, MD 21230\nFederal Hill\nhttps://watershedbalti
+ more.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf\nSource: Balti
+ more Dealz — verify at the bar\; deals change.
+LOCATION:1065 S Charles St\, Baltimore\, MD 21230
+URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
+ 031825.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-watershed-frisat-s1320@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+RRULE:FREQ=WEEKLY;BYDAY=FR,SA
+SUMMARY:Watershed — Happy Hour (10pm-1am (food until midnight))
+DESCRIPTION:10pm-1am (food until midnight)\n$3 / 16oz Beer (Coors Light\, M
+ iller Lite\, Guinness Blonde\, Natty Boh\, Michelob Ultra)\n$6 / 32oz Beer
+ \n$7 Wine (Prosecco\, Pinot Noir\, Pinot Grigio)\n$8 / 16oz Crushes (orang
+ e\, lime\, grapefruit\, pineapple\, lemon)\n$14 / 32oz Crushes\n$6 Bombs (
+ Oriole\, Sour\, Raven\, 'Shed)\nBuck-a-Shuck Oysters $1 each\nMussels $8\n
+ Loaded Fries $6\nLoaded Fries + Crab $9\nBurger Sliders $3 each\nWatershed
+  Wings $9\nFried Chicken Sliders $3 each\nBeer-Battered Onion Rings $7\nCr
+ ispy Fried Blue Crab Wontons $10\nDrunken Sailor Noodles $10\nSteamed Peel
+  & Eat Shrimp $10\n1065 S Charles St\, Baltimore\, MD 21230\nFederal Hill\
+ nhttps://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_03
+ 1825.pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1065 S Charles St\, Baltimore\, MD 21230
+URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
+ 031825.pdf
+END:VEVENT
+END:VCALENDAR

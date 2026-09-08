@@ -1,0 +1,53 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Station North Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-alma-cocina-latina-frithuwed-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;TZID=America/New_York:20260805T170000
+DTEND;TZID=America/New_York:20260805T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
+SUMMARY:Alma Cocina Latina — Happy Hour (5pm-7pm (bar only))
+DESCRIPTION:5pm-7pm (bar only)\nHappy Hour\nPrices not published by the ven
+ ue.\n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nhttp
+ s://www.almacocinalatina.com/happy-hour\nSource: Baltimore Dealz — verif
+ y at the bar\; deals change.
+LOCATION:1701 North Charles Street\, Baltimore\, MD 21201
+URL:https://www.almacocinalatina.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-alma-cocina-latina-sun-s1020@baltimore-dealz
+DTSTAMP:20260908T214211Z
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Alma Cocina Latina — Happy Hour (5pm-close (bar only))
+DESCRIPTION:5pm-close (bar only)\nHappy Hour\nPrices not published by the v
+ enue.\n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nht
+ tps://www.almacocinalatina.com/happy-hour\nSource: Baltimore Dealz — ver
+ ify at the bar\; deals change.
+LOCATION:1701 North Charles Street\, Baltimore\, MD 21201
+URL:https://www.almacocinalatina.com/happy-hour
+END:VEVENT
+END:VCALENDAR

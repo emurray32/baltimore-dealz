@@ -1,0 +1,840 @@
+/* Baltimore Dealz — 80s/disco theme.
+   Class contract emitted by page.js: .card, .meta, .window, .quiet, .quiet-list
+   plus bare tags and the #nearest-btn / #tonight-board hooks. */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Caveat:wght@700&display=swap');
+
+:root {
+  /* Light only. Eric, 2026-08-11: "I logged on yesterday and it went dark
+     mode? I only want light mode." Naming just `light` also stops the browser
+     from darkening form controls and scrollbars on a device set to dark. */
+  color-scheme: light;
+
+  /* palette — warm cream paper, poster-faithful accent + highlight */
+  --paper:     #e8e4db;
+  --surface:   #fffdf5;
+  --ink:       #0a0a0a;
+  --muted:     #666;
+  --hair:      #bab6ae;
+  --accent:    #ff4a4a;
+  --highlight: #ffff00;
+
+  /* chips */
+  --chip-bg:   #ffff00;
+  --chip-ink:  #0a0a0a;
+
+  /* notes */
+  --note-bg:   #fff0a0;
+  --note-ink:  #7a4400;
+
+  --focus:  #ff4a4a;
+  --radius: 2px;
+  --maxw:   42rem;
+
+  /* offset shadow — uses ink so it flips automatically in dark mode */
+  --shadow: 4px 4px 0 var(--ink);
+}
+
+* { box-sizing: border-box; }
+
+/* ---- body — warm cream paper with subtle grid ---- */
+body {
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3.5rem;
+  max-width: var(--maxw);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgba(0,0,0,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink);
+  font: 400 14px/1.45 'Space Mono', 'Courier New', monospace;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ---- header ---- */
+header { padding: .5rem 0 1rem; }
+
+/* "Tonight in Canton" — black strip with accent border, Bebas Neue */
+h1 {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: clamp(2.2rem, 11vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .04em;
+  margin: 0 0 .15rem;
+  display: inline-block;
+  background: var(--ink);
+  color: var(--surface);
+  padding: .08em .35em .08em .2em;
+  border-left: 6px solid var(--accent);
+}
+
+/* Day label under the title — handwritten feel */
+header > p.meta {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin: .5rem 0 .6rem;
+  border: none;
+  padding: 0;
+}
+
+/* Multi-neighborhood note — explains multi-neighborhood coverage. */
+.view-note {
+  font-size: .75rem;
+  color: var(--note-ink);
+  font-style: italic;
+  margin: -.25rem 0 .75rem;
+}
+
+/* section labels — "ON TONIGHT", "BROWSE THE WEEK" */
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--accent);
+  margin: 2rem 0 .75rem;
+}
+
+/* venue name */
+h3 {
+  font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin: 0 0 .3rem;
+  line-height: 1.1;
+}
+
+/* Real link colour — inherit + :hover alone never fires on a phone. */
+a {
+  color: var(--accent);
+}
+a:hover {
+  color: var(--chip-ink);
+}
+
+/* ---- view switcher ---- */
+nav.meta {
+  margin-top: .75rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: .5rem;
+  align-items: center;
+}
+nav.meta a {
+  color: var(--ink);
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
+}
+nav.meta a:hover {
+  color: var(--ink);
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+nav.meta strong {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .3rem .85rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--surface);
+}
+
+/* ---- tonight timing groups (on now / starts later / finished) ---- */
+.timing-group {
+  margin: 0 0 1.5rem;
+}
+.timing-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 .75rem;
+  padding: 0;
+  color: var(--ink);
+}
+.timing-cards {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- deal card ---- */
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1rem .85rem;
+  margin: 0 0 1.25rem;
+  transition: box-shadow .08s, transform .08s;
+}
+.card:hover {
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: translate(2px, 2px);
+}
+.card h3 { display: block; }
+
+/* Stretched link: whole card opens the venue page. Keep a.venue-link as the
+   single real href — never wrap the card in <a> (cards already contain tel/
+   source anchors). Scoped to .card so the quiet-list name link is unchanged. */
+.card a.venue-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Phone + source sit above the stretch so they still dial / open the source. */
+.card > .meta a {
+  position: relative;
+  z-index: 1;
+}
+
+/* time-window chip — yellow, bordered, mono */
+.window {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: .12rem .45rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  white-space: nowrap;
+  margin-left: .5rem;
+  transform: translateY(-2px);
+}
+
+/* deal-level chips (Happy Hour, food category, verified date) */
+.chips {
+  margin: 0 0 .45rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+.chip {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .1rem .42rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  white-space: nowrap;
+}
+.chip-stale {
+  background: var(--note-bg);
+  color: var(--note-ink);
+}
+
+/* deal items */
+.card ul {
+  list-style: none;
+  margin: .3rem 0 0;
+  padding: 0;
+}
+.card ul li {
+  padding: .5rem 0;
+  border-top: 1px dashed var(--hair);
+  font-size: .88rem;
+  font-weight: 400;
+}
+.card ul li:first-child { border-top: 0; padding-top: .1rem; }
+
+/* "+N more" — the rest of a long happy-hour list, collapsed by default so a
+   card reads as a set of deals rather than as the venue's whole menu. The
+   items are in the document either way; only the default height changes. */
+.more-offers > summary {
+  margin-top: .45rem;
+  padding: .35rem 0 .1rem;
+  border-top: 1px dashed var(--hair);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--note-ink);
+}
+.more-offers > summary:hover { color: var(--ink); }
+.more-offers > summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.more-offers[open] > summary { color: var(--ink); }
+/* The disclosure's own list continues the one above it, so its first row keeps
+   the dashed rule that .card ul li:first-child would otherwise strip. */
+.more-offers ul li:first-child { border-top: 1px dashed var(--hair); padding-top: .5rem; }
+.more-offers ul { margin-top: 0; }
+
+/* proof next to the claim — venue's own words, verbatim */
+.proof {
+  margin: .6rem 0 0;
+  padding: .5rem .7rem .5rem .6rem;
+  border: 1.5px solid var(--ink);
+  border-left: 5px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  font-family: 'Space Mono', monospace;
+  font-size: .74rem;
+  line-height: 1.55;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.proof::before {
+  content: "Their words —";
+  display: block;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+  opacity: .72;
+}
+
+/* meta lines: neighborhood, address, phone, source, last verified */
+.meta {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
+  color: var(--muted);
+  margin: .5rem 0 0;
+  line-height: 1.65;
+}
+.card > .meta {
+  margin-top: .65rem;
+  padding-top: .55rem;
+  border-top: 1px dashed var(--hair);
+}
+.meta a { text-decoration: underline; text-underline-offset: 2px; }
+.meta strong { color: var(--ink); }
+
+.card p.meta:only-of-type { border-top: 0; }
+
+/* "Good to know" notes */
+section > p.meta strong { color: var(--ink); }
+
+
+/* ---- scan list (board + week details only; venue page stays full cards) ---- */
+#tonight-board .card,
+details .card {
+  margin: 0;
+  padding: .7rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--hair);
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  min-height: 72px;
+}
+#tonight-board .card:hover,
+details .card:hover {
+  box-shadow: none;
+  transform: none;
+}
+.scan-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+}
+.scan-head h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.scan-head .window {
+  margin: 0;
+  flex: none;
+}
+.window-quiet {
+  background: transparent;
+  color: var(--ink);
+}
+.lead {
+  margin: .15rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.lead .hood,
+.lead .more {
+  color: #666;
+}
+.card.scan .deal-row,
+.card.scan .chips,
+.card.scan .proof,
+.card.scan > .meta,
+.card.scan .more-offers {
+  display: none;
+}
+
+/* ---- day accordions (Browse the week) ---- */
+details { margin-bottom: .5rem; }
+summary {
+  cursor: pointer;
+  padding: .6rem .4rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  transition: border-color .1s;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before {
+  content: "";
+  width: .48rem;
+  height: .48rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform .15s ease;
+  flex: none;
+}
+details[open] > summary::before { transform: rotate(45deg); }
+summary:hover { border-color: var(--hair); }
+
+/* ---- "no deals we can show" group ---- */
+.quiet { margin-top: 1.5rem; }
+.quiet details {
+  border: 2px dashed var(--hair);
+  border-radius: var(--radius);
+  padding: .4rem 1rem .9rem;
+}
+.quiet summary { font-size: .78rem; font-weight: 700; }
+.quiet-list { list-style: none; padding: 0; margin: .5rem 0 0; }
+.quiet-list li { padding: .6rem 0; border-top: 1px dashed var(--hair); }
+.quiet-list li:first-child { border-top: 0; }
+.quiet-list .meta { margin-top: .15rem; }
+
+/* ---- "Closest to me" button ---- */
+.nearest-row { margin: 0 0 1rem; }
+
+/* venue name links on cards / quiet group */
+a.venue-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+a.venue-link:hover {
+  color: var(--chip-ink);
+}
+
+/* venue detail page */
+.venue-day { margin: 0 0 1.5rem; }
+.venue-day h2 {
+  font-size: 1rem;
+  margin: 0 0 .65rem;
+}
+.venue-empty { margin: 1rem 0; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* board search — injected by client-search.js only when JS runs */
+.search-row {
+  margin: 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+.search-label {
+  font-family: 'Space Mono', monospace;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.board-search,
+#request-spot-form input[type="text"],
+#request-spot-form textarea {
+  font-family: inherit;
+  font-size: .95rem;
+  padding: .55rem .75rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  width: 100%;
+  max-width: 22rem;
+  box-sizing: border-box;
+}
+.board-search:focus,
+#request-spot-form input[type="text"]:focus,
+#request-spot-form textarea:focus {
+  outline: 2px solid var(--chip-bg);
+  outline-offset: 2px;
+}
+.search-empty {
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+#nearest-btn,
+#request-spot-form [type="submit"] {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: .7rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  background: var(--surface);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: .5rem 1.1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
+}
+#nearest-btn:hover:not([disabled]),
+#request-spot-form [type="submit"]:hover:not([disabled]) {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+#nearest-btn[disabled] { color: var(--muted); cursor: default; box-shadow: none; transform: none; }
+
+/* Request a spot — native Google Form POST at the bottom of every board. */
+#request-spot {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--ink);
+}
+#request-spot-form {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin: 0;
+}
+#request-spot-form textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+#request-spot-form [type="submit"] {
+  align-self: flex-start;
+  margin-top: .45rem;
+}
+
+/* ---- food filter ---- */
+.food-filter { margin: 0 0 .25rem; }
+.food-filter h2 { margin: 0 0 .5rem; }
+.filter-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  gap: .4rem;
+  margin: 0 0 .4rem;
+}
+.filter-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .34rem .8rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: box-shadow .08s, transform .08s;
+}
+.filter-btn:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.filter-btn.is-on,
+.filter-btn[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--surface);
+}
+.filter-count {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.filter-status { min-height: 1.1em; }
+.card.filter-hide,
+.timing-group.filter-hide {
+  display: none !important;
+}
+
+/* distance chip appended by nearest-first script */
+.distance {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Space Mono', monospace;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  padding: .12rem .45rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--ink);
+  background: var(--ink);
+  color: var(--surface);
+  white-space: nowrap;
+  margin-left: .4rem;
+  transform: translateY(-2px);
+}
+
+/* ---- map page ---- */
+body.map-page {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.map-page header,
+.map-page main { max-width: 56rem; margin: 0 auto; padding: 0 1.25rem; }
+.map-page header { padding-top: .5rem; }
+
+#map {
+  height: min(70vh, 34rem);
+  margin: 1rem 0 .5rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--surface);
+  z-index: 0;
+}
+.map-credit { margin-bottom: 2rem; }
+
+/* map legend */
+.map-legend { margin: .35rem 0 0; }
+.lg {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  vertical-align: -1px;
+  margin-right: .3rem;
+}
+.lg-deal  { background: var(--ink); border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--hair); }
+.lg-quiet { background: var(--surface); border: 2px solid var(--muted); }
+
+/* map pins */
+.bd-pin { background: none; border: none; }
+.bd-pin-dot {
+  display: block;
+  width: 18px; height: 18px;
+  margin: 4px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 3px solid var(--surface);
+  box-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+.bd-pin-quiet .bd-pin-dot {
+  background: var(--surface);
+  border: 3px solid var(--muted);
+  box-shadow: none;
+}
+
+/* map popup */
+.leaflet-popup-content-wrapper {
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: var(--radius);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+.leaflet-popup-tip {
+  background: var(--surface);
+  border: 2px solid var(--ink);
+}
+.leaflet-popup-content {
+  font: inherit;
+  font-size: .88rem;
+  line-height: 1.45;
+  margin: .9rem 1rem;
+}
+.pop { display: flex; flex-direction: column; max-height: 20rem; }
+.pop-scroll {
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+  scrollbar-gutter: stable;
+  -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 1.5rem), transparent 100%);
+  mask-image: linear-gradient(to bottom, black calc(100% - 1.5rem), transparent 100%);
+  padding-bottom: 1rem;
+}
+.pop-scroll::-webkit-scrollbar { width: 6px; }
+.pop-scroll::-webkit-scrollbar-track { background: var(--chip-bg); }
+.pop-scroll::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
+.pop-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin: 0 0 .15rem;
+}
+.pop-addr {
+  margin: 0 0 .55rem;
+  font-size: .68rem;
+  color: var(--muted);
+}
+.pop-deal { margin: .5rem 0; }
+.pop-deal .window { margin-left: 0; }
+.pop-deal ul { list-style: none; margin: .4rem 0 0; padding: 0; }
+.pop-deal ul li {
+  padding: .35rem 0;
+  border-top: 1px dashed var(--hair);
+  font-size: .85rem;
+}
+.pop-deal ul li:first-child { border-top: 0; padding-top: 0; }
+.pop-proof {
+  margin: .45rem 0 0;
+  padding: .4rem .55rem;
+  border: 1.5px solid var(--ink);
+  border-left: 4px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--chip-bg);
+  color: var(--chip-ink);
+  font-size: .7rem;
+  line-height: 1.5;
+}
+.pop-noprice {
+  margin: .4rem 0 0;
+  font-size: .68rem;
+  color: var(--note-ink);
+  font-style: italic;
+}
+.pop-meta {
+  margin: 0;
+  padding-top: .5rem;
+  border-top: 1px dashed var(--hair);
+  font-size: .66rem;
+  color: var(--muted);
+  flex: none;
+}
+.pop-meta a { text-decoration: underline; text-underline-offset: 2px; }
+.leaflet-container a.leaflet-popup-close-button {
+  color: var(--muted);
+  font-size: 1.2rem;
+  padding: 6px 8px 0 0;
+}
+/* Keep zoom/attribution controls below an open popup.
+   Leaflet's corner containers (.leaflet-top, .leaflet-bottom) are SIBLINGS
+   of .leaflet-map-pane (z-index 400), not children.  The popup pane sits at
+   z-index 700 inside the map pane, so it can never stack above a sibling at
+   z-index 1000 regardless of its own z-index.
+   Fix: lift the map pane above the corner containers so everything inside it
+   (including the popup pane at 700) renders on top. */
+.leaflet-top, .leaflet-bottom { z-index: 990 !important; }
+.leaflet-map-pane      { z-index: 1000 !important; }
+
+/* ---- responsive ---- */
+@media (max-width: 40rem) {
+  h1 { font-size: 2.8rem; }
+  #map { height: 62vh; }
+  .map-page header, .map-page main { padding: 0 .9rem; }
+}
+
+/* ---- focus ---- */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* No dark theme by design — the board stays light in every device setting.
+   A dark colour-scheme media block was removed here on 2026-08-11 at Eric's
+   request; a test fails if one is reintroduced. */
+
+/* ---- print ---- */
+@media print {
+  body { background: #fff; background-image: none; }
+  nav.meta, .nearest-row, details > summary::before { display: none; }
+  details { display: block; }
+  details > * { display: block; }
+}
+
+/* ---- Calendar page ------------------------------------------------------ */
+.cal-nav { display: flex; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+.cal-grid { width: 100%; border-collapse: collapse; table-layout: fixed; margin: 1rem 0 2rem; }
+.cal-grid th { font-size: 0.8rem; text-align: left; padding: 0.25rem; }
+.cal-cell {
+  border: 1px solid var(--rule, #d8d4cc);
+  vertical-align: top;
+  padding: 0.3rem;
+  height: 5.5rem;
+}
+.cal-out { border: 0; }
+.cal-today { outline: 2px solid var(--accent, #b4461e); outline-offset: -2px; }
+.cal-daynum { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.2rem; }
+.cal-chip {
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  padding: 0.1rem 0.25rem;
+  margin-bottom: 0.12rem;
+  border-radius: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cal-chip-deal { background: #efe7d8; }
+.cal-chip-event { background: #dde6ef; }
+.cal-chip-more { color: #6b6459; }
+.cal-day { margin: 0 0 1.5rem; }
+.cal-day h3 { margin-bottom: 0.4rem; }
+.cal-events, .cal-deals { margin: 0 0 0.5rem; padding-left: 1.1rem; }
+.cal-src { font-size: 0.75rem; }
+
+@media (max-width: 620px) {
+  .cal-cell { height: auto; min-height: 3.2rem; }
+  .cal-chip { font-size: 0.62rem; }
+}

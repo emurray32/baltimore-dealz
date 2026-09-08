@@ -16534,6 +16534,214 @@
           "proof_quote": "Monday through Friday | 4pm-6pm (At our bar only) Sangria Thursdays $10 off Pitchers of our House Sangria"
         }
       ]
+    },
+    {
+      "id": "greene-turtle-canton",
+      "name": "The Greene Turtle Canton",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "3803 Boston Street, Baltimore, MD 21224",
+      "phone": "(443) 453-9567",
+      "source_url": "https://www.thegreeneturtle.com/location/canton-md/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2768122,
+      "lon": -76.5641537,
+      "coords_source": "Nominatim search 3803 Boston Street, Baltimore, MD 21224 on 2026-09-08 returned OSM way 234066707 at 39.2768122,-76.5641537. Official Canton page prints 3803 Boston Street, Baltimore, MD 21224 and (443) 453-9567.",
+      "bar_hours": "Canton page: Monday-Thursday 11:00 AM-11:00 PM; Friday-Saturday 11:00 AM-12:00 AM; Sunday 11:00 AM-11:00 PM. Happy Hour graphic linked from that page: Monday-Friday 3pm-6pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Canton sports bar. Not in live venues.json. Official location page https://www.thegreeneturtle.com/location/canton-md/ prints address, phone, hours, and a Happy Hour link to https://images.getbento.com/accounts/eb3e90803dd3724a5b5a34e887068fd3/media/images/17536TGT_Corp26_HappyHour_Aug20.jpg. Wing Fest page lists Canton among participating Maryland locations.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Shots $3 (Fireball Cinnamon, Fireball Apple, Greene Tea)",
+              "price": "$3"
+            },
+            {
+              "text": "Tall drafts $3 (Miller Lite, Bud Light, Yuengling, Coors Light)",
+              "price": "$3"
+            },
+            {
+              "text": "Hard seltzers $4 (White Claw Mango, White Claw Black Cherry, Truly Wild Berry)",
+              "price": "$4"
+            },
+            {
+              "text": "Signature cocktails $5 (Boozy Cherry Limeade, Long Island Iced Tea, The Juicy Peach, Classic Rita)",
+              "price": "$5"
+            },
+            {
+              "text": "Silver Gate Vineyards wine $5 (Pinot Grigio, Chardonnay, Cabernet Sauvignon, Pinot Noir)",
+              "price": "$5"
+            },
+            {
+              "text": "Cans $5 (High Noon hard seltzer, NÜTRL hard seltzer)",
+              "price": "$5"
+            },
+            {
+              "text": "Tall craft Stella Artois Lager $5",
+              "price": "$5"
+            },
+            {
+              "text": "Bites $7 (onion rings, chicken quesadilla, spinach artichoke dip, mozzarella sticks)",
+              "price": "$7"
+            },
+            {
+              "text": "Beer buckets $15 (Bud Light, Coors Light, Miller Lite, Yuengling Flight)",
+              "price": "$15"
+            },
+            {
+              "text": "Sun Cruiser buckets $25 (Tea, Pink Lemonade)",
+              "price": "$25"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://images.getbento.com/accounts/eb3e90803dd3724a5b5a34e887068fd3/media/images/17536TGT_Corp26_HappyHour_Aug20.jpg",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "HAPPY HOUR MONDAY-FRIDAY 3PM-6PM $3 shots Fireball Cinnamon, Fireball Apple, Greene Tea; tall drafts Miller Lite, Bud Light, Yuengling, Coors Light. $4 hard seltzers White Claw Mango, Black Cherry, Truly Wild Berry. $5 signature cocktails, Silver Gate Vineyards wine, High Noon and NÜTRL cans, tall craft Stella Artois Lager. $7 bites onion rings, chicken quesadilla, spinach artichoke dip, mozzarella sticks. BEER BUCKETS $15 Bud Light, Coors Light, Miller Lite, Yuengling Flight; $25 Sun Cruiser Tea, Pink Lemonade"
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "All-you-can-eat wings $19.99 (first order 10 boneless or bone-in wings, fries and celery, ranch or blue cheese, choice of 2 sauces; each additional order 5 wings)",
+              "price": "$19.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.thegreeneturtle.com/wingfest2026/",
+          "food_categories": [
+            "wings"
+          ],
+          "proof_quote": "$19.99 All You Can Eat Wings. FIRST ORDER 10 Piece Boneless or Bone-In Wings, Fries & Celery, Ranch or Blue Cheese, Choice of 2 Wing Sauces. EACH ADDITIONAL ORDER 5 Boneless or Bone-In Wings. Available Monday through Wednesday for a limited time. AVAILABLE AT THE FOLLOWING GREENE TURTLE LOCATIONS: Maryland Canton",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "matthews-pizza",
+      "name": "Matthew's Pizza",
+      "neighborhood": "Highlandtown",
+      "status": "verified",
+      "address": "3131 Eastern Avenue, Baltimore, MD 21224",
+      "phone": "(410) 276-8755",
+      "source_url": "https://matthewspizza.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2861673,
+      "lon": -76.5718663,
+      "coords_source": "Nominatim search 3131 Eastern Avenue, Baltimore, MD 21224 on 2026-09-08 returned OSM way 336234633 at 39.2861673,-76.5718663. Display name labels the building Canton, Highlandtown. Official homepage prints 3131 Eastern Avenue, Baltimore, MD 21224 and says Highlandtown. Phone (410) 276-8755.",
+      "bar_hours": "Homepage: Mon-Sat 11am-9pm; Sun 12pm-8pm. Dining room stops seating 30 minutes before closing. Lunch special Monday-Thursday 11am-4pm. Weekly specials Monday, Tuesday, and Wednesday 4pm-9pm.",
+      "ops_notes": "Deal Scout 2026-09-08: Highlandtown pizzeria, city's oldest per official homepage (since 1943). Not in live venues.json. One address on matthewspizza.com. Weekly Specials category lists three priced weekday items; Lunch Special category lists the Monday-Thursday pizza-and-salad special.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Small mozzarella cheese pizza with side salad $12.95",
+              "price": "$12.95"
+            }
+          ],
+          "start": 660,
+          "end": 960,
+          "time_window": "11am-4pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://matthewspizza.com/menu/lunch-special/monday-thursday-11am-4pm/",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "Monday – Thursday 11am – 4pm $12.95 Small mozzarella cheese pizza with side salad"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Spaghetti with marinara $9.99",
+              "price": "$9.99"
+            }
+          ],
+          "start": 960,
+          "end": 1260,
+          "time_window": "4pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://matthewspizza.com/menu/weekly-specials/monday-4pm-9pm/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Monday 4pm – 9pm $9.99 Spaghetti with marinara"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Both Cheese Pizza $10.95",
+              "price": "$10.95"
+            }
+          ],
+          "start": 960,
+          "end": 1260,
+          "time_window": "4pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://matthewspizza.com/menu/weekly-specials/tuesday-4pm-9pm/",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "Tuesday 4pm – 9pm $10.95 Both Cheese Pizza"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Crab Pie Night $18.00",
+              "price": "$18.00"
+            }
+          ],
+          "start": 960,
+          "end": 1260,
+          "time_window": "4pm-9pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://matthewspizza.com/menu/weekly-specials/wednesday-4pm-9pm/",
+          "food_categories": [
+            "pizza",
+            "seafood/crab"
+          ],
+          "proof_quote": "Wednesday 4pm – 9pm $18.00 Crab Pie Night"
+        }
+      ]
     }
   ]
 }

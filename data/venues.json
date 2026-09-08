@@ -18781,6 +18781,121 @@
           "proof_quote": "Lunch Special 11:00 am - 3:30 pm w. Miso Soup & Salad (L). Regular Maki Choice of two $10.95 Sushi Lunch Special 11:00 am - 3:30 pm Served w. Miso Soup & House Salad (L). Salmon Lunch $14.95 Kitchen Lunch Special 11:00 am - 3:30 pm Served w. White Rice or Brown Rice (L). General Tso's Chicken $9.95"
         }
       ]
+    },
+    {
+      "id": "ledo-pizza-federal-hill",
+      "name": "Ledo Pizza Federal Hill",
+      "neighborhood": "Riverside",
+      "status": "verified",
+      "address": "913 East Fort Avenue, Baltimore, MD 21230",
+      "phone": "(410) 528-8494",
+      "source_url": "https://ledopizza.com/menu/deals/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2707581,
+      "lon": -76.6017275,
+      "coords_source": "Nominatim search 913 East Fort Avenue, Baltimore, MD 21230 on 2026-09-08 returned OSM node 2984647410 named Ledo Pizza at 39.2707581,-76.6017275. Display name neighbourhood is Riverside, city Baltimore, postcode 21230. Official store page https://ledopizza.com/store/md-baltimore-federal-hill/ prints 913 East Fort Avenue, Baltimore, MD 21230 and (410) 528-8494 and titles the room Federal Hill.",
+      "bar_hours": "Official Federal Hill store hours: Sunday 12:00 pm - 9:00 pm; Monday–Thursday 11:00 am - 9:00 pm; Friday–Saturday 11:00 am - 10:00 pm. Tuesday calzone line says all day long and does not print a clock. Lunch deals print Mon-Fri 11 am – 3 pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Ledo at 913 East Fort Avenue, 21230. Not in live venues.json. Official location page https://ledopizza.com/store/md-baltimore-federal-hill/. Priced weekday specials are on the official deals page https://ledopizza.com/menu/deals/ and are not excluded for this store.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$6 calzone all day Tuesday, dine-in or carryout, classic Pepperoni, Meatlovers, Chicken, Veggie, or Buffalo, made as-is with no substitutions",
+              "price": "$6"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ledopizza.com/menu/deals/",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "Every Tuesday, enjoy a $6 Calzone at Ledo Pizza —all day long! Available for dine-in or carryout, this deal features our classic calzones: Pepperoni, Meatlovers, Chicken, Veggie, or Buffalo.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Lunch deal: six jumbo wings with choice of sauce, small fries, and a drink $11.99",
+              "price": "$11.99"
+            },
+            {
+              "text": "Lunch deal: classic 8″ LEDO pizza with up to 3 toppings $11.99",
+              "price": "$11.99"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://ledopizza.com/menu/deals/",
+          "food_categories": [
+            "wings",
+            "pizza"
+          ],
+          "proof_quote": "Six Jumbo Wings with your choice of sauce served with small fries and a drink! Available Mon-Fri: 11 am – 3 pm. A classic 8″ LEDO Pizza with up to 3 delicious toppings is available Monday through Friday, 11 am—3 pm."
+        }
+      ]
+    },
+    {
+      "id": "the-brewers-art",
+      "name": "The Brewer's Art",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "1106 N Charles St, Baltimore, MD 21201",
+      "phone": "(410) 547-6925",
+      "source_url": "https://thebrewersartmd.com/faq",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3027444,
+      "lon": -76.6162082,
+      "coords_source": "Nominatim search 1106 N Charles St, Baltimore, MD 21201 on 2026-09-08 returned OSM node 3432418500 at 39.3027444,-76.6162082. Display name neighbourhood is Mid-Town Belvedere, city Baltimore, postcode 21201. Official contact page prints 1106 N Charles St, Baltimore, MD 21201 and 410-547-6925. Official homepage places the room in Baltimore's historic Mt. Vernon district. Nominatim suburb Sowebo was not used.",
+      "bar_hours": "Official homepage: Bar 4:00 PM -12:00 AM; Kitchen 4:00 PM - 9:45 PM. Official FAQ: open 7 days a week, closed only Thanksgiving, Christmas Day, and July 4th unless announced. Happy hour printed on the FAQ is Monday-Friday, 4-6.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore brewpub at 1106 N Charles St, 21201. Not in live venues.json. Official site https://thebrewersartmd.com/. Happy hour price and weekday are on https://thebrewersartmd.com/faq. Contact https://thebrewersartmd.com/contact.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$5 draft beers",
+              "price": "$5"
+            },
+            {
+              "text": "$5 glasses of house red and white wine",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://thebrewersartmd.com/faq",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour is Monday-Friday, 4-6. $5 draft beers and $5 glasses of house red and white wine."
+        }
+      ]
     }
   ]
 }

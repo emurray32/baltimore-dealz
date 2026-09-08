@@ -15097,6 +15097,530 @@
           "proof_quote": "Brunch Specials Saturday -Sunday: 11 AM–2 PM"
         }
       ]
+    },
+    {
+      "id": "the-ruxton",
+      "name": "The Ruxton",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "720 Aliceanna Street, Baltimore MD 21202",
+      "phone": "(443) 688-9488",
+      "source_url": "https://theruxtonsteakhouse.com/baltimore/wp-content/uploads/sites/2/2026/05/Ruxton_HH_050826.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2834455,
+      "lon": -76.602183,
+      "ops_notes": "Deal Scout 2026-09-08: theruxtonsteakhouse.com/baltimore contact confirms Happy Hour Monday-Friday 4:00pm-6:00pm; Ruxton_HH_050826.pdf pdftotext. Nominatim of 720 Aliceanna Street, Baltimore, MD 21202.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Stiletto $10",
+              "price": "$10"
+            },
+            {
+              "text": "Old Fashioned $10",
+              "price": "$10"
+            },
+            {
+              "text": "Margarita $10",
+              "price": "$10"
+            },
+            {
+              "text": "Nepenthe Space Jellyfish IPA $5",
+              "price": "$5"
+            },
+            {
+              "text": "Union Skipjack Pilsner $5",
+              "price": "$5"
+            },
+            {
+              "text": "Wine (sparkling, red, rosé, white) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Chargrilled oysters (3) $9",
+              "price": "$9"
+            },
+            {
+              "text": "House-made tater tots $7",
+              "price": "$7"
+            },
+            {
+              "text": "Truffled waffle fries $6",
+              "price": "$6"
+            },
+            {
+              "text": "Ruxton ceviche $11",
+              "price": "$11"
+            },
+            {
+              "text": "Frito mixto $11",
+              "price": "$11"
+            },
+            {
+              "text": "Peppered bison pit beef sandwich $10",
+              "price": "$10"
+            },
+            {
+              "text": "Chopped salad $7",
+              "price": "$7"
+            },
+            {
+              "text": "Caesar salad $7",
+              "price": "$7"
+            },
+            {
+              "text": "Dry-aged steakhouse burger $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://theruxtonsteakhouse.com/baltimore/wp-content/uploads/sites/2/2026/05/Ruxton_HH_050826.pdf",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps",
+            "sandwich/cheesesteak",
+            "burger"
+          ],
+          "proof_quote": "happy hour $10 COCKTAILS stiletto old fashioned Margarita $5 BEERS NEPENTHE SPACE JELLYFISH IPA UNION SKIPJACK PILSNER $7 WINES SPARKLING | RED ROSÉ | WHITE LIGHT FARE chargrilled oysters (3) — 9 house-made tater tots — 7 truffled waffle fries — 6 ruxton ceviche — 11 frito mixto — 11 peppered bison pit “beef” sandwich — 10 chopped salad — 7 caesar salad — 7 dry-aged steakhouse burger — 10 mon–fri 4pm–6pm"
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "the-cannon-room",
+      "name": "The Cannon Room",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1715 Thames Street, Baltimore, MD 21231",
+      "phone": "(443) 552-1300",
+      "source_url": "https://www.pendry.com/baltimore/dining/the-cannon-room/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: pendry.com Cannon Room + seasonal-happenings. Martini Hour is Rec Pier only, not stored here.",
+      "lat": 39.2811103,
+      "lon": -76.5919083,
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08",
+      "deals": [
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Whiskey Workshop $102",
+              "price": "$102"
+            }
+          ],
+          "start": 1020,
+          "end": 1080,
+          "time_window": "Sundays | 5:00pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.pendry.com/baltimore/experiences/seasonal-happenings/",
+          "food_categories": [
+            "drink",
+            "event"
+          ],
+          "proof_quote": "Whiskey Workshop at The Cannon Room Sundays | 5:00pm Only at Pendry. Join us in The Cannon Room, our signature American whiskey bar where intimate style is on stunning display, for a one-hour long cocktail crafting demonstration and in-depth tasting of a variety of locally crafted whiskeys. $102 per Person"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Half-priced bottles",
+              "price": "1/2 off"
+            }
+          ],
+          "start": 1020,
+          "end": 1320,
+          "time_window": "Tuesdays | 5:00pm – 10:00pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.pendry.com/baltimore/experiences/seasonal-happenings/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Now Pouring at Rec Pier Chop House Tuesdays | 5:00pm – 10:00pm Taste our curated collection of sommelier-approved specially priced wines. Join us for dinner and drinks at Rec Pier Chop House, in The Cannon Room or at the bar for half-priced bottles."
+        }
+      ],
+      "notes_public": "Whiskey Workshop Sundays at 5:00pm, $102 per person. Half-priced bottles Tuesdays 5:00pm–10:00pm."
+    },
+    {
+      "id": "lebanese-taverna-harbor-east",
+      "name": "Lebanese Taverna Harbor East",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "719 S. President Street, Baltimore, MD 21202",
+      "phone": "410-244-5533",
+      "source_url": "https://www.lebanesetaverna.com/lebanese-taverna",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2835366,
+      "lon": -76.6024739,
+      "bar_hours": "Sun–Thu 11:30–9:00; Fri–Sat 11:30–10:00; Brunch Sunday 11:00–2:00",
+      "ops_notes": "Deal Scout 2026-09-08: Harbor East block on lebanesetaverna.com/lebanese-taverna (719 S. President Street). Mezza $38 from /mezza-mondays for full-service restaurants; clock times not published for the special (lunch and dinner only). Happy Hour URL had no priced copy. Nominatim on official address. Replaces closed/no-site new100_1 slot.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$38 Bottomless Mezza (per person)",
+              "price": "$38"
+            }
+          ],
+          "time_window": "lunch and dinner",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.lebanesetaverna.com/mezza-mondays",
+          "food_categories": [
+            "small-plate/apps"
+          ],
+          "proof_quote": "Every Monday, our full-service restaurants roll out a bottomless menu of Lebanese Taverna mezza classics. $38 per person Must be enjoyed by the whole table. Not available for parties of 8 or more. Available lunch and dinner. Not available for take out.",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Sunday Brunch"
+            }
+          ],
+          "start": 660,
+          "end": 840,
+          "time_window": "11:00am-2:00pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.lebanesetaverna.com/lebanese-taverna",
+          "food_categories": [
+            "brunch"
+          ],
+          "proof_quote": "Harbor East - Baltimore, MD 719 S. President Street, Baltimore, MD 21202 Brunch Sunday 11:00-2:00",
+          "prices_published": false
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "fraziers-on-the-avenue",
+      "name": "Frazier's on the Avenue",
+      "neighborhood": "Hampden",
+      "status": "verified",
+      "address": "917-919 W. 36th St, Baltimore, MD 21211",
+      "phone": "(410) 662-4914",
+      "source_url": "https://www.fraziersbmore.com/new-page",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3302288,
+      "lon": -76.6383182,
+      "ops_notes": "Deal Scout 2026-09-08: fraziersbmore.com/new-page and homepage. Lat/lon Nominatim for official 36th St address.",
+      "notes_public": "Hours on site: Mon–Fri 11am–2am, Sat–Sun 9am–2am. Happy hour Mon–Fri 3–7pm.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3 Miller Lite, Yuengling, Boh",
+              "price": "$3"
+            },
+            {
+              "text": "$1 Off Rail Liquor and Wine",
+              "price": "$1 off"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Monday-Friday 3p-7p $3 Miller Lite, Yuengling, Boh / $1 Off Rail Liquor and Wine"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Half Price Wings All Day",
+              "price": "Half price"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "wings"
+          ],
+          "proof_quote": "Monday. Half Price Wings All Day"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$3 Drafts after 4pm (Yuengling, Miller Lite, Boh)",
+              "price": "$3"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "after 4pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Monday. $3 Drafts after 4pm (Yuengling, Miller Lite, Boh)"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$5 Tots",
+              "price": "$5"
+            },
+            {
+              "text": "$3 Domestic Bottles",
+              "price": "$3"
+            }
+          ],
+          "start": 1200,
+          "end": null,
+          "time_window": "8pm-close",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ],
+          "proof_quote": "Tuesday. 8p-Close $5 Tots $3 Domestic Bottles"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$10 Ribs w/ Fries and Slaw",
+              "price": "$10"
+            },
+            {
+              "text": "$3 Drafts (Miller Lite, Yuengling, Boh)",
+              "price": "$3"
+            },
+            {
+              "text": "$4 Union Beers",
+              "price": "$4"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm-close",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "Wednesday. 4p-Close $10 Ribs w/ Fries and Slaw $3 Drafts (Miller Lite, Yuengling, Boh) $4 Union Beers"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Half Price Burgers All Day (excludes Bison, Sliders and Beyond Burger)",
+              "price": "Half price"
+            },
+            {
+              "text": "$12 Domestic Buckets",
+              "price": "$12"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "burger",
+            "drink"
+          ],
+          "proof_quote": "thursday. Half Price Burgers All Day *Excludes Bison, Sliders and Beyond Burger $12 Domestic Buckets"
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$2 Tacos at the bar (Soft and Hard)",
+              "price": "$2"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "tacos"
+          ],
+          "proof_quote": "friday. 4p-7p $2 Tacos at the bar (Soft and Hard)"
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "1lb Shrimp $14",
+              "price": "$14"
+            },
+            {
+              "text": "$3 Drafts (Miller Lite, Yuengling, Boh)",
+              "price": "$3"
+            }
+          ],
+          "start": 960,
+          "end": null,
+          "time_window": "4pm-close",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.fraziersbmore.com/new-page",
+          "food_categories": [
+            "seafood/crab",
+            "drink"
+          ],
+          "proof_quote": "sunday. 4p-Close 1lb Shrimp $14 $3 Drafts (Miller Lite, Yuengling, Boh)"
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "peabody-heights",
+      "name": "Peabody Heights Brewery",
+      "neighborhood": "Abell",
+      "status": "verified",
+      "address": "401 East 30th Street, Baltimore, MD 21218",
+      "phone": "410-467-7837",
+      "source_url": "https://peabodyheightsbrewery.com/event/weekly-happy-hour/2026-08-19/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3242354,
+      "lon": -76.6104126,
+      "ops_notes": "Deal Scout 2026-09-08: peabodyheightsbrewery.com event weekly-happy-hour/2026-08-19 plus homepage hours. Fetched series instance is dated 2026-08-19; copy says every Wednesday 4pm-6pm. Homepage events module showed that same date at 12:00–2:00pm. Lat/lon Nominatim.",
+      "notes_public": "Happy hour every Wednesday 4–6pm: $2 off pints and 25% off appetizers (event page). Taproom hours: Mon 4–9pm, Tue–Thu 4–10pm, Fri 4–11pm, Sat 12–10pm, Sun 12–8pm.",
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "$2 off pints",
+              "price": "$2 off"
+            },
+            {
+              "text": "25% appetizers",
+              "price": "25% off"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://peabodyheightsbrewery.com/event/weekly-happy-hour/2026-08-19/",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "We're launching a Happy Hour EVERY Wednesday from 4pm-6pm here at Peabody Heights Brewery. Enjoy $2 off pints and 25% appetizers."
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+    },
+    {
+      "id": "monument-city-brewing",
+      "name": "Monument City Brewing",
+      "neighborhood": "Highlandtown",
+      "status": "verified",
+      "address": "1 N. Haven Street, Baltimore, MD 21224",
+      "phone": "(443) 529-8131",
+      "source_url": "https://monumentcitybrewing.com/event/thursday-neighborhood-happy-hour/2026-09-10/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2929307,
+      "lon": -76.5624118,
+      "ops_notes": "Deal Scout 2026-09-08: monumentcitybrewing.com Thursday Neighborhood Happy Hour event 2026-09-10. Taproom hours also on page. Lat/lon Nominatim for official address.",
+      "notes_public": "Thursday neighborhood happy hour: $5 pours; event lists 4–9pm. Taproom: Thu–Fri 4–10pm, Sat 12–10pm, Sun 12–6pm; closed Mon–Wed.",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$5 pours all night",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1260,
+          "time_window": "4pm-9pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://monumentcitybrewing.com/event/thursday-neighborhood-happy-hour/2026-09-10/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Join us every Thursday for our neighborhood happy hour. $5 pours all night and food from our friends and neighbors, Motte. September 10th • 4:00 pm - 9:00 pm"
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     }
   ]
 }

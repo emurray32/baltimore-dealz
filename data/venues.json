@@ -17877,6 +17877,46 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "vaccaros",
+      "name": "Vaccaro's Italian Pastry",
+      "neighborhood": "Little Italy",
+      "status": "verified",
+      "address": "222 Albemarle Street, Baltimore, MD 21202",
+      "phone": "410-685-4905",
+      "source_url": "https://www.vaccarospastry.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2867954,
+      "lon": -76.6029043,
+      "coords_source": "Nominatim search 222 Albemarle Street, Baltimore, MD 21202 on 2026-09-08 returned OSM way 336329177 named Vaccaro's Italian Pastry Shop at 39.2867954,-76.6029043. Display name neighbourhood is Little Italy and postcode is 21202. Official locations page prints Little Italy 222 Albemarle Street Baltimore, MD 21202 and 410-685-4905.",
+      "bar_hours": "Official locations page for Little Italy sit-down café: After Memorial Day, Sun–Fri 9am–9pm, Saturday 9am–10pm. As of October 1st: Sun–Fri 9am–8pm, Saturday 9am–9pm. Monday Night Special clock is printed separately as 6:00 P.M. to 8:00 P.M., seated by 7:00 pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Little Italy sit-down café. Not in live venues.json. Official site https://www.vaccarospastry.com/. Monday Night Special is printed for this café only. Canton at 2919 O'Donnell Street and Hunt Valley Towne Centre were not written. Hunt Valley is not City of Baltimore.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "All you can eat dessert and coffee $24.15 a person. All alcohol products excluded. Must be seated by 7:00 pm. Monday holidays excluded. Little Italy sit-down café only.",
+              "price": "$24.15"
+            }
+          ],
+          "start": 1080,
+          "end": 1200,
+          "time_window": "6pm-8pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.vaccarospastry.com/promotions/",
+          "food_categories": [
+            "drink",
+            "event"
+          ],
+          "proof_quote": "Little Italy Monday Night Special. Every Monday night from 6:00 P.M. to 8:00 P.M. we offer an all you can eat dessert and coffee special for $24.15 a person. All alcohol products excluded. You must be seated by 7:00 pm. This is for our sit-down café in Little Italy. Monday holidays are excluded."
+        }
+      ]
     }
   ]
 }

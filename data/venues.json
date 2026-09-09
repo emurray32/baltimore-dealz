@@ -3758,17 +3758,43 @@
       "id": "crossbar",
       "name": "Crossbar",
       "neighborhood": "Federal Hill",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "18 E Cross St, Baltimore, MD 21230",
-      "source_url": "https://www.crossbarbaltimore.com/",
+      "source_url": "https://www.crossbarbaltimore.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: crossbarbaltimore.com — hours only, no HH $. deals=[] bump.",
-      "lat": 39.277032,
-      "lon": -76.613586,
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals=[] from official menu JPGs on crossbarbaltimore.com/menu (OCR of CROSSBAR FAVS 04.2026). City of Baltimore at 18 E Cross St. Alcohol shown as bottomless mimosas or Bloody Marys on brunch section; venue is Baltimore's Biergarten with draft beer sizes/half-liter/liter/boot list on menu page 2.",
+      "lat": 39.2770324,
+      "lon": -76.6135863,
+      "deals": [
+        {
+          "days": [
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Brunch bottomless mimosas or Bloody Marys $12.99 (2 hour limit)",
+              "price": "$12.99"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.crossbarbaltimore.com/menu",
+          "food_categories": [
+            "drink",
+            "brunch"
+          ],
+          "proof_quote": "Brunch Served 11:00am-3:00pm on Saturday and Sunday only ADD BOTTOMLESS MIMOSAS OR BLOODY MARYS *12.99 2 hour limit"
+        }
+      ],
       "notes_public": "No published happy hour prices on the venue website.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "phone": "+1 (443) 438-4013",
+      "coords_source": "Live venues.json already had lat/lon for 18 E Cross St, Baltimore, MD 21230 (Federal Hill). Nominatim 2026-09-09 reconfirmed 39.2770324,-76.6135863."
     },
     {
       "id": "locals-only",

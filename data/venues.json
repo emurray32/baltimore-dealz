@@ -19269,6 +19269,50 @@
           "proof_quote": "Happy Hour Drink Specials Tues to Thurs 3-6pm $ 2.00 Hamm's & High Life $ 4.00 Zadie's Drafts"
         }
       ]
+    },
+    {
+      "id": "new-chef-carry-out",
+      "name": "New Chef Carry Out",
+      "neighborhood": "Rosemont East",
+      "status": "verified",
+      "address": "6604 Belair Rd Baltimore, MD 21206",
+      "phone": "(410) 426-8888",
+      "source_url": "https://order.newchefbaltimore.com/order/main/luncheon-special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3543268,
+      "lon": -76.5318789,
+      "coords_source": "Nominatim search 6604 Belair Rd, Baltimore, MD 21206 on 2026-09-08 returned OSM node 3320281958 named New Chef at 39.3543268,-76.5318789. Display name neighbourhood is Rosemont East, city Baltimore, postcode 21206. Official luncheon page and homepage print 6604 Belair Rd Baltimore, MD 21206 and telephone (410) 426-8888.",
+      "bar_hours": "Official homepage Open Hours and order-page schema openingHoursSpecification: Monday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:30 PM. Lunch special clock printed on the luncheon page is Monday–Saturday 11:00 AM–4:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 6604 Belair Rd, 21206. Not in live venues.json. Official site https://www.newchefbaltimore.com/. Priced weekday lunch special is on https://order.newchefbaltimore.com/order/main/luncheon-special.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $9.50, served with roast pork fried rice and an egg roll, soda, or soup (including chicken chow mein, lo mein, broccoli chicken, sesame chicken, and General Tso's chicken)",
+              "price": "$9.50"
+            }
+          ],
+          "start": 660,
+          "end": 960,
+          "time_window": "11am-4pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://order.newchefbaltimore.com/order/main/luncheon-special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Mon. - Sat.: 11:00 am to 4:00pm Served with Roast Pork Fried Rice and Egg Roll or Soda or Soup L1. Chicken Chow Mein $9.50"
+        }
+      ]
     }
   ]
 }

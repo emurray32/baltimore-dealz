@@ -7063,13 +7063,13 @@
       "status": "verified",
       "address": "1701 North Charles Street, Baltimore, MD 21201",
       "phone": "(667) 212-4273",
-      "source_url": "https://www.almacocinalatina.com/happy-hour",
+      "source_url": "https://static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967358d04e.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: almacocinalatina.com/happy-hour — times only in text; HH gallery img OCR = no prices. Cleared prior archive-image $ list.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_97: Official Happy Hour PDF on live /page/pdf-menus (not archived orphan). Abs $ + Sun all night / Wed–Fri 5–7 bar. Alcohol lines shipped. Retained live coords.",
       "lat": 39.3089844,
       "lon": -76.6161481,
-      "notes_public": "Happy hour is at the bar only. Closed Mon–Tue. Prices not published on the current happy-hour page.",
+      "notes_public": "Happy hour at the bar: Sunday all night; Wednesday–Friday 5–7pm. $10 house wine, $6 beer, $8 vermouth, $10 classic Latin cocktails (official HH PDF).",
       "deals": [
         {
           "days": [
@@ -7079,20 +7079,32 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "$10 Happy Hour red & white wine (glass)",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Monopolio IPA or Dark Lager",
+              "price": "$6"
+            },
+            {
+              "text": "$8 vermouth (Cueva nueva / Prioprat Natur)",
+              "price": "$8"
+            },
+            {
+              "text": "$10 classic Latin cocktails (Daiquiri, Mai Tai, Caipirinha, Margarita)",
+              "price": "$10"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm (bar only)",
           "happy_hour": true,
-          "prices_published": false,
-          "source_url": "https://www.almacocinalatina.com/happy-hour",
-          "proof_quote": "Join us Sunday all evening and Wednesday through Friday from 5–7pm. Bar seating is first come, first served!",
+          "verified_date": "2026-09-09",
+          "source_url": "https://static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967358d04e.pdf",
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Happy Hour @ the Bar. Sunday All Night. Wednesday - Friday 5pm-7pm. Drinks: WINE 10/38 Happy Hour Red & White; BEER 6 Monopolio IPA / Monopolio Dark Lager; VERMOUTH 8 Cueva nueva Vermut / Prioprat Natur; CLASSIC LATIN COCKTAILS 10 Daiquiri / Mai Tai / Caipirinha / Margarita."
         },
         {
           "days": [
@@ -7100,23 +7112,36 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "$10 Happy Hour red & white wine (glass)",
+              "price": "$10"
+            },
+            {
+              "text": "$6 Monopolio IPA or Dark Lager",
+              "price": "$6"
+            },
+            {
+              "text": "$8 vermouth (Cueva nueva / Prioprat Natur)",
+              "price": "$8"
+            },
+            {
+              "text": "$10 classic Latin cocktails (Daiquiri, Mai Tai, Caipirinha, Margarita)",
+              "price": "$10"
             }
           ],
-          "start": 1020,
-          "end": null,
-          "time_window": "5pm-close (bar only)",
+          "time_window": "all night (bar only)",
           "happy_hour": true,
-          "prices_published": false,
-          "source_url": "https://www.almacocinalatina.com/happy-hour",
-          "proof_quote": "Join us Sunday all evening and Wednesday through Friday from 5–7pm. Bar seating is first come, first served!",
+          "verified_date": "2026-09-09",
+          "source_url": "https://static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967358d04e.pdf",
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Happy Hour @ the Bar. Sunday All Night. Wednesday - Friday 5pm-7pm. Drinks: WINE 10/38 Happy Hour Red & White; BEER 6 Monopolio IPA / Monopolio Dark Lager; VERMOUTH 8 Cueva nueva Vermut / Prioprat Natur; CLASSIC LATIN COCKTAILS 10 Daiquiri / Mai Tai / Caipirinha / Margarita.",
+          "start": null,
+          "end": null
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 1701 North Charles Street, Baltimore, MD 21201"
     },
     {
       "id": "wicked-sisters",

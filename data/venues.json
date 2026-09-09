@@ -19648,6 +19648,89 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "rallys-corner-bar",
+      "name": "Rally's Corner Bar",
+      "neighborhood": "Downtown",
+      "status": "verified",
+      "address": "32 Market Place, Baltimore, MD 21202",
+      "phone": "(410) 908-0650",
+      "source_url": "https://powerplantlive.com/eat-and-drink/rallys-corner-bar/weekly-specials/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2888601,
+      "lon": -76.6069842,
+      "coords_source": "Nominatim search 32 Market Place, Baltimore, MD 21202 on 2026-09-09 returned OSM way 6012059 at 39.2888601,-76.6069842. Display name is 32, Market Place, Power Plant Live!, Downtown, Baltimore, postcode 21202. A second house-number hit, OSM way 1014172807 at 39.2895970,-76.6072589, also names 32 Market Place in Power Plant Live! and was not used. A follow-up search Power Plant Live Baltimore returned the named commercial OSM way 242968661 Power Plant Live! at 39.2890407,-76.6073433. Official venue details print Address 32 Market Place, Baltimore, MD 21202. Official page telephone printed with that street address is 410-908-0650.",
+      "bar_hours": "Official Rally's Corner Bar page does not print restaurant service hours; the hours field is empty. Happy hour clock printed on the official weekly-specials page is Monday-Friday 3:00 PM-7:30 PM. That is the special clock, not full service hours. The Thursday Roll Call line prints no clock.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore bar at 32 Market Place, 21202, inside Power Plant Live!, Downtown. Not in live venues.json. Official specials page https://powerplantlive.com/eat-and-drink/rallys-corner-bar/weekly-specials/happy-hour. Official venue page https://powerplantlive.com/eat-and-drink/rallys-corner-bar.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Green and white tea shots $3",
+              "price": "$3"
+            },
+            {
+              "text": "Local drafts, Deep Eddy crushes, and Jameson $5",
+              "price": "$5"
+            },
+            {
+              "text": "Classic margaritas, dirty soda, and Surfsides $6",
+              "price": "$6"
+            },
+            {
+              "text": "Jager bombs and sour berry lemon drops $7",
+              "price": "$7"
+            }
+          ],
+          "start": 900,
+          "end": 1170,
+          "time_window": "3pm-7:30pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://powerplantlive.com/eat-and-drink/rallys-corner-bar/weekly-specials/happy-hour",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Every Monday, Tuesday, Wednesday, Thursday, Friday 3:00 PM-7:30 PM $3 Green & White Tea Shots $5 Local Drafts, Deep Eddy Crushes, & Jameson $6 Classic Margaritas, Dirty Soda & Surfsides $7 Jager Bombs & Sour Berry Lemon Drops"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Natty Lights and green tea shots $1",
+              "price": "$1"
+            },
+            {
+              "text": "Bohs and White Claws $4",
+              "price": "$4"
+            },
+            {
+              "text": "Sour, Deep Eddy, and Jager bombs $5",
+              "price": "$5"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://powerplantlive.com/eat-and-drink/rallys-corner-bar",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Part of Thursday Social at Power Plant Live! - Every Thursday - Karaoke, then DJ all night. $1 Natty Lights & Green Tea Shots $4 Bohs & White Claws $5 Sour, Deep Eddy & Jager Bombs",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

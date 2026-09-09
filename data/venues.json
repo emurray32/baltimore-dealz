@@ -17402,44 +17402,19 @@
       "status": "verified",
       "address": "10 Market Place, Baltimore, MD 21202",
       "phone": "410-908-0650",
-      "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden",
+      "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/game-day-specials-2026",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2896777,
       "lon": -76.6072656,
-      "coords_source": "OpenStreetMap Nominatim geocode of official address 10 Market Place, Baltimore, MD 21202, 2026-09-08.",
+      "coords_source": "Retained live venues_live.json Nominatim pin for 10 Market Place, Baltimore, MD 21202 (39.2896777,-76.6072656).",
       "bar_hours": "Official specials pages: Wed–Thu 12pm–10pm; Fri 12pm–12am; Sat 11am–12am; Sun 11am–9pm. Happy Hour Wed–Fri 4pm–7pm. No Mon–Tue hours published on those pages.",
-      "ops_notes": "Deal Scout 2026-09-08: official operator pages on powerplantlive.com. Candidate name Leinenkugel's Beer Garden; site name is Leinie Lodge & Beer Garden. Phone 410-908-0650 is the Power Plant Live number printed on the venue pages. Kids Eat Free header window is 12:00 PM–11:30 PM; same page says offer valid during open times, so close may be earlier than 11:30pm on some days.",
+      "ops_notes": "Deal Scout 2026-09-09: LIVE unpriced filled with absolute game-day dollars from official powerplantlive.com game-day specials page. Alcohol shown as $5 Deep Eddy Crushes, $5 Local Beers, $5 Bombs for all baseball games home and away. HH page still 50% OFF domestic drafts and rail cocktails Wed–Fri 4–7pm — half-off not shipped. Phone is Power Plant Live number on venue pages. Venue hours on specials pages: Wed–Thu 12pm–10pm; Fri 12pm–12am; Sat 11am–12am; Sun 11am–9pm.",
       "deals": [
         {
           "days": [
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "50% off domestic drafts",
-              "price": "50% off"
-            },
-            {
-              "text": "50% off rail cocktails",
-              "price": "50% off"
-            }
-          ],
-          "start": 960,
-          "end": 1140,
-          "time_window": "4pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-08",
-          "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/leinies-happy-hour",
-          "food_categories": [
-            "drink"
-          ],
-          "proof_quote": "Happy Hour at Leinie's. Every Wednesday, Thursday, Friday 4:00 PM-7:00 PM Leinie Lodge & Beer Garden. Join us for Happy Hour every Wednesday through Friday from 4-7pm and get 50% OFF domestic drafts and rail cocktails!"
-        },
-        {
-          "days": [
+            "mon",
+            "tue",
             "wed",
             "thu",
             "fri",
@@ -17448,17 +17423,29 @@
           ],
           "items": [
             {
-              "text": "Free kids meal with purchase of an adult entree (Port Discovery ticket/receipt required; one free kids meal per adult entree)",
-              "price": "Free"
+              "text": "Deep Eddy Crushes $5 (baseball games home & away)",
+              "price": "$5"
+            },
+            {
+              "text": "Local Beers $5 (baseball games home & away)",
+              "price": "$5"
+            },
+            {
+              "text": "Bombs $5 (baseball games home & away)",
+              "price": "$5"
             }
           ],
-          "start": 720,
-          "end": 1410,
-          "time_window": "12pm-11:30pm",
+          "start": 0,
+          "end": 1440,
+          "time_window": "during baseball games (home and away)",
           "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/leinies-kids-eat-free",
-          "proof_quote": "Kids Eat Free. Every Wednesday, Thursday, Friday, Saturday, Sunday 12:00 PM-11:30 PM Leinie Lodge & Beer Garden. Spend the day at Port Discovery and eat at Leinie's Lodge to get a free kids meal with a purchase of an adult entree! Offer valid during open times and only the day you are visiting Port Discovery. Blackout dates are subject to change per other events. Must show Port Discovery ticket/receipt. One free kids' meal per one adult entree ordered."
+          "verified_date": "2026-09-09",
+          "source_url": "https://powerplantlive.com/eat-and-drink/leinie-lodge-and-beer-garden/weekly-specials/game-day-specials-2026",
+          "food_categories": [
+            "event",
+            "drink"
+          ],
+          "proof_quote": "Score Big with Game Day Specials. Every Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday 12:00 AM-12:00 AM Leinie Lodge & Beer Garden. For all baseball games, home and away $5 Deep Eddy Crushes $5 Local Beers $5 Bombs"
         }
       ]
     },
@@ -20394,6 +20381,44 @@
             "small-plate/apps"
           ],
           "proof_quote": "HAPPYHOUR 4 – 6 Wed, Thurs, Fri Wedding Bar Cocktails 5 house liquor and one mixer House Red or White Wine 5 Evolution Draft 3 a. VODKA wine 5 Marinated Olives 5 Brussels Sprouts 5 Burrata Cheese Bruschetta melted tomatoes | basil 5 Grilled Marinated Artichoke 5 Meatballs 5 house ricotta | tomato sauce"
+        }
+      ]
+    },
+    {
+      "id": "genos-steaks",
+      "name": "Geno's Steaks",
+      "neighborhood": "Power Plant Live",
+      "status": "verified",
+      "address": "32 Market Place, Baltimore, MD 21202",
+      "phone": "(410) 522-9504",
+      "source_url": "https://powerplantlive.com/events-and-entertainment/events/geno-215-sundays-91326",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.289597,
+      "lon": -76.6072589,
+      "coords_source": "Nominatim geocode of official address 32 Market Place, Baltimore, MD 21202 (39.2895970,-76.6072589), UA BaltimoreDealz-DealScout/1.0, 2026-09-09.",
+      "ops_notes": "Deal Scout 2026-09-09: NEW room. Alcohol shown as $5 Deep Eddy crushes and 2-for-1 Surfside Cans on official Power Plant Live 215 Sundays series (every Sunday 2pm-5pm through the summer; Sep 13, 2026 occurrence still published). Full Menu & Bar on genos venue page. 2-for-1 Surfside not shipped. Phone/hours from powerplantlive.com/eat-and-drink/genos-steaks venue details.",
+      "deals": [
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Deep Eddy crushes $5",
+              "price": "$5"
+            }
+          ],
+          "start": 840,
+          "end": 1020,
+          "time_window": "2pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://powerplantlive.com/events-and-entertainment/events/geno-215-sundays-91326",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Every Sunday, enjoy our 215 drinks specials & cheesesteaks. 2-for-1 Surfside Cans + $5 Deep Eddy crushes 2pm to 5pm every Sunday through the summer!"
         }
       ]
     }

@@ -673,13 +673,152 @@
       "status": "verified",
       "address": "901 S Clinton St, Baltimore, MD 21224",
       "phone": "(443) 708-3774",
-      "source_url": "https://www.instagram.com/elliestaverncanton/",
-      "source_type": "instagram",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: IG bio empty via script; trivia held as event-only.",
+      "source_url": "https://elliestavernbmore.com/baltimore-canton-ellie-s-tavern-food-menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: official food menu Happy Hour Menu section (menu_134833) prints Monday-Tuesday 4-7 and Wednesday -Friday 3-6 with item prices. Page does not print am/pm on those clocks; encoded 4pm-7pm and 3pm-6pm from the Happy Hour Menu label and published Mon-Tue open 4:00 pm. IG https://www.instagram.com/elliestaverncanton/ bio has no dollar price. Events page says We are updating our events / Please stay tuned. Wednesday 8pm Trivia Night kept. Brunch Items print Available Saturday and Sunday 10am-2pm with regular brunch prices, not shipped as a special. Ravens Games Specials print prices for all Raven games only, no weekday, not shipped.",
       "lat": 39.282334,
       "lon": -76.56954,
       "deals": [
+        {
+          "days": [
+            "mon",
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$3.00 Fresh Cut Fries",
+              "price": "$3.00"
+            },
+            {
+              "text": "$3.00 House Made Ranch Chips",
+              "price": "$3.00"
+            },
+            {
+              "text": "$3.00 Natural Light",
+              "price": "$3.00"
+            },
+            {
+              "text": "$4.00 Natty Boh",
+              "price": "$4.00"
+            },
+            {
+              "text": "$5.00 Munion Dip",
+              "price": "$5.00"
+            },
+            {
+              "text": "$5.00 Draft",
+              "price": "$5.00"
+            },
+            {
+              "text": "$6.00 Rail Drink",
+              "price": "$6.00"
+            },
+            {
+              "text": "$7.00 House Wine",
+              "price": "$7.00"
+            },
+            {
+              "text": "$7.00 Spinach Salad",
+              "price": "$7.00"
+            },
+            {
+              "text": "$8.00 5 piece Wings",
+              "price": "$8.00"
+            },
+            {
+              "text": "$8.00 roasted garlic Hummus",
+              "price": "$8.00"
+            },
+            {
+              "text": "$9.00 Beef Sliders with Cheese",
+              "price": "$9.00"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "proof_quote": "Monday-Tuesday 4-7 / Wednesday -Friday 3-6 / Fresh Cut fries $3.00 / 5 piece Wings $8.00 / $5 Draft $5.00",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "wings",
+            "sliders"
+          ],
+          "source_url": "https://elliestavernbmore.com/baltimore-canton-ellie-s-tavern-food-menu"
+        },
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "$3.00 Fresh Cut Fries",
+              "price": "$3.00"
+            },
+            {
+              "text": "$3.00 House Made Ranch Chips",
+              "price": "$3.00"
+            },
+            {
+              "text": "$3.00 Natural Light",
+              "price": "$3.00"
+            },
+            {
+              "text": "$4.00 Natty Boh",
+              "price": "$4.00"
+            },
+            {
+              "text": "$5.00 Munion Dip",
+              "price": "$5.00"
+            },
+            {
+              "text": "$5.00 Draft",
+              "price": "$5.00"
+            },
+            {
+              "text": "$6.00 Rail Drink",
+              "price": "$6.00"
+            },
+            {
+              "text": "$7.00 House Wine",
+              "price": "$7.00"
+            },
+            {
+              "text": "$7.00 Spinach Salad",
+              "price": "$7.00"
+            },
+            {
+              "text": "$8.00 5 piece Wings",
+              "price": "$8.00"
+            },
+            {
+              "text": "$8.00 roasted garlic Hummus",
+              "price": "$8.00"
+            },
+            {
+              "text": "$9.00 Beef Sliders with Cheese",
+              "price": "$9.00"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "proof_quote": "Monday-Tuesday 4-7 / Wednesday -Friday 3-6 / Fresh Cut fries $3.00 / 5 piece Wings $8.00 / $5 Draft $5.00",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "wings",
+            "sliders"
+          ],
+          "source_url": "https://elliestavernbmore.com/baltimore-canton-ellie-s-tavern-food-menu"
+        },
         {
           "days": [
             "wed"
@@ -701,7 +840,8 @@
           "proof_quote": "Trivia Night (prior listing; no priced specials verified 2026-09-07)"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "notes_public": "Happy hour item prices are on the venue Happy Hour Menu."
     },
     {
       "id": "mahaffeys-pub",
@@ -6545,8 +6685,8 @@
       "phone": "(410) 327-0760",
       "source_url": "https://www.olarbmore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: olarbmore.com — times only, no $ on HH.",
+      "last_verified": "2026-09-08",
+      "ops_notes": "Deal Scout 2026-09-08: homepage Hours of Love still prints HAPPY HOUR: Tuesday – Friday 4:00 – 6:30. Graphic embedded on homepage https://www.olarbmore.com/wp-content/uploads/2026/02/5.jpeg (src 5-819x1024.jpeg) prints HAPPY HOUR! BURGERS $5 / OYSTERS $2 / Tuesday to Friday | 4 PM - 6:30 PM. Visual confirm 2026-09-08. Brunch Saturday & Sunday 10AM – 3PM has no price. Sep 12 BMORE Adaptive Happy Hour is a dated event, not a weekly priced special.",
       "lat": 39.2807481,
       "lon": -76.5669866,
       "notes_public": "Happy hour times published; food/drink prices not currently listed on the website.",
@@ -6560,20 +6700,25 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "$5 Burgers",
+              "price": "$5"
+            },
+            {
+              "text": "$2 Oysters",
+              "price": "$2"
             }
           ],
           "start": 960,
           "end": 1110,
           "time_window": "4pm-6:30pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.olarbmore.com/",
+          "verified_date": "2026-09-08",
+          "proof_quote": "HAPPY HOUR! BURGERS $5 / OYSTERS $2 / Tuesday to Friday | 4 PM - 6:30 PM",
           "food_categories": [
-            "drink"
+            "burger",
+            "seafood/crab"
           ],
-          "proof_quote": "HAPPY HOUR: Tuesday – Friday 4:00 – 6:30"
+          "source_url": "https://www.olarbmore.com/wp-content/uploads/2026/02/5.jpeg"
         }
       ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"

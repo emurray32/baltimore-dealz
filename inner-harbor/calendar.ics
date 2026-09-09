@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-azumi-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -47,7 +47,7 @@ URL:https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/0
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-bo-american-brasserie-frimonthutuewed-s990@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T163000
 DTEND;TZID=America/New_York:20260803T183000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -61,7 +61,7 @@ URL:https://bandorestaurant.com/events
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-blackwall-hitch-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -75,7 +75,7 @@ URL:https://www.blackwallhitchbaltimoremd.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-fogo-de-chao-frimonsatsunthutuewed-wallday@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -89,7 +89,7 @@ URL:https://fogodechao.com/location/baltimore/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hard-rock-cafe-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -107,7 +107,7 @@ URL:https://cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-homeslyce-mt-vernon-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -121,7 +121,7 @@ URL:https://homeslyce.com/locations/mt-vernon/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-italian-disco-frimonsatsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -140,7 +140,7 @@ URL:https://theitaliandisco.com/wp-content/uploads/2025/10/WEB_10_17_25.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-james-joyce-irish-pub-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -161,7 +161,7 @@ URL:https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-kechy-pizza-frimonsatsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -175,7 +175,7 @@ URL:https://www.kechypizza.com/baltimore
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-loch-bar-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -198,7 +198,7 @@ URL:https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-mccormick-schmicks-frimonthutuewed-s930@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T153000
 DTEND;TZID=America/New_York:20260803T183000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -221,7 +221,7 @@ URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-mccormick-schmicks-tue-s930@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
 RRULE:FREQ=WEEKLY;BYDAY=TU
@@ -236,7 +236,7 @@ URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-mccormick-schmicks-thuwed-s930@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;VALUE=DATE:20260805
 DTEND;VALUE=DATE:20260806
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH
@@ -251,7 +251,7 @@ URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-mccormick-schmicks-fri-s930@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;VALUE=DATE:20260807
 DTEND;VALUE=DATE:20260808
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -266,7 +266,7 @@ URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-monarque-frisatthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260804T170000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA
@@ -285,7 +285,7 @@ URL:https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-0313202
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-order-of-the-ace-frimonthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -303,7 +303,7 @@ URL:https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ouzo-beach-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -327,7 +327,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-phillips-seafood-inner-harbor-frimonthutuewed-s900@baltimore-deal
  z
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -343,7 +343,7 @@ URL:https://phillipsseafood.com/promotion/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rallys-corner-bar-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T193000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -360,7 +360,7 @@ URL:https://powerplantlive.com/eat-and-drink/rallys-corner-bar/weekly-speci
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ruths-chris-frimonsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T183000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
@@ -376,7 +376,7 @@ URL:https://ruthschrisbsm.com/wp-content/uploads/2026/09/BAR-TEST-MD-HH.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-tabor-ethiopian-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -392,7 +392,7 @@ URL:https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pd
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-tagliata-frimonsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
@@ -410,7 +410,7 @@ URL:https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-elk-room-frisatthutuewed-s1050@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260804T173000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA
@@ -427,7 +427,7 @@ URL:https://www.theelkroom.com/wp-content/uploads/2026/02/Happy-Hour_02.12.
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-garden-rooftop-thu-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260806T160000
 DTEND;TZID=America/New_York:20260806T200000
 RRULE:FREQ=WEEKLY;BYDAY=TH
@@ -444,7 +444,7 @@ URL:https://thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-ruxton-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T173615Z
+DTSTAMP:20260909T174359Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR

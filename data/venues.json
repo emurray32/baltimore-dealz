@@ -3065,53 +3065,99 @@
       "status": "verified",
       "address": "1738 Thames St, Baltimore, MD 21231",
       "phone": "(410) 327-7264",
-      "source_url": "https://www.thepointfells.com/happy-hour",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/63de8d4bd3ba8f71b9f2c939/9714c656-6ddb-4c53-ba6e-8ecf51f49bed/2.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-05",
+      "last_verified": "2026-09-09",
       "notes_public": "Happy hour days and times are published by the venue; their prices appear only in images we do not read.",
-      "ops_notes": "Deal Scout 2026-09-05 curl: MON|WED|THUR 4-7PM and FRIDAY ALL DAY HAPPY HOUR still page text. No prices. Hours snippet Mon&Fri 11AM-1:45AM; Wed&Thur 4PM-1:45AM (closed Tue).",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live unpriced deals from official Happy Hour FOOD + DRINKS PNGs embedded on thepointfells.com/happy-hour. City of Baltimore at 1738 Thames St. Alcohol on drinks flyer as Crushes, Draft Cocktails, Select Drafts & Cans, Select Wines, Jameson, and Boozy Slushie. Visual confirm of PNG days/times (OCR garbled MON/WED/THURS/FRI 4-7PM).",
       "deal_format": "image",
       "deals": [
         {
           "days": [
             "mon",
             "wed",
-            "thu"
+            "thu",
+            "fri"
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "Happy hour crushes $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour draft cocktails $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour select drafts and cans $4",
+              "price": "$4"
+            },
+            {
+              "text": "Happy hour select wines $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour Jameson $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour boozy slushie $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour street tacos $3 each (min 2)",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour Point nachos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour crabby pretzels (2) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour fried pickles $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour fried deviled eggs $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour 1/2 lb wings $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Jr smashburger $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour sides $4 each",
+              "price": "$4"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-05",
-          "proof_quote": "MON | WED | THUR 4-7PM"
-        },
-        {
-          "days": [
-            "fri"
+          "verified_date": "2026-09-09",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/63de8d4bd3ba8f71b9f2c939/9714c656-6ddb-4c53-ba6e-8ecf51f49bed/2.png",
+          "food_categories": [
+            "drink",
+            "tacos",
+            "small-plate/apps",
+            "pretzel",
+            "wings",
+            "burger"
           ],
-          "items": [
-            {
-              "text": "Happy Hour"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all day",
-          "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-05",
-          "proof_quote": "FRIDAY | ALL DAY HAPPY HOUR!"
+          "proof_quote": "HAPPY HOUR DRINKS MON, WED, THURS, FRI 4-7PM Crushes $8 Draft Cocktails $6 Select Drafts & Cans $4 Select Wines $5 Jameson $5 Boozy Slushie $8; HAPPY HOUR FOOD MON, WED, THURS, FRI 4-7PM STREET TACOS $3 EACH Point Nachos $7 Crabby Pretzels $10 Fried Pickles $7 Fried Deviled Eggs $7 1/2LB Wings $8 Jr Smashburger $8 Sides $4"
         }
       ],
       "lat": 39.2821,
       "lon": -76.591346,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Live venues.json already had lat/lon for 1738 Thames St, Baltimore, MD 21231 (Fells Point)."
     },
     {
       "id": "thames-street-oyster-house",
@@ -7212,15 +7258,53 @@
       "status": "verified",
       "address": "1710 Thames Street, Baltimore MD 21231",
       "phone": "(410) 537-5055",
-      "source_url": "http://www.waterfronthotelfellspoint.com/",
+      "source_url": "http://www.waterfronthotelfellspoint.com/uploads/1/3/3/1/133152380/wfh_happyhour_web.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: waterfront HH menu 404; cleared prices.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official wfh_happyhour_web.pdf linked from waterfronthotelfellspoint.com. City of Baltimore at 1710 Thames Street. Alcohol on PDF as Espresso Martini, Spicy Pineapple Marg, $5 Drafts, and $6 Wine.",
       "lat": 39.282052,
       "lon": -76.5921975,
       "notes_public": "Happy hour menu page not loading; priced specials removed until re-verified.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour Espresso Martini $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour Spicy Pineapple Marg $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour drafts $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour wine $6",
+              "price": "$6"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "http://www.waterfronthotelfellspoint.com/uploads/1/3/3/1/133152380/wfh_happyhour_web.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "TUESDAY – FRIDAY | 4 – 7 PM ESPRESSO MARTINI • 10 SPICY PINEAPPLE MARG • 8 $5 DRAFTS $6 WINE"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "coords_source": "Live venues.json already had lat/lon for 1710 Thames Street, Baltimore MD 21231 (Fells Point)."
     },
     {
       "id": "the-chasseur",

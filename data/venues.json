@@ -1395,15 +1395,37 @@
       "neighborhood": "Canton",
       "status": "verified",
       "address": "3242 Foster Ave, Baltimore, MD 21224",
-      "source_url": "https://www.instagram.com/pigandroosterbaltimore/",
+      "source_url": "https://www.instagram.com/p/DcJ1qwPHxcz/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-09-05",
-      "notes_public": "No specials we can verify with prices from an official source this pass.",
-      "ops_notes": "Deal Scout 2026-09-05: IG meta description \"neighborhood corner bar known for Detroit-style pizza, cold Dos Equis on draft…\" — no dollar amounts. Prior $3 Dos Equis / held burger removed. No phone on profile.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "notes_public": "Tuesday $5 Burger Night (official Instagram weekly flyer).",
+      "ops_notes": "Deal Scout 2026-09-09 priced_96: Official IG weekly flyer Tue $5 Burger Night (abs $+weekday). Friday bombs IG post unavailable — not shipped. Retained live coords. No phone on live.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "$5 Burger Night",
+              "price": "$5"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/DcJ1qwPHxcz/",
+          "food_categories": [
+            "burger"
+          ],
+          "proof_quote": "YOUR WEEK. DONE RIGHT. ... TUE $5 BURGER NIGHT! ... WED NEW HAVEN PIZZA! ... THU MUSIC BINGO! ... FRI STEAK NIGHT!"
+        }
+      ],
       "lat": 39.284657,
       "lon": -76.569996,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Retained live lat/lon for 3242 Foster Ave, Baltimore, MD 21224"
     },
     {
       "id": "lees-pint-and-shell",
@@ -2093,15 +2115,37 @@
       "status": "verified",
       "address": "2900 O'Donnell St, Baltimore, MD 21224",
       "phone": "410-387-0125",
-      "source_url": "https://www.theworthingtonbaltimore.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: theworthingtonbaltimore.com live (dinner/brunch menus, events); promo signup only — no published HH $. deals=[] bump.",
+      "source_url": "https://www.instagram.com/p/Dc1D3rBxmrh/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_96: Official IG @the_worthington Thu $3 seltzers (caption abs $+weekday). HH 4-7 clocks still sans drink abs $. Half-off martinis Tue / half bottles Wed not invented. Retained live coords.",
       "lat": 39.280541,
       "lon": -76.57528,
-      "deals": [],
-      "notes_public": "No published happy hour specials on the venue website.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$3 seltzers",
+              "price": "$3"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/Dc1D3rBxmrh/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "It's Thursday which means $3 seltzers ... Throwback night starting at 8:30pm #InTheDub"
+        }
+      ],
+      "notes_public": "Thursday $3 seltzers (official Instagram).",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Retained live lat/lon for 2900 O'Donnell St, Baltimore, MD 21224"
     },
     {
       "id": "sopro",

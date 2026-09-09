@@ -19557,6 +19557,57 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "chow-mein-charlie",
+      "name": "Chow Mein Charlie",
+      "neighborhood": "Roland Park",
+      "status": "verified",
+      "address": "508 W Cold Spring Ln, Baltimore, MD 21210",
+      "phone": "(410) 889-8886",
+      "source_url": "https://www.chowmeincharlie.com/menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3446458,
+      "lon": -76.6313442,
+      "coords_source": "Nominatim search 508 W Cold Spring Ln, Baltimore, MD 21210 on 2026-09-09 returned OSM node 3240567516 named Chow Mein Charlie at 39.3446458,-76.6313442. Display name neighbourhood is Roland Park, city Baltimore, postcode 21210. Official site footer prints 508 W Cold Spring Ln, Baltimore, MD 21210 and +1 410-889-8886.",
+      "bar_hours": "Official site footer opening hours: Monday–Thursday 11:00 AM–8:00 PM; Friday 11:00 AM–9:00 PM; Saturday 2:00 PM–8:00 PM; Sunday 3:00 PM–8:00 PM. Luncheon special clock printed on the official menu is Monday–Friday 11:00 AM–2:30 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 508 W Cold Spring Ln, 21210, Roland Park. Not in live venues.json. Official site https://www.chowmeincharlie.com/. Priced weekday luncheon special is on https://www.chowmeincharlie.com/menu/.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Luncheon special $9.95, served with fried rice or steamed rice and water (chicken chow mein, mixed vegetables Hunan style, broccoli with garlic sauce, and Szechuan string beans); chicken lo mein on this price is no rice",
+              "price": "$9.95"
+            },
+            {
+              "text": "Luncheon special $10.50, served with fried rice or steamed rice and water (sweet and sour chicken, kung pao chicken, chicken with cashew nuts, Szechuan chicken, chicken in hot black bean sauce, chicken with broccoli, Hunan chicken, chicken in hot garlic sauce, roasted pork with mixed vegetables, and shredded pork with hot garlic sauce); shrimp lo mein on this price is no rice",
+              "price": "$10.50"
+            },
+            {
+              "text": "Luncheon special $10.95, served with fried rice or steamed rice and water (chicken supreme, orange chicken, General Tso's chicken, beef with broccoli, beef in hot black bean sauce, Mongolian beef, Szechuan beef, pepper steak with onion, Szechuan shrimp, shrimp with cashew nuts, shrimp in hot black bean sauce, Hunan shrimp, kung pao shrimp, and shrimp with mixed vegetables)",
+              "price": "$10.95"
+            }
+          ],
+          "start": 660,
+          "end": 870,
+          "time_window": "11am-2:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.chowmeincharlie.com/menu/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Luncheon Special (11:00am to 2:30pm, Monday to Friday) Served with Fried Rice or Steamed Rice and Water Chicken Chow Mein $9.95"
+        }
+      ]
     }
   ]
 }

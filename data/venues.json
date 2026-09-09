@@ -20468,6 +20468,153 @@
           "proof_quote": "Every Sunday, enjoy our 215 drinks specials & cheesesteaks. 2-for-1 Surfside Cans + $5 Deep Eddy crushes 2pm to 5pm every Sunday through the summer!"
         }
       ]
+    },
+    {
+      "id": "nora-blu",
+      "name": "Nora Blú",
+      "neighborhood": "Mount Vernon",
+      "status": "verified",
+      "address": "1225 Cathedral St, Baltimore, MD 21201",
+      "phone": "(443) 835-1064",
+      "source_url": "https://www.instagram.com/norablubaltimore/p/DaVHoxfguWx/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
+      "lat": 39.3037031,
+      "lon": -76.6183332,
+      "coords_source": "Nominatim 2026-09-09 for 1225 Cathedral St, Baltimore, MD 21201 (39.3037031,-76.6183332).",
+      "ops_notes": "Deal Scout 2026-09-09: NEW fill. Official IG flyer @norablubaltimore /p/DaVHoxfguWx/ prints Bar Only Happy Hour 4PM-7PM every day with absolute $. Cocktails PDF on norablubaltimore.com is regular menu $15-$22 (not HH). Hush Lounge downstairs mentioned in press — no separate official Hush HH absolute $ card this pass. Venue IG bio hours Tue-Thu 4-10pm (partial); deal window taken from flyer EVERY DAY 4-7.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Sol Di Limone $10 (bar-only HH signature cocktail)",
+              "price": "$10"
+            },
+            {
+              "text": "Sirocco Sunset $10 (bar-only HH signature cocktail)",
+              "price": "$10"
+            },
+            {
+              "text": "Midnight in Marrakesh $10 (bar-only HH signature cocktail)",
+              "price": "$10"
+            },
+            {
+              "text": "Bean and Blossom $12 (bar-only HH signature cocktail)",
+              "price": "$12"
+            },
+            {
+              "text": "Smoke in the Levant $12 (bar-only HH signature cocktail)",
+              "price": "$12"
+            },
+            {
+              "text": "Sparkling wine $4/glass (bar-only HH)",
+              "price": "$4"
+            },
+            {
+              "text": "Rosé $4/glass (bar-only HH)",
+              "price": "$4"
+            },
+            {
+              "text": "Red wine $4/glass (bar-only HH)",
+              "price": "$4"
+            },
+            {
+              "text": "White wine $5/glass (bar-only HH)",
+              "price": "$5"
+            },
+            {
+              "text": "Hummus $8 (bar-only HH bite)",
+              "price": "$8"
+            },
+            {
+              "text": "Arugula Salad $13 (bar-only HH bite)",
+              "price": "$13"
+            },
+            {
+              "text": "Chopped Salad $13 (bar-only HH bite)",
+              "price": "$13"
+            },
+            {
+              "text": "Blu Burger $14 (bar-only HH bite)",
+              "price": "$14"
+            },
+            {
+              "text": "Crab & Falafel Bites $14 (bar-only HH bite)",
+              "price": "$14"
+            },
+            {
+              "text": "Kibbeh Nayyeh $15 (bar-only HH bite)",
+              "price": "$15"
+            },
+            {
+              "text": "Oysters $16 (bar-only HH bite)",
+              "price": "$16"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/norablubaltimore/p/DaVHoxfguWx/",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "burger",
+            "seafood/crab"
+          ],
+          "proof_quote": "BAR ONLY HAPPY HOUR 4PM-7PM | EVERY DAY / SOL DI LIMONE $10 / SIROCCO SUNSET $10 / BEAN AND BLOSSOM $12 / SMOKE IN THE LEVANT $12 / MIDNIGHT IN MARRAKESH $10 / sparkling-rosé-red $4 glass / white $5 glass / HUMMUS $8 / ARUGULA SALAD $13 / CHOPPED SALAD $13 / BLU BURGER $14 / CRAB & FALAFEL BITES $14 / KIBBEH NAYYEH $15 / OYSTERS $16"
+        }
+      ]
+    },
+    {
+      "id": "neatfreak",
+      "name": "NeatFreak",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1822 Fleet St, Baltimore, MD 21231",
+      "source_url": "https://www.instagram.com/neatfreak.bar/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
+      "lat": 39.284876,
+      "lon": -76.5903404,
+      "coords_source": "Nominatim 2026-09-09 for 1822 Fleet St, Baltimore, MD 21231 (39.284876,-76.5903404; OSM amenity Greyhound Tavern pin).",
+      "ops_notes": "Deal Scout 2026-09-09: NEW fill from official IG bio $10 MARTINIS NOON-5 / THURS FRI SAT MON / NOON-MIDNIGHT. Venue IG poster confirms 1822 Fleet Street Fells Point. Banner/$5 hot dog press not used as deal source. No own-domain HH page.",
+      "deals": [
+        {
+          "days": [
+            "thu",
+            "fri",
+            "sat",
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Martinis $10 (noon-5 special)",
+              "price": "$10"
+            }
+          ],
+          "start": 720,
+          "end": 1020,
+          "time_window": "noon-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/neatfreak.bar/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "$10 MARTINIS NOON - 5 / THURS FRI SAT MON / NOON - MIDNIGHT"
+        }
+      ]
     }
   ]
 }

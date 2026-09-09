@@ -1060,10 +1060,10 @@
       "status": "verified",
       "address": "2903 O'Donnell St, Baltimore, MD 21224",
       "phone": "(443) 449-5410",
-      "source_url": "https://www.instagram.com/goodvibescantina/",
+      "source_url": "https://www.instagram.com/p/DclvnKhu7nq/",
       "source_type": "instagram_profile",
-      "last_verified": "2026-09-05",
-      "ops_notes": "Deal Scout 2026-09-05 script: IG meta description Happy Hour Sunday - Friday 3-7pm. Prior held priced HH drinks and Thu/Fri food specials not in bio — dropped pending post captions. Occupies former Tavern on the Square.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_101: unlocked abs $ via official IG flyer OCR (DclvnKhu7nq). Sun–Fri 4–8pm HH drink $7/$5. Bio 3–7 clocks-only superseded for priced row. Alcohol only. Retained live coords.",
       "deals": [
         {
           "days": [
@@ -1076,25 +1076,43 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "Margaritas $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sangria $7",
+              "price": "$7"
+            },
+            {
+              "text": "Orange Crush $7",
+              "price": "$7"
+            },
+            {
+              "text": "Sour Bombs $5",
+              "price": "$5"
+            },
+            {
+              "text": "House Tequila $5",
+              "price": "$5"
             }
           ],
-          "start": 900,
-          "end": 1140,
-          "time_window": "3pm-7pm",
+          "start": 960,
+          "end": 1200,
+          "time_window": "4pm-8pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-05",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/DclvnKhu7nq/",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "Happy Hour Sunday - Friday 3-7pm",
-          "source_url": "https://www.instagram.com/goodvibescantina/"
+          "proof_quote": "HAPPY HOUR SUNDAY TO FRIDAY 4:00 PM TO 8:00 PM MARGARITAS $7.00 SANGRIA $7.00 ORANGE CRUSH $7.00 SOUR BOMBS $5.00 HOUSE TEQUILA $5.00 (flyer OCR @goodvibescantina /p/DclvnKhu7nq/)"
         }
       ],
       "lat": 39.279871,
       "lon": -76.575167,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "notes_public": "Happy hour Sunday–Friday 4–8pm: $7 margaritas, sangria & orange crush; $5 sour bombs & house tequila (official Instagram flyer).",
+      "coords_source": "Retained live lat/lon for 2903 O'Donnell St, Baltimore, MD 21224"
     },
     {
       "id": "union-hill-kitchen",
@@ -16035,14 +16053,35 @@
       "status": "verified",
       "address": "1702 Thames Street, Baltimore, MD 21231",
       "phone": "(410) 563-5423",
-      "source_url": "https://www.kooperstavern.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "source_url": "https://www.instagram.com/p/DbaoN3ZS1gJ/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
       "lat": 39.2820245,
       "lon": -76.5924758,
-      "ops_notes": "Deal Scout 2026-09-08: kooperstavern.com home + kfp_dinner.3-26.pdf. No priced specials. Replaces nothing; original candidate.",
-      "notes_public": "No priced happy hour or daily specials on the official site. Hours posted: Mon–Thu 11am–12am, Fri 11am–2am, Sat 10am–2am, Sun 10am–12am. Brunch Sat & Sun 10am–3pm is regular service, not a special.",
-      "deals": [],
+      "ops_notes": "Deal Scout 2026-09-09 priced_101: unlocked empty via official IG @kooperstavern caption abs $+Thu ($4 select cervezas). Dinner PDF HH clocks still discounted-sans-$. Alcohol line only. Retained live coords/phone.",
+      "notes_public": "Thursday $4 select cervezas (official Instagram).",
+      "deals": [
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "$4 select cervezas",
+              "price": "$4"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/DbaoN3ZS1gJ/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Special taco menu and $4 select cervezas. Thursdays are so good. #tacos #beer #margarita #thursday #baltimore"
+        }
+      ],
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
     },
     {

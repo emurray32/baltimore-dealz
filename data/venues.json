@@ -18991,6 +18991,50 @@
           "proof_quote": "Tuesday - Saturday: 11:00 am - 3:30 pm (Except Major Holiday & Sunday) Served with Fried Rice and Choice of Wonton Soup or Can Soda L 1. Chicken Chow Mein $8.25"
         }
       ]
+    },
+    {
+      "id": "kumari-fort-ave",
+      "name": "Kumari",
+      "neighborhood": "Riverside",
+      "status": "verified",
+      "address": "847 East Fort Avenue, Baltimore, MD 21230",
+      "phone": "(410) 576-2222",
+      "source_url": "https://www.kumarirestaurantbaltimore.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2711396,
+      "lon": -76.6028805,
+      "coords_source": "Nominatim search 847 East Fort Avenue, Baltimore, MD 21230 on 2026-09-08 returned OSM node 2984576769 named Kumari at 39.2711396,-76.6028805. Display name neighbourhood is Riverside, city Baltimore, postcode 21230. Official homepage and contact page print 847 East Fort Avenue, Baltimore, MD 21230 and (410) 576-2222. Official about page also calls the room Federal Hill.",
+      "bar_hours": "Official contact page: Open 7 days a week. Sun–Thu 11:30 AM–10:00 PM; Fri–Sat 11:30 AM–10:30 PM. Lunch buffet line on the homepage does not print a clock.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Indian/Nepalese restaurant at 847 East Fort Avenue, 21230. Not in live venues.json. Official site https://www.kumarirestaurantbaltimore.com/. Distinct from Himalayan House at 1522 East Fort Ave and from the Mount Vernon Kumari site.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch buffet $18.99 + tax, dine-in or carry-out",
+              "price": "$18.99"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.kumarirestaurantbaltimore.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "LUNCH BUFFET (DINE-IN/CARRY-OUT) LUNCH BUFFET SUNDAY – SATURDAY: $18.99 + Tax",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

@@ -19035,6 +19035,95 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "franks-bay-tavern",
+      "name": "Frank's Bay Tavern",
+      "neighborhood": "Curtis Bay",
+      "status": "verified",
+      "address": "4507 Pennington Ave, Curtis Bay, MD 21226",
+      "phone": "(410) 483-8798",
+      "source_url": "https://www.franksbaytavern.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.2250373,
+      "lon": -76.5883119,
+      "coords_source": "Nominatim search 4507 Pennington Ave, Baltimore, MD 21226 on 2026-09-08 returned OSM node 12721800878 named Frank's Bay Tavern at 39.2250373,-76.5883119. Display name neighbourhood is Curtis Bay, city Baltimore, postcode 21226. Official homepage prints 4507 Pennington Ave Curtis Bay MD 21226 and 410-483-8798, and does not print the word Baltimore.",
+      "bar_hours": "Official homepage does not print a service-hours clock. Happy hour line printed on the homepage is all day every day. Tuesday 7:00 PM is the in-house pool league, not bar hours.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore tavern at 4507 Pennington Ave, Curtis Bay, 21226. Not in live venues.json. Official site https://www.franksbaytavern.com/. Priced everyday domestic beer special is on the homepage.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Happy hour domestic cans and bottles $2.50, all day every day",
+              "price": "$2.50"
+            }
+          ],
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.franksbaytavern.com/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR ALL DAY EVERY DAY WITH $2.50 DOMESTIC BEERS HAPPY HOUR ALL DAY EVERY DAY $2.50 Domestic Cans/Bottles",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "heritage-smokehouse",
+      "name": "Heritage Smokehouse",
+      "neighborhood": "Govans",
+      "status": "verified",
+      "address": "5800 York Road, Baltimore, MD 21212",
+      "phone": "(443) 438-7593",
+      "source_url": "https://www.heritagesmokehousebalt.com/menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-08",
+      "lat": 39.3606208,
+      "lon": -76.6102775,
+      "coords_source": "Nominatim search 5800 York Road, Baltimore, MD 21212 on 2026-09-08 returned OSM way 336352536 named Heritage Smokehouse at 39.3606208,-76.6102775. Display name neighbourhood is Rosebank, suburb Greater Govans, city Baltimore, postcode 21212. Official menu page and homepage print 5800 York Road, Baltimore, MD, 21212, telephone (443) 438-7593, and call the room Baltimore's Govens neighborhood.",
+      "bar_hours": "Official homepage narrative: join us for lunch or dinner Tuesday through Saturday. Official menu footer hours widget: Monday Closed; Tuesday Closed; Wednesday 5pm-10pm; Thursday 5pm-10pm; Friday 5pm-10pm; Saturday 11am-10pm; Sunday 11am-9pm. Schema openingHours lists Wednesday–Friday 17:00-22:00, Saturday 11:00-22:00, Sunday 11:00-21:00, and leaves Monday and Tuesday blank. Happy hour clock printed on the menu page is Tuesday–Thursday 3-6pm.",
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore barbecue room at 5800 York Road, 21212, Govans. Not in live venues.json. Official site https://www.heritagesmokehousebalt.com/. Priced weekday happy hour is on https://www.heritagesmokehousebalt.com/menu.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Hamm's and High Life $2.00",
+              "price": "$2.00"
+            },
+            {
+              "text": "Zadie's Drafts $4.00",
+              "price": "$4.00"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-08",
+          "source_url": "https://www.heritagesmokehousebalt.com/menu",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Drink Specials Tues to Thurs 3-6pm $ 2.00 Hamm's & High Life $ 4.00 Zadie's Drafts"
+        }
+      ]
     }
   ]
 }

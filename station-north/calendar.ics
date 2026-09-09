@@ -24,35 +24,43 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-alma-cocina-latina-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260909T225431Z
+DTSTAMP:20260909T230251Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
-SUMMARY:Alma Cocina Latina — Happy Hour (5pm-7pm (bar only))
-DESCRIPTION:5pm-7pm (bar only)\nHappy Hour\nPrices not published by the ven
- ue.\n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nhttp
- s://www.almacocinalatina.com/happy-hour\nSource: Baltimore Dealz — verif
- y at the bar\; deals change.
+SUMMARY:Alma Cocina Latina — $10 Happy Hour red & white wine (glass) (5pm
+ -7pm (bar only))
+DESCRIPTION:5pm-7pm (bar only)\n$10 Happy Hour red & white wine (glass)\n$6
+  Monopolio IPA or Dark Lager\n$8 vermouth (Cueva nueva / Prioprat Natur)\n
+ $10 classic Latin cocktails (Daiquiri\, Mai Tai\, Caipirinha\, Margarita)\
+ n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nhttps://
+ static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967358d04e.pdf
+ \nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1701 North Charles Street\, Baltimore\, MD 21201
-URL:https://www.almacocinalatina.com/happy-hour
+URL:https://static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967
+ 358d04e.pdf
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-alma-cocina-latina-sun-s1020@baltimore-dealz
-DTSTAMP:20260909T225431Z
+UID:bd-hh-alma-cocina-latina-sun-wallnightbaronly@baltimore-dealz
+DTSTAMP:20260909T230251Z
 DTSTART;VALUE=DATE:20260809
 DTEND;VALUE=DATE:20260810
 RRULE:FREQ=WEEKLY;BYDAY=SU
-SUMMARY:Alma Cocina Latina — Happy Hour (5pm-close (bar only))
-DESCRIPTION:5pm-close (bar only)\nHappy Hour\nPrices not published by the v
- enue.\n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nht
- tps://www.almacocinalatina.com/happy-hour\nSource: Baltimore Dealz — ver
- ify at the bar\; deals change.
+SUMMARY:Alma Cocina Latina — $10 Happy Hour red & white wine (glass) (all
+  night (bar only))
+DESCRIPTION:all night (bar only)\n$10 Happy Hour red & white wine (glass)\n
+ $6 Monopolio IPA or Dark Lager\n$8 vermouth (Cueva nueva / Prioprat Natur)
+ \n$10 classic Latin cocktails (Daiquiri\, Mai Tai\, Caipirinha\, Margarita
+ )\n1701 North Charles Street\, Baltimore\, MD 21201\nCharles North\nhttps:
+ //static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967358d04e.p
+ df\nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1701 North Charles Street\, Baltimore\, MD 21201
-URL:https://www.almacocinalatina.com/happy-hour
+URL:https://static-content.owner.com/document/98ec8520-bc27-480b-802c-fb967
+ 358d04e.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-royal-blue-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T225431Z
+DTSTAMP:20260909T230251Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR

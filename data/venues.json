@@ -20037,6 +20037,129 @@
           "proof_quote": "Special Luncheon Available: Monday - Saturday From: 11:00 AM - 3:00 PM. L1. Chicken Chow Mein Lunch Special 10.99"
         }
       ]
+    },
+    {
+      "id": "petit-louis",
+      "name": "Petit Louis Bistro",
+      "neighborhood": "Roland Park",
+      "status": "verified",
+      "address": "4800 Roland Ave, Baltimore, MD 21210",
+      "phone": "(410) 366-9393",
+      "source_url": "https://petitlouis.com/the_menu/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3502429,
+      "lon": -76.6356526,
+      "coords_source": "Nominatim search 4800 Roland Ave, Baltimore, MD 21210 on 2026-09-09 returned OSM node 1346511166 named Petit Louis at 39.3502429,-76.6356526. Display name neighbourhood is Roland Park, suburb Greater Roland Park, city Baltimore, postcode 21210. Official menu page prints Address 4800 Roland Ave, Baltimore, MD 21210 and Phone +1 (410) 366-9393.",
+      "bar_hours": "Official menu page Dining Service Hours: Lunch Tuesday–Friday 11:30am–2:00pm; Dinner Monday–Sunday 5:00pm–9:00pm; Brunch Sunday 10:30am–2:00pm; To-Go Tuesday–Sunday 11:00am–8:30pm. Homepage Hours of Operation print the same lunch, dinner, and brunch windows. Civilized Lunch uses the printed lunch window, which is not the same as dinner or brunch hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore French bistro at 4800 Roland Ave, 21210, Roland Park. Not in live venues.json. Official site https://petitlouis.com/. Priced Civilized Lunch is the official PDF linked from the menu page. Distinct from Johnny's Roland Park at the same street address. Official homepage also prints a one-day closure Wednesday, September 9, 2026 for repairs; standing lunch hours still print Tuesday–Friday.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Civilized Lunch prix fixe $39 (zucchini soup with fine herb crème fraîche, steak au poivre with pomme purée and peppercorn sauce, and warm plum almond torte with crème anglaise)",
+              "price": "$39"
+            }
+          ],
+          "start": 690,
+          "end": 840,
+          "time_window": "11:30am-2pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Petit%20Louis/Menus/PL_CivilizedLunch.pdf",
+          "food_categories": [
+            "steak"
+          ],
+          "proof_quote": "Civilized Lunch. Lunch Tuesday–Friday: 11:30am–2:00pm. PRIX FIXE $39 PER PERSON. STEAK AU POIVRE Pan Seared Bistro Steak, Pomme Purée, Peppercorn Sauce"
+        }
+      ]
+    },
+    {
+      "id": "ceces-roland-park",
+      "name": "Cece's Roland Park",
+      "neighborhood": "Cross Keys",
+      "status": "verified",
+      "address": "10 Village Square, STE 10, Baltimore, MD 21210",
+      "phone": "(410) 801-1933",
+      "source_url": "https://www.cecesrolandpark.com/ceces-roland-park-menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3544451,
+      "lon": -76.6461734,
+      "coords_source": "Nominatim search 10 Village Square, Baltimore, MD 21210 on 2026-09-09 returned OSM way 6015326 at 39.3544451,-76.6461734. Display name neighbourhood is Cross Keys, suburb Greater Roland Park, city Baltimore, postcode 21210. Official contact page prints The Village of Cross Keys, 10 Village Square, STE 10, Baltimore, MD 21210, and (410) 801-1933.",
+      "bar_hours": "Official hours page: Lunch Monday–Saturday 11:00 am–2:00 pm; Happy Hour Monday ALL DAY, Tuesday–Thursday 5:00 pm–7:00 pm; Dinner Sunday–Thursday 5:00 pm–9:00 pm, Friday–Saturday 5:00 pm–10:00 pm; Brunch Sunday 11:00 am–2:00 pm; Courtyard Bar Sunday–Thursday 5:00 pm–10:00 pm, Friday & Saturday 11:00 am–11:00 pm, with pizza menu available from 2pm–5pm. Happy Hour clock is not the same as dinner hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore dining room at The Village of Cross Keys, 10 Village Square, STE 10, 21210. Nominatim neighbourhood is Cross Keys, Greater Roland Park. Official site titles the room Roland Park. Not in live venues.json. Official site https://www.cecesrolandpark.com/. Priced happy hour items are on the official Happy Hour menu JSON.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Happy hour antipasti $16.00 (prosciutto, sopressata, rosemary ham, marinated artichoke, roasted red peppers, truffle pecorino)",
+              "price": "$16.00"
+            },
+            {
+              "text": "Happy hour cacio e pepe pizza $18.00 (pecorino cream, black pepper, arugula, tomato, balsamic glaze)",
+              "price": "$18.00"
+            },
+            {
+              "text": "Happy hour House Pair $26.00 (Cece's martini with Tito's vodka or Hendrick's gin and truffle fries with malt vinegar aioli)",
+              "price": "$26.00"
+            }
+          ],
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.cecesrolandpark.com/ceces-roland-park-menu",
+          "food_categories": [
+            "small-plate/apps",
+            "pizza",
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Monday ALL DAY Tuesday - Thursday 5:00 pm - 7:00 pm. Happy Hour Monday ALL DAY Tuesday - Thursday | 5-7pm. Antipasti price 16.0. Cacio e Pepe Pizza price 18.0. The House Pair price 26.0",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Happy hour antipasti $16.00 (prosciutto, sopressata, rosemary ham, marinated artichoke, roasted red peppers, truffle pecorino)",
+              "price": "$16.00"
+            },
+            {
+              "text": "Happy hour cacio e pepe pizza $18.00 (pecorino cream, black pepper, arugula, tomato, balsamic glaze)",
+              "price": "$18.00"
+            },
+            {
+              "text": "Happy hour House Pair $26.00 (Cece's martini with Tito's vodka or Hendrick's gin and truffle fries with malt vinegar aioli)",
+              "price": "$26.00"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.cecesrolandpark.com/ceces-roland-park-menu",
+          "food_categories": [
+            "small-plate/apps",
+            "pizza",
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Monday ALL DAY Tuesday - Thursday 5:00 pm - 7:00 pm. Happy Hour Monday ALL DAY Tuesday - Thursday | 5-7pm. Antipasti price 16.0. Cacio e Pepe Pizza price 18.0. The House Pair price 26.0"
+        }
+      ]
     }
   ]
 }

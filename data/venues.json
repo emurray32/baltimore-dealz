@@ -17896,159 +17896,18 @@
       "id": "maiwand-grill",
       "name": "Maiwand Grill",
       "neighborhood": "Downtown",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "324 West Baltimore Street, Baltimore, MD 21201",
       "phone": "(410) 685-0208",
       "source_url": "https://maiwand-grill.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2894453,
       "lon": -76.6206641,
       "coords_source": "Nominatim search 324 West Baltimore Street, Baltimore, MD 21201 on 2026-09-08 returned OSM node 7169879143 named Maiwand Grill at 39.2894453,-76.6206641. Display name neighbourhood is Chinatown, suburb Downtown, postcode 21201. Official homepage prints 324 West Baltimore Street, Baltimore, MD 21201 and 410 685 0208.",
       "bar_hours": "Official opening hours: Monday–Friday 10:30am–9:30pm; Saturday and Sunday 12:00pm–9:30pm. Daily specials do not print their own clock.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown Afghan restaurant. Not in live venues.json. Official site https://maiwand-grill.com/. Distinct from The Kabul Grill at 55 Market Place, listed on the same page as a separate location and not written.",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "Lamb curry $12.99, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Lamb curry (Monday). Tender boneless lamb simmered in a rich, aromatic curry sauce infused with traditional spices. $12.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Chicken curry $17.99, served with rice, chutney, and naan",
-              "price": "$17.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Curry (Tuesday). Boneless chicken simmered in a rich, creamy tomato-based curry sauce infusedwith spices. $17.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "Chicken jalfarazi $12.99, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Jalfarazi (Wednesday). Tender chicken breast stir-fried with bell peppers, onions, and tomatoes in a flavorful, spiced sauce. $12.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Do Pizza $12.99: lamb slow-cooked with caramelized onions, ripe tomatoes, vinegar, and warming spices, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Do Pizza (Thursday). nder lamb slow-cooked with caramelized onions, ripe tomatoes, vinegar, and a blend of warming spices. $12.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Lamb curry $12.99 with potatoes, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Lamb Curry (Friday). Tender boneless lamb and potatoes simmered in a rich, spiced curry sauce. $12.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Chicken biriyani $12.99, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chicken Biriyani (Saturday). Tender chicken simmered in a rich, creamy tomato-based curry sauce infused with warming spices. $12.99",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Chciken karahi $12.99, bone-in chicken in tomato and ginger curry, served with rice, chutney, and naan",
-              "price": "$12.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://maiwand-grill.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "DAILY SPECIALS (Serve with Rice, Chutney and Naan). Chciken Karahi (Sunday). Bone-in chicken cooked in a rich, thick tomato and ginger-based curry. $12.99",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown Afghan restaurant. Not in live venues.json. Official site https://maiwand-grill.com/. Distinct from The Kabul Grill at 55 Market Place, listed on the same page as a separate location and not written. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "avenue-kitchen-bar",
@@ -18092,41 +17951,18 @@
       "id": "vaccaros",
       "name": "Vaccaro's Italian Pastry",
       "neighborhood": "Little Italy",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "222 Albemarle Street, Baltimore, MD 21202",
       "phone": "410-685-4905",
       "source_url": "https://www.vaccarospastry.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2867954,
       "lon": -76.6029043,
       "coords_source": "Nominatim search 222 Albemarle Street, Baltimore, MD 21202 on 2026-09-08 returned OSM way 336329177 named Vaccaro's Italian Pastry Shop at 39.2867954,-76.6029043. Display name neighbourhood is Little Italy and postcode is 21202. Official locations page prints Little Italy 222 Albemarle Street Baltimore, MD 21202 and 410-685-4905.",
       "bar_hours": "Official locations page for Little Italy sit-down café: After Memorial Day, Sun–Fri 9am–9pm, Saturday 9am–10pm. As of October 1st: Sun–Fri 9am–8pm, Saturday 9am–9pm. Monday Night Special clock is printed separately as 6:00 P.M. to 8:00 P.M., seated by 7:00 pm.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Little Italy sit-down café. Not in live venues.json. Official site https://www.vaccarospastry.com/. Monday Night Special is printed for this café only. Canton at 2919 O'Donnell Street and Hunt Valley Towne Centre were not written. Hunt Valley is not City of Baltimore.",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "All you can eat dessert and coffee $24.15 a person. All alcohol products excluded. Must be seated by 7:00 pm. Monday holidays excluded. Little Italy sit-down café only.",
-              "price": "$24.15"
-            }
-          ],
-          "start": 1080,
-          "end": 1200,
-          "time_window": "6pm-8pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.vaccarospastry.com/promotions/",
-          "food_categories": [
-            "drink",
-            "event"
-          ],
-          "proof_quote": "Little Italy Monday Night Special. Every Monday night from 6:00 P.M. to 8:00 P.M. we offer an all you can eat dessert and coffee special for $24.15 a person. All alcohol products excluded. You must be seated by 7:00 pm. This is for our sit-down café in Little Italy. Monday holidays are excluded."
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Little Italy sit-down café. Not in live venues.json. Official site https://www.vaccarospastry.com/. Monday Night Special is printed for this café only. Canton at 2919 O'Donnell Street and Hunt Valley Towne Centre were not written. Hunt Valley is not City of Baltimore. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "outback-canton",
@@ -18212,277 +18048,52 @@
       "id": "land-of-kush",
       "name": "The Land of Kush",
       "neighborhood": "Seton Hill",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "840 N Eutaw St, Baltimore, MD 21201",
       "phone": "(410) 225-5874",
       "source_url": "https://landofkush.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3001586,
       "lon": -76.6216985,
       "coords_source": "Nominatim search 840 N Eutaw St, Baltimore, MD 21201 on 2026-09-08 returned OSM node 8939454153 named The Land of Kush at 39.3001586,-76.6216985. Display name neighbourhood is Seton Hill, suburb Sowebo, postcode 21201. Official homepage prints 840 N Eutaw St, Baltimore, MD 21201 and (410) 225-5874.",
       "bar_hours": "Official homepage hours: Sunday 10:00 AM–8:00 PM; Monday–Saturday 11:00 AM–9:00 PM. Sunday brunch clock printed on the menu is 10 AM–2 PM, which is not the same as full Sunday service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore vegan soul food restaurant at 840 N Eutaw Street, Seton Hill / Sowebo, 21201. Not in live venues.json. Official site https://landofkush.com/. West of downtown, adjacent to Upton and the Hippodrome corridor. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street.",
-      "deals": [
-        {
-          "days": [
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Pancakes $15.99: two gluten-free pancakes",
-              "price": "$15.99"
-            }
-          ],
-          "start": 600,
-          "end": 840,
-          "time_window": "10am-2pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://landofkush.com/menu",
-          "food_categories": [
-            "brunch"
-          ],
-          "proof_quote": "Sunday Brunch (10a-2p Sundays ONLY). Sun 10 AM - 2 PM. Pancakes $15.99. Two gluten-free pancakes."
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore vegan soul food restaurant at 840 N Eutaw Street, Seton Hill / Sowebo, 21201. Not in live venues.json. Official site https://landofkush.com/. West of downtown, adjacent to Upton and the Hippodrome corridor. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "the-kabul-grill",
       "name": "The Kabul Grill",
       "neighborhood": "Inner Harbor",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "55 Market Place, Baltimore, MD 21202",
       "phone": "(667) 212-3303",
       "source_url": "https://thekabulgrill.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2882176,
       "lon": -76.6065139,
       "coords_source": "Nominatim search 55 Market Place, Baltimore, MD 21202 on 2026-09-08 returned OSM node 5982151937 named The Kabul Fresh Grill at 39.2882176,-76.6065139. Display name neighbourhood is Inner Harbor, suburb Downtown, postcode 21202. Official menu footer prints 55 Market place Baltimore MD 21202 and 667-212-3303 / 667-212-3514.",
       "bar_hours": "Official menu footer hours: Monday to Friday 10:30 AM - 10:00 PM; Saturday to Sunday 11:00 AM - 10:00 PM. Daily specials do not print their own clock.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown / Inner Harbor Afghan restaurant at 55 Market Place. Not in live venues.json. Official site https://thekabulgrill.com/. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street, and from Ziza Kabob Jessup, which is not a city room.",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "Lamb curry $9.40, available only on Monday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Lamb Curry $9.40. Lamb cutlets in curry seasoning. *Available only on Monday. Daily Specials. All are served with Rice, Bread and Salad. Monday – Lamb Curry.",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Chicken curry $9.40, available only on Tuesday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Chicken Curry $9.40. Chicken curry seasonings. *Available only on Tuesday. Daily Specials. All are served with Rice, Bread and Salad. Tuesday – Chicken Curry.",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "Chicken jalfrezi $9.40, available only on Wednesday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Chicken Jalfrezi $9.40. Tender pieces of chicken breast, bell peppers, red peppers, onion and seasonings. *Available only on Wednesday. Daily Specials. All are served with Rice, Bread and Salad. Wednesday – Chicken Jalfrezi.",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Dopyaza $9.40, boneless lamb with onions, tomatoes, vinegar and spices, available only on Thursday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Dopyaza $9.40. Boneless lamb made with onions, tomatoes, vinegar and spices. *Available only on Thursday. Daily Specials. All are served with Rice, Bread and Salad. Thursday – Dopyaza.",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Lamb and potato curry $9.40, available only on Friday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Lamb & Potato Curry $9.40. Tender seasoned lamb cooked with potatoes. *Available only on Friday. Daily Specials. All are served with Rice, Bread and Salad. Friday – Lamb Curry & Potato Curry.",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Achar chicken $9.40, available only on Saturday",
-              "price": "$9.40"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://thekabulgrill.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Curries. Achar Chicken $9.40. Chicken cooked with pickle spices and yogurt. *Available only on Saturday. Daily Specials. All are served with Rice, Bread and Salad. Saturday – Achar Chicken.",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Downtown / Inner Harbor Afghan restaurant at 55 Market Place. Not in live venues.json. Official site https://thekabulgrill.com/. Distinct from Maiwand Grill, already patched at 324 West Baltimore Street, and from Ziza Kabob Jessup, which is not a city room. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "chokchai-thai-food",
       "name": "Chokchai Thai Food",
       "neighborhood": "Hamilton",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "6824 Harford Rd, Baltimore, MD 21234",
       "phone": "(410) 426-3244",
       "source_url": "https://www.chokchaithaifood.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3651323,
       "lon": -76.5506196,
       "coords_source": "Nominatim search 6824 Harford Rd, Baltimore, MD 21234 on 2026-09-08 returned OSM node 7297943468 named Chokchai Thai Food at 39.3651323,-76.5506196. Display name neighbourhood is North Harford Road, suburb Hamilton, city Baltimore, postcode 21234. Official contact page prints 6824 Harford Rd, Baltimore, MD 21234 and +1 410-426-3244.",
       "bar_hours": "Official contact hours: Monday–Friday 11:00 AM–9:00 PM; Saturday 4:00 PM–9:00 PM. Sunday not printed. Lunch special clock printed on the menu is Monday–Friday 11:00 AM–3:00 PM, which is not the same as full weekday service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Hamilton Thai restaurant. Not in live venues.json. Official site https://www.chokchaithaifood.com/. Distinct from Chat Thai at Quarry Lake, which is county and was not written.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Pad Thai with spring roll $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Pad Thai with veggie curry puff $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Pad Thai with tom-yum chicken $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Ginger with spring roll $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Ginger with veggie curry puff $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Ginger with tom-yum chicken $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Basil with spring roll $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Basil with veggie curry puff $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Basil with tom-yum chicken $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Mix vegetable with spring roll $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Mix vegetable with veggie curry puff $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Mix vegetable with tom-yum chicken $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Black fried rice with spring roll $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Black fried rice with veggie curry puff $12.95",
-              "price": "$12.95"
-            },
-            {
-              "text": "Black fried rice with tom yum chicken $12.95",
-              "price": "$12.95"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.chokchaithaifood.com/menu",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "LUNCH SPECIAL. MON—FRI 11:00 AM-3:00 PM Use Pure 100% Corn Oil (All Entrée serve w/ Steamed Rice except Pad Thai and Fried Rice) (NO Substitution). LS.1 Pad Thai w/ Spring Roll 12.95 LS.2 Pad Thai w/ Veggie Curry Puff 12.95 LS.3 Pad Thai w/ Tom-Yum Chicken 12.95 LS.4 Ginger* w/ Spring Roll 12.95 LS.5 Ginger* w/ Veggie Curry Puff 12.95 LS.6 Ginger* w/ Tom-Yum Chicken 12.95 LS.7 Basil* w/ Spring Roll 12.95 LS.8 Basil* w/ Veggie Curry Puff 12.95 LS.9 Basil* w/ Tom-Yum Chicken 12.95 LS.10 Mix Vegetable w/ Spring Roll 12.95 LS.11 Mix Vegetable w/ Veggie Curry Puff 12.95 LS.12 Mix Vegetable w/ Tom-Yum Chicken 12.95 LS.13 Black Fried Rice w/ Spring Roll 12.95 LS.14 Black Fried Rice w/ Veggie Curry Puff 12.95 LS.15 Black Fried Rice w/ Tom Yum Chicken 12.95."
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Hamilton Thai restaurant. Not in live venues.json. Official site https://www.chokchaithaifood.com/. Distinct from Chat Thai at Quarry Lake, which is county and was not written. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "one-star-country-club",
@@ -18590,342 +18201,103 @@
       "id": "himalayan-house",
       "name": "Himalayan House",
       "neighborhood": "Locust Point",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "1522 East Fort Ave, Baltimore, MD 21230",
       "phone": "(410) 528-1271",
       "source_url": "https://www.thehimalayanhouse.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2688978,
       "lon": -76.5930725,
       "coords_source": "Nominatim search 1522 East Fort Ave, Baltimore, MD 21230 on 2026-09-08 returned OSM node 10799617068 named Himalayan House Restaurant at 39.2688978,-76.5930725. Display name neighbourhood is Locust Point, city Baltimore, postcode 21230. Official lunch-special page prints 1522 East Fort Ave, Baltimore, MD 21230 and (410) 528-1271.",
       "bar_hours": "Official homepage Opening Hours: Mon 10:00 AM–10:00 PM; Wed–Thu 10:00 AM–10:00 PM; Fri–Sat 10:00 AM–10:30 PM; Sun 11:00 AM–10:00 PM; Tue Closed. Lunch special clock printed on the lunch-special page is 10:30AM–3:00PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Locust Point Indian/Nepalese restaurant. Not in live venues.json. Official site https://www.thehimalayanhouse.com/. Distinct from Nepal House at 920 N Charles St, which was written separately.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Vegetarian lunch special combo $11.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
-              "price": "$11.99"
-            },
-            {
-              "text": "Chicken lunch special combo $12.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
-              "price": "$12.99"
-            },
-            {
-              "text": "Lamb lunch special combo $13.99, served with basmati rice, naan or samosa, and 1 can soda or small water",
-              "price": "$13.99"
-            }
-          ],
-          "start": 630,
-          "end": 900,
-          "time_window": "10:30am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.thehimalayanhouse.com/lunch-special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Try our Delicious Lunch Special Combo: 10:30AM to 3:00PM (All Curry Served with Basmati Rice, Naan or Samosa & 1 Can Soda or Small Water) Vegetarian.................................. $11.99 Chicken........................................ $12.99 Lamb.............................................. $13.99"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Locust Point Indian/Nepalese restaurant. Not in live venues.json. Official site https://www.thehimalayanhouse.com/. Distinct from Nepal House at 920 N Charles St, which was written separately. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "nepal-house",
       "name": "Nepal House",
       "neighborhood": "Mount Vernon",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "920 N Charles St., Baltimore, MD 21201",
       "phone": "(410) 547-0001",
       "source_url": "https://www.thenepalhouse.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3002794,
       "lon": -76.615984,
       "coords_source": "Nominatim search 920 N Charles St, Baltimore, MD 21201 on 2026-09-08 returned OSM node 5837329150 named Nepal House at 39.3002794,-76.6159840. Display name neighbourhood is Mount Vernon, city Baltimore, postcode 21201. Official homepage prints 920 N Charles St., Baltimore, MD 21201 and (410) 547-0001.",
       "bar_hours": "Official homepage header prints Mon–Sun 11:00 AM–01:00 AM. Opening Hours block prints Open 7 days a week, Mon–Sun 11:30 AM–01:00 AM. Buffet clock printed beside those hours is Everyday 11:30 AM–3:30 PM.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Mount Vernon Nepali/Indian restaurant at the former Mughal Garden address. Not in live venues.json. Official site https://www.thenepalhouse.com/. Distinct from Himalayan House at 1522 East Fort Ave, which was written separately.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Daily lunch buffet $15.99",
-              "price": "$15.99"
-            }
-          ],
-          "start": 690,
-          "end": 930,
-          "time_window": "11:30am-3:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.thenepalhouse.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Buffet Hours: Everyday (11:30 AM – 3:30 PM) Monday -Thursday $15.99 Friday, Saturday and Sunday $16.99 Join us daily and enjoy an authentic Nepali and Himalayan buffet featuring a variety of fresh and delicious dishes."
-        },
-        {
-          "days": [
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Daily lunch buffet $16.99",
-              "price": "$16.99"
-            }
-          ],
-          "start": 690,
-          "end": 930,
-          "time_window": "11:30am-3:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.thenepalhouse.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Buffet Hours: Everyday (11:30 AM – 3:30 PM) Monday -Thursday $15.99 Friday, Saturday and Sunday $16.99 Join us daily and enjoy an authentic Nepali and Himalayan buffet featuring a variety of fresh and delicious dishes."
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Mount Vernon Nepali/Indian restaurant at the former Mughal Garden address. Not in live venues.json. Official site https://www.thenepalhouse.com/. Distinct from Himalayan House at 1522 East Fort Ave, which was written separately. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "sunny-carry-out",
       "name": "Sunny Carry Out",
       "neighborhood": "Pigtown",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "758 Washington Blvd, Baltimore, MD 21230",
       "phone": "(410) 244-8816",
       "source_url": "https://www.sunnycarryouttogo.com/rfab3e5r/sunny-carry-out-baltimore-21230/menu?menu=Lunch+Menu",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.283226,
       "lon": -76.6278294,
       "coords_source": "Nominatim search 758 Washington Blvd, Baltimore, MD 21230 on 2026-09-08 returned OSM way 239096358 named Sunny Chinese Food at 39.2832260,-76.6278294. Display name neighbourhood is Washington Village/Pigtown, city Baltimore, postcode 21230. Official lunch menu page prints 758 Washington Blvd, Baltimore, MD 21230 and (410) 244-8816.",
       "bar_hours": "Official restaurant schema openingHours: Mon–Sat 11:00 AM–9:00 PM; Sunday not listed. Lunch special clock printed on the lunch menu is 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Pigtown Chinese carryout at 758 Washington Blvd. Not in live venues.json. Official site https://www.sunnycarryouttogo.com/. Pigtown Main Street lists the room as Sunny Chinese Food; official menu name is Sunny Carry Out.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $9.90, served with a can soda and fried rice or white rice (L1–L22, including mixed vegetables, lo mein, chow mein, broccoli, and General Tso's chicken)",
-              "price": "$9.90"
-            },
-            {
-              "text": "Vegetable mei fun, chicken mei fun, shrimp egg foo young, and triple delight lunch specials $10.18, served with a can soda and fried rice or white rice",
-              "price": "$10.18"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.sunnycarryouttogo.com/rfab3e5r/sunny-carry-out-baltimore-21230/menu?menu=Lunch+Menu",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Lunch Specials All Lunch Special served w. Can Soda & Fried Rice or White Rice Available: All week days From: 11:00 AM - 3:00 PM L1. Mixed Vegetables $9.90 L23. Vegetable Mei Fun $10.18"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Pigtown Chinese carryout at 758 Washington Blvd. Not in live venues.json. Official site https://www.sunnycarryouttogo.com/. Pigtown Main Street lists the room as Sunny Chinese Food; official menu name is Sunny Carry Out. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "china-express",
       "name": "China Express",
       "neighborhood": "Abell",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "419 E. 33rd St., Baltimore, MD 21218",
       "phone": "(410) 235-1100",
       "source_url": "https://www.baltimorechinaexpress.com/86e7l32e/china-express-baltimore-21218/menu?menu=LUNCH+MENU",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3282005,
       "lon": -76.610029,
       "coords_source": "Nominatim search 419 E. 33rd St., Baltimore, MD 21218 on 2026-09-08 returned OSM node 9924814276 named China Express at 39.3282005,-76.6100290. Display name neighbourhood is Abell, city Baltimore, postcode 21218. Official lunch menu and restaurant schema print 419 E. 33rd St., Baltimore, MD 21218 and (410) 235-1100.",
       "bar_hours": "Official restaurant schema openingHours: Mon–Thu 11:00 AM–9:30 PM; Fri–Sat 11:00 AM–10:00 PM; Sunday not listed. Lunch special clock printed on the lunch menu is 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 419 E. 33rd St. in Abell, 21218. Not in live venues.json. Official site https://www.baltimorechinaexpress.com/.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $9.75, served with white or fried rice and an egg roll or can soda (L2–L17 and L19–L38, including sauteed mixed vegetable, lo mein, egg foo young, General Tso's, and sesame chicken)",
-              "price": "$9.75"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.baltimorechinaexpress.com/86e7l32e/china-express-baltimore-21218/menu?menu=LUNCH+MENU",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "LUNCH SPECIAL 11:00am-3:00pm. Served with white or fried rice and egg roll or can soda Available: All week days From: 11:00 AM - 3:00 PM L 2. Sauteed Mixed Vegetable (Lunch) $ 9.75"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 419 E. 33rd St. in Abell, 21218. Not in live venues.json. Official site https://www.baltimorechinaexpress.com/. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "china-fun",
       "name": "China Fun",
       "neighborhood": "Fallstaff",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "7002 Reisterstown Rd, Ste C, Baltimore, MD 21215",
       "phone": "(410) 484-8338",
       "source_url": "https://order.chinafunmd.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3621647,
       "lon": -76.7104273,
       "coords_source": "Nominatim search 7002 Reisterstown Rd, Baltimore, MD 21215 on 2026-09-08 returned OSM way 544825021 at 39.3621647,-76.7104273. Display name neighbourhood is Fallstaff, city Baltimore, postcode 21215. Official homepage and order page print 7002 Reisterstown Rd, Ste C, Baltimore, MD 21215 and (410) 484-8338.",
       "bar_hours": "Official homepage Open Hours: Monday Closed; Tue–Thu 11:00 AM–9:30 PM; Fri–Sat 11:00 AM–10:30 PM; Sunday 12:00 PM–9:30 PM. Lunch special clock printed on the order menu is Tue–Sat 11:00 AM–2:30 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 7002 Reisterstown Rd, Ste C, in Fallstaff, 21215. Not in live venues.json. Official site https://www.chinafunmd.com/; lunch clock and prices are on the official order menu https://order.chinafunmd.com/menu.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Luncheon special $8.95, with fried rice or steamed rice and a free can soda or egg roll (L1–L4 and L6–L33, including General Tso's chicken, lo mein, chow mein, and broccoli)",
-              "price": "$8.95"
-            },
-            {
-              "text": "Chicken, pork, beef, or shrimp egg foo young and boneless spare ribs luncheon special $9.45, with fried rice or steamed rice and a free can soda or egg roll",
-              "price": "$9.45"
-            }
-          ],
-          "start": 660,
-          "end": 870,
-          "time_window": "11am-2:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://order.chinafunmd.com/menu",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Luncheon Special From Tues. - Sat.: 11:00 am to 2:30 pm with Fried Rice or Steamed Rice & Free Can Soda or Egg Roll L 1. General Tso's Chicken $8.95 L 5. Chicken Egg Foo Young $9.45"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 7002 Reisterstown Rd, Ste C, in Fallstaff, 21215. Not in live venues.json. Official site https://www.chinafunmd.com/; lunch clock and prices are on the official order menu https://order.chinafunmd.com/menu. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "new-asian-taste",
       "name": "New Asian Taste",
       "neighborhood": "Hampden",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "3400 Chestnut Ave, Baltimore, MD 21211",
       "phone": "(410) 467-0100",
       "source_url": "https://order.newasiantastetogo.com/order/main/kitchen-lunch-special",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3287692,
       "lon": -76.6295308,
       "coords_source": "Nominatim search 3400 Chestnut Ave, Baltimore, MD 21211 on 2026-09-08 returned OSM way 336399293 at 39.3287692,-76.6295308. Display name neighbourhood is Hampden, city Baltimore, postcode 21211. Official homepage prints 3400 Chestnut Ave, Baltimore, MD 21211 and (410) 467-0100.",
       "bar_hours": "Official homepage Open Hours: Monday Closed; Tue–Thu 11:00 AM–3:00 PM and 4:00 PM–10:00 PM; Fri–Sat 11:00 AM–10:30 PM; Sunday 12:00 PM–10:00 PM. Lunch special clock printed on the lunch cards is 11:00 AM–3:30 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Japanese and Chinese carryout at 3400 Chestnut Ave in Hampden, 21211. Not in live venues.json. Official site https://www.newasiantastetogo.com/; priced lunch clock is on the official order menu.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Regular maki lunch special, choice of two, $10.95, with miso soup and salad",
-              "price": "$10.95"
-            },
-            {
-              "text": "Deluxe maki any two rolls lunch special $11.95",
-              "price": "$11.95"
-            },
-            {
-              "text": "Deluxe maki any three rolls lunch special $14.95",
-              "price": "$14.95"
-            },
-            {
-              "text": "Salmon, tuna, chef's-choice sushi, sashimi, or chirashi don lunch special $14.95, served with miso soup and house salad",
-              "price": "$14.95"
-            },
-            {
-              "text": "Una Don lunch special $12.95, 5 pieces cooked on the rice",
-              "price": "$12.95"
-            },
-            {
-              "text": "Sushi and sashimi lunch special $16.95, 3 pieces nigiri, 4 pieces sashimi, and 1 spicy tuna roll",
-              "price": "$16.95"
-            },
-            {
-              "text": "General Tso's tofu or sesame tofu kitchen lunch special $8.95, served with white rice or brown rice",
-              "price": "$8.95"
-            },
-            {
-              "text": "General Tso's chicken or sesame chicken kitchen lunch special $9.95, served with white rice or brown rice",
-              "price": "$9.95"
-            },
-            {
-              "text": "Teriyaki chicken, deep fried chicken, or pork chashu kitchen lunch special $11.95, served with white rice or brown rice",
-              "price": "$11.95"
-            },
-            {
-              "text": "Teriyaki shrimp or smoked eel and shrimp kitchen lunch special $12.95, served with white rice or brown rice",
-              "price": "$12.95"
-            },
-            {
-              "text": "Teriyaki beef or teriyaki salmon kitchen lunch special $13.95, served with white rice or brown rice",
-              "price": "$13.95"
-            }
-          ],
-          "start": 660,
-          "end": 930,
-          "time_window": "11am-3:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://order.newasiantastetogo.com/order/main/kitchen-lunch-special",
-          "food_categories": [
-            "sushi",
-            "pasta/comfort"
-          ],
-          "proof_quote": "Lunch Special 11:00 am - 3:30 pm w. Miso Soup & Salad (L). Regular Maki Choice of two $10.95 Sushi Lunch Special 11:00 am - 3:30 pm Served w. Miso Soup & House Salad (L). Salmon Lunch $14.95 Kitchen Lunch Special 11:00 am - 3:30 pm Served w. White Rice or Brown Rice (L). General Tso's Chicken $9.95"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Japanese and Chinese carryout at 3400 Chestnut Ave in Hampden, 21211. Not in live venues.json. Official site https://www.newasiantastetogo.com/; priced lunch clock is on the official order menu. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "ledo-pizza-federal-hill",
@@ -19046,140 +18418,52 @@
       "id": "no-1-chinese-kitchen",
       "name": "No 1 Chinese Kitchen",
       "neighborhood": "Hampden",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "3998 Roland Ave, Baltimore, MD 21211",
       "phone": "(410) 235-1688",
       "source_url": "https://www.no1chinesekitchen-md.com/order/main/lunch-special",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3370937,
       "lon": -76.6332599,
       "coords_source": "Nominatim search 3998 Roland Ave, Baltimore, MD 21211 on 2026-09-08 returned OSM node 9908120904 named No. 1 Chinese Kitchen at 39.3370937,-76.6332599. Display name neighbourhood is Hampden, city Baltimore, postcode 21211. Official lunch page and restaurant schema print 3998 Roland Ave, Baltimore, MD 21211 and (410) 235-1688. A second Nominatim hit at the same house number is Down Under Smoke Shop and was not used.",
       "bar_hours": "Official restaurant schema openingHoursSpecification: Monday, Wednesday, Thursday, Sunday 10:00-21:30; Friday-Saturday 10:00-22:00. Tuesday is not listed. Lunch special clock printed on the lunch page is 11:00 am - 3:00 pm, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 3998 Roland Ave, 21211. Not in live venues.json. Official site https://www.no1chinesekitchen-md.com/. Lunch price and clock are on https://www.no1chinesekitchen-md.com/order/main/lunch-special.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $8.60, served with pork fried rice or steamed rice or brown rice (L1-L5: chicken with broccoli, chicken with mixed vegetable, shrimp or chicken chow mein, assorted mixed vegetable, moo goo gai pan)",
-              "price": "$8.60"
-            },
-            {
-              "text": "Lunch special $8.95, served with pork fried rice or steamed rice or brown rice (L6-L20, including shrimp, chicken, or pork lo mein, pepper steak with onion, curry, egg foo young, and shrimp with broccoli)",
-              "price": "$8.95"
-            },
-            {
-              "text": "Lunch special $9.25, served with pork fried rice or steamed rice or brown rice (L21-L30, including sesame chicken, General Tso's chicken, orange chicken, honey chicken, and bourbon chicken)",
-              "price": "$9.25"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.no1chinesekitchen-md.com/order/main/lunch-special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "11:00 am - 3:00 pm Each Dish Served with: Pork Fried Rice or Steamed Rice or Brown Rice L 1. Chicken w. Broccoli $8.60"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 3998 Roland Ave, 21211. Not in live venues.json. Official site https://www.no1chinesekitchen-md.com/. Lunch price and clock are on https://www.no1chinesekitchen-md.com/order/main/lunch-special. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "garden-sea",
       "name": "Garden Sea",
       "neighborhood": "Frankford",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "5301 Belair Rd Baltimore, MD 21206",
       "phone": "(410) 483-2000",
       "source_url": "https://www.gardenseamd.com/order/main/lunch-special",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3372634,
       "lon": -76.552235,
       "coords_source": "Nominatim search 5301 Belair Rd, Baltimore, MD 21206 on 2026-09-08 returned OSM way 336187821 named Garden Sea Chinese Restauant at 39.3372634,-76.5522350. Display name neighbourhood is Frankford, city Baltimore, postcode 21206. Official lunch page and restaurant schema print 5301 Belair Rd Baltimore, MD 21206 and telephone (410) 483-2000.",
       "bar_hours": "Official restaurant schema openingHoursSpecification: Tuesday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:30 PM; Sunday 12:00 PM–9:30 PM; Monday not listed. Lunch special clock printed on the lunch page is Tuesday–Saturday 11:00 AM–3:30 PM, except major holidays and Sunday.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese restaurant at 5301 Belair Rd, 21206. Not in live venues.json. Official site https://www.gardenseamd.com/. Priced weekday lunch special is on https://www.gardenseamd.com/order/main/lunch-special.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $8.25, served with fried rice and a choice of wonton soup or can soda (including chicken chow mein, lo mein, broccoli chicken, sesame chicken, and General Tso's chicken)",
-              "price": "$8.25"
-            }
-          ],
-          "start": 660,
-          "end": 930,
-          "time_window": "11am-3:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.gardenseamd.com/order/main/lunch-special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Tuesday - Saturday: 11:00 am - 3:30 pm (Except Major Holiday & Sunday) Served with Fried Rice and Choice of Wonton Soup or Can Soda L 1. Chicken Chow Mein $8.25"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese restaurant at 5301 Belair Rd, 21206. Not in live venues.json. Official site https://www.gardenseamd.com/. Priced weekday lunch special is on https://www.gardenseamd.com/order/main/lunch-special. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "kumari-fort-ave",
       "name": "Kumari",
       "neighborhood": "Riverside",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "847 East Fort Avenue, Baltimore, MD 21230",
       "phone": "(410) 576-2222",
       "source_url": "https://www.kumarirestaurantbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2711396,
       "lon": -76.6028805,
       "coords_source": "Nominatim search 847 East Fort Avenue, Baltimore, MD 21230 on 2026-09-08 returned OSM node 2984576769 named Kumari at 39.2711396,-76.6028805. Display name neighbourhood is Riverside, city Baltimore, postcode 21230. Official homepage and contact page print 847 East Fort Avenue, Baltimore, MD 21230 and (410) 576-2222. Official about page also calls the room Federal Hill.",
       "bar_hours": "Official contact page: Open 7 days a week. Sun–Thu 11:30 AM–10:00 PM; Fri–Sat 11:30 AM–10:30 PM. Lunch buffet line on the homepage does not print a clock.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Indian/Nepalese restaurant at 847 East Fort Avenue, 21230. Not in live venues.json. Official site https://www.kumarirestaurantbaltimore.com/. Distinct from Himalayan House at 1522 East Fort Ave and from the Mount Vernon Kumari site.",
-      "deals": [
-        {
-          "days": [
-            "sun",
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch buffet $18.99 + tax, dine-in or carry-out",
-              "price": "$18.99"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://www.kumarirestaurantbaltimore.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "LUNCH BUFFET (DINE-IN/CARRY-OUT) LUNCH BUFFET SUNDAY – SATURDAY: $18.99 + Tax",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Indian/Nepalese restaurant at 847 East Fort Avenue, 21230. Not in live venues.json. Official site https://www.kumarirestaurantbaltimore.com/. Distinct from Himalayan House at 1522 East Fort Ave and from the Mount Vernon Kumari site. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "franks-bay-tavern",
@@ -19274,51 +18558,24 @@
       "id": "new-chef-carry-out",
       "name": "New Chef Carry Out",
       "neighborhood": "Rosemont East",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "6604 Belair Rd Baltimore, MD 21206",
       "phone": "(410) 426-8888",
       "source_url": "https://order.newchefbaltimore.com/order/main/luncheon-special",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.3543268,
       "lon": -76.5318789,
       "coords_source": "Nominatim search 6604 Belair Rd, Baltimore, MD 21206 on 2026-09-08 returned OSM node 3320281958 named New Chef at 39.3543268,-76.5318789. Display name neighbourhood is Rosemont East, city Baltimore, postcode 21206. Official luncheon page and homepage print 6604 Belair Rd Baltimore, MD 21206 and telephone (410) 426-8888.",
       "bar_hours": "Official homepage Open Hours and order-page schema openingHoursSpecification: Monday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:30 PM. Lunch special clock printed on the luncheon page is Monday–Saturday 11:00 AM–4:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 6604 Belair Rd, 21206. Not in live venues.json. Official site https://www.newchefbaltimore.com/. Priced weekday lunch special is on https://order.newchefbaltimore.com/order/main/luncheon-special.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $9.50, served with roast pork fried rice and an egg roll, soda, or soup (including chicken chow mein, lo mein, broccoli chicken, sesame chicken, and General Tso's chicken)",
-              "price": "$9.50"
-            }
-          ],
-          "start": 660,
-          "end": 960,
-          "time_window": "11am-4pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-08",
-          "source_url": "https://order.newchefbaltimore.com/order/main/luncheon-special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Mon. - Sat.: 11:00 am to 4:00pm Served with Roast Pork Fried Rice and Egg Roll or Soda or Soup L1. Chicken Chow Mein $9.50"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-08: City of Baltimore Chinese carryout at 6604 Belair Rd, 21206. Not in live venues.json. Official site https://www.newchefbaltimore.com/. Priced weekday lunch special is on https://order.newchefbaltimore.com/order/main/luncheon-special. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "franks-pizza-and-pasta",
       "name": "Frank's Pizza & Pasta",
       "neighborhood": "Rosemont East",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "6620 Belair Rd, Baltimore, MD 21206",
       "phone": "(410) 254-2900",
       "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
@@ -19328,55 +18585,14 @@
       "lon": -76.5316134,
       "coords_source": "Nominatim search 6620 Belair Rd, Baltimore, MD 21206 on 2026-09-09 returned OSM node 7276635104 named Frank's Pizza & Pasta at 39.3545572,-76.5316134. Display name neighbourhood is Rosemont East, city Baltimore, postcode 21206. Official homepage prints 6620 Belair Rd and Baltimore, MD 21206. Official menu PDF prints 6620 BELAIR ROAD, BALTIMORE, MARYLAND 21206 and 410-254-2900.",
       "bar_hours": "Official homepage prints Tuesday 11am – 9pm, Wednesday 11am – 9pm, Thursday 11am – 9pm, Friday 11am – 10pm, Saturday 11am – 10pm, Sunday 12pm – 9pm, Monday Closed. Those are service hours. The Tuesday pizza and Wednesday spaghetti columns on the official menu PDF do not print a special clock.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pizza room at 6620 Belair Rd, 21206, Rosemont East. Not in live venues.json. Not New Chef at 6604 Belair Rd. Official site https://frankspizzaandpasta.com/. Priced weekday specials are on the official in-house menu PDF linked from that homepage.",
-      "deals": [
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Two 16-inch cheese pizzas $23.98, no coupon necessary, limit 10",
-              "price": "$23.98"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
-          "food_categories": [
-            "pizza"
-          ],
-          "proof_quote": "Tuesday Pizza Special Two 16” Cheese Pizzas $23.98 No Coupon Necessary - Limit 10",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "Spaghetti and meatballs for two $22.98, including 2 salads and breadsticks",
-              "price": "$22.98"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Wednesday Spaghetti for 2 Spaghetti & Meatballs for Two $22.98 Including 2 Salads & Breadsticks",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pizza room at 6620 Belair Rd, 21206, Rosemont East. Not in live venues.json. Not New Chef at 6604 Belair Rd. Official site https://frankspizzaandpasta.com/. Priced weekday specials are on the official in-house menu PDF linked from that homepage. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "sun-wah",
       "name": "Sun Wah",
       "neighborhood": "Frankford",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "4901 Frankford Ave, Baltimore, MD 21206",
       "phone": "(410) 483-4120",
       "source_url": "https://order.sunwahbaltimore.com/order/main/lunch-special",
@@ -19386,41 +18602,14 @@
       "lon": -76.5436667,
       "coords_source": "Nominatim search 4901 Frankford Ave, Baltimore, MD 21206 on 2026-09-09 returned OSM way 336176378 at 39.3308265,-76.5436667. Display name neighbourhood is Frankford, city Baltimore, postcode 21206. Official homepage prints 4901 Frankford Ave, Baltimore, MD 21206 and telephone (410) 483-4120.",
       "bar_hours": "Official homepage Open Hours: Monday–Thursday 11:00 AM–10:00 PM; Friday 11:00 AM–11:00 PM; Saturday 12:00 PM–11:00 PM; Sunday Closed. Order-page schema openingHoursSpecification matches Monday–Thursday 11:00–22:00, Friday 11:00–23:00, Saturday 12:00–23:00. Lunch special clock printed on the lunch page is Monday–Saturday 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 4901 Frankford Ave, 21206, Frankford corridor next to Belair Road. Not in live venues.json. Official site https://www.sunwahbaltimore.com/. Priced weekday lunch special is on https://order.sunwahbaltimore.com/order/main/lunch-special.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $11.00, served with fried rice (including chicken chow mein, shrimp chow mein, shrimp egg foo young, pepper steak, curry chicken, General Tso's chicken, sesame chicken, and orange chicken)",
-              "price": "$11.00"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://order.sunwahbaltimore.com/order/main/lunch-special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Mon. - Sat.: 11 am - 3 pm All Served with Fried Rice L 1. Chicken Chow Mein $11.00"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 4901 Frankford Ave, 21206, Frankford corridor next to Belair Road. Not in live venues.json. Official site https://www.sunwahbaltimore.com/. Priced weekday lunch special is on https://order.sunwahbaltimore.com/order/main/lunch-special. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "asian-taste",
       "name": "Asian Taste",
       "neighborhood": "Frankford",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "5441 Belair Rd, Baltimore, MD 21206",
       "phone": "(410) 325-1000",
       "source_url": "https://www.baltimoreasiantaste.com/2puo8mch/asian-taste-baltimore-21206/order-online",
@@ -19430,41 +18619,14 @@
       "lon": -76.549866,
       "coords_source": "Nominatim search 5441 Belair Rd, Baltimore, MD 21206 on 2026-09-09 returned OSM way 336184518 named Asia Taste Chinese Restaurant at 39.3390386,-76.5498660. Display name neighbourhood is Frankford, suburb Hamilton, city Baltimore, postcode 21206. Official restaurant schema prints streetAddress 5441 Belair Rd, addressLocality Baltimore, addressRegion MD, postalCode 21206, and telephone (410) 325-1000.",
       "bar_hours": "Official homepage Hours of Operation and restaurant schema openingHours: Tuesday–Thursday 11:00 AM–9:00 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:00 PM; Monday Closed. Lunch special clock printed on the official order page is Tuesday–Sunday 11:00 AM–3:30 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5441 Belair Rd, 21206, Frankford leftover next to Belair Road. Not in live venues.json. Not Garden Sea at 5301 Belair Rd. Official site https://www.baltimoreasiantaste.com/. Priced weekday lunch special is on the official order page.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $8.45, served with vegetable fried rice or white rice and soup or soda or vegetable egg roll (including chicken with broccoli)",
-              "price": "$8.45"
-            }
-          ],
-          "start": 660,
-          "end": 930,
-          "time_window": "11am-3:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.baltimoreasiantaste.com/2puo8mch/asian-taste-baltimore-21206/order-online",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Tuesday - Sunday 11am - 3:30pm; Served with vegetable fried rice or white rice and soup or soda or vegetable egg roll. Chicken w. Broccoli Lunch 8.45"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5441 Belair Rd, 21206, Frankford leftover next to Belair Road. Not in live venues.json. Not Garden Sea at 5301 Belair Rd. Official site https://www.baltimoreasiantaste.com/. Priced weekday lunch special is on the official order page. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "corner-crab-house",
       "name": "The Corner Crab House",
       "neighborhood": "Orchard Ridge",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "4600 Erdman Avenue, Baltimore, MD 21205",
       "phone": "(410) 485-7442",
       "source_url": "https://thecornercrabhouse.com/",
@@ -19474,95 +18636,14 @@
       "lon": -76.5616873,
       "coords_source": "Nominatim search 4600 Erdman Avenue, Baltimore, MD 21205 on 2026-09-09 returned OSM way 336201932 named Corner Crab House at 39.3088408,-76.5616873. Display name neighbourhood is Orchard Ridge, city Baltimore, postcode 21205. Official homepage title prints The Corner Crab House - Baltimore, MD, footer prints 4600 Erdman Avenue and 21205, and telephone (410) 485-7442.",
       "bar_hours": "Official homepage Opening hours: Sunday 1pm - 7pm, Monday 1pm - 7pm, Tuesday 1pm - 7pm, Wednesday 1pm - 7pm, Thursday 1pm - 7pm, Friday 1pm - 8pm, Saturday 12pm - 8pm. Those are service hours. The Monday through Thursday weekly specials do not print a special clock.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore seafood room at 4600 Erdman Avenue, 21205, Orchard Ridge. Not in live venues.json. Official site https://thecornercrabhouse.com/. Priced weekday specials are on that homepage Weekly Specials section. Construction notice on the same page says not all info is currently accurate or updated.",
-      "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "Whiting fish sub platter with 2 sides $14 (regular $16.75 printed beside it)",
-              "price": "$14"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://thecornercrabhouse.com/",
-          "food_categories": [
-            "sandwich/cheesesteak"
-          ],
-          "proof_quote": "Monday Special Whiting Fish Sub Platter w/ 2 Sides $16.75 $14",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "Two pounds of XL steamed shrimp $30 (regular $37.90 printed beside it)",
-              "price": "$30"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://thecornercrabhouse.com/",
-          "food_categories": [
-            "seafood/crab"
-          ],
-          "proof_quote": "Tuesday Special Two pounds of XL Steamed Shrimp $37.90 $30",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "Shrimp salad sandwich $7.50 (regular $8.50 printed beside it)",
-              "price": "$7.50"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://thecornercrabhouse.com/",
-          "food_categories": [
-            "sandwich/cheesesteak"
-          ],
-          "proof_quote": "Wednesday Special Shrimp Salad Sandwhich $8.50 $7.50",
-          "start": null,
-          "end": null
-        },
-        {
-          "days": [
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Seafood tray, 1 pound XL shrimp, 1 pound snow crab legs, corn on the cob, onions, and potatoes covered in seasoning and butter, $50 (regular $65 printed beside it)",
-              "price": "$50"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://thecornercrabhouse.com/",
-          "food_categories": [
-            "seafood/crab"
-          ],
-          "proof_quote": "Thursday Special Seafood Tray (1 Pound XL Shrimp, 1 Pound Snow Crab Legs, Corn on the Cob, Onions, and Potatoes covered in seasoning and butter. $65 $50",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore seafood room at 4600 Erdman Avenue, 21205, Orchard Ridge. Not in live venues.json. Official site https://thecornercrabhouse.com/. Priced weekday specials are on that homepage Weekly Specials section. Construction notice on the same page says not all info is currently accurate or updated. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "chow-mein-charlie",
       "name": "Chow Mein Charlie",
       "neighborhood": "Roland Park",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "508 W Cold Spring Ln, Baltimore, MD 21210",
       "phone": "(410) 889-8886",
       "source_url": "https://www.chowmeincharlie.com/menu/",
@@ -19572,48 +18653,14 @@
       "lon": -76.6313442,
       "coords_source": "Nominatim search 508 W Cold Spring Ln, Baltimore, MD 21210 on 2026-09-09 returned OSM node 3240567516 named Chow Mein Charlie at 39.3446458,-76.6313442. Display name neighbourhood is Roland Park, city Baltimore, postcode 21210. Official site footer prints 508 W Cold Spring Ln, Baltimore, MD 21210 and +1 410-889-8886.",
       "bar_hours": "Official site footer opening hours: Monday–Thursday 11:00 AM–8:00 PM; Friday 11:00 AM–9:00 PM; Saturday 2:00 PM–8:00 PM; Sunday 3:00 PM–8:00 PM. Luncheon special clock printed on the official menu is Monday–Friday 11:00 AM–2:30 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 508 W Cold Spring Ln, 21210, Roland Park. Not in live venues.json. Official site https://www.chowmeincharlie.com/. Priced weekday luncheon special is on https://www.chowmeincharlie.com/menu/.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Luncheon special $9.95, served with fried rice or steamed rice and water (chicken chow mein, mixed vegetables Hunan style, broccoli with garlic sauce, and Szechuan string beans); chicken lo mein on this price is no rice",
-              "price": "$9.95"
-            },
-            {
-              "text": "Luncheon special $10.50, served with fried rice or steamed rice and water (sweet and sour chicken, kung pao chicken, chicken with cashew nuts, Szechuan chicken, chicken in hot black bean sauce, chicken with broccoli, Hunan chicken, chicken in hot garlic sauce, roasted pork with mixed vegetables, and shredded pork with hot garlic sauce); shrimp lo mein on this price is no rice",
-              "price": "$10.50"
-            },
-            {
-              "text": "Luncheon special $10.95, served with fried rice or steamed rice and water (chicken supreme, orange chicken, General Tso's chicken, beef with broccoli, beef in hot black bean sauce, Mongolian beef, Szechuan beef, pepper steak with onion, Szechuan shrimp, shrimp with cashew nuts, shrimp in hot black bean sauce, Hunan shrimp, kung pao shrimp, and shrimp with mixed vegetables)",
-              "price": "$10.95"
-            }
-          ],
-          "start": 660,
-          "end": 870,
-          "time_window": "11am-2:30pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.chowmeincharlie.com/menu/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Luncheon Special (11:00am to 2:30pm, Monday to Friday) Served with Fried Rice or Steamed Rice and Water Chicken Chow Mein $9.95"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 508 W Cold Spring Ln, 21210, Roland Park. Not in live venues.json. Official site https://www.chowmeincharlie.com/. Priced weekday luncheon special is on https://www.chowmeincharlie.com/menu/. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "b-more-pies-and-sweets",
       "name": "B-More Pies and Sweets",
       "neighborhood": "Canton",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "2839 O'Donnell St, Baltimore, MD 21224",
       "phone": "(410) 522-7437",
       "source_url": "https://bmorepies.com/",
@@ -19623,31 +18670,8 @@
       "lon": -76.5755283,
       "coords_source": "Nominatim search 2839 O'Donnell Street, Baltimore, MD 21224 on 2026-09-09 returned OSM way 336246133 named Dangerously Delicious Pies at 39.2798679,-76.5755283. Display name neighbourhood is Canton, city Baltimore, postcode 21224. Official homepage prints 2839 O'Donnell St, Baltimore, MD 21224, Canton Location, and 410-522-PIES (7437). OSM still names the prior Dangerously Delicious Pies shop at this address.",
       "bar_hours": "Official homepage Hours: Monday closed; Tuesday 10:00am-6:00pm; Wednesday 10:00am-6:00pm; Thursday 10:00am-8:00pm; Friday 10:00am-8:00pm; Saturday 10:00am-8:00pm; Sunday 10:00am-6:00pm. Times may be affected on holidays. Those are shop hours. The Tuesday-Thursday date night special does not print a special clock.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pie shop at 2839 O'Donnell St, 21224, Canton Square. Not in live venues.json. Official site https://bmorepies.com/. Priced weekday date-night special is on that homepage DISCOUNTS section. Same owners, formerly Dangerously Delicious Pies at this address.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Date night special, 2 slices of savory, 2 slices of sweet, and 2 drinks $28",
-              "price": "$28"
-            }
-          ],
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://bmorepies.com/",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Tuesday-Thursday: Date Night Special! 2 slices of savory, 2 slices of sweet and 2 drinks= $28!",
-          "start": null,
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pie shop at 2839 O'Donnell St, 21224, Canton Square. Not in live venues.json. Official site https://bmorepies.com/. Priced weekday date-night special is on that homepage DISCOUNTS section. Same owners, formerly Dangerously Delicious Pies at this address. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "rallys-corner-bar",
@@ -19802,7 +18826,7 @@
       "id": "chius-sushi",
       "name": "New Chiu's Sushi",
       "neighborhood": "Harbor East",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "608 S Exeter St, Baltimore, MD 21202",
       "phone": "(410) 752-9666",
       "source_url": "https://www.newchiussushimd.com/",
@@ -19812,41 +18836,14 @@
       "lon": -76.600044,
       "coords_source": "Nominatim search 608 S Exeter Street, Baltimore, MD 21202 on 2026-09-09 returned OSM node 2930407934 at 39.2837900,-76.6000440. Display name is Chiu's Sushi, 608, South Exeter Street, Inner Harbor, Baltimore, postcode 21202. A follow-up search Chiu's Sushi 608 South Exeter Street Baltimore returned the same OSM node 2930407934. Official homepage prints 608 S Exeter St, Baltimore, MD 21202 and (410) 752-9666.",
       "bar_hours": "Official homepage prints Open Hours: Monday Closed; Tuesday 11:00 AM - 9:30 PM; Wednesday 11:00 AM - 9:30 PM; Thursday 11:00 AM - 9:30 PM; Friday 11:00 AM - 10:30 PM; Saturday 12:00 PM - 10:30 PM; Sunday 12:00 PM - 9:30 PM. Those are restaurant service hours. The After 3PM roll combo line prints a start clock and no end.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore restaurant at 608 S Exeter St, 21202. Harbor East directory lists the room; Nominatim neighbourhood is Inner Harbor, city Baltimore. Not in live venues.json. Official homepage https://www.newchiussushimd.com/. Harbor East listing https://harboreast.com/restaurants/chius-sushi/.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Choose Any Three Rolls (After 3PM) $26.95",
-              "price": "$26.95"
-            }
-          ],
-          "start": 900,
-          "time_window": "after 3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.newchiussushimd.com/",
-          "food_categories": [
-            "sushi"
-          ],
-          "proof_quote": "Choose Any Three Rolls (After 3PM) $26.95",
-          "end": null
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore restaurant at 608 S Exeter St, 21202. Harbor East directory lists the room; Nominatim neighbourhood is Inner Harbor, city Baltimore. Not in live venues.json. Official homepage https://www.newchiussushimd.com/. Harbor East listing https://harboreast.com/restaurants/chius-sushi/. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "king-wok",
       "name": "King Wok",
       "neighborhood": "Winston-Govans",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "5105 York Rd, Baltimore, MD 21212",
       "phone": "(410) 435-3900",
       "source_url": "https://www.kingwokmd.com/sk096jli/king-wok-baltimore-21212/menu?menu=Lunch+Special",
@@ -19856,49 +18853,14 @@
       "lon": -76.6094466,
       "coords_source": "Nominatim search 5105 York Rd, Baltimore, MD 21212 on 2026-09-09 returned OSM way 336350177 at 39.3510623,-76.6094466. Display name neighbourhood is Winston-Govans, suburb Greater Govans, city Baltimore, postcode 21212. Official schema and page print streetAddress 5105 York Rd, addressLocality Baltimore, addressRegion MD, postalCode 21212, and telephone (410) 435-3900.",
       "bar_hours": "Official order-page pickupHours and schema openingHours: Monday closed (pickupHours Monday empty; schema omits Monday); Tuesday–Thursday 11:00 AM–10:00 PM; Friday–Saturday 11:00 AM–10:30 PM; Sunday 12:00 PM–10:00 PM. Schema openingHours print Su 12:00-22:00, Tu,We,Th 11:00-22:00, Fr,Sa 11:00-22:30. Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5105 York Rd, 21212, Winston-Govans. Not in live venues.json. Official site https://www.kingwokmd.com/. Priced weekday lunch special is on the official lunch menu page.",
-      "deals": [
-        {
-          "days": [
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $7.75, choice of fried rice or white rice, free can soda (Orange Flavored Chicken, Sesame Chicken, Chicken Lo Mein, Vegetable Lo Mein, General Tso's Chicken, Chicken Broccoli, Hunan Chicken, Mixed Vegetables Chicken, and Mixed Vegetables)",
-              "price": "$7.75"
-            },
-            {
-              "text": "Lunch special $8.25, choice of fried rice or white rice, free can soda (Shrimp w. Broccoli, Beef w. Broccoli, Beef Lo Mein, Shrimp Lo Mein, Chicken Egg Foo Young, Beef Egg Foo Young, Vegetable Egg Foo Young, Shrimp Egg Foo Young, Szechuan Shrimp, Szechuan Beef, Hunan Shrimp, Hunan Beef, and Mixed Vegetables Beef)",
-              "price": "$8.25"
-            },
-            {
-              "text": "Lunch special $8.50, choice of fried rice or white rice, free can soda (Triple Delight)",
-              "price": "$8.50"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.kingwokmd.com/sk096jli/king-wok-baltimore-21212/menu?menu=Lunch+Special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Lunch Special 11:00 am to 3:00 pm. Choice of fried rice or white rice. Free Can Soda Available: All week days From: 11:00 AM - 3:00 PM 1. Shrimp w. Broccoli (Lunch) Stir-fried shrimp and broccoli in a light sauce, served over steamed rice. $ 8.25"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5105 York Rd, 21212, Winston-Govans. Not in live venues.json. Official site https://www.kingwokmd.com/. Priced weekday lunch special is on the official lunch menu page. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "may-flower",
       "name": "May Flower Chinese Restaurant",
       "neighborhood": "Waverly",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "3407 Greenmount Ave, Baltimore, MD 21218",
       "phone": "(410) 366-7696",
       "source_url": "https://www.mayflowermd.com/31gytpwh/may-flower-chinese-restaurant-baltimore-21218/menu?menu=Lunch+Menu",
@@ -19908,49 +18870,14 @@
       "lon": -76.6091438,
       "coords_source": "Nominatim search 3407 Greenmount Ave, Baltimore, MD 21218 on 2026-09-09 returned OSM way 336349105 at 39.3300381,-76.6091438. Display name neighbourhood is Waverly, suburb Northwood, city Baltimore, postcode 21218. Official schema and page print streetAddress 3407 Greenmount Ave, addressLocality Baltimore, addressRegion MD, postalCode 21218, and telephone (410) 366-7696.",
       "bar_hours": "Official order-page pickupHours and schema openingHours: Monday–Saturday 11:00 AM–10:30 PM; Sunday closed (pickupHours Sunday empty; schema openingHours Mo,Tu,We,Th,Fr,Sa 11:00-22:30). Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3407 Greenmount Ave, 21218, Waverly. Not in live venues.json. Official site https://www.mayflowermd.com/. Priced weekday lunch special is on the official lunch menu page.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $7.80, served with fried rice or white rice and soda (Chicken Chow Mein, Pork Chow Mein, Chicken Chop Suey, Pork Chop Suey, Chicken Lo Mein, Pork Lo Mein, Vegetable Lo Mein, Chicken Egg Foo Young, Pork Egg Foo Young, Vegetable Egg Foo Young, Chicken with Broccoli, Pork with Broccoli, Chicken with Chinese Mixed Vegetables, Pork with Chinese Mixed Vegetables, Chicken with Garlic Sauce, Pork with Garlic Sauce, Kung Pao Chicken, Kung Pao Pork, Hunan Chicken, and Hunan Pork)",
-              "price": "$7.80"
-            },
-            {
-              "text": "Lunch special $8.10, served with fried rice or white rice and soda, choice of chicken or pork (Sweet and Sour)",
-              "price": "$8.10"
-            },
-            {
-              "text": "Lunch special $8.45, served with fried rice or white rice and soda (Beef Chow Mein, Shrimp Chow Mein, Beef Chop Suey, Shrimp Chop Suey, Beef Lo Mein, Shrimp Lo Mein, Beef Egg Foo Young, Shrimp Egg Foo Young, Beef with Broccoli, Shrimp with Broccoli, Beef with Chinese Mixed Vegetables, Shrimp with Chinese Mixed Vegetables, General Tao’s Chicken, Sesame Chicken, Orange Chicken, Sesame Beef, Orange Beef, Chicken with Cashew Nuts, Pork with Cashew Nuts, Beef with Cashew Nuts, Shrimp with Cashew Nuts, Shrimp with Garlic Sauce, Beef with Garlic Sauce, Kung Pao Beef, Kung Pao Shrimp, Shrimp with Lobster Sauce, Hunan Beef, Hunan Shrimp, and Pepper Steak with Onion)",
-              "price": "$8.45"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.mayflowermd.com/31gytpwh/may-flower-chinese-restaurant-baltimore-21218/menu?menu=Lunch+Menu",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Lunch Special All served with fried rice or white rice and soda Available: All week days From: 11:00 AM - 3:00 PM L1. Chicken Chow Mein (Lunch) Stir-fried noodles, chicken, and vegetables, served in a light sauce. $ 7.80"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3407 Greenmount Ave, 21218, Waverly. Not in live venues.json. Official site https://www.mayflowermd.com/. Priced weekday lunch special is on the official lunch menu page. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "orient-express",
       "name": "Orient Express",
       "neighborhood": "Charles Village",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "3111 Saint Paul St, Baltimore, MD 21218",
       "phone": "(410) 889-0003",
       "source_url": "https://www.orientexpressmaryland.com/bykucocr/orient-express-baltimore-21218/menu?menu=Lunch+Special",
@@ -19960,42 +18887,14 @@
       "lon": -76.6156302,
       "coords_source": "Nominatim search 3111 Saint Paul St, Baltimore, MD 21218 on 2026-09-09 returned OSM way 336369193 at 39.3262745,-76.6156302. Display name neighbourhood is Charles Village, suburb Northwood, city Baltimore, postcode 21218. Official schema and page print streetAddress 3111 Saint Paul St, addressLocality Baltimore, addressRegion MD, postalCode 21218, and telephone (410) 889-0003.",
       "bar_hours": "Official order-page pickupHours and schema openingHours: Monday 11:00 AM–9:45 PM; Tuesday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:30 PM. Schema openingHours print Su 12:00-21:30, Mo 11:00-21:45, Tu,We,Th 11:00-21:30, Fr,Sa 11:00-22:00. Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3111 Saint Paul St, 21218, Charles Village. Not in live venues.json. Distinct from Orient Express Food at 1411 E Cold Spring Ln. Official site https://www.orientexpressmaryland.com/. Priced weekday lunch special is on the official lunch menu page.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu",
-            "fri",
-            "sat",
-            "sun"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $9.50 (General Tso's Chicken, Sesame Chicken, Orange Chicken, Kung Pao Chicken, Kung Pao Shrimp, Pepper Steak, Chicken with Eggplant, Sweet Sour Chicken, Broccoli with Chicken, Broccoli with Pork, Broccoli with Beef, Broccoli with Shrimp, Garlic Sauce with Chicken, Garlic Sauce with Pork, Garlic Sauce with Beef, Garlic Sauce with Shrimp, and Garlic Sauce with Broccoli)",
-              "price": "$9.50"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.orientexpressmaryland.com/bykucocr/orient-express-baltimore-21218/menu?menu=Lunch+Special",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Lunch Special Available: All week days From: 11:00 AM - 3:00 PM. General Tso's Chicken 9.5"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3111 Saint Paul St, 21218, Charles Village. Not in live venues.json. Distinct from Orient Express Food at 1411 E Cold Spring Ln. Official site https://www.orientexpressmaryland.com/. Priced weekday lunch special is on the official lunch menu page. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "oriental-wok",
       "name": "Oriental Wok Chinese Food",
       "neighborhood": "Canton",
-      "status": "verified",
+      "status": "open_unverifiable",
       "address": "3316 Eastern Ave, Baltimore, MD 21224",
       "phone": "(410) 276-3316",
       "source_url": "https://www.orientalwokchinesefood.com/2stn8mch/oriental-wok-chinese-food-baltimore-21224/order-online",
@@ -20005,38 +18904,8 @@
       "lon": -76.569343,
       "coords_source": "Nominatim search 3316 Eastern Ave, Baltimore, MD 21224 on 2026-09-09 returned OSM way 336222203 at 39.2867001,-76.5693430. Display name neighbourhood is Canton, suburb Highlandtown, city Baltimore, postcode 21224. Official schema and page print streetAddress 3316 Eastern Ave, addressLocality Baltimore, addressRegion MD, postalCode 21224, and telephone (410) 276-3316.",
       "bar_hours": "Official order-page pickupHours and schema openingHours: Monday 11:00 AM–10:30 PM; Tuesday 11:00 AM–10:30 PM; Wednesday closed (pickupHours Wednesday empty; schema omits Wednesday); Thursday 11:00 AM–10:30 PM; Friday–Saturday 11:00 AM–11:00 PM; Sunday 12:00 PM–10:30 PM. Schema openingHours print Su 12:00-22:30, Mo,Tu,Th 11:00-22:30, Fr,Sa 11:00-23:00. Lunch special clock printed on the official order page is Monday–Saturday 11:00 AM–3:00 PM, which is not the same as full service hours.",
-      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 3316 Eastern Ave, 21224. Nominatim neighbourhood is Canton and suburb is Highlandtown. Not in live venues.json. Not a Canton empty invented deal. Official site https://www.orientalwokchinesefood.com/. Priced weekday lunch special is on the official order page.",
-      "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "thu",
-            "fri",
-            "sat"
-          ],
-          "items": [
-            {
-              "text": "Lunch special $10.99, served with fried rice (chicken teriyaki has no side line on the official payload) (L1. Chicken Chow Mein, L1. Roast Pork Chow Mein, L2. Szechuan Chicken, L3. Moo Goo Gai Pan, L4. Shrimp Chow Mein, L5. Shrimp with Lobster Sauce, L6. Sweet and Sour Shrimp, L7. Pepper Steak with Onions, L8. Roast Pork Egg Foo Young, L9. Sweet and Sour Pork, L9. Sweet and Sour Chicken, L10. Chicken with Broccoli, L12. Shrimp with Broccoli, L13. Hunan Chicken, L15. Hunan Shrimp, L16. Shrimp Lo Mein, L17. Shrimp Egg Foo Young, L18. General Tso's Chicken, L20. Pork Egg Foo Young, L21. Chicken Egg Foo Young, L22. Orange Chicken, L23. Kung Pao Chicken, L24. Hunan Mixed Vegetables, L25. Bourbon Chicken, L26. Chicken with Cashew Nuts, L27. Chicken with Mixed Vegetables, L33. Bean Curd Hunan Style, L34. Shrimp with Vegetables, L35. Sesame Chicken, L36. String Beans with Chicken, L36. String Beans with Shrimp, L37. Chicken Lo Mein, L38. Pork Lo Mein, and L40. Chicken Teriyaki)",
-              "price": "$10.99"
-            },
-            {
-              "text": "Lunch special $11.99, served with fried rice (L4. Beef Chow Mein, L11. Beef with Broccoli, L14. Hunan Beef, L19. Beef Egg Foo Young, L36. String Beans with Beef, and L39. Beef Lo Mein)",
-              "price": "$11.99"
-            }
-          ],
-          "start": 660,
-          "end": 900,
-          "time_window": "11am-3pm",
-          "happy_hour": false,
-          "verified_date": "2026-09-09",
-          "source_url": "https://www.orientalwokchinesefood.com/2stn8mch/oriental-wok-chinese-food-baltimore-21224/order-online",
-          "food_categories": [
-            "pasta/comfort"
-          ],
-          "proof_quote": "Special Luncheon Available: Monday - Saturday From: 11:00 AM - 3:00 PM. L1. Chicken Chow Mein Lunch Special 10.99"
-        }
-      ]
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 3316 Eastern Ave, 21224. Nominatim neighbourhood is Canton and suburb is Highlandtown. Not in live venues.json. Not a Canton empty invented deal. Official site https://www.orientalwokchinesefood.com/. Priced weekday lunch special is on the official order page. Removed 2026-09-09: does not serve alcohol, so deals were cleared and the room is off the board.",
+      "deals": []
     },
     {
       "id": "petit-louis",

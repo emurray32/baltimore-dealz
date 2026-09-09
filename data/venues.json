@@ -19029,6 +19029,65 @@
           "proof_quote": "Happy Hour Monday ALL DAY Tuesday - Thursday 5:00 pm - 7:00 pm. Happy Hour Monday ALL DAY Tuesday - Thursday | 5-7pm. Antipasti price 16.0. Cacio e Pepe Pizza price 18.0. The House Pair price 26.0"
         }
       ]
+    },
+    {
+      "id": "the-royal-blue",
+      "name": "The Royal Blue",
+      "neighborhood": "Charles North",
+      "status": "verified",
+      "address": "1733 Maryland Ave., Baltimore, MD 21201",
+      "source_url": "https://img1.wsimg.com/blobby/go/7174e61f-3b7f-4992-9f64-3aa46df7d30c/rbmenu-pdf.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3095848,
+      "lon": -76.6176354,
+      "coords_source": "Nominatim search 1733 Maryland Avenue, Baltimore, MD on 2026-09-09 returned OSM node 3432414028 at 39.3095848,-76.6176354. Display name neighbourhood is Charles North, city Baltimore, postcode 21201. Official homepage prints Restaurant & Cocktail Bar and 1733 Maryland Ave., and the official description prints Baltimore's Station North Arts District. Phone was not printed on the official homepage or menu PDF.",
+      "bar_hours": "Official homepage: Kitchen Open 7 Days a Week, Mon - Sat 12 Noon - 10pm, Sunday 12 Noon - 9pm. Bar Hours Open 7 Days a Week: 12 Noon to 1am Sunday - Thursday, 12 Noon to 2am Friday & Saturday, last call at least 30 minutes before close. Happy hour clock is Mon - Fri 4 - 7PM on the official menu PDF and is not the same as bar hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore cocktail bar at 1733 Maryland Ave. Official homepage prints Restaurant & Cocktail Bar and Baltimore's Station North Arts District. Nominatim neighbourhood is Charles North, city Baltimore, 21201. Not in live venues.json. Official site https://royalbluebar.com/. Alcohol is printed on the homepage as a cocktail bar and on the official menu PDF happy hour as martinis, glasses of wine, espresso martinis, and negronis.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour tater tots $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour martinis $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour glasses of wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour espresso martinis $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour negronis $8",
+              "price": "$8"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://img1.wsimg.com/blobby/go/7174e61f-3b7f-4992-9f64-3aa46df7d30c/rbmenu-pdf.pdf",
+          "food_categories": [
+            "small-plate/apps",
+            "drink"
+          ],
+          "proof_quote": "WEEKLY SPECIALS. HAPPY HOUR MON - FRI | 4 - 7PM. $5 TATER TOTS. $5 MARTINIS. $5 GLASSES OF WINE. $8 ESPRESSO MARTINIS. $8 NEGRONIS."
+        }
+      ]
     }
   ]
 }

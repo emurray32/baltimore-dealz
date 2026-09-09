@@ -19088,6 +19088,83 @@
           "proof_quote": "WEEKLY SPECIALS. HAPPY HOUR MON - FRI | 4 - 7PM. $5 TATER TOTS. $5 MARTINIS. $5 GLASSES OF WINE. $8 ESPRESSO MARTINIS. $8 NEGRONIS."
         }
       ]
+    },
+    {
+      "id": "decatur-tavern",
+      "name": "Decatur Tavern",
+      "neighborhood": "Locust Point",
+      "status": "verified",
+      "address": "1401 Decatur Street, Baltimore, MD 21230",
+      "source_url": "https://decaturtavern.com/happy-hour",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2704445,
+      "lon": -76.5943166,
+      "coords_source": "Nominatim search 1401 Decatur Street, Baltimore, MD 21230 on 2026-09-09 returned OSM amenity node 13440083609 (display name still The Last Penny) at 39.2704445,-76.5943166 and building way 336303903 at 39.2704162,-76.5942323. Display name neighbourhood is Locust Point, city Baltimore, postcode 21230. Official homepage and happy hour footer print 1401 Decatur Street, Baltimore, MD 21230 and phone 443.869.2116.",
+      "bar_hours": "Official homepage: Wednesday-Friday 3:00PM-11:00PM, Saturday 11:00AM-11:00PM. Happy hour clock is Monday-Friday 3PM-6PM on https://decaturtavern.com/happy-hour and is not the same as those service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Locust Point bar at 1401 Decatur Street. Nominatim neighbourhood is Locust Point, city Baltimore, 21230. Not in live venues.json. Official site https://decaturtavern.com/. Alcohol is printed on the homepage as WE'RE OPEN! … AT THE BAR! and Drafts + Drinks, and on the happy hour page as Natty Lights, Coors Banquet, Miller High Life, Select Drafts, Espresso Martinis, and House Crushes.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour pretzel braids $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour chicken tenders $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour single smash $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour Natty Lights $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour Coors Banquet $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour Miller High Life $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour select drafts $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour espresso martinis $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour house crushes $8",
+              "price": "$8"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://decaturtavern.com/happy-hour",
+          "food_categories": [
+            "pretzel",
+            "small-plate/apps",
+            "burger",
+            "drink"
+          ],
+          "proof_quote": "MONDAY - FRIDAY | 3PM -6PM. $10 Pretzel Braids. $10 Chicken Tenders. $10 Single Smash. $3 Natty Lights. $3 Coors Banquet. $3 Miller High Life. $6 Select Drafts. $8 Espresso Martinis. $8 House Crushes."
+        }
+      ]
     }
   ]
 }

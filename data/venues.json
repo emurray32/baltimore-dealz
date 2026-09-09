@@ -12201,14 +12201,164 @@
       "address": "10 S Street STE 100, Baltimore, MD 21202",
       "source_url": "https://www.theempanadalady.shop/happyhour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: theempanadalady.shop/happyhour text scrape — no priced HH in raw. deals=[] clear.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: LIVE empty filled from official happyhour page PNG OCR. Alcohol shown as Cocktails $8.99, Shooters $7.99, Well Shots $6.99 (Gin/Rum/Tequila/Vodka/Whiskey), Beer $5, Wine $7, Don Julio Blanco $10, Hennessy $10 on same Happy Hour flyer at theempanadalady.shop/happyhour. Phone/address/hours from site footer.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Cocktails $8.99 (Amaretto Sour, Lemon Drop, Margarita, Tequila Sunrise, Whiskey Sour)",
+              "price": "$8.99"
+            },
+            {
+              "text": "Shooters $7.99 (Cinnamon Toast Crunch, Green Tea, Lemon Drop, Melon Ball, Tequila Sunrise)",
+              "price": "$7.99"
+            },
+            {
+              "text": "Well shots $6.99 (gin, rum, tequila, vodka, whiskey)",
+              "price": "$6.99"
+            },
+            {
+              "text": "Beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Wine $7",
+              "price": "$7"
+            },
+            {
+              "text": "Don Julio Blanco $10",
+              "price": "$10"
+            },
+            {
+              "text": "Hennessy $10",
+              "price": "$10"
+            },
+            {
+              "text": "(6) Wings $10.99 (1 flavor)",
+              "price": "$10.99"
+            },
+            {
+              "text": "Nachos $10.99 (chicken or beef)",
+              "price": "$10.99"
+            },
+            {
+              "text": "Salmon bites $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "Sides $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "Papas $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "Quesadillas $10.99 (beef, chicken, veggie, cheese)",
+              "price": "$10.99"
+            }
+          ],
+          "start": 960,
+          "end": 1200,
+          "time_window": "4pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.theempanadalady.shop/happyhour",
+          "food_categories": [
+            "drink",
+            "wings",
+            "small-plate/apps",
+            "seafood/crab"
+          ],
+          "proof_quote": "HAPPY HOUR MENU AVAILABLE WEEKDAYS 4-8PM SATURDAYS 6-8PM COCKTAILS $8.99 Amaretto Sour Lemon Drop Margarita Tequila Sunrise Whiskey Sour SHOOTERS $7.99 Well Shots $6.99 Gin Rum Tequila Vodka Whiskey Beer $5 Wine $7 Don Julio Blanco $10 Hennessy $10 (6) Wings $10.99 Nachos $10.99 Salmon Bites $10.99 Sides $5.99 Papas $5.99 Quesadillas $10.99"
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Cocktails $8.99 (Amaretto Sour, Lemon Drop, Margarita, Tequila Sunrise, Whiskey Sour)",
+              "price": "$8.99"
+            },
+            {
+              "text": "Shooters $7.99 (Cinnamon Toast Crunch, Green Tea, Lemon Drop, Melon Ball, Tequila Sunrise)",
+              "price": "$7.99"
+            },
+            {
+              "text": "Well shots $6.99 (gin, rum, tequila, vodka, whiskey)",
+              "price": "$6.99"
+            },
+            {
+              "text": "Beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Wine $7",
+              "price": "$7"
+            },
+            {
+              "text": "Don Julio Blanco $10",
+              "price": "$10"
+            },
+            {
+              "text": "Hennessy $10",
+              "price": "$10"
+            },
+            {
+              "text": "(6) Wings $10.99 (1 flavor)",
+              "price": "$10.99"
+            },
+            {
+              "text": "Nachos $10.99 (chicken or beef)",
+              "price": "$10.99"
+            },
+            {
+              "text": "Salmon bites $10.99",
+              "price": "$10.99"
+            },
+            {
+              "text": "Sides $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "Papas $5.99",
+              "price": "$5.99"
+            },
+            {
+              "text": "Quesadillas $10.99 (beef, chicken, veggie, cheese)",
+              "price": "$10.99"
+            }
+          ],
+          "start": 1080,
+          "end": 1200,
+          "time_window": "6pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.theempanadalady.shop/happyhour",
+          "food_categories": [
+            "drink",
+            "wings",
+            "small-plate/apps",
+            "seafood/crab"
+          ],
+          "proof_quote": "HAPPY HOUR MENU AVAILABLE WEEKDAYS 4-8PM SATURDAYS 6-8PM COCKTAILS $8.99 SHOOTERS $7.99 Well Shots $6.99 Beer $5 Wine $7 Don Julio Blanco $10 Hennessy $10 (6) Wings $10.99 Nachos $10.99 Salmon Bites $10.99 Sides $5.99 Papas $5.99 Quesadillas $10.99"
+        }
+      ],
       "notes_public": "No priced happy hour specials verified from site text this pass.",
       "phone": "(443) 377-1133",
       "lat": 39.2892322,
       "lon": -76.6112179,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "coords_source": "Retained live venues_live.json Nominatim pin for 10 S Street STE 100, Baltimore, MD 21202 (39.2892322,-76.6112179)."
     },
     {
       "id": "true-chesapeake",
@@ -15035,14 +15185,51 @@
       "address": "3215 N Charles Street, Baltimore, MD 21218",
       "source_url": "https://www.dearcharles.com/menus/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: dearcharles.com/menus raw — full-price menu only; no HH block in scrape. deals=[] clear.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: LIVE empty filled. Alcohol shown as House Wines $8, Craft & Well Cocktails $9, Signature Cocktails $12 on official Happy Hour / Social Hour beverage block at dearcharles.com/menus/; full Beer & Cocktails and Wine menus on same site. Location page: Happy Hour drink specials offered daily 3pm-7pm. Phone from location page.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "House wines $8",
+              "price": "$8"
+            },
+            {
+              "text": "Craft & well cocktails $9",
+              "price": "$9"
+            },
+            {
+              "text": "Signature cocktails $12",
+              "price": "$12"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.dearcharles.com/menus/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Beverage 3pm - 7pm House Wines $8 Craft & Well Cocktails $9 Signature Cocktails $12. Happy Hour drink specials offered daily 3pm - 7pm!"
+        }
+      ],
       "notes_public": "Located in the lower level of The Study at Johns Hopkins. Street-level entrance at the corner of 33rd Street and N Lovegrove Street. No priced happy hour verified from menus scrape this pass.",
       "phone": "(410) 424-7788",
       "lat": 39.3278546,
       "lon": -76.6171084,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-24",
+      "coords_source": "Retained live venues_live.json Nominatim pin for 3215 N Charles Street, Baltimore, MD 21218 (39.3278546,-76.6171084)."
     },
     {
       "id": "nine-tailed-fox",

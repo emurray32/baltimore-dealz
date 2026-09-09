@@ -7243,13 +7243,35 @@
       "phone": "(410) 576-9294",
       "source_url": "https://www.locustpointsteamers.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Site unreachable this pass — cleared prior $ until re-verified.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official locustpointsteamers.com Daily Specials. City of Baltimore at 1100 E Fort Ave. Alcohol on homepage as $2 Natty Boh Drafts Wednesdays. Box curl TLS EOF; verified via WebFetch of official homepage. Half-priced shrimp and $1 off oysters not shipped.",
       "lat": 39.2709641,
       "lon": -76.5986062,
       "notes_public": "Priced specials removed until re-verified from a published menu.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
+      "deals": [
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Wednesdays $2 Natty Boh Drafts",
+              "price": "$2"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "all day",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.locustpointsteamers.com/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Wednesdays- 1/2 priced Steamed Shrimp & $2 Natty Boh Drafts"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "coords_source": "Live venues.json already had lat/lon for 1100 E Fort Ave, Baltimore, MD 21230 (Riverside)."
     },
     {
       "id": "waterfront-hotel",
@@ -9852,36 +9874,75 @@
       "status": "verified",
       "address": "822 Lancaster St, Baltimore, MD 21202",
       "phone": "(410) 547-8282",
-      "source_url": "https://www.cgeno.com/specials-and-events",
+      "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Cinghiale/CG%20MENUS/CG_HH.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-09-09",
       "lat": 39.2824892,
       "lon": -76.6008354,
-      "ops_notes": "Deal Scout 2026-09-07: cgeno.com/specials-and-events raw — Cellar Raid Tue 50% off bottles unchanged. Daily HH 4–6pm no $; not invented.",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live unpriced deals from official CG_HH.pdf linked from cgeno.com/specials-and-events (Happy Hour DAILY, MON-SUN | 4-6 PM). City of Baltimore at 822 Lancaster St. Alcohol on HH PDF as Martini, Bellini, Americano, Aperol Spritz, Prosecco, wines, and $10 wine flight. Cellar Raid Tuesday 50% off bottles not shipped (half-off rule).",
       "notes_public": "Cellar Raid is Enoteca or bar during lunch and dinner.",
       "deals": [
         {
           "days": [
-            "tue"
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
           ],
           "items": [
             {
-              "text": "50% off all of bottles of wine",
-              "price": "50% off"
+              "text": "Happy hour Roman Fried Chicken Meatballs $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Warm Peach Bruschetta $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Roasted Beet Stack $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Mortadella Sandwich on Focaccia $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Tonno Crudo $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour Salumi & Formaggi (choose 2) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour drinks $7: Martini, Bellini, Americano, Aperol Spritz, select wines",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour flight of all 3 wines (3oz) $10",
+              "price": "$10"
             }
           ],
-          "start": null,
-          "end": null,
-          "time_window": "Lunch and Dinner",
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.cgeno.com/specials-and-events",
-          "proof_quote": "EVERY TUESDAY | ENOTECA + BAR Receive 50% off all of bottles of wine when you dine with us in our Enoteca or bar during Lunch and Dinner.",
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Cinghiale/CG%20MENUS/CG_HH.pdf",
           "food_categories": [
-            "drink"
-          ]
+            "drink",
+            "small-plate/apps",
+            "sandwich/cheesesteak",
+            "seafood/crab"
+          ],
+          "proof_quote": "HAPPY HOUR 4-6 SNACKS Roman Fried Chicken Meatballs 8 Warm Peach Bruschetta 7 Roasted Beet Stack 7 Mortadella Sandwich on Focaccia 7 Tonno Crudo 10 SALUMI & FORMAGGI (choose 2) 10 DRINKS $7 MARTINI BELLINI AMERICANO APEROL SPRITZ Flight of all 3 wines (3oz) $10"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "coords_source": "Live venues.json already had lat/lon for 822 Lancaster St, Baltimore, MD 21202 (Harbor East)."
     },
     {
       "id": "clase-lounge",

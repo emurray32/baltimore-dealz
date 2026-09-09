@@ -13119,16 +13119,172 @@
       "neighborhood": "Hampden",
       "status": "verified",
       "address": "3626 Falls Road, Baltimore, MD 21211",
-      "source_url": "https://www.nepenthebrewingco.com/happy-hour",
+      "source_url": "https://static.wixstatic.com/media/9ebfc3_b2e76d8f34614871aafb6992e0f924f1~mv2.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: nepenthebrewingco.com/happy-hour raw — Wix shell, no $. deals=[] clear.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official HH PNG on nepenthebrewingco.com/happy-hour and Manic Mondays PNG on /manic-mondays. City of Baltimore at 3626 Falls Road. Alcohol on flyers as Pint of the Day, Rail Drinks, All Wine, $6 Pints, $10 Boilermakers. Taproom contact page prints Mon–Thu 5–9pm (all-night end capped to published close 9pm=1260, not past midnight). Half-off style offers not present; absolute dollars only shipped.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Manic Mondays $6 pints all night",
+              "price": "$6"
+            },
+            {
+              "text": "Manic Mondays $10 boilermakers all night",
+              "price": "$10"
+            },
+            {
+              "text": "Manic Mondays $18 burger + fries + pint all night",
+              "price": "$18"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "all night (5pm-9pm close)",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://static.wixstatic.com/media/9ebfc3_b66048fc3c364f67b1ef4ba9105f9972~mv2.png",
+          "food_categories": [
+            "drink",
+            "burger"
+          ],
+          "proof_quote": "MANIC MONDAYS ALL NIGHT SPECIALS: $6 PINTS $10 BOILERMAKERS $18 BURGER + FRIES + PINT"
+        },
+        {
+          "days": [
+            "mon",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Happy hour pint of the day $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour rail drinks $9",
+              "price": "$9"
+            },
+            {
+              "text": "Happy hour house mac 'n cheese $9",
+              "price": "$9"
+            },
+            {
+              "text": "Happy hour all wine $11",
+              "price": "$11"
+            },
+            {
+              "text": "Happy hour chips & beer cheese queso $11",
+              "price": "$11"
+            },
+            {
+              "text": "Happy hour special fries $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour tater totchos $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour single Drive Thru burger $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour buffalo chicken sandwich $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour crispy tofu sandwich $13",
+              "price": "$13"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://static.wixstatic.com/media/9ebfc3_b2e76d8f34614871aafb6992e0f924f1~mv2.png",
+          "food_categories": [
+            "drink",
+            "pasta/comfort",
+            "small-plate/apps",
+            "burger",
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "HAPPY HOUR TUESDAYS ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Happy hour pint of the day $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour rail drinks $9",
+              "price": "$9"
+            },
+            {
+              "text": "Happy hour house mac 'n cheese $9",
+              "price": "$9"
+            },
+            {
+              "text": "Happy hour all wine $11",
+              "price": "$11"
+            },
+            {
+              "text": "Happy hour chips & beer cheese queso $11",
+              "price": "$11"
+            },
+            {
+              "text": "Happy hour special fries $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour tater totchos $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour single Drive Thru burger $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour buffalo chicken sandwich $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour crispy tofu sandwich $13",
+              "price": "$13"
+            }
+          ],
+          "start": 1020,
+          "end": 1260,
+          "time_window": "all night (5pm-9pm close)",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://static.wixstatic.com/media/9ebfc3_b2e76d8f34614871aafb6992e0f924f1~mv2.png",
+          "food_categories": [
+            "drink",
+            "pasta/comfort",
+            "small-plate/apps",
+            "burger",
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "HAPPY HOUR TUESDAYS ALL NIGHT! MON, WED, THURS 5PM-7PM $7 Pint of the Day $9 Rail Drinks House Mac 'n Cheese $11 All Wine Chips & Beer Cheese Queso $13 Special Fries Tater Totchos Single Drive Thru Burger Buffalo Chicken Sandwich Crispy Tofu Sandwich"
+        }
+      ],
       "notes_public": "No priced happy hour specials published on the happy hour page this pass.",
       "phone": "(443) 438-4846",
       "lat": 39.3314965,
       "lon": -76.6352889,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "coords_source": "Live venues.json already had lat/lon for 3626 Falls Road, Baltimore, MD 21211 (Hampden). Nominatim 2026-09-09 reconfirmed 39.3314965,-76.6352889."
     },
     {
       "id": "octobar",
@@ -14719,10 +14875,10 @@
       "status": "verified",
       "address": "2219 Maryland Ave, Baltimore, MD 21218",
       "phone": "(443) 900-4891",
-      "source_url": "https://www.yeibohkitchen.com/menu",
+      "source_url": "https://static.wixstatic.com/media/629e72_87ea41eaa1a84d2bbba92b6f9a537a5d~mv2.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: yeibohkitchen.com/menu — HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM. No item $ in plaintext; cleared prior priced list (no invent).",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live unpriced deals from official HH Menu PNG linked on yeibohkitchen.com/menu (HH Menu - Cinco 5_4_26.png). City of Baltimore at 2219 Maryland Ave. Alcohol on HH drinks column as Cosmo, Peach Bourbon Smash, Margarita, Peach Martini, Select Wines, Select Beers. Bar menu PNG (Bar - August 26) also prints specialty cocktails. Bar & back patio only per page copy.",
       "notes_public": "Happy hour menu only available at the bar & back patio",
       "lat": 39.3148904,
       "lon": -76.6178082,
@@ -14735,23 +14891,56 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "Happy hour Cosmo, Peach Bourbon Smash, Margarita, or Peach Martini $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour select wines $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour select beers $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour Island Wings (jerk spice, peppers, wasabi ranch) $11",
+              "price": "$11"
+            },
+            {
+              "text": "Happy hour Zulu Brussels Sprouts $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Salmon Nachos $13",
+              "price": "$13"
+            },
+            {
+              "text": "Happy hour Dynamite Shrimp Tacos $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour Fried Shiitake Rice $6",
+              "price": "$6"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.yeibohkitchen.com/menu",
-          "proof_quote": "HAPPY HOUR MENU ONLY AVAILABLE AT THE BAR & BACK PATIO MONDAY, THURSDAY & FRIDAY 5PM - 7PM",
+          "verified_date": "2026-09-09",
+          "source_url": "https://static.wixstatic.com/media/629e72_87ea41eaa1a84d2bbba92b6f9a537a5d~mv2.png",
           "food_categories": [
-            "drink"
-          ]
+            "drink",
+            "wings",
+            "small-plate/apps",
+            "seafood/crab",
+            "tacos"
+          ],
+          "proof_quote": "Happy Hour Menu Monday, Thursday & Friday 5pm - 7pm DRINKS Cosmo Peach Bourbon Smash Margarita Peach Martini 10 Select Wines 6 Select Beers 6 TAPAS Island Wings 11 Zulu Brussels Sprouts 7 Salmon Nachos 13 Dynamite Shrimp Tacos 10 Fried Shiitake Rice 6"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-23",
+      "coords_source": "Live venues.json already had lat/lon for 2219 Maryland Ave, Baltimore, MD 21218 (Old Goucher). Nominatim 2026-09-09 reconfirmed 39.3148904,-76.6178082."
     },
     {
       "id": "dear-charles",

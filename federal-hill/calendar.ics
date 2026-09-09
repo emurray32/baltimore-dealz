@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-ajs-on-hanover-frimonthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -42,7 +42,7 @@ URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ajs-on-hanover-sat-s840@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260808T140000
 DTEND;TZID=America/New_York:20260808T170000
 RRULE:FREQ=WEEKLY;BYDAY=SA
@@ -60,7 +60,7 @@ URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-blue-agave-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -85,7 +85,7 @@ URL:https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_0
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-mon-s1020@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T230000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -99,7 +99,7 @@ URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-frithutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T180000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -113,7 +113,7 @@ URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-cross-street-public-house-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -130,7 +130,7 @@ URL:https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-delia-foleys-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -148,7 +148,7 @@ URL:https://images.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -162,7 +162,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -176,7 +176,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -191,7 +191,7 @@ URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-satsun-s900@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260808T150000
 DTEND;TZID=America/New_York:20260808T180000
 RRULE:FREQ=WEEKLY;BYDAY=SA,SU
@@ -206,7 +206,7 @@ URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-magerks-federal-hill-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -223,7 +223,7 @@ URL:https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-W
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-nobles-bar-and-grill-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -238,7 +238,7 @@ URL:https://noblesbarandgrill.com/specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-octobar-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -257,7 +257,7 @@ URL:https://octobarbaltimore.com/happy-hour-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-one-star-country-club-monthutuewed-s1080@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T180000
 DTEND;TZID=America/New_York:20260803T200000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -271,7 +271,7 @@ URL:https://www.onestarcountryclub.com/menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rusty-scupper-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -294,21 +294,25 @@ URL:https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-outpost-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
 SUMMARY:The Outpost — Happy Hour (4pm-6pm)
-DESCRIPTION:4pm-6pm\nHappy Hour\nPrices not published by the venue.\n1032 R
- iverside Ave\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.theoutpostb
- altimore.com/\nSource: Baltimore Dealz — verify at the bar\; deals chang
- e.
+DESCRIPTION:4pm-6pm\nH.H. Manhattan $7\nH.H. Lindsay Lohan $9\nHouse wine (
+ red/white/rosé/bubbles) $7\nLil Sebastian (High Life pony & baby whiskey 
+ shot) $6\nCoors Banquet $2.50\nRiverside Lager $3\nGreen Machine $5\nGuinn
+ ess $6\nAll domestic bottles $3\nCrispy pickles & banana peppers $8\nBurra
+ ta Be Caprese $9\nSmoked trout & yellowfin toast $9\nPickleback Pollo $10\
+ nThe Whack Arnold burger $10\nOh Dang donuts $8\n1032 Riverside Ave\, Balt
+ imore\, MD 21230\nFederal Hill\nhttps://www.theoutpostbaltimore.com/menu\n
+ Source: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1032 Riverside Ave\, Baltimore\, MD 21230
-URL:https://www.theoutpostbaltimore.com/
+URL:https://www.theoutpostbaltimore.com/menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -330,7 +334,7 @@ URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frisat-s1320@baltimore-dealz
-DTSTAMP:20260909T211033Z
+DTSTAMP:20260909T220631Z
 DTSTART;VALUE=DATE:20260807
 DTEND;VALUE=DATE:20260808
 RRULE:FREQ=WEEKLY;BYDAY=FR,SA

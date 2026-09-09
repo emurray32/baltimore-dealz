@@ -20719,6 +20719,83 @@
           "proof_quote": "$10 MARTINIS NOON - 5 / THURS FRI SAT MON / NOON - MIDNIGHT"
         }
       ]
+    },
+    {
+      "id": "apropoes",
+      "name": "apropoe's",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "700 Aliceanna Street, Baltimore, MD 21202",
+      "phone": "(410) 385-3000",
+      "source_url": "https://ugc.production.linktr.ee/98e6ff02-d050-4036-b759-44f6f2a058d4_2026-Spring-Happy-Hour.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2835686,
+      "lon": -76.6029896,
+      "coords_source": "Nominatim for Marriott / 700 Aliceanna Street, Baltimore, MD 21202 (hotel pin).",
+      "ops_notes": "Deal Scout 2026-09-09 priced_91: NEW unlock via official Linktree 2026 Spring Happy Hour PDF (absolute $ drinks+apps) with Sun–Thu 3–6; Marriott dining clocks match.",
+      "deals": [
+        {
+          "days": [
+            "sun",
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Old Oriole Park Draft $5",
+              "price": "$5"
+            },
+            {
+              "text": "Rail Cocktails $6",
+              "price": "$6"
+            },
+            {
+              "text": "Wine By the Glass (Boordy) $6",
+              "price": "$6"
+            },
+            {
+              "text": "Apropoe's Mules $9",
+              "price": "$9"
+            },
+            {
+              "text": "Cocktails ON TAP $9",
+              "price": "$9"
+            },
+            {
+              "text": "Fry Basket $7",
+              "price": "$7"
+            },
+            {
+              "text": "Fried Wings $9",
+              "price": "$9"
+            },
+            {
+              "text": "Chicken Tenders $9",
+              "price": "$9"
+            },
+            {
+              "text": "Crab Pretzel $15",
+              "price": "$15"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://ugc.production.linktr.ee/98e6ff02-d050-4036-b759-44f6f2a058d4_2026-Spring-Happy-Hour.pdf",
+          "food_categories": [
+            "drink",
+            "small-plate/apps",
+            "wings",
+            "pretzel"
+          ],
+          "proof_quote": "HAPPY HOUR … Sun. – Thurs: 3pm - 6pm … FOOD Fry Basket 7 … Fried Wings 9 … Chicken Tenders 9 … Crab Pretzel 15 … DRINKS Old Oriole Park Draft 5 … Rail Cocktails 6 … Wine By the Glass 6 … Apropoe's Mules 9 … Cocktails ON TAP 9; Happy Hour is Only Available in the Bar & Lounge Area"
+        }
+      ]
     }
   ]
 }

@@ -11521,16 +11521,66 @@
       "neighborhood": "Jones Falls Area",
       "status": "verified",
       "address": "3300 Clipper Mill Road, Baltimore, MD 21211",
-      "source_url": "https://truechesapeake.com/pages/menus",
+      "source_url": "https://cdn.shopify.com/s/files/1/1730/4049/files/Happy-Hour-Instagram_1.png?v=1770850033",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: truechesapeake.com/pages/menus raw — Happy Hour link present, no dollar amounts in text. deals=[] clear.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official Happy Hour PNG linked on truechesapeake.com/pages/menus. City of Baltimore at 3300 Clipper Mill Road. Alcohol on the flyer as martinis, margaritas, old fashioneds, daiquiris, wine by the glass, and draft beer; beverage menu PDF also on the menus page.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Happy hour martinis, margaritas, old fashioneds & daiquiris $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour wine by the glass $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour raw & roasted oysters $2",
+              "price": "$2"
+            },
+            {
+              "text": "Happy hour draft beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour spicy chicken meatball with dill pickle $4",
+              "price": "$4"
+            },
+            {
+              "text": "Happy hour classic coddie on a saltine with yellow mustard $4",
+              "price": "$4"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://cdn.shopify.com/s/files/1/1730/4049/files/Happy-Hour-Instagram_1.png?v=1770850033",
+          "food_categories": [
+            "drink",
+            "seafood/crab",
+            "small-plate/apps"
+          ],
+          "proof_quote": "TUESDAY - SUNDAY | 5PM TO 7PM. only $6 MARTINIS, MARGARITAS, OLD FASHIONEDS & DAIQUIRIS / WINE BY THE GLASS. only $2 RAW & ROASTED OYSTERS FROM OUR FARM. $5 DRAFT BEER. only $4 SPICY CHICKEN MEATBALL with DILL PICKLE / CLASSIC CODDIE ON A SALTINE with YELLOW MUSTARD. *** ONLY AT THE BAR & HIGH TOPS ***"
+        }
+      ],
       "notes_public": "No priced happy hour specials published in menus page text this pass.",
       "phone": "410-913-6374",
       "lat": 39.3268179,
       "lon": -76.6369016,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "coords_source": "Nominatim search 3300 Clipper Mill Road, Baltimore, MD 21211 on 2026-09-09 returned OSM amenity node 13485182725 True Chesapeake at 39.3268179,-76.6369016. Display name Hampden / Park Heights, city Baltimore, postcode 21211. Live venues.json already had this address."
     },
     {
       "id": "valentinos",

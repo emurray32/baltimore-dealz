@@ -19608,6 +19608,46 @@
           "proof_quote": "Luncheon Special (11:00am to 2:30pm, Monday to Friday) Served with Fried Rice or Steamed Rice and Water Chicken Chow Mein $9.95"
         }
       ]
+    },
+    {
+      "id": "b-more-pies-and-sweets",
+      "name": "B-More Pies and Sweets",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "2839 O'Donnell St, Baltimore, MD 21224",
+      "phone": "(410) 522-7437",
+      "source_url": "https://bmorepies.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2798679,
+      "lon": -76.5755283,
+      "coords_source": "Nominatim search 2839 O'Donnell Street, Baltimore, MD 21224 on 2026-09-09 returned OSM way 336246133 named Dangerously Delicious Pies at 39.2798679,-76.5755283. Display name neighbourhood is Canton, city Baltimore, postcode 21224. Official homepage prints 2839 O'Donnell St, Baltimore, MD 21224, Canton Location, and 410-522-PIES (7437). OSM still names the prior Dangerously Delicious Pies shop at this address.",
+      "bar_hours": "Official homepage Hours: Monday closed; Tuesday 10:00am-6:00pm; Wednesday 10:00am-6:00pm; Thursday 10:00am-8:00pm; Friday 10:00am-8:00pm; Saturday 10:00am-8:00pm; Sunday 10:00am-6:00pm. Times may be affected on holidays. Those are shop hours. The Tuesday-Thursday date night special does not print a special clock.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pie shop at 2839 O'Donnell St, 21224, Canton Square. Not in live venues.json. Official site https://bmorepies.com/. Priced weekday date-night special is on that homepage DISCOUNTS section. Same owners, formerly Dangerously Delicious Pies at this address.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Date night special, 2 slices of savory, 2 slices of sweet, and 2 drinks $28",
+              "price": "$28"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://bmorepies.com/",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Tuesday-Thursday: Date Night Special! 2 slices of savory, 2 slices of sweet and 2 drinks= $28!",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

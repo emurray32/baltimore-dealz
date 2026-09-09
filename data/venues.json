@@ -2504,15 +2504,94 @@
       "status": "verified",
       "address": "1061 S. Charles Street, Baltimore, MD 21230",
       "phone": "(410) 576-9230",
-      "source_url": "https://www.magerks.com/federal-hill",
+      "source_url": "https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-Weekly-Specials.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: No priced weekly/HH list on site — cleared prior $.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official 2026-Federal-Hill-Weekly-Specials.pdf linked on magerks.com/federal-hill. City of Baltimore at 1061 S. Charles Street. Alcohol on flyer as 32 oz drafts, Claws, White Tea Shots, Smirnoff Red Bull Bombs, and Mich Ultra drafts.",
       "lat": 39.276919,
       "lon": -76.614237,
       "notes_public": "Priced specials removed until re-verified from a published menu.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour 32 oz drafts $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour claws $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour white tea shots $5",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-Weekly-Specials.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "WEEKDAYS | 4-7PM $7 32 OZ DRAFTS $3 CLAWS $5 WHITE TEA SHOTS"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Karaoke night Smirnoff Red Bull bombs $5",
+              "price": "$5"
+            }
+          ],
+          "start": 1260,
+          "time_window": "9pm-midnight",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-Weekly-Specials.pdf",
+          "food_categories": [
+            "drink",
+            "event"
+          ],
+          "proof_quote": "WED KARAOKE NIGHT $5 SMIRNOFF RED BULL BOMBS 9-CL",
+          "end": 1440
+        },
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Beat the Clock Mich Ultra draft starts at $0.50 (add $0.25 every 30 minutes)",
+              "price": "$0.50"
+            }
+          ],
+          "start": 1320,
+          "time_window": "10pm-midnight",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-Weekly-Specials.pdf",
+          "food_categories": [
+            "drink",
+            "event"
+          ],
+          "proof_quote": "FRI BEAT THE CLOCK $.50 MICH ULTRA DRAFT ADD $.25 EVERY 30 MINUTES (starts 10PM)",
+          "end": 1440
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Nominatim search 1061 S Charles Street, Baltimore, MD 21230 on 2026-09-09 returned OSM node 10796165863 at 39.2769195,-76.6142367. Display: MaGerk's, 1061, South Charles Street, Federal Hill, South Baltimore, Baltimore, Maryland, 21230, United States. Live venues.json already had this address."
     },
     {
       "id": "cross-street-public-house",
@@ -2521,15 +2600,62 @@
       "status": "verified",
       "address": "26 E Cross Street, Baltimore, MD 21230",
       "phone": "(410) 244-6722",
-      "source_url": "https://www.crossstreetpublichouse.com/happy-hour",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/6d27a06f-bb64-4d2d-aff6-c4425eeee541/Happy+Hour+5x7+%281%29.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official Happy Hour PNG on crossstreetpublichouse.com/happy-hour. City of Baltimore at 26 E Cross Street. Alcohol on flyer as Bud Lights, White Claws, Surfsides, Drafts, and Crushes.",
       "lat": 39.277096,
       "lon": -76.613387,
       "notes_public": "Priced specials removed until re-verified from a published menu.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour Bud Lights $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour White Claws $4",
+              "price": "$4"
+            },
+            {
+              "text": "Happy hour Surfsides $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour drafts $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour crushes $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour pizzas $12",
+              "price": "$12"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/6d27a06f-bb64-4d2d-aff6-c4425eeee541/Happy+Hour+5x7+%281%29.png",
+          "food_categories": [
+            "drink",
+            "pizza",
+            "small-plate/apps"
+          ],
+          "proof_quote": "CROSS STREET PUBLIC HOUSE HAPPY HOUR EVERY WEDNESDAY - FRIDAY 5 - 7PM $3 Bud Lights $4 White Claws $5 Surfsides $6 Drafts $7 Crushes $12 Pizzas"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Nominatim search 26 E Cross Street, Baltimore, MD 21230 on 2026-09-09 returned OSM way 336362713 at 39.2770956,-76.6133869. Display name Federal Hill, city Baltimore, postcode 21230. Live venues.json already had this address."
     },
     {
       "id": "delia-foleys",
@@ -2538,15 +2664,69 @@
       "status": "verified",
       "address": "1439 S Charles Street, Baltimore, MD 21230",
       "phone": "(443) 682-9141",
-      "source_url": "https://www.deliafoleysmd.com/happy-hour",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/27cc7944-73ce-4ba1-b979-0b46260a3295/Happy+Hour+5x7.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official Happy Hour PNG on deliafoleysmd.com/happy-hour. City of Baltimore at 1439 S Charles Street. Alcohol on flyer as Miller Lites, Mystery Bottles, Jameson, and Guinness Drafts.",
       "lat": 39.272757,
       "lon": -76.613817,
       "notes_public": "Priced specials removed until re-verified from a published menu.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour Miller Lites $3",
+              "price": "$3"
+            },
+            {
+              "text": "Happy hour mystery bottles $4",
+              "price": "$4"
+            },
+            {
+              "text": "Happy hour Jameson $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour Guinness drafts $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour pretzel nuggets $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour fried pickles $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour boneless wings $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/27cc7944-73ce-4ba1-b979-0b46260a3295/Happy+Hour+5x7.png",
+          "food_categories": [
+            "drink",
+            "pretzel",
+            "small-plate/apps",
+            "wings"
+          ],
+          "proof_quote": "Delia Foley's Happy Hour Specials $3 Miller Lites $4 Mystery Bottles $5 Jameson $5 Guinness Drafts $7 Pretzel Nuggets $8 Fried Pickles $10 Boneless Wings MONDAY-FRIDAY 4-7PM"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Nominatim search 1439 S Charles Street, Baltimore, MD 21230 on 2026-09-09 returned OSM way 336364730 Delia Foley's at 39.2727569,-76.6138175. Display name Federal Hill / South Baltimore, city Baltimore, postcode 21230. Live venues.json already had this address."
     },
     {
       "id": "alexanders-tavern-fells",
@@ -5422,15 +5602,115 @@
       "status": "verified",
       "address": "1500 South Hanover Street, Baltimore, MD 21230",
       "phone": "(410) 800-2657",
-      "source_url": "https://www.ajsonhanover.com/happy-hour",
+      "source_url": "https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/83903471-57a9-4629-b1a0-bb1ea13ef183/Happy+Hour+5x7.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: HH page loads but no priced text this pass — cleared prior $.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official Happy Hour PNG on ajsonhanover.com/happy-hour. City of Baltimore at 1500 South Hanover Street. Alcohol on flyer as House Wines, Drafts, Select Cocktails, and Select Crushes.",
       "lat": 39.2724567,
       "lon": -76.6154704,
       "notes_public": "Priced specials removed until re-verified from a published menu.",
-      "deals": [],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour house wines $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour drafts $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour select cocktails $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour select crushes $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour snack wraps (2) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour sliders (2) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour brussels $9",
+              "price": "$9"
+            }
+          ],
+          "start": 1020,
+          "end": 1140,
+          "time_window": "5pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/83903471-57a9-4629-b1a0-bb1ea13ef183/Happy+Hour+5x7.png",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "small-plate/apps"
+          ],
+          "proof_quote": "AJ'S on Hanover Happy Hour Specials $5 House Wines $6 Drafts $8 Select Cocktails $8 Select Crushes $8 Snack Wraps (2) $8 Sliders (2) $9 Brussels Monday-Friday 5-7pm Saturday 2-5pm"
+        },
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Happy hour house wines $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour drafts $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour select cocktails $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour select crushes $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour snack wraps (2) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour sliders (2) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour brussels $9",
+              "price": "$9"
+            }
+          ],
+          "start": 840,
+          "end": 1020,
+          "time_window": "2pm-5pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/83903471-57a9-4629-b1a0-bb1ea13ef183/Happy+Hour+5x7.png",
+          "food_categories": [
+            "drink",
+            "sliders",
+            "small-plate/apps"
+          ],
+          "proof_quote": "AJ'S on Hanover Happy Hour Specials $5 House Wines $6 Drafts $8 Select Cocktails $8 Select Crushes $8 Snack Wraps (2) $8 Sliders (2) $9 Brussels Monday-Friday 5-7pm Saturday 2-5pm"
+        }
+      ],
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Nominatim search 1500 South Hanover Street, Baltimore, MD 21230 on 2026-09-09 returned OSM way 336369239 at 39.2724567,-76.6154704. Display name South Baltimore, city Baltimore, postcode 21230. Live venues.json already had this address."
     },
     {
       "id": "nicks-fish-house",
@@ -5863,14 +6143,199 @@
       "address": "111 W. Centre St, Baltimore, MD 21201",
       "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: raw unity file corrupt; no priced deals from raw. deals=[] clear.",
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live empty deals from official Unity_HH_12_5.pdf (pdftotext). City of Baltimore at 111 W. Centre St. Alcohol shown on the PDF beverage list: Domestic/Import Beer, Red Sangria, Wine, Rail, Lemon Drop, Margarita, Luna Azul, Hennessy, Casamigos Blanco.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Happy hour domestic beer $3.50",
+              "price": "$3.50"
+            },
+            {
+              "text": "Happy hour import beer $4.50",
+              "price": "$4.50"
+            },
+            {
+              "text": "Happy hour red sangria $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Happy hour rail $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour lemon drop $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour margarita $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Luna Azul $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Hennessy $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Casamigos Blanco $9",
+              "price": "$9"
+            },
+            {
+              "text": "Happy hour wings (6) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour sweet & spicy shrimp (4) $10",
+              "price": "$10"
+            },
+            {
+              "text": "Happy hour cheeseburger sliders (2) $10",
+              "price": "$10"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "drink",
+            "wings",
+            "sliders",
+            "seafood/crab",
+            "small-plate/apps"
+          ],
+          "proof_quote": "HAPPY HOUR MONDAY-FRIDAY 4-7PM. BEVERAGE DOMESTIC BEER / 3.50 IMPORT BEER / 4.50 RED SANGRIA / 5 WINE / 5 RAIL / 6 LEMON DROP / 7 MARGARITA / 7 LUNA AZUL / 8 HENNESSY / 8 CASAMIGOS BLANCO/9. FOOD WINGS (6) / 10 SWEET & SPICY SHRIMP (4) / 10 CHEESEBURGER SLIDERS (2) / 10"
+        },
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Monday special steak & 2 sides $22",
+              "price": "$22"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "steak"
+          ],
+          "proof_quote": "DAILY SPECIALS MONDAY-THURSDAY 4-7PM. MONDAY STEAK & 2 SIDES /22"
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Taco Tuesday oxtail taco $7",
+              "price": "$7"
+            },
+            {
+              "text": "Taco Tuesday 3 oxtail tacos $18",
+              "price": "$18"
+            },
+            {
+              "text": "Taco Tuesday taco $5",
+              "price": "$5"
+            },
+            {
+              "text": "Taco Tuesday 3 salmon tacos $14",
+              "price": "$14"
+            },
+            {
+              "text": "Taco Tuesday 3 shrimp tacos $13",
+              "price": "$13"
+            },
+            {
+              "text": "Taco Tuesday 3 chicken tacos $12",
+              "price": "$12"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "tacos",
+            "seafood/crab"
+          ],
+          "proof_quote": "TACO TUESDAY (1) OXTAIL / 7 (3) OXTAIL / 18 (1) TACO / 5 (3) SALMON / 14 (3) SHRIMP / 13 (3) CHICKEN / 12"
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Wednesday special catfish & 2 sides $19",
+              "price": "$19"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "seafood/crab",
+            "pasta/comfort"
+          ],
+          "proof_quote": "WEDNESDAY CATFISH & 2 SIDES / 19"
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Thursday special burger and fries $19",
+              "price": "$19"
+            }
+          ],
+          "start": 960,
+          "end": 1140,
+          "time_window": "4pm-7pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5.pdf",
+          "food_categories": [
+            "burger"
+          ],
+          "proof_quote": "THURSDAY BURGER AND FRIES / 19"
+        }
+      ],
       "notes_public": "Priced specials removed until re-verified from a readable official source.",
       "phone": "(443) 759-4082",
       "lat": 39.296086,
       "lon": -76.6179506,
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Nominatim search 111 W Centre St, Baltimore, MD 21201 on 2026-09-09 returned OSM way 336376970 Gallery Tower / West Centre Street at 39.2960860,-76.6179506. Display name Mount Vernon, city Baltimore, postcode 21201. Live venues.json already had this address."
     },
     {
       "id": "minato-sushi-bar",

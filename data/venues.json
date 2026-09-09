@@ -20136,6 +20136,79 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "birroteca",
+      "name": "Birroteca",
+      "neighborhood": "Woodberry",
+      "status": "verified",
+      "address": "1520 Clipper Rd, Baltimore, MD 21211",
+      "phone": "443-759-5178",
+      "source_url": "https://www.bmorebirroteca.com/wine-menu-baltimore",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.327484,
+      "lon": -76.6395,
+      "coords_source": "Nominatim 2026-09-09 for 1520 Clipper Road, Baltimore, MD 21211 (returned amenity Birroteca 39.3274840,-76.6395000).",
+      "ops_notes": "Deal Scout 2026-09-09: NEW not-live City alcohol room in Woodberry/Clipper Mill thin corridor. Alcohol shown as Wedding Bar Cocktails (house liquor + mixer), house wine, Evolution Draft, and a. VODKA wine on official HAPPYHOUR box of wine-menu PDF linked from bmorebirroteca.com/wine-menu-baltimore; full cocktail/beer/wine program on same PDF. Phone from location-menu/contact-us.",
+      "deals": [
+        {
+          "days": [
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Wedding Bar Cocktails $5 (house liquor and one mixer)",
+              "price": "$5"
+            },
+            {
+              "text": "House red or white wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Evolution Draft $3",
+              "price": "$3"
+            },
+            {
+              "text": "a. VODKA wine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Marinated olives $5",
+              "price": "$5"
+            },
+            {
+              "text": "Brussels sprouts $5 (black garlic aioli, chili oil, coppa)",
+              "price": "$5"
+            },
+            {
+              "text": "Burrata cheese bruschetta $5 (melted tomatoes, basil)",
+              "price": "$5"
+            },
+            {
+              "text": "Grilled marinated artichoke $5",
+              "price": "$5"
+            },
+            {
+              "text": "Meatballs $5 (house ricotta, tomato sauce)",
+              "price": "$5"
+            }
+          ],
+          "start": 960,
+          "end": 1080,
+          "time_window": "4pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.bmorebirroteca.com/wine-menu-baltimore",
+          "food_categories": [
+            "drink",
+            "small-plate/apps"
+          ],
+          "proof_quote": "HAPPYHOUR 4 – 6 Wed, Thurs, Fri Wedding Bar Cocktails 5 house liquor and one mixer House Red or White Wine 5 Evolution Draft 3 a. VODKA wine 5 Marinated Olives 5 Brussels Sprouts 5 Burrata Cheese Bruschetta melted tomatoes | basil 5 Grilled Marinated Artichoke 5 Meatballs 5 house ricotta | tomato sauce"
+        }
+      ]
     }
   ]
 }

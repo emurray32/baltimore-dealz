@@ -3728,15 +3728,62 @@
       "neighborhood": "Fells Point",
       "status": "verified",
       "address": "1928 Fleet St, Baltimore, MD 21231",
-      "source_url": "https://www.stuggys.com/",
+      "source_url": "https://www.stuggys.com/s/Stuggys-Saturday-GAMEDAY-1.png",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: stuggys.com live with Fells Point hours/address; no happy hour/specials published. deals=[] bump.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: LIVE empty filled. Alcohol shown as Can beer $3 / Draft beer $4 / Seltzers $4 on official Saturday Game Day Specials PNG linked from stuggys.com/menu (Fells Point). Main menu PDF 2026 also lists cocktails, crushes, draft beer. Venue Sat hours on fells-point-fleet-st page: 11am-11pm (hours of operation; not used as invented deal clock). Meal packages STARTER $17 / MVP $21 / G.O.A.T. $25 also on flyer.",
       "lat": 39.284928,
       "lon": -76.588895,
-      "deals": [],
+      "deals": [
+        {
+          "days": [
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Can beer $3 (Saturday gameday beverage)",
+              "price": "$3"
+            },
+            {
+              "text": "Draft beer $4 (Saturday gameday beverage)",
+              "price": "$4"
+            },
+            {
+              "text": "Seltzers $4 (Saturday gameday beverage)",
+              "price": "$4"
+            },
+            {
+              "text": "STARTER gameday package $17/person (signature dog or brisket burger + fries & soda)",
+              "price": "$17"
+            },
+            {
+              "text": "MVP gameday package $21/person (dog/burger + wings + fries & soda)",
+              "price": "$21"
+            },
+            {
+              "text": "G.O.A.T. gameday package $25/person (dog/burger + wings + fried oreos + fries & soda)",
+              "price": "$25"
+            }
+          ],
+          "start": null,
+          "end": null,
+          "time_window": "Saturday gameday (clock not printed on flyer)",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.stuggys.com/s/Stuggys-Saturday-GAMEDAY-1.png",
+          "food_categories": [
+            "drink",
+            "sandwich/cheesesteak",
+            "burger",
+            "wings",
+            "event"
+          ],
+          "proof_quote": "GAME DAY SPECIALS STARTER $17 | PERSON MVP $21 | PERSON THE G.O.A.T. $25 | PERSON BEVERAGE: CAN BEER $3 | DRAFT BEER $4 | SELTZERS $4"
+        }
+      ],
       "notes_public": "No published happy hour specials on the venue website.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "coords_source": "Retained live venues_live.json Nominatim pin for 1928 Fleet St, Baltimore, MD 21231 (39.284928,-76.588895)."
     },
     {
       "id": "rye-of-baltimore",

@@ -19313,6 +19313,108 @@
           "proof_quote": "Mon. - Sat.: 11:00 am to 4:00pm Served with Roast Pork Fried Rice and Egg Roll or Soda or Soup L1. Chicken Chow Mein $9.50"
         }
       ]
+    },
+    {
+      "id": "franks-pizza-and-pasta",
+      "name": "Frank's Pizza & Pasta",
+      "neighborhood": "Rosemont East",
+      "status": "verified",
+      "address": "6620 Belair Rd, Baltimore, MD 21206",
+      "phone": "(410) 254-2900",
+      "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3545572,
+      "lon": -76.5316134,
+      "coords_source": "Nominatim search 6620 Belair Rd, Baltimore, MD 21206 on 2026-09-09 returned OSM node 7276635104 named Frank's Pizza & Pasta at 39.3545572,-76.5316134. Display name neighbourhood is Rosemont East, city Baltimore, postcode 21206. Official homepage prints 6620 Belair Rd and Baltimore, MD 21206. Official menu PDF prints 6620 BELAIR ROAD, BALTIMORE, MARYLAND 21206 and 410-254-2900.",
+      "bar_hours": "Official homepage prints Tuesday 11am – 9pm, Wednesday 11am – 9pm, Thursday 11am – 9pm, Friday 11am – 10pm, Saturday 11am – 10pm, Sunday 12pm – 9pm, Monday Closed. Those are service hours. The Tuesday pizza and Wednesday spaghetti columns on the official menu PDF do not print a special clock.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore pizza room at 6620 Belair Rd, 21206, Rosemont East. Not in live venues.json. Not New Chef at 6604 Belair Rd. Official site https://frankspizzaandpasta.com/. Priced weekday specials are on the official in-house menu PDF linked from that homepage.",
+      "deals": [
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Two 16-inch cheese pizzas $23.98, no coupon necessary, limit 10",
+              "price": "$23.98"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
+          "food_categories": [
+            "pizza"
+          ],
+          "proof_quote": "Tuesday Pizza Special Two 16” Cheese Pizzas $23.98 No Coupon Necessary - Limit 10",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Spaghetti and meatballs for two $22.98, including 2 salads and breadsticks",
+              "price": "$22.98"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://frankspizzaandpasta.com/wp-content/uploads/FranksPizzAndPasta-Menu-1.pdf",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Wednesday Spaghetti for 2 Spaghetti & Meatballs for Two $22.98 Including 2 Salads & Breadsticks",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "id": "sun-wah",
+      "name": "Sun Wah",
+      "neighborhood": "Frankford",
+      "status": "verified",
+      "address": "4901 Frankford Ave, Baltimore, MD 21206",
+      "phone": "(410) 483-4120",
+      "source_url": "https://order.sunwahbaltimore.com/order/main/lunch-special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3308265,
+      "lon": -76.5436667,
+      "coords_source": "Nominatim search 4901 Frankford Ave, Baltimore, MD 21206 on 2026-09-09 returned OSM way 336176378 at 39.3308265,-76.5436667. Display name neighbourhood is Frankford, city Baltimore, postcode 21206. Official homepage prints 4901 Frankford Ave, Baltimore, MD 21206 and telephone (410) 483-4120.",
+      "bar_hours": "Official homepage Open Hours: Monday–Thursday 11:00 AM–10:00 PM; Friday 11:00 AM–11:00 PM; Saturday 12:00 PM–11:00 PM; Sunday Closed. Order-page schema openingHoursSpecification matches Monday–Thursday 11:00–22:00, Friday 11:00–23:00, Saturday 12:00–23:00. Lunch special clock printed on the lunch page is Monday–Saturday 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 4901 Frankford Ave, 21206, Frankford corridor next to Belair Road. Not in live venues.json. Official site https://www.sunwahbaltimore.com/. Priced weekday lunch special is on https://order.sunwahbaltimore.com/order/main/lunch-special.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $11.00, served with fried rice (including chicken chow mein, shrimp chow mein, shrimp egg foo young, pepper steak, curry chicken, General Tso's chicken, sesame chicken, and orange chicken)",
+              "price": "$11.00"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://order.sunwahbaltimore.com/order/main/lunch-special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Mon. - Sat.: 11 am - 3 pm All Served with Fried Rice L 1. Chicken Chow Mein $11.00"
+        }
+      ]
     }
   ]
 }

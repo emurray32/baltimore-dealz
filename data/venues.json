@@ -19415,6 +19415,148 @@
           "proof_quote": "Mon. - Sat.: 11 am - 3 pm All Served with Fried Rice L 1. Chicken Chow Mein $11.00"
         }
       ]
+    },
+    {
+      "id": "asian-taste",
+      "name": "Asian Taste",
+      "neighborhood": "Frankford",
+      "status": "verified",
+      "address": "5441 Belair Rd, Baltimore, MD 21206",
+      "phone": "(410) 325-1000",
+      "source_url": "https://www.baltimoreasiantaste.com/2puo8mch/asian-taste-baltimore-21206/order-online",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3390386,
+      "lon": -76.549866,
+      "coords_source": "Nominatim search 5441 Belair Rd, Baltimore, MD 21206 on 2026-09-09 returned OSM way 336184518 named Asia Taste Chinese Restaurant at 39.3390386,-76.5498660. Display name neighbourhood is Frankford, suburb Hamilton, city Baltimore, postcode 21206. Official restaurant schema prints streetAddress 5441 Belair Rd, addressLocality Baltimore, addressRegion MD, postalCode 21206, and telephone (410) 325-1000.",
+      "bar_hours": "Official homepage Hours of Operation and restaurant schema openingHours: Tuesday–Thursday 11:00 AM–9:00 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:00 PM; Monday Closed. Lunch special clock printed on the official order page is Tuesday–Sunday 11:00 AM–3:30 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5441 Belair Rd, 21206, Frankford leftover next to Belair Road. Not in live venues.json. Not Garden Sea at 5301 Belair Rd. Official site https://www.baltimoreasiantaste.com/. Priced weekday lunch special is on the official order page.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $8.45, served with vegetable fried rice or white rice and soup or soda or vegetable egg roll (including chicken with broccoli)",
+              "price": "$8.45"
+            }
+          ],
+          "start": 660,
+          "end": 930,
+          "time_window": "11am-3:30pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.baltimoreasiantaste.com/2puo8mch/asian-taste-baltimore-21206/order-online",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Tuesday - Sunday 11am - 3:30pm; Served with vegetable fried rice or white rice and soup or soda or vegetable egg roll. Chicken w. Broccoli Lunch 8.45"
+        }
+      ]
+    },
+    {
+      "id": "corner-crab-house",
+      "name": "The Corner Crab House",
+      "neighborhood": "Orchard Ridge",
+      "status": "verified",
+      "address": "4600 Erdman Avenue, Baltimore, MD 21205",
+      "phone": "(410) 485-7442",
+      "source_url": "https://thecornercrabhouse.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3088408,
+      "lon": -76.5616873,
+      "coords_source": "Nominatim search 4600 Erdman Avenue, Baltimore, MD 21205 on 2026-09-09 returned OSM way 336201932 named Corner Crab House at 39.3088408,-76.5616873. Display name neighbourhood is Orchard Ridge, city Baltimore, postcode 21205. Official homepage title prints The Corner Crab House - Baltimore, MD, footer prints 4600 Erdman Avenue and 21205, and telephone (410) 485-7442.",
+      "bar_hours": "Official homepage Opening hours: Sunday 1pm - 7pm, Monday 1pm - 7pm, Tuesday 1pm - 7pm, Wednesday 1pm - 7pm, Thursday 1pm - 7pm, Friday 1pm - 8pm, Saturday 12pm - 8pm. Those are service hours. The Monday through Thursday weekly specials do not print a special clock.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore seafood room at 4600 Erdman Avenue, 21205, Orchard Ridge. Not in live venues.json. Official site https://thecornercrabhouse.com/. Priced weekday specials are on that homepage Weekly Specials section. Construction notice on the same page says not all info is currently accurate or updated.",
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Whiting fish sub platter with 2 sides $14 (regular $16.75 printed beside it)",
+              "price": "$14"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://thecornercrabhouse.com/",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "Monday Special Whiting Fish Sub Platter w/ 2 Sides $16.75 $14",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "tue"
+          ],
+          "items": [
+            {
+              "text": "Two pounds of XL steamed shrimp $30 (regular $37.90 printed beside it)",
+              "price": "$30"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://thecornercrabhouse.com/",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "Tuesday Special Two pounds of XL Steamed Shrimp $37.90 $30",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "wed"
+          ],
+          "items": [
+            {
+              "text": "Shrimp salad sandwich $7.50 (regular $8.50 printed beside it)",
+              "price": "$7.50"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://thecornercrabhouse.com/",
+          "food_categories": [
+            "sandwich/cheesesteak"
+          ],
+          "proof_quote": "Wednesday Special Shrimp Salad Sandwhich $8.50 $7.50",
+          "start": null,
+          "end": null
+        },
+        {
+          "days": [
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Seafood tray, 1 pound XL shrimp, 1 pound snow crab legs, corn on the cob, onions, and potatoes covered in seasoning and butter, $50 (regular $65 printed beside it)",
+              "price": "$50"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://thecornercrabhouse.com/",
+          "food_categories": [
+            "seafood/crab"
+          ],
+          "proof_quote": "Thursday Special Seafood Tray (1 Pound XL Shrimp, 1 Pound Snow Crab Legs, Corn on the Cob, Onions, and Potatoes covered in seasoning and butter. $65 $50",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

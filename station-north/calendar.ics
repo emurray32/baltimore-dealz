@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-alma-cocina-latina-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260909T125035Z
+DTSTAMP:20260909T151523Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -38,7 +38,7 @@ URL:https://www.almacocinalatina.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-alma-cocina-latina-sun-s1020@baltimore-dealz
-DTSTAMP:20260909T125035Z
+DTSTAMP:20260909T151523Z
 DTSTART;VALUE=DATE:20260809
 DTEND;VALUE=DATE:20260810
 RRULE:FREQ=WEEKLY;BYDAY=SU
@@ -49,5 +49,21 @@ DESCRIPTION:5pm-close (bar only)\nHappy Hour\nPrices not published by the v
  ify at the bar\; deals change.
 LOCATION:1701 North Charles Street\, Baltimore\, MD 21201
 URL:https://www.almacocinalatina.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-royal-blue-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260909T151523Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Royal Blue — Happy hour tater tots $5 (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy hour tater tots $5\nHappy hour martinis $5\nHapp
+ y hour glasses of wine $5\nHappy hour espresso martinis $8\nHappy hour neg
+ ronis $8\n1733 Maryland Ave.\, Baltimore\, MD 21201\nCharles North\nhttps:
+ //img1.wsimg.com/blobby/go/7174e61f-3b7f-4992-9f64-3aa46df7d30c/rbmenu-pdf
+ .pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1733 Maryland Ave.\, Baltimore\, MD 21201
+URL:https://img1.wsimg.com/blobby/go/7174e61f-3b7f-4992-9f64-3aa46df7d30c/r
+ bmenu-pdf.pdf
 END:VEVENT
 END:VCALENDAR

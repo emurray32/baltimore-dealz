@@ -19841,6 +19841,202 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "king-wok",
+      "name": "King Wok",
+      "neighborhood": "Winston-Govans",
+      "status": "verified",
+      "address": "5105 York Rd, Baltimore, MD 21212",
+      "phone": "(410) 435-3900",
+      "source_url": "https://www.kingwokmd.com/sk096jli/king-wok-baltimore-21212/menu?menu=Lunch+Special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3510623,
+      "lon": -76.6094466,
+      "coords_source": "Nominatim search 5105 York Rd, Baltimore, MD 21212 on 2026-09-09 returned OSM way 336350177 at 39.3510623,-76.6094466. Display name neighbourhood is Winston-Govans, suburb Greater Govans, city Baltimore, postcode 21212. Official schema and page print streetAddress 5105 York Rd, addressLocality Baltimore, addressRegion MD, postalCode 21212, and telephone (410) 435-3900.",
+      "bar_hours": "Official order-page pickupHours and schema openingHours: Monday closed (pickupHours Monday empty; schema omits Monday); Tuesday–Thursday 11:00 AM–10:00 PM; Friday–Saturday 11:00 AM–10:30 PM; Sunday 12:00 PM–10:00 PM. Schema openingHours print Su 12:00-22:00, Tu,We,Th 11:00-22:00, Fr,Sa 11:00-22:30. Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 5105 York Rd, 21212, Winston-Govans. Not in live venues.json. Official site https://www.kingwokmd.com/. Priced weekday lunch special is on the official lunch menu page.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $7.75, choice of fried rice or white rice, free can soda (Orange Flavored Chicken, Sesame Chicken, Chicken Lo Mein, Vegetable Lo Mein, General Tso's Chicken, Chicken Broccoli, Hunan Chicken, Mixed Vegetables Chicken, and Mixed Vegetables)",
+              "price": "$7.75"
+            },
+            {
+              "text": "Lunch special $8.25, choice of fried rice or white rice, free can soda (Shrimp w. Broccoli, Beef w. Broccoli, Beef Lo Mein, Shrimp Lo Mein, Chicken Egg Foo Young, Beef Egg Foo Young, Vegetable Egg Foo Young, Shrimp Egg Foo Young, Szechuan Shrimp, Szechuan Beef, Hunan Shrimp, Hunan Beef, and Mixed Vegetables Beef)",
+              "price": "$8.25"
+            },
+            {
+              "text": "Lunch special $8.50, choice of fried rice or white rice, free can soda (Triple Delight)",
+              "price": "$8.50"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.kingwokmd.com/sk096jli/king-wok-baltimore-21212/menu?menu=Lunch+Special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Lunch Special 11:00 am to 3:00 pm. Choice of fried rice or white rice. Free Can Soda Available: All week days From: 11:00 AM - 3:00 PM 1. Shrimp w. Broccoli (Lunch) Stir-fried shrimp and broccoli in a light sauce, served over steamed rice. $ 8.25"
+        }
+      ]
+    },
+    {
+      "id": "may-flower",
+      "name": "May Flower Chinese Restaurant",
+      "neighborhood": "Waverly",
+      "status": "verified",
+      "address": "3407 Greenmount Ave, Baltimore, MD 21218",
+      "phone": "(410) 366-7696",
+      "source_url": "https://www.mayflowermd.com/31gytpwh/may-flower-chinese-restaurant-baltimore-21218/menu?menu=Lunch+Menu",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3300381,
+      "lon": -76.6091438,
+      "coords_source": "Nominatim search 3407 Greenmount Ave, Baltimore, MD 21218 on 2026-09-09 returned OSM way 336349105 at 39.3300381,-76.6091438. Display name neighbourhood is Waverly, suburb Northwood, city Baltimore, postcode 21218. Official schema and page print streetAddress 3407 Greenmount Ave, addressLocality Baltimore, addressRegion MD, postalCode 21218, and telephone (410) 366-7696.",
+      "bar_hours": "Official order-page pickupHours and schema openingHours: Monday–Saturday 11:00 AM–10:30 PM; Sunday closed (pickupHours Sunday empty; schema openingHours Mo,Tu,We,Th,Fr,Sa 11:00-22:30). Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3407 Greenmount Ave, 21218, Waverly. Not in live venues.json. Official site https://www.mayflowermd.com/. Priced weekday lunch special is on the official lunch menu page.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $7.80, served with fried rice or white rice and soda (Chicken Chow Mein, Pork Chow Mein, Chicken Chop Suey, Pork Chop Suey, Chicken Lo Mein, Pork Lo Mein, Vegetable Lo Mein, Chicken Egg Foo Young, Pork Egg Foo Young, Vegetable Egg Foo Young, Chicken with Broccoli, Pork with Broccoli, Chicken with Chinese Mixed Vegetables, Pork with Chinese Mixed Vegetables, Chicken with Garlic Sauce, Pork with Garlic Sauce, Kung Pao Chicken, Kung Pao Pork, Hunan Chicken, and Hunan Pork)",
+              "price": "$7.80"
+            },
+            {
+              "text": "Lunch special $8.10, served with fried rice or white rice and soda, choice of chicken or pork (Sweet and Sour)",
+              "price": "$8.10"
+            },
+            {
+              "text": "Lunch special $8.45, served with fried rice or white rice and soda (Beef Chow Mein, Shrimp Chow Mein, Beef Chop Suey, Shrimp Chop Suey, Beef Lo Mein, Shrimp Lo Mein, Beef Egg Foo Young, Shrimp Egg Foo Young, Beef with Broccoli, Shrimp with Broccoli, Beef with Chinese Mixed Vegetables, Shrimp with Chinese Mixed Vegetables, General Tao’s Chicken, Sesame Chicken, Orange Chicken, Sesame Beef, Orange Beef, Chicken with Cashew Nuts, Pork with Cashew Nuts, Beef with Cashew Nuts, Shrimp with Cashew Nuts, Shrimp with Garlic Sauce, Beef with Garlic Sauce, Kung Pao Beef, Kung Pao Shrimp, Shrimp with Lobster Sauce, Hunan Beef, Hunan Shrimp, and Pepper Steak with Onion)",
+              "price": "$8.45"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.mayflowermd.com/31gytpwh/may-flower-chinese-restaurant-baltimore-21218/menu?menu=Lunch+Menu",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Lunch Special All served with fried rice or white rice and soda Available: All week days From: 11:00 AM - 3:00 PM L1. Chicken Chow Mein (Lunch) Stir-fried noodles, chicken, and vegetables, served in a light sauce. $ 7.80"
+        }
+      ]
+    },
+    {
+      "id": "orient-express",
+      "name": "Orient Express",
+      "neighborhood": "Charles Village",
+      "status": "verified",
+      "address": "3111 Saint Paul St, Baltimore, MD 21218",
+      "phone": "(410) 889-0003",
+      "source_url": "https://www.orientexpressmaryland.com/bykucocr/orient-express-baltimore-21218/menu?menu=Lunch+Special",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.3262745,
+      "lon": -76.6156302,
+      "coords_source": "Nominatim search 3111 Saint Paul St, Baltimore, MD 21218 on 2026-09-09 returned OSM way 336369193 at 39.3262745,-76.6156302. Display name neighbourhood is Charles Village, suburb Northwood, city Baltimore, postcode 21218. Official schema and page print streetAddress 3111 Saint Paul St, addressLocality Baltimore, addressRegion MD, postalCode 21218, and telephone (410) 889-0003.",
+      "bar_hours": "Official order-page pickupHours and schema openingHours: Monday 11:00 AM–9:45 PM; Tuesday–Thursday 11:00 AM–9:30 PM; Friday–Saturday 11:00 AM–10:00 PM; Sunday 12:00 PM–9:30 PM. Schema openingHours print Su 12:00-21:30, Mo 11:00-21:45, Tu,We,Th 11:00-21:30, Fr,Sa 11:00-22:00. Lunch special clock printed on the official menu page is 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese restaurant at 3111 Saint Paul St, 21218, Charles Village. Not in live venues.json. Distinct from Orient Express Food at 1411 E Cold Spring Ln. Official site https://www.orientexpressmaryland.com/. Priced weekday lunch special is on the official lunch menu page.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $9.50 (General Tso's Chicken, Sesame Chicken, Orange Chicken, Kung Pao Chicken, Kung Pao Shrimp, Pepper Steak, Chicken with Eggplant, Sweet Sour Chicken, Broccoli with Chicken, Broccoli with Pork, Broccoli with Beef, Broccoli with Shrimp, Garlic Sauce with Chicken, Garlic Sauce with Pork, Garlic Sauce with Beef, Garlic Sauce with Shrimp, and Garlic Sauce with Broccoli)",
+              "price": "$9.50"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.orientexpressmaryland.com/bykucocr/orient-express-baltimore-21218/menu?menu=Lunch+Special",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Lunch Special Available: All week days From: 11:00 AM - 3:00 PM. General Tso's Chicken 9.5"
+        }
+      ]
+    },
+    {
+      "id": "oriental-wok",
+      "name": "Oriental Wok Chinese Food",
+      "neighborhood": "Canton",
+      "status": "verified",
+      "address": "3316 Eastern Ave, Baltimore, MD 21224",
+      "phone": "(410) 276-3316",
+      "source_url": "https://www.orientalwokchinesefood.com/2stn8mch/oriental-wok-chinese-food-baltimore-21224/order-online",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2867001,
+      "lon": -76.569343,
+      "coords_source": "Nominatim search 3316 Eastern Ave, Baltimore, MD 21224 on 2026-09-09 returned OSM way 336222203 at 39.2867001,-76.5693430. Display name neighbourhood is Canton, suburb Highlandtown, city Baltimore, postcode 21224. Official schema and page print streetAddress 3316 Eastern Ave, addressLocality Baltimore, addressRegion MD, postalCode 21224, and telephone (410) 276-3316.",
+      "bar_hours": "Official order-page pickupHours and schema openingHours: Monday 11:00 AM–10:30 PM; Tuesday 11:00 AM–10:30 PM; Wednesday closed (pickupHours Wednesday empty; schema omits Wednesday); Thursday 11:00 AM–10:30 PM; Friday–Saturday 11:00 AM–11:00 PM; Sunday 12:00 PM–10:30 PM. Schema openingHours print Su 12:00-22:30, Mo,Tu,Th 11:00-22:30, Fr,Sa 11:00-23:00. Lunch special clock printed on the official order page is Monday–Saturday 11:00 AM–3:00 PM, which is not the same as full service hours.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Chinese carryout at 3316 Eastern Ave, 21224. Nominatim neighbourhood is Canton and suburb is Highlandtown. Not in live venues.json. Not a Canton empty invented deal. Official site https://www.orientalwokchinesefood.com/. Priced weekday lunch special is on the official order page.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "thu",
+            "fri",
+            "sat"
+          ],
+          "items": [
+            {
+              "text": "Lunch special $10.99, served with fried rice (chicken teriyaki has no side line on the official payload) (L1. Chicken Chow Mein, L1. Roast Pork Chow Mein, L2. Szechuan Chicken, L3. Moo Goo Gai Pan, L4. Shrimp Chow Mein, L5. Shrimp with Lobster Sauce, L6. Sweet and Sour Shrimp, L7. Pepper Steak with Onions, L8. Roast Pork Egg Foo Young, L9. Sweet and Sour Pork, L9. Sweet and Sour Chicken, L10. Chicken with Broccoli, L12. Shrimp with Broccoli, L13. Hunan Chicken, L15. Hunan Shrimp, L16. Shrimp Lo Mein, L17. Shrimp Egg Foo Young, L18. General Tso's Chicken, L20. Pork Egg Foo Young, L21. Chicken Egg Foo Young, L22. Orange Chicken, L23. Kung Pao Chicken, L24. Hunan Mixed Vegetables, L25. Bourbon Chicken, L26. Chicken with Cashew Nuts, L27. Chicken with Mixed Vegetables, L33. Bean Curd Hunan Style, L34. Shrimp with Vegetables, L35. Sesame Chicken, L36. String Beans with Chicken, L36. String Beans with Shrimp, L37. Chicken Lo Mein, L38. Pork Lo Mein, and L40. Chicken Teriyaki)",
+              "price": "$10.99"
+            },
+            {
+              "text": "Lunch special $11.99, served with fried rice (L4. Beef Chow Mein, L11. Beef with Broccoli, L14. Hunan Beef, L19. Beef Egg Foo Young, L36. String Beans with Beef, and L39. Beef Lo Mein)",
+              "price": "$11.99"
+            }
+          ],
+          "start": 660,
+          "end": 900,
+          "time_window": "11am-3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.orientalwokchinesefood.com/2stn8mch/oriental-wok-chinese-food-baltimore-21224/order-online",
+          "food_categories": [
+            "pasta/comfort"
+          ],
+          "proof_quote": "Special Luncheon Available: Monday - Saturday From: 11:00 AM - 3:00 PM. L1. Chicken Chow Mein Lunch Special 10.99"
+        }
+      ]
     }
   ]
 }

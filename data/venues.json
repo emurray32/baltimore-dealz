@@ -11778,10 +11778,10 @@
       "status": "verified",
       "address": "623 S Broadway Baltimore MD 21231",
       "phone": "+1 (443) 835-2215",
-      "source_url": "https://www.lacallerestaurant.com/contact-2/",
+      "source_url": "https://www.lacallerestaurant.com/wp-content/uploads/2026/01/happyhour-022026.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: lacallerestaurant.com contact — HH times only.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09: Filling live unpriced deals from official Happy Hour PDF linked on lacallerestaurant.com/menu-2/ (happyhour-022026.pdf). City of Baltimore at 623 S Broadway. Alcohol on HH drinks column as Margarita Clasica, Paloma, Sangria Blanco, Vino Rojo, Vino blanco, White Claw tequila hard seltzer, Tecate, and Agaves Premium 1 oz pours (Corralejo blanco tequila, Fidencio espadin mezcal, La Venenosa tavernas raicilla).",
       "lat": 39.2842935,
       "lon": -76.5931531,
       "notes_public": "Happy hour times published; item prices not currently listed on the checked page.",
@@ -11798,23 +11798,82 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "Happy hour Margarita Clasica $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Paloma $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Sangria Blanco $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour house red wine (Vino Rojo) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour house white wine (Vino blanco) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour White Claw tequila hard seltzer $6",
+              "price": "$6"
+            },
+            {
+              "text": "Happy hour Tecate $4",
+              "price": "$4"
+            },
+            {
+              "text": "Happy hour Agaves Premium 1 oz pour (Corralejo blanco / Fidencio espadin / La Venenosa) $8",
+              "price": "$8"
+            },
+            {
+              "text": "Happy hour Flautas de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Empanadas Favoritas $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Pellizcadas de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Bruselas Tacos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Bar Nachitos $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Tacos de Pollo $7",
+              "price": "$7"
+            },
+            {
+              "text": "Happy hour Tacos al Pastor $7",
+              "price": "$7"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.lacallerestaurant.com/contact-2/",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.lacallerestaurant.com/wp-content/uploads/2026/01/happyhour-022026.pdf",
           "food_categories": [
-            "drink"
+            "drink",
+            "tacos",
+            "small-plate/apps"
           ],
-          "proof_quote": "Happy Hour Monday – Sunday 4 pm – 6 pm"
+          "proof_quote": "Happy hour Monday - Sunday 4 pm - 6 pm FOOD Flautas de Pollo 7 Empanadas Favoritas 7 Pellizcadas de Pollo 7 Bruselas Tacos 7 Bar Nachitos 7 Tacos de Pollo 7 Tacos al Pastor 7 DRINKS Margarita Clasica 8 Paloma 8 Sangria Blanco 8 Vino Rojo 7 Vino blanco 7 White claw tequila 6 Tecate 4 AGAVES PREMIUM 1 oz pour Tequila Corralejo blanco 8 Mezcal Fidencio espadin 8 Raicilla La venenosa tavernas 8"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "coords_source": "Live venues.json already had lat/lon for 623 S Broadway Baltimore MD 21231 (Fells Point). Nominatim 2026-09-09 reconfirmed 39.2842935,-76.5931531."
     },
     {
       "id": "la-cuchara",

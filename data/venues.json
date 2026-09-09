@@ -4030,10 +4030,10 @@
       "status": "verified",
       "address": "1032 Riverside Ave, Baltimore, MD 21230",
       "phone": "(443) 388-9113",
-      "source_url": "https://www.theoutpostbaltimore.com/",
+      "source_url": "https://www.theoutpostbaltimore.com/menu",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: theoutpostbaltimore.com times-only.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_90: unlocked clocks-only live room via official Spring 2026 dinner menu HAPPY HOUR panel (absolute $ drinks+apps) with Mon–Fri 4–6 printed on same /menu page.",
       "lat": 39.277439,
       "lon": -76.609268,
       "notes_public": "Happy hour times published; prices not listed.",
@@ -4048,23 +4048,83 @@
           ],
           "items": [
             {
-              "text": "Happy Hour"
+              "text": "H.H. Manhattan $7",
+              "price": "$7"
+            },
+            {
+              "text": "H.H. Lindsay Lohan $9",
+              "price": "$9"
+            },
+            {
+              "text": "House wine (red/white/rosé/bubbles) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Lil Sebastian (High Life pony & baby whiskey shot) $6",
+              "price": "$6"
+            },
+            {
+              "text": "Coors Banquet $2.50",
+              "price": "$2.50"
+            },
+            {
+              "text": "Riverside Lager $3",
+              "price": "$3"
+            },
+            {
+              "text": "Green Machine $5",
+              "price": "$5"
+            },
+            {
+              "text": "Guinness $6",
+              "price": "$6"
+            },
+            {
+              "text": "All domestic bottles $3",
+              "price": "$3"
+            },
+            {
+              "text": "Crispy pickles & banana peppers $8",
+              "price": "$8"
+            },
+            {
+              "text": "Burrata Be Caprese $9",
+              "price": "$9"
+            },
+            {
+              "text": "Smoked trout & yellowfin toast $9",
+              "price": "$9"
+            },
+            {
+              "text": "Pickleback Pollo $10",
+              "price": "$10"
+            },
+            {
+              "text": "The Whack Arnold burger $10",
+              "price": "$10"
+            },
+            {
+              "text": "Oh Dang donuts $8",
+              "price": "$8"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "prices_published": false,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.theoutpostbaltimore.com/",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.theoutpostbaltimore.com/menu",
           "food_categories": [
-            "drink"
+            "drink",
+            "small-plate/apps",
+            "burger",
+            "sandwich/cheesesteak"
           ],
-          "proof_quote": "happy hour mon-friday 4pm-6pm"
+          "proof_quote": "HAPPY HOUR … LIBATIONS H.H. MANHATTAN $7 … H.H. LINDSAY LOHAN $9 … HOUSE WINE … $7 … COORS BANQUET $2.5 … ALL DOMESTIC BOTTLES $3; menu page: happy hour mon-friday 4pm-6pm"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "coords_source": "Retained from live venues.json (Nominatim/prior) for 1032 Riverside Ave, Baltimore, MD 21230."
     },
     {
       "id": "kislings-tavern",

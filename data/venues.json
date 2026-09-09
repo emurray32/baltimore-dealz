@@ -19165,6 +19165,43 @@
           "proof_quote": "MONDAY - FRIDAY | 3PM -6PM. $10 Pretzel Braids. $10 Chicken Tenders. $10 Single Smash. $3 Natty Lights. $3 Coors Banquet. $3 Miller High Life. $6 Select Drafts. $8 Espresso Martinis. $8 House Crushes."
         }
       ]
+    },
+    {
+      "id": "old-line-spirits",
+      "name": "Old Line Spirits Ready Room",
+      "neighborhood": "Highlandtown",
+      "status": "verified",
+      "address": "200 S Janney Street, Baltimore, MD 21224",
+      "source_url": "https://www.oldlinespirits.com/distillery-bar/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.290413,
+      "lon": -76.560887,
+      "coords_source": "Nominatim search 200 S Janney Street, Baltimore, MD 21224 on 2026-09-09 returned OSM way 948481880 at 39.2904130,-76.5608870. Display name city Baltimore, postcode 21224, road South Janney Street. Official Ready Room page prints Located in the Highlandtown neighborhood of Baltimore and Address: 200 S Janney Street, Baltimore, MD 21224.",
+      "bar_hours": "Official Ready Room page: Join us Thursday through Saturday | 1–9 PM. Weekly calendar also prints Bar Open: 1-9 PM under Thursday, Friday, and Saturday.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore Highlandtown distillery cocktail bar at 200 S Janney Street. Nominatim city Baltimore, 21224. Not in live venues.json. Official site https://www.oldlinespirits.com/distillery-bar/. Alcohol is printed on that page as Craft Cocktails, READY ROOM COCKTAIL BAR, Signature Fall Cocktails / Barrel-Aged Cocktails / Classic Cocktails, and Beer & Wine.",
+      "deals": [
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Friday Feature Chai Tide cocktail $8",
+              "price": "$8"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.oldlinespirits.com/distillery-bar/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "FRIDAY FEATURE $8 Chai Tide Cocktail",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

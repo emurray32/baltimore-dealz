@@ -14701,14 +14701,44 @@
       "status": "verified",
       "address": "1724 Whetstone Way, Baltimore, MD 21230",
       "phone": "(443) 548-5032",
-      "source_url": "https://www.tacolovegrill.com/events",
+      "source_url": "https://www.tacolovegrill.com/taco-love-grill/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-09-09",
       "lat": 39.268416,
       "lon": -76.600295,
-      "ops_notes": "Deal Scout 2026-09-07: tacolovegrill.com/events live but McHenry Row priced HH block gone (image cards only). /event/happy-hour/ shows White Marsh Mon/Tue/Thu 11:30–5 + Wed all-day + All House Margaritas without $ — not Locust Point McHenry. Cleared prior $10/$10/$4.50 until Locust Point prices republished.",
-      "deals": [],
-      "notes_public": "No Locust Point / McHenry Row happy hour prices published on the site this pass.",
+      "ops_notes": "Deal Scout 2026-09-09 priced_100: unlocked empty via official Locust Point Menus HH panel (schema tied to birrialove). Abs $ + Mon–Fri 3–6. Alcohol lines only. White Marsh event page County skip.",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "All House Margaritas & Sangrias $10",
+              "price": "$10"
+            },
+            {
+              "text": "Bottle Beer $4.50",
+              "price": "$4.50"
+            }
+          ],
+          "start": 900,
+          "end": 1080,
+          "time_window": "3pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.tacolovegrill.com/taco-love-grill/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour Monday - Friday 3:00pm - 6:00pm … All House Margaritas & Sangrias $10.00 … Bottle Beer $4.50 (schema Menu creator = Locust Point / birrialove)"
+        }
+      ],
+      "notes_public": "Happy hour Monday–Friday 3–6pm: $10 house margaritas & sangrias, $4.50 bottle beer (official Locust Point menus).",
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
       "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
     },

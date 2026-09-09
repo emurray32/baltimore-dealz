@@ -3696,15 +3696,59 @@
       "neighborhood": "Fells Point",
       "status": "verified",
       "address": "737 S Broadway, Baltimore, MD 21231",
-      "source_url": "https://maxs.com/",
+      "source_url": "https://maxs.com/oktoberfest-2026/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: maxs.com live (beer destination copy, events calendar mention); no priced HH/specials on homepage. deals=[] bump.",
-      "lat": 39.282658,
-      "lon": -76.592963,
-      "deals": [],
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_84: unlocked empty live room via official regular BIG A$$ DRAFTS $8 select 32oz Fri 5-8 / Sun 1-7 on maxs.com/oktoberfest-2026/. Homepage still no HH card — event page is the priced source stating regular windows.",
+      "lat": 39.2826583,
+      "lon": -76.5929627,
+      "deals": [
+        {
+          "days": [
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "BIG A$$ DRAFTS select 32oz pours $8",
+              "price": "$8"
+            }
+          ],
+          "start": 1020,
+          "end": 1200,
+          "time_window": "5pm-8pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://maxs.com/oktoberfest-2026/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "We're also running our regular BIG A$$ DRAFTS specials with select 32 oz. pours for just $8, Friday 5-8pm and Sunday 1-7pm."
+        },
+        {
+          "days": [
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "BIG A$$ DRAFTS select 32oz pours $8",
+              "price": "$8"
+            }
+          ],
+          "start": 780,
+          "end": 1140,
+          "time_window": "1pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://maxs.com/oktoberfest-2026/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "We're also running our regular BIG A$$ DRAFTS specials with select 32 oz. pours for just $8, Friday 5-8pm and Sunday 1-7pm."
+        }
+      ],
       "notes_public": "No priced happy hour specials published on the website homepage.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "coords_source": "Nominatim 2026-09-09 for 737 S Broadway, Baltimore, MD 21231 (39.2826583,-76.5929627; OSM building retail pin, Fell's Point)."
     },
     {
       "id": "admirals-cup",

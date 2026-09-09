@@ -19797,6 +19797,50 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "chius-sushi",
+      "name": "New Chiu's Sushi",
+      "neighborhood": "Harbor East",
+      "status": "verified",
+      "address": "608 S Exeter St, Baltimore, MD 21202",
+      "phone": "(410) 752-9666",
+      "source_url": "https://www.newchiussushimd.com/",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.28379,
+      "lon": -76.600044,
+      "coords_source": "Nominatim search 608 S Exeter Street, Baltimore, MD 21202 on 2026-09-09 returned OSM node 2930407934 at 39.2837900,-76.6000440. Display name is Chiu's Sushi, 608, South Exeter Street, Inner Harbor, Baltimore, postcode 21202. A follow-up search Chiu's Sushi 608 South Exeter Street Baltimore returned the same OSM node 2930407934. Official homepage prints 608 S Exeter St, Baltimore, MD 21202 and (410) 752-9666.",
+      "bar_hours": "Official homepage prints Open Hours: Monday Closed; Tuesday 11:00 AM - 9:30 PM; Wednesday 11:00 AM - 9:30 PM; Thursday 11:00 AM - 9:30 PM; Friday 11:00 AM - 10:30 PM; Saturday 12:00 PM - 10:30 PM; Sunday 12:00 PM - 9:30 PM. Those are restaurant service hours. The After 3PM roll combo line prints a start clock and no end.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore restaurant at 608 S Exeter St, 21202. Harbor East directory lists the room; Nominatim neighbourhood is Inner Harbor, city Baltimore. Not in live venues.json. Official homepage https://www.newchiussushimd.com/. Harbor East listing https://harboreast.com/restaurants/chius-sushi/.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu",
+            "fri",
+            "sat",
+            "sun"
+          ],
+          "items": [
+            {
+              "text": "Choose Any Three Rolls (After 3PM) $26.95",
+              "price": "$26.95"
+            }
+          ],
+          "start": 900,
+          "time_window": "after 3pm",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.newchiussushimd.com/",
+          "food_categories": [
+            "sushi"
+          ],
+          "proof_quote": "Choose Any Three Rolls (After 3PM) $26.95",
+          "end": null
+        }
+      ]
     }
   ]
 }

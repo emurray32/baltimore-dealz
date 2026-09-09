@@ -19731,6 +19731,72 @@
           "end": null
         }
       ]
+    },
+    {
+      "id": "pierpoint",
+      "name": "Pierpoint",
+      "neighborhood": "Fells Point",
+      "status": "verified",
+      "address": "1822 Aliceanna Street, Baltimore, MD 21231",
+      "phone": "(410) 371-8544",
+      "source_url": "https://pierpointrestaurant.com/new-page-87",
+      "source_type": "venue_website",
+      "last_verified": "2026-09-09",
+      "lat": 39.2838077,
+      "lon": -76.5903825,
+      "coords_source": "Nominatim search 1822 Aliceanna Street, Baltimore, MD 21231 on 2026-09-09 returned OSM node 3445877662 at 39.2838077,-76.5903825. Display name is Pierpoint Restaurant, 1822, Aliceanna Street, Fell's Point, Baltimore, postcode 21231. A follow-up search Pierpoint Restaurant 1822 Aliceanna Street Baltimore returned the same OSM node 3445877662. Official menu page prints 1822 Aliceanna Street, Baltimore, MD 21231 and 410-371-8544.",
+      "bar_hours": "Official menu page prints Hours: Mon (closed except for special bookings); Tues - Thurs 5 - 9; Fri - Sat 5:30 - 10; Sun 4:30 - 8. Those are restaurant service hours. The Tue-Thur bar special line prints no clock.",
+      "ops_notes": "Deal Scout 2026-09-09: City of Baltimore restaurant at 1822 Aliceanna Street, 21231, Fell's Point. Not in live venues.json. Official menu page https://pierpointrestaurant.com/new-page-87. Official homepage https://pierpointrestaurant.com/.",
+      "deals": [
+        {
+          "days": [
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Korean shrimp lo mein with peanuts, cilantro, and pesto $17",
+              "price": "$17"
+            },
+            {
+              "text": "Fried chicken breast with caramelized onions, mashed potatoes, gumbo sauce, and balsamic glazed broccoli $17",
+              "price": "$17"
+            },
+            {
+              "text": "Korean beef or crispy chicken with pho noodles $17",
+              "price": "$17"
+            },
+            {
+              "text": "Sirloin steak with steak frites, demi-glace, and broccoli $17",
+              "price": "$17"
+            },
+            {
+              "text": "Chefs Whim salad bowl with mixed greens, roasted vegetables, and choice of shrimp, steak, or chicken and cheese $17",
+              "price": "$17"
+            },
+            {
+              "text": "8 oz burger with or without cheese, on brioche bun with onion straws and beach fries $17",
+              "price": "$17"
+            },
+            {
+              "text": "Moroccan chicken thighs with couscous and vegetables $17",
+              "price": "$17"
+            }
+          ],
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
+          "source_url": "https://pierpointrestaurant.com/new-page-87",
+          "food_categories": [
+            "pasta/comfort",
+            "steak",
+            "burger"
+          ],
+          "proof_quote": "Served exclusively Tue-Thur at the Bar $17 Korean Shrimp Lo Mein with Peanuts, Cilantro and Pesto $17 Fried Chicken Breast with Caramelized Onions, Mashed Potatoes, Gumbo Sauce and Balsamic Glazed Broccoli $17 Korean Beef or Crispy Chicken with Pho Noodles $17 Sirloin Steak with Steak Frites, Demi-Glace and Broccoli $17 Chefs Whim Salad Bowl with Mixed Greens, Roasted Vegetables and Your Choice of Shrimp, Steak or Chicken and Cheese $17 8 oz Burger with or without Cheese, on Brioche Bun with Onion Straws and Beach Fries $17 Moroccan Chicken Thighs with Cous Cous and Vegetables",
+          "start": null,
+          "end": null
+        }
+      ]
     }
   ]
 }

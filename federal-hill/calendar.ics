@@ -23,8 +23,44 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:bd-hh-ajs-on-hanover-frimonthutuewed-s1020@baltimore-dealz
+DTSTAMP:20260909T173615Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:AJ's on Hanover — Happy hour house wines $5 (5pm-7pm)
+DESCRIPTION:5pm-7pm\nHappy hour house wines $5\nHappy hour drafts $6\nHappy
+  hour select cocktails $8\nHappy hour select crushes $8\nHappy hour snack 
+ wraps (2) $8\nHappy hour sliders (2) $8\nHappy hour brussels $9\n1500 Sout
+ h Hanover Street\, Baltimore\, MD 21230\nSouth Baltimore\nhttps://images.s
+ quarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/83903471-57a9-4629-
+ b1a0-bb1ea13ef183/Happy+Hour+5x7.png\nSource: Baltimore Dealz — verify a
+ t the bar\; deals change.
+LOCATION:1500 South Hanover Street\, Baltimore\, MD 21230
+URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
+ 83903471-57a9-4629-b1a0-bb1ea13ef183/Happy+Hour+5x7.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-ajs-on-hanover-sat-s840@baltimore-dealz
+DTSTAMP:20260909T173615Z
+DTSTART;TZID=America/New_York:20260808T140000
+DTEND;TZID=America/New_York:20260808T170000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:AJ's on Hanover — Happy hour house wines $5 (2pm-5pm)
+DESCRIPTION:2pm-5pm\nHappy hour house wines $5\nHappy hour drafts $6\nHappy
+  hour select cocktails $8\nHappy hour select crushes $8\nHappy hour snack 
+ wraps (2) $8\nHappy hour sliders (2) $8\nHappy hour brussels $9\n1500 Sout
+ h Hanover Street\, Baltimore\, MD 21230\nSouth Baltimore\nhttps://images.s
+ quarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/83903471-57a9-4629-
+ b1a0-bb1ea13ef183/Happy+Hour+5x7.png\nSource: Baltimore Dealz — verify a
+ t the bar\; deals change.
+LOCATION:1500 South Hanover Street\, Baltimore\, MD 21230
+URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
+ 83903471-57a9-4629-b1a0-bb1ea13ef183/Happy+Hour+5x7.png
+END:VEVENT
+BEGIN:VEVENT
 UID:bd-hh-blue-agave-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -49,7 +85,7 @@ URL:https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_0
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-mon-s1020@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T230000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -63,7 +99,7 @@ URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-frithutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T180000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -76,8 +112,43 @@ LOCATION:1236 Light St\, Baltimore\, MD 21230
 URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
+UID:bd-hh-cross-street-public-house-frithuwed-s1020@baltimore-dealz
+DTSTAMP:20260909T173615Z
+DTSTART;TZID=America/New_York:20260805T170000
+DTEND;TZID=America/New_York:20260805T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
+SUMMARY:Cross Street Public House — Happy hour Bud Lights $3 (5pm-7pm)
+DESCRIPTION:5pm-7pm\nHappy hour Bud Lights $3\nHappy hour White Claws $4\nH
+ appy hour Surfsides $5\nHappy hour drafts $6\nHappy hour crushes $7\nHappy
+  hour pizzas $12\n26 E Cross Street\, Baltimore\, MD 21230\nFederal Hill\n
+ https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/6d2
+ 7a06f-bb64-4d2d-aff6-c4425eeee541/Happy+Hour+5x7+%281%29.png\nSource: Balt
+ imore Dealz — verify at the bar\; deals change.
+LOCATION:26 E Cross Street\, Baltimore\, MD 21230
+URL:https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/
+ 6d27a06f-bb64-4d2d-aff6-c4425eeee541/Happy+Hour+5x7+%281%29.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-delia-foleys-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260909T173615Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Delia Foley's Pub — Happy hour Miller Lites $3 (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy hour Miller Lites $3\nHappy hour mystery bottles
+  $4\nHappy hour Jameson $5\nHappy hour Guinness drafts $5\nHappy hour pret
+ zel nuggets $7\nHappy hour fried pickles $8\nHappy hour boneless wings $10
+ \n1439 S Charles Street\, Baltimore\, MD 21230\nSouth Baltimore\nhttps://i
+ mages.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/27cc7944-73c
+ e-4ba1-b979-0b46260a3295/Happy+Hour+5x7.png\nSource: Baltimore Dealz — v
+ erify at the bar\; deals change.
+LOCATION:1439 S Charles Street\, Baltimore\, MD 21230
+URL:https://images.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/
+ 27cc7944-73ce-4ba1-b979-0b46260a3295/Happy+Hour+5x7.png
+END:VEVENT
+BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -91,7 +162,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -105,7 +176,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -120,7 +191,7 @@ URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-satsun-s900@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260808T150000
 DTEND;TZID=America/New_York:20260808T180000
 RRULE:FREQ=WEEKLY;BYDAY=SA,SU
@@ -134,8 +205,25 @@ LOCATION:1113 S Charles St\, Baltimore\, MD 21230
 URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
+UID:bd-hh-magerks-federal-hill-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260909T173615Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:MaGerk's Pub & Grill (Federal Hill) — Happy hour 32 oz drafts $7 
+ (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy hour 32 oz drafts $7\nHappy hour claws $3\nHappy
+  hour white tea shots $5\n1061 S. Charles Street\, Baltimore\, MD 21230\nF
+ ederal Hill\nhttps://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Fede
+ ral-Hill-Weekly-Specials.pdf\nSource: Baltimore Dealz — verify at the ba
+ r\; deals change.
+LOCATION:1061 S. Charles Street\, Baltimore\, MD 21230
+URL:https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-W
+ eekly-Specials.pdf
+END:VEVENT
+BEGIN:VEVENT
 UID:bd-hh-nobles-bar-and-grill-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -150,7 +238,7 @@ URL:https://noblesbarandgrill.com/specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-octobar-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -169,7 +257,7 @@ URL:https://octobarbaltimore.com/happy-hour-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-one-star-country-club-monthutuewed-s1080@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T180000
 DTEND;TZID=America/New_York:20260803T200000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -183,7 +271,7 @@ URL:https://www.onestarcountryclub.com/menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rusty-scupper-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -206,7 +294,7 @@ URL:https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-outpost-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -220,7 +308,7 @@ URL:https://www.theoutpostbaltimore.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -242,7 +330,7 @@ URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frisat-s1320@baltimore-dealz
-DTSTAMP:20260909T172556Z
+DTSTAMP:20260909T173615Z
 DTSTART;VALUE=DATE:20260807
 DTEND;VALUE=DATE:20260808
 RRULE:FREQ=WEEKLY;BYDAY=FR,SA

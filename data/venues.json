@@ -16523,15 +16523,50 @@
       "status": "verified",
       "address": "811 S Broadway, Baltimore, MD 21231",
       "phone": "(410) 522-1428",
-      "source_url": "https://www.abbeyburger.com/copy-of-federal-hill-1",
+      "source_url": "https://www.abbeyburger.com/_files/ugd/b8794d_e1133ec4acff413683d7e14e93f1b7c7.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-08",
+      "last_verified": "2026-09-09",
       "lat": 39.2822747,
       "lon": -76.5927423,
-      "ops_notes": "Deal Scout 2026-09-08: abbeyburger.com/copy-of-federal-hill-1. Federal Hill location not listed (gift cards page is Fells + Mt. Washington only). Specials images alt specials9.4.26 had no readable prices.",
-      "notes_public": "No priced specials readable on the official Fells Point page. Trivia listed Wednesdays at 7:45pm. Kitchen hours: Mon & Tue 4pm–10pm, Wed 11:30am–10pm, Thu 11:30am–11pm, Fri & Sat 11:30am–11pm, Sun 11:30am–10pm.",
-      "deals": [],
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+      "ops_notes": "Deal Scout 2026-09-09 priced_103: unlocked empty via official abbeyburger.com food-menu PDF (b8794d_e1133ec4acff413683d7e14e93f1b7c7.pdf, Version 01-25). ABBEY HOUR Mon–Fri 2pm–6pm prints abs $ drinks: Select drinks/drafts/wines $5; Deep Eddy cocktail $6; Fresh squeezed crushes $7. Same panel appetizer specials not shipped (alcohol-only pass). Prior hold was food $ sans clocks — clocks+drink abs now present. Retained live coords/phone/Fells address.",
+      "notes_public": "Abbey Hour Mon–Fri 2–6pm: $5 select drinks, drafts & wines; $6 Deep Eddy cocktail; $7 fresh squeezed crushes (official food-menu PDF).",
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu",
+            "fri"
+          ],
+          "items": [
+            {
+              "text": "Abbey Hour: select drinks, drafts & wines $5",
+              "price": "$5"
+            },
+            {
+              "text": "Abbey Hour: Deep Eddy cocktail $6",
+              "price": "$6"
+            },
+            {
+              "text": "Abbey Hour: fresh squeezed crushes $7",
+              "price": "$7"
+            }
+          ],
+          "start": 840,
+          "end": 1080,
+          "time_window": "2pm-6pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.abbeyburger.com/_files/ugd/b8794d_e1133ec4acff413683d7e14e93f1b7c7.pdf",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "ABBEY HOUR MONDAY - FRIDAY 2PM-6PM. SELECT DRINKS, DRAFTS & WINES 5. DEEP EDDY COCKTAIL 6. FRESH SQUEEZED CRUSHES 7."
+        }
+      ],
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon retained from live address"
     },
     {
       "id": "the-urban-oyster",

@@ -4041,17 +4041,63 @@
       "id": "barracudas-locust-point",
       "name": "Barracudas Locust Point",
       "neighborhood": "Locust Point",
-      "status": "open_unverifiable",
+      "status": "verified",
       "address": "1230 E Fort Ave, Baltimore, MD 21230",
-      "source_url": "https://www.barracudaslocustpoint.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: barracudaslocustpoint.com teases weekly specials, no $. deals=[] bump.",
+      "source_url": "https://www.instagram.com/p/DcwDR7nlJIr/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_102: unlocked empty via official IG @barracudaslocustpoint post DcwDR7nlJIr — caption abs $ HH drinks + same-post flyer Mon–Thu 3–7pm. Alcohol only. Site still no abs $. Retained live coords.",
       "lat": 39.27025,
       "lon": -76.596735,
-      "deals": [],
-      "notes_public": "Weekly specials board mentioned; no prices published online.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "deals": [
+        {
+          "days": [
+            "mon",
+            "tue",
+            "wed",
+            "thu"
+          ],
+          "items": [
+            {
+              "text": "Natty Light & Natty Boh $3",
+              "price": "$3"
+            },
+            {
+              "text": "Budweiser, Bud Light & Michelob Ultra $4",
+              "price": "$4"
+            },
+            {
+              "text": "Sangria, Kona Big Wave & Welcome to the Neighborhood Shot $5",
+              "price": "$5"
+            },
+            {
+              "text": "Surfside & Pinot Grigio $6",
+              "price": "$6"
+            },
+            {
+              "text": "Crushes (Coastal, Orange, Lemon, Grapefruit, Lemon Lime, Lime) $7",
+              "price": "$7"
+            },
+            {
+              "text": "Tito's Crush $9",
+              "price": "$9"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/DcwDR7nlJIr/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Happy Hour 3-7 PM $3 Natty Light & Natty Boh | $4 Budweiser, Bud Light & Michelob Ultra | $5 Sangria, Kona Big Wave & Welcome to the Neighborhood Shot | $6 Surfside & Pinot Grigio | $7 Crushes | $9 Tito's Crush; flyer: HAPPY HOUR Monday–Thursday 3PM–7PM (@barracudaslocustpoint /p/DcwDR7nlJIr/)"
+        }
+      ],
+      "notes_public": "Happy hour Monday–Thursday 3–7pm: $3 Natty Light & Natty Boh; $4 Bud/Bud Light/Ultra; $5 sangria, Kona Big Wave & neighborhood shot; $6 Surfside & Pinot Grigio; $7 crushes; $9 Tito's Crush (official Instagram).",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "coords_source": "Retained live lat/lon for 1230 E Fort Ave, Baltimore, MD 21230"
     },
     {
       "id": "pub-dog-fed-hill",
@@ -15843,15 +15889,42 @@
       "status": "verified",
       "address": "1900 E Lombard St, Baltimore, MD 21231",
       "phone": "(410) 624-5623",
-      "source_url": "https://ministryofbrewing.com/",
-      "source_type": "venue_website",
-      "last_verified": "2026-09-08",
-      "ops_notes": "Deal Scout 2026-09-08: ministryofbrewing.com + /about. deals=[].",
+      "source_url": "https://www.instagram.com/p/Dc1X3lvIV7e/",
+      "source_type": "instagram_profile",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_102: unlocked empty via official IG @ministryofbrewing caption abs $+Mon clock (Hospitality Service Industry Nights). $6 Underberg+5oz draft / $10 Underberg+pint every Monday 3–10pm for hospitality workers. Site still no abs $. Retained live coords.",
       "lat": 39.2909054,
       "lon": -76.5901596,
-      "deals": [],
-      "notes_public": "No priced specials listed on the official site as of 2026-09-08.",
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08"
+      "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "Hospitality Industry Night: Underberg + 5 oz draft $6 (hospitality workers)",
+              "price": "$6"
+            },
+            {
+              "text": "Hospitality Industry Night: Underberg + pint $10 (hospitality workers)",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1320,
+          "time_window": "3pm-10pm",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.instagram.com/p/Dc1X3lvIV7e/",
+          "food_categories": [
+            "drink"
+          ],
+          "proof_quote": "Every Monday from 3-10 PM, hospitality workers can enjoy: $6 — Underberg + 5 oz draft / $10 — Underberg + pint"
+        }
+      ],
+      "notes_public": "Mondays 3–10pm Hospitality Service Industry Night: $6 Underberg + 5 oz draft; $10 Underberg + pint (hospitality workers; official Instagram).",
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-09-08",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon retained from live"
     },
     {
       "id": "gunther-and-co",

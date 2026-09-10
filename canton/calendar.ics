@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-baltimore-seafood-frimontuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,FR
@@ -46,7 +46,7 @@ URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-baltimore-seafood-thu-s720@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260806T120000
 DTEND;TZID=America/New_York:20260806T180000
 RRULE:FREQ=WEEKLY;BYDAY=TH
@@ -68,7 +68,7 @@ URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-baltimore-seafood-sun-s720@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260809T120000
 DTEND;TZID=America/New_York:20260809T160000
 RRULE:FREQ=WEEKLY;BYDAY=SU
@@ -89,41 +89,26 @@ URL:https://static.wixstatic.com/media/61f75e_16b351e9d0fb49cea72a8bcb9cba1
  cfa~mv2.png
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-bark-social-canton-mon-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260803T150000
-DTEND;TZID=America/New_York:20260803T190000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
-DESCRIPTION:3pm-7pm\n$2 off draft beer + cocktails\n$6 appetizers\n$10 flat
- breads\n3822 Boston St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barks
- ocial.com/pages/baltimore-happy-hour\nSource: Baltimore Dealz — verify a
- t the bar\; deals change.
-LOCATION:3822 Boston St\, Baltimore\, MD 21224
-URL:https://barksocial.com/pages/baltimore-happy-hour
-END:VEVENT
-BEGIN:VEVENT
 UID:bd-hh-bark-social-canton-tue-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
-DESCRIPTION:3pm-7pm\n2 cocktails for $12\nAny 2 flatbreads for $20\n3822 Bo
- ston St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages
- /baltimore-happy-hour\nSource: Baltimore Dealz — verify at the bar\; dea
- ls change.
+SUMMARY:Bark Social Canton — 2 Cocktails for $12 (3pm-7pm)
+DESCRIPTION:3pm-7pm\n2 Cocktails for $12\n3822 Boston St\, Baltimore\, MD 2
+ 1224\nBrewers Hill\nhttps://barksocial.com/pages/baltimore-happy-hour\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:3822 Boston St\, Baltimore\, MD 21224
 URL:https://barksocial.com/pages/baltimore-happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-bark-social-canton-wed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T150000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE
 SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
-DESCRIPTION:3pm-7pm\n$7 frosé\n$7 wine glasses + cans\n3822 Boston St\, Ba
+DESCRIPTION:3pm-7pm\n$7 Frosé\n$7 Wine Glasses + Cans\n3822 Boston St\, Ba
  ltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages/baltimore-h
  appy-hour\nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:3822 Boston St\, Baltimore\, MD 21224
@@ -131,12 +116,12 @@ URL:https://barksocial.com/pages/baltimore-happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-bark-social-canton-thu-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260806T150000
 DTEND;TZID=America/New_York:20260806T190000
 RRULE:FREQ=WEEKLY;BYDAY=TH
 SUMMARY:Bark Social Canton — Happy Hour (3pm-7pm)
-DESCRIPTION:3pm-7pm\n$5 seltzers\n$6 drafts\n$7 menu cocktails\n3822 Boston
+DESCRIPTION:3pm-7pm\n$5 Seltzers\n$6 Drafts\n$7 Menu Cocktails\n3822 Boston
   St\, Baltimore\, MD 21224\nBrewers Hill\nhttps://barksocial.com/pages/bal
  timore-happy-hour\nSource: Baltimore Dealz — verify at the bar\; deals c
  hange.
@@ -145,12 +130,12 @@ URL:https://barksocial.com/pages/baltimore-happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-bark-social-canton-fri-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260807T150000
 DTEND;TZID=America/New_York:20260807T190000
 RRULE:FREQ=WEEKLY;BYDAY=FR
-SUMMARY:Bark Social Canton — $7 all frozen drinks (3pm-7pm)
-DESCRIPTION:3pm-7pm\n$7 all frozen drinks\n3822 Boston St\, Baltimore\, MD 
+SUMMARY:Bark Social Canton — $7 All Frozen Drinks (3pm-7pm)
+DESCRIPTION:3pm-7pm\n$7 All Frozen Drinks\n3822 Boston St\, Baltimore\, MD 
  21224\nBrewers Hill\nhttps://barksocial.com/pages/baltimore-happy-hour\nSo
  urce: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:3822 Boston St\, Baltimore\, MD 21224
@@ -158,7 +143,7 @@ URL:https://barksocial.com/pages/baltimore-happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-captain-james-landing-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -172,7 +157,7 @@ URL:https://www.captainjameslanding.com/event/happy-hour-at-the-crab-house/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-claddagh-pub-mon-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -188,7 +173,7 @@ URL:https://claddaghbaltimore.com/weekly-specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-claddagh-pub-tue-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU
@@ -204,7 +189,7 @@ URL:https://claddaghbaltimore.com/weekly-specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-claddagh-pub-wed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T160000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE
@@ -220,7 +205,7 @@ URL:https://claddaghbaltimore.com/weekly-specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-claddagh-pub-thu-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260806T160000
 DTEND;TZID=America/New_York:20260806T190000
 RRULE:FREQ=WEEKLY;BYDAY=TH
@@ -236,7 +221,7 @@ URL:https://claddaghbaltimore.com/weekly-specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-claddagh-pub-fri-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260807T160000
 DTEND;TZID=America/New_York:20260807T190000
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -252,7 +237,7 @@ URL:https://claddaghbaltimore.com/weekly-specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-el-bufalo-frimonsatsunthutuewed-wallday@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -267,7 +252,7 @@ URL:https://www.elbufalobaltimore.net/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ellies-tavern-montue-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU
@@ -284,7 +269,7 @@ URL:https://elliestavernbmore.com/baltimore-canton-ellie-s-tavern-food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ellies-tavern-frithuwed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T150000
 DTEND;TZID=America/New_York:20260805T180000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -301,7 +286,7 @@ URL:https://elliestavernbmore.com/baltimore-canton-ellie-s-tavern-food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-good-vibes-cantina-frimonsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T200000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
@@ -315,7 +300,7 @@ URL:https://www.instagram.com/p/DclvnKhu7nq/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-gunther-and-co-tuewed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T170000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE
@@ -329,7 +314,7 @@ URL:https://eatatgunther.com/menus
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-gunther-and-co-frithu-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260806T160000
 DTEND;TZID=America/New_York:20260806T190000
 RRULE:FREQ=WEEKLY;BYDAY=TH,FR
@@ -343,7 +328,7 @@ URL:https://eatatgunther.com/menus
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-homeslyce-canton-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -357,7 +342,7 @@ URL:https://homeslyce.com/specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hudson-street-stackhouse-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -370,7 +355,7 @@ URL:https://hudsonstreetstackhouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hudson-street-stackhouse-fri-s840@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260807T140000
 DTEND;TZID=America/New_York:20260807T190000
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -383,7 +368,7 @@ URL:https://hudsonstreetstackhouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hudson-street-stackhouse-satsun-s660@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260808T110000
 DTEND;TZID=America/New_York:20260808T170000
 RRULE:FREQ=WEEKLY;BYDAY=SA,SU
@@ -396,7 +381,7 @@ URL:https://hudsonstreetstackhouse.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-mamas-on-the-half-shell-mon-wallday@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -410,7 +395,7 @@ URL:https://www.mamasonthehalfshell.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-of-love-and-regret-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T183000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -423,7 +408,7 @@ URL:https://www.olarbmore.com/wp-content/uploads/2026/02/5.jpeg
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-pussers-landing-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -437,21 +422,20 @@ URL:https://pusserslanding.com/specials/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-raw-and-refined-frithuwed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T150000
 DTEND;TZID=America/New_York:20260805T180000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
 SUMMARY:Raw & Refined — Happy Hour (3pm-6pm)
-DESCRIPTION:3pm-6pm\n½ off select appetizers\n$5 drafts\n$10 crush buckets
- \n$6 seltzers\n2723 Lighthouse Pt. E\, Baltimore\, MD 21224\nCanton\nhttp:
- //www.rawandrefinedbaltimore.com/\nSource: Baltimore Dealz — verify at t
- he bar\; deals change.
+DESCRIPTION:3pm-6pm\n$5 drafts\n$10 crush buckets\n$6 seltzers\n2723 Lighth
+ ouse Pt. E\, Baltimore\, MD 21224\nCanton\nhttp://www.rawandrefinedbaltimo
+ re.com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:2723 Lighthouse Pt. E\, Baltimore\, MD 21224
 URL:http://www.rawandrefinedbaltimore.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-silks-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -465,7 +449,7 @@ URL:https://www.instagram.com/silkscanton/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-smaltimore-frimonthutuewed-wuntil7pm@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -478,7 +462,7 @@ URL:http://www.smaltimoremd.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-so-baltimore-sports-frithutuewed-s1080@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T180000
 DTEND;TZID=America/New_York:20260804T200000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -499,7 +483,7 @@ URL:https://www.sobaltimoresportsbar.com/menus-1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-chasseur-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T200000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -513,7 +497,7 @@ URL:https://www.chasseurbaltimore.com/drink
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-dive-monthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -529,7 +513,7 @@ URL:https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-dive-fri-s660@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260807T110000
 DTEND;TZID=America/New_York:20260807T160000
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -545,7 +529,7 @@ URL:https://www.instagram.com/thedivebaltimore/p/Dc4CvyJJXK5/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-greene-turtle-canton-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -568,50 +552,61 @@ URL:https://images.getbento.com/accounts/eb3e90803dd3724a5b5a34e887068fd3/m
  edia/images/17536TGT_Corp26_HappyHour_Aug20.jpg
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-the-happyjack-tavern-monthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+UID:bd-hh-the-happyjack-tavern-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
-RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-SUMMARY:The HappyJack Tavern — Happy Hour (4pm-6pm)
-DESCRIPTION:4pm-6pm\n$8 Smash Burger\n$8 Veggie Burger\n$8 Grilled Chicken\
- n$8 Classic Grilled Cheese\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\
- nhttps://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — v
- erify at the bar\; deals change.
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The HappyJack Tavern — $5 rail liquor drinks (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$5 rail liquor drinks\n2822 Hudson St\, Baltimore\, MD
+  21224\nCanton\nhttps://www.happyjacktavern.com/happy-hour\nSource: Baltim
+ ore Dealz — verify at the bar\; deals change.
 LOCATION:2822 Hudson St\, Baltimore\, MD 21224
 URL:https://www.happyjacktavern.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-the-happyjack-tavern-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260803T160000
-DTEND;TZID=America/New_York:20260803T180000
-RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
-SUMMARY:The HappyJack Tavern — Happy Hour (4pm-6pm)
-DESCRIPTION:4pm-6pm\n$1 off select beer\, wine & cocktails marked w/ an *\n
- $5 rail liquor drinks\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\nhttp
- s://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — verify
-  at the bar\; deals change.
+UID:bd-hh-the-happyjack-tavern-mon-s960@baltimore-dealz
+DTSTAMP:20260910T020325Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:The HappyJack Tavern — $8 just another guava mango margs (4pm-clo
+ se)
+DESCRIPTION:4pm-close\n$8 just another guava mango margs\n2822 Hudson St\, 
+ Baltimore\, MD 21224\nCanton\nhttps://www.happyjacktavern.com/happy-hour\n
+ Source: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2822 Hudson St\, Baltimore\, MD 21224
+URL:https://www.happyjacktavern.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-happyjack-tavern-thu-s960@baltimore-dealz
+DTSTAMP:20260910T020325Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:The HappyJack Tavern — $8 all boh’tails (4pm-close)
+DESCRIPTION:4pm-close\n$8 all boh’tails\n2822 Hudson St\, Baltimore\, MD 
+ 21224\nCanton\nhttps://www.happyjacktavern.com/happy-hour\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
 LOCATION:2822 Hudson St\, Baltimore\, MD 21224
 URL:https://www.happyjacktavern.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-happyjack-tavern-sun-s720@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260809T120000
 DTEND;TZID=America/New_York:20260809T230000
 RRULE:FREQ=WEEKLY;BYDAY=SU
-SUMMARY:The HappyJack Tavern — Happy Hour (12pm-11pm)
-DESCRIPTION:12pm-11pm\n$1 off select beer\, wine & cocktails marked w/ an *
- \n$5 rail liquor drinks\n2822 Hudson St\, Baltimore\, MD 21224\nCanton\nht
- tps://www.happyjacktavern.com/happy-hour\nSource: Baltimore Dealz — veri
- fy at the bar\; deals change.
+SUMMARY:The HappyJack Tavern — $5 rail liquor drinks (12pm-11pm)
+DESCRIPTION:12pm-11pm\n$5 rail liquor drinks\n2822 Hudson St\, Baltimore\, 
+ MD 21224\nCanton\nhttps://www.happyjacktavern.com/happy-hour\nSource: Balt
+ imore Dealz — verify at the bar\; deals change.
 LOCATION:2822 Hudson St\, Baltimore\, MD 21224
 URL:https://www.happyjacktavern.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-union-hill-kitchen-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T183000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR

@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-ash-bar-frimonsatsunthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T170000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -40,7 +40,7 @@ URL:https://ash.world/dining/ash-bar-baltimore/menus/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ash-bar-frimonsatsunthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T170000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -58,22 +58,22 @@ URL:https://ash.world/dining/ash-bar-baltimore/menus/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-bar-dali-monthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
 SUMMARY:Bar Dalí — Happy Hour (4pm-6pm)
 DESCRIPTION:4pm-6pm\nMahou & Natty Boh Drafts (17oz) $5\nDraft Vermouth $6\
- nCare Wines By The Glass $7\n20% off Care Bottles $28\nDawn & Stormy (Lico
- r 43\, ginger beer\, lemon) $10\n909 N. Charles St.\, Baltimore\, MD 21201
- \nMount Vernon\nhttps://www.bardalibaltimore.com/s/happy-hour-june-2026-ba
- r-dali.pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+ nCare Wines By The Glass $7\nDawn & Stormy $10\n909 N. Charles St.\, Balti
+ more\, MD 21201\nMount Vernon\nhttps://www.bardalibaltimore.com/s/happy-ho
+ ur-june-2026-bar-dali.pdf\nSource: Baltimore Dealz — verify at the bar\;
+  deals change.
 LOCATION:909 N. Charles St.\, Baltimore\, MD 21201
 URL:https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brass-tap-baltimore-frimonsatthutuewed-s840@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T140000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA
@@ -92,24 +92,24 @@ URL:https://www.brasstapbeerbar.com/menus/happyhour/71.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-magdalena-frithutuewed-s990@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T163000
 DTEND;TZID=America/New_York:20260804T183000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
 SUMMARY:Magdalena — Happy Hour (4:30pm-6:30pm)
 DESCRIPTION:4:30pm-6:30pm\nLa Fiera Pinot Grigio $7\nBarnard Griffin Rosé 
  of Sangiovese $7\nValle Reale Montepulciano d'Abruzzo $7\nVermu Spritz $7\
- nWeekly rotating cocktail special $7\nPeabody Heights Old Oriole Park Bohe
- mian $5\nPeabody Heights Astrodon Hazy IPA $5\nGood Time Pilsner (non-alco
- holic) $5\n205 E Biddle St\, Baltimore\, MD 21202\nMid-Town Belvedere\nhtt
- ps://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour\nSource: B
- altimore Dealz — verify at the bar\; deals change.
+ nWeekly rotating cocktail / Nelson’s Green Brier Old Fashioned $7\nPeabo
+ dy Heights Old Oriole Park Bohemian $5\nPeabody Heights Astrodon Hazy IPA 
+ $5\n205 E Biddle St\, Baltimore\, MD 21202\nMid-Town Belvedere\nhttps://ww
+ w.theivybaltimore.com/dine/magdalena/our-menu#happy-hour\nSource: Baltimor
+ e Dealz — verify at the bar\; deals change.
 LOCATION:205 E Biddle St\, Baltimore\, MD 21202
 URL:https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-minato-sushi-bar-frimonsatthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA
@@ -125,7 +125,7 @@ URL:https://www.minatosushibar.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-nora-blu-frimonsatsunthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
@@ -146,11 +146,11 @@ LOCATION:1225 Cathedral St\, Baltimore\, MD 21201
 URL:https://www.instagram.com/norablubaltimore/p/DaVHoxfguWx/
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-sugarvale-frisatsunthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+UID:bd-hh-sugarvale-frisatthutuewed-s1020@baltimore-dealz
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T170000
 DTEND;TZID=America/New_York:20260804T190000
-RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA,SU
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA
 SUMMARY:Sugarvale — Happy Hour (5pm-7pm)
 DESCRIPTION:5pm-7pm\nSelect classic cocktails $10\nSelect beer $5\nSelect w
  ine $8\n4 W. Madison St.\, Baltimore\, MD 21201\nMount Vernon\nhttp://suga
@@ -160,8 +160,22 @@ LOCATION:4 W. Madison St.\, Baltimore\, MD 21201
 URL:http://sugarvalebmore.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:bd-hh-sugarvale-sun-wallnight@baltimore-dealz
+DTSTAMP:20260910T020325Z
+DTSTART;VALUE=DATE:20260809
+DTEND;VALUE=DATE:20260810
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Sugarvale — Happy Hour (all night)
+DESCRIPTION:all night\nSelect classic cocktails $10\nSelect beer $5\nSelect
+  wine $8\n4 W. Madison St.\, Baltimore\, MD 21201\nMount Vernon\nhttp://su
+ garvalebmore.com/\nSource: Baltimore Dealz — verify at the bar\; deals c
+ hange.
+LOCATION:4 W. Madison St.\, Baltimore\, MD 21201
+URL:http://sugarvalebmore.com/
+END:VEVENT
+BEGIN:VEVENT
 UID:bd-hh-the-brewers-art-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -175,51 +189,48 @@ URL:https://thebrewersartmd.com/faq
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-coral-wig-frimonthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
-SUMMARY:The Coral Wig — Happy Hour (5pm-7pm)
-DESCRIPTION:5pm-7pm\nPainkillers $10\n$2 off beer\, wine\, Estate Martinis\
- n1/2 price bottles of Sparkling wine\n2 E. Read St.\, Historic Mount Verno
- n\, Baltimore\, MD 21202\nMount Vernon\nhttps://www.thecoralwig.com/\nSour
- ce: Baltimore Dealz — verify at the bar\; deals change.
+SUMMARY:The Coral Wig — Painkillers $10 (5pm-7pm)
+DESCRIPTION:5pm-7pm\nPainkillers $10\n2 E. Read St.\, Historic Mount Vernon
+ \, Baltimore\, MD 21202\nMount Vernon\nhttps://www.thecoralwig.com/\nSourc
+ e: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:2 E. Read St.\, Historic Mount Vernon\, Baltimore\, MD 21202
 URL:https://www.thecoralwig.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-owl-bar-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
 SUMMARY:The Owl Bar — Happy Hour (4pm-7pm)
 DESCRIPTION:4pm-7pm\nWell Spirits $7\nMargaritas $7\nSangria $6.50\nStella 
- $6\nBud Light $5\nOwl Lager $5\nSliders $9\nWings $9\nVegan Potstickers $9
- \n1017 N. Charles Street\, Baltimore\, MD 21201\nMid-Town Belvedere\nhttps
- ://www.theowlbar.com/owl-bar-menus?menu=happy-hour\nSource: Baltimore Deal
- z — verify at the bar\; deals change.
+ $6\nBud Light $5\nOwl Lager $5\n1017 N. Charles Street\, Baltimore\, MD 21
+ 201\nMid-Town Belvedere\nhttps://www.theowlbar.com/owl-bar-menus?menu=happ
+ y-hour\nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1017 N. Charles Street\, Baltimore\, MD 21201
 URL:https://www.theowlbar.com/owl-bar-menus?menu=happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-owl-bar-sat-s840@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260808T140000
 DTEND;TZID=America/New_York:20260808T180000
 RRULE:FREQ=WEEKLY;BYDAY=SA
 SUMMARY:The Owl Bar — Happy Hour (2pm-6pm)
 DESCRIPTION:2pm-6pm\nWell Spirits $7\nMargaritas $7\nSangria $6.50\nStella 
- $6\nBud Light $5\nOwl Lager $5\nSliders $9\nWings $9\nVegan Potstickers $9
- \n1017 N. Charles Street\, Baltimore\, MD 21201\nMid-Town Belvedere\nhttps
- ://www.theowlbar.com/owl-bar-menus?menu=happy-hour\nSource: Baltimore Deal
- z — verify at the bar\; deals change.
+ $6\nBud Light $5\nOwl Lager $5\n1017 N. Charles Street\, Baltimore\, MD 21
+ 201\nMid-Town Belvedere\nhttps://www.theowlbar.com/owl-bar-menus?menu=happ
+ y-hour\nSource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1017 N. Charles Street\, Baltimore\, MD 21201
 URL:https://www.theowlbar.com/owl-bar-menus?menu=happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-unity-bar-restaurant-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -237,55 +248,28 @@ URL:https://unitybarrestaurant.com/wp-content/uploads/2025/12/Unity_HH_12_5
  .pdf
 END:VEVENT
 BEGIN:VEVENT
-UID:bd-hh-wet-city-mon-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260803T170000
-DTEND;TZID=America/New_York:20260803T220000
-RRULE:FREQ=WEEKLY;BYDAY=MO
-SUMMARY:Wet City Brewing — Happy Hour (5pm-10pm)
-DESCRIPTION:5pm-10pm\n$3 off burgers\n$1 off -ish pours\n223 W. Chase St. B
- altimore\, MD 21201\nMid-Town Belvedere\nhttps://wetcitybrewing.com/\nSour
- ce: Baltimore Dealz — verify at the bar\; deals change.
-LOCATION:223 W. Chase St. Baltimore\, MD 21201
-URL:https://wetcitybrewing.com/
-END:VEVENT
-BEGIN:VEVENT
 UID:bd-hh-wet-city-tue-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T170000
 DTEND;TZID=America/New_York:20260804T220000
 RRULE:FREQ=WEEKLY;BYDAY=TU
-SUMMARY:Wet City Brewing — Happy Hour (5pm-10pm)
-DESCRIPTION:5pm-10pm\n$3 off tacos & taco salad\n$10 Purple Margs\n223 W. C
- hase St. Baltimore\, MD 21201\nMid-Town Belvedere\nhttps://wetcitybrewing.
- com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+SUMMARY:Wet City Brewing — $10 Purple Margs (5pm-10pm)
+DESCRIPTION:5pm-10pm\n$10 Purple Margs\n223 W. Chase St. Baltimore\, MD 212
+ 01\nMid-Town Belvedere\nhttps://wetcitybrewing.com/\nSource: Baltimore Dea
+ lz — verify at the bar\; deals change.
 LOCATION:223 W. Chase St. Baltimore\, MD 21201
 URL:https://wetcitybrewing.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wet-city-wed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T220000
 RRULE:FREQ=WEEKLY;BYDAY=WE
-SUMMARY:Wet City Brewing — Happy Hour (5pm-10pm)
-DESCRIPTION:5pm-10pm\n$10 Old Fashioned & Manhattans\n20% select whiskey po
- urs\n$3 off chix sandos\n223 W. Chase St. Baltimore\, MD 21201\nMid-Town B
- elvedere\nhttps://wetcitybrewing.com/\nSource: Baltimore Dealz — verify 
- at the bar\; deals change.
-LOCATION:223 W. Chase St. Baltimore\, MD 21201
-URL:https://wetcitybrewing.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:bd-hh-wet-city-thu-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260806T170000
-DTEND;TZID=America/New_York:20260806T230000
-RRULE:FREQ=WEEKLY;BYDAY=TH
-SUMMARY:Wet City Brewing — $3 off wings (5pm-11pm)
-DESCRIPTION:5pm-11pm\n$3 off wings\n223 W. Chase St. Baltimore\, MD 21201\n
- Mid-Town Belvedere\nhttps://wetcitybrewing.com/\nSource: Baltimore Dealz 
- — verify at the bar\; deals change.
+SUMMARY:Wet City Brewing — $10 Old Fashioned & Manhattans (5pm-10pm)
+DESCRIPTION:5pm-10pm\n$10 Old Fashioned & Manhattans\n223 W. Chase St. Balt
+ imore\, MD 21201\nMid-Town Belvedere\nhttps://wetcitybrewing.com/\nSource:
+  Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:223 W. Chase St. Baltimore\, MD 21201
 URL:https://wetcitybrewing.com/
 END:VEVENT

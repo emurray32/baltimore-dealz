@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-ajs-on-hanover-frimonthutuewed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -42,7 +42,7 @@ URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-ajs-on-hanover-sat-s840@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260808T140000
 DTEND;TZID=America/New_York:20260808T170000
 RRULE:FREQ=WEEKLY;BYDAY=SA
@@ -60,7 +60,7 @@ URL:https://images.squarespace-cdn.com/content/v1/5b7b4bb6e2ccd160f05785bb/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-blue-agave-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -85,7 +85,7 @@ URL:https://www.blueagavemexicanfood.com/s/5_25x12_125-BAMF_HH_Menu_PRINT_0
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-mon-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T170000
 DTEND;TZID=America/New_York:20260803T230000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -99,7 +99,7 @@ URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-brewers-cask-frithutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T180000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -113,7 +113,7 @@ URL:https://brewers-cask.com/baltimore-brewer-s-cask-happy-hours-specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-cross-street-public-house-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -130,7 +130,7 @@ URL:https://images.squarespace-cdn.com/content/v1/6132b20e224175254cc30344/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-delia-foleys-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -148,7 +148,7 @@ URL:https://images.squarespace-cdn.com/content/v1/63c8304e68daba12c8b27fd4/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -162,7 +162,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-little-havana-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -176,7 +176,7 @@ URL:https://littlehavanas.com/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -191,7 +191,7 @@ URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-livs-tavern-satsun-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260808T150000
 DTEND;TZID=America/New_York:20260808T180000
 RRULE:FREQ=WEEKLY;BYDAY=SA,SU
@@ -206,7 +206,7 @@ URL:https://www.livstavern.com/specials
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-magerks-federal-hill-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -223,7 +223,7 @@ URL:https://irp.cdn-website.com/bacc7a90/files/uploaded/2026-Federal-Hill-W
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-nobles-bar-and-grill-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -238,7 +238,7 @@ URL:https://noblesbarandgrill.com/specials/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-octobar-frithutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T160000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -257,7 +257,7 @@ URL:https://octobarbaltimore.com/happy-hour-3/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-one-star-country-club-monthutuewed-s1080@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T180000
 DTEND;TZID=America/New_York:20260803T200000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -271,7 +271,7 @@ URL:https://www.onestarcountryclub.com/menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rusty-scupper-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -279,22 +279,16 @@ SUMMARY:Rusty Scupper — Happy Hour (4pm-6pm)
 DESCRIPTION:4pm-6pm\nMartinis $8 (Bombay Sapphire or Absolut — Apple\, Le
  mon Drop\, or Regular)\n1783 Old Fashioned $9\nScupper Sunset $8\nHomemade
   Red Sangria $9\nPassion Breeze $8\nDraft $5 (Yuengling\, Rusty Scupper Pa
- le Ale)\nDomestic $4.50 (Budweiser\, Bud Light\, Coors Light\, Miller Lite
- \, Natty Boh 22 oz\, Michelob Ultra)\nRed Wine $8 (Merlot\, Cabernet Sauvi
- gnon\, Pinot Noir — Jacob's Creek house)\nWhite Wine $8 (Pinot Grigio\, 
- Chardonnay\, Moscato — Jacob's Creek house)\nCrab Fried Brussels Sprouts
-  $18\n6 oz. Lobster Tempura $29\nShrimp Basket $15\nP.E.I. Mussels $13\nLo
- cal Oysters $2.50\nCrab Cake Sandwich $20\nAll American Burger $16\nCrab H
- ush Puppies (5) $12\nNashville Hot Wings $13\n402 Key Highway\, Inner Harb
- or Marina\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.rusty-scupper.
- com/wp-content/uploads/RSC-Happy-Hour.pdf\nSource: Baltimore Dealz — ver
- ify at the bar\; deals change.
+ le Ale)\nDomestic $4.50\nRed Wine $8\nWhite Wine $8\n402 Key Highway\, Inn
+ er Harbor Marina\, Baltimore\, MD 21230\nFederal Hill\nhttps://www.rusty-s
+ cupper.com/wp-content/uploads/RSC-Happy-Hour.pdf\nSource: Baltimore Dealz 
+ — verify at the bar\; deals change.
 LOCATION:402 Key Highway\, Inner Harbor Marina\, Baltimore\, MD 21230
 URL:https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-the-outpost-frimonthutuewed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -312,7 +306,7 @@ URL:https://www.theoutpostbaltimore.com/menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -321,35 +315,26 @@ DESCRIPTION:3pm-6pm\n$3 / 16oz Beer (Coors Light\, Miller Lite\, Guinness B
  londe\, Natty Boh\, Michelob Ultra)\n$6 / 32oz Beer\n$7 Wine (Prosecco\, P
  inot Noir\, Pinot Grigio)\n$8 / 16oz Crushes (orange\, lime\, grapefruit\,
   pineapple\, lemon)\n$14 / 32oz Crushes\n$6 Bombs (Oriole\, Sour\, Raven\,
-  'Shed)\nBuck-a-Shuck Oysters $1 each\nMussels $8\nLoaded Fries $6\nLoaded
-  Fries + Crab $9\nBurger Sliders $3 each\nWatershed Wings $9\nFried Chicke
- n Sliders $3 each\nBeer-Battered Onion Rings $7\nCrispy Fried Blue Crab Wo
- ntons $10\nDrunken Sailor Noodles $10\nSteamed Peel & Eat Shrimp $10\n1065
-  S Charles St\, Baltimore\, MD 21230\nFederal Hill\nhttps://watershedbalti
- more.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf\nSource: Balti
- more Dealz — verify at the bar\; deals change.
+  Shed)\n1065 S Charles St\, Baltimore\, MD 21230\nFederal Hill\nhttps://wa
+ tershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf\nS
+ ource: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1065 S Charles St\, Baltimore\, MD 21230
 URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
  031825.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-watershed-frisat-s1320@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;VALUE=DATE:20260807
 DTEND;VALUE=DATE:20260808
 RRULE:FREQ=WEEKLY;BYDAY=FR,SA
-SUMMARY:Watershed — Happy Hour (10pm-1am (food until midnight))
-DESCRIPTION:10pm-1am (food until midnight)\n$3 / 16oz Beer (Coors Light\, M
- iller Lite\, Guinness Blonde\, Natty Boh\, Michelob Ultra)\n$6 / 32oz Beer
- \n$7 Wine (Prosecco\, Pinot Noir\, Pinot Grigio)\n$8 / 16oz Crushes (orang
- e\, lime\, grapefruit\, pineapple\, lemon)\n$14 / 32oz Crushes\n$6 Bombs (
- Oriole\, Sour\, Raven\, 'Shed)\nBuck-a-Shuck Oysters $1 each\nMussels $8\n
- Loaded Fries $6\nLoaded Fries + Crab $9\nBurger Sliders $3 each\nWatershed
-  Wings $9\nFried Chicken Sliders $3 each\nBeer-Battered Onion Rings $7\nCr
- ispy Fried Blue Crab Wontons $10\nDrunken Sailor Noodles $10\nSteamed Peel
-  & Eat Shrimp $10\n1065 S Charles St\, Baltimore\, MD 21230\nFederal Hill\
- nhttps://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_03
- 1825.pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+SUMMARY:Watershed — Happy Hour (10pm-12am)
+DESCRIPTION:10pm-12am\n$3 / 16oz Beer (Coors Light\, Miller Lite\, Guinness
+  Blonde\, Natty Boh\, Michelob Ultra)\n$6 / 32oz Beer\n$7 Wine (Prosecco\,
+  Pinot Noir\, Pinot Grigio)\n$8 / 16oz Crushes\n$14 / 32oz Crushes\n$6 Bom
+ bs\n1065 S Charles St\, Baltimore\, MD 21230\nFederal Hill\nhttps://waters
+ hedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf\nSourc
+ e: Baltimore Dealz — verify at the bar\; deals change.
 LOCATION:1065 S Charles St\, Baltimore\, MD 21230
 URL:https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_
  031825.pdf

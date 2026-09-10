@@ -24,7 +24,7 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:bd-hh-barracudas-locust-point-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T190000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -40,41 +40,35 @@ URL:https://www.instagram.com/p/DcwDR7nlJIr/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-copper-shark-mon-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T220000
 RRULE:FREQ=WEEKLY;BYDAY=MO
 SUMMARY:Copper Shark — Happy Hour (3pm-10pm)
-DESCRIPTION:3pm-10pm\nCocktails $8 (Gold Rush\, Rum Punch\, G&T\, Paloma\, 
- Spiced Pear Mule)\nWine $7 (Red/White/Rosé)\nDraft Beer $6\nWhite Bean Hu
- mmus $10\nTruffled Parmesan Fries $8\nBuffalo Mac n' Cheese Bites $10\nWhi
- pped House-made Ricotta $12\nCrab Rangoon Croquettes $12\nJerk Shrimp Ques
- adilla $19\nThe CS Burger $20\n921 E Fort Ave\, Baltimore\, MD 21230\nRive
- rside\nhttps://www.thecoppershark.com/happy-hour-1\nSource: Baltimore Deal
- z — verify at the bar\; deals change.
+DESCRIPTION:3pm-10pm\nCocktails $8\nWine $7 (Red/White/Rosé)\nDraft Beer $
+ 6\n921 E Fort Ave\, Baltimore\, MD 21230\nRiverside\nhttps://www.thecopper
+ shark.com/happy-hour-1\nSource: Baltimore Dealz — verify at the bar\; de
+ als change.
 LOCATION:921 E Fort Ave\, Baltimore\, MD 21230
 URL:https://www.thecoppershark.com/happy-hour-1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-copper-shark-frithutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
 SUMMARY:Copper Shark — Happy Hour (3pm-7pm)
-DESCRIPTION:3pm-7pm\nCocktails $8 (Gold Rush\, Rum Punch\, G&T\, Paloma\, S
- piced Pear Mule)\nWine $7 (Red/White/Rosé)\nDraft Beer $6\nWhite Bean Hum
- mus $10\nTruffled Parmesan Fries $8\nBuffalo Mac n' Cheese Bites $10\nWhip
- ped House-made Ricotta $12\nCrab Rangoon Croquettes $12\nJerk Shrimp Quesa
- dilla $19\nThe CS Burger $20\n921 E Fort Ave\, Baltimore\, MD 21230\nRiver
- side\nhttps://www.thecoppershark.com/happy-hour-1\nSource: Baltimore Dealz
-  — verify at the bar\; deals change.
+DESCRIPTION:3pm-7pm\nCocktails $8\nWine $7 (Red/White/Rosé)\nDraft Beer $6
+ \n921 E Fort Ave\, Baltimore\, MD 21230\nRiverside\nhttps://www.thecoppers
+ hark.com/happy-hour-1\nSource: Baltimore Dealz — verify at the bar\; dea
+ ls change.
 LOCATION:921 E Fort Ave\, Baltimore\, MD 21230
 URL:https://www.thecoppershark.com/happy-hour-1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-decatur-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -91,7 +85,7 @@ URL:https://decaturtavern.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hershs-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -104,100 +98,38 @@ URL:https://hershs.com/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-nicks-fish-house-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-SUMMARY:Nick's Fish House — Happy Hour (3pm-6pm)
-DESCRIPTION:3pm-6pm\nCrushes $9 (Orange\, Grapefruit\, Lemon)\nWine $7\nDra
- ft Beer $5\nBottles and Cans $1 Off\nWings $10 (Buffalo\, Old Bay\, BBQ)\n
- Chili Lime Mussels $10\nFire Cracker Shrimp $10\nSliders $10\nDeck Fries B
- asket $5\n1/2lb Steamed Shrimp $13\nRaw Oysters $1.50\n2600 Insulator Driv
- e\, Baltimore\, MD 21230\nPort Covington\nhttps://nicks2.wpenginepowered.c
- om/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf\nSource: Baltimore De
- alz — verify at the bar\; deals change.
+SUMMARY:Nick's Fish House — Happy Hour (3pm-6pm (bar area only))
+DESCRIPTION:3pm-6pm (bar area only)\nCrushes $9 (Orange\, Grapefruit\, Lemo
+ n)\nWine $7\nDraft Beer $5\n2600 Insulator Drive\, Baltimore\, MD 21230\nP
+ ort Covington\nhttps://nicks2.wpenginepowered.com/wp-content/uploads/2026/
+ 04/Nicks-Happy-Hour-8.pdf\nSource: Baltimore Dealz — verify at the bar\;
+  deals change.
 LOCATION:2600 Insulator Drive\, Baltimore\, MD 21230
 URL:https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Hap
  py-Hour-8.pdf
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
 SUMMARY:Rye Street Tavern — Happy Hour (3pm-6pm)
-DESCRIPTION:3pm-6pm\n$2 off draught beer\nNatty Boh $3\nWhite & red wine $8
- \nDaiquiri and rye mules $8\nOld fashioned $10\nOyster shooter $8\n225 E C
- romwell Street\, Baltimore\, MD 21230\nBaltimore Peninsula\nhttps://www.ry
- estreettavern.com/menu/happy-hour/\nSource: Baltimore Dealz — verify at 
- the bar\; deals change.
-LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
-URL:https://www.ryestreettavern.com/menu/happy-hour/
-END:VEVENT
-BEGIN:VEVENT
-UID:bd-hh-rye-street-tavern-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260803T150000
-DTEND;TZID=America/New_York:20260803T180000
-RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-SUMMARY:Rye Street Tavern — Half off all oysters on the half shell (3pm-6
- pm)
-DESCRIPTION:3pm-6pm\nHalf off all oysters on the half shell\n225 E Cromwell
-  Street\, Baltimore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestreet
- tavern.com/menu/happy-hour/\nSource: Baltimore Dealz — verify at the bar
- \; deals change.
-LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
-URL:https://www.ryestreettavern.com/menu/happy-hour/
-END:VEVENT
-BEGIN:VEVENT
-UID:bd-hh-rye-street-tavern-monthutuewed-s1260@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;VALUE=DATE:20260803
-DTEND;VALUE=DATE:20260804
-RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
-SUMMARY:Rye Street Tavern — Half off all oysters on the half shell (9pm-c
- lose)
-DESCRIPTION:9pm-close\nHalf off all oysters on the half shell\n225 E Cromwe
- ll Street\, Baltimore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestre
- ettavern.com/menu/happy-hour/\nSource: Baltimore Dealz — verify at the b
- ar\; deals change.
-LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
-URL:https://www.ryestreettavern.com/menu/happy-hour/
-END:VEVENT
-BEGIN:VEVENT
-UID:bd-hh-rye-street-tavern-fri-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;TZID=America/New_York:20260807T150000
-DTEND;TZID=America/New_York:20260807T180000
-RRULE:FREQ=WEEKLY;BYDAY=FR
-SUMMARY:Rye Street Tavern — Half off all oysters on the half shell (3pm-6
- pm)
-DESCRIPTION:3pm-6pm\nHalf off all oysters on the half shell\n225 E Cromwell
-  Street\, Baltimore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestreet
- tavern.com/menu/happy-hour/\nSource: Baltimore Dealz — verify at the bar
- \; deals change.
-LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
-URL:https://www.ryestreettavern.com/menu/happy-hour/
-END:VEVENT
-BEGIN:VEVENT
-UID:bd-hh-rye-street-tavern-fri-s1320@baltimore-dealz
-DTSTAMP:20260910T012230Z
-DTSTART;VALUE=DATE:20260807
-DTEND;VALUE=DATE:20260808
-RRULE:FREQ=WEEKLY;BYDAY=FR
-SUMMARY:Rye Street Tavern — Half off all oysters on the half shell (10pm-
- close)
-DESCRIPTION:10pm-close\nHalf off all oysters on the half shell\n225 E Cromw
- ell Street\, Baltimore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestr
- eettavern.com/menu/happy-hour/\nSource: Baltimore Dealz — verify at the 
- bar\; deals change.
+DESCRIPTION:3pm-6pm\nNatty Boh $3\nWhite & red wine $8\nDaiquiri and rye mu
+ les $8\nOld fashioned $10\nOyster shooter $8\n225 E Cromwell Street\, Balt
+ imore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestreettavern.com/men
+ u/happy-hour/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
 LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
 URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-taco-love-grill-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -211,49 +143,46 @@ URL:https://www.tacolovegrill.com/taco-love-grill/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-monwed-s960@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,WE
 SUMMARY:Wiley Gunter's — Happy Hour (4pm-6pm)
-DESCRIPTION:4pm-6pm\nQuesadillas\nQueso & Chips\nBuffalo Chicken Dip\nPretz
- el Sticks\nJumbo Wings (7)\nDeep Eddy Drinks\nFresh Squeezed Crushes\nHous
- e Margaritas spicy or original\nMaine Lunch IPA Drafts\nNatty Light Cans\n
- N/A Beers\nAll Cans\n823 East Fort Avenue\, Baltimore\, MD 21230\nRiversid
- e\nhttps://www.wileygunters.com/food-menu\nSource: Baltimore Dealz — ver
- ify at the bar\; deals change.
+DESCRIPTION:4pm-6pm\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\nHouse 
+ Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Light Ca
+ ns $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimore\, MD
+  21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
 LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
 URL:https://www.wileygunters.com/food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-tue-wopentoclose@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
 RRULE:FREQ=WEEKLY;BYDAY=TU
 SUMMARY:Wiley Gunter's — Happy Hour (open to close)
-DESCRIPTION:open to close\nQuesadillas\nQueso & Chips\nBuffalo Chicken Dip\
- nPretzel Sticks\nJumbo Wings (7)\nDeep Eddy Drinks\nFresh Squeezed Crushes
- \nHouse Margaritas spicy or original\nMaine Lunch IPA Drafts\nNatty Light 
- Cans\nN/A Beers\nAll Cans\n823 East Fort Avenue\, Baltimore\, MD 21230\nRi
- verside\nhttps://www.wileygunters.com/food-menu\nSource: Baltimore Dealz 
- — verify at the bar\; deals change.
+DESCRIPTION:open to close\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\n
+ House Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Li
+ ght Cans $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimor
+ e\, MD 21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: B
+ altimore Dealz — verify at the bar\; deals change.
 LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
 URL:https://www.wileygunters.com/food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-thu-s840@baltimore-dealz
-DTSTAMP:20260910T012230Z
+DTSTAMP:20260910T020325Z
 DTSTART;TZID=America/New_York:20260806T140000
 DTEND;TZID=America/New_York:20260806T180000
 RRULE:FREQ=WEEKLY;BYDAY=TH
 SUMMARY:Wiley Gunter's — Happy Hour (2pm-6pm)
-DESCRIPTION:2pm-6pm\nQuesadillas\nQueso & Chips\nBuffalo Chicken Dip\nPretz
- el Sticks\nJumbo Wings (7)\nDeep Eddy Drinks\nFresh Squeezed Crushes\nHous
- e Margaritas spicy or original\nMaine Lunch IPA Drafts\nNatty Light Cans\n
- N/A Beers\nAll Cans\n823 East Fort Avenue\, Baltimore\, MD 21230\nRiversid
- e\nhttps://www.wileygunters.com/food-menu\nSource: Baltimore Dealz — ver
- ify at the bar\; deals change.
+DESCRIPTION:2pm-6pm\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\nHouse 
+ Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Light Ca
+ ns $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimore\, MD
+  21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
 LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
 URL:https://www.wileygunters.com/food-menu
 END:VEVENT

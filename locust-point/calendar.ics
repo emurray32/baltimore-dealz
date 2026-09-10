@@ -23,8 +23,24 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
+UID:bd-hh-barracudas-locust-point-monthutuewed-s900@baltimore-dealz
+DTSTAMP:20260910T001124Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Barracudas Locust Point — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\nNatty Light & Natty Boh $3\nBudweiser\, Bud Light & Mi
+ chelob Ultra $4\nSangria\, Kona Big Wave & Welcome to the Neighborhood Sho
+ t $5\nSurfside & Pinot Grigio $6\nCrushes (Coastal\, Orange\, Lemon\, Grap
+ efruit\, Lemon Lime\, Lime) $7\nTito's Crush $9\n1230 E Fort Ave\, Baltimo
+ re\, MD 21230\nLocust Point\nhttps://www.instagram.com/p/DcwDR7nlJIr/\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1230 E Fort Ave\, Baltimore\, MD 21230
+URL:https://www.instagram.com/p/DcwDR7nlJIr/
+END:VEVENT
+BEGIN:VEVENT
 UID:bd-hh-copper-shark-mon-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T220000
 RRULE:FREQ=WEEKLY;BYDAY=MO
@@ -41,7 +57,7 @@ URL:https://www.thecoppershark.com/happy-hour-1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-copper-shark-frithutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260804T150000
 DTEND;TZID=America/New_York:20260804T190000
 RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
@@ -58,7 +74,7 @@ URL:https://www.thecoppershark.com/happy-hour-1
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-decatur-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -75,7 +91,7 @@ URL:https://decaturtavern.com/happy-hour
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-hershs-frithuwed-s1020@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260805T170000
 DTEND;TZID=America/New_York:20260805T190000
 RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
@@ -88,7 +104,7 @@ URL:https://hershs.com/events/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-nicks-fish-house-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -106,7 +122,7 @@ URL:https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Hap
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -121,7 +137,7 @@ URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-monthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -136,7 +152,7 @@ URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-monthutuewed-s1260@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;VALUE=DATE:20260803
 DTEND;VALUE=DATE:20260804
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
@@ -151,7 +167,7 @@ URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-fri-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260807T150000
 DTEND;TZID=America/New_York:20260807T180000
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -166,7 +182,7 @@ URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-rye-street-tavern-fri-s1320@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;VALUE=DATE:20260807
 DTEND;VALUE=DATE:20260808
 RRULE:FREQ=WEEKLY;BYDAY=FR
@@ -181,7 +197,7 @@ URL:https://www.ryestreettavern.com/menu/happy-hour/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-taco-love-grill-frimonthutuewed-s900@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T150000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
@@ -195,7 +211,7 @@ URL:https://www.tacolovegrill.com/taco-love-grill/
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-monwed-s960@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260803T160000
 DTEND;TZID=America/New_York:20260803T180000
 RRULE:FREQ=WEEKLY;BYDAY=MO,WE
@@ -211,7 +227,7 @@ URL:https://www.wileygunters.com/food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-tue-wopentoclose@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;VALUE=DATE:20260804
 DTEND;VALUE=DATE:20260805
 RRULE:FREQ=WEEKLY;BYDAY=TU
@@ -227,7 +243,7 @@ URL:https://www.wileygunters.com/food-menu
 END:VEVENT
 BEGIN:VEVENT
 UID:bd-hh-wiley-gunters-thu-s840@baltimore-dealz
-DTSTAMP:20260909T235415Z
+DTSTAMP:20260910T001124Z
 DTSTART;TZID=America/New_York:20260806T140000
 DTEND;TZID=America/New_York:20260806T180000
 RRULE:FREQ=WEEKLY;BYDAY=TH

@@ -2231,8 +2231,8 @@
       "phone": "(410) 727-1355",
       "source_url": "https://noblesbarandgrill.com/specials/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: noblesbarandgrill.com/specials Tue-Fri HH + weekly drink specials confirmed.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official /specials/ — same abs $+Tue–Fri HH and everyday Boh/craft cans.",
       "lat": 39.277278,
       "lon": -76.614681,
       "deals": [
@@ -2269,41 +2269,43 @@
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://noblesbarandgrill.com/specials/",
-          "proof_quote": "Happy Hour Specials Tuesday through Friday 4pm to 7pm $3 Domestics $4 Seltzers $5 Green Tea Shots $5 Rail Drinks & Craft Cans $6 Crushes & 32oz Domestic Drafts",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "Happy Hour Specials Tuesday through Friday 4pm to 7pm $3 Domestics $4 Seltzers $5 Green Tea Shots $5 Rail Drinks & Craft Cans $6 Crushes & 32oz Domestic Drafts"
         },
         {
           "days": [
+            "sun",
+            "mon",
             "tue",
             "wed",
             "thu",
             "fri",
-            "sat",
-            "sun"
+            "sat"
           ],
           "items": [
             {
-              "text": "$3 Natty Boh 16oz Cans",
-              "price": "$3"
-            },
-            {
               "text": "$5 Craft Beer Cans",
               "price": "$5"
+            },
+            {
+              "text": "$3 Natty Boh 16oz Cans",
+              "price": "$3"
             }
           ],
-          "start": null,
-          "end": null,
           "time_window": "all day",
-          "verified_date": "2026-09-07",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
           "source_url": "https://noblesbarandgrill.com/specials/",
-          "proof_quote": "All Day, Everyday $5 Craft Beer Cans, $3 Natty Boh 16oz Cans",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "All Day, Everyday $5 Craft Beer Cans, $3 Natty Boh 16oz Cans",
+          "start": null,
+          "end": null
         },
         {
           "days": [
@@ -2312,46 +2314,25 @@
           ],
           "items": [
             {
-              "text": "2 for 1 Green Tea Shots",
-              "price": "2 for 1"
-            },
-            {
               "text": "$10 VOLO Pitchers",
               "price": "$10"
             }
           ],
           "start": 1140,
-          "end": null,
-          "time_window": "7pm-close",
-          "verified_date": "2026-09-07",
+          "end": 1440,
+          "time_window": "after HH / evening",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
           "source_url": "https://noblesbarandgrill.com/specials/",
-          "proof_quote": "Wednesdays & Thursdays 2 for 1 Green Tea Shots from 7pm to Close $10 VOLO Pitchers",
           "food_categories": [
             "drink"
-          ]
-        },
-        {
-          "days": [
-            "sun"
           ],
-          "items": [
-            {
-              "text": "2 for 1 Crushes",
-              "price": "2 for 1"
-            }
-          ],
-          "start": 900,
-          "end": 1140,
-          "time_window": "3pm-7pm",
-          "verified_date": "2026-09-07",
-          "source_url": "https://noblesbarandgrill.com/specials/",
-          "proof_quote": "Sundays Sunday Funday Specials 2 for 1 Crushes from 3pm to 7pm",
-          "food_categories": [
-            "drink"
-          ]
+          "proof_quote": "Wednesdays & Thursdays … $10 VOLO Pitchers"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "notes_public": "Happy hour Tue–Fri 4–7pm: $3 domestics, $4 seltzers, $5 green tea/rails/craft cans, $6 crushes/32oz domestic drafts; everyday $3 Natty Boh 16oz / $5 craft cans (official specials).",
+      "coords_source": "Retained live lat/lon for 1024 South Charles Street, Baltimore, MD 21230"
     },
     {
       "id": "livs-tavern",
@@ -3295,8 +3276,8 @@
       "phone": "(443) 961-8949",
       "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: LochBar_HH_8.30.25.pdf pdftotext — Mon–Fri 3–6pm main bar + indoor high tops.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official LochBar HH PDF — same abs $+Mon–Fri 3–6.",
       "lat": 39.282325,
       "lon": -76.602299,
       "deals": [
@@ -3310,93 +3291,41 @@
           ],
           "items": [
             {
-              "text": "Local Oysters - Loch Bar Salts $2.50 each",
-              "price": "$2.50"
-            },
-            {
-              "text": "Buttermilk Hushpuppies $5",
-              "price": "$5"
-            },
-            {
-              "text": "Old Bay French Fries $5",
-              "price": "$5"
-            },
-            {
-              "text": "Maryland Crab Soup $6",
-              "price": "$6"
-            },
-            {
-              "text": "Cream of Crab Soup $6",
-              "price": "$6"
-            },
-            {
-              "text": "Fried Oysters (2) $6",
-              "price": "$6"
-            },
-            {
-              "text": "Caesar Salad $7",
+              "text": "Wine $7 (House Sparkling / White / Red)",
               "price": "$7"
             },
             {
-              "text": "Shells N' Cheese $8",
+              "text": "Cocktails $8 (House Old Fashioned, House Margarita, All House Spirits limit 1 mixer)",
               "price": "$8"
             },
             {
-              "text": "Maitre'd Mussels $11",
-              "price": "$11"
-            },
-            {
-              "text": "Roasted Chicken Club $12",
-              "price": "$12"
-            },
-            {
-              "text": "Petit Charcuterie Board $12",
-              "price": "$12"
-            },
-            {
-              "text": "U-12 Shrimp Cocktail (3) $14",
-              "price": "$14"
-            },
-            {
-              "text": "1/2 Lb. Peel & Eat Shrimp $16",
-              "price": "$16"
-            },
-            {
-              "text": "Wine $7 (House Sparkling, White, Red)",
-              "price": "$7"
-            },
-            {
-              "text": "Cocktails $8 (House Old Fashioned, House Margarita, house spirits + one mixer)",
-              "price": "$8"
-            },
-            {
-              "text": "Crushes $8 (Orange Crush, Grapefruit Crush)",
-              "price": "$8"
-            },
-            {
-              "text": "Slushies $10 (Frosé, I Knew You Were Trouble)",
+              "text": "Slushies $10",
               "price": "$10"
             },
             {
-              "text": "Draft Beer $6",
+              "text": "Crushes $8",
+              "price": "$8"
+            },
+            {
+              "text": "Draft beer $6",
               "price": "$6"
             }
           ],
           "start": 900,
           "end": 1080,
-          "time_window": "3pm-6pm (main bar + indoor high tops only)",
+          "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf",
-          "proof_quote": "happy hour AVAILABLE AT THE MAIN BAR AND INDOOR HIGH TOPS / Monday–Friday 3 pm–6 pm / Local Oysters each 2.5 / wine | $7 / cocktails | $8 / crushes | $8 / draft beer | $6",
           "food_categories": [
-            "seafood/crab",
-            "small-plate/apps",
             "drink"
-          ]
+          ],
+          "proof_quote": "happy hour … wine | $7 … cocktails | $8 … slushies | $10 … crushes | $8 … draft beer | $6 … Monday–Friday 3 pm–6 pm"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "notes_public": "Happy hour Mon–Fri 3–6pm: $7 wine, $8 cocktails, $10 slushies, $8 crushes, $6 draft beer (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 240 International Drive, Baltimore, MD 21202"
     },
     {
       "id": "copper-shark",
@@ -3407,8 +3336,8 @@
       "phone": "(410) 202-2268",
       "source_url": "https://www.thecoppershark.com/happy-hour-1",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: thecoppershark.com/happy-hour-1 drinks + two-tier food HH prices confirmed.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official HH page — same abs $+Mon 3–10 / Tue–Fri 3–7.",
       "lat": 39.271207,
       "lon": -76.600684,
       "deals": [
@@ -3418,7 +3347,7 @@
           ],
           "items": [
             {
-              "text": "Cocktails $8 (Gold Rush, Rum Punch, G&T, Paloma, Spiced Pear Mule)",
+              "text": "Cocktails $8",
               "price": "$8"
             },
             {
@@ -3428,49 +3357,18 @@
             {
               "text": "Draft Beer $6",
               "price": "$6"
-            },
-            {
-              "text": "White Bean Hummus $10",
-              "price": "$10"
-            },
-            {
-              "text": "Truffled Parmesan Fries $8",
-              "price": "$8"
-            },
-            {
-              "text": "Buffalo Mac n' Cheese Bites $10",
-              "price": "$10"
-            },
-            {
-              "text": "Whipped House-made Ricotta $12",
-              "price": "$12"
-            },
-            {
-              "text": "Crab Rangoon Croquettes $12",
-              "price": "$12"
-            },
-            {
-              "text": "Jerk Shrimp Quesadilla $19",
-              "price": "$19"
-            },
-            {
-              "text": "The CS Burger $20",
-              "price": "$20"
             }
           ],
           "start": 900,
           "end": 1320,
           "time_window": "3pm-10pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thecoppershark.com/happy-hour-1",
-          "proof_quote": "Mondays 3pm-10pm and Tuesday-Friday 3pm-7pm $8 Cocktails $7 Wine $6 Draft Beer crostini 10/12 fries 8/10",
           "food_categories": [
-            "drink",
-            "small-plate/apps",
-            "burger",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "Mondays 3pm-10pm … $8 Cocktails … Wine $7 Red/White/Rose … Draft Beer $6"
         },
         {
           "days": [
@@ -3481,7 +3379,7 @@
           ],
           "items": [
             {
-              "text": "Cocktails $8 (Gold Rush, Rum Punch, G&T, Paloma, Spiced Pear Mule)",
+              "text": "Cocktails $8",
               "price": "$8"
             },
             {
@@ -3491,52 +3389,23 @@
             {
               "text": "Draft Beer $6",
               "price": "$6"
-            },
-            {
-              "text": "White Bean Hummus $10",
-              "price": "$10"
-            },
-            {
-              "text": "Truffled Parmesan Fries $8",
-              "price": "$8"
-            },
-            {
-              "text": "Buffalo Mac n' Cheese Bites $10",
-              "price": "$10"
-            },
-            {
-              "text": "Whipped House-made Ricotta $12",
-              "price": "$12"
-            },
-            {
-              "text": "Crab Rangoon Croquettes $12",
-              "price": "$12"
-            },
-            {
-              "text": "Jerk Shrimp Quesadilla $19",
-              "price": "$19"
-            },
-            {
-              "text": "The CS Burger $20",
-              "price": "$20"
             }
           ],
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thecoppershark.com/happy-hour-1",
-          "proof_quote": "Mondays 3pm-10pm and Tuesday-Friday 3pm-7pm $8 Cocktails $7 Wine $6 Draft Beer crostini 10/12 fries 8/10",
           "food_categories": [
-            "drink",
-            "small-plate/apps",
-            "burger",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "Tuesday-Friday 3pm-7pm … $8 Cocktails … Wine $7 … Draft Beer $6"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "notes_public": "Happy hour Mon 3–10pm & Tue–Fri 3–7pm: $8 cocktails, $7 wine, $6 draft beer (official HH page).",
+      "coords_source": "Retained live lat/lon for 921 E Fort Ave, Baltimore, MD 21230"
     },
     {
       "id": "tagliata",
@@ -3547,8 +3416,8 @@
       "phone": "(410) 244-5830",
       "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Tagliata_HappyHour_2.19.26-WEB.pdf pdftotext — Sun–Fri 4–6 bar-only confirmed.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official Tagliata HH PDF dated 2.19.26 — same abs $+Sun–Fri 4–6 bar-only.",
       "lat": 39.284349,
       "lon": -76.600124,
       "deals": [
@@ -3567,66 +3436,29 @@
               "price": "$6"
             },
             {
-              "text": "Beer $5",
+              "text": "Beer $5 (Blue Moon, Michelob Ultra)",
               "price": "$5"
             },
             {
               "text": "Spirits $8 (+$3 mixer upcharge in cocktails)",
               "price": "$8"
-            },
-            {
-              "text": "Oysters (3/order) $8",
-              "price": "$8"
-            },
-            {
-              "text": "Tuscan Fried Chicken $8",
-              "price": "$8"
-            },
-            {
-              "text": "Caesar $8",
-              "price": "$8"
-            },
-            {
-              "text": "Spaghetti $8",
-              "price": "$8"
-            },
-            {
-              "text": "Polpette $10",
-              "price": "$10"
-            },
-            {
-              "text": "Veal Bolognese $10",
-              "price": "$10"
-            },
-            {
-              "text": "Rigatoni Vodka $10",
-              "price": "$10"
-            },
-            {
-              "text": "Smoked Salmon Bruschetta $10",
-              "price": "$10"
-            },
-            {
-              "text": "Charcuterie $10",
-              "price": "$10"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf",
-          "proof_quote": "HAPPY HOUR Sunday through Friday 4:00pm –6:00pm *At the bar only* WINE $6 BEER $5 SPIRITS $8 Oysters $8 ... Charcuterie & Cheese $10",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "pasta/comfort",
-            "small-plate/apps"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Sunday through Friday 4:00pm –6:00pm *At the bar only* … WINE $6 … BEER $5 … SPIRITS $8"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-06",
+      "notes_public": "Happy hour Sun–Fri 4–6pm (bar only): $6 wine, $5 beer, $8 spirits (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 1012 Fleet Street, Baltimore, MD 21202"
     },
     {
       "id": "homeslyce-canton",
@@ -4276,8 +4108,8 @@
       "phone": "(410) 888-3878",
       "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Watershed_HH PDF.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official HH PDF — same abs $+Mon–Fri 3–6 / Fri–Sat late-night clocks.",
       "lat": 39.276809,
       "lon": -76.61333,
       "deals": [
@@ -4311,68 +4143,20 @@
               "price": "$14"
             },
             {
-              "text": "$6 Bombs (Oriole, Sour, Raven, 'Shed)",
+              "text": "$6 Bombs (Oriole, Sour, Raven, Shed)",
               "price": "$6"
-            },
-            {
-              "text": "Buck-a-Shuck Oysters $1 each",
-              "price": "$1"
-            },
-            {
-              "text": "Mussels $8",
-              "price": "$8"
-            },
-            {
-              "text": "Loaded Fries $6",
-              "price": "$6"
-            },
-            {
-              "text": "Loaded Fries + Crab $9",
-              "price": "$9"
-            },
-            {
-              "text": "Burger Sliders $3 each",
-              "price": "$3"
-            },
-            {
-              "text": "Watershed Wings $9",
-              "price": "$9"
-            },
-            {
-              "text": "Fried Chicken Sliders $3 each",
-              "price": "$3"
-            },
-            {
-              "text": "Beer-Battered Onion Rings $7",
-              "price": "$7"
-            },
-            {
-              "text": "Crispy Fried Blue Crab Wontons $10",
-              "price": "$10"
-            },
-            {
-              "text": "Drunken Sailor Noodles $10",
-              "price": "$10"
-            },
-            {
-              "text": "Steamed Peel & Eat Shrimp $10",
-              "price": "$10"
             }
           ],
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "wings",
-            "sliders",
-            "small-plate/apps",
-            "pasta/comfort"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR MONDAY – FRIDAY // 3:00 PM – 6:00 PM … Beer $3 16oz … $6 32oz … wine $7 … CRUSHES $8 16oz … bombs $6"
         },
         {
           "days": [
@@ -4393,7 +4177,7 @@
               "price": "$7"
             },
             {
-              "text": "$8 / 16oz Crushes (orange, lime, grapefruit, pineapple, lemon)",
+              "text": "$8 / 16oz Crushes",
               "price": "$8"
             },
             {
@@ -4401,71 +4185,25 @@
               "price": "$14"
             },
             {
-              "text": "$6 Bombs (Oriole, Sour, Raven, 'Shed)",
+              "text": "$6 Bombs",
               "price": "$6"
-            },
-            {
-              "text": "Buck-a-Shuck Oysters $1 each",
-              "price": "$1"
-            },
-            {
-              "text": "Mussels $8",
-              "price": "$8"
-            },
-            {
-              "text": "Loaded Fries $6",
-              "price": "$6"
-            },
-            {
-              "text": "Loaded Fries + Crab $9",
-              "price": "$9"
-            },
-            {
-              "text": "Burger Sliders $3 each",
-              "price": "$3"
-            },
-            {
-              "text": "Watershed Wings $9",
-              "price": "$9"
-            },
-            {
-              "text": "Fried Chicken Sliders $3 each",
-              "price": "$3"
-            },
-            {
-              "text": "Beer-Battered Onion Rings $7",
-              "price": "$7"
-            },
-            {
-              "text": "Crispy Fried Blue Crab Wontons $10",
-              "price": "$10"
-            },
-            {
-              "text": "Drunken Sailor Noodles $10",
-              "price": "$10"
-            },
-            {
-              "text": "Steamed Peel & Eat Shrimp $10",
-              "price": "$10"
             }
           ],
           "start": 1320,
-          "end": null,
-          "time_window": "10pm-1am (food until midnight)",
+          "end": 1440,
+          "time_window": "10pm-12am",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://watershedbaltimore.com/wp-content/uploads/2025/03/Watershed_HH_031825.pdf",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "wings",
-            "sliders",
-            "small-plate/apps",
-            "pasta/comfort"
-          ]
+            "drink"
+          ],
+          "proof_quote": "LATE NIGHT FRI – SAT // 10 – 1 AM (FOOD UNTIL MIDNIGHT) … same beer/wine/crush/bomb abs $ — end capped to midnight per schema overnight rule"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Fri 3–6pm and late night Fri–Sat 10pm–1am: $3/16oz & $6/32oz beer, $7 wine, $8/16oz crushes, $6 bombs (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 1065 S Charles St, Baltimore, MD 21230"
     },
     {
       "id": "peters-pour-house",
@@ -4489,70 +4227,33 @@
       "neighborhood": "Brewers Hill",
       "status": "verified",
       "address": "3822 Boston St, Baltimore, MD 21224",
-      "phone": null,
       "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: barksocial.com baltimore-happy-hour.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official Baltimore HH menu — Tue–Fri abs drink $; skipped Mon $2-off-only.",
       "lat": 39.278045,
       "lon": -76.562874,
       "deals": [
-        {
-          "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "$2 off draft beer + cocktails",
-              "price": "$2 off"
-            },
-            {
-              "text": "$6 appetizers",
-              "price": "$6"
-            },
-            {
-              "text": "$10 flatbreads",
-              "price": "$10"
-            }
-          ],
-          "start": 900,
-          "end": 1140,
-          "time_window": "3pm-7pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
-          "proof_quote": "UNLEASHED MONDAYS / 3-7PM EVERY MONDAY / $2 Off Draft Beer + Cocktails $6 Appetizers $10 Flatbreads",
-          "food_categories": [
-            "drink",
-            "small-plate/apps",
-            "pizza"
-          ]
-        },
         {
           "days": [
             "tue"
           ],
           "items": [
             {
-              "text": "2 cocktails for $12",
-              "price": "2 for $12"
-            },
-            {
-              "text": "Any 2 flatbreads for $20",
-              "price": "2 for $20"
+              "text": "2 Cocktails for $12",
+              "price": "$12"
             }
           ],
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
-          "proof_quote": "TWOFER TUESDAYS / 3-7PM EVERY TUESDAY / 2 Cocktails for $12 Any 2 Flatbreads for $20",
           "food_categories": [
-            "drink",
-            "pizza"
-          ]
+            "drink"
+          ],
+          "proof_quote": "TWOFER TUESDAYS 3-7PM EVERY TUESDAY 2 Cocktails for $12"
         },
         {
           "days": [
@@ -4560,11 +4261,11 @@
           ],
           "items": [
             {
-              "text": "$7 frosé",
+              "text": "$7 Frosé",
               "price": "$7"
             },
             {
-              "text": "$7 wine glasses + cans",
+              "text": "$7 Wine Glasses + Cans",
               "price": "$7"
             }
           ],
@@ -4572,12 +4273,12 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
-          "proof_quote": "WINE WEDNESDAYS / 3-7PM EVERY WEDNESDAY / $7 Frosé $7 Wine Glasses + Cans",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "WINE WEDNESDAYS 3-7PM EVERY WEDNESDAY $7 Frosé $7 Wine Glasses + Cans"
         },
         {
           "days": [
@@ -4585,15 +4286,15 @@
           ],
           "items": [
             {
-              "text": "$5 seltzers",
+              "text": "$5 Seltzers",
               "price": "$5"
             },
             {
-              "text": "$6 drafts",
+              "text": "$6 Drafts",
               "price": "$6"
             },
             {
-              "text": "$7 menu cocktails",
+              "text": "$7 Menu Cocktails",
               "price": "$7"
             }
           ],
@@ -4601,12 +4302,12 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
-          "proof_quote": "THIRSTY THURSDAYS / 3-7PM EVERY THURSDAY / $5 Seltzers $6 Drafts $7 Menu Cocktails",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "THIRSTY THURSDAYS 3-7PM EVERY THURSDAY $5 Seltzers $6 Drafts $7 Menu Cocktails"
         },
         {
           "days": [
@@ -4614,7 +4315,7 @@
           ],
           "items": [
             {
-              "text": "$7 all frozen drinks",
+              "text": "$7 All Frozen Drinks",
               "price": "$7"
             }
           ],
@@ -4622,15 +4323,17 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
-          "proof_quote": "FROZEN FRIDAYS / 3-7PM EVERY FRIDAY / $7 All Frozen Drinks",
           "food_categories": [
             "drink"
-          ]
+          ],
+          "proof_quote": "FROZEN FRIDAYS 3-7PM EVERY FRIDAY $7 All Frozen Drinks"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+      "notes_public": "Tue 3–7: 2 cocktails $12; Wed: $7 frosé/wine; Thu: $5 seltzers, $6 drafts, $7 cocktails; Fri: $7 frozen drinks (official Bark Baltimore HH).",
+      "coords_source": "Retained live lat/lon for 3822 Boston St, Baltimore, MD 21224"
     },
     {
       "id": "market-ale-house",
@@ -4657,8 +4360,8 @@
       "phone": "(410) 327-8111",
       "source_url": "https://www.thehorsebaltimore.com/specials",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: thehorsebaltimore.com/specials curl.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official /specials page — same abs $+weekday windows.",
       "lat": 39.281515,
       "lon": -76.594131,
       "deals": [
@@ -4691,12 +4394,12 @@
           "end": 1200,
           "time_window": "4pm-8pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "HAPPY HOUR: MONDAY-THURSDAY $3 … $4 Seltzers $5 Green Tea | Lemon Drops $6 Well Cocktails"
+          "proof_quote": "HAPPY HOUR: MONDAY-THURSDAY 4 PM to 8 PM $3 Domestic Bottles $4 Seltzers $5 Green Tea | Lemon Drops $6 Well Cocktails"
         },
         {
           "days": [
@@ -4717,14 +4420,15 @@
             }
           ],
           "start": 1200,
-          "end": null,
+          "end": 1440,
           "time_window": "8pm-close",
-          "verified_date": "2026-09-07",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "$5 Green Tea Shots $6 Sagamore Rye $7 Vegas Bombs"
+          "proof_quote": "WHISKEY WEDNESDAY 8pm-Close $5 Green Tea Shots $6 Sagamore Rye $7 Vegas Bombs"
         },
         {
           "days": [
@@ -4745,14 +4449,15 @@
             }
           ],
           "start": 1200,
-          "end": null,
+          "end": 1440,
           "time_window": "8pm-close",
-          "verified_date": "2026-09-07",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "$5 Dog $6 Margaritas $7 Mules"
+          "proof_quote": "THIRSTY THURSDAY 8pm-Close $5 Dog Fish Drafts $6 Margaritas $7 Mules"
         },
         {
           "days": [
@@ -4768,15 +4473,18 @@
           "start": 720,
           "end": 1320,
           "time_window": "12pm-10pm",
-          "verified_date": "2026-09-07",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thehorsebaltimore.com/specials",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "$25 Buckets of Domestic Beer | Seltzer"
+          "proof_quote": "Saturday | Sunday 12pm - 10pm $25 Buckets of Domestic Beer | Seltzer"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Thu 4–8pm: $3 domestic bottles, $4 seltzers, $5 green tea/lemon drops, $6 wells; Wed/Thu late specials; Sat–Sun $25 domestic/seltzer buckets (official specials).",
+      "coords_source": "Retained live lat/lon for 1626 Thames Street, Baltimore, MD 21231"
     },
     {
       "id": "the-rockwell-fells",
@@ -5563,8 +5271,8 @@
       "phone": "(443) 707-3364",
       "source_url": "https://thechoptankrestaurant.com/baltimore/wp-content/uploads/sites/3/2025/06/Choptank_HH_040725_01.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Choptank_HH PDF pdftotext.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official Choptank_HH PDF — same abs $+Mon–Fri 4–7 bar-only.",
       "lat": 39.283441,
       "lon": -76.594067,
       "deals": [
@@ -5588,68 +5296,23 @@
             {
               "text": "$8 Crushes (Classic Orange, Grapefruit, Cosmo, Peach Tea, Pineapple, Blueberry Lemonade)",
               "price": "$8"
-            },
-            {
-              "text": "Fried Brussels $8",
-              "price": "$8"
-            },
-            {
-              "text": "Fried Calamari $10",
-              "price": "$10"
-            },
-            {
-              "text": "Fried Catfish Bites $12",
-              "price": "$12"
-            },
-            {
-              "text": "Maryland Crab Dip $10",
-              "price": "$10"
-            },
-            {
-              "text": "Steamed Mussels $10",
-              "price": "$10"
-            },
-            {
-              "text": "Choptank Wings (6pc) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Sliders (3) $12",
-              "price": "$12"
-            },
-            {
-              "text": "8oz Wagyu Meatball $9",
-              "price": "$9"
-            },
-            {
-              "text": "Salt & Vinegar Fries $6",
-              "price": "$6"
-            },
-            {
-              "text": "East Coast Oyster $1.50 each",
-              "price": "$1.50"
-            },
-            {
-              "text": "Steamed Clams $1.50 each (min 6)",
-              "price": "$1.50"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://thechoptankrestaurant.com/baltimore/wp-content/uploads/sites/3/2025/06/Choptank_HH_040725_01.pdf",
           "food_categories": [
-            "drink",
-            "wings",
-            "seafood/crab",
-            "small-plate/apps",
-            "sliders"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR MONDAY – FRIDAY | 4 - 7 PM (Bar Only) … $7 WINE … $5 BEER … $8 CRUSHES"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Fri 4–7pm (bar only): $7 house wine, $5 beer, $8 crushes (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 1641 Aliceanna Street, Baltimore, MD 21231"
     },
     {
       "id": "james-joyce-irish-pub",
@@ -5660,8 +5323,8 @@
       "phone": "(410) 801-6596",
       "source_url": "https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: HH PDF re-read Mon–Fri 4–7 bar only. Beer/wine/spirits/cocktail + pub fare unchanged.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official HH-03.12.26.pdf — same abs $+Mon–Fri 4–7 bar-only.",
       "lat": 39.2839634,
       "lon": -76.6027527,
       "deals": [
@@ -5689,47 +5352,23 @@
             {
               "text": "$8 Irish Orange Crush",
               "price": "$8"
-            },
-            {
-              "text": "Cheese Dip $9",
-              "price": "$9"
-            },
-            {
-              "text": "Fried Cheddar Cheese Curds $7",
-              "price": "$7"
-            },
-            {
-              "text": "Scotch Egg $8",
-              "price": "$8"
-            },
-            {
-              "text": "Potato & Leek Soup $8",
-              "price": "$8"
-            },
-            {
-              "text": "Chicken Pesto Sandwich $12",
-              "price": "$12"
-            },
-            {
-              "text": "Black Angus Burger $11",
-              "price": "$11"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm (bar only)",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.pdf",
           "food_categories": [
-            "drink",
-            "small-plate/apps",
-            "sandwich/cheesesteak",
-            "burger"
-          ]
+            "drink"
+          ],
+          "proof_quote": "happy hour MONDAY–FRIDAY • 4–7 pm bar only … $5 beer … $7 wine … $7 spirits … $8 cocktail Irish Orange Crush"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Fri 4–7pm (bar only): $5 beer, $7 wine, $7 spirits, $8 Irish Orange Crush (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 616 President Street, Baltimore, MD 21202"
     },
     {
       "id": "azumi",
@@ -5740,8 +5379,8 @@
       "phone": "(443) 220-0477",
       "source_url": "https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/05/Azumi_HH_5.5.26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Azumi_HH_5.5.26.pdf pdftotext — Mon–Fri 3–6 inside bar confirmed.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official Azumi HH PDF — same abs $+Mon–Fri 3–6 inside bar.",
       "lat": 39.282876,
       "lon": -76.60286,
       "deals": [
@@ -5763,79 +5402,25 @@
               "price": "$9"
             },
             {
-              "text": "$5 Shochu (Mugi Hoka, Yokaichi Kome, Colorful Ways, Shigemasu Sake-less)",
+              "text": "$5 Shochu",
               "price": "$5"
-            },
-            {
-              "text": "Tofu Miso Soup $4",
-              "price": "$4"
-            },
-            {
-              "text": "Edamame $5",
-              "price": "$5"
-            },
-            {
-              "text": "Spicy Edamame $6",
-              "price": "$6"
-            },
-            {
-              "text": "Crispy Rice Avocado $7",
-              "price": "$7"
-            },
-            {
-              "text": "Crispy Rice Tuna $8",
-              "price": "$8"
-            },
-            {
-              "text": "Chicken Gyoza $8",
-              "price": "$8"
-            },
-            {
-              "text": "Sweet Corn $9",
-              "price": "$9"
-            },
-            {
-              "text": "Crispy Fried Calamari $10",
-              "price": "$10"
-            },
-            {
-              "text": "Seaweed Salad $10",
-              "price": "$10"
-            },
-            {
-              "text": "Robata Chicken Thigh $10",
-              "price": "$10"
-            },
-            {
-              "text": "Salmon Skewer $11",
-              "price": "$11"
-            },
-            {
-              "text": "Vegetable Tempura $11",
-              "price": "$11"
-            },
-            {
-              "text": "$7 Handrolls (Salmon Avocado, Spicy Tuna, Shrimp Tempura, Avocado)",
-              "price": "$7"
             }
           ],
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm (inside bar)",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/05/Azumi_HH_5.5.26.pdf",
-          "proof_quote": "Monday – friday | 3-6 pm at inside bar $10 COCKTAILS $9 WINE & SPIRITS $5 SHOCHU SMALL BITES ... $7 HANDROLLS",
           "food_categories": [
-            "drink",
-            "sushi",
-            "small-plate/apps",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "Monday – friday | 3-6 pm at inside bar … $10 COCKTAILS … $9 WINE & SPIRITS … $5 SHOCHU"
         }
       ],
-      "notes_public": "Happy hour is inside bar only.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "notes_public": "Happy hour Mon–Fri 3–6pm (inside bar): $10 cocktails, $9 wine & spirits, $5 shochu (official HH PDF).",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 725 Aliceanna St, Baltimore, MD 21202"
     },
     {
       "id": "order-of-the-ace",
@@ -5843,11 +5428,10 @@
       "neighborhood": "Harbor East",
       "status": "verified",
       "address": "720 Aliceanna Street, Baltimore, MD 21202",
-      "phone": null,
       "source_url": "https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: OOTA HH PDF weekdays.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official OOTA HH PDF — same abs $+weekdays 5–7.",
       "lat": 39.283446,
       "lon": -76.602183,
       "deals": [
@@ -5871,61 +5455,23 @@
             {
               "text": "$7 Wines (Rosé, Sparkling, White, Red)",
               "price": "$7"
-            },
-            {
-              "text": "Chargrilled Oysters (3) $9",
-              "price": "$9"
-            },
-            {
-              "text": "House-Made Tater Tots $7",
-              "price": "$7"
-            },
-            {
-              "text": "Truffled Waffle Fries $6",
-              "price": "$6"
-            },
-            {
-              "text": "Ruxton Ceviche $11",
-              "price": "$11"
-            },
-            {
-              "text": "Frito Mixto $11",
-              "price": "$11"
-            },
-            {
-              "text": "Potato Gnocchi $12",
-              "price": "$12"
-            },
-            {
-              "text": "Chopped Salad $7",
-              "price": "$7"
-            },
-            {
-              "text": "Caesar Salad $7",
-              "price": "$7"
-            },
-            {
-              "text": "Dry-Aged Steakhouse Burger $10",
-              "price": "$10"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "small-plate/apps",
-            "burger",
-            "pasta/comfort"
+            "drink"
           ],
-          "proof_quote": "HAPPY HOUR WEEKDAYS | 5-7PM"
+          "proof_quote": "HAPPY HOUR WEEKDAYS | 5-7PM … $10 COCKTAILS … $5 BEERS … $7 WINES"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour weekdays 5–7pm: $10 cocktails, $5 beers, $7 wines (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 720 Aliceanna Street, Baltimore, MD 21202"
     },
     {
       "id": "ajs-on-hanover",
@@ -6053,8 +5599,8 @@
       "phone": "(410) 347-4123",
       "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Nick's HH PDF re-read. Core drink HH unchanged.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official Nick's HH PDF — same abs $+Mon–Thu 3–6 bar-only.",
       "lat": 39.2606119,
       "lon": -76.6135738,
       "deals": [
@@ -6077,56 +5623,23 @@
             {
               "text": "Draft Beer $5",
               "price": "$5"
-            },
-            {
-              "text": "Bottles and Cans $1 Off",
-              "price": "$1 Off"
-            },
-            {
-              "text": "Wings $10 (Buffalo, Old Bay, BBQ)",
-              "price": "$10"
-            },
-            {
-              "text": "Chili Lime Mussels $10",
-              "price": "$10"
-            },
-            {
-              "text": "Fire Cracker Shrimp $10",
-              "price": "$10"
-            },
-            {
-              "text": "Sliders $10",
-              "price": "$10"
-            },
-            {
-              "text": "Deck Fries Basket $5",
-              "price": "$5"
-            },
-            {
-              "text": "1/2lb Steamed Shrimp $13",
-              "price": "$13"
-            },
-            {
-              "text": "Raw Oysters $1.50",
-              "price": "$1.50"
             }
           ],
           "start": 900,
           "end": 1080,
-          "time_window": "3pm-6pm",
+          "time_window": "3pm-6pm (bar area only)",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Happy-Hour-8.pdf",
           "food_categories": [
-            "drink",
-            "wings",
-            "seafood/crab",
-            "sliders",
-            "small-plate/apps"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR DRINK SPECIALS CRUSHES $9 … WINE $7 … DRAFT BEER $5 … MONDAY - THURSDAY 3-6 BAR AREA ONLY"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Thu 3–6pm (bar area only): $9 crushes, $7 wine, $5 draft beer (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 2600 Insulator Drive, Baltimore, MD 21230"
     },
     {
       "id": "rusty-scupper",
@@ -6137,8 +5650,8 @@
       "phone": "(410) 727-3678",
       "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: RSC-Happy-Hour.pdf.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official RSC HH PDF — same abs $+Mon–Fri 4–6.",
       "lat": 39.2807081,
       "lon": -76.6081434,
       "deals": [
@@ -6176,71 +5689,33 @@
               "price": "$5"
             },
             {
-              "text": "Domestic $4.50 (Budweiser, Bud Light, Coors Light, Miller Lite, Natty Boh 22 oz, Michelob Ultra)",
+              "text": "Domestic $4.50",
               "price": "$4.50"
             },
             {
-              "text": "Red Wine $8 (Merlot, Cabernet Sauvignon, Pinot Noir — Jacob's Creek house)",
+              "text": "Red Wine $8",
               "price": "$8"
             },
             {
-              "text": "White Wine $8 (Pinot Grigio, Chardonnay, Moscato — Jacob's Creek house)",
+              "text": "White Wine $8",
               "price": "$8"
-            },
-            {
-              "text": "Crab Fried Brussels Sprouts $18",
-              "price": "$18"
-            },
-            {
-              "text": "6 oz. Lobster Tempura $29",
-              "price": "$29"
-            },
-            {
-              "text": "Shrimp Basket $15",
-              "price": "$15"
-            },
-            {
-              "text": "P.E.I. Mussels $13",
-              "price": "$13"
-            },
-            {
-              "text": "Local Oysters $2.50",
-              "price": "$2.50"
-            },
-            {
-              "text": "Crab Cake Sandwich $20",
-              "price": "$20"
-            },
-            {
-              "text": "All American Burger $16",
-              "price": "$16"
-            },
-            {
-              "text": "Crab Hush Puppies (5) $12",
-              "price": "$12"
-            },
-            {
-              "text": "Nashville Hot Wings $13",
-              "price": "$13"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.rusty-scupper.com/wp-content/uploads/RSC-Happy-Hour.pdf",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "small-plate/apps",
-            "burger",
-            "wings",
-            "sandwich/cheesesteak"
-          ]
+            "drink"
+          ],
+          "proof_quote": "Monday - Friday • 4:00 p.m. - 6:00 p.m. … MARTINIS - 8 … 1783 OLD FASHIONED - 9 … DRAFT - 5 … DOMESTIC - 4.5 … RED - 8 WHITE - 8"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Mon–Fri 4–6pm: $8 martinis/Scupper Sunset/Passion Breeze, $9 OF/sangria, $5 draft, $4.50 domestic, $8 house wine (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 402 Key Highway, Inner Harbor Marina, Baltimore, MD 21230"
     },
     {
       "id": "owl-bar",
@@ -6251,8 +5726,8 @@
       "phone": "(410) 347-0888",
       "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: theowlbar.com happy-hour menu curl — prices/times unchanged. Closed Sun–Mon.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official Owl Bar HH menu — same abs $+Tue–Fri 4–7 / Sat 2–6.",
       "lat": 39.3018443,
       "lon": -76.615499,
       "deals": [
@@ -6287,33 +5762,18 @@
             {
               "text": "Owl Lager $5",
               "price": "$5"
-            },
-            {
-              "text": "Sliders $9",
-              "price": "$9"
-            },
-            {
-              "text": "Wings $9",
-              "price": "$9"
-            },
-            {
-              "text": "Vegan Potstickers $9",
-              "price": "$9"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
-          "proof_quote": "Happy Hour Tuesday - Friday | 4:00-7:00 pm WELL SPIRITS $7 MARGARITAS $7 SANGRIA $6.50 STELLA $6 BUD LIGHT $5 OWL LAGER $5 SLIDERS $9 WINGS $9 VEGAN POTSTICKERS $9",
           "food_categories": [
-            "drink",
-            "sliders",
-            "wings",
-            "small-plate/apps"
+            "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Happy Hour Tuesday - Friday | 4:00-7:00 pm … WELL SPIRITS $7 MARGARITAS $7 SANGRIA $6.50 STELLA $6 BUD LIGHT $5 OWL LAGER $5"
         },
         {
           "days": [
@@ -6343,36 +5803,23 @@
             {
               "text": "Owl Lager $5",
               "price": "$5"
-            },
-            {
-              "text": "Sliders $9",
-              "price": "$9"
-            },
-            {
-              "text": "Wings $9",
-              "price": "$9"
-            },
-            {
-              "text": "Vegan Potstickers $9",
-              "price": "$9"
             }
           ],
           "start": 840,
           "end": 1080,
           "time_window": "2pm-6pm",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.theowlbar.com/owl-bar-menus?menu=happy-hour",
-          "proof_quote": "Happy Hour … Saturday | 2:00-6:00 pm WELL SPIRITS $7 … VEGAN POTSTICKERS $9",
           "food_categories": [
-            "drink",
-            "sliders",
-            "wings",
-            "small-plate/apps"
+            "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Saturday | 2:00-6:00 pm … same drink abs $"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Tue–Fri 4–7pm & Sat 2–6pm: $7 well spirits/margs, $6.50 sangria, $6 Stella, $5 Bud Light/Owl Lager (official HH menu).",
+      "coords_source": "Retained live lat/lon for 1017 N. Charles Street, Baltimore, MD 21201"
     },
     {
       "id": "sugarvale",
@@ -6382,11 +5829,11 @@
       "address": "4 W. Madison St., Baltimore, MD 21201",
       "source_url": "http://sugarvalebmore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: sugarvalebmore.com curl — HH + weekly specials unchanged. Phone still not on site.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official site HH copy — $10/$5/$8 at 5–7; Sun all-night HH. Mon closed per hours.",
       "lat": 39.2986734,
       "lon": -76.6160416,
-      "notes_public": "Sunday: happy hour prices all night.",
+      "notes_public": "Happy hour 5–7pm (Tue–Sat): $10 select classic cocktails, $5 select beer, $8 select wine; Sunday HH prices all night (official site).",
       "deals": [
         {
           "days": [
@@ -6394,8 +5841,7 @@
             "wed",
             "thu",
             "fri",
-            "sat",
-            "sun"
+            "sat"
           ],
           "items": [
             {
@@ -6415,57 +5861,45 @@
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "http://sugarvalebmore.com/",
-          "proof_quote": "Happy Hour available from 5-7p select classic cocktails $10 - select beer $5 - select wine $8",
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Happy Hour: 5-7pm … select classic cocktails $10 - select beer $5 - select wine $8"
         },
         {
           "days": [
-            "tue"
+            "sun"
           ],
           "items": [
             {
-              "text": "$3 off SV Burger",
-              "price": "$3 off"
-            }
-          ],
-          "start": null,
-          "end": null,
-          "time_window": "all night",
-          "happy_hour": false,
-          "source_url": "http://sugarvalebmore.com/",
-          "proof_quote": "TUESDAY - BURGER NIGHT $3 off of our SV Burger",
-          "food_categories": [
-            "burger"
-          ],
-          "verified_date": "2026-09-07"
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
+              "text": "Select classic cocktails $10",
+              "price": "$10"
+            },
             {
-              "text": "$3 off wine glasses (happy-hour wine excluded)",
-              "price": "$3 off"
+              "text": "Select beer $5",
+              "price": "$5"
+            },
+            {
+              "text": "Select wine $8",
+              "price": "$8"
             }
           ],
-          "start": null,
-          "end": null,
           "time_window": "all night",
-          "happy_hour": false,
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "http://sugarvalebmore.com/",
-          "proof_quote": "WEDNESDAY - WINE NIGHT $3 off glasses of all wine *Happy Hour wine not included*",
           "food_categories": [
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "SUNDAY - HAPPY HOUR Happy Hour prices ALL NIGHT",
+          "start": null,
+          "end": null
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 4 W. Madison St., Baltimore, MD 21201"
     },
     {
       "id": "unity-bar-restaurant",
@@ -6859,9 +6293,9 @@
       "address": "2 E. Read St., Historic Mount Vernon, Baltimore, MD 21202",
       "source_url": "https://www.thecoralwig.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: thecoralwig.com raw — HH prices/times unchanged. No invent $ for Mon mojitos/margs/mai tais.",
-      "notes_public": "Mondays: industry specials and happy hour prices all night.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official site HH — $10 Painkillers Mon–Fri 5–7. Did not invent from $2-off lines.",
+      "notes_public": "Happy hour Mon–Fri 5–7pm: $10 Painkillers (official site).",
       "lat": 39.299818,
       "lon": -76.6154716,
       "deals": [
@@ -6877,29 +6311,22 @@
             {
               "text": "Painkillers $10",
               "price": "$10"
-            },
-            {
-              "text": "$2 off beer, wine, Estate Martinis",
-              "price": "$2 off"
-            },
-            {
-              "text": "1/2 price bottles of Sparkling wine",
-              "price": "1/2 price"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thecoralwig.com/",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "Happy Hour: Monday - Friday: 5:00 - 7:00 pm $10 Painkillers $2 off beer, wine, Estate Martinis 1/2 price bottles of Sparkling wine"
+          "proof_quote": "Happy Hour: Monday - Friday: 5:00 - 7:00 pm $10 Painkillers"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 2 E. Read St., Historic Mount Vernon, Baltimore, MD 21202"
     },
     {
       "id": "magdalena",
@@ -6910,9 +6337,9 @@
       "phone": "(410) 514-0303",
       "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Magdalena menu raw #happy-hour — prices/times unchanged. Do not pin rotating cocktail name.",
-      "notes_public": "At The Ivy Hotel. Happy hour drinks Tue–Fri 4:30–6:30.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official Magdalena HH menu panel — same abs $+Tue–Fri 4:30–6:30.",
+      "notes_public": "Happy hour Tue–Fri 4:30–6:30pm: $7 wines, $7 cocktails, $5 beers (official Magdalena menu).",
       "lat": 39.3033608,
       "lon": -76.613036,
       "deals": [
@@ -6941,7 +6368,7 @@
               "price": "$7"
             },
             {
-              "text": "Weekly rotating cocktail special $7",
+              "text": "Weekly rotating cocktail / Nelson’s Green Brier Old Fashioned $7",
               "price": "$7"
             },
             {
@@ -6951,25 +6378,22 @@
             {
               "text": "Peabody Heights Astrodon Hazy IPA $5",
               "price": "$5"
-            },
-            {
-              "text": "Good Time Pilsner (non-alcoholic) $5",
-              "price": "$5"
             }
           ],
           "start": 990,
           "end": 1110,
           "time_window": "4:30pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.theivybaltimore.com/dine/magdalena/our-menu#happy-hour",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "Happy Hour drinks available Tuesday - Friday from 4:30pm - 6:30pm … La Fiera … 7 … Barnard Griffin … 7 … Valle Reale … 7 … Vermu Spritz 7 … Weekly Rotating Cocktail Special 7 … Peabody Heights … 5 … Good Time Pilsner … 5"
+          "proof_quote": "Happy Hour drinks available Tuesday - Friday from 4:30pm - 6:30pm … Wines … 7 … Cocktails … 7 … Beers … 5"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 205 E Biddle St, Baltimore, MD 21202"
     },
     {
       "id": "bar-dali",
@@ -6979,9 +6403,9 @@
       "address": "909 N. Charles St., Baltimore, MD 21201",
       "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: happy-hour-june-2026-bar-dali.pdf image (no text layer) — visual confirm prices unchanged. PDF ModDate 2026-07-01.",
-      "notes_public": "Vermouth hour Mon–Thu 4–6.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official June 2026 HH PDF OCR (4pm-6pm confirmed) — Mahou/Boh $5, vermouth $6, Care wine $7, Dawn & Stormy $10 Mon–Thu.",
+      "notes_public": "Mondays–Thursdays vermouth hour: $5 Mahou & Natty Boh drafts (17oz), $6 draft vermouth, $7 Care wines by the glass, $10 Dawn & Stormy (official HH PDF).",
       "lat": 39.3000388,
       "lon": -76.6155273,
       "deals": [
@@ -7006,27 +6430,24 @@
               "price": "$7"
             },
             {
-              "text": "20% off Care Bottles $28",
-              "price": "$28"
-            },
-            {
-              "text": "Dawn & Stormy (Licor 43, ginger beer, lemon) $10",
+              "text": "Dawn & Stormy $10",
               "price": "$10"
             }
           ],
-          "start": 960,
-          "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.bardalibaltimore.com/s/happy-hour-june-2026-bar-dali.pdf",
           "food_categories": [
             "drink"
           ],
-          "proof_quote": "LA HORA DE VERMUT Mondays – Thursdays 4:00 PM – 6:00 PM Mahou & Natty Boh Drafts (17oz) $5 Draft Vermouth $6 Care Wines By The Glass $7 Care Bottles $28 (20% off) Dawn & Stormy $10"
+          "proof_quote": "LA HORA DE VERMUT Mondays - Thursdays 4pm - 6pm … Mahou & Natty Boh Drafts (17oz) $5 … Draft Vermouth $6 … Care Wines By The Glass $7 … Dawn & Stormy $10",
+          "start": 960,
+          "end": 1080
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 909 N. Charles St., Baltimore, MD 21201"
     },
     {
       "id": "monarque",
@@ -7037,8 +6458,8 @@
       "phone": "(443) 384-1480",
       "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: Monarque HH PDF re-read. Martini/spirits/wine/beer pricing unchanged.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official MonQHH PDF — same abs $+Tue–Sat 5–7.",
       "lat": 39.2844291,
       "lon": -76.5996797,
       "deals": [
@@ -7066,60 +6487,23 @@
             {
               "text": "Bottled beer $5",
               "price": "$5"
-            },
-            {
-              "text": "Oysters (3) $6",
-              "price": "$6"
-            },
-            {
-              "text": "Truffle French fries $6",
-              "price": "$6"
-            },
-            {
-              "text": "Salad Lyonnaise $8",
-              "price": "$8"
-            },
-            {
-              "text": "Truffle grilled cheese $8",
-              "price": "$8"
-            },
-            {
-              "text": "Sliders (2) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Black truffle mouillette $10",
-              "price": "$10"
-            },
-            {
-              "text": "Mussels $10",
-              "price": "$10"
-            },
-            {
-              "text": "Oysters Rockefeller (3) $10",
-              "price": "$10"
-            },
-            {
-              "text": "Spinach & Artichoke Dip $10",
-              "price": "$10"
             }
           ],
           "start": 1020,
           "end": 1140,
           "time_window": "5pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-03132026.pdf",
           "food_categories": [
-            "drink",
-            "seafood/crab",
-            "sliders",
-            "small-plate/apps",
-            "sandwich/cheesesteak"
-          ]
+            "drink"
+          ],
+          "proof_quote": "tuesday — saturday| 5:00pm–7:00pm … Monarque Martini $8.00 … Spirits $8.00 … Wine $6.00 … Bottled Beer $5.00"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "notes_public": "Happy hour Tue–Sat 5–7pm: $8 Monarque Martini/spirits, $6 wine, $5 bottled beer (official HH PDF).",
+      "coords_source": "Retained live lat/lon for 1010 Fleet Street, Baltimore, MD 21202"
     },
     {
       "id": "alma-cocina-latina",
@@ -7217,9 +6601,9 @@
       "phone": "(410) 878-0884",
       "source_url": "https://www.wickedsistershampden.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: wickedsistershampden.com raw — HH refresh + added priced DAILY SPECIALS block from same page.",
-      "notes_public": "Happy hour weekdays 3–6 at the bar and on the patio.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official site daily specials + HH drinks panel — same abs $+weekday.",
+      "notes_public": "Weekday happy hour 3–6pm: $3 Zadies, $4 OMG cans, $6 wines, $8 house liquor, $9 spritzes, $10 OF/marg/whiskey sour, $11 martini; plus Mon/Tue/Thu dinner cocktail abs $ (official site).",
       "lat": 39.3350174,
       "lon": -76.6359819,
       "deals": [
@@ -7233,67 +6617,44 @@
           ],
           "items": [
             {
-              "text": "$2 off select drafts",
-              "price": "$2 off"
-            },
-            {
-              "text": "Zadies Lager $3",
+              "text": "$3 Zadies Lager",
               "price": "$3"
             },
             {
-              "text": "OMG 16oz cans $4",
+              "text": "$4 OMG 16oz cans",
               "price": "$4"
             },
             {
-              "text": "Wines $6",
+              "text": "$6 Wines",
               "price": "$6"
             },
             {
-              "text": "House liquor $8",
+              "text": "$8 House Liquor",
               "price": "$8"
             },
             {
-              "text": "Spritzes $9",
+              "text": "$9 Spritzes",
               "price": "$9"
             },
             {
-              "text": "Old Fashioned / Margarita / Whiskey Sour $10",
+              "text": "$10 Old Fashioned / Margarita / Whiskey Sour",
               "price": "$10"
             },
             {
-              "text": "Martini $11",
+              "text": "$11 Martini",
               "price": "$11"
-            },
-            {
-              "text": "Mac n' cheese $10",
-              "price": "$10"
-            },
-            {
-              "text": "Wings $10",
-              "price": "$10"
-            },
-            {
-              "text": "Fried pickles $10",
-              "price": "$10"
-            },
-            {
-              "text": "Brussels sprouts $10",
-              "price": "$10"
             }
           ],
           "start": 900,
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wickedsistershampden.com/",
           "food_categories": [
-            "drink",
-            "wings",
-            "pasta/comfort",
-            "small-plate/apps"
+            "drink"
           ],
-          "proof_quote": "HAPPY HOUR WEEKDAYS 3-6PM At THE BAR AND ON THE PATIO $2 off SELECT drafts $3 Zadies LAGER $4 OMG 16 oz. CANS $6 Wines $8 House Liquor $9 SpritzES $10 Old Fashioned $10 Margarita $10 Whiskey Sour $11 Martini $10 mac n' cheese $10 wings $10 FRIED PICKLES $10 BRUSSELs Sprouts"
+          "proof_quote": "HAPPY HOUR WEEKDAYS 3-6PM … $3 Zadies LAGER $4 OMG 16 oz. CANS $6 Wines $8 House Liquor $9 SpritzES $10 Old Fashioned $10 Margarita $10 Whiskey Sour $11 Martini"
         },
         {
           "days": [
@@ -7301,28 +6662,20 @@
           ],
           "items": [
             {
-              "text": "$10 Baked Meatballs (lunch until 3pm)",
-              "price": "$10"
-            },
-            {
-              "text": "$4 off Mussels and Brussels Appetizers",
-              "price": "$4 off"
-            },
-            {
               "text": "$10 House Manhattans",
               "price": "$10"
             }
           ],
-          "start": null,
-          "end": null,
-          "time_window": "all day (meatballs lunch until 3pm)",
-          "verified_date": "2026-09-07",
+          "time_window": "dinner",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wickedsistershampden.com/",
           "food_categories": [
-            "small-plate/apps",
             "drink"
           ],
-          "proof_quote": "MONDAY LUNch - MEATBALL MONDAY (Until 3PM) $10 Baked Meatballs DINNER … $4 off Mussels and Brussels Appetizers $10 House Manhattans"
+          "proof_quote": "MONDAY … $10 House Manhattans",
+          "start": null,
+          "end": null
         },
         {
           "days": [
@@ -7330,53 +6683,20 @@
           ],
           "items": [
             {
-              "text": "50% off all Appetizers (lunch until 3pm)",
-              "price": "50% off"
-            },
-            {
-              "text": "$10 Martinis (Tito's / Ford's / Cosmo / Espressotini)",
+              "text": "$10 Martinis (Tito’s / Ford’s / Cosmo / Espressotini)",
               "price": "$10"
             }
           ],
-          "start": null,
-          "end": null,
-          "time_window": "all day (apps lunch until 3pm)",
-          "verified_date": "2026-09-07",
+          "time_window": "dinner",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wickedsistershampden.com/",
           "food_categories": [
-            "small-plate/apps",
             "drink"
           ],
-          "proof_quote": "TUESDAY LUNCH - 'TIZER TUESDAY (Until 3PM) 50% off all Appetizers DINNER - 'TINI TUESDAY $10 Martinis"
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "$12 Wraps (lunch until 3pm; changes weekly)",
-              "price": "$12"
-            },
-            {
-              "text": "$14 Double Patty Smash Burgers",
-              "price": "$14"
-            },
-            {
-              "text": "50% Off Wine by the Bottle",
-              "price": "50% off"
-            }
-          ],
+          "proof_quote": "TUESDAY … $10 Martinis (Tito’s Vodka, Ford’s Gin, Cosmopolitan, or Espressotini)",
           "start": null,
-          "end": null,
-          "time_window": "all day (wraps lunch until 3pm)",
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.wickedsistershampden.com/",
-          "food_categories": [
-            "burger",
-            "drink"
-          ],
-          "proof_quote": "WEDNESDAY … $12 Wraps … $14 Double Patty Smash Burgers 50% Off Wine by the Bottle"
+          "end": null
         },
         {
           "days": [
@@ -7384,47 +6704,24 @@
           ],
           "items": [
             {
-              "text": "$12 Paninis (lunch until 3pm; changes weekly)",
-              "price": "$12"
-            },
-            {
               "text": "$12-$14 Classic Cocktails",
               "price": "$12"
             }
           ],
-          "start": null,
-          "end": null,
-          "time_window": "all day (paninis lunch until 3pm)",
-          "verified_date": "2026-09-07",
+          "time_window": "dinner",
+          "happy_hour": false,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wickedsistershampden.com/",
           "food_categories": [
-            "sandwich/cheesesteak",
             "drink"
           ],
-          "proof_quote": "THURSDAY … $12 Paninis … Throwback Entrées (Changes Weekly) $12-$14 Classic Cocktails"
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "$3 off all Flatbreads (lunch until 3pm)",
-              "price": "$3 off"
-            }
-          ],
+          "proof_quote": "THURSDAY … $12-$14 Classic Cocktails",
           "start": null,
-          "end": 900,
-          "time_window": "lunch until 3pm",
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.wickedsistershampden.com/",
-          "food_categories": [
-            "pizza"
-          ],
-          "proof_quote": "FRIDAY LUNCH - FLATBREAD FRIDAY (UNTIL 3PM) $3 off all Flatbreads"
+          "end": null
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 3845 Falls Rd, Baltimore, MD 21211"
     },
     {
       "id": "the-bluebird",
@@ -7434,9 +6731,9 @@
       "address": "3600 Hickory Avenue, Baltimore, MD 21211",
       "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: thebluebirdbaltimore.com/happy-hour raw — prices/times unchanged; classic cocktails listed by name.",
-      "notes_public": "Cocktail Room happy hour Mon–Fri 5:00–6:30.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official /happy-hour — same abs $+Mon–Fri 5–6:30.",
+      "notes_public": "Happy hour Mon–Fri 5–6:30pm: $10 Champagne Cocktail/Lemon Drop/Aviation/house wines; rotating draft $5/$7 (official HH page).",
       "lat": 39.3312305,
       "lon": -76.6339767,
       "deals": [
@@ -7468,35 +6765,22 @@
             {
               "text": "Rotating Draft $5/$7",
               "price": "$5"
-            },
-            {
-              "text": "Birdseed $3",
-              "price": "$3"
-            },
-            {
-              "text": "Frites $9",
-              "price": "$9"
-            },
-            {
-              "text": "Bluebird Cheeseburger $13",
-              "price": "$13"
             }
           ],
           "start": 1020,
           "end": 1110,
           "time_window": "5pm-6:30pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.thebluebirdbaltimore.com/happy-hour",
           "food_categories": [
-            "drink",
-            "burger",
-            "small-plate/apps"
+            "drink"
           ],
-          "proof_quote": "Join us in the Cocktail Room, Monday through Friday from 5:00pm-6:30pm Champagne Cocktail $10 Lemon Drop $10 Aviation $10 House Wines (red or white) $10 Rotating Draft $5/$7 BIRDSEED … $3 FRITES … $9 THE BLUEBIRD CHEESEBURGER … $13"
+          "proof_quote": "Monday through Friday from 5:00pm-6:30pm … Champagne Cocktail $10 Lemon Drop $10 Aviation $10 House Wines $10 Rotating Draft $5/$7"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-07",
+      "coords_source": "Retained live lat/lon for 3600 Hickory Avenue, Baltimore, MD 21211"
     },
     {
       "id": "of-love-and-regret",
@@ -7690,8 +6974,8 @@
       "phone": "(443) 282-3640",
       "source_url": "http://www.rawandrefinedbaltimore.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: rawandrefinedbaltimore.com feed HH post.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official site HH post still live — $5 drafts / $10 crush buckets / $6 seltzers Wed–Fri 3–6.",
       "lat": 39.2774398,
       "lon": -76.5777849,
       "deals": [
@@ -7702,10 +6986,6 @@
             "fri"
           ],
           "items": [
-            {
-              "text": "½ off select appetizers",
-              "price": "1/2 off"
-            },
             {
               "text": "$5 drafts",
               "price": "$5"
@@ -7723,16 +7003,17 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "http://www.rawandrefinedbaltimore.com/",
           "food_categories": [
-            "drink",
-            "small-plate/apps"
+            "drink"
           ],
-          "proof_quote": "Stop in Wednesday through Friday from 3-6pm for half off apps, $5 drafts, $10 crush buckets and $6 seltzers!"
+          "proof_quote": "Wednesday through Friday from 3-6pm for half off apps, $5 drafts, $10 crush buckets and $6 seltzers"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "notes_public": "Happy hour Wed–Fri 3–6pm: $5 drafts, $10 crush buckets, $6 seltzers (official site).",
+      "coords_source": "Retained live lat/lon for 2723 Lighthouse Pt. E, Baltimore, MD 21224"
     },
     {
       "id": "verde",
@@ -7760,48 +7041,11 @@
       "phone": "(443) 835-2843",
       "source_url": "https://www.happyjacktavern.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: happyjacktavern.com/happy-hour.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official HH/daily specials — $5 rails + Mon $8 margs + Thu $8 boh’tails. Did not invent from $1-off lines.",
       "lat": 39.2823496,
       "lon": -76.5763606,
       "deals": [
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "$8 Smash Burger",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Veggie Burger",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Grilled Chicken",
-              "price": "$8"
-            },
-            {
-              "text": "$8 Classic Grilled Cheese",
-              "price": "$8"
-            }
-          ],
-          "start": 960,
-          "end": 1080,
-          "time_window": "4pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "proof_quote": "MON-THURS 4-6PM | DINE-IN ONLY",
-          "food_categories": [
-            "burger",
-            "small-plate/apps"
-          ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
-        },
         {
           "days": [
             "mon",
@@ -7812,10 +7056,6 @@
           ],
           "items": [
             {
-              "text": "$1 off select beer, wine & cocktails marked w/ an *",
-              "price": "$1 off"
-            },
-            {
               "text": "$5 rail liquor drinks",
               "price": "$5"
             }
@@ -7824,22 +7064,18 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "proof_quote": "MON-FRI 4-6PM",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.happyjacktavern.com/happy-hour",
           "food_categories": [
             "drink"
           ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
+          "proof_quote": "HAPPY HOUR DRINKS MON-FRI 4-6PM … plus $5 rail liquor drinks"
         },
         {
           "days": [
             "sun"
           ],
           "items": [
-            {
-              "text": "$1 off select beer, wine & cocktails marked w/ an *",
-              "price": "$1 off"
-            },
             {
               "text": "$5 rail liquor drinks",
               "price": "$5"
@@ -7849,12 +7085,12 @@
           "end": 1380,
           "time_window": "12pm-11pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "proof_quote": "SUN 12PM-11PM",
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.happyjacktavern.com/happy-hour",
           "food_categories": [
             "drink"
           ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
+          "proof_quote": "HAPPY HOUR DRINKS … SUN 12PM-11PM … plus $5 rail liquor drinks"
         },
         {
           "days": [
@@ -7867,52 +7103,15 @@
             }
           ],
           "start": 960,
-          "end": null,
-          "verified_date": "2026-09-07",
-          "proof_quote": "DAILY SPECIALS 4PM-CLOSE",
+          "end": 1440,
+          "time_window": "4pm-close",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.happyjacktavern.com/happy-hour",
           "food_categories": [
             "drink"
           ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
-        },
-        {
-          "days": [
-            "tue"
-          ],
-          "items": [
-            {
-              "text": "$15 one pound of wings w/ choice of natty boh or rail liquor drink",
-              "price": "$15"
-            }
-          ],
-          "start": 960,
-          "end": null,
-          "verified_date": "2026-09-07",
-          "proof_quote": "TUESDAY – DINE-IN ONLY",
-          "food_categories": [
-            "small-plate/apps",
-            "drink"
-          ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
-        },
-        {
-          "days": [
-            "wed"
-          ],
-          "items": [
-            {
-              "text": "$5 single smash burgers or classic grilled cheese",
-              "price": "$5"
-            }
-          ],
-          "start": 960,
-          "end": null,
-          "verified_date": "2026-09-07",
-          "proof_quote": "WEDNESDAY – DINE-IN ONLY",
-          "food_categories": [
-            "burger"
-          ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
+          "proof_quote": "DAILY SPECIALS 4PM-CLOSE MONDAY $8 just another guava mango margs"
         },
         {
           "days": [
@@ -7920,21 +7119,25 @@
           ],
           "items": [
             {
-              "text": "$8 all boh'tails",
+              "text": "$8 all boh’tails",
               "price": "$8"
             }
           ],
           "start": 960,
-          "end": null,
-          "verified_date": "2026-09-07",
-          "proof_quote": "THURDSDAY",
+          "end": 1440,
+          "time_window": "4pm-close",
+          "happy_hour": true,
+          "verified_date": "2026-09-09",
+          "source_url": "https://www.happyjacktavern.com/happy-hour",
           "food_categories": [
             "drink"
           ],
-          "source_url": "https://www.happyjacktavern.com/happy-hour"
+          "proof_quote": "THURDSDAY $8 all boh’tails"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-18",
+      "notes_public": "Happy hour Mon–Fri 4–6pm & Sun 12–11pm: $5 rail liquor; Mon $8 guava mango margs; Thu $8 boh’tails (official HH page).",
+      "coords_source": "Retained live lat/lon for 2822 Hudson St, Baltimore, MD 21224"
     },
     {
       "id": "pussers-landing",
@@ -9150,8 +8353,8 @@
       "source_type": "venue_website",
       "lat": 39.2624069,
       "lon": -76.6128868,
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: ryestreettavern.com/menu/happy-hour/ raw. HH drinks + oyster half-off windows unchanged. Raw platter menu prices are regular HH-window menu, not specials — not shipped as deals.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official HH menu — Natty Boh $3 / wine $8 / daiquiri&mule $8 / OF $10 / oyster shooter $8 Mon–Fri 3–6. Skipped $2-off draught as sole claim.",
       "deals": [
         {
           "days": [
@@ -9162,10 +8365,6 @@
             "fri"
           ],
           "items": [
-            {
-              "text": "$2 off draught beer",
-              "price": "$2 off"
-            },
             {
               "text": "Natty Boh $3",
               "price": "$3"
@@ -9191,106 +8390,17 @@
           "end": 1080,
           "time_window": "3pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
-          "proof_quote": "Monday - Friday: 3pm - 6pm / $2 Off Draught Beer / Natty Boh $3.00 / White & Red $8.00 / Daiquiri and Rye Mule's $8.00 / Old Fashioned $10.00 / Oyster Shooter $8.00",
           "food_categories": [
-            "drink",
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
+            "drink"
           ],
-          "items": [
-            {
-              "text": "Half off all oysters on the half shell",
-              "price": "half off"
-            }
-          ],
-          "start": 900,
-          "end": 1080,
-          "time_window": "3pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
-          "proof_quote": "Oyster Happy Hour / Monday - Thursday: 3pm - 6pm & 9pm - Close / Half Off All Oysters on The Half Shell",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "mon",
-            "tue",
-            "wed",
-            "thu"
-          ],
-          "items": [
-            {
-              "text": "Half off all oysters on the half shell",
-              "price": "half off"
-            }
-          ],
-          "start": 1260,
-          "end": null,
-          "time_window": "9pm-close",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
-          "proof_quote": "Oyster Happy Hour / Monday - Thursday: 3pm - 6pm & 9pm - Close / Half Off All Oysters on The Half Shell",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Half off all oysters on the half shell",
-              "price": "half off"
-            }
-          ],
-          "start": 900,
-          "end": 1080,
-          "time_window": "3pm-6pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
-          "proof_quote": "Oyster Happy Hour / Friday: 3pm - 6pm & 10pm - Close / Half Off All Oysters on The Half Shell",
-          "food_categories": [
-            "seafood/crab"
-          ]
-        },
-        {
-          "days": [
-            "fri"
-          ],
-          "items": [
-            {
-              "text": "Half off all oysters on the half shell",
-              "price": "half off"
-            }
-          ],
-          "start": 1320,
-          "end": null,
-          "time_window": "10pm-close",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://www.ryestreettavern.com/menu/happy-hour/",
-          "proof_quote": "Oyster Happy Hour / Friday: 3pm - 6pm & 10pm - Close / Half Off All Oysters on The Half Shell",
-          "food_categories": [
-            "seafood/crab"
-          ]
+          "proof_quote": "Happy Hour Monday - Friday: 3pm - 6pm … Natty Boh $3.00 White & Red $8.00 Daiquiri and Rye Mule’s $8.00 Old Fashioned $10.00 Oyster Shooter $8.00"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
+      "notes_public": "Happy hour Mon–Fri 3–6pm: $3 Natty Boh, $8 white/red wine, $8 daiquiri & rye mules, $10 old fashioned, $8 oyster shooter (official HH menu).",
+      "coords_source": "Retained live lat/lon for 225 E Cromwell Street, Baltimore, MD 21230"
     },
     {
       "id": "phillips-seafood-inner-harbor",
@@ -10955,11 +10065,11 @@
       "phone": "(410) 366-0606",
       "source_url": "https://www.the-food-market.com/happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-09-09",
       "lat": 39.3308684,
       "lon": -76.6332423,
-      "notes_public": "Happy hour is bar only, Monday–Friday 4–6pm.",
-      "ops_notes": "Deal Scout 2026-09-07: the-food-market.com/happy-hour curl. Priced menu unchanged.",
+      "notes_public": "Happy hour Mon–Fri 4–6pm (bar only): $5 drafts, $7 White Marble Wit, $6 wine, $4 house bubbles, $6 specialty cocktails, $6 shot+beer (official HH page).",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official Hampden HH page — same abs $+Mon–Fri 4–6 bar-only.",
       "deals": [
         {
           "days": [
@@ -10975,7 +10085,7 @@
               "price": "$5"
             },
             {
-              "text": "White marble wit $7",
+              "text": "White Marble Wit $7",
               "price": "$7"
             },
             {
@@ -10993,79 +10103,22 @@
             {
               "text": "Shot and a beer $6",
               "price": "$6"
-            },
-            {
-              "text": "Edamame $4",
-              "price": "$4"
-            },
-            {
-              "text": "Cracker smack deluxe $7",
-              "price": "$7"
-            },
-            {
-              "text": "Truffle parmesan fries $5",
-              "price": "$5"
-            },
-            {
-              "text": "Amish soft pretzels $5",
-              "price": "$5"
-            },
-            {
-              "text": "Pan roasted mussels $12",
-              "price": "$12"
-            },
-            {
-              "text": "Buffalo pickles $6",
-              "price": "$6"
-            },
-            {
-              "text": "Garlicky shrimp torn bread $12",
-              "price": "$12"
-            },
-            {
-              "text": "Braised pork taco (2.75 a pop)",
-              "price": "$2.75"
-            },
-            {
-              "text": "Crab ball steam bun $8",
-              "price": "$8"
-            },
-            {
-              "text": "Crazy corn wings $10",
-              "price": "$10"
-            },
-            {
-              "text": "Pat LaFrieda burger $10",
-              "price": "$10"
-            },
-            {
-              "text": "1/2 cooked blondie $5",
-              "price": "$5"
-            },
-            {
-              "text": "Heathbar bread pudding $5",
-              "price": "$5"
             }
           ],
           "start": 960,
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.the-food-market.com/happy-hour",
-          "proof_quote": "HAPPY HOUR Monday - Friday, 4-6pm, Bar only draft beer 5 white marble wit 7 wine by the glass 6 house bubbles 4 specialty cocktails 6 shot and a beer 6 edamame 4 cracker smack deluxe 7 truffle parmesan fries 5 amish soft pretzels 5 pan roasted mussels 12 buffalo pickles 6 garlicky shrimp torn bread 12 2.75 a pop braised pork taco crab ball steam bun 8 crazy corn wings 10 pat lafrieda burger 10 1/2 cooked blondie 5 heathbar bread pudding 5",
           "food_categories": [
-            "drink",
-            "small-plate/apps",
-            "pretzel",
-            "tacos",
-            "wings",
-            "burger",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR Monday - Friday, 4-6pm, Bar only … draft beer 5 … white marble wit 7 … wine by the glass 6 … house bubbles 4 … specialty cocktails 6 … shot and a beer 6"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-20",
+      "coords_source": "Retained live lat/lon for 1017 W 36th St, Baltimore, MD 21211"
     },
     {
       "id": "gertrudes",
@@ -12721,11 +11774,11 @@
       "phone": "(410) 254-4700",
       "source_url": "https://www.valentinosbaltimore.com/happyhour/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-09-09",
       "lat": 39.3629187,
       "lon": -76.5519198,
-      "ops_notes": "Deal Scout 2026-09-07: valentinosbaltimore.com/happyhour/ curl. Full HH $ list unchanged. In-House only / Excluding Holidays. deals refreshed.",
-      "notes_public": "In-House only / Excluding Holidays.",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official /happyhour/ — Select wine/slushes/crushes/margs/martinis/cocktails $7 Mon–Fri 3–7.",
+      "notes_public": "Happy hour Mon–Fri 3–7pm: select wine, slushes, crushes, margaritas, martinis, cocktails $7 (official happy hour page).",
       "deals": [
         {
           "days": [
@@ -12737,54 +11790,24 @@
           ],
           "items": [
             {
-              "text": "Select wine, slushes, crushes, margaritas, martinis, cocktails",
+              "text": "Select wine, slushes, crushes, margaritas, martinis, cocktails $7",
               "price": "$7"
-            },
-            {
-              "text": "Pub Wings",
-              "price": "$8"
-            },
-            {
-              "text": "Ravioli Tostati",
-              "price": "$7"
-            },
-            {
-              "text": "Bacon Cheddar Cups",
-              "price": "$7"
-            },
-            {
-              "text": "Thai Chili Shrimp",
-              "price": "$7"
-            },
-            {
-              "text": "Oyster in 1/2 Shell",
-              "price": "$10"
-            },
-            {
-              "text": "Clams in 1/2 Shell",
-              "price": "$8"
-            },
-            {
-              "text": "Cozze Bowl",
-              "price": "$10"
             }
           ],
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://www.valentinosbaltimore.com/happyhour/",
-          "proof_quote": "Monday - Friday 3 pm - 7 pm Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails $7.00 Pub Wings $8.00 Ravioli Tostati $7.00 Bacon Cheddar Cups $7.00 Thai Chili Shrimp $7.00 Oyster in 1/2 Shell $10.00 Clams in 1/2 Shell $8.00 Cozze Bowl $10.00",
           "food_categories": [
-            "drink",
-            "wings",
-            "small-plate/apps",
-            "seafood/crab"
-          ]
+            "drink"
+          ],
+          "proof_quote": "Monday - Friday 3 pm - 7 pm Select Wine, Slushes, Crushes, Margaritas, Martinis, Cocktails $7.00"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "coords_source": "Retained live lat/lon for 6627 Harford Rd, Baltimore, MD 21214"
     },
     {
       "id": "wet-city",
@@ -12795,46 +11818,16 @@
       "phone": "443-873-6699",
       "source_url": "https://wetcitybrewing.com/",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: wetcitybrewing.com raw reuse. ALL NIGHT HAPPY HOUR Mon–Thu match baseline. Keep printed -ish pours / chix sandos. No Fri/Sat daily special. Regular Full Pour $ not weekly rows.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official site specials copy — $10 Purple Margs Tue; $10 OF & Manhattans Wed. Skipped $ off / % off-only lines.",
       "lat": 39.3016191,
       "lon": -76.6189682,
       "deals": [
         {
           "days": [
-            "mon"
-          ],
-          "items": [
-            {
-              "text": "$3 off burgers",
-              "price": "$3 off"
-            },
-            {
-              "text": "$1 off -ish pours",
-              "price": "$1 off"
-            }
-          ],
-          "start": 1020,
-          "end": 1320,
-          "time_window": "5pm-10pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://wetcitybrewing.com/",
-          "proof_quote": "MONDAY: Burger Night – $3 off burgers, $1 off -ish pours",
-          "food_categories": [
-            "burger",
-            "drink"
-          ]
-        },
-        {
-          "days": [
             "tue"
           ],
           "items": [
-            {
-              "text": "$3 off tacos & taco salad",
-              "price": "$3 off"
-            },
             {
               "text": "$10 Purple Margs",
               "price": "$10"
@@ -12844,13 +11837,12 @@
           "end": 1320,
           "time_window": "5pm-10pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://wetcitybrewing.com/",
-          "proof_quote": "TUESDAY: Taco Tuesday – $3 off tacos & taco salad, $10 Purple Margs",
           "food_categories": [
-            "tacos",
             "drink"
-          ]
+          ],
+          "proof_quote": "TUESDAY: Taco Tuesday – $3 off tacos & taco salad, $10 Purple Margs … Monday – Wednesday: 5pm – 10pm"
         },
         {
           "days": [
@@ -12860,51 +11852,23 @@
             {
               "text": "$10 Old Fashioned & Manhattans",
               "price": "$10"
-            },
-            {
-              "text": "20% select whiskey pours",
-              "price": "20% off"
-            },
-            {
-              "text": "$3 off chix sandos",
-              "price": "$3 off"
             }
           ],
           "start": 1020,
           "end": 1320,
           "time_window": "5pm-10pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://wetcitybrewing.com/",
-          "proof_quote": "WEDNESDAY: Whiskey Wednesday – $10 Old Fashioned & Manhattans, 20% select whiskey pours, $3 off chix sandos,",
           "food_categories": [
-            "drink",
-            "sandwich/cheesesteak"
-          ]
-        },
-        {
-          "days": [
-            "thu"
+            "drink"
           ],
-          "items": [
-            {
-              "text": "$3 off wings",
-              "price": "$3 off"
-            }
-          ],
-          "start": 1020,
-          "end": 1380,
-          "time_window": "5pm-11pm",
-          "happy_hour": true,
-          "verified_date": "2026-09-07",
-          "source_url": "https://wetcitybrewing.com/",
-          "proof_quote": "THURSDAY: Wing Night – Special Wing Menu, $3 off wings",
-          "food_categories": [
-            "wings"
-          ]
+          "proof_quote": "WEDNESDAY: Whiskey Wednesday – $10 Old Fashioned & Manhattans … Monday – Wednesday: 5pm – 10pm"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "notes_public": "Tue: $10 Purple Margs; Wed: $10 Old Fashioned & Manhattans (all-night happy hour window on official site).",
+      "coords_source": "Retained live lat/lon for 223 W. Chase St. Baltimore, MD 21201"
     },
     {
       "id": "tabor-ethiopian",
@@ -12915,10 +11879,10 @@
       "phone": "(410) 528-7234",
       "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-09-09",
       "lat": 39.293806,
       "lon": -76.6183705,
-      "ops_notes": "Deal Scout 2026-09-07: TaborMenu_4_26.pdf pdftotext HH MON-FRI 4-7 unchanged.",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via still-live official menu PDF HH panel — beer/wine/tej abs $+Mon–Fri 4–7.",
       "deals": [
         {
           "days": [
@@ -12930,53 +11894,41 @@
           ],
           "items": [
             {
-              "text": "$2 off cocktails",
-              "price": "$2 off"
-            },
-            {
-              "text": "Domestic beer",
+              "text": "Domestic beer $3.50",
               "price": "$3.50"
             },
             {
-              "text": "Imported beer",
+              "text": "Imported beer $4.50",
               "price": "$4.50"
             },
             {
-              "text": "Ethiopian beer",
+              "text": "Ethiopian beer $4.75",
               "price": "$4.75"
             },
             {
-              "text": "Select wines",
+              "text": "Select wines $8",
               "price": "$8"
             },
             {
-              "text": "Tej/honey wine",
+              "text": "Tej/honey wine $8",
               "price": "$8"
-            },
-            {
-              "text": "Veggie sambusa",
-              "price": "$2.50"
-            },
-            {
-              "text": "Beef sambusa",
-              "price": "$3"
             }
           ],
           "start": 960,
           "end": 1140,
           "time_window": "4pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-07",
+          "verified_date": "2026-09-09",
           "source_url": "https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pdf",
-          "proof_quote": "HAPPY HOUR | MON-FRI 4-7 2:00 OFF COCKTAILS DOMESTIC BEER 3.50 IMPORTED BEER 4.50 ETHIOPIAN BEER 4.75 SELECT WINES 8.00 TEJ/HONEY WINE 8.00 VEGGIE SAMBUSA 2.50 BEEF SAMBUSA 3.00",
           "food_categories": [
-            "drink",
-            "small-plate/apps"
-          ]
+            "drink"
+          ],
+          "proof_quote": "HAPPY HOUR | MON-FRI 4-7 … DOMESTIC BEER 3.50 IMPORTED BEER 4.50 ETHIOPIAN BEER 4.75 SELECT WINES 8.00 TEJ/HONEY WINE 8.00"
         }
       ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
-      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21"
+      "coords_source": "OpenStreetMap Nominatim geocode of verified street address (not venue-published), 2026-08-21",
+      "notes_public": "Happy hour Mon–Fri 4–7pm: $3.50 domestic / $4.50 imported / $4.75 Ethiopian beer; $8 select wines; $8 tej/honey wine (official menu PDF)."
     },
     {
       "id": "marta",
@@ -15062,8 +14014,8 @@
       "phone": "(410) 637-3699",
       "source_url": "https://www.wileygunters.com/food-menu",
       "source_type": "venue_website",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: wileygunters.com/food-menu curl — HH windows + prices unchanged.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official food-menu HH DRINKS panel — same abs $+weekday windows.",
       "lat": 39.271774,
       "lon": -76.6022229,
       "deals": [
@@ -15074,51 +14026,31 @@
           ],
           "items": [
             {
-              "text": "Quesadillas",
-              "price": "$10"
-            },
-            {
-              "text": "Queso & Chips",
+              "text": "Deep Eddy Drinks $6",
               "price": "$6"
             },
             {
-              "text": "Buffalo Chicken Dip",
-              "price": "$9"
-            },
-            {
-              "text": "Pretzel Sticks",
-              "price": "$8"
-            },
-            {
-              "text": "Jumbo Wings (7)",
-              "price": "$8"
-            },
-            {
-              "text": "Deep Eddy Drinks",
-              "price": "$6"
-            },
-            {
-              "text": "Fresh Squeezed Crushes",
+              "text": "Fresh Squeezed Crushes $7",
               "price": "$7"
             },
             {
-              "text": "House Margaritas spicy or original",
+              "text": "House Margaritas spicy or original $7",
               "price": "$7"
             },
             {
-              "text": "Maine Lunch IPA Drafts",
+              "text": "Maine Lunch IPA Drafts $7",
               "price": "$7"
             },
             {
-              "text": "Natty Light Cans",
-              "price": "$2.5"
+              "text": "Natty Light Cans $2.50",
+              "price": "$2.50"
             },
             {
-              "text": "N/A Beers",
+              "text": "N/A Beers $5",
               "price": "$5"
             },
             {
-              "text": "All Cans",
+              "text": "All Cans $6",
               "price": "$6"
             }
           ],
@@ -15126,15 +14058,12 @@
           "end": 1080,
           "time_window": "4pm-6pm",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wileygunters.com/food-menu",
-          "proof_quote": "HAPPY HOUR Monday and Wednesday 4 pm to 6 pm *HH GRUB* $10 Quesadillas $6 Queso & Chips $9 Buffalo Chicken Dip $8 Pretzel Sticks $8 Jumbo Wings (7) *HH DRINKS* $6 Deep Eddy … $2.5 Natty Light Cans $5 N/A Beers $6 All Cans",
           "food_categories": [
-            "wings",
-            "pretzel",
-            "small-plate/apps",
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "HAPPY HOUR Monday and Wednesday 4 pm to 6 pm … *HH DRINKS* $6 Deep Eddy … $7 Crushes … $7 House Margaritas … $7 Maine Lunch IPA … $2.5 Natty Light Cans"
         },
         {
           "days": [
@@ -15142,67 +14071,44 @@
           ],
           "items": [
             {
-              "text": "Quesadillas",
-              "price": "$10"
-            },
-            {
-              "text": "Queso & Chips",
+              "text": "Deep Eddy Drinks $6",
               "price": "$6"
             },
             {
-              "text": "Buffalo Chicken Dip",
-              "price": "$9"
-            },
-            {
-              "text": "Pretzel Sticks",
-              "price": "$8"
-            },
-            {
-              "text": "Jumbo Wings (7)",
-              "price": "$8"
-            },
-            {
-              "text": "Deep Eddy Drinks",
-              "price": "$6"
-            },
-            {
-              "text": "Fresh Squeezed Crushes",
+              "text": "Fresh Squeezed Crushes $7",
               "price": "$7"
             },
             {
-              "text": "House Margaritas spicy or original",
+              "text": "House Margaritas spicy or original $7",
               "price": "$7"
             },
             {
-              "text": "Maine Lunch IPA Drafts",
+              "text": "Maine Lunch IPA Drafts $7",
               "price": "$7"
             },
             {
-              "text": "Natty Light Cans",
-              "price": "$2.5"
+              "text": "Natty Light Cans $2.50",
+              "price": "$2.50"
             },
             {
-              "text": "N/A Beers",
+              "text": "N/A Beers $5",
               "price": "$5"
             },
             {
-              "text": "All Cans",
+              "text": "All Cans $6",
               "price": "$6"
             }
           ],
-          "start": null,
-          "end": null,
           "time_window": "open to close",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wileygunters.com/food-menu",
-          "proof_quote": "HAPPY HOUR Tuesday open to close *HH GRUB* $10 Quesadillas … *HH DRINKS* $6 Deep Eddy … $6 All Cans",
           "food_categories": [
-            "wings",
-            "pretzel",
-            "small-plate/apps",
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Tuesday open to close … *HH DRINKS* same abs $",
+          "start": null,
+          "end": null
         },
         {
           "days": [
@@ -15210,51 +14116,31 @@
           ],
           "items": [
             {
-              "text": "Quesadillas",
-              "price": "$10"
-            },
-            {
-              "text": "Queso & Chips",
+              "text": "Deep Eddy Drinks $6",
               "price": "$6"
             },
             {
-              "text": "Buffalo Chicken Dip",
-              "price": "$9"
-            },
-            {
-              "text": "Pretzel Sticks",
-              "price": "$8"
-            },
-            {
-              "text": "Jumbo Wings (7)",
-              "price": "$8"
-            },
-            {
-              "text": "Deep Eddy Drinks",
-              "price": "$6"
-            },
-            {
-              "text": "Fresh Squeezed Crushes",
+              "text": "Fresh Squeezed Crushes $7",
               "price": "$7"
             },
             {
-              "text": "House Margaritas spicy or original",
+              "text": "House Margaritas spicy or original $7",
               "price": "$7"
             },
             {
-              "text": "Maine Lunch IPA Drafts",
+              "text": "Maine Lunch IPA Drafts $7",
               "price": "$7"
             },
             {
-              "text": "Natty Light Cans",
-              "price": "$2.5"
+              "text": "Natty Light Cans $2.50",
+              "price": "$2.50"
             },
             {
-              "text": "N/A Beers",
+              "text": "N/A Beers $5",
               "price": "$5"
             },
             {
-              "text": "All Cans",
+              "text": "All Cans $6",
               "price": "$6"
             }
           ],
@@ -15262,18 +14148,17 @@
           "end": 1080,
           "time_window": "2pm-6pm",
           "happy_hour": true,
+          "verified_date": "2026-09-09",
           "source_url": "https://www.wileygunters.com/food-menu",
-          "proof_quote": "HAPPY HOUR Thursday 2 pm to 6 pm *HH GRUB* $10 Quesadillas … *HH DRINKS* $6 Deep Eddy … $6 All Cans",
           "food_categories": [
-            "wings",
-            "pretzel",
-            "small-plate/apps",
             "drink"
           ],
-          "verified_date": "2026-09-07"
+          "proof_quote": "Thursday 2 pm to 6 pm … *HH DRINKS* same abs $"
         }
       ],
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21"
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-21",
+      "notes_public": "Happy hour Mon/Wed 4–6pm, Tue all day, Thu 2–6pm: $6 Deep Eddy, $7 crushes/margs/Maine Lunch IPA, $2.50 Natty Light cans, $5 N/A beers, $6 all cans (official menu).",
+      "coords_source": "Retained live lat/lon for 823 East Fort Avenue, Baltimore, MD 21230"
     },
     {
       "id": "warehouse-cinemas-rotunda",

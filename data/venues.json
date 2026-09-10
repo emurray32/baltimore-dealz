@@ -2025,13 +2025,14 @@
       "address": "2780 Lighthouse Point E, Baltimore, MD 21224",
       "source_url": "https://www.instagram.com/bobrookscanton/",
       "source_type": "none",
-      "last_verified": "2026-09-07",
-      "ops_notes": "Deal Scout 2026-09-07: IG-only (@bobrookscanton bio empty); site TLS/DNS dead. deals=[] bump.",
+      "last_verified": "2026-09-09",
+      "ops_notes": "Deal Scout 2026-09-09 priced_106: address now Pusser's Landing; Bo Brooks closed. Keep open_unverifiable + deals=[]. Pusser half-off — no invent abs $. Retained live coords.",
       "lat": 39.277232,
       "lon": -76.578948,
       "deals": [],
-      "notes_public": "Instagram-only — no website-priced specials verified.",
-      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03"
+      "notes_public": "Bo Brooks closed at this pin; space is now Pusser's Landing. No Bo Brooks website-priced specials verified.",
+      "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-03",
+      "coords_source": "Retained live lat/lon for 2780 Lighthouse Point E, Baltimore, MD 21224"
     },
     {
       "id": "sports-balls",

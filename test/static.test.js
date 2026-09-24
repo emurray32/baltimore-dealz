@@ -174,7 +174,7 @@ test("build-static produces every view board + map + root redirects with deal ca
       assert.match(board, new RegExp(`data-day="${day.key}"`));
     }
     // Friday skeleton (build now) names Friday (no timezone clutter)
-    assert.match(board, /<p class="meta">Friday<\/p>/);
+    assert.match(board, /<p class="meta day-label">Friday<\/p>/);
     assert.doesNotMatch(board, /Baltimore time/);
 
     // Tonight's Friday deals appear in the fri template AND the live tonight section
@@ -233,7 +233,7 @@ test("static board tonight templates match server cardsHtmlForDay at Fri 11pm an
 
     // Live "On tonight" section (pre-hydrate skeleton) also matches that day,
     // because the build baked `now` into the page.
-    assert.match(board, new RegExp(`<p class="meta">${dayLabel(key)}</p>`));
+    assert.match(board, new RegExp(`<p class="meta day-label">${dayLabel(key)}</p>`));
     assert.doesNotMatch(board, /Baltimore time/);
     const serverBoard = renderBoard(venues, view, [view], when);
     const onTonight = (html) => html.split("<h2>Good to know</h2>")[0] ?? html;

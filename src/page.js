@@ -200,7 +200,11 @@ export function venueCard({ venue, deals }, now = new Date(), options = {}) {
   const moreCount = itemTexts.length > 1 ? itemTexts.length - 1 : 0;
   const windowRaw = String(deals[0]?.time_window ?? "").trim();
   const windowQuiet = !windowRaw || /^all\s*day$/i.test(windowRaw);
-  const scanWindow = `<span class="window${windowQuiet ? " window-quiet" : ""}">${escapeHtml(windowRaw)}</span>`;
+  // No window text means no chip. Emitting the span anyway painted 91 empty
+  // bordered pills on the board where a time should be.
+  const scanWindow = windowRaw
+    ? `<span class="window${windowQuiet ? " window-quiet" : ""}">${escapeHtml(windowRaw)}</span>`
+    : "";
   const hood = venue.neighborhood
     ? `<span class="hood">${escapeHtml(venue.neighborhood)}</span>`
     : "";
@@ -495,10 +499,10 @@ export function renderBoard(venues, view, views = [view], now = new Date(), opti
   <title>${escapeHtml(title)} — Baltimore Dealz</title>
   <link rel="stylesheet" href="${escapeHtml(styleHref)}">
 </head>
-<body>
+<body class="board-page">
   <header>
     <h1>${escapeHtml(title)}</h1>
-    <p class="meta">${escapeHtml(dayLabel(todayKey))}</p>
+    <p class="meta day-label">${escapeHtml(dayLabel(todayKey))}</p>
     ${viewSwitcher(views, view, viewHref)}
     <p class="meta map-link"><a href="${escapeHtml(mapHref)}">Map view</a> · <a href="${escapeHtml(monthHref)}">Calendar</a> · <a href="${escapeHtml(calendarHref)}">Add happy hours to calendar</a></p>
   </header>

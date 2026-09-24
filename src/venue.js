@@ -36,6 +36,38 @@ export function venueScheduleByDay(venue) {
   }));
 }
 
+// Collapse consecutive days that show exactly the same deals into one block.
+// A venue with one daily happy hour was rendering seven identical cards — the
+// same "$6 House Wine / $6 Select Drafts" list, Monday through Sunday.
+// Identity is the set of deal objects, compared by reference: two days share a
+// block only when they are literally driven by the same rows.
+export function collapseSchedule(schedule) {
+  const runs = [];
+  for (const day of schedule) {
+    const last = runs[runs.length - 1];
+    const same =
+      last &&
+      last.deals.length === day.deals.length &&
+      last.deals.every((d, i) => d === day.deals[i]);
+    if (same) {
+      last.days.push(day);
+    } else {
+      runs.push({ deals: day.deals, days: [day] });
+    }
+  }
+  return runs.map((run) => ({
+    deals: run.deals,
+    keys: run.days.map((d) => d.key),
+    // "Monday", "Monday – Wednesday", or "Every day" for a full Mon-Sun run.
+    label:
+      run.days.length === 7
+        ? "Every day"
+        : run.days.length === 1
+          ? run.days[0].label
+          : `${run.days[0].label} – ${run.days[run.days.length - 1].label}`,
+  }));
+}
+
 function dealChips(deal, now) {
   const chips = [];
   if (deal.happy_hour === true) {
@@ -133,19 +165,20 @@ export function renderVenuePage(venue, views, now = new Date(), options = {}) {
         <p class="meta">${escapeHtml(reason)}</p>
       </section>`;
   } else {
-    const days = schedule
-      .map((day) => {
-        if (day.deals.length === 0) {
+    const days = collapseSchedule(schedule)
+      .map((block) => {
+        const dayAttr = escapeHtml(block.keys.join(" "));
+        if (block.deals.length === 0) {
           return `
-        <section class="venue-day" data-day="${escapeHtml(day.key)}">
-          <h2>${escapeHtml(day.label)}</h2>
+        <section class="venue-day" data-day="${dayAttr}">
+          <h2>${escapeHtml(block.label)}</h2>
           <p class="meta">Nothing listed.</p>
         </section>`;
         }
         return `
-        <section class="venue-day" data-day="${escapeHtml(day.key)}">
-          <h2>${escapeHtml(day.label)}</h2>
-          ${day.deals.map((d) => scheduleDeal(d, now)).join("")}
+        <section class="venue-day" data-day="${dayAttr}">
+          <h2>${escapeHtml(block.label)}</h2>
+          ${block.deals.map((d) => scheduleDeal(d, now)).join("")}
         </section>`;
       })
       .join("");

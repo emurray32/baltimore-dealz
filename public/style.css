@@ -30,6 +30,7 @@
   --focus:  #ff4a4a;
   --radius: 2px;
   --maxw:   42rem;
+  --maxw-board: 42rem;
 
   /* offset shadow — uses ink so it flips automatically in dark mode */
   --shadow: 4px 4px 0 var(--ink);
@@ -53,16 +54,22 @@ body {
 }
 
 /* ---- header ---- */
-header { padding: .5rem 0 1rem; }
+/* Every rem here is a deal the phone user can see without scrolling. Before
+   this pass the first venue on a 390x844 screen sat ~1180px down — a full
+   screen and a half of chrome before the board did its job. */
+header { padding: .25rem 0 .5rem; }
 
 /* "Tonight in Canton" — black strip with accent border, Bebas Neue */
 h1 {
   font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  font-size: clamp(2.2rem, 11vw, 3.2rem);
+  /* 11vw wrapped "Tonight in Baltimore" onto two lines on every phone and
+     cost ~100px. 7.4vw keeps the longest board title ("Tonight in Station
+     North") on one line at 360px and up. */
+  font-size: clamp(1.7rem, 7.4vw, 3.2rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.02;
   letter-spacing: .04em;
-  margin: 0 0 .15rem;
+  margin: 0;
   display: inline-block;
   background: var(--ink);
   color: var(--surface);
@@ -70,13 +77,17 @@ h1 {
   border-left: 6px solid var(--accent);
 }
 
-/* Day label under the title — handwritten feel */
-header > p.meta {
+/* Day label under the title — handwritten feel.
+   Scoped to .day-label, not `header > p.meta`. The venue page has three or
+   four header metas (back link, address, phone, last verified) and they were
+   all rendering in 1.25rem script, which wrapped "last verified 2026-09-05"
+   across two lines mid-date. */
+.day-label {
   font-family: 'Caveat', cursive;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--muted);
-  margin: .5rem 0 .6rem;
+  margin: .3rem 0 .4rem;
   border: none;
   padding: 0;
 }
@@ -97,8 +108,9 @@ h2 {
   text-transform: uppercase;
   letter-spacing: .2em;
   color: var(--accent);
-  margin: 2rem 0 .75rem;
+  margin: 1.15rem 0 .5rem;
 }
+main > :first-child h2 { margin-top: .75rem; }
 
 /* venue name */
 h3 {
@@ -120,7 +132,7 @@ a:hover {
 
 /* ---- view switcher ---- */
 nav.meta {
-  margin-top: .75rem;
+  margin-top: .5rem;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -128,6 +140,20 @@ nav.meta {
   gap: .5rem;
   align-items: center;
 }
+/* Both chip rows always overflow — nine neighbourhoods and twenty food
+   categories never fit a 42rem column, let alone a phone. Fade the right edge
+   so it reads as "there is more", and pad so the last chip can be scrolled
+   clear of the fade. */
+nav.meta,
+.filter-row {
+  padding-right: 1.5rem;
+  padding-bottom: .3rem;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.75rem), transparent 100%);
+  mask-image: linear-gradient(to right, #000 calc(100% - 1.75rem), transparent 100%);
+}
+nav.meta::-webkit-scrollbar,
+.filter-row::-webkit-scrollbar { display: none; }
 nav.meta a {
   color: var(--ink);
   text-decoration: none;
@@ -445,8 +471,19 @@ summary:hover { border-color: var(--hair); }
 .quiet-list li:first-child { border-top: 0; }
 .quiet-list .meta { margin-top: .15rem; }
 
-/* ---- "Closest to me" button ---- */
-.nearest-row { margin: 0 0 1rem; }
+/* ---- board controls: "Closest to me" + search on one row ---- */
+/* client-search.js wraps the two into .board-controls when JS runs. Stacked,
+   they cost ~230px of the first screen between the heading and the first deal. */
+.board-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: .6rem;
+  margin: 0 0 .75rem;
+  flex-wrap: wrap;
+}
+.board-controls .search-row { flex: 1 1 11rem; margin: 0; }
+.board-controls .nearest-row { flex: 0 0 auto; margin: 0; }
+.nearest-row { margin: 0 0 .75rem; }
 
 /* venue name links on cards / quiet group */
 a.venue-link {
@@ -480,18 +517,23 @@ a.venue-link:hover {
 
 /* board search — injected by client-search.js only when JS runs */
 .search-row {
-  margin: 0 0 1.1rem;
+  margin: 0 0 .75rem;
   display: flex;
   flex-direction: column;
   gap: .35rem;
 }
+/* The placeholder already says what the box does. The label stays in the
+   document for screen readers and for the input's accessible name. */
 .search-label {
-  font-family: 'Space Mono', monospace;
-  font-size: .62rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--muted);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .board-search,
 #request-spot-form input[type="text"],
@@ -507,6 +549,7 @@ a.venue-link:hover {
   max-width: 22rem;
   box-sizing: border-box;
 }
+.board-controls .board-search { max-width: none; }
 .board-search:focus,
 #request-spot-form input[type="text"]:focus,
 #request-spot-form textarea:focus {
@@ -522,6 +565,7 @@ a.venue-link:hover {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: .7rem;
+  white-space: nowrap;
   letter-spacing: .07em;
   text-transform: uppercase;
   background: var(--surface);
@@ -563,7 +607,7 @@ a.venue-link:hover {
 
 /* ---- food filter ---- */
 .food-filter { margin: 0 0 .25rem; }
-.food-filter h2 { margin: 0 0 .5rem; }
+.food-filter h2 { margin: .75rem 0 .5rem; }
 .filter-row {
   display: flex;
   flex-wrap: nowrap;
@@ -573,6 +617,12 @@ a.venue-link:hover {
   margin: 0 0 .4rem;
 }
 .filter-btn {
+  /* The sr-only .filter-count inside is position:absolute. Without a
+     positioned ancestor it resolves against the initial containing block,
+     so counts on buttons scrolled out of .filter-row land hundreds of px
+     past the viewport and blow the document width out (390 -> 1559 on a
+     phone, and the desktop column drifts off-centre). Contain them here. */
+  position: relative;
   font-family: 'Space Mono', monospace;
   font-size: .68rem;
   font-weight: 700;
@@ -607,7 +657,8 @@ a.venue-link:hover {
   white-space: nowrap;
   border: 0;
 }
-.filter-status { min-height: 1.1em; }
+.filter-status { margin: 0; min-height: 0; }
+.filter-status:empty { display: none; }
 .card.filter-hide,
 .timing-group.filter-hide {
   display: none !important;
@@ -776,9 +827,34 @@ body.map-page {
 .leaflet-top, .leaflet-bottom { z-index: 990 !important; }
 .leaflet-map-pane      { z-index: 1000 !important; }
 
+/* ---- desktop: use the screen ----
+   A 42rem column on a 1280px display left roughly 60% of the window as empty
+   grid paper. The board page widens and runs two columns of scan rows; venue,
+   map and calendar pages keep the narrow reading measure. */
+@media (min-width: 62rem) {
+  body.board-page { max-width: var(--maxw-board); }
+  body.board-page #tonight-board .timing-cards {
+    display: grid;
+    /* minmax(0,...) not 1fr: a bare 1fr track floors at min-content, and the
+       .lead line is white-space:nowrap, so one long offer widened the whole
+       document to 2921px on a 1280px screen. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 2.25rem;
+    align-items: start;
+  }
+  body.board-page #tonight-board .timing-cards > .card { min-width: 0; }
+  /* Grid rows are as tall as their tallest cell, so the separator has to be
+     drawn on the row itself rather than inherited from the list flow. */
+  body.board-page #tonight-board .timing-cards > .card { border-bottom: 1px solid var(--hair); }
+}
+@media (min-width: 62rem) {
+  :root { --maxw-board: 62rem; }
+}
+
 /* ---- responsive ---- */
 @media (max-width: 40rem) {
-  h1 { font-size: 2.8rem; }
+  /* No h1 override here. The old `font-size: 2.8rem` beat the clamp above and
+     forced every board title onto two lines on a phone. */
   #map { height: 62vh; }
   .map-page header, .map-page main { padding: 0 .9rem; }
 }

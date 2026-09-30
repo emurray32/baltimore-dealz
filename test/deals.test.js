@@ -85,8 +85,8 @@ test("the board at Friday 11pm and Saturday 1am is not the same board", async ()
   const saturday = await boardFor(SAT_1AM_EDT);
 
   assert.notEqual(friday, saturday);
-  assert.match(friday, /<p class="meta">Friday<\/p>/);
-  assert.match(saturday, /<p class="meta">Saturday<\/p>/);
+  assert.match(friday, /<p class="meta day-label">Friday<\/p>/);
+  assert.match(saturday, /<p class="meta day-label">Saturday<\/p>/);
   assert.doesNotMatch(friday, /Baltimore time/);
   assert.doesNotMatch(saturday, /Baltimore time/);
 

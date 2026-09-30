@@ -18,11 +18,17 @@ import { escapeHtml } from "./page.js";
 // One line per venue per day, so the calendar summarises rather than
 // transcribes: the best few offers, then a count. Loch Bar's eighteen
 // happy-hour items would otherwise run across the whole row.
-function dealText(deal) {
+export function dealText(deal) {
   const ranked = rankOffers(deal.items);
   const head = ranked
     .slice(0, CALENDAR_OFFER_LIMIT)
-    .map((item) => (item.price ? `${item.text} ${item.price}` : item.text))
+    // Only append the price when the text does not already carry it, or the
+    // row reads "$5 Draft Beers $5".
+    .map((item) =>
+      item.price && !String(item.text).includes(item.price)
+        ? `${item.text} ${item.price}`
+        : item.text,
+    )
     .join(" · ");
   const hidden = ranked.length - CALENDAR_OFFER_LIMIT;
   return hidden > 0 ? `${head} · +${hidden} more` : head;

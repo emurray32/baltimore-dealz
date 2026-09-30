@@ -16,14 +16,18 @@
   row.innerHTML =
     '<label class="search-label" for="board-search">Search this board</label>' +
     '<input type="search" id="board-search" class="board-search" ' +
-    'placeholder="Bar name…" autocomplete="off" enterkeyhint="search">';
+    'placeholder="Search bars…" autocomplete="off" enterkeyhint="search">';
 
-  // Insert after the nearest-row (or after h2 if that is missing).
+  // Put the search box and "Closest to me" on one row. Stacked they pushed the
+  // first deal a further ~150px down the phone's first screen; the label is
+  // visually hidden in CSS because the placeholder already says the same thing.
   var nearest = board.querySelector(".nearest-row");
-  if (nearest && nearest.nextSibling) {
-    board.insertBefore(row, nearest.nextSibling);
-  } else if (nearest) {
-    board.appendChild(row);
+  if (nearest) {
+    var strip = document.createElement("div");
+    strip.className = "board-controls";
+    nearest.parentNode.insertBefore(strip, nearest);
+    strip.appendChild(row);
+    strip.appendChild(nearest);
   } else {
     var h2 = board.querySelector("h2");
     if (h2 && h2.nextSibling) board.insertBefore(row, h2.nextSibling);
@@ -36,9 +40,15 @@
   var empty = document.createElement("p");
   empty.className = "meta search-empty";
   empty.hidden = true;
-  // Sit just under the search row so it is obvious.
-  if (row.nextSibling) board.insertBefore(empty, row.nextSibling);
-  else board.appendChild(empty);
+  // Sit just under the control strip so it is obvious. `row` may now live
+  // inside .board-controls, so anchor on whichever node is a child of the
+  // board — inserting before a grandchild throws NotFoundError.
+  var anchor = row.parentNode === board ? row : row.parentNode;
+  if (anchor && anchor.parentNode === board && anchor.nextSibling) {
+    board.insertBefore(empty, anchor.nextSibling);
+  } else {
+    board.appendChild(empty);
+  }
 
   function cardText(card) {
     return (card.textContent || "").toLowerCase();

@@ -3,7 +3,10 @@
   "outputDirectory": "dist",
   "framework": null,
   "git": {
-    "deploymentEnabled": false
+    "deploymentEnabled": {
+      "*": false,
+      "main": true
+    }
   },
   "github": {
     "silent": true

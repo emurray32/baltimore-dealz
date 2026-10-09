@@ -4229,11 +4229,37 @@
       "address": "3822 Boston St, Baltimore, MD 21224",
       "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
       "source_type": "venue_website",
-      "last_verified": "2026-09-09",
-      "ops_notes": "Deal Scout 2026-09-09 priced_110: reverify stale abs$ (was 2026-09-07) via official Baltimore HH menu — Tue–Fri abs drink $; skipped Mon $2-off-only.",
+      "last_verified": "2026-10-09",
+      "ops_notes": "Deal Scout 2026-10-09: refresh via official Baltimore HH page + official events calendar — added Mon $6 apps/$10 flatbreads and Tue 2 flatbreads $20; skipped Mon $2-off; events notes-only.",
       "lat": 39.278045,
       "lon": -76.562874,
       "deals": [
+        {
+          "days": [
+            "mon"
+          ],
+          "items": [
+            {
+              "text": "$6 Appetizers",
+              "price": "$6"
+            },
+            {
+              "text": "$10 Flatbreads",
+              "price": "$10"
+            }
+          ],
+          "start": 900,
+          "end": 1140,
+          "time_window": "3pm-7pm",
+          "happy_hour": true,
+          "verified_date": "2026-10-09",
+          "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
+          "food_categories": [
+            "small-plate/apps",
+            "pizza"
+          ],
+          "proof_quote": "UNLEASHED MONDAYS 3-7PM EVERY MONDAY $2 Off Draft Beer + Cocktails $6 Appetizers $10 Flatbreads"
+        },
         {
           "days": [
             "tue"
@@ -4242,18 +4268,23 @@
             {
               "text": "2 Cocktails for $12",
               "price": "$12"
+            },
+            {
+              "text": "Any 2 Flatbreads for $20",
+              "price": "$20"
             }
           ],
           "start": 900,
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-09",
+          "verified_date": "2026-10-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "food_categories": [
-            "drink"
+            "drink",
+            "pizza"
           ],
-          "proof_quote": "TWOFER TUESDAYS 3-7PM EVERY TUESDAY 2 Cocktails for $12"
+          "proof_quote": "TWOFER TUESDAYS 3-7PM EVERY TUESDAY 2 Cocktails for $12 Any 2 Flatbreads for $20"
         },
         {
           "days": [
@@ -4273,7 +4304,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-09",
+          "verified_date": "2026-10-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "food_categories": [
             "drink"
@@ -4302,7 +4333,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-09",
+          "verified_date": "2026-10-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "food_categories": [
             "drink"
@@ -4323,7 +4354,7 @@
           "end": 1140,
           "time_window": "3pm-7pm",
           "happy_hour": true,
-          "verified_date": "2026-09-09",
+          "verified_date": "2026-10-09",
           "source_url": "https://barksocial.com/pages/baltimore-happy-hour",
           "food_categories": [
             "drink"
@@ -4332,8 +4363,9 @@
         }
       ],
       "neighborhood_source": "Baltimore City Neighborhood Statistical Areas (geodata.baltimorecity.gov), point-in-polygon, 2026-08-19",
-      "notes_public": "Tue 3–7: 2 cocktails $12; Wed: $7 frosé/wine; Thu: $5 seltzers, $6 drafts, $7 cocktails; Fri: $7 frozen drinks (official Bark Baltimore HH).",
-      "coords_source": "Retained live lat/lon for 3822 Boston St, Baltimore, MD 21224"
+      "notes_public": "Mon 3–7: $6 apps, $10 flatbreads; Tue: 2 cocktails $12, 2 flatbreads $20; Wed: $7 frosé/wine/cans; Thu: $5 seltzers, $6 drafts, $7 cocktails; Fri: $7 frozen drinks (all 3–7pm, official Bark Baltimore HH). Recurring events (bingo, Jackbox, Ravens watch parties, breed meetups) on Bark's Baltimore events calendar; humans enter free, dogs need membership or day pass.",
+      "coords_source": "Retained live lat/lon for 3822 Boston St, Baltimore, MD 21224",
+      "phone": "(410) 202-4009"
     },
     {
       "id": "market-ale-house",

@@ -1,0 +1,517 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Inner Harbor Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-apropoes-monsunthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,SU
+SUMMARY:apropoe's — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nOld Oriole Park Draft $5\nRail Cocktails $6\nWine By t
+ he Glass (Boordy) $6\nApropoe's Mules $9\nCocktails ON TAP $9\nFry Basket 
+ $7\nFried Wings $9\nChicken Tenders $9\nCrab Pretzel $15\n700 Aliceanna St
+ reet\, Baltimore\, MD 21202\nHarbor East\nhttps://ugc.production.linktr.ee
+ /98e6ff02-d050-4036-b759-44f6f2a058d4_2026-Spring-Happy-Hour.pdf\nSource: 
+ Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:700 Aliceanna Street\, Baltimore\, MD 21202
+URL:https://ugc.production.linktr.ee/98e6ff02-d050-4036-b759-44f6f2a058d4_2
+ 026-Spring-Happy-Hour.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-azumi-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Azumi — Happy Hour (3pm-6pm (inside bar))
+DESCRIPTION:3pm-6pm (inside bar)\n$10 Cocktails (Kokeshi\, Bakabana\, Koji 
+ Cultured\, Kuro Tonic N/A)\n$9 Wine & Spirits (Veramonte Sauvignon Blanc\,
+  Washington Hills Cabernet\, Paladin Prosecco\, choice spirit with mixer)\
+ n$5 Shochu\n725 Aliceanna St\, Baltimore\, MD 21202\nHarbor East\nhttps://
+ azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/05/Azumi_HH_
+ 5.5.26.pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:725 Aliceanna St\, Baltimore\, MD 21202
+URL:https://azumirestaurant.com/baltimore/wp-content/uploads/sites/2/2026/0
+ 5/Azumi_HH_5.5.26.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bo-american-brasserie-frimonthutuewed-s990@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T163000
+DTEND;TZID=America/New_York:20260803T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:B&O American Brasserie — Happy Hour (4:30pm-6:30pm)
+DESCRIPTION:4:30pm-6:30pm\n$3 select beer\n$4 sparkling and house wines\n$5
+  cocktail of the day\nbar snacks and flatbreads\n2 North Charles Street\, 
+ Baltimore\, Maryland\, 21201\nDowntown\nhttps://bandorestaurant.com/events
+ \nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:2 North Charles Street\, Baltimore\, Maryland\, 21201
+URL:https://bandorestaurant.com/events
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-blackwall-hitch-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Blackwall Hitch — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nHappy Hour\nPrices not published by the venue.\n700 E 
+ Pratt St\, Baltimore\, MD 21202\nInner Harbor\nhttps://www.blackwallhitchb
+ altimoremd.com/\nSource: Baltimore Dealz — verify at the bar\; deals cha
+ nge.
+LOCATION:700 E Pratt St\, Baltimore\, MD 21202
+URL:https://www.blackwallhitchbaltimoremd.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-cinghiale-frimonsatsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:Cinghiale — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nHappy hour Roman Fried Chicken Meatballs $8\nHappy hou
+ r Warm Peach Bruschetta $7\nHappy hour Roasted Beet Stack $7\nHappy hour M
+ ortadella Sandwich on Focaccia $7\nHappy hour Tonno Crudo $10\nHappy hour 
+ Salumi & Formaggi (choose 2) $10\nHappy hour drinks $7: Martini\, Bellini\
+ , Americano\, Aperol Spritz\, select wines\nHappy hour flight of all 3 win
+ es (3oz) $10\n822 Lancaster St\, Baltimore\, MD 21202\nHarbor East\nhttps:
+ //7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Cinghiale/CG%20MENU
+ S/CG_HH.pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:822 Lancaster St\, Baltimore\, MD 21202
+URL:https://7087713.fs1.hubspotusercontent-na1.net/hubfs/7087713/Cinghiale/
+ CG%20MENUS/CG_HH.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-fogo-de-chao-frimonsatsunthutuewed-wallday@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260803
+DTEND;VALUE=DATE:20260804
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:Fogo de Chao — Happy Hour (all day)
+DESCRIPTION:all day\n$6 Beers\n$8 South American Wines\n$10 Brazilian-Inspi
+ red Cocktails\n600 E. Pratt St. #102\, Baltimore\, MD 21202\nInner Harbor\
+ nhttps://fogodechao.com/location/baltimore/\nSource: Baltimore Dealz — v
+ erify at the bar\; deals change.
+LOCATION:600 E. Pratt St. #102\, Baltimore\, MD 21202
+URL:https://fogodechao.com/location/baltimore/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-hard-rock-cafe-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Hard Rock Cafe — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nNachos $8\nJumbo Pretzel $8\nTupelo Dippers $8\nLoaded
+  Cheese Fries $8\nChicken Sliders $10\nWings $10\nPepperoni Flatbread $10\
+ nDomestic drafts $5\nImport/craft drafts $6\nSingle liquor well drinks $6\
+ nSelect wines (6oz) $7\nCocktails $7\n601 E Pratt St\, Baltimore\, MD 2120
+ 2\nInner Harbor\nhttps://cafe.hardrock.com/baltimore/files/5310/25-HRC-015
+ 64_-_Evergreen_Menu_Update_Happy_Hour_No_Bleeds_1.pdf\nSource: Baltimore D
+ ealz — verify at the bar\; deals change.
+LOCATION:601 E Pratt St\, Baltimore\, MD 21202
+URL:https://cafe.hardrock.com/baltimore/files/5310/25-HRC-01564_-_Evergreen
+ _Menu_Update_Happy_Hour_No_Bleeds_1.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-homeslyce-mt-vernon-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:HomeSlyce Mt. Vernon — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$3 OFF Wings\, Tenders & Chicken Quesadillas\n$5 Wines
+  & Craft Beers\n336 N Charles St\, Baltimore\, MD 21201\nDowntown\nhttps:/
+ /homeslyce.com/locations/mt-vernon/\nSource: Baltimore Dealz — verify at
+  the bar\; deals change.
+LOCATION:336 N Charles St\, Baltimore\, MD 21201
+URL:https://homeslyce.com/locations/mt-vernon/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-italian-disco-frimonsatsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:Italian Disco — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\nVenetian Velvet $9\nMiura Spritz $9\nDim the Lights $9
+ \n$4 Pints (Bud Light\, Miller Lite\, Coors Light\, Corona)\n$8 Wine (Pros
+ ecco\, Ercole Bianco\, Ercole Barbera)\nMargherita 12" handtossed pizza $1
+ 0\nPepperoni 12" handtossed pizza $10\nRosso Bianco 12" handtossed pizza $
+ 10\nFried Calamari $9\nClassic Italian Meatballs $9\nChicken Wings $9\nShr
+ imp Spiedini $9\nMussels $9\nHouse Salad $9\nCrispy Brussels $9\n1006 Flee
+ t Street\, Baltimore\, MD 21202\nHarbor East\nhttps://theitaliandisco.com/
+ wp-content/uploads/2025/10/WEB_10_17_25.pdf\nSource: Baltimore Dealz — v
+ erify at the bar\; deals change.
+LOCATION:1006 Fleet Street\, Baltimore\, MD 21202
+URL:https://theitaliandisco.com/wp-content/uploads/2025/10/WEB_10_17_25.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-james-joyce-irish-pub-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:James Joyce Irish Pub & Restaurant — Happy Hour (4pm-7pm (bar onl
+ y))
+DESCRIPTION:4pm-7pm (bar only)\n$5 Beer (Heavy Seas Blonde\, Kilkenny Cream
+  Ale\, James Joyce Amber\, Yuengling Lager\, Miller Light\, Sun Cruiser)\n
+ $7 Wine (Rubus Spanish White\, Rubus Chardonnay\, Rubus Pinot Noir\, Crico
+ va Sparkling)\n$7 Spirits (Paddy Whiskey\, Bushmills Whiskey\, Proper 12 A
+ pple)\n$8 Irish Orange Crush\n616 President Street\, Baltimore\, MD 21202\
+ nHarbor East\nhttps://jamesjoycebaltimore.com/wp-content/uploads/2026/04/H
+ H-03.12.26.pdf\nSource: Baltimore Dealz — verify at the bar\; deals chan
+ ge.
+LOCATION:616 President Street\, Baltimore\, MD 21202
+URL:https://jamesjoycebaltimore.com/wp-content/uploads/2026/04/HH-03.12.26.
+ pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-kechy-pizza-frimonsatsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:Kechy Pizza Co — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\n$5 starters\n$6 cocktails\n$2 Natty Boh draft\nred san
+ gria on tap\n207 E Redwood St\, Baltimore\, MD 21202\nDowntown\nhttps://ww
+ w.kechypizza.com/baltimore\nSource: Baltimore Dealz — verify at the bar\
+ ; deals change.
+LOCATION:207 E Redwood St\, Baltimore\, MD 21202
+URL:https://www.kechypizza.com/baltimore
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-loch-bar-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Loch Bar — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nWine $7 (House Sparkling / White / Red)\nCocktails $8 
+ (House Old Fashioned\, House Margarita\, All House Spirits limit 1 mixer)\
+ nSlushies $10\nCrushes $8\nDraft beer $6\n240 International Drive\, Baltim
+ ore\, MD 21202\nHarbor East\nhttps://lochbar.com/wp-content/uploads/2025/0
+ 9/LochBar_HH_8.30.25.pdf\nSource: Baltimore Dealz — verify at the bar\; 
+ deals change.
+LOCATION:240 International Drive\, Baltimore\, MD 21202
+URL:https://lochbar.com/wp-content/uploads/2025/09/LochBar_HH_8.30.25.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-mccormick-schmicks-frimonthutuewed-s930@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T153000
+DTEND;TZID=America/New_York:20260803T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:McCormick & Schmick's — Happy Hour (3:30pm-6:30pm)
+DESCRIPTION:3:30pm-6:30pm\nRefills\nCheesy Chowder Fries\nKorean Fried Chic
+ ken\nWagyu Carpaccio\nBlue Cheese Chips\nCrispy Asian Calamari\nSpicy Asia
+ n Shrimp Tacos\nCrispy Baja Fish Tacos\nCoconut Shrimp\nCheeseburger\nPoke
+  Tuna Chips\nProsciutto di Parma Flatbread\nSpice Seared Ahi Tuna\nChilled
+  Shrimp Cocktail\nP.E.I. Black Mussels\nBuffalo Chicken Wings\nDraught bee
+ r — domestic & specialty\nDraught beer — import & craft\nWell spirits\
+ nAmerican craft spirits\nSelect wines\nPremium wines\nGold Margarita\nM&S 
+ Iced Tea\nBerry Berry Mojito\nPerfect Lemon Drop Martini\nRaspberry Mule\n
+ Bulleit The Old Fashion Way\nProsecco Sangria\n711 Eastern Ave\, Baltimore
+ \, MD 21202\nInner Harbor\nhttps://www.mccormickandschmicks.com/location/m
+ ccormick-schmicks-baltimore-md/\nSource: Baltimore Dealz — verify at the
+  bar\; deals change.
+LOCATION:711 Eastern Ave\, Baltimore\, MD 21202
+URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
+ ore-md/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-mccormick-schmicks-tue-s930@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260805
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:McCormick & Schmick's — $3 fish or shrimp tacos (3:30pm-close)
+DESCRIPTION:3:30pm-close\n$3 fish or shrimp tacos\n711 Eastern Ave\, Baltim
+ ore\, MD 21202\nInner Harbor\nhttps://www.mccormickandschmicks.com/locatio
+ n/mccormick-schmicks-baltimore-md/\nSource: Baltimore Dealz — verify at 
+ the bar\; deals change.
+LOCATION:711 Eastern Ave\, Baltimore\, MD 21202
+URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
+ ore-md/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-mccormick-schmicks-thuwed-s930@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH
+SUMMARY:McCormick & Schmick's — $10 Ahi Tuna Poke (3:30pm-close)
+DESCRIPTION:3:30pm-close\n$10 Ahi Tuna Poke\n711 Eastern Ave\, Baltimore\, 
+ MD 21202\nInner Harbor\nhttps://www.mccormickandschmicks.com/location/mcco
+ rmick-schmicks-baltimore-md/\nSource: Baltimore Dealz — verify at the ba
+ r\; deals change.
+LOCATION:711 Eastern Ave\, Baltimore\, MD 21202
+URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
+ ore-md/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-mccormick-schmicks-fri-s930@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:McCormick & Schmick's — $2 Buck Shuck or Shrimp (3:30pm-close)
+DESCRIPTION:3:30pm-close\n$2 Buck Shuck or Shrimp\n711 Eastern Ave\, Baltim
+ ore\, MD 21202\nInner Harbor\nhttps://www.mccormickandschmicks.com/locatio
+ n/mccormick-schmicks-baltimore-md/\nSource: Baltimore Dealz — verify at 
+ the bar\; deals change.
+LOCATION:711 Eastern Ave\, Baltimore\, MD 21202
+URL:https://www.mccormickandschmicks.com/location/mccormick-schmicks-baltim
+ ore-md/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-monarque-frisatthutuewed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T170000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA
+SUMMARY:Monarque — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\nThe Monarque Martini $8\nSpirits $8 (neat\, rocks\, or
+  one mixer\; $3 upcharge for cocktails)\nWine $6\nBottled beer $5\n1010 Fl
+ eet Street\, Baltimore\, MD 21202\nHarbor East\nhttps://monarquebaltimore.
+ com/wp-content/uploads/2026/03/MonQHH-03132026.pdf\nSource: Baltimore Deal
+ z — verify at the bar\; deals change.
+LOCATION:1010 Fleet Street\, Baltimore\, MD 21202
+URL:https://monarquebaltimore.com/wp-content/uploads/2026/03/MonQHH-0313202
+ 6.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-order-of-the-ace-frimonthutuewed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Order of the Ace — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\n$10 Cocktails (Old Fashioned\, Negroni\, French 75)\n$
+ 5 Beers (Bell's Two Hearted IPA\, Pilsner Urquell)\n$7 Wines (Rosé\, Spar
+ kling\, White\, Red)\n720 Aliceanna Street\, Baltimore\, MD 21202\nHarbor 
+ East\nhttps://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.
+ pdf\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:720 Aliceanna Street\, Baltimore\, MD 21202
+URL:https://orderoftheace.com/wp-content/uploads/2025/09/OOTA_HH_5.6.25.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-ouzo-beach-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Ouzo Beach — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nCocktail of the Week $10\n$7 Spirits (Case 1 Vodka\, B
+ acardi Rum\, Shot Tower Gin\, Olmeca Altos Tequila\, Four Roses Bourbon\, 
+ Sagamore Spirits Rye)\n$6 Wines (Cricova Brut\; Voltes White Blend roditis
+  & moschofilero\; Chateau Vartely Rose Blend syrah-malbec\; Voltes Red Ble
+ nd agiorgitiko-mavroudi)\n$5 Greek Spirits (Ouzo #12\, Mastixa Tetteris\, 
+ Rakomelo Kallikuni\, Katsaros Tsipouro)\nBlue Moon $6\nCorona Light $5\nNa
+ tional Bohemian $5\nDate & Pistachios Bruschetta $8\nRoasted Tomato & Oliv
+ es Bruschetta $8\nLamb Meatballs $8\nGrape Leaves $8\nGoat Cheese Dip $10\
+ nCocktail Shrimp $10\nFried Greek Cheese $10\nChicken Souvlake $10\nShrimp
+  and Cheese Souvlaki $12\nCharcuterie Plate $12\nLamb Slider $12\nOuzo Cur
+ ed Salmon $12\n1000 Lancaster Street\, Baltimore\, MD 21202\nHarbor East\n
+ https://ouzobeach.com/wp-content/uploads/2024/07/OuzoBeach_070724.pdf\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1000 Lancaster Street\, Baltimore\, MD 21202
+URL:https://ouzobeach.com/wp-content/uploads/2024/07/OuzoBeach_070724.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-phillips-seafood-inner-harbor-frimonthutuewed-s900@baltimore-deal
+ z
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Phillips Seafood — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$5 beer\, wine\, sangria & specialty drinks\n$6 classi
+ c Bellini\n$8 orange crush\nHush puppies $9\nSteamed mussels $14\nSteamed 
+ shrimp $16\nCrabby pretzel sticks $19\nCrab & shrimp quesadilla $19\nCrab 
+ hot dog $16\n601 E. Pratt Street\, Baltimore\, MD 21202\nInner Harbor\nhtt
+ ps://phillipsseafood.com/promotion/happy-hour/\nSource: Baltimore Dealz 
+ — verify at the bar\; deals change.
+LOCATION:601 E. Pratt Street\, Baltimore\, MD 21202
+URL:https://phillipsseafood.com/promotion/happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-rallys-corner-bar-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T193000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Rally's Corner Bar — Happy Hour (3pm-7:30pm)
+DESCRIPTION:3pm-7:30pm\nGreen and white tea shots $3\nLocal drafts\, Deep E
+ ddy crushes\, and Jameson $5\nClassic margaritas\, dirty soda\, and Surfsi
+ des $6\nJager bombs and sour berry lemon drops $7\n32 Market Place\, Balti
+ more\, MD 21202\nDowntown\nhttps://powerplantlive.com/eat-and-drink/rallys
+ -corner-bar/weekly-specials/happy-hour\nSource: Baltimore Dealz — verify
+  at the bar\; deals change.
+LOCATION:32 Market Place\, Baltimore\, MD 21202
+URL:https://powerplantlive.com/eat-and-drink/rallys-corner-bar/weekly-speci
+ als/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-ruths-chris-frimonsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T183000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
+SUMMARY:Ruth's Chris Steak House — Happy Hour (4pm-6:30pm)
+DESCRIPTION:4pm-6:30pm\nTenderloin Skewer Salad $13\nGrilled Chicken Caesar
+  Salad $13\nSeared Ahi Tuna $15\nSpicy Shrimp $16\nBeef Carpaccio $18\nCal
+ amari $23\nGrilled Chicken Sandwich with Honey Mustard $14\nR Burger $16\n
+ Steak Sandwich $19\n711 Eastern Avenue\, Baltimore\, MD 21202\nInner Harbo
+ r\nhttps://ruthschrisbsm.com/wp-content/uploads/2026/09/BAR-TEST-MD-HH.pdf
+ \nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:711 Eastern Avenue\, Baltimore\, MD 21202
+URL:https://ruthschrisbsm.com/wp-content/uploads/2026/09/BAR-TEST-MD-HH.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-tabor-ethiopian-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Tabor Ethiopian Restaurant — Happy Hour (4pm-7pm)
+DESCRIPTION:4pm-7pm\nDomestic beer $3.50\nImported beer $4.50\nEthiopian be
+ er $4.75\nSelect wines $8\nTej/honey wine $8\n328 Park Ave\, Baltimore\, M
+ D 21201\nDowntown\nhttps://taborethiopian.com/wp-content/uploads/2026/05/T
+ aborMenu_4_26.pdf\nSource: Baltimore Dealz — verify at the bar\; deals c
+ hange.
+LOCATION:328 Park Ave\, Baltimore\, MD 21201
+URL:https://taborethiopian.com/wp-content/uploads/2026/05/TaborMenu_4_26.pd
+ f
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-tagliata-frimonsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SU
+SUMMARY:Tagliata — Happy Hour (4pm-6pm (bar only))
+DESCRIPTION:4pm-6pm (bar only)\nWine $6\nBeer $5 (Blue Moon\, Michelob Ultr
+ a)\nSpirits $8 (+$3 mixer upcharge in cocktails)\n1012 Fleet Street\, Balt
+ imore\, MD 21202\nInner Harbor\nhttps://www.tagliatarestaurant.com/wp-cont
+ ent/uploads/2025/07/Tagliata_HappyHour_2.19.26-WEB.pdf\nSource: Baltimore 
+ Dealz — verify at the bar\; deals change.
+LOCATION:1012 Fleet Street\, Baltimore\, MD 21202
+URL:https://www.tagliatarestaurant.com/wp-content/uploads/2025/07/Tagliata_
+ HappyHour_2.19.26-WEB.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-elk-room-frisatthutuewed-s1050@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T173000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA
+SUMMARY:The Elk Room — Happy Hour (5:30pm-7pm)
+DESCRIPTION:5:30pm-7pm\nOysters (3) $6\nTruffle French Fries $6\nSalad Lyon
+ naise $8\nTruffle Grilled Cheese $8\nSliders (2) $10\nBlack Truffle Mouill
+ ette $10\nMoules Marinière $10\nOysters Rockefeller (3) $10\nSpinach & Ar
+ tichoke Dip $10\n1010 Fleet Street\, Baltimore\, MD 21202\nHarbor East\nht
+ tps://www.theelkroom.com/wp-content/uploads/2026/02/Happy-Hour_02.12.pdf\n
+ Source: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1010 Fleet Street\, Baltimore\, MD 21202
+URL:https://www.theelkroom.com/wp-content/uploads/2026/02/Happy-Hour_02.12.
+ pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-empanada-lady-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Empanada Lady — Happy Hour (4pm-8pm)
+DESCRIPTION:4pm-8pm\nCocktails $8.99 (Amaretto Sour\, Lemon Drop\, Margarit
+ a\, Tequila Sunrise\, Whiskey Sour)\nShooters $7.99 (Cinnamon Toast Crunch
+ \, Green Tea\, Lemon Drop\, Melon Ball\, Tequila Sunrise)\nWell shots $6.9
+ 9 (gin\, rum\, tequila\, vodka\, whiskey)\nBeer $5\nWine $7\nDon Julio Bla
+ nco $10\nHennessy $10\n(6) Wings $10.99 (1 flavor)\nNachos $10.99 (chicken
+  or beef)\nSalmon bites $10.99\nSides $5.99\nPapas $5.99\nQuesadillas $10.
+ 99 (beef\, chicken\, veggie\, cheese)\n10 S Street STE 100\, Baltimore\, M
+ D 21202\nDowntown\nhttps://www.theempanadalady.shop/happyhour\nSource: Bal
+ timore Dealz — verify at the bar\; deals change.
+LOCATION:10 S Street STE 100\, Baltimore\, MD 21202
+URL:https://www.theempanadalady.shop/happyhour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-empanada-lady-sat-s1080@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260808T180000
+DTEND;TZID=America/New_York:20260808T200000
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:The Empanada Lady — Happy Hour (6pm-8pm)
+DESCRIPTION:6pm-8pm\nCocktails $8.99 (Amaretto Sour\, Lemon Drop\, Margarit
+ a\, Tequila Sunrise\, Whiskey Sour)\nShooters $7.99 (Cinnamon Toast Crunch
+ \, Green Tea\, Lemon Drop\, Melon Ball\, Tequila Sunrise)\nWell shots $6.9
+ 9 (gin\, rum\, tequila\, vodka\, whiskey)\nBeer $5\nWine $7\nDon Julio Bla
+ nco $10\nHennessy $10\n(6) Wings $10.99 (1 flavor)\nNachos $10.99 (chicken
+  or beef)\nSalmon bites $10.99\nSides $5.99\nPapas $5.99\nQuesadillas $10.
+ 99 (beef\, chicken\, veggie\, cheese)\n10 S Street STE 100\, Baltimore\, M
+ D 21202\nDowntown\nhttps://www.theempanadalady.shop/happyhour\nSource: Bal
+ timore Dealz — verify at the bar\; deals change.
+LOCATION:10 S Street STE 100\, Baltimore\, MD 21202
+URL:https://www.theempanadalady.shop/happyhour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-garden-rooftop-thu-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260806T160000
+DTEND;TZID=America/New_York:20260806T200000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:The Garden Rooftop — Happy Hour (4pm-8pm)
+DESCRIPTION:4pm-8pm\nThe Garden Drop\nOld Fashioned\nSangria\nPink75\nPeach
+  Pleaser\nCocomania\nMargarita\nCitrus Jerk Wings\nFried Catfish Bites\nBe
+ ef Sliders\nShrimp Deviled Eggs\nSweet and Spicy Shrimp\nVeggie Egg Roll\n
+ Mac & Cheese\n411 N Paca Street\, Baltimore\, MD 21201\nDowntown\nhttps://
+ thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.png\nSource
+ : Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:411 N Paca Street\, Baltimore\, MD 21201
+URL:https://thegardenrooftop.com/wp-content/uploads/2025/04/Garden_HH_4-25.
+ png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-ruxton-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Ruxton — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nStiletto $10\nOld Fashioned $10\nMargarita $10\nNepent
+ he Space Jellyfish IPA $5\nUnion Skipjack Pilsner $5\nWine (sparkling\, re
+ d\, rosé\, white) $7\nChargrilled oysters (3) $9\nHouse-made tater tots $
+ 7\nTruffled waffle fries $6\nRuxton ceviche $11\nFrito mixto $11\nPeppered
+  bison pit beef sandwich $10\nChopped salad $7\nCaesar salad $7\nDry-aged 
+ steakhouse burger $10\n720 Aliceanna Street\, Baltimore MD 21202\nHarbor E
+ ast\nhttps://theruxtonsteakhouse.com/baltimore/wp-content/uploads/sites/2/
+ 2026/05/Ruxton_HH_050826.pdf\nSource: Baltimore Dealz — verify at the ba
+ r\; deals change.
+LOCATION:720 Aliceanna Street\, Baltimore MD 21202
+URL:https://theruxtonsteakhouse.com/baltimore/wp-content/uploads/sites/2/20
+ 26/05/Ruxton_HH_050826.pdf
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,530 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Fells Point Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-abbey-burger-fells-frimonthutuewed-s840@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T140000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Abbey Burger Fells Point — Happy Hour (2pm-6pm)
+DESCRIPTION:2pm-6pm\nAbbey Hour: select drinks\, drafts & wines $5\nAbbey H
+ our: Deep Eddy cocktail $6\nAbbey Hour: fresh squeezed crushes $7\n811 S B
+ roadway\, Baltimore\, MD 21231\nFells Point\nhttps://www.abbeyburger.com/_
+ files/ugd/b8794d_e1133ec4acff413683d7e14e93f1b7c7.pdf\nSource: Baltimore D
+ ealz — verify at the bar\; deals change.
+LOCATION:811 S Broadway\, Baltimore\, MD 21231
+URL:https://www.abbeyburger.com/_files/ugd/b8794d_e1133ec4acff413683d7e14e9
+ 3f1b7c7.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-alexanders-tavern-fells-thutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T150000
+DTEND;TZID=America/New_York:20260804T180000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH
+SUMMARY:Alexander's Tavern (Fells Point) — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$1 Off All Bottles and Cans\n$3 Off Glasses of Wine\n$
+ 3 Bud Light Drafts ($5 22oz)\n$5 All Other Drafts ($8 22oz)\n$5 Mixed Hous
+ e Drinks\n$6 Deep Eddy Vodka Drinks\n$6 Select Flavored Bombs\n$7 Texas Mu
+ les\n$9 Prosecco\n$4 Chips with Salsa or Queso\n$4 Boardwalk Fries or Tate
+ r Tots\n$5 Cheesy Tots with Ranch\n$6 Brussels Sprouts\n$6 Alexander's Mac
+  n' Cheese\n$6 Soft Pretzels & Queso\n$6 Cheese Quesadilla\n$6 Cheese Curd
+ s with Ranch\n$8 Chicken Tenders and Fries\n710 S. Broadway\, Baltimore\, 
+ MD 21231\nFells Point\nhttps://www.alexanderstavern.com/fellspoint\nSource
+ : Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:710 S. Broadway\, Baltimore\, MD 21231
+URL:https://www.alexanderstavern.com/fellspoint
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-alexanders-tavern-fells-fri-walldayuntil6pm@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260807
+DTEND;VALUE=DATE:20260808
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Alexander's Tavern (Fells Point) — Happy Hour (all day until 6pm)
+DESCRIPTION:all day until 6pm\n$1 Off All Bottles and Cans\n$3 Off Glasses 
+ of Wine\n$3 Bud Light Drafts ($5 22oz)\n$5 All Other Drafts ($8 22oz)\n$5 
+ Mixed House Drinks\n$6 Deep Eddy Vodka Drinks\n$6 Select Flavored Bombs\n$
+ 7 Texas Mules\n$9 Prosecco\n$4 Chips with Salsa or Queso\n$4 Boardwalk Fri
+ es or Tater Tots\n$5 Cheesy Tots with Ranch\n$6 Brussels Sprouts\n$6 Alexa
+ nder's Mac n' Cheese\n$6 Soft Pretzels & Queso\n$6 Cheese Quesadilla\n$6 C
+ heese Curds with Ranch\n$8 Chicken Tenders and Fries\n710 S. Broadway\, Ba
+ ltimore\, MD 21231\nFells Point\nhttps://www.alexanderstavern.com/fellspoi
+ nt\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:710 S. Broadway\, Baltimore\, MD 21231
+URL:https://www.alexanderstavern.com/fellspoint
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-barcocina-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Barcocina — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$4 Draft beer pints (any draft beer selection)\n$5 Win
+ e by the glass: Chardonnay — Proverb\, CA\n$5 Wine by the glass: White B
+ lend — Honoro Vera\, Portugal\n$5 Wine by the glass: Red Blend — Silk 
+ & Spice\, Portugal\n$5 Wine by the glass: Tempranillo — Protocolo\, Spai
+ n\n$5 Wine by the glass: Still — Bieler Pere et Fili\, France\n$6 Featur
+ ed cocktail: Olmeca Altos House Margarita\n$6 Featured cocktail: Blackberr
+ y Sangria\n$6 Featured cocktail: Seasonal White Sangria\n1629 Thames Stree
+ t\, Baltimore\, MD 21231\nFells Point\nhttps://www.barcocina.com/_files/ug
+ d/4fca22_7c15530383474234b3ce6dbd6e7fcffd.pdf\nSource: Baltimore Dealz —
+  verify at the bar\; deals change.
+LOCATION:1629 Thames Street\, Baltimore\, MD 21231
+URL:https://www.barcocina.com/_files/ugd/4fca22_7c15530383474234b3ce6dbd6e7
+ fcffd.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bunnys-buckets-monthutuewed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Bunny's Buckets & Bubbles — Happy Hour (5pm-6pm)
+DESCRIPTION:5pm-6pm\nFried chicken sandwich $8\nShrimp & grits $8\nChicken 
+ poutine $8\nBaby crab rice $8\nChicken nuggies $8\nCaviar & chips $8\n$6 W
+ ine (red\, white\, or bubbles)\n$8 Cocktails (Jessica Rabbit or Ramona Flo
+ wers)\n$3 Miller High Life bottles\n801 S Ann St\, Baltimore\, MD 21231\nF
+ ells Point\nhttps://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hop
+ py_hour_menu.pdf\nSource: Baltimore Dealz — verify at the bar\; deals ch
+ ange.
+LOCATION:801 S Ann St\, Baltimore\, MD 21231
+URL:https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_m
+ enu.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-bunnys-buckets-fri-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260807T160000
+DTEND;TZID=America/New_York:20260807T180000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Bunny's Buckets & Bubbles — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nFried chicken sandwich $8\nShrimp & grits $8\nChicken 
+ poutine $8\nBaby crab rice $8\nChicken nuggies $8\nCaviar & chips $8\n$6 W
+ ine (red\, white\, or bubbles)\n$8 Cocktails (Jessica Rabbit or Ramona Flo
+ wers)\n$3 Miller High Life bottles\n801 S Ann St\, Baltimore\, MD 21231\nF
+ ells Point\nhttps://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hop
+ py_hour_menu.pdf\nSource: Baltimore Dealz — verify at the bar\; deals ch
+ ange.
+LOCATION:801 S Ann St\, Baltimore\, MD 21231
+URL:https://irp.cdn-website.com/2857e133/files/uploaded/bunnys_hoppy_hour_m
+ enu.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-harbor-tandoor-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Harbor Tandoor — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$8 Papadum Board\n$12 Veg Bite Club\n$12 Non-Veg Bite 
+ Club\n$10 Baltimore Crab Naan\n$4 Local Draft Beer\n$4 House Wine\n$6 Cock
+ tail of the Day\n803 S Caroline St\, Baltimore\, MD 21231\nFells Point\nht
+ tps://www.harbortandoor.com/lunch-happy-hour/\nSource: Baltimore Dealz —
+  verify at the bar\; deals change.
+LOCATION:803 S Caroline St\, Baltimore\, MD 21231
+URL:https://www.harbortandoor.com/lunch-happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-la-calle-frimonsatsunthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:La Calle — Happy hour Margarita Clasica $8 (4pm-6pm)
+DESCRIPTION:4pm-6pm\nHappy hour Margarita Clasica $8\nHappy hour Paloma $8\
+ nHappy hour Sangria Blanco $8\nHappy hour house red wine (Vino Rojo) $7\nH
+ appy hour house white wine (Vino blanco) $7\nHappy hour White Claw tequila
+  hard seltzer $6\nHappy hour Tecate $4\nHappy hour Agaves Premium 1 oz pou
+ r (Corralejo blanco / Fidencio espadin / La Venenosa) $8\nHappy hour Flaut
+ as de Pollo $7\nHappy hour Empanadas Favoritas $7\nHappy hour Pellizcadas 
+ de Pollo $7\nHappy hour Bruselas Tacos $7\nHappy hour Bar Nachitos $7\nHap
+ py hour Tacos de Pollo $7\nHappy hour Tacos al Pastor $7\n623 S Broadway B
+ altimore MD 21231\nFells Point\nhttps://www.lacallerestaurant.com/wp-conte
+ nt/uploads/2026/01/happyhour-022026.pdf\nSource: Baltimore Dealz — verif
+ y at the bar\; deals change.
+LOCATION:623 S Broadway Baltimore MD 21231
+URL:https://www.lacallerestaurant.com/wp-content/uploads/2026/01/happyhour-
+ 022026.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-maxs-taphouse-fri-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260807T170000
+DTEND;TZID=America/New_York:20260807T200000
+RRULE:FREQ=WEEKLY;BYDAY=FR
+SUMMARY:Max's Taphouse — BIG A$$ DRAFTS select 32oz pours $8 (5pm-8pm)
+DESCRIPTION:5pm-8pm\nBIG A$$ DRAFTS select 32oz pours $8\n737 S Broadway\, 
+ Baltimore\, MD 21231\nFells Point\nhttps://maxs.com/oktoberfest-2026/\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:737 S Broadway\, Baltimore\, MD 21231
+URL:https://maxs.com/oktoberfest-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-maxs-taphouse-sun-s780@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260809T130000
+DTEND;TZID=America/New_York:20260809T190000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:Max's Taphouse — BIG A$$ DRAFTS select 32oz pours $8 (1pm-7pm)
+DESCRIPTION:1pm-7pm\nBIG A$$ DRAFTS select 32oz pours $8\n737 S Broadway\, 
+ Baltimore\, MD 21231\nFells Point\nhttps://maxs.com/oktoberfest-2026/\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:737 S Broadway\, Baltimore\, MD 21231
+URL:https://maxs.com/oktoberfest-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-neatfreak-frimonsatthu-s720@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T120000
+DTEND;TZID=America/New_York:20260803T170000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TH,FR,SA
+SUMMARY:NeatFreak — Martinis $10 (noon-5 special) (noon-5pm)
+DESCRIPTION:noon-5pm\nMartinis $10 (noon-5 special)\n1822 Fleet St\, Baltim
+ ore\, MD 21231\nFells Point\nhttps://www.instagram.com/neatfreak.bar/\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1822 Fleet St\, Baltimore\, MD 21231
+URL:https://www.instagram.com/neatfreak.bar/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-oleum-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Oleum — Small plates from $6-$10 (4pm-6pm)
+DESCRIPTION:4pm-6pm\nSmall plates from $6-$10\n701 S Bond Street\, Baltimor
+ e\, MD 21231\nFells Point\nhttps://www.oleumkitchen.com/_files/ugd/3d69ab_
+ 70086b0df8e3483eb96dd7db43c01906.pdf\nSource: Baltimore Dealz — verify a
+ t the bar\; deals change.
+LOCATION:701 S Bond Street\, Baltimore\, MD 21231
+URL:https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db
+ 43c01906.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-oleum-mon-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Oleum — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\n20% off small plates\nClassic cocktails $10\n701 S Bon
+ d Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.oleumkitchen.com
+ /_files/ugd/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf\nSource: Baltimore
+  Dealz — verify at the bar\; deals change.
+LOCATION:701 S Bond Street\, Baltimore\, MD 21231
+URL:https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db
+ 43c01906.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-oleum-tue-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T180000
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Oleum — 20% off all pizzas (4pm-6pm)
+DESCRIPTION:4pm-6pm\n20% off all pizzas\n701 S Bond Street\, Baltimore\, MD
+  21231\nFells Point\nhttps://www.oleumkitchen.com/_files/ugd/3d69ab_70086b
+ 0df8e3483eb96dd7db43c01906.pdf\nSource: Baltimore Dealz — verify at the 
+ bar\; deals change.
+LOCATION:701 S Bond Street\, Baltimore\, MD 21231
+URL:https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db
+ 43c01906.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-oleum-wed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260805T160000
+DTEND;TZID=America/New_York:20260805T180000
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:Oleum — House red and white wine $6 (4pm-6pm)
+DESCRIPTION:4pm-6pm\nHouse red and white wine $6\n701 S Bond Street\, Balti
+ more\, MD 21231\nFells Point\nhttps://www.oleumkitchen.com/_files/ugd/3d69
+ ab_70086b0df8e3483eb96dd7db43c01906.pdf\nSource: Baltimore Dealz — verif
+ y at the bar\; deals change.
+LOCATION:701 S Bond Street\, Baltimore\, MD 21231
+URL:https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db
+ 43c01906.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-oleum-thu-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260806T160000
+DTEND;TZID=America/New_York:20260806T180000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Oleum — $10 off pitchers of house sangria (4pm-6pm)
+DESCRIPTION:4pm-6pm\n$10 off pitchers of house sangria\n701 S Bond Street\,
+  Baltimore\, MD 21231\nFells Point\nhttps://www.oleumkitchen.com/_files/ug
+ d/3d69ab_70086b0df8e3483eb96dd7db43c01906.pdf\nSource: Baltimore Dealz —
+  verify at the bar\; deals change.
+LOCATION:701 S Bond Street\, Baltimore\, MD 21231
+URL:https://www.oleumkitchen.com/_files/ugd/3d69ab_70086b0df8e3483eb96dd7db
+ 43c01906.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-papis-taco-joint-fells-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T160000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Papi's Taco Joint (Fells Point) — Happy Hour (3pm-4pm)
+DESCRIPTION:3pm-4pm\n2-for-1 rail drinks\, drafts\, bombs\, and Deep Eddy &
+  sodas\n1703 Aliceanna Street\, Baltimore\, MD 21231\nFells Point\nhttps:/
+ /papistacojoint.com/fellspoint\nSource: Baltimore Dealz — verify at the 
+ bar\; deals change.
+LOCATION:1703 Aliceanna Street\, Baltimore\, MD 21231
+URL:https://papistacojoint.com/fellspoint
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-papis-taco-joint-fells-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Papi's Taco Joint (Fells Point) — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\n$5 Tradicional Blanco Shots · All Draft Beers\n$6 Tra
+ dicional Reposado Shots\n$7 Tradicional Añejo · wine · house sangria ·
+  queso fundido · platanos\n$8 House Margaritas · Elote · 3 Gringo Style
+  Tacos\n$10 Happy Hour Wings\n1703 Aliceanna Street\, Baltimore\, MD 21231
+ \nFells Point\nhttps://papistacojoint.com/fellspoint\nSource: Baltimore De
+ alz — verify at the bar\; deals change.
+LOCATION:1703 Aliceanna Street\, Baltimore\, MD 21231
+URL:https://papistacojoint.com/fellspoint
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-rec-pier-chop-house-frimonthutuewed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Rec Pier Chop House — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\nTiny Tini's 2.5 oz. Dirty Vodka Martini\nClassic Gin M
+ artini\nVesper\nNegroni\nGirl Dinner — Half Sweet Gem Caesar\, French Fr
+ ies\, Choice of Full Sized Martini\n1715 Thames Street\, Baltimore\, MD 21
+ 231\nFells Point\nhttps://www.pendry.com/baltimore/menus/martini-hour/\nSo
+ urce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1715 Thames Street\, Baltimore\, MD 21231
+URL:https://www.pendry.com/baltimore/menus/martini-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-southpaw-frimonthutuewed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T170000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Southpaw — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\nOld Fashioned\nSazerac\nDaiquiri\nDry Martini\nMoscow 
+ Mule\n529 S. Bond Street\, Baltimore\, MD 21231\nFells Point\nhttps://sout
+ hpawcocktails.com/wp-content/uploads/2026/08/early-august-2026.pdf\nSource
+ : Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:529 S. Bond Street\, Baltimore\, MD 21231
+URL:https://southpawcocktails.com/wp-content/uploads/2026/08/early-august-2
+ 026.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-thames-street-oyster-house-monthutuewed-s990@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T163000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Thames Street Oyster House — Happy Hour (4:30pm-6pm)
+DESCRIPTION:4:30pm-6pm\n$2 local\, mid-Atlantic\, and northeastern oysters\
+ n1728 Thames Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.thame
+ sstreetoysterhouse.com/happy-hour.htm\nSource: Baltimore Dealz — verify 
+ at the bar\; deals change.
+LOCATION:1728 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thamesstreetoysterhouse.com/happy-hour.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-thames-street-oyster-house-frisatsun-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260807T150000
+DTEND;TZID=America/New_York:20260807T170000
+RRULE:FREQ=WEEKLY;BYDAY=FR,SA,SU
+SUMMARY:Thames Street Oyster House — Happy Hour (3pm-5pm)
+DESCRIPTION:3pm-5pm\n$2 local\, mid-Atlantic\, and northeastern oysters\n17
+ 28 Thames Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.thamesst
+ reetoysterhouse.com/happy-hour.htm\nSource: Baltimore Dealz — verify at 
+ the bar\; deals change.
+LOCATION:1728 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thamesstreetoysterhouse.com/happy-hour.htm
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-choptank-frimonthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:The Choptank — Happy Hour (4pm-7pm (bar only))
+DESCRIPTION:4pm-7pm (bar only)\n$7 Wine (House White\, House Rosé\, House 
+ Red)\n$5 Beer (Blue Moon\, Bud Light\, Guinness Blonde\, Natty Boh\, EVO S
+ easonal)\n$8 Crushes (Classic Orange\, Grapefruit\, Cosmo\, Peach Tea\, Pi
+ neapple\, Blueberry Lemonade)\n1641 Aliceanna Street\, Baltimore\, MD 2123
+ 1\nFells Point\nhttps://thechoptankrestaurant.com/baltimore/wp-content/upl
+ oads/sites/3/2025/06/Choptank_HH_040725_01.pdf\nSource: Baltimore Dealz 
+ — verify at the bar\; deals change.
+LOCATION:1641 Aliceanna Street\, Baltimore\, MD 21231
+URL:https://thechoptankrestaurant.com/baltimore/wp-content/uploads/sites/3/
+ 2025/06/Choptank_HH_040725_01.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-dara-frimonsatsunthutuewed-s990@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T163000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR,SA,SU
+SUMMARY:The Dara — Happy Hour (4:30pm-6pm)
+DESCRIPTION:4:30pm-6pm\nBeer (Oriole Park / Asahi / Sapporo)\nWine (House R
+ ed / House White / House Sparkling)\nCocktails (Red Sangria / White Sangri
+ a / Aperol Spritz)\nLotus Root (V)\nGiaow Pak (V)\nPapaya Salad (GF)(V)\nB
+ oneless Fried Chicken Wing\nShrimp Tempura\n906 South Wolfe Street\, Balti
+ more\, MD 21231\nFells Point\nhttps://www.thedarakitchen.com/menu\nSource:
+  Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:906 South Wolfe Street\, Baltimore\, MD 21231
+URL:https://www.thedarakitchen.com/menu
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-horse-you-came-in-on-monthutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T200000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:The Horse You Came In On Saloon — Happy Hour (4pm-8pm)
+DESCRIPTION:4pm-8pm\n$3 Domestic Bottles\n$4 Seltzers\n$5 Green Tea | Lemon
+  Drops\n$6 Well Cocktails\n1626 Thames Street\, Baltimore\, MD 21231\nFell
+ s Point\nhttps://www.thehorsebaltimore.com/specials\nSource: Baltimore Dea
+ lz — verify at the bar\; deals change.
+LOCATION:1626 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thehorsebaltimore.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-horse-you-came-in-on-wed-s1200@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+RRULE:FREQ=WEEKLY;BYDAY=WE
+SUMMARY:The Horse You Came In On Saloon — Happy Hour (8pm-close)
+DESCRIPTION:8pm-close\n$5 Green Tea Shots\n$6 Sagamore Rye\n$7 Vegas Bombs\
+ n1626 Thames Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.theho
+ rsebaltimore.com/specials\nSource: Baltimore Dealz — verify at the bar\;
+  deals change.
+LOCATION:1626 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thehorsebaltimore.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-horse-you-came-in-on-thu-s1200@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:The Horse You Came In On Saloon — Happy Hour (8pm-close)
+DESCRIPTION:8pm-close\n$5 Dogfish Drafts\n$6 Margaritas\n$7 Mules\n1626 Tha
+ mes Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.thehorsebaltim
+ ore.com/specials\nSource: Baltimore Dealz — verify at the bar\; deals ch
+ ange.
+LOCATION:1626 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thehorsebaltimore.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-horse-you-came-in-on-satsun-s720@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260808T120000
+DTEND;TZID=America/New_York:20260808T220000
+RRULE:FREQ=WEEKLY;BYDAY=SA,SU
+SUMMARY:The Horse You Came In On Saloon — $25 Buckets of Domestic Beer | 
+ Seltzer (12pm-10pm)
+DESCRIPTION:12pm-10pm\n$25 Buckets of Domestic Beer | Seltzer\n1626 Thames 
+ Street\, Baltimore\, MD 21231\nFells Point\nhttps://www.thehorsebaltimore.
+ com/specials\nSource: Baltimore Dealz — verify at the bar\; deals change
+ .
+LOCATION:1626 Thames Street\, Baltimore\, MD 21231
+URL:https://www.thehorsebaltimore.com/specials
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-point-in-fells-frimonthuwed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,WE,TH,FR
+SUMMARY:The Point in Fells — Happy hour crushes $8 (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy hour crushes $8\nHappy hour draft cocktails $6\n
+ Happy hour select drafts and cans $4\nHappy hour select wines $5\nHappy ho
+ ur Jameson $5\nHappy hour boozy slushie $8\nHappy hour street tacos $3 eac
+ h (min 2)\nHappy hour Point nachos $7\nHappy hour crabby pretzels (2) $10\
+ nHappy hour fried pickles $7\nHappy hour fried deviled eggs $7\nHappy hour
+  1/2 lb wings $8\nHappy hour Jr smashburger $8\nHappy hour sides $4 each\n
+ 1738 Thames St\, Baltimore\, MD 21231\nFells Point\nhttps://images.squares
+ pace-cdn.com/content/v1/63de8d4bd3ba8f71b9f2c939/9714c656-6ddb-4c53-ba6e-8
+ ecf51f49bed/2.png\nSource: Baltimore Dealz — verify at the bar\; deals c
+ hange.
+LOCATION:1738 Thames St\, Baltimore\, MD 21231
+URL:https://images.squarespace-cdn.com/content/v1/63de8d4bd3ba8f71b9f2c939/
+ 9714c656-6ddb-4c53-ba6e-8ecf51f49bed/2.png
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-rockwell-fells-tue-wkaraokenight@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260805
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:The Rockwell — Happy Hour (karaoke night)
+DESCRIPTION:karaoke night\n$4 Beer & Claws\n$6 Bombs & Tequila\n702 S. Broa
+ dway\, Baltimore\, MD 21231\nFells Point\nhttp://www.therockwellbaltimore.
+ com/\nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:702 S. Broadway\, Baltimore\, MD 21231
+URL:http://www.therockwellbaltimore.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-the-rockwell-fells-frisatsunthutuewed-wuntil10pm@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260805
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR,SA,SU
+SUMMARY:The Rockwell — Happy Hour every night until 10pm (until 10pm)
+DESCRIPTION:until 10pm\nHappy Hour every night until 10pm\nPrices not publi
+ shed by the venue.\n702 S. Broadway\, Baltimore\, MD 21231\nFells Point\nh
+ ttp://www.therockwellbaltimore.com/\nSource: Baltimore Dealz — verify at
+  the bar\; deals change.
+LOCATION:702 S. Broadway\, Baltimore\, MD 21231
+URL:http://www.therockwellbaltimore.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-waterfront-hotel-frithutuewed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T160000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Waterfront Hotel — Happy hour Espresso Martini $10 (4pm-7pm)
+DESCRIPTION:4pm-7pm\nHappy hour Espresso Martini $10\nHappy hour Spicy Pine
+ apple Marg $8\nHappy hour drafts $5\nHappy hour wine $6\n1710 Thames Stree
+ t\, Baltimore MD 21231\nFells Point\nhttp://www.waterfronthotelfellspoint.
+ com/uploads/1/3/3/1/133152380/wfh_happyhour_web.pdf\nSource: Baltimore Dea
+ lz — verify at the bar\; deals change.
+LOCATION:1710 Thames Street\, Baltimore MD 21231
+URL:http://www.waterfronthotelfellspoint.com/uploads/1/3/3/1/133152380/wfh_
+ happyhour_web.pdf
+END:VEVENT
+END:VCALENDAR

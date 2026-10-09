@@ -1,0 +1,189 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Baltimore Dealz//Happy Hours//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Locust Point Happy Hours — Baltimore Dealz
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bd-hh-barracudas-locust-point-monthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T190000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Barracudas Locust Point — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\nNatty Light & Natty Boh $3\nBudweiser\, Bud Light & Mi
+ chelob Ultra $4\nSangria\, Kona Big Wave & Welcome to the Neighborhood Sho
+ t $5\nSurfside & Pinot Grigio $6\nCrushes (Coastal\, Orange\, Lemon\, Grap
+ efruit\, Lemon Lime\, Lime) $7\nTito's Crush $9\n1230 E Fort Ave\, Baltimo
+ re\, MD 21230\nLocust Point\nhttps://www.instagram.com/p/DcwDR7nlJIr/\nSou
+ rce: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1230 E Fort Ave\, Baltimore\, MD 21230
+URL:https://www.instagram.com/p/DcwDR7nlJIr/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-copper-shark-mon-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T220000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:Copper Shark — Happy Hour (3pm-10pm)
+DESCRIPTION:3pm-10pm\nCocktails $8\nWine $7 (Red/White/Rosé)\nDraft Beer $
+ 6\n921 E Fort Ave\, Baltimore\, MD 21230\nRiverside\nhttps://www.thecopper
+ shark.com/happy-hour-1\nSource: Baltimore Dealz — verify at the bar\; de
+ als change.
+LOCATION:921 E Fort Ave\, Baltimore\, MD 21230
+URL:https://www.thecoppershark.com/happy-hour-1
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-copper-shark-frithutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260804T150000
+DTEND;TZID=America/New_York:20260804T190000
+RRULE:FREQ=WEEKLY;BYDAY=TU,WE,TH,FR
+SUMMARY:Copper Shark — Happy Hour (3pm-7pm)
+DESCRIPTION:3pm-7pm\nCocktails $8\nWine $7 (Red/White/Rosé)\nDraft Beer $6
+ \n921 E Fort Ave\, Baltimore\, MD 21230\nRiverside\nhttps://www.thecoppers
+ hark.com/happy-hour-1\nSource: Baltimore Dealz — verify at the bar\; dea
+ ls change.
+LOCATION:921 E Fort Ave\, Baltimore\, MD 21230
+URL:https://www.thecoppershark.com/happy-hour-1
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-decatur-tavern-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Decatur Tavern — Happy hour pretzel braids $10 (3pm-6pm)
+DESCRIPTION:3pm-6pm\nHappy hour pretzel braids $10\nHappy hour chicken tend
+ ers $10\nHappy hour single smash $10\nHappy hour Natty Lights $3\nHappy ho
+ ur Coors Banquet $3\nHappy hour Miller High Life $3\nHappy hour select dra
+ fts $6\nHappy hour espresso martinis $8\nHappy hour house crushes $8\n1401
+  Decatur Street\, Baltimore\, MD 21230\nLocust Point\nhttps://decaturtaver
+ n.com/happy-hour\nSource: Baltimore Dealz — verify at the bar\; deals ch
+ ange.
+LOCATION:1401 Decatur Street\, Baltimore\, MD 21230
+URL:https://decaturtavern.com/happy-hour
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-hershs-frithuwed-s1020@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260805T170000
+DTEND;TZID=America/New_York:20260805T190000
+RRULE:FREQ=WEEKLY;BYDAY=WE,TH,FR
+SUMMARY:Hersh's Pizza & Drinks — Happy Hour (5pm-7pm)
+DESCRIPTION:5pm-7pm\nHappy Hour\nPrices not published by the venue.\n1843-4
+ 5 Light Street\, Baltimore MD 21230\nRiverside\nhttps://hershs.com/events/
+ \nSource: Baltimore Dealz — verify at the bar\; deals change.
+LOCATION:1843-45 Light Street\, Baltimore MD 21230
+URL:https://hershs.com/events/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-nicks-fish-house-monthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH
+SUMMARY:Nick's Fish House — Happy Hour (3pm-6pm (bar area only))
+DESCRIPTION:3pm-6pm (bar area only)\nCrushes $9 (Orange\, Grapefruit\, Lemo
+ n)\nWine $7\nDraft Beer $5\n2600 Insulator Drive\, Baltimore\, MD 21230\nP
+ ort Covington\nhttps://nicks2.wpenginepowered.com/wp-content/uploads/2026/
+ 04/Nicks-Happy-Hour-8.pdf\nSource: Baltimore Dealz — verify at the bar\;
+  deals change.
+LOCATION:2600 Insulator Drive\, Baltimore\, MD 21230
+URL:https://nicks2.wpenginepowered.com/wp-content/uploads/2026/04/Nicks-Hap
+ py-Hour-8.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-rye-street-tavern-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Rye Street Tavern — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nNatty Boh $3\nWhite & red wine $8\nDaiquiri and rye mu
+ les $8\nOld fashioned $10\nOyster shooter $8\n225 E Cromwell Street\, Balt
+ imore\, MD 21230\nBaltimore Peninsula\nhttps://www.ryestreettavern.com/men
+ u/happy-hour/\nSource: Baltimore Dealz — verify at the bar\; deals chang
+ e.
+LOCATION:225 E Cromwell Street\, Baltimore\, MD 21230
+URL:https://www.ryestreettavern.com/menu/happy-hour/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-taco-love-grill-frimonthutuewed-s900@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T150000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR
+SUMMARY:Taco Love Grill — Happy Hour (3pm-6pm)
+DESCRIPTION:3pm-6pm\nAll House Margaritas & Sangrias $10\nBottle Beer $4.50
+ \n1724 Whetstone Way\, Baltimore\, MD 21230\nLocust Point\nhttps://www.tac
+ olovegrill.com/taco-love-grill/\nSource: Baltimore Dealz — verify at the
+  bar\; deals change.
+LOCATION:1724 Whetstone Way\, Baltimore\, MD 21230
+URL:https://www.tacolovegrill.com/taco-love-grill/
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-wiley-gunters-monwed-s960@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260803T160000
+DTEND;TZID=America/New_York:20260803T180000
+RRULE:FREQ=WEEKLY;BYDAY=MO,WE
+SUMMARY:Wiley Gunter's — Happy Hour (4pm-6pm)
+DESCRIPTION:4pm-6pm\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\nHouse 
+ Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Light Ca
+ ns $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimore\, MD
+  21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
+LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
+URL:https://www.wileygunters.com/food-menu
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-wiley-gunters-tue-wopentoclose@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;VALUE=DATE:20260804
+DTEND;VALUE=DATE:20260805
+RRULE:FREQ=WEEKLY;BYDAY=TU
+SUMMARY:Wiley Gunter's — Happy Hour (open to close)
+DESCRIPTION:open to close\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\n
+ House Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Li
+ ght Cans $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimor
+ e\, MD 21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: B
+ altimore Dealz — verify at the bar\; deals change.
+LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
+URL:https://www.wileygunters.com/food-menu
+END:VEVENT
+BEGIN:VEVENT
+UID:bd-hh-wiley-gunters-thu-s840@baltimore-dealz
+DTSTAMP:20261009T223050Z
+DTSTART;TZID=America/New_York:20260806T140000
+DTEND;TZID=America/New_York:20260806T180000
+RRULE:FREQ=WEEKLY;BYDAY=TH
+SUMMARY:Wiley Gunter's — Happy Hour (2pm-6pm)
+DESCRIPTION:2pm-6pm\nDeep Eddy Drinks $6\nFresh Squeezed Crushes $7\nHouse 
+ Margaritas spicy or original $7\nMaine Lunch IPA Drafts $7\nNatty Light Ca
+ ns $2.50\nN/A Beers $5\nAll Cans $6\n823 East Fort Avenue\, Baltimore\, MD
+  21230\nRiverside\nhttps://www.wileygunters.com/food-menu\nSource: Baltimo
+ re Dealz — verify at the bar\; deals change.
+LOCATION:823 East Fort Avenue\, Baltimore\, MD 21230
+URL:https://www.wileygunters.com/food-menu
+END:VEVENT
+END:VCALENDAR
